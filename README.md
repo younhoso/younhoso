@@ -1,5 +1,8 @@
 ### Hi 👋
 
+I mainly run a blog that provides information to people by sharing what I have learned and felt.
+The reason I run a blog is that I feel the value of being able to influence the world for good, beyond helping me.
+
 ## 👩🏻‍💻 About me
 - Changan Univ., Seoul, Korea (Department of Fashion Design)
 - web publisher(4 years experience)

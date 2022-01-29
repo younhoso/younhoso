@@ -21,6 +21,7 @@ The reason I run a blog is that I feel the value of being able to influence the 
 
 ### 🎯 Others(Hobby)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white)
 
 ![SoYounHo's GitHub stats](https://github-readme-stats.vercel.app/api?username=younhoso&show_icons=true&theme=radical)
 

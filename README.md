@@ -28,7 +28,7 @@ The reason I run a blog is that I feel the value of being able to influence the 
 <!--
 **younhoso/younhoso** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+Here are some ideas to get you started: 
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...

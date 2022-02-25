@@ -18,11 +18,11 @@ The reason I run a blog is that I feel the value of being able to influence the 
 </code>
 
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" height="20">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" height="20" art="javascript">
 </code>
 
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black" height="20">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/webpack/webpack.png" height="20" art="webpack">
 </code>
 
 ### 🎯 Frontend

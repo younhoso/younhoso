@@ -12,19 +12,15 @@ The reason I run a blog is that I feel the value of being able to influence the 
 <code style="background-color:rgba(175,184,193,0.2);">
 <img src="https://github.com/younhoso/younhoso/explore/html5.png" height="20">
 </code>
-
 <code style="background-color:rgba(175,184,193,0.2);">
 <img src="https://github.com/younhoso/younhoso/explore/css3.png" height="20">
 </code>
-
 <code style="background-color:rgba(175,184,193,0.2);">
 <img src="https://github.com/younhoso/younhoso/explore/javascript.png" height="20" art="javascript">
 </code>
-
 <code style="background-color:rgba(175,184,193,0.2);">
 <img src="https://github.com/younhoso/younhoso/explore/webpack.png" height="20" art="webpack">
 </code>
-
 <code style="background-color:rgba(175,184,193,0.2);">
 <img src="https://github.com/younhoso/younhoso/explore/figma.png" height="20" art="webpack">
 </code>

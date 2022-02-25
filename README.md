@@ -16,6 +16,8 @@ The reason I run a blog is that I feel the value of being able to influence the 
 <code style="background-color:rgba(175,184,193,0.2);">
 <img src="https://younhoso.github.io/younhoso/explore/webpack.png" height="20" alt="webpack"></code>
 <code style="background-color:rgba(175,184,193,0.2);">
+<img src="https://younhoso.github.io/younhoso/explore/react.png" height="20" alt="react"></code>
+<code style="background-color:rgba(175,184,193,0.2);">
 <img src="https://younhoso.github.io/younhoso/explore/javascript.png" height="20" alt="javascript"></code>
 <code style="background-color:rgba(175,184,193,0.2);">
 <img src="https://younhoso.github.io/younhoso/explore/figma.png" height="20" alt="figma"></code>

@@ -10,34 +10,21 @@ The reason I run a blog is that I feel the value of being able to influence the 
 
 ## 🛠 Tech Stack 🛠 
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://younhoso.github.io/younhoso/explore/html5.png" height="20" alt="html5">
-</code>
+<img src="https://younhoso.github.io/younhoso/explore/html5.png" height="20" alt="html5"></code> 
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://younhoso.github.io/younhoso/explore/css3.png" height="20" alt="css3">
-</code>
+<img src="https://younhoso.github.io/younhoso/explore/css3.png" height="20" alt="css3"></code>
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://younhoso.github.io/younhoso/explore/javascript.png" height="20" alt="javascript">
-</code>
+<img src="https://younhoso.github.io/younhoso/explore/webpack.png" height="20" alt="webpack"></code>
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://younhoso.github.io/younhoso/explore/webpack.png" height="20" alt="webpack">
-</code>
+<img src="https://younhoso.github.io/younhoso/explore/javascript.png" height="20" alt="javascript"></code>
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://younhoso.github.io/younhoso/explore/figma.png" height="20" alt="figma">
-</code>
-
-### 🎯 Frontend
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
-
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
-
-### 🎯 Tools
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23121011.svg?style=for-the-badge&logo=git&logoColor=white)
-
-### 🎯 Others(Hobby)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white)
+<img src="https://younhoso.github.io/younhoso/explore/figma.png" height="20" alt="figma"></code>
+<code style="background-color:rgba(175,184,193,0.2);">
+<img src="https://younhoso.github.io/younhoso/explore/git.png" height="20" alt="git"></code>
+<code style="background-color:rgba(175,184,193,0.2);">
+<img src="https://younhoso.github.io/younhoso/explore/github.png" height="20" alt="github"></code>
+<code style="background-color:rgba(175,184,193,0.2);">
+<img src="https://younhoso.github.io/younhoso/explore/linux.png" height="20" alt="linux"></code><br/><br/>
 
 ![SoYounHo's GitHub stats](https://github-readme-stats.vercel.app/api?username=younhoso&show_icons=true&theme=radical)
 

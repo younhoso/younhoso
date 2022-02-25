@@ -10,19 +10,19 @@ The reason I run a blog is that I feel the value of being able to influence the 
 
 ## 🛠 Tech Stack 🛠 
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://github.com/younhoso/younhoso/explore/html5.png" height="20">
+<img src="https://younhoso.github.io/younhoso/explore/html5.png" height="20" alt="html5">
 </code>
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://github.com/younhoso/younhoso/explore/css3.png" height="20">
+<img src="https://younhoso.github.io/younhoso/explore/css3.png" height="20" alt="css3">
 </code>
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://github.com/younhoso/younhoso/explore/javascript.png" height="20" art="javascript">
+<img src="https://younhoso.github.io/younhoso/explore/javascript.png" height="20" alt="javascript">
 </code>
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://github.com/younhoso/younhoso/explore/webpack.png" height="20" art="webpack">
+<img src="https://younhoso.github.io/younhoso/explore/webpack.png" height="20" alt="webpack">
 </code>
 <code style="background-color:rgba(175,184,193,0.2);">
-<img src="https://github.com/younhoso/younhoso/explore/figma.png" height="20" art="webpack">
+<img src="https://younhoso.github.io/younhoso/explore/figma.png" height="20" alt="figma">
 </code>
 
 ### 🎯 Frontend

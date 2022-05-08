@@ -5,4 +5,4 @@ blogExample
 
 |Project|Live Demo|
 |---|---|
-|[Newest_Best_by_JavaScript](https://github.com/younhoso/younhoso/tree/main/blogExample/Newest_Best_by_JavaScript)|Live Demo|
+|[Newest_Best_by_JavaScript](https://github.com/younhoso/younhoso/tree/main/blogExample/Newest_Best_by_JavaScript)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Newest_Best_by_JavaScript/)|

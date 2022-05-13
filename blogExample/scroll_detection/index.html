@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="progress-bar-con">
+        <div class="progress-bar"></div>
+    </div>
+
+    <div class="clearfix navInner" id="nav">
+        <h1 class="logo">LOGO</h1>
+        <ul class="menu_inner">
+            <li>menu-1</li>
+            <li>menu-2</li>
+            <li>menu-3</li>
+            <li>menu-4</li>
+        </ul>
+    </div>
+    <div class="contents">
+        <h2>What is Loream Ipsum?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores qui provident minima commodi hic dolor sint quisquam quibusdam recusandae. Facere consequatur incidunt laborum vitae earum, ducimus dignissimos eum illo.</p>
+    </div>
+
+    <script>
+        (function() {
+            const $ = (ele) => document.querySelector(ele)
+            let maxScrollValue;
+
+            const resizeHandler = () => {
+                maxScrollValue = document.body.offsetHeight - window.innerHeight; //엘리먼트의 높이값 - 윈도우창의 내부 높이값
+            }
+
+            const onScroll = () => {
+                const scrollPer = pageYOffset / maxScrollValue; //현재 스크롤 위치값 / 위에서 구한(문서 전체 높이값)
+                $('.progress-bar').style.width = scrollPer * 100 +'%'; // 0부터 ~ 1까지 비율 * 100 (100을 곱해주므로써 100단위로 만든다.)
+            }
+
+            
+            window.addEventListener('scroll', onScroll);
+            window.addEventListener('resize', resizeHandler); //브라우저 크기가 달라져도 자동으로 계산됩니다.
+            resizeHandler();
+        })();
+    </script>
+</body>
+</html>

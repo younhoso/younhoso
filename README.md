@@ -1,5 +1,5 @@
 # TECH STACK
-<img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=javascript&logoColor=white"/>
+<a><img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=javascript&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white"/>
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
 <img src="https://img.shields.io/badge/React-%2335495e?style=flat-square&logo=React&logoColor=2361DAFB"/>

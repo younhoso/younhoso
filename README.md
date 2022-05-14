@@ -2,14 +2,10 @@
 <a><img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=javascript&logoColor=white"/></a>
 <a><img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white"/></a>
 <a><img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/></a>
-<a><img src="https://img.shields.io/badge/React-%2335495e?style=flat-square&logo=React&logoColor=2361DAFB"/></a>
-<a><img src="https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=react-router&logoColor=white"/></a>
-<a><img src="https://img.shields.io/badge/redux-%23593d88?style=flat-square&logo=redux&logoColor=white"/></a>
-<a><img src="https://img.shields.io/badge/styled--components-DB7093?style=flat-square&logo=styled-components&logoColor=white"/></a>
 <a><img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white"/></a>
 
 # BLOG
-[블로그](https://triplexlab.tistory.com/)
+[TriplexLab](https://triplexlab.tistory.com/)
 
 ### blogExample
 TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입니다.👇👇

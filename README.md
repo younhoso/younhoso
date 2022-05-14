@@ -10,11 +10,11 @@
 ### blogExample
 TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입니다.👇👇
 
-|Project|Live Demo|
-|---|---|
+|Project|Live Demo|BLOG|
+|---|---|---|
 |[Newest_Best_by_JavaScript](https://github.com/younhoso/younhoso/tree/main/blogExample/Newest_Best_by_JavaScript)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Newest_Best_by_JavaScript/)|
 |[Drag_Drop](https://github.com/younhoso/younhoso/tree/main/blogExample/Drag_Drop)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Drag_Drop/)|
 [html_include](https://github.com/younhoso/younhoso/tree/main/blogExample/html_include)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/html_include/)|
 [video_responsive](https://github.com/younhoso/younhoso/tree/main/blogExample/video_responsive)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/video_responsive/)|
 [scroll_detection](https://github.com/younhoso/younhoso/tree/main/blogExample/scroll_detection)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/scroll_detection/)|
-[Parallax_Scroll](https://github.com/younhoso/younhoso/tree/main/blogExample/Parallax_Scroll)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Parallax_Scroll/)|
+[Parallax_Scroll](https://github.com/younhoso/younhoso/tree/main/blogExample/Parallax_Scroll)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Parallax_Scroll/)|[패럴렉스 스크롤 만들기](https://triplexlab.tistory.com/7)|

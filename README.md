@@ -12,7 +12,7 @@
 [블로그](https://triplexlab.tistory.com/)
 
 ### blogExample
-개인 블로그의 모든 Example에 대한 기본 레포지토리입니다.
+TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입니다.👇👇
 
 |Project|Live Demo|
 |---|---|

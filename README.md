@@ -17,3 +17,4 @@ TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입�
 [html_include](https://github.com/younhoso/younhoso/tree/main/blogExample/html_include)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/html_include/)|
 [video_responsive](https://github.com/younhoso/younhoso/tree/main/blogExample/video_responsive)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/video_responsive/)|
 [scroll_detection](https://github.com/younhoso/younhoso/tree/main/blogExample/scroll_detection)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/scroll_detection/)|
+[Parallax_Scroll](https://github.com/younhoso/younhoso/tree/main/blogExample/Parallax_Scroll)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Parallax_Scroll/)|

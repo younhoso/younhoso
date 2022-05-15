@@ -12,8 +12,9 @@ TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입�
 
 |Project|Live Demo|BLOG Link|
 |---|---|---|
-|[Newest_Best_by_JavaScript](https://github.com/younhoso/younhoso/tree/main/blogExample/Newest_Best_by_JavaScript)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Newest_Best_by_JavaScript/)|[JavaScript로 최신순, 베스트순](https://triplexlab.tistory.com/190)|
-|[Drag_Drop](https://github.com/younhoso/younhoso/tree/main/blogExample/Drag_Drop)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Drag_Drop/)|[Include HTML file](https://triplexlab.tistory.com/107)|
+[lazy_load_blur](https://github.com/younhoso/younhoso/tree/main/blogExample/lazy_load_blur)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/lazy_load_blur/)|[Image lazy load](https://triplexlab.tistory.com/129)|
+[Newest_Best_by_JavaScript](https://github.com/younhoso/younhoso/tree/main/blogExample/Newest_Best_by_JavaScript)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Newest_Best_by_JavaScript/)|[JavaScript로 최신순, 베스트순](https://triplexlab.tistory.com/190)|
+[Drag_Drop](https://github.com/younhoso/younhoso/tree/main/blogExample/Drag_Drop)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Drag_Drop/)|[Include HTML file](https://triplexlab.tistory.com/107)|
 [html_include](https://github.com/younhoso/younhoso/tree/main/blogExample/html_include)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/html_include/)|[영상 비율유지 반응형](https://triplexlab.tistory.com/64)|
 [video_responsive](https://github.com/younhoso/younhoso/tree/main/blogExample/video_responsive)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/video_responsive/)|[영상 비율유지 반응형](https://triplexlab.tistory.com/64)|
 [scroll_detection](https://github.com/younhoso/younhoso/tree/main/blogExample/scroll_detection)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/scroll_detection/)|[자바스크립트 현재의 스크롤바 위치](https://triplexlab.tistory.com/152)|

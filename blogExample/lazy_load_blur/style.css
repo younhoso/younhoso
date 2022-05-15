@@ -1,0 +1,12 @@
+/* Lazy Load Styles */
+.card-image{display:block;min-height:20rem;background:#fff center center no-repeat;background-size:cover;filter:blur(5px)}
+.card-image>img{display:block;width:100%;}
+.card-image.is-loaded{filter:none;transition:filter 1s;}
+
+html,body{width:100%;height:100%;margin:0;font-size:16px;font-family:sans-serif;}
+.card-list{display:block;margin:1rem auto;padding:0;font-size:0;text-align:center;list-style:none;}
+.card{width:90%;max-width:20rem;margin:1rem;font-size:1rem;text-decoration:none;overflow:hidden;box-shadow:0 0 3rem -1rem rgba(0,0,0,.5);transition:transform .1s ease-in-out,box-shadow .1s;}
+.card:hover{transform:translateY(-.5rem) scale(1.0125);box-shadow:0 .5em 3rem -1rem rgba(0,0,0,.5);}
+.card-description{display:block;padding:1em .5em;color:#515151;text-decoration:none;}
+.card-description>h2{margin:0 0 .5em;}
+.card-description>p{margin:0;}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>blur css</title>
+</head>
+<body>
+    <ul class="card-list">
+        <li class="card">
+            <a class="card-image" href="#0" data-image-full="./images/a500.jpg" data-image-small="./images/a100.jpg">
+                <img src="./images/a100.jpg"/>
+            </a>
+        </li>
+        
+        <li class="card">
+            <a class="card-image" href="#0" data-image-full="./images/c500.jpg" data-image-small="./images/c100.jpg">
+                <img src="./images/c100.jpg"/>
+            </a>
+        </li>
+        
+        <li class="card">
+            <a class="card-image" href="#0" data-image-full="./images/e500.jpg" data-image-small="./images/e100.jpg">
+                <img src="./images/e100.jpg"/>
+            </a>
+        </li>
+        
+        <li class="card">
+            <a class="card-image" href="#0" data-image-full="./images/r500.jpg" data-image-small="./images/r100.jpg">
+                <img src="./images/r100.jpg"/>
+            </a>
+        </li>
+        
+        <li class="card">
+            <a class="card-image" href="#0" data-image-full="./images/d500.jpg" data-image-small="./images/d100.jpg">
+                <img src="./images/d100.jpg"/>
+            </a>
+        </li>
+
+        <li class="card">
+            <a class="card-image" href="#0" data-image-full="./images/z500.jpg" data-image-small="./images/z100.jpg">
+                <img src="./images/z100.jpg"/>
+            </a>
+        </li>
+    </ul>
+
+    <script>
+        (function(){
+            const target = Array.from(document.querySelectorAll('.card')); // 감시할 대상자
+
+            function callback(entries, observer){
+                entries.forEach(entry => {
+                    const image_full = entry.target.querySelector('.card-image').getAttribute('data-image-full');
+                    const image_small = entry.target.querySelector('.card-image').getAttribute('data-image-small');
+
+                    if (entry.intersectionRatio > 0) { // 관찰 대상이 viewport 안에 들어온 경우 'is-loaded' 클래스를 추가
+                        entry.target.querySelector('.card-image img').src = image_full;
+                        entry.target.querySelector('.card-image').classList.add('is-loaded');
+                        // observer.unobserve(entry.target); // 이미지를 불러왔다면 타켓 엘리먼트에 대한 관찰을 멈춘다.
+                    } else {
+                        entry.target.querySelector('.card-image img').src = image_small;
+                        entry.target.querySelector('.card-image').classList.remove('is-loaded');
+                    }
+                });
+            };
+
+            var io = new IntersectionObserver(callback)
+            target.forEach(function(el){
+                io.observe(el)
+            });
+
+        })();
+    </script>
+</body>
+</html>

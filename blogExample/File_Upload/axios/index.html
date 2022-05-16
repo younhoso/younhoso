@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		.progress {height: 10px;}
+		.progressContainer{position:relative;width: 450px;padding:20px 10px;margin-top: 15px;height:10px;}
+		.progress{position:absolute;width: calc(100% - 20px);height: 10px;}
+		.progressTotal{background: rgba(80,90,100,0.15);border-radius: 10px;}
+		.progressNow{width: calc(0% - 20px);background: #057FEB;border-radius: 10px;}
+		.progressPer{background: transparent; text-align:center;color:#A6A6A6;}
+		.progressText{position: absolute; right: 0; top: 50%; transform: translate(100%, -50%)}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="file" name="file" multiple>
+		<button type="button" id="btn">전송</button>
+	</form>
+
+	<div class="progressContainer">
+		<div class="progress progressTotal"></div>
+		<div class="progress progressNow" id="progressNow"></div>
+		<div class="progressText">0%</div>
+	</div>
+	
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+		(() => {
+				const $ = (select) => document.querySelector(select)
+
+				const progressBar = (per) => {
+					$(".progressText").innerText = Math.floor(per)+" %";
+					$(".progressNow").style.width = "calc(" + per + "% - 20px)";
+				};
+
+				const upload = async (e) => {
+					e.preventDefault();
+					const config = {
+						onUploadProgress: function(e) {
+							if(e.lengthComputable){
+								// 업로드 진행률 계산
+								const percentCompleted = Math.round((e.loaded / e.total) * 100)
+								console.log(percentCompleted)
+								progressBar(percentCompleted)
+							} else {
+								// 측정 불가
+							}
+						}
+					}
+
+					const files = $('input[type="file"]').files
+					let data = new FormData()
+					data.append('file', files[0])
+
+				 	await axios.post('/avatar', data, config)
+						.then(res => console.log(res))
+						.catch(err => console.log(err))
+				};
+
+				$('#btn').addEventListener('click', upload);
+		})()
+	</script>
+</body>
+</html>

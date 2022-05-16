@@ -31,14 +31,14 @@
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script>
 		(() => {
-				const $ = (select) => document.querySelector(select)
+			const $ = (select) => document.querySelector(select)
 
-				const progressBar = (per) => {
-					$(".progressText").innerText = Math.floor(per)+" %";
-					$(".progressNow").style.width = "calc(" + per + "% - 20px)";
-				};
+			const progressBar = (per) => {
+				$(".progressText").innerText = Math.floor(per)+" %";
+				$(".progressNow").style.width = "calc(" + per + "% - 20px)";
+			};
 
-				const upload = async (e) => {
+			const upload = async (e) => {
 					e.preventDefault();
 					const config = {
 						onUploadProgress: function(e) {
@@ -53,16 +53,16 @@
 					}
 
 					const files = $('input[type="file"]').files[0]
-					console.log(files)
 					let data = new FormData()
 					data.append('file', files)
+					console.log(data.file)
 
-				 	await axios.post('/avatar', data, config)
+				 	await axios.post('/', data, config)
 						.then(res => console.log(res))
 						.catch(err => console.log(err))
 				};
 
-				$('#btn').addEventListener('click', upload);
+			$('#btn').addEventListener('click', upload);
 		})()
 	</script>
 </body>

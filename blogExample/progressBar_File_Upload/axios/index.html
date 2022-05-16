@@ -55,9 +55,8 @@
 					const files = $('input[type="file"]').files[0]
 					let data = new FormData()
 					data.append('file', files)
-					console.log(data.file)
 
-				 	await axios.post('/', data, config)
+				 	await axios.post('/avatar', data, config)
 						.then(res => console.log(res))
 						.catch(err => console.log(err))
 				};

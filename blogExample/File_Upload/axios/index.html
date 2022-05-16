@@ -43,8 +43,7 @@
 					const config = {
 						onUploadProgress: function(e) {
 							if(e.lengthComputable){
-								// 업로드 진행률 계산
-								const percentCompleted = Math.round((e.loaded / e.total) * 100)
+								const percentCompleted = Math.round((e.loaded / e.total) * 100)	// 업로드 진행률 계산
 								console.log(percentCompleted)
 								progressBar(percentCompleted)
 							} else {
@@ -53,9 +52,10 @@
 						}
 					}
 
-					const files = $('input[type="file"]').files
+					const files = $('input[type="file"]').files[0]
+					console.log(files)
 					let data = new FormData()
-					data.append('file', files[0])
+					data.append('file', files)
 
 				 	await axios.post('/avatar', data, config)
 						.then(res => console.log(res))

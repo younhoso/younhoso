@@ -1,7 +1,7 @@
 # TECH STACK
 <a><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
 <a><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/></a>
-<a><img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/></a>
+<a><img src="https://img.shields.io/badge/javascript(ES6)-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/></a>
 <a><img src="https://img.shields.io/badge/Figma-333?style=flat-square&logo=figma&logoColor=white"/></a>
 
 # BLOG

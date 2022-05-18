@@ -1,0 +1,53 @@
+html, body {height: 100%;}
+body{font-family:'helvetica neue';font-weight:200;font-size:20px;background-color: #f4f4f4;}
+button{cursor: pointer; background:transparent;border:0;border-radius:50%;color:#444;font-size:1.25rem;margin-right:5px;outline:none;width:3rem;min-width:3rem;height:3rem;transition:background-color,color;transition-duration:.25s;box-shadow:0 0 2rem #0000;}
+button:hover {background: #eee;}
+
+@font-face{font-family:'ic-font';src:url('fonts/ic-font.eot?17dlvp');src:url('fonts/ic-font.eot?17dlvp#iefix') format('embedded-opentype'),url('fonts/ic-font.ttf?17dlvp') format('truetype'),url('fonts/ic-font.woff?17dlvp') format('woff'),url('fonts/ic-font.svg?17dlvp#ic-font') format('svg');font-weight:normal;font-style:normal;font-display:block;}
+i{font-family:'ic-font'!important;speak:never;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.ic-mike:before{content:"\e900";}
+
+
+@keyframes pulse-red {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+	}
+	
+	70% {
+		box-shadow: 0 0 0 20px rgba(255, 82, 82, 0);
+	}
+	
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+	}
+}
+
+
+p{margin:0 0 3rem;}
+
+.search{display:block;width: 90%; max-width: 30rem; position:absolute;top:50%;left:50%;transform:translate(-50%,-50%); text-align: center; font-weight: 600;}
+.search .input-bar{align-items:center;background:#fff;border:2px solid #0000;border-radius:4rem;box-sizing:border-box;box-shadow:0 1rem 2rem -1.5rem #0005;display:inline-flex;height:4rem;overflow:hidden;transition:box-shadow .5s;width:100%;}
+.search .input-bar input{background:transparent;border:0;box-sizing:border-box;flex:1;font-size:1.25rem;margin-left:.5rem;min-width:8rem;outline:none;padding-left:1rem;position:relative;z-index:1;}
+.dictate.on {background: #000;}
+.dictate.on svg {display: block; margin: auto;}
+.dictate.on .ic-mike {display: none;}
+.dictate svg {display: none;}
+
+.style-scope{display: none; width:560px;height:400px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+.style-scope.on {display: block;}
+.icon-microphone {width: 20px; height: 20px; text-align: center; color: #fff; position: absolute; left: 50%; bottom: 20px; transform: translate(-50%,0); border-radius: 50%; padding: 18px; cursor: pointer;
+	background: rgba(255, 82, 82, 1);
+	box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+}
+.icon-microphone img{width: 100%;}
+.icon-microphone.pulseStart {
+	animation: pulse-red 1.8s infinite;
+}
+
+.header{height: 100%; border:1px solid #333;border-radius:5px;padding: 10px;position: relative;}
+.flex {display: flex;justify-content: space-between;}
+.prompt {font-weight: 600;}
+.icon-button {width: 30px; display: inline-block;}
+.icon-button img{width:100%;}
+.close {cursor: pointer;}
+

@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@keyframes slidein {
+  0% {
+    left: 45%;
+    opacity: 0;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes slidein2 {
+  0% {
+    right: 45%;
+    opacity: 0;
+  }
+  100% {
+    right: 50%;
+    opacity: 1;
+  }
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.about-slide {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 580px;
+}
+.about-slide .about-slide-wrap {
+  position: relative;
+  width: 100%;
+}
+.about-slide ul.bg-slide {
+  width: 100%;
+  height: 580px;
+}
+.about-slide ul.bg-slide li {
+  position: absolute;
+  width: 100%;
+  height: 580px;
+}
+.about-slide ul.bg-slide img {
+  height: 580px;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -720px;
+}
+
+.about-slide .icon-slide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -240px 0 0 -240px;
+  width: 480px;
+  height: 480px;
+}
+.about-slide .icon-slide li {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+}
+.about-slide .icon-slide li > img {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.about-slide .icon-slide li .tit_inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+}
+.about-slide .icon-slide li .tit_inner .tit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 22px;
+  font-weight: 600;
+  transform: translate(-50%, 140px);
+}
+.about-slide .icon-slide li .tit_inner img {
+  width: 140px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-slide .bg-slide .slide-item {
+  opacity: 0;
+}
+.about-slide .bg-slide .slide-item.active {
+  opacity: 1;
+}
+.about-slide .bg-slide .slide-item.active > img {
+  animation: slidein 1.5s ease;
+}
+
+.about-slide .icon-slide .icon-item {
+  opacity: 0;
+}
+.about-slide .icon-slide .icon-item.active {
+  opacity: 1;
+}
+.about-slide .icon-slide .icon-item.active > img {
+  animation: slidein2 1s ease;
+}

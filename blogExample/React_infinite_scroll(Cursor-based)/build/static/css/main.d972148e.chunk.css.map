@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/FoodList.css"],"names":[],"mappings":"AAAA,UACE,eAAgB,CAChB,SACF,CAEA,cACE,WACF","file":"main.d972148e.chunk.css","sourcesContent":[".FoodList {\n  list-style: none;\n  padding: 0;\n}\n\n.FoodListItem {\n  margin: 10px;\n}\n"]}

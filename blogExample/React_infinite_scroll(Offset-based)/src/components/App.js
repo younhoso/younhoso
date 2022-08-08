@@ -29,21 +29,20 @@ function App() {
       setLoadingError(null);
       setIsLoading(true);
       result = await getReviews(options);
+      const { paging, reviews } = result;
+      if (options.offset === 0) {
+        setItems(reviews);
+      } else {
+        setItems([...items, ...reviews]);
+      }
+      setOffset(options.offset + options.limit);
+      setHasNext(paging.hasNext);
     } catch (error) {
       setLoadingError(error);
       return;
     } finally {
       setIsLoading(false);
     }
-
-    const { paging, reviews } = result;
-    if (options.offset === 0) {
-      setItems(reviews);
-    } else {
-      setItems([...items, ...reviews]);
-    }
-    setOffset(options.offset + options.limit);
-    setHasNext(paging.hasNext);
   };
 
   useEffect(() => {
@@ -62,11 +61,12 @@ function App() {
     // 새로운 observer 생성
     const io = new IntersectionObserver(handleIntersection, options);
     if (target) io.observe(target);
-
-    offset === 0 && handleLoad({ order, offset: 0, limit: LIMIT })
     return () => io && io.disconnect();
-    
   }, [target, offset]);
+
+  useEffect(() => {
+    handleLoad({ order, offset: 0, limit: LIMIT })
+  },[])
 
   return (
     <div>

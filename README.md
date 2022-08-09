@@ -1,5 +1,5 @@
 # SYH
-Who Am I
+**Who Am I**
 - I’m currently learning React, React-qeury
 
 # TECH STACK

@@ -5,8 +5,8 @@ const initial_state = {
 	age: 5
 };
 
-// Action Creators
-export const changeName = (name) => ({type: CAHNGE_NAME, name})
+// Actions
+export const changeName = (name) => ({type: CAHNGE_NAME, name});
 
 //Reducer
 export default function reducer(state = initial_state, action = {}){
@@ -14,8 +14,7 @@ export default function reducer(state = initial_state, action = {}){
 		case CAHNGE_NAME: {
 			return {...state, name: action.name}
 		}
-
-		default :
+		default:
 			return state
 	}
 }

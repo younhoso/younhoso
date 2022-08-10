@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { changeName } from "./modules/cat";
 
 function App() {
-  const cat = useSelector(state => state.cat );
+  const cat = useSelector(state => state.cat);
   const dispatch = useDispatch();
 
   const handel = () => {

@@ -1,8 +1,10 @@
-import {legacy_createStore as createStore, combineReducers} from "redux"
-import cat from "./cat"
+import { configureStore } from "@reduxjs/toolkit";
+import catReducer from "./catSlice"
 
-const rootReducer = combineReducers({cat});
-
-const store = createStore(rootReducer);
+const store = configureStore({
+	reducer: {
+		cat: catReducer
+	}
+});
 
 export default store;

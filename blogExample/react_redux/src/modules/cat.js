@@ -1,7 +1,7 @@
 const CAHNGE_NAME = "cat/CHANGE_NAME";
 
 const initial_state = {
-	name: "펄이 고양이", 
+	name: "TriplexLab", 
 	age: 5
 };
 

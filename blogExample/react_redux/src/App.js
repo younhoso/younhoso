@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-import { changeName } from "./modules/cat";
+// import { changeName } from "./modules/cat";
+import { changeName } from "./modules/catSlice";
 
 function App() {
   const cat = useSelector(state => state.cat);
   const dispatch = useDispatch();
-
   const handel = () => {
-    dispatch(changeName("고양이 이름!!"))
+    dispatch(changeName("Younhoso!!"))
   }
 
   return (

@@ -1,7 +1,14 @@
+# SYH
+**Who Am I**
+- 🌱 I’m currently learning React, React-qeury
+- 🥇 I majored in Fashion Design.
+
 # TECH STACK
 <a><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
 <a><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/></a>
 <a><img src="https://img.shields.io/badge/javascript(ES6)-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/></a>
+<a><img src="https://img.shields.io/badge/react-61dafb?style=flat-square&logo=react&logoColor=black"/></a>
+<a><img src="https://img.shields.io/badge/styled--components-DB7093.svg?style=flat-square&logo=styled-components&logoColor=white"/></a>
 <a><img src="https://img.shields.io/badge/Figma-333?style=flat-square&logo=figma&logoColor=white"/></a>
 
 # BLOG

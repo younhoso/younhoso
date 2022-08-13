@@ -5,14 +5,18 @@ const catSlice = createSlice({
 	name: 'cat', //slice를 한마디로 정의하는 키워드
 	initialState: { // 초기 값
 		name: "TriplexLab", 
-		age: 100
+		productList: [],
+		selectedItem: null
 	},
 	reducers : { // action 생성 함수
 		changeName: (state, action) => {
 			state.name = action.payload
+		},
+		getAllProducts: (state, action) => {
+			state.productList = action.payload.data
 		}
 	}
 });
 
-export const { changeName } = catSlice.actions
+export const { changeName, getAllProducts } = catSlice.actions;
 export default catSlice.reducer;

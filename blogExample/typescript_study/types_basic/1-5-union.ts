@@ -1,7 +1,7 @@
 {
 	/**
 	 * Union Types === OR
-	 * 발생할수 있는 모든 케이스중에 하나만 할당할수 있을때 활용하면 좋습니다.
+	 * 발생할수 있는 모든 케이스중에 딱 하나만 할당할때 활용하면 좋습니다.
 	 */
 	type Direction = 'left' | 'right' | 'up' | 'down';
 	function move(direction: Direction) {
@@ -13,7 +13,7 @@
 	const tile: TileSize = 32;
 
 	/**
-	 * 실전 ex)
+	 * 실전 ex)👇👇
 	 * function login -> success, fail
 	 */
 	type SuccessState = {
@@ -43,7 +43,7 @@
 		if('response' in state){
 			console.log(`🎉 ${state.response.body}`)
 		} else {
-			console.log(`🎉 ${state.reason}`)
+			console.log(`😭 ${state.reason}`)
 		}
 	}
 

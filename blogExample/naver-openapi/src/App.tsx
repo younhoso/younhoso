@@ -1,9 +1,20 @@
-import styled, {css} from "styled-components"
+import styled, {css} from "styled-components";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState, changeName } from "@/modules/shoppingSlice"
 
 const App = () => {
+	const shopping = useSelector((state:RootState) => state.shopping.startDate);
+	const dispatch = useDispatch();
+
+	const handel = () => {
+    dispatch(changeName("Younhoso!!"))
+  }
+
 	return (
 		<Wrapper>
-			<Title>Hello test 입니다.</Title>;
+			<Title>Hello test 입니다.</Title>
+			<p>name: {shopping}</p>
+      <button onClick={handel}>이름 바꾸기</button>
 		</Wrapper>
 	)
 }

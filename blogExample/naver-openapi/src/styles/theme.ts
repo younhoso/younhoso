@@ -1,6 +1,6 @@
 const darkTheme = {
-	textColor: "whitesmoke",
-  backgroundColor: "#111",
+	textColor: "#111",
+  backgroundColor: "whitesmoke",
 };
 
 const theme = {

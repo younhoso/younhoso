@@ -1,25 +1,38 @@
 import { createSlice } from "@reduxjs/toolkit";
-import store from "./configStore";
+import type { PayloadAction } from '@reduxjs/toolkit'
+
+interface ShoppingState {
+	"startDate": string,
+	"endDate": string,
+	"timeUnit": string,
+	"category": string,
+	"keyword": string,
+	"device": string,
+	"gender": string,
+	"ages": []
+}
+
+const initialState = { 
+	"startDate": "",
+	"endDate": "",
+	"timeUnit": "",
+	"category": "",
+	"keyword": "",
+	"device": "",
+	"gender": "",
+	"ages": []
+} as ShoppingState
 
 const shoppingSlice = createSlice({
 	name: 'Shopping Insight',
-	initialState: { // 초기 값
-		startDate: "초기값", 
-		endDate: "",
-		timeUnit: "",
-		category: "",
-		keyword: "",
-		device: "",
-		gender: "",
-		ages: ""
-	},
-	reducers : { // action 생성 함수
-		changeName: (state, action) => {
-			state.startDate = action.payload; //👈🏻 불변성 유지를 우리가 직접 할 필요가 없습. 
+	initialState,
+	reducers : {
+		add: (state, action: PayloadAction<ShoppingState>) => {  // action 생성 함수
+			state.startDate = action.payload.startDate; //👈🏻 불변성 유지를 직접 할 필요가 없이(바로 값을 할당시킴). 
+			state.endDate = action.payload.endDate; //👈🏻 불변성 유지를 직접 할 필요가 없이(바로 값을 할당시킴). 
 		}
 	}
 });
 
-export type RootState = ReturnType<typeof store.getState>
-export const { changeName } = shoppingSlice.actions;
+export const { add } = shoppingSlice.actions;
 export default shoppingSlice.reducer;

@@ -20,7 +20,7 @@
 	age.call(person);
 
 class Person {
-	name: string;
+	name: String;
 	age: number;
 	constructor(name: string, age: number){
 		this.name = name;
@@ -41,5 +41,5 @@ class Person {
  console.log(myAge());
 
  const x = p1.getName;
- console.log(x())
+ console.log(x());
 }

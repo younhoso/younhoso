@@ -8,7 +8,7 @@
 	const address: [number, string, string] = [14023, '서울시', '송파구'];
 	let [zipcode, address1] = address;
 
-	zipcode = '123';
+	zipcode = 123;
 
 	type BookInfo = [string, string, number];
 	const BookData: BookInfo[] = [
@@ -26,5 +26,5 @@
 
 	let address2 = getArrayOne()[2];
 
-	address2 = 12
+	address2 = '12'
  }

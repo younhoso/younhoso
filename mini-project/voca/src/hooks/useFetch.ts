@@ -4,14 +4,15 @@ export default function useFetch(url: string) {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		fetch(url)
-		.then(res => {
-			return res.json()
-		})
-		.then(data => {
-			setData(data)
-		})
-	},[url]);
+		const fetchSet = async () => {
+			const res = await fetch(url);
+			if(!res.ok){
+				throw new Error('데이터 불러오는데 실패했습니다.')
+			}
+			setData(await res.json());
+		}
+		fetchSet();
+	},[]);
 
 	return data
 }

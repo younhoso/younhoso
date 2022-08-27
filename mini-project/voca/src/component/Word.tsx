@@ -54,8 +54,7 @@ function Word({word:w}: IProps) {
 	};
 
 	if(word.id === 0){
-		console.log(word)
-		return undefined;
+		return null;
 	}
 
 	return (

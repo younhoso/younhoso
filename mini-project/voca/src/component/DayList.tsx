@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import useFetch from "../hooks/useFetch";
+import {useGetFetch} from "../hooks/useFetch";
 import styles from "./DayList.module.css"
 
 function DayList() {
-	const days = useFetch('http://localhost:3001/days');
-
+	const days = useGetFetch('http://localhost:3001/days');
+	
 	return (
 		<div className={styles.list_day}>
 			{days.map(day => (

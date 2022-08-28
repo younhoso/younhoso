@@ -9,8 +9,8 @@ const Header = () => {
 				<Link to="/">토익 영단어(고급)</Link>
 			</h1>
 			<div className="memu">
-				<Link to="#0" className={styles.link}>단어 추가</Link>
-				<Link to="#0" className={styles.link}>Day 추가</Link>
+				<Link to="/create_word" className={styles.link}>단어 추가</Link>
+				<Link to="/create_day" className={styles.link}>Day 추가</Link>
 			</div>
 		</div>
 	)

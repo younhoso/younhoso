@@ -21,8 +21,8 @@ function Word({word:w}: IProps) {
 		setIsShow(!isShow)
 	};
 
-	function toggleDone() {
-		fetch(`http://localhost:3001/words/${word.id}`, {
+	async function toggleDone() {
+		const res = await fetch(`http://localhost:3001/words/${word.id}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json'
@@ -32,11 +32,9 @@ function Word({word:w}: IProps) {
 				isDone: !isDone
 			}),
 		})
-		.then(res => {
-			if(res.ok){
-				setIsDone(!isDone);
-			}
-		});
+		if(res.ok){
+			setIsDone(!isDone);
+		}
 	};
 
 	async function del() {

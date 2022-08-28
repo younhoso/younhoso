@@ -4,7 +4,11 @@ import styles from "./DayList.module.css"
 
 function DayList() {
 	const days = useGetFetch('http://localhost:3001/days');
-	
+
+	if(days.length === 0){
+		return <span>Loading…</span>
+	}
+
 	return (
 		<div className={styles.list_day}>
 			{days.map(day => (

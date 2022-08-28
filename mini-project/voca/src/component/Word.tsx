@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface IProps {
 	word: IWord
@@ -39,22 +39,19 @@ function Word({word:w}: IProps) {
 		});
 	};
 
-	function del() {
+	async function del() {
 		if(window.confirm('삭제 하시겠습니까?')){
-			fetch(`http://localhost:3001/words/${word.id}`, {
+			const res = await fetch(`http://localhost:3001/words/${word.id}`, {
 				method: 'DELETE'
-			}).then(res => {
-				if(res.ok){
-					setWord({
-						...word, id: 0
-					});
-				}
-			});
+			})
+			if(res.ok){
+				setWord({...word, id: 0})
+			}
 		}
 	};
 
 	if(word.id === 0){
-		return null;
+		return null; //이때 null을 리턴해주면 아무것도 표현하지 않습니다.
 	}
 
 	return (

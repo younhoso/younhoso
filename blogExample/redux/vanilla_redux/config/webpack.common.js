@@ -12,7 +12,7 @@ module.exports = {
     },
     extensions: [".js", ".ts", ".jsx", ".tsx", ".css", ".json"],
   },
-  entry: path.resolve(__dirname, "/src/index.tsx"),
+  entry: path.resolve(__dirname, "/src/index.jsx"),
   module: {
     rules: [
       {

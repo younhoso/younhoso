@@ -1,6 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-import { unwrapResult } from '@reduxjs/toolkit'
-// import { changeName } from "./modules/cat";
 import { changeName } from "./modules/catSlice";
 import { getProducts } from "./modules/api";
 import { useCallback, useEffect, useState } from "react";
@@ -9,6 +7,7 @@ import ReviewList from "./ReviewList";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const cat = useSelector(state => state.cat);
+  console.log(cat)
   const dispatch = useDispatch();
   const handel = () => {
     dispatch(changeName("Younhoso!!"))

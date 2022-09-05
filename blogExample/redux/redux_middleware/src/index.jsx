@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import logger from "redux-logger";
+import { BrowserRouter } from 'react-router-dom';
 import {legacy_createStore as createStore, applyMiddleware} from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 import { Provider } from 'react-redux';
@@ -14,7 +15,9 @@ const store = createStore(
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<Provider store={store}>
-		<App />
-	</Provider>
+	<BrowserRouter>
+		<Provider store={store}>
+			<App />
+		</Provider>
+	</BrowserRouter>
 );

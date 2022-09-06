@@ -9,6 +9,9 @@ function PostContainer ({postId}){
 
 	useEffect(() => {
 		dispatch(getPost(postId));
+		return () => {
+      console.log('컴포넌트 화면에서 사라짐')
+    }
 	},[dispatch, postId])
 
 	if(loading) return <div>로딩중...</div>;

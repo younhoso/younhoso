@@ -2,12 +2,12 @@
 export const createPromiseThunk = (type, promiseCreator) => {
 	const [SUCCESS, ERROR] = [`${type}_SUCCESS`, `${type}_ERROR`];
 	return (param) => async (dispatch) => {
-		dispatch({type, param});
+		dispatch({type, param}); // 요청이 시작됨 (액션 객체)
 		try {
 			const payload = await promiseCreator(param);
-			dispatch({ type: SUCCESS, payload }); // 성공
+			dispatch({ type: SUCCESS, payload }); // 성공 (액션 객체)
 		} catch(e){
-			dispatch({type: ERROR, payload: e, error: true}); // 실패
+			dispatch({type: ERROR, payload: e, error: true}); // 실패 (액션 객체)
 		}
 	};
 };

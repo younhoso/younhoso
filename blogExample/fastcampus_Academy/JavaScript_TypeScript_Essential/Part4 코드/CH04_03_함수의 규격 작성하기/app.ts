@@ -37,7 +37,7 @@ const store: Store = {
   feeds: [],
 };
 
-function getData<T>(url: string):T {
+function getData<AjaxResponse>(url: string):AjaxResponse {
   ajax.open('GET', url, false);
   ajax.send();
 

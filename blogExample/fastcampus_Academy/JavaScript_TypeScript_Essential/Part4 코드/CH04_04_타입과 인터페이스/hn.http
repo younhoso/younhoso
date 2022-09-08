@@ -1,0 +1,5 @@
+### 뉴스 피드
+GET https://api.hnpwa.com/v0/news/1.json HTTP/1.1
+
+### 뉴스 상세
+GET https://api.hnpwa.com/v0/item/27186675.json HTTP/1.1

@@ -12,14 +12,14 @@ const groupInfo = {
 };
 
 function makeGroup(source, info){
-	const merge = (a,b) => ({...a, ...b});
-
+	const merge = (a, b) => ({...a, ...b});
+	
 	return Object.keys(info)
-		.map(group => ({ [group]: info[group]
-			.map(k => ({ [k] : source[k] }))
+		.map(group => ({ [group] : info[group] 
+			.map( k => ({ [k] : source[k] }))
 			.reduce(merge, {})
-			}))
-		.reduce(merge, {});
+		}))
+		.reduce(merge, {})
 }
 
 console.log(makeGroup(sourceObject, groupInfo))

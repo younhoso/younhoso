@@ -67,6 +67,8 @@ class NewsDetailApi extends Api {
 class View {
   template: string;
   container: HTMLElement;
+  htmlList: string[];
+
   constructor(containerId: string, template: string) {
     const containerElement = document.getElementById(containerId);
     if(!containerElement){
@@ -75,17 +77,31 @@ class View {
 
     this.container = containerElement;
     this.template = template;
+    this.htmlList = [];
   }
 
-  updateView(html: string): void {
-    this.container.innerHTML = html;
+  updateView(){
+    this.container.innerHTML = this.template;
+  }
+
+  addHtml(htmlString: string): void{
+    this.htmlList.push(htmlString);
+  }
+
+  getHtml(): string {
+    return this.htmlList.join('');
+  }
+
+  setTemplateData(key: string, value: string): void{
+    this.template = this.template.replace(`{{__${key}__}}`, value)
   }
 }
 
 class NewsFeedView extends View {
-  constructor(){
-    let api = new NewsFeedApi(NEWS_URL);
-    let newsFeed: NewsFeed[] = store.feeds;
+  api : NewsFeedApi;
+  feeds: NewsFeed[];
+
+  constructor(containerId: string){
     let template: string = `
       <div class="bg-gray-600 min-h-screen">
         <div class="bg-white text-xl">
@@ -110,55 +126,59 @@ class NewsFeedView extends View {
         </div>
       </div>
     `;
+    super(containerId, template);
 
-    if (newsFeed.length === 0) {
-      newsFeed = store.feeds = makeFeeds(api.getData());
+    this.api = new NewsFeedApi(NEWS_URL);
+    this.feeds = store.feeds;
+    
+
+    if (this.feeds.length === 0) {
+      this.feeds = store.feeds = this.api.getData();
+      this.makeFeeds();
     }
   };
 
   render():void {
-    const newsList: string[] = [];
-
     for(let i = (store.currentPage - 1) * 10; i < store.currentPage * 10; i++) {
-      newsList.push(`
-        <div class="p-6 ${newsFeed[i].read ? 'bg-red-500' : 'bg-white'} mt-6 rounded-lg shadow-md transition-colors duration-500 hover:bg-green-100">
+      const {id, title, comments_count, user, points, time_ago, read} = this.feeds[i];
+
+      this.addHtml(`
+        <div class="p-6 ${read ? 'bg-red-500' : 'bg-white'} mt-6 rounded-lg shadow-md transition-colors duration-500 hover:bg-green-100">
           <div class="flex">
             <div class="flex-auto">
-              <a href="#/show/${newsFeed[i].id}">${newsFeed[i].title}</a>  
+              <a href="#/show/${id}">${title}</a>  
             </div>
             <div class="text-center text-sm">
-              <div class="w-10 text-white bg-green-300 rounded-lg px-0 py-2">${newsFeed[i].comments_count}</div>
+              <div class="w-10 text-white bg-green-300 rounded-lg px-0 py-2">${comments_count}</div>
             </div>
           </div>
           <div class="flex mt-3">
             <div class="grid grid-cols-3 text-sm text-gray-500">
-              <div><i class="fas fa-user mr-1"></i>${newsFeed[i].user}</div>
-              <div><i class="fas fa-heart mr-1"></i>${newsFeed[i].points}</div>
-              <div><i class="far fa-clock mr-1"></i>${newsFeed[i].time_ago}</div>
+              <div><i class="fas fa-user mr-1"></i>${user}</div>
+              <div><i class="fas fa-heart mr-1"></i>${points}</div>
+              <div><i class="far fa-clock mr-1"></i>${time_ago}</div>
             </div>  
           </div>
         </div>    
       `);
     }
 
-    template = template.replace('{{__news_feed__}}', newsList.join(''));
-    template = template.replace('{{__prev_page__}}', String(store.currentPage > 1 ? store.currentPage - 1 : 1));
-    template = template.replace('{{__next_page__}}', String(store.currentPage + 1));
+    this.setTemplateData('news_feed', this.getHtml());
+    this.setTemplateData('prev_page', String(store.currentPage > 1 ? store.currentPage - 1 : 1));
+    this.setTemplateData('next_page', String(store.currentPage + 1));
 
-    updateView(template);
+    this.updateView(this.template);
   };
 
-  makeFeeds(feeds: NewsFeed[]): NewsFeed[] {
-    for (let i = 0; i < feeds.length; i++) {
-      feeds[i].read = false;
+  makeFeeds(): void {
+    for (let i = 0; i < this.feeds.length; i++) {
+     this.feeds[i].read = false;
     }
-  
-    return feeds;
   };
 }
 
 class NewsDetailView extends View {
-  constructor(){
+  constructor(containerId: string){
     let template = `
       <div class="bg-gray-600 min-h-screen pb-8">
         <div class="bg-white text-xl">
@@ -187,6 +207,8 @@ class NewsDetailView extends View {
         </div>
       </div>
     `;
+
+    super(containerId, template);
   }
 
   render() {
@@ -201,16 +223,19 @@ class NewsDetailView extends View {
       }
     }
   
-    updateView(template.replace('{{__comments__}}', makeComment(newsDetail.comments)));
+    this.setTemplateData('comments', this.makeComment(newsDetail.comments));
+    this.setTemplateData('currentPage', String(store.currentPage));
+    this.setTemplateData('title', newsDetail.title);
+    this.setTemplateData('content', newsDetail.content);
+
+    this.updateView();
   }
 
   makeComment(comments: NewsComment[]): string {
-    const commentString = [];
-  
     for(let i = 0; i < comments.length; i++) {
       const comment: NewsComment = comments[i];
   
-      commentString.push(`
+      this.addHtml(`
         <div style="padding-left: ${comment.level * 40}px;" class="mt-4">
           <div class="text-gray-400">
             <i class="fa fa-sort-up mr-2"></i>
@@ -221,11 +246,11 @@ class NewsDetailView extends View {
       `);
   
       if (comment.comments.length > 0) {
-        commentString.push(makeComment(comment.comments));
+        this.addHtml(this.makeComment(comment.comments));
       }
     }
   
-    return commentString.join('');
+    return this.getHtml();
   }
 }
 

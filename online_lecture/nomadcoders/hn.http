@@ -1,0 +1,5 @@
+###
+GET https://api.coinpaprika.com/v1/coins/btc-bitcoin HTTP/1.1
+
+###
+GET https://api.coinpaprika.com/v1/tickers/btc-bitcoin HTTP/1.1

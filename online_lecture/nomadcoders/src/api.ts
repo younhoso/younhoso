@@ -31,7 +31,10 @@ export async function fetchCoinTickers(coinId: string) {
 export async function fetchCoinHistory(coinId: string){
 	const endDate = Math.floor(Date.now() / 1000); // 현재 시간을 초로 나타냄
 	const startDate = endDate - 60 * 60 * 24 * 7 * 1; // 일주일전을 초로 나타냄
-	const response = await fetch(`${BASE_URL2}?coinId=${coinId}&start=${startDate}&end=${endDate}`)
+	const response = await fetch(`${BASE_URL2}?coinId=${coinId}&start=${startDate}&end=${endDate}`);
+	if(!response.ok){
+		throw new Error('데이터 불러오는데 실패했습니다.')
+	}
 	const body = await response.json();
 	return body;
 };

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { useQuery } from 'react-query';
 import { Switch, Route, useRouteMatch, useLocation, useParams } from "react-router";
 import Price from './Price';
@@ -158,10 +158,10 @@ function Coin() {
   const priceMatch = useRouteMatch("/:coinId/price");
   const chartMatch = useRouteMatch("/:coinId/chart");
   const {isLoading: infoLoading, data: infoData } = useQuery<InfoData>(
-    ["info", coinId], () =>  fetchCoinInfo(coinId)
+    ["info", coinId], () => fetchCoinInfo(coinId)
   );
   const {isLoading: tickersLoading, data: tickersData } = useQuery<PriceData>(
-    ["tickers", coinId], () => fetchCoinTickers(coinId)
+    ["tickers", coinId], () => fetchCoinTickers(coinId), {refetchInterval: 5000}
   );
 /*   const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState<InfoData>();
@@ -183,6 +183,9 @@ function Coin() {
 
   return (
     <Container>
+      <Helmet>
+        <title>{state?.name ? state.name : loading ? "Loading..." : infoData?.name}</title>
+      </Helmet>
       <Header>
         <Title>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
@@ -202,8 +205,8 @@ function Coin() {
                 <span>${infoData?.symbol}</span>
               </OverviewItem>
               <OverviewItem>
-                <span>Open Source:</span>
-                <span>{infoData?.open_source ? "Yes" : "No"}</span>
+                <span>Price:</span>
+                <span>{tickersData?.quotes.USD.price}</span>
               </OverviewItem>
             </Overview>
             <Description>{infoData?.description}</Description>

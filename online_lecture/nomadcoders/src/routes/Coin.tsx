@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import { Switch, Route, useRouteMatch, useLocation, useParams } from "react-router";
 import Price from './Price';
 import Chart from './Chart';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { fetchCoinInfo, fetchCoinTickers } from '../api';
 
 const Container = styled.div`
@@ -180,12 +180,18 @@ function Coin() {
     })();
   }, [coinId]); */
   const loading = infoLoading || tickersLoading;
+  const history = useHistory();
+
+  function handleClick() {
+    history.goBack();
+  }
 
   return (
     <Container>
       <Helmet>
         <title>{state?.name ? state.name : loading ? "Loading..." : infoData?.name}</title>
       </Helmet>
+      <button type="button" onClick={handleClick}>Go Back</button>
       <Header>
         <Title>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}

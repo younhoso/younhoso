@@ -8,7 +8,7 @@ export async function fetchCoins() {
 	}
 	const body = await response.json();
 	return body;
-}
+};
 
 export async function fetchCoinInfo(coinId: string) {
 	const response = await fetch(`${BASE_URL}/coins/${coinId}`);
@@ -17,7 +17,7 @@ export async function fetchCoinInfo(coinId: string) {
 	}
 	const body = await response.json();
 	return body;
-}
+};
 
 export async function fetchCoinTickers(coinId: string) {
 	const response = await fetch(`${BASE_URL}/tickers/${coinId}`);
@@ -26,7 +26,7 @@ export async function fetchCoinTickers(coinId: string) {
 	}
 	const body = await response.json();
 	return body;
-}
+};
 
 export async function fetchCoinHistory(coinId: string){
 	const endDate = Math.floor(Date.now() / 1000); // 현재 시간을 초로 나타냄

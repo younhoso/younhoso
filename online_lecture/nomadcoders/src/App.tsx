@@ -67,13 +67,15 @@ a {
 `;
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
+  const toggleDark = () => setIsDark((current) => !current);
   return (
     <>
-    <ThemeProvider theme={lightTheme}>
-      <GlobalStyle />
-      <Router />
-    </ThemeProvider>
+      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        <button onClick={toggleDark}>Toggle Mode</button>
+        <GlobalStyle />
+        <Router />
+      </ThemeProvider>
     </>
   );
 }

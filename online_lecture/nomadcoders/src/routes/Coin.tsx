@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 import { useQuery } from 'react-query';
 import { Switch, Route, useRouteMatch, useLocation, useParams } from "react-router";
 import Price from './Price';

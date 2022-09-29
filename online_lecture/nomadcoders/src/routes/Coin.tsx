@@ -154,11 +154,9 @@ interface PriceData {
   }
 }
 
-interface ICoinProp {
-  isDark: boolean;
-}
+interface ICoinProp {}
 
-function Coin({isDark}:ICoinProp) {
+function Coin({}:ICoinProp) {
   const { coinId } = useParams<RouteParams>();
   const {state} = useLocation<RouteSate>();
   const priceMatch = useRouteMatch("/:coinId/price");
@@ -189,7 +187,9 @@ function Coin({isDark}:ICoinProp) {
   const history = useHistory();
 
   function handleClick() {
-    history.goBack();
+    history.push({
+      pathname: '/'
+    });
   }
 
   return (
@@ -247,7 +247,7 @@ function Coin({isDark}:ICoinProp) {
                 <Price />
               </Route>
               <Route path={`/:coinId/chart`}>
-                <Chart isDark={isDark} coinId={coinId} />
+                <Chart coinId={coinId} />
               </Route>
             </Switch>
           </>

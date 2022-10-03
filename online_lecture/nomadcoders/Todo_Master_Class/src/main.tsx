@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { RecoilRoot } from "recoil";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
-import { darkTheme } from "./theme";
+import { darkTheme } from "./components/theme";
 
 ReactDOM.render(
   <RecoilRoot>

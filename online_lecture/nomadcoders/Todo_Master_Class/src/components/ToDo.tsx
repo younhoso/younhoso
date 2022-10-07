@@ -13,7 +13,11 @@ function ToDo({text, category, id}: IToDo) {
 				id,
 				category: name as any
 			}
-			return [...oldToDos.slice(0, targetIndex), newToDo, ...oldToDos.slice(targetIndex + 1)]
+			return [
+				...oldToDos.slice(0, targetIndex), // 새 배열에는 target 이전의 모든 원소들이 들어가고,
+				newToDo, // 새로운 ToDo 들어가고,
+				...oldToDos.slice(targetIndex + 1) // 그리고 target 이후의 모든 원소들도 들어감.
+			]
 		})
 	};
 	return (

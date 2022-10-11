@@ -22,7 +22,7 @@ export const toDoState = atom<IToDo[]>({
   default: [],
 });
 
-export const toDoSelector = selector({ //selector가 toDos랑 category를 받아서 category에 따라서 toDo를 분류해줍니다.
+export const toDoSelector = selector({ //selector가 toDos랑 category를 받아서 맞는 category에 따라서 toDo를 분류해줍니다.
   key: "toDoSelector",
   get: ({get}) => {
     const toDos = get(toDoState);

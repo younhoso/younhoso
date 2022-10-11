@@ -20,6 +20,14 @@ function ToDo({text, category, id}: IToDo) {
 			]
 		})
 	};
+	const handleDelete = () => {
+		setToDos((oldToDos) => {
+			debugger;
+			const newToDos = oldToDos.filter((toDo) => toDo.id !== id);
+			return newToDos;
+		})
+	};
+
 	return (
 			<li>
 			 	<span>{text}</span>
@@ -32,6 +40,7 @@ function ToDo({text, category, id}: IToDo) {
 				{ category !== Categories.DONE && (
 					<button name={Categories.DONE} onClick={onClick}>Done</button> 
 				)}
+				<button onClick={handleDelete}>삭제</button>
 			</li>
 	)
 }

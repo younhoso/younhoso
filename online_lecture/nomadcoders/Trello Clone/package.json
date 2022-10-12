@@ -1,7 +1,13 @@
 {
-  "name": "react-masterclass",
-  "version": "0.1.0",
+  "name": "trello-clone",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -26,37 +32,15 @@
     "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
     "@types/react-helmet": "^6.1.4",
     "@types/react-query": "^1.2.9",
     "@types/react-router-dom": "^5.3.1",
-    "@types/styled-components": "^5.1.15"
-  },
-  "homepage": "https://nomadcoders.github.io/react-masterclass"
+    "@types/styled-components": "^5.1.15",
+    "@vitejs/plugin-react": "^2.1.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
 }

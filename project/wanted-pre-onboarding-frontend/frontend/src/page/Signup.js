@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import useInputs from "../hooks/useInputs";
 import { apis } from "../store/api";
@@ -8,7 +9,8 @@ const INITIAL_VALUES = {
   password: ""
 };
 
-const Home = () => {
+const Signup = () => {
+	const navigate = useNavigate();
 	// input의 커스텀훅
 	const [values, onChange] = useInputs(INITIAL_VALUES);
 	// 오류메시지 상태저장
@@ -70,7 +72,9 @@ const Home = () => {
 			setLoadingError(error);
 			return;
 		}
-
+		if(result){
+			navigate('/');
+		}
 		localStorage.setItem('accessToken', result.data.access_token);
   };
 
@@ -108,4 +112,4 @@ const AuthWrap = styled.div`
 	input {width:100%;}
 	button {width: 100%; margin-top:10px;}
 `
-export default Home;
+export default Signup;

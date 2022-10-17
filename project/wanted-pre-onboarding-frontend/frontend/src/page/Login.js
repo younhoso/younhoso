@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import useInputs from "../hooks/useInputs";
@@ -9,7 +9,7 @@ const INITIAL_VALUES = {
   password: ""
 };
 
-const Home = () => {
+const Login = () => {
 	const navigate = useNavigate();
 	// input의 커스텀훅
 	const [values, onChange] = useInputs(INITIAL_VALUES);
@@ -94,4 +94,4 @@ const AuthWrap = styled.div`
 	button {width: 100%; margin-top:10px;}
 	.signup {display:block; font-size: 12px; text-align: right; margin-top:10px; cursor: pointer;}
 `
-export default Home;
+export default Login;

@@ -8,10 +8,10 @@ import Todo from './page/Todo';
 const Router = () => {
 	const navigate = useNavigate();
 	useEffect(() => {
-		if(!localStorage.getItem('accessToken')){
-			navigate('/');
-		} else {
+		if(localStorage.getItem('accessToken')){
 			navigate('/todo');
+		} else if(!localStorage.getItem('accessToken') && window.location.pathname !== '/'){
+			navigate('/signup');
 		}
 	},[navigate])
 
@@ -20,7 +20,6 @@ const Router = () => {
 			<Route path='/' element={<Login />} exact/>
 			<Route path='/signup' element={<Signup/>} />
 			<Route path='/todo' element={<Todo/>} />
-			<Route path='*' element={<Login replace to='/' />} />
 		</Routes>
 	)
 }

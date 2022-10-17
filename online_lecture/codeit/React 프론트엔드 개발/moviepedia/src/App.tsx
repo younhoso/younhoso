@@ -1,20 +1,16 @@
 import ReviewList from "./components/ReviewList"
 import items from './mock.json';
 
-export interface IReview {
-  id: number,
-  title: string,
-  imgUrl: string,
-  rating: number,
-  content: string
-  createdAt: number,
-  updatedAt: number
-}
-
 function App() {
   return (
     <div className="App">
-      <ReviewList items={items}/>
+      {
+        items.map((item, id) => {
+          return (
+            <ReviewList key={id} id={0} title={item.title} imgUrl={""} rating={0} content={""} createdAt={0} updatedAt={0} />
+          )
+        })
+      }
     </div>
   )
 }

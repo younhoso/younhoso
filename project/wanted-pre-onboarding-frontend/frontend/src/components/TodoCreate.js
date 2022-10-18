@@ -1,58 +1,17 @@
 import React, { useState } from 'react';
 import styled, {css} from 'styled-components';
 import {MdAdd} from 'react-icons/md';
-import useInputs from '../hooks/useInputs';
-import { apis } from "../store/api";
+import TodoForm from './TodoForm';
 
-const INITIAL_VALUES = {
-  todoText: ""
-};
-
-const TodoCreate = ({setItems}) => {
-	// input의 커스텀훅
+const TodoCreate = ({ onCreate, setItems }) => {
 	const [open, setOpen] = useState(false);
-	const [values, onChange] = useInputs(INITIAL_VALUES);
-
 	const onToggle = () => setOpen(!open);
-	const onChanged = (e) => {
-		const {name, value} = e.target;
-		onChange(name, value)
-	}
-	const data = {
-			todo: values.todoText,
-			isCompleted: false,
-			userId: 1,
-	};
-	
-	const onSubmit = async (e) => {
-		e.preventDefault();
-		let result;
-		try{
-			// eslint-disable-next-line no-unused-vars
-			result = await apis.createTodo(data);
-		} catch (error) {
-			console.log(error)
-			return;
-		}
-
-		setItems((prev) => [
-			...prev,
-			result.data
-		]);
-
-		onChange('todoText', '');
-		setOpen(false);
-		// data.userId += 1;
-	}
 
 	return (
 		<>
 		{open && (
 			<InsertFormPositioner>
-				<InsertForm onSubmit={onSubmit}>
-					<Input type="text" name="todoText" value={values.todoText} onChange={onChanged} placeholder='할 일을 입력 해주세요.' autoFocus/>
-					<Button>추가</Button>
-				</InsertForm>
+				<TodoForm onCreate={onCreate} setItems={setItems} setOpen={onToggle}/>
 			</InsertFormPositioner>
 		)}
 		<CircleButton onClick={onToggle} open={open}>
@@ -107,29 +66,5 @@ const InsertFormPositioner = styled.div`
 	position: absolute;
 `
 
-const InsertForm = styled.form`
-	background-color:  #f8f9fa;
-	padding: 32px;
-	padding-bottom: 72px;
-	border-bottom-left-radius: 16px;
-	border-bottom-right-radius: 16px;
-`
-
-const Input = styled.input`
-	padding: 12px;
-	border-radius: 4px;
-	border: 1px solid #dee2ed;
-	width: 90%;
-	outline: none;
-	font-size: 18px;
-	box-sizing: border-box;
-`
-
-const Button = styled.button`
-	background-color: transparent;
-	border: 1px solid #333;
-	height: 47px;
-	cursor: pointer;
-`
 
 export default TodoCreate;

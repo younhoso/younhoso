@@ -1,6 +1,7 @@
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd"
 
 function App() {
+  const onDragEnd = () => {};
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div>

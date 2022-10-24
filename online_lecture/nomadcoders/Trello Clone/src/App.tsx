@@ -1,41 +1,67 @@
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd"
+import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
+import styled from "styled-components";
+
+const toDos = ["A", "B", "C", "D", "E"];
 
 function App() {
-  const onDragEnd = () => {};
+  const onDragEnd = ( {destination, source} : DropResult ) => {};
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div>
-        <Droppable droppableId="one">
-          {(provider) => <ul>
-            <ul ref={provider.innerRef} {...provider.droppableProps}>
-              <Draggable draggableId="first" index={0}>
-                {(provided) => (
-                  <li 
-                    ref={provided.innerRef} 
-                    {...provided.draggableProps} 
-                    >
-                      <span {...provided.dragHandleProps}>🔥</span>
-                      One
-                    </li>
-                  )}
-              </Draggable>
-              <Draggable draggableId="second" index={1}>
-                {(provided) => (
-                  <li 
-                    ref={provided.innerRef} 
-                    {...provided.draggableProps} 
-                    >
-                      <span {...provided.dragHandleProps}>🔥</span>
-                      Two
-                    </li>
-                  )}
-              </Draggable>
-            </ul>
-          </ul>}
-        </Droppable>
-      </div>
+      <Wrapper>
+        <Boards>
+          <Droppable droppableId="one">
+            {(provider) => 
+              <Board ref={provider.innerRef} {...provider.droppableProps}>
+                {toDos.map((toDo, idx) => 
+                  <Draggable draggableId={toDo} index={idx}>
+                    {(provided) => (
+                      <Card 
+                        ref={provided.innerRef} 
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        >{toDo}
+                      </Card>
+                      )}
+                  </Draggable>
+                )}
+                {provider.placeholder}
+              </Board>
+            }
+          </Droppable>
+        </Boards>
+      </Wrapper>
     </DragDropContext>
   );
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Boards = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+`
+
+const Board = styled.div`
+  padding: 20px 10px;
+  background-color: ${props => props.theme.boardColor};
+  border-radius: 5px;
+  min-height: 200px;
+`;
+
+const Card = styled.div`
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: ${props => props.theme.cardColor};
+`;
 
 export default App;

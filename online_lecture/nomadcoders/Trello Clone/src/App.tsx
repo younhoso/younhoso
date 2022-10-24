@@ -1,10 +1,13 @@
 import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
+import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
-
-const toDos = ["A", "B", "C", "D", "E"];
+import { toDoState } from "./atoms";
 
 function App() {
-  const onDragEnd = ( {destination, source} : DropResult ) => {};
+  const [toDos, setToDos] = useRecoilState(toDoState)
+  const onDragEnd = ( {destination, source} : DropResult ) => {
+    
+  };
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Wrapper>

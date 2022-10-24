@@ -5,8 +5,16 @@ import { toDoState } from "./atoms";
 
 function App() {
   const [toDos, setToDos] = useRecoilState(toDoState)
-  const onDragEnd = ( {destination, source} : DropResult ) => {
-    
+  const onDragEnd = ( { draggableId, destination, source} : DropResult ) => {
+    if(!destination) return;
+    setToDos(oldToDos => {
+      const toDosCopy = [...oldToDos];
+      // 1) source.index 아이템 삭제하기
+      toDosCopy.splice(source.index, 1);
+      // 2) destination?.index으로 아이템을 다시 돌려두기
+      toDosCopy.splice(destination?.index, 0, draggableId)
+      return toDosCopy;
+    });
   };
   return (
     <DragDropContext onDragEnd={onDragEnd}>
@@ -16,7 +24,7 @@ function App() {
             {(provider) => 
               <Board ref={provider.innerRef} {...provider.droppableProps}>
                 {toDos.map((toDo, idx) => 
-                  <Draggable draggableId={toDo} index={idx}>
+                  <Draggable key={toDo} draggableId={toDo} index={idx}>
                     {(provided) => (
                       <Card 
                         ref={provided.innerRef} 

@@ -8,7 +8,6 @@ interface IDragabbleCardProps {
 }
 
 function DragabbleCard({toDo, idx}: IDragabbleCardProps) {
-	console.log(toDo, "렌더링되었습니다")
 	return (
 		<Draggable key={toDo} draggableId={toDo} index={idx}>
 			{(provided) => (

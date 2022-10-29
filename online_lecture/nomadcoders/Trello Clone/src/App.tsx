@@ -8,14 +8,19 @@ function App() {
   const [toDos, setToDos] = useRecoilState(toDoState)
   const onDragEnd = ( { draggableId, destination, source} : DropResult ) => {
     if(!destination) return;
-    // setToDos(oldToDos => {
-    //   const toDosCopy = [...oldToDos];
-    //   // 1) source.index 아이템 삭제하기
-    //   toDosCopy.splice(source.index, 1);
-    //   // 2) destination?.index으로 아이템을 다시 돌려두기
-    //   toDosCopy.splice(destination?.index, 0, draggableId)
-    //   return toDosCopy;
-    // });
+    setToDos(allBoards => {
+      const sourceBoard = [...allBoards[source.droppableId]];
+
+      // 1) source.index 아이템 삭제하기
+      sourceBoard.splice(source.index, 1);
+      // 2) destination?.index위치에 삭제하지 말고 아이템(draggableId)을 추가 시켜라
+      console.log(destination?.index)
+      sourceBoard.splice(destination?.index, 0, draggableId)
+      return {
+        ...allBoards,
+        [source.droppableId]: sourceBoard
+      };
+    });
   };
   return (
     <DragDropContext onDragEnd={onDragEnd}>

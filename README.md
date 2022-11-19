@@ -20,6 +20,7 @@ TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입�
 
 |Project|Live Demo|BLOG Link|
 |---|---|---|
+[NextJS & styled-components boilerplate](https://github.com/younhoso/younhoso/tree/main/blogExample/boilerplate/)| |[NextJS 에서 styled-components와 함께 사용하기](https://triplexlab.tistory.com/232)|
 [slider_custom](https://github.com/younhoso/younhoso/tree/main/blogExample/slider_custom/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/slider_custom/)|[slider_custom](https://triplexlab.tistory.com/82)|
 [lazy_load_blur](https://github.com/younhoso/younhoso/tree/main/blogExample/lazy_load_blur)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/lazy_load_blur/)|[Image lazy load](https://triplexlab.tistory.com/129)|
 [Newest_Best_by_JavaScript](https://github.com/younhoso/younhoso/tree/main/blogExample/Newest_Best_by_JavaScript)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Newest_Best_by_JavaScript/)|[JavaScript로 최신순, 베스트순](https://triplexlab.tistory.com/190)|

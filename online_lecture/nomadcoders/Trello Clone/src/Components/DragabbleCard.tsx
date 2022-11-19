@@ -4,13 +4,12 @@ import styled from "styled-components";
 
 interface IDragabbleCardProps {
 	toDo: string,
-	idx: number
+	index: number
 }
 
-function DragabbleCard({toDo, idx}: IDragabbleCardProps) {
-	console.log(toDo, "렌더링되었습니다")
+function DragabbleCard({toDo, index}: IDragabbleCardProps) {
 	return (
-		<Draggable key={toDo} draggableId={toDo} index={idx}>
+		<Draggable key={toDo} draggableId={toDo} index={index}>
 			{(provided) => (
 				<Card 
 					ref={provided.innerRef} 

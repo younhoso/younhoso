@@ -1,36 +1,34 @@
-import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
+import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import styled from "styled-components";
 import { toDoState } from "./atoms";
-import DragabbleCard from "./Components/DragabbleCard";
+import Board from "./Components/Board";
 
 function App() {
   const [toDos, setToDos] = useRecoilState(toDoState)
   const onDragEnd = ( { draggableId, destination, source} : DropResult ) => {
     if(!destination) return;
-    setToDos(oldToDos => {
-      const toDosCopy = [...oldToDos];
+    setToDos(allBoards => {
+      const sourceBoard = [...allBoards[source.droppableId]];
+
       // 1) source.index 아이템 삭제하기
-      toDosCopy.splice(source.index, 1);
-      // 2) destination?.index으로 아이템을 다시 돌려두기
-      toDosCopy.splice(destination?.index, 0, draggableId)
-      return toDosCopy;
+      sourceBoard.splice(source.index, 1);
+      // 2) destination?.index위치에 삭제하지 말고 아이템(draggableId)을 추가 시켜라
+      console.log(destination?.index)
+      sourceBoard.splice(destination?.index, 0, draggableId)
+      return {
+        ...allBoards,
+        [source.droppableId]: sourceBoard
+      };
     });
   };
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Wrapper>
         <Boards>
-          <Droppable droppableId="one">
-            {(provider) => 
-              <Board ref={provider.innerRef} {...provider.droppableProps}>
-                {toDos.map((toDo, idx) => 
-                  <DragabbleCard key={toDo} toDo={toDo} idx={idx} />
-                )}
-                {provider.placeholder}
-              </Board>
-            }
-          </Droppable>
+          {
+            Object.keys(toDos).map(boardId => <Board key={boardId} boardId={boardId} toDos={toDos[boardId]} />)
+          }
         </Boards>
       </Wrapper>
     </DragDropContext>
@@ -39,7 +37,7 @@ function App() {
 
 const Wrapper = styled.div`
   display: flex;
-  max-width: 480px;
+  max-width: 680px;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -50,14 +48,8 @@ const Wrapper = styled.div`
 const Boards = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(1, 1fr);
-`
-
-const Board = styled.div`
-  padding: 20px 10px;
-  background-color: ${props => props.theme.boardColor};
-  border-radius: 5px;
-  min-height: 200px;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 export default App;

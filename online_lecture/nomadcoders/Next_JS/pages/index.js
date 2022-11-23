@@ -1,11 +1,12 @@
+
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Seo from "../components/Seo";
 
-
-const API_KEY = "f5a3aa1ea818b84c6576fe57c931c31e";
-
 function Home() {
+  const router = useRouter();
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -16,17 +17,35 @@ function Home() {
         ).json();
         setMovies(results)
     })()
-  },[])
+  },[]);
+
+  const onClick = (id, title) => () => {
+    router.push({
+      pathname: `/movies/${id}`,
+      query: {
+        title
+      }
+    }, `/movies/${id}`);
+  }
 
   return (
     <HomeWraper>
       <Seo title="Home" />
       {!movies && <h4>Loading...</h4>}
       {movies?.map((item) => (
-        <div key={item.id}>
+        <div onClick={onClick(item.id, item.original_title)} key={item.id}>
           <div className="movie" key={item.id}>
             <img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} />
-            <h4>{item.original_title}</h4>
+            <h4>
+              <Link href={{
+                pathname: `/movies/${item.id}`,
+                query: {
+                  title: movies.original_title
+                },
+              }} as={`/movies/${item.id}`}>
+                <a>{item.original_title}</a>
+              </Link>
+            </h4>
           </div>
         </div>
       ))}

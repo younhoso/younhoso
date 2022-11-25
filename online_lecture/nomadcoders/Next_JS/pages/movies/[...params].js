@@ -1,5 +1,4 @@
 import Seo from "../../components/Seo";
-import { useRouter } from "next/router";
 import styled from "styled-components";
 
 function Detail({params}) {

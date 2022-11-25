@@ -1,48 +1,25 @@
 
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Seo from "../components/Seo";
 
-function Home() {
+function Home({results}) {
   const router = useRouter();
-  const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    (async () => {
-        const {results} = await (
-          await fetch(`/api/movies`
-          )
-        ).json();
-        setMovies(results)
-    })()
-  },[]);
-
-  const onClick = (id, title) => () => {
-    router.push({
-      pathname: `/movies/${id}`,
-      query: {
-        title
-      }
-    }, `/movies/${id}`);
-  }
+  const handleClick = (id, title) => () => {
+    router.push(`/movies/${title}/${id}`);
+  };
 
   return (
     <HomeWraper>
       <Seo title="Home" />
-      {!movies && <h4>Loading...</h4>}
-      {movies?.map((item) => (
-        <div onClick={onClick(item.id, item.original_title)} key={item.id}>
+      {results?.map((item) => (
+        <div onClick={handleClick(item.id, item.original_title)} key={item.id}>
           <div className="movie" key={item.id}>
             <img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} />
             <h4>
-              <Link href={{
-                pathname: `/movies/${item.id}`,
-                query: {
-                  title: movies.original_title
-                },
-              }} as={`/movies/${item.id}`}>
+              <Link href={`/movies/${item.original_title}/${item.id}`}>
                 <a>{item.original_title}</a>
               </Link>
             </h4>
@@ -75,5 +52,16 @@ const HomeWraper = styled.div`
     text-align: center;
   }
 `;
+
+export async function getServerSideProps() {
+  const {results} = await (
+    await fetch(`http://localhost:3000/api/movies`)
+  ).json()
+  return {
+    props: {
+      results
+    }
+  }
+}
 
 export default Home;

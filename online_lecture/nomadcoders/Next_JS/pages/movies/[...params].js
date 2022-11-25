@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 
 function Detail({params}) {
-  const router = useRouter();
   const [title, id] = params || [];
   return (
     <DetailWraper>

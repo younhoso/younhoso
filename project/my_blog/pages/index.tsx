@@ -5,7 +5,7 @@ import Seo from '../components/Seo'
 export default function Home() {
   return (
     <Layout>
-      <Seo title={'홈'}/>
+      <Seo title="홈"/>
       <ContentHero />
     </Layout>
   )

@@ -1,13 +1,12 @@
-import Footer from "./footer";
-import Header from "./header";
+import Footer from "./Footer";
+import Header from "./Header";
 import { Props } from "../types";
 
 function Layout({ children }: Props){
 	return(
 		<>
 			<Header />
-			<h1>레이어 아웃</h1>
-			<div>{children}</div>
+			<div className="flex flex-wrap container mx-auto">{children}</div>
 			<Footer />
 		</>
 	)

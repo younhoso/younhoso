@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
+import ProjectItem from "../components/projects/project-item";
 import Seo from "../components/Seo";
 import { DATABASE_ID, TOKEN } from '../config'
 import { DataTypeResults, DataType } from "../types";
 
 
 function Projects({results}: DataTypeResults) {
-	console.log(results)
 
 	return(
 		<Layout>
@@ -15,8 +15,7 @@ function Projects({results}: DataTypeResults) {
 			{results.map(({id, properties}:DataType) => {
 				return (
 					<div key={id}>
-						<p>{properties.Date?.date?.start}</p>
-						<p>{properties.Date?.date?.end}</p>
+						<ProjectItem properties={properties}/>
 					</div>
 				);
 			})}

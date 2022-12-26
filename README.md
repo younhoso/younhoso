@@ -1,7 +1,9 @@
 # SYH
 **Who Am I**
-- 🌱 I’m currently learning React, React-qeury
-- 🥇 I majored in Fashion Design.
+- Languages : javascript, typescript
+- Frameworks : React.js, Vue.js, Next.js
+- State Management : Recoil, React Query
+- Style : css, scss, styled-components
 
 # TECH STACK
 <a><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>

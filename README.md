@@ -1,5 +1,4 @@
 # SYH
-**Who Am I**
 - Languages : javascript, typescript
 - Frameworks : React.js, Vue.js, Next.js
 - State Management : Recoil, React Query

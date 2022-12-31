@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "icFont";
+  src: url("src/assets/fonts/icFont.eot?iy1ya4");
+  src: url("src/assets/fonts/icFont.eot?iy1ya4#iefix")
+      format("embedded-opentype"),
+    url("src/assets/fonts/icFont.ttf?iy1ya4") format("truetype"),
+    url("src/assets/fonts/icFont.woff?iy1ya4") format("woff"),
+    url("src/assets/fonts/icFont.svg?iy1ya4#icFont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icFont" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-close:before {
+  content: "\e900";
+}
+.ic-plus:before {
+  content: "\e901";
+}
+.ic-bin:before {
+  content: "\e902";
+}
+.ic-check:before {
+  content: "\e903";
+}

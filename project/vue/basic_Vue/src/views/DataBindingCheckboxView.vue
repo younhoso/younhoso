@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div v-for="(itme, index) in selectList" :class="[{'acvite': isChecked(itme)}, 'default']" :key="index">
+    <div v-for="(itme, idx) in selectList" :key="idx" :class="[{'acvite': isChecked(itme)}, 'default']">
         <input type="checkbox" name="" :id="itme.name" :value="itme.name" v-model="languages">
         <label :for="itme.name">{{ itme.value }}</label>
     </div>
-    <div v-for="(item, idx) in languages" :key="idx"> 선택함: {{ item }} </div>
+    <div v-for="(item, idx) in languages" :key="`i-${idx}`"> 선택함: {{ item }} </div>
   </div>
 </template>
 

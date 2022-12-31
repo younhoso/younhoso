@@ -14,6 +14,15 @@
         <li>
           <button @click="onClickIntend">Intend</button>
         </li>
+        <li>
+          <button @click="onClickSelect">select</button>
+        </li>
+        <li>
+          <button @click="onClickCheck">check</button>
+        </li>
+        <li>
+          <button @click="onClickRadio">radio</button>
+        </li>
       </ul>
       <router-view />
     </nav>
@@ -45,6 +54,27 @@ export default {
       this.$router.push(
         {
           name: 'intend'
+        }
+      ).catch(() => {})
+    },
+    onClickSelect () {
+      this.$router.push(
+        {
+          name: 'select'
+        }
+      ).catch(() => {})
+    },
+    onClickCheck () {
+      this.$router.push(
+        {
+          name: 'check'
+        }
+      ).catch(() => {})
+    },
+    onClickRadio () {
+      this.$router.push(
+        {
+          name: 'radio'
         }
       ).catch(() => {})
     }

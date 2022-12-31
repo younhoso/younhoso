@@ -25,14 +25,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/IntendView.vue')
   },
   {
-    path: '/selectView',
-    name: 'selectView',
+    path: '/select',
+    name: 'select',
     component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingSelectView.vue')
   },
   {
     path: '/check',
     name: 'check',
     component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingCheckboxView.vue')
+  },
+  {
+    path: '/radio',
+    name: 'radio',
+    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingRadioView.vue')
   }
 ]
 

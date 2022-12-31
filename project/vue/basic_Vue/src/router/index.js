@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue';
 import User from '../views/User.vue';
-// import UserProfile from '../views/UserProfile.vue';
 
 const routes = [
   {
@@ -14,6 +13,26 @@ const routes = [
     path: '/user/:id',
     name: 'user',
     component: User
+  },
+  {
+    path: '/career',
+    name: 'career',
+    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/CareerView.vue')
+  },
+  {
+    path: '/intend',
+    name: 'intend',
+    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/IntendView.vue')
+  },
+  {
+    path: '/selectView',
+    name: 'selectView',
+    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingSelectView.vue')
+  },
+  {
+    path: '/check',
+    name: 'check',
+    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingCheckboxView.vue')
   }
 ]
 

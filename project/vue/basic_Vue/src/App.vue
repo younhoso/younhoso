@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Hello Vue 2" />
     <nav>
       <ul>
         <li>
@@ -9,6 +8,12 @@
          <li>
           <button @click="onClick">user</button>
         </li>
+        <li>
+          <button @click="onClickcareer">career</button>
+        </li>
+        <li>
+          <button @click="onClickIntend">Intend</button>
+        </li>
       </ul>
       <router-view />
     </nav>
@@ -16,11 +21,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
 export default {
-  components: {
-    HelloWorld,
-  },
   methods: {
     onClick () {
       this.$router.push(
@@ -32,6 +33,20 @@ export default {
             tesg2: 32443
           }
         }).catch(() => {})
+    },
+    onClickcareer () {
+      this.$router.push(
+        {
+          name: 'career'
+        }
+      ).catch(() => {})
+    },
+    onClickIntend () {
+      this.$router.push(
+        {
+          name: 'intend'
+        }
+      ).catch(() => {})
     }
   }
 };

@@ -1,18 +1,18 @@
 <template>
-  <div class="AboutView">
-    AboutView
+  <div>
+    CareerView {{testid}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AboutView',
+  name: 'CareerView',
   components: {},
   computed: {},
   watch: {},
   data(){
     return {
-      
+      testid: 'eeee'
     }
   },
   setup(){},

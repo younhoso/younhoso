@@ -18,13 +18,13 @@ export default {
     }
   },
   methods: {
-    async getMoview() {
-      const response = await apis.getmovie();
-      this.items = response.data.results
-    },
     async searchMovis(txt){
       console.log(txt)
       const response = await apis.search(txt);
+      this.items = response.data.results
+    },
+    async getMoview() {
+      const response = await apis.getmovie();
       this.items = response.data.results
     }
   },

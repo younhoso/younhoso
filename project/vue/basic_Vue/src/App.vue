@@ -5,8 +5,8 @@
         <li>
           <router-link to="/">Home</router-link>/
         </li>
-         <li>
-          <button @click="onClick">user</button>
+        <li>
+          <button @click="onClickUser">user</button>
         </li>
         <li>
           <button @click="onClickcareer">career</button>
@@ -32,15 +32,10 @@
 <script>
 export default {
   methods: {
-    onClick () {
+    onClickUser () {
       this.$router.push(
         {
-          name: 'user', 
-          params: {
-            id: 3,
-            tesg: '111',
-            tesg2: 32443
-          }
+          name: 'user'
         }).catch(() => {})
     },
     onClickcareer () {

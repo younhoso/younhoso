@@ -3,6 +3,15 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue';
 import User from '../views/User.vue';
 
+const CareerView = () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/CareerView.vue')
+const IntendView = () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/IntendView.vue')
+const DataBindingSelectView = () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingSelectView.vue')
+const DataBindingCheckboxView = () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingCheckboxView.vue')
+const DataBindingRadioView = () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingRadioView.vue')
+const UserDetail = () => import(/* webpackChunkName: "userdetail", webpackPrefetch: true */ '../views/UserDetail.vue')
+const UserEdit = () => import(/* webpackChunkName: "useredit", webpackPrefetch: true */ '../views/UserEdit.vue')
+
+
 const routes = [
   {
     path: '/',
@@ -10,35 +19,48 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/user/:id',
-    name: 'user',
-    component: User
-  },
-  {
     path: '/career',
     name: 'career',
-    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/CareerView.vue')
+    component: CareerView
   },
   {
     path: '/intend',
     name: 'intend',
-    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/IntendView.vue')
+    component: IntendView
   },
   {
     path: '/select',
     name: 'select',
-    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingSelectView.vue')
+    component: DataBindingSelectView
   },
   {
     path: '/check',
     name: 'check',
-    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingCheckboxView.vue')
+    component: DataBindingCheckboxView
   },
   {
     path: '/radio',
     name: 'radio',
-    component: () => import(/* webpackChunkName: "career", webpackPrefetch: true */ '../views/DataBindingRadioView.vue')
+    component: DataBindingRadioView
+  },
+  {
+    path: '/user',
+    name: 'user',
+    component: User,
+    children: [
+      {
+        path: ':id',
+        name: 'user-detail',
+        component: UserDetail
+      },
+      {
+        path: ':id/edit',
+        name: 'user-edit',
+        component: UserEdit
+      },
+    ]
   }
+
 ]
 
 Vue.use(VueRouter);

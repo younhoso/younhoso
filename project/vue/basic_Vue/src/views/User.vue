@@ -1,7 +1,12 @@
 <template>
   <div>
     <h1>User</h1>
-    이 유저는 {{userId}} 입니다.
+    <p>유저를 검색해 주세요.</p>
+    <div>
+      <input type="text" placeholder="유저 번호를 입력해주세요." v-model="userId">
+    </div>
+    <button @click="path">검색</button>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,15 +14,10 @@
 export default {
   name: 'UserViews',
   components: {},
-  computed: {
-    userId(){
-      return this.$route.params.id
-    }
-  },
   watch: {},
   data(){
     return {
-      
+      userId: null
     }
   },
   setup(){},
@@ -27,7 +27,16 @@ export default {
   },
   mounted(){},
   unmounted(){},
-  methods: {}
+  methods: {
+    path() {
+      this.$router.push({
+        name: 'user-detail', 
+        params: {
+          id: this.userId
+        }
+      })
+    }
+  }
 }
 </script>
 

@@ -1,18 +1,23 @@
 <template>
   <div>
-    CareerView {{testid}}
+    <h1>User Edit</h1>
+    {{ userId }}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CareerView',
+  name: 'UserEdit',
   components: {},
-  computed: {},
+  computed: {
+    userId() {
+        return this.$route.params.id
+    }
+  },
   watch: {},
   data(){
     return {
-      testid: '데이터 바인딩'
+      
     }
   },
   setup(){},

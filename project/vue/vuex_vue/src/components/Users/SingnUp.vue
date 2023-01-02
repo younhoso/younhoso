@@ -22,7 +22,7 @@
       label="이미지"
       v-model="src"
     />
-    <button @click="signUp">회원가입</button>
+    <button @click="signUpAdd">회원가입</button>
   </div>
 </template>
 
@@ -47,7 +47,7 @@ export default {
   mounted(){},
   unmounted(){},
   methods: {
-    signUp() {
+    signUpAdd() {
       let userObj = {
         userId: this.userId,
         password: this.password,

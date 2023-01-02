@@ -5,6 +5,8 @@ import '@/assets/styles/index.scss';
 
 Vue.config.productionTip = false
 
+export const EventBus = new Vue();
+
 new Vue({
   store,
   render: h => h(App),

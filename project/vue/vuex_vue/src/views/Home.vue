@@ -20,7 +20,6 @@ export default {
     
   },
   mounted(){},
-  beforeDestroy() {},
   unmounted(){},
   methods: {
     

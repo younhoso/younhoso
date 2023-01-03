@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import { EventBus } from '@/main.js'
 export default {
   name: 'SingnUp',
   components: {},
@@ -55,8 +54,16 @@ export default {
         address: this.address,
         src: this.src
       }
-      EventBus.$emit('signUp', userObj);
+      this.$store.commit('addUsers', userObj)
+      this.clearForm()
     },
+    clearForm(){
+      this.userId = null,
+      this.password = null,
+      this.name = null,
+      this.address = null,
+      this.src = null
+    }
   },
 }
 </script>

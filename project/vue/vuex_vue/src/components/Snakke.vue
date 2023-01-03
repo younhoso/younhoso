@@ -1,30 +1,30 @@
 <template>
   <div>
-    <h1>Home</h1>
-    <h4>모든 유저수: {{ $store.getters.allUsersCount }}</h4>
+    
   </div>
 </template>
 
 <script>
+import useSnakke from '@/hooks/useCurrentScroll.js';
+
 export default {
-  name: 'Home-d52c32',
+  name: 'Snakke-17fa5f',
   components: {},
   computed: {},
   watch: {},
   data(){
     return {
+      
     }
   },
-  setup(){},
-  created(){
-    
+  setup(){
+    const { progress } = useSnakke();
+    progress.value
   },
+  created(){},
   mounted(){},
-  beforeDestroy() {},
   unmounted(){},
-  methods: {
-    
-  }
+  methods: {}
 }
 </script>
 

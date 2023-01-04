@@ -2,19 +2,18 @@
   <transition-group name="list" tag="ul">
     <li
       class="shadow"
-      v-for="(value, idx) in propsdata"
-      v-bind:key="value.item"
-    >
+      v-for="(value, idx) in this.storedTodoItems"
+      v-bind:key="value.item">
       <i
         class="ic-check checkBtn"
         v-bind:class="{ checkBtnCompleted: value.completed }"
-        v-on:click="toggleComplete(value, idx)"
+        v-on:click="toggleComplete({value, idx})"
       >
       </i>
       <span v-bind:class="{ textCompleted: value.completed }">{{
         value.item
       }}</span>
-      <span class="removeBtn" v-on:click="removeTodo(value, idx)">
+      <span class="removeBtn" v-on:click="removeTodo({value, idx})">
         <i class="ic-bin"></i>
       </span>
     </li>
@@ -22,16 +21,17 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
 export default {
-  props: ["propsdata"],
   methods: {
-    removeTodo: function (item, idx) {
-      this.$emit("removeItem", item, idx);
-    },
-    toggleComplete: function (item, idx) {
-      this.$emit("toggleItem", item, idx);
-    },
+    ...mapMutations({
+      removeTodo: 'removeOneItem',
+      toggleComplete: 'toggleOneItem'
+    })
   },
+  computed: {
+    ...mapGetters(['storedTodoItems'])
+  }
 };
 </script>
 
@@ -60,10 +60,6 @@ li {
   margin-right: 5px;
 }
 
-.textCompleted {
-  text-decoration: line-through;
-  color: #b3adad;
-}
 .removeBtn {
   color: #de4343;
 }

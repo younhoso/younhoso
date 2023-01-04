@@ -1,6 +1,7 @@
 # Vue2 Setup
 
 ## 실행방법
+영화 API 가져다가 서버랑 통신 하기
 ```
 // .env
 VUE_APP_SERVER=https://api.themoviedb.org/3

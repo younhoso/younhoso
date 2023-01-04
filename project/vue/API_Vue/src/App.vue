@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     async searchMovis(txt){
-      console.log(txt)
       const response = await apis.search(txt);
       this.items = response.data.results
     },

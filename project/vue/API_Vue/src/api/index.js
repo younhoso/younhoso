@@ -5,6 +5,8 @@ export const api = axios.create({
 });
 
 api.interceptors.response.use((config) => {
+  console.log(config.method)
+  console.log(config.url)
   config.headers['Content-type'] = 'application/json; charset=UTF-8';
   return config
 }, (err) => {

@@ -1,3 +1,12 @@
 # Vue2 Setup
 
-Vue2-Boilerplate
+## 실행방법
+```
+// .env
+VUE_APP_SERVER=https://api.themoviedb.org/3
+VUE_APP_API_KEY=f5a3aa1ea818b84c6576fe57c931c31e
+```
+```
+npm install // 설치
+npm run serve // 실행
+```

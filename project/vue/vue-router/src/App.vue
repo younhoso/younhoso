@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header ref="header" />
+    <router-view></router-view>
     <nav>
       <!-- <ul>
         <li><button @click="onRouterMain">main</button></li>

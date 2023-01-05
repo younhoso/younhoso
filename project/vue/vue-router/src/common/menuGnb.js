@@ -1,7 +1,13 @@
 const menu = [
   {
     name: 'main', // 메뉴 name은 router name으로 한다
-    title: 'main',
+    title: 'Main',
+    children: [
+      {
+        name: 'main',
+        title: '메인'
+      }
+    ]
   },
   {
     name: 'history',

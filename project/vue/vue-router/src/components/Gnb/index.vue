@@ -21,6 +21,7 @@ export default {
       return this.menu.filter(x => x.name && x.menuBar !== false)
     },
     detectRollover () {
+      console.log(this.$route)
       return this.$route.meta && this.$route.meta.detectRollover
     }
   },
@@ -50,9 +51,9 @@ export default {
       if (menuName && this.isIntroMenu(menuName)) {
         this.$router.push({ name: menu.intro }).catch(() => {})
       }
+
       if (detectRollover) { // 롤오버 하지않고 첫번째 하위메뉴 링크
-        console.log(menu)
-        this.$router.push({ name: menu.children? menu.children[0].name : menu.name }).catch(() => {})
+        this.$router.push({ name: menu.children ? menu.children[0].name : menu.name }).catch(() => {})
       }
     },
     openMenu(menu){

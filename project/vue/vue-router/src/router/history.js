@@ -14,6 +14,10 @@ const history = [
       {
         path: 'intro',
         name: 'intro',
+        meta: {
+          detectRollover: true, // GNB 롤오버 표시하지 않고 0번째 children으로 링크
+          hiddenGnb: true // 스크롤시 gnb 숨김 (scrollTop > 0)
+        },
         component: Intro
       }
     ]

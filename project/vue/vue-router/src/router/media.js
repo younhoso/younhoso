@@ -13,7 +13,11 @@ const media = [
       {
         path: 'all',
         name: 'mediaAll',
-        component: List
+        meta: {
+          role: 'list',
+          subName: 'all'
+        },
+        component: List,
       }
     ]
   }

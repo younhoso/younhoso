@@ -1,31 +1,26 @@
 <template>
-  <nav>
-    <ul>
-      <li><button @click="onRouterMain">main</button></li>
-      <li><button @click="onRouterMedia">Media</button></li>
-      <router-view></router-view>
-    </ul>
-  </nav>
+  <div>
+    <Header ref="header" />
+    <nav>
+      <!-- <ul>
+        <li><button @click="onRouterMain">main</button></li>
+        <li><button @click="onRouterMedia">Media</button></li>
+        <li><button @click="onRouterHistory">History</button></li>
+        <router-view></router-view>
+      </ul> -->
+    </nav>
+  </div>
 </template>
 
 <script>
-
-
+import Header from '@/views/Header';
 export default {
   name: 'App',
+  components: {
+    Header
+  },
   methods: {
-    onRouterMain() {
-      this.$router.push(
-        {
-          name: 'main'
-        }).catch(() => {})
-    },
-    onRouterMedia() {
-      this.$router.push(
-        {
-          name: 'mediaAll'
-        }).catch(() => {})
-    }
+   
   }  
 }
 </script>

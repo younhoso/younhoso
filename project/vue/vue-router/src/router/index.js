@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Main from '../views/Main.vue'
 import mediaRouter from './media'
+import historyRouter from './history'
 Vue.use(VueRouter)
 
 const routes = [
@@ -11,7 +12,8 @@ const routes = [
     name: 'main',
     component: Main
   },
-  ...mediaRouter
+  ...mediaRouter,
+  ...historyRouter
 ]
 
 const router = new VueRouter({

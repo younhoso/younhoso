@@ -1,33 +1,47 @@
 <template>
   <div>
-    <button @click="toggleVisible()">test</button>
-    <h2 v-if="visible">ddddd</h2>
+    <button @click="setState()">test</button>
+    <h2 v-if="state">ddddd</h2>
+    <br/>
+    <setup :useName="useName"/>
   </div>
 </template>
 
 <script>
-import useToggle from '@/hooks/useToggle'
+import useToggle from '@/hooks/useToggle';
+import setup from '@/components/setup.vue'
+
 export default {
   name: 'App-22299e',
-  components: {},
+  components: {
+    setup,
+  },
   computed: {},
   watch: {},
   data(){
     return {
-      
+      useName: {
+        id: 1,
+        type: 'test',
+        default: "I'm default"
+      }
     }
   },
   setup(){
-    const [visible, toggleVisible] = useToggle();
+    const [state, setState] = useToggle();
     return {
-      visible,
-      toggleVisible
+      state,
+      setState
     }
   },
   created(){},
   mounted(){},
   unmounted(){},
-  methods: {}
+  methods: {
+    onClick(){ 
+      console.log(this)
+    }
+  }
 }
 </script>
 

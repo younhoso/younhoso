@@ -1,24 +1,4 @@
 # hooks_vue
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+vue의 hook를 동립적으로 제작할 폴더 입니다.\
+vue의 hook들을 시간날때마다 FE에서 자주 사용하는 함수들을 미리 만들어서 재사용을 높이고 작업의 생산성을 높이려는 의도입니다.

@@ -5,10 +5,10 @@ const media = [
   {
     path: '/media',
     name: 'media',
-    component: Index,
     redirect: {
       name: 'mediaAll'
     },
+    component: Index,
     children: [
       {
         path: 'all',

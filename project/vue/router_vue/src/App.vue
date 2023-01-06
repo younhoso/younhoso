@@ -2,14 +2,6 @@
   <div>
     <Header ref="header" />
     <router-view></router-view>
-    <nav>
-      <!-- <ul>
-        <li><button @click="onRouterMain">main</button></li>
-        <li><button @click="onRouterMedia">Media</button></li>
-        <li><button @click="onRouterHistory">History</button></li>
-        <router-view></router-view>
-      </ul> -->
-    </nav>
   </div>
 </template>
 
@@ -19,10 +11,7 @@ export default {
   name: 'App',
   components: {
     Header
-  },
-  methods: {
-   
-  }  
+  }
 }
 </script>
 

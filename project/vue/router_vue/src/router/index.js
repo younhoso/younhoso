@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Main from '../views/Main.vue'
 import mediaRouter from './media'
 import historyRouter from './history'
+import memberRouter from './member'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,7 +14,8 @@ const routes = [
     component: Main
   },
   ...mediaRouter,
-  ...historyRouter
+  ...historyRouter,
+  ...memberRouter
 ]
 
 const router = new VueRouter({

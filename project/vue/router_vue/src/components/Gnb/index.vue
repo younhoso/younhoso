@@ -10,7 +10,7 @@
 <script>
 import MENU from '@/common/menuGnb'
 export default {
-  name: 'index-1bf7f2',
+  name: 'Index-1bf7f2',
   props: [
     'current',
     'isLogin'
@@ -21,7 +21,6 @@ export default {
       return this.menu.filter(x => x.name && x.menuBar !== false)
     },
     detectRollover () {
-      console.log(this.$route)
       return this.$route.meta && this.$route.meta.detectRollover
     }
   },

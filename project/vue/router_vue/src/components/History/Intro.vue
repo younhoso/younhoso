@@ -65,6 +65,8 @@
 </template>
 
 <script>
+// eslint-disable-next-line no-unused-vars
+import terms from '@/library/terms'
 export default {
   name: 'Intro-4efca1',
   components: {},
@@ -90,7 +92,17 @@ export default {
     return {
       sectionHeight: '860px',
       activeSection: null,
-      parallaxWidth: false
+      parallaxWidth: false,
+      agree: [
+        {
+          id: 1,
+          name: 'agree_1',
+          label: '이동약관',
+          required: true,
+          content: '',
+          agree: ''
+        }
+      ]
     }
   },
   setup(){},

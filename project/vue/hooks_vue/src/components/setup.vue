@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import useObjectState from '@/hooks/useObjectState'
+import useObjectState from '@/composables/useObjectState'
 export default {
   name: 'setup-668643',
   props: ['useName'],

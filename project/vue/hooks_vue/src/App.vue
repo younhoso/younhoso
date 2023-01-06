@@ -1,20 +1,19 @@
 <template>
   <div>
-    <button @click="setState()">test</button>
-    <h2 v-if="state">ddddd</h2>
-    <br/>
     <setup :useName="useName"/>
+    <Users />
   </div>
 </template>
 
 <script>
-import useToggle from '@/hooks/useToggle';
-import setup from '@/components/setup.vue'
+import setup from '@/components/setup.vue';
+import Users from '@/components/Users/index.vue'
 
 export default {
   name: 'App-22299e',
   components: {
     setup,
+    Users
   },
   computed: {},
   watch: {},
@@ -27,21 +26,11 @@ export default {
       }
     }
   },
-  setup(){
-    const [state, setState] = useToggle();
-    return {
-      state,
-      setState
-    }
-  },
+  setup(){},
   created(){},
   mounted(){},
   unmounted(){},
-  methods: {
-    onClick(){ 
-      console.log(this)
-    }
-  }
+  methods: {}
 }
 </script>
 

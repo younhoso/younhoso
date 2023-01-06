@@ -11,7 +11,7 @@ const useObjectState = (initialValue = {}) => {
   if(initialValue.constructor !== Object) {
     console.warn(text)
   }
-  let stateObject = reactive({...initialValue}); //원시 Object를 깊은 복사함.
+  let stateObject = reactive(initialValue);
   const setStateObject = (newState) => {
     stateObject = newState
   }

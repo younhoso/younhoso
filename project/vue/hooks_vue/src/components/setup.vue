@@ -18,13 +18,12 @@ export default {
       
     }
   },
-  setup(props){
+  setup({useName}){
     const datas = {
       id: 1,
-      defaults: props.useName
+      defaults: useName
     }
     const [stateObject, setStateObject] = useObjectState(datas);
-    console.log(stateObject)
     return {
       stateObject,
       setStateObject

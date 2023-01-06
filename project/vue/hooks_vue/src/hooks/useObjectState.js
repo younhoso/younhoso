@@ -1,4 +1,4 @@
-import { reactive } from 'vue';
+import { readonly, reactive } from 'vue';
 
 /**
  * @param {object} initialValue 
@@ -11,11 +11,11 @@ const useObjectState = (initialValue = {}) => {
   if(initialValue.constructor !== Object) {
     console.warn(text)
   }
-  let stateObject = reactive(initialValue);
-  const setStateObject = (newValue) => {
-    stateObject = newValue
+  let stateObject = reactive({...initialValue}); //원시 Object를 깊은 복사함.
+  const setStateObject = (newState) => {
+    stateObject = newState
   }
-  return [stateObject, setStateObject];
+  return [readonly(stateObject), setStateObject];
 };
 
 export default useObjectState;

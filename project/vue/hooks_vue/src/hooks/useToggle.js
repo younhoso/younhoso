@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { readonly, ref } from 'vue';
 
 /**
  * @param {boolean} initialValue 
@@ -19,7 +19,7 @@ const useToggle = (initialValue = false) => {
     state.value = !state.value
   }
 
-  return [state, setState]
+  return [readonly(state), setState]
 };
 
 export default useToggle;

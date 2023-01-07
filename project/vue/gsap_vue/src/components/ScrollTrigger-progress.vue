@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
-    <div id="normal-progress" class="progress"></div>
-    <div class="progress-de"></div>
-    <div v-html="widthTxt" class="text"></div>
+    <div id="normal-progress" :data-widthInTxt="widthInTxt" class="progress"></div>
+    <div class="progress-de" :data-widthDeTxt="widthDeTxt"></div>
     <div class="box">
       <h2 class="text1">Scroll trigger</h2>
       <h2 class="text2">This is my first one</h2>
@@ -26,7 +25,8 @@ export default {
   data(){
     return {
       target: document.querySelector('.txt'),
-      widthTxt: 0
+      widthInTxt: '0%',
+      widthDeTxt: '100%'
     }
   },
   mounted() {
@@ -40,7 +40,9 @@ export default {
         scrollTrigger: { 
           scrub: true,
           onUpdate: self => {
-            this.widthTxt = Math.floor(self.progress * 100) + '%'
+            const progress = Math.floor(self.progress * 100);
+            this.widthInTxt = progress + '%';
+            this.widthDeTxt = 100 - progress + '%';
           }
         }
       })
@@ -62,19 +64,34 @@ h2 {
   background-color:#3467D9;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 9;
 }
+.progress::before{
+  content: attr(data-widthInTxt);
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .progress-de {
-  width: 100vw;
+  width: 100%;
   height: 4px;
   background-color: #000;
   position: fixed;
   top: 0;
 }
-.text {
-  position: fixed;
-  top: 0;
-  font-size: 40px;
+
+.progress-de::before {
+  content: attr(data-widthDeTxt);
+  display: block;
+  font-size: 20px;
   font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 </style>

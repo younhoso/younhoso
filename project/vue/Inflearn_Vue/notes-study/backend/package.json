@@ -12,11 +12,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.19.6",
     "@babel/preset-env": "^7.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^8.2.6",
@@ -38,10 +40,12 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
     "prettier": "^1.19.1",
+    "regenerator-runtime": "^0.13.11",
     "rimraf": "^2.6.3",
     "swagger-jsdoc": "^3.5.0",
     "swagger-ui-express": "^4.1.2"
   },
-  "dependencies": {},
-  "type": "module"
+  "dependencies": {
+    "@babel/runtime": "^7.20.7"
+  }
 }

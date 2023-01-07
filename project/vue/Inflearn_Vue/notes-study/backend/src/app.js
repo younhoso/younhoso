@@ -14,6 +14,7 @@ import docs from './utils/api-doc.js';
 
 // utils
 import { authenticateUser } from './utils/auth.js';
+import 'regenerator-runtime'
 
 // mongo db
 const db = mongoose.connection;
@@ -30,7 +31,7 @@ mongoose.Promise = global.Promise;
 let port;
 async function configServer() {
   port = 3000 || (await detectPort(3000));
-}
+};
 configServer();
 
 // express setup

@@ -1,7 +1,5 @@
 <template>
   <div class="hello">
-
-    <p :class="[$style.red]">ddd</p>
   </div>
 </template>
 

@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'SingnUp',
   components: {},
@@ -46,6 +47,7 @@ export default {
   mounted(){},
   unmounted(){},
   methods: {
+    ...mapMutations(['addUsers']),
     signUpAdd() {
       let userObj = {
         userId: this.userId,
@@ -54,7 +56,7 @@ export default {
         address: this.address,
         src: this.src
       }
-      this.$store.commit('addUsers', userObj)
+      this.addUsers(userObj);
       this.clearForm()
     },
     clearForm(){

@@ -16,13 +16,19 @@ import docs from './utils/api-doc.js';
 import { authenticateUser } from './utils/auth.js';
 import 'regenerator-runtime'
 
+require('dotenv').config();
+
+const DB_NAME = process.env.DB_NAME;
+const DB_PASS = process.env.DB_PASS;
+
 // mongo db
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 mongoose.connect(
-  'mongodb+srv://test:1234@cluster0-ypgh5.mongodb.net/test?retryWrites=true&w=majority',
+  `mongodb+srv://${DB_NAME}:${DB_PASS}@cluster0.3epib.mongodb.net/?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
+    useUnifiedTopology: true
   },
 );
 mongoose.Promise = global.Promise;

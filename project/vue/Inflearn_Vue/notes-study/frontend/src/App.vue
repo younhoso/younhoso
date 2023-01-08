@@ -1,11 +1,16 @@
 <template>
-  <div></div>
+  <div>
+    <HelloWorld />
+  </div>
 </template>
 
 <script>
+import HelloWorld from '@/components/HelloWorld.vue'
 export default {
   name: 'App-985fe1',
-  components: {},
+  components: {
+    HelloWorld
+  },
   computed: {},
   watch: {},
   data(){

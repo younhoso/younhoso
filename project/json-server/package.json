@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "server:start": "json-server --watch data.json --port 5001"
+    "server:start": "json-server --watch data.json --port 3000"
   },
   "keywords": [],
   "author": "",

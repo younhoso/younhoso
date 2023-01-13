@@ -382,5 +382,31 @@
       "about": "Anim quis esse eiusmod quis ad non nisi sunt. Occaecat reprehenderit sit id deserunt aliquip anim elit. Ad Lorem aliquip aute consequat aute. Labore do qui amet nulla tempor eiusmod reprehenderit non reprehenderit ullamco. In anim fugiat occaecat deserunt tempor mollit est esse. Irure ea laborum reprehenderit cupidatat ex tempor deserunt in veniam labore culpa. Ex duis laborum ad nostrud esse nisi eiusmod cillum enim exercitation irure excepteur.\r\n",
       "registered": "2019-02-07T10:50:01 -09:00"
     }
+  ],
+  "todos": [
+    {
+      "subject": "creast",
+      "completed": false,
+      "body": "edfsdf",
+      "id": 1
+    },
+    {
+      "subject": "dsdf",
+      "completed": false,
+      "body": "dfsdf",
+      "id": 2
+    },
+    {
+      "subject": "1",
+      "completed": false,
+      "body": "1",
+      "id": 3
+    },
+    {
+      "subject": "1212",
+      "completed": false,
+      "body": "1212",
+      "id": 4
+    }
   ]
 }

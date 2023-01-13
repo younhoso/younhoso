@@ -28,6 +28,7 @@ export default {
             // commit('UPDATE_TOAST_MESSAGE', message)
             // commit('UPDATE_TOAST_ALERT_TYPE', type)
             // commit('UPDATE_TOAST_STATUS', true)
+            console.log(message)
             commit('ADD_TOAST', {
                 id: Date.now(),
                 message,

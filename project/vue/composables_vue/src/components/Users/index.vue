@@ -1,12 +1,14 @@
 <template>
   <div>
-    Count: {{ state.count }}
+    <!-- Count: {{ state.count }}
     <button @click="dispatch({ type: 'decrement', mode: {step: 2} })">
       -
     </button>
     <button @click="dispatch({ type: 'increment', mode: {step: 2} })">
       +
-    </button>
+    </button> -->
+
+    
   </div>
 </template>
 

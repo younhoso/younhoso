@@ -20,7 +20,6 @@ export default {
   data(){
     return {
       useName: {
-        id: 1,
         type: 'test',
         default: "I'm default"
       }

@@ -13,7 +13,7 @@ const useObjectState = (initialValue = {}) => {
   }
   let stateObject = reactive(initialValue);
   const setStateObject = (newState) => {
-    stateObject = newState
+    stateObject = newState(stateObject)
   }
   return [readonly(stateObject), setStateObject];
 };

@@ -1,35 +1,33 @@
 <template>
   <div>
-    <setup :useName="useName"/>
-    <Users />
+    {{ username }}
+    {{ age }}
+    <br/>
+    <input type="text" v-model="username">
+    <br/>
+    <button @click="changeFu">버튼</button>
   </div>
 </template>
 
 <script>
-import setup from '@/components/setup.vue';
-import Users from '@/components/Users/index.vue'
-
+import useObjectState from '@/composables/useObjectState.js';
 export default {
   name: 'App-22299e',
-  components: {
-    setup,
-    Users
-  },
-  computed: {},
-  watch: {},
-  data(){
-    return {
-      useName: {
-        type: 'test',
-        default: "I'm default"
-      }
+  setup(){
+    const [stateObject, setStateObject] = useObjectState({
+      username: 'TriplxLab',
+      age: 50
+    });
+    return {...stateObject, setStateObject}
+	},
+  methods: {
+    changeFu() {
+      this.setStateObject(() => {
+        this.username = '1'
+        this.age = '1'
+      })
     }
-  },
-  setup(){},
-  created(){},
-  mounted(){},
-  unmounted(){},
-  methods: {}
+  }
 }
 </script>
 

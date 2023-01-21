@@ -1,10 +1,13 @@
-import { readonly, ref } from 'vue';
+import { ref, toRefs } from 'vue';
 
 /**
  * @param {boolean} initialValue 
  * @returns boolean, function
  * @example 
- * const [state, setState] = useToggle(false);
+ * setup(){
+ *   const [state, setState] = useToggle(false);
+ *   return {...state, setState}
+ * }
  */
 const useToggle = (initialValue = false) => {
   const text = 'useValueState 인자로 넣는것은 boolean값만 넣어야 합니다.'
@@ -19,7 +22,7 @@ const useToggle = (initialValue = false) => {
     state.value = !state.value
   }
 
-  return [readonly(state), setState]
+  return [toRefs(state), setState]
 };
 
 export default useToggle;

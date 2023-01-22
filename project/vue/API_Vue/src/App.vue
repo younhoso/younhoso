@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div v-if="isLoging">로딩중...</div>
     <SearchBar @send="searchMovis"/>
     <MovieList v-bind:propsdata="items" />
   </div>
@@ -8,23 +9,26 @@
 <script>
 import SearchBar from '@/components/SearchBar.vue';
 import MovieList from '@/components/MovieList.vue';
-import {apis} from '@/api/index';
+import useFatch from '@/composables/useFatch.js'
 
 export default {
   name: 'App',
   data(){ //state 초기값
     return {
-      items: []
+      items: [],
+      isLoging: false
     }
   },
   methods: {
-    async searchMovis(txt){
-      const response = await apis.search(txt);
-      this.items = response.data.results
+    async searchMovis(text){
+      const {response, isLoging} = useFatch(`/search/movie?api_key=${process.env.VUE_APP_API_KEY}&language=ko-KR&query=${text}`);
+      this.items = response;
+      this.isLoging = isLoging;
     },
-    async getMoview() {
-      const response = await apis.getmovie();
-      this.items = response.data.results
+    getMoview() {
+      const {response, isLoging} = useFatch(`/movie/popular?api_key=${process.env.VUE_APP_API_KEY}&language=ko-KR&page=1`);
+      this.items = response
+      this.isLoging = isLoging;
     }
   },
   computed:{

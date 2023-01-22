@@ -1,7 +1,6 @@
 <template>
   <div>
     <input type="text" v-model="text" @keypress.enter="sendEventEmit"/>
-    <div>loading</div>
   </div>
 </template>
 

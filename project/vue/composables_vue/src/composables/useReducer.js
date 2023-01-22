@@ -1,4 +1,4 @@
-import { readonly, ref } from 'vue';
+import { ref } from 'vue';
 
 /**
  * useReducer은 경우수가 많은 UI를 핸들링할때 사용할 용도 
@@ -24,16 +24,18 @@ import { readonly, ref } from 'vue';
   ```
   ```
   // src/components/사용하는컴포넌트.vue
-  const [state, dispatch] = useReducer(reducer, initialState);
+  setup(){
+    const [state, dispatch] = useReducer(reducer, initialState);
+    return {state, dispatch}
+  }
   ```
  */
-const useReducer = (reducer, initialArg) => {
-  const state = ref(initialArg);
+const useReducer = (initialArg, reducer) => {
+  let state = ref(initialArg);
   const dispatch = (action) => {
     state.value = reducer(state.value, action);
   };
-
-  return [readonly(state), dispatch];
+  return [state, dispatch];
 }
 
 export default useReducer;

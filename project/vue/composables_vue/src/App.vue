@@ -5,7 +5,7 @@
     <br/>
     <input type="text" v-model="username">
     <br/>
-    <button @click="changeFu">버튼</button>
+    <button @click="setStateObject">버튼</button>
   </div>
 </template>
 
@@ -19,15 +19,7 @@ export default {
       age: 50
     });
     return {...stateObject, setStateObject}
-	},
-  methods: {
-    changeFu() {
-      this.setStateObject(() => {
-        this.username = '1'
-        this.age = '1'
-      })
-    }
-  }
+	}
 }
 </script>
 

@@ -11,4 +11,8 @@ api.interceptors.response.use((config) => {
   return Promise.reject(err.response);
 });
 
-export default api;
+export const apis = {
+  //search get
+  search: (text) => api.get(`/search/movie?api_key=${process.env.VUE_APP_API_KEY}&language=ko-KR&query=${text}`),
+  getmovie: () => api.get(`/movie/popular?api_key=${process.env.VUE_APP_API_KEY}&language=ko-KR&page=1`),
+}

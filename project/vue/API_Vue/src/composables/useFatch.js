@@ -1,7 +1,6 @@
 import {reactive, toRefs} from 'vue'
-import http from '@/api/index.js'
 
-const useFatch = (url) => {
+const useFatch = (urlFun, searchText = '') => {
   const state = reactive({
     response: [],
     error: null,
@@ -10,7 +9,7 @@ const useFatch = (url) => {
 
   (async () => {
     try {
-      const res = await http.get(url);
+      const res = await urlFun(searchText);
       state.response = res.data.results;
     } catch(error) {
       state.error = error;
@@ -18,7 +17,6 @@ const useFatch = (url) => {
       state.isLoging = false;
     }
   })();
-  console.log(state)
 
   return {...toRefs(state)};
 }

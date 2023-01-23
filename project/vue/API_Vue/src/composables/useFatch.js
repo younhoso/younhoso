@@ -2,9 +2,9 @@ import {reactive, toRefs} from 'vue'
 
 /**
  * 
- * @returns
+ * @returns object, function 
  * @example
- * setup(){
+ * setup(){ response(데이터), isLoging, error, encoding들을 사용할수 있습니다.
  *   const {response, isLoging, error, encoding} = useFatch();
  *   encoding(apis.search, {query: searchText})
  *   return {response, isLoging, error}

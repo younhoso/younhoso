@@ -13,6 +13,6 @@ api.interceptors.response.use((config) => {
 
 export const apis = {
   //search get
-  search: (text) => api.get(`/search/movie?api_key=${process.env.VUE_APP_API_KEY}&language=ko-KR&query=${text}`),
+  search: (options) => api.get(`/search/movie?api_key=${process.env.VUE_APP_API_KEY}&language=ko-KR&${options}`),
   getmovie: () => api.get(`/movie/popular?api_key=${process.env.VUE_APP_API_KEY}&language=ko-KR&page=1`),
 }

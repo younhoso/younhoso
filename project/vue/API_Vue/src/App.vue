@@ -24,13 +24,15 @@ export default {
   },
   methods: {
     async searchMovis(searchText){
-      const {response, isLoging, error} = useFatch(apis.search, searchText);
+      const {response, isLoging, error, encoding} = useFatch();
+      encoding(apis.search, {query: searchText})
       this.items = response;
       this.isLoging = isLoging;
       this.error = error;
     },
     getMoview() {
-      const {response, isLoging} = useFatch(apis.getmovie);
+      const {response, isLoging, encoding} = useFatch();
+      encoding(apis.getmovie)
       this.items = response
       this.isLoging = isLoging;
     }

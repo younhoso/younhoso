@@ -21,11 +21,6 @@ export const apis = {
 
 export default {
   name: 'App',
-  data(){ //state 초기값
-    return {
-      
-    }
-  },
   setup(){
     const {response, isLoging, error, encoding} = useFatch(); //최총 브라우저 로딩
     encoding(apis.getmovie)
@@ -37,11 +32,6 @@ export default {
       this.isLoging = true;
       this.error = null;
     }
-  },
-  computed:{
-
-  },
-  created() {
   },
   components: {
     SearchBar,

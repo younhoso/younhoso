@@ -1,6 +1,6 @@
 # SYH
 - Languages : javascript
-- Frameworks : React.js, Vue.js
+- Frameworks : Vue.js
 - State Management : Recoil, React Query
 - Style : css, scss, styled-components
 

@@ -1,8 +1,7 @@
 # SYH
 - Languages : javascript
 - Frameworks : Vue.js
-- State Management : Recoil, React Query
-- Style : css, scss, styled-components
+- Style : css3, scss, styled-components
 
 # BLOG
 [TriplexLab](https://triplexlab.tistory.com/)

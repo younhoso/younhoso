@@ -1,6 +1,6 @@
 # SYH
 - Languages : javascript
-- Frameworks : Vue.js
+- Frameworks : Next.js
 - Style : css3, scss, styled-components
 
 # BLOG

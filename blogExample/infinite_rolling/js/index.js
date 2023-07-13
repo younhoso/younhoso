@@ -1,26 +1,48 @@
 (() => {
   const isDesktop = window.innerWidth > 1080;
 
-  const getData = async (path) => {
-    const response = await fetch(path);
-    if(!response.ok){
-      throw new Error('데이터를 불러오는데 실패했습니다');
-    }
-    const body = response.json();
-    return body;
-  };
-
-  const templateHtmlPC = async () => {
-    const datas = await getData("../data/pc.json");
-    return datas.map(({year, month}) => {
-      return `
+  // 성공 템플릿
+  const successTemplate = ({year, month}) => {
+    return `
       <div class="swiper-slide">
         <p>${month} <span>${year}</span></p>
       </div>
-    `}).join('');
+    `;
   };
 
-  $('.history .history_pc .swiper-wrapper').html(templateHtmlPC());
+  // 실패 템플릿
+  const errorTemplate = (errorThrown) => { 
+    return`
+      <div class="error">
+        <h2>통신 실패!</h2>
+        <p>에러 메시지: ${errorThrown}</p>
+      </div>
+    `;
+  };
+
+  const fetchData = (path) => {
+    $.ajax({
+      url: path,
+      method: 'GET',
+      dataType: 'JSON',
+      async: false,
+      success:function(response) {
+        const templateHtmlPC = response.map((datas) => {
+          return successTemplate(datas)
+        }).join('');
+
+        $('.history .history_pc .swiper-wrapper').html(templateHtmlPC);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        // 통신 실패 시 템플릿을 만들어 추가합니다.
+        const errorHTML = errorTemplate(errorThrown);
+        $('.history .history_pc .swiper-wrapper').html(errorHTML);
+      }
+    })
+  };
+
+  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/pc.json");
+  
 
   /** HISTORY 모바일 영역 */
   new Swiper(".history-swiper.mo", {

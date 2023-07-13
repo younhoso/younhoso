@@ -1,13 +1,18 @@
 (() => {
   const isDesktop = window.innerWidth > 1080;
 
-  // 성공 템플릿
-  const successTemplate = ({year, month, thumb, link}) => {
-    return isDesktop ? `
+  // 성공 템플릿 PC
+  const successTemplatePc = ({year, month}) => {
+    return `
       <div class="swiper-slide">
         <p>${month} <span>${year}</span></p>
       </div>
-    ` : `
+    `;
+  };
+
+  // 성공 템플릿 MO
+  const successTemplateMo = ({year, month, thumb, link}) => {
+    return `
       <div class="swiper-slide" data-year=${year} data-month=${month}>
         <img class="thumb" src=${thumb} alt="thumb" />
         <a href=${link}></a>
@@ -26,7 +31,6 @@
   };
 
   const fetchData = async (path) => {
-    console.log(path)
     $.ajax({
       url: path, // 서버의 엔드포인트를 지정합니다.
       method: 'GET',
@@ -34,13 +38,15 @@
       async: false, // 동기식으로 통신함.
       success: function(response) {
         // 통신 성공 시 템플릿을 만들어 추가합니다.
-        const templateHtml = response.map((datas) => {
-          return successTemplate(datas)
+        const templateHtmlPc = response.map((datas) => {
+          return successTemplatePc(datas)
+        }).join('');
+        const templateHtmlMo = response.map((datas) => {
+          return successTemplateMo(datas)
         }).join('');
 
-        console.log(templateHtml)
-        $('.history_pc .swiper-wrapper').html(templateHtml);
-        $('.history_mo .swiper-wrapper').html(templateHtml);
+        $('.history_pc .swiper-wrapper').html(templateHtmlPc);
+        $('.history_mo .swiper-wrapper').html(templateHtmlMo);
       },
       error: function(jqXHR, textStatus, errorThrown) {
         // 통신 실패 시 템플릿을 만들어 추가합니다.
@@ -51,7 +57,7 @@
     });
   };
 
-  //로드될때 실행
+  //첫 로드될때 실행
   fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/history.json");
 
   /** HISTORY 모바일 영역 */

@@ -11,7 +11,7 @@
   };
 
   // 성공 템플릿 MO
-  const successTemplateMo = ({year, month}) => {
+  const successTemplateMo = ({year, month, thumb, link}) => {
     return `
       <div class="swiper-slide" data-year=${year} data-month=${month}>
         <img class="thumb" src=${thumb} alt="thumb" />
@@ -31,29 +31,35 @@
   };
 
   const fetchData = async (path) => {
+    console.log(path)
     $.ajax({
       url: path, // 서버의 엔드포인트를 지정합니다.
       method: 'GET',
       dataType: 'json',
       async: false, // 동기식으로 통신함.
       success: function(response) {
+        console.log(response)
         // 통신 성공 시 템플릿을 만들어 추가합니다.
-        const templateHtmlPC = response.map((datas) => {
-          return successTemplateMo(datas)
+        const templateHtml = response.map((datas) => {
+          return (successTemplatePc(datas), successTemplateMo(datas))
         }).join('');
 
-        $('.history .history_pc .swiper-wrapper').html(templateHtmlPC);
+        console.log(templateHtml)
+        $('.history_pc .swiper-wrapper').html(templateHtml);
+        $('.history_mo .swiper-wrapper').html(templateHtml);
       },
       error: function(jqXHR, textStatus, errorThrown) {
         // 통신 실패 시 템플릿을 만들어 추가합니다.
         const errorHTML = errorTemplate(errorThrown);
-        $('.history .history_pc .swiper-wrapper').html(errorHTML);
+        $('.history_pc .swiper-wrapper').html(errorHTML)
+        $('.history_mo .swiper-wrapper').html(errorHTML);
       }
     });
   };
 
-  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/mo.json");
-  
+  //로드될때 실행
+  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/pc.json");
+
   /** HISTORY 모바일 영역 */
   new Swiper(".history-swiper.mo", {
     slidesPerView: 1.4,
@@ -144,7 +150,7 @@
       type: "custom",
       renderCustom: function (swiper, current, total) {
         const activeIndex = swiper.activeIndex;
-        const activeTxt = swiper.slides[activeIndex].innerHTML;
+        const activeTxt = swiper.slides[activeIndex]?.innerHTML;
 
         //이미지 Pagination
         let text = `<div class='bullet-container'>`

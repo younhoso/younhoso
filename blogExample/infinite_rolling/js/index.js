@@ -1,18 +1,13 @@
 (() => {
   const isDesktop = window.innerWidth > 1080;
 
-  // 성공 템플릿 PC
-  const successTemplatePc = ({year, month}) => {
-    return `
+  // 성공 템플릿
+  const successTemplate = ({year, month, thumb, link}) => {
+    return isDesktop ? `
       <div class="swiper-slide">
         <p>${month} <span>${year}</span></p>
       </div>
-    `;
-  };
-
-  // 성공 템플릿 MO
-  const successTemplateMo = ({year, month, thumb, link}) => {
-    return `
+    ` : `
       <div class="swiper-slide" data-year=${year} data-month=${month}>
         <img class="thumb" src=${thumb} alt="thumb" />
         <a href=${link}></a>
@@ -38,10 +33,9 @@
       dataType: 'json',
       async: false, // 동기식으로 통신함.
       success: function(response) {
-        console.log(response)
         // 통신 성공 시 템플릿을 만들어 추가합니다.
         const templateHtml = response.map((datas) => {
-          return (successTemplatePc(datas), successTemplateMo(datas))
+          return successTemplate(datas)
         }).join('');
 
         console.log(templateHtml)
@@ -58,7 +52,7 @@
   };
 
   //로드될때 실행
-  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/pc.json");
+  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/history.json");
 
   /** HISTORY 모바일 영역 */
   new Swiper(".history-swiper.mo", {

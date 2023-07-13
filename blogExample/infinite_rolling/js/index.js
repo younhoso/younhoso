@@ -1,6 +1,27 @@
 (() => {
   const isDesktop = window.innerWidth > 1080;
 
+  const getData = async (path) => {
+    const response = await fetch(path);
+    if(!response.ok){
+      throw new Error('데이터를 불러오는데 실패했습니다');
+    }
+    const body = response.json();
+    return body;
+  };
+
+  const templateHtmlPC = async () => {
+    const datas = await getData("../data/pc.json");
+    return datas.map(({year, month}) => {
+      return `
+      <div class="swiper-slide">
+        <p>${month} <span>${year}</span></p>
+      </div>
+    `}).join('');
+  };
+
+  $('.history .history_pc .swiper-wrapper').html(templateHtmlPC());
+
   /** HISTORY 모바일 영역 */
   new Swiper(".history-swiper.mo", {
     slidesPerView: 1.4,

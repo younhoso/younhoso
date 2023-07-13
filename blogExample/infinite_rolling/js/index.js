@@ -1,11 +1,21 @@
 (() => {
   const isDesktop = window.innerWidth > 1080;
 
-  // 성공 템플릿
-  const successTemplate = ({year, month}) => {
+  // 성공 템플릿 PC
+  const successTemplatePc = ({year, month}) => {
     return `
       <div class="swiper-slide">
         <p>${month} <span>${year}</span></p>
+      </div>
+    `;
+  };
+
+  // 성공 템플릿 MO
+  const successTemplateMo = ({year, month}) => {
+    return `
+      <div class="swiper-slide" data-year=${year} data-month=${month}>
+        <img class="thumb" src=${thumb} alt="thumb" />
+        <a href=${link}></a>
       </div>
     `;
   };
@@ -20,15 +30,16 @@
     `;
   };
 
-  const fetchData = (path) => {
+  const fetchData = async (path) => {
     $.ajax({
-      url: path,
+      url: path, // 서버의 엔드포인트를 지정합니다.
       method: 'GET',
-      dataType: 'JSON',
-      async: false,
-      success:function(response) {
+      dataType: 'json',
+      async: false, // 동기식으로 통신함.
+      success: function(response) {
+        // 통신 성공 시 템플릿을 만들어 추가합니다.
         const templateHtmlPC = response.map((datas) => {
-          return successTemplate(datas)
+          return successTemplateMo(datas)
         }).join('');
 
         $('.history .history_pc .swiper-wrapper').html(templateHtmlPC);
@@ -38,12 +49,11 @@
         const errorHTML = errorTemplate(errorThrown);
         $('.history .history_pc .swiper-wrapper').html(errorHTML);
       }
-    })
+    });
   };
 
-  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/pc.json");
+  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/mo.json");
   
-
   /** HISTORY 모바일 영역 */
   new Swiper(".history-swiper.mo", {
     slidesPerView: 1.4,

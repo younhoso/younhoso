@@ -88,7 +88,7 @@
 }
 
 .history .history_pc{background:transparent linear-gradient(180deg,#414141 0%,#000000 100%) 0% 0% no-repeat padding-box;position: relative;}
-.history_pc .title{position:absolute;top:12%;left:15.2%;color:#fff;font-weight:700;font-size:20px;}
+.history_pc .title{position:absolute;top:8%;left:15.2%;color:#fff;font-weight:700;font-size:20px;}
 .history_pc .container{height:70%;display:grid;grid-template-columns:40% 60%;top:50%;transform:translateY(-50%);}
 
 .history_pc .title-section{

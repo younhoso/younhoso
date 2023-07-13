@@ -11,8 +11,8 @@ TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입�
 
 |Project|Live Demo|BLOG Link|
 |---|---|---|
-[NextJS & styled-components boilerplate](https://github.com/younhoso/younhoso/tree/main/blogExample/boilerplate/)| |[NextJS 에서 styled-components와 함께 사용하기](https://triplexlab.tistory.com/232)|
-[slider_custom](https://github.com/younhoso/younhoso/tree/main/blogExample/slider_custom/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/slider_custom/)|[slider_custom](https://triplexlab.tistory.com/82)|
+[voice_search](https://github.com/younhoso/younhoso/tree/main/blogExample/voice_search/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/voice_search/)|[음성 인식 검색(JS)](https://triplexlab.tistory.com/167)|
+[무한 롤링 기능]()|[Live Demo]()|[무한 롤링 기능(Swiper 커스텀)]()|[slider_custom](https://github.com/younhoso/younhoso/tree/main/blogExample/slider_custom/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/slider_custom/)|[slider_custom](https://triplexlab.tistory.com/82)|
 [lazy_load_blur](https://github.com/younhoso/younhoso/tree/main/blogExample/lazy_load_blur)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/lazy_load_blur/)|[Image lazy load](https://triplexlab.tistory.com/129)|
 [Newest_Best_by_JavaScript](https://github.com/younhoso/younhoso/tree/main/blogExample/Newest_Best_by_JavaScript)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Newest_Best_by_JavaScript/)|[JavaScript로 최신순, 베스트순](https://triplexlab.tistory.com/190)|
 [Drag_Drop](https://github.com/younhoso/younhoso/tree/main/blogExample/Drag_Drop)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Drag_Drop/)|[Drag & Drop Vanilla Javascript](https://triplexlab.tistory.com/156)|
@@ -22,7 +22,6 @@ TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입�
 [Parallax_Scroll](https://github.com/younhoso/younhoso/tree/main/blogExample/Parallax_Scroll)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Parallax_Scroll/)|[패럴렉스 스크롤 만들기](https://triplexlab.tistory.com/7)|
 [progressBar_File_Upload_axios](https://github.com/younhoso/younhoso/tree/main/blogExample/File_Upload/axios/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/File_Upload/axios/)|[axios, XMLHttpRequest 파일 업로드하기](https://triplexlab.tistory.com/184)|
 [progressBar_File_Upload_xhr](https://github.com/younhoso/younhoso/tree/main/blogExample/File_Upload/xhr/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/File_Upload/xhr/)|[axios, XMLHttpRequest 파일 업로드하기](https://triplexlab.tistory.com/184)|
-[voice_search](https://github.com/younhoso/younhoso/tree/main/blogExample/voice_search/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/voice_search/)|[음성 인식 검색(JS)](https://triplexlab.tistory.com/167)|
 [kakaoLogin](https://github.com/younhoso/younhoso/tree/main/blogExample/kakaoLogin/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/kakaoLogin/)|[카카오톡 로그인 API 사용하기](https://triplexlab.tistory.com/55)|
 [slowly_changing](https://github.com/younhoso/younhoso/tree/main/blogExample/slowly_changing/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/slowly_changing/)|[서서히 변하는 애니메이션 keyframes](https://triplexlab.tistory.com/202)|
 [clean_up_key_values](https://github.com/younhoso/younhoso/tree/main/blogExample/clean_up_key_values/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/clean_up_key_values/)|[[JavaScript] 배열을 유용하게 활용하는 10가지 방법](https://triplexlab.tistory.com/113)|

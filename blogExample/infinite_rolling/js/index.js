@@ -123,7 +123,6 @@
     slidesPerView: 7,
     spaceBetween: 0,
     loop: true,
-    resistance : false,
     slideToClickedSlide: true, //true 해줘야지 클릭했을때 loop을 실행 할수 있습니다.
     centeredSlides: true,
     allowTouchMove : false,

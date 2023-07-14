@@ -68,7 +68,6 @@
   width: auto;
   height: 36px;
   display: block;
-  cursor: pointer;
 }
 
 .history-swiper-pagination .bullet-container {
@@ -109,10 +108,11 @@
 .history_pc .swiper-vertical>.swiper-wrapper {align-items: flex-end;}
 .history_pc .swiper-pagination {width: 100%; min-height: 940px; position: absolute;display: flex;align-items: center;right: 0;left: unset; overflow: hidden; bottom: 50%;transform: translate(40%, 50%);}
 .history_pc .swiper-pagination .bullet-container {display: flex; align-items: center;justify-items: center;}
-.history_pc .swiper-pagination-bullet {width: 260px; height: auto; background: none; text-align: left; position: relative; margin: 0 20px;}
-.history_pc .swiper-pagination-bullet a {display: block;}
+.history_pc .swiper-pagination-bullet {width: 260px; height: auto; background: none; text-align: left; position: relative; margin: 0 20px;filter: grayscale(100%);}
+.history_pc .swiper-pagination-bullet a {display: none; cursor: default;}
 
-.history_pc .swiper-pagination-bullet.swiper-pagination-bullet-active{width: 380px;}
+.history_pc .swiper-pagination-bullet.swiper-pagination-bullet-active{width: 380px;filter: grayscale(0);}
+.history_pc .swiper-pagination-bullet.swiper-pagination-bullet-active a{cursor: pointer;display:block;position:absolute;width:230px;height:295px;top: 50%;left: 50%; transform:translate(-50%, -50%) scale(1.66);}
 .history_pc .swiper-slide {width: 62%; color: #fff;text-align: left;justify-content: flex-start; margin: 0 !important; cursor: pointer}
 .history_pc .swiper-slide.swiper-slide-active p {color: #fff;-webkit-text-stroke: 1px #fff;}
 .history_pc .swiper-slide.swiper-slide-active p span{color: #fff;-webkit-text-stroke: 1px #fff;}

@@ -128,13 +128,12 @@
     allowTouchMove : false,
     on: {
       slideChange: function(swiper) {
-        const activeIndex = swiper.activeIndex;
-        const current = $(swiper.slides[activeIndex]).data('swiper-slide-index');
+        const { realIndex } = swiper;
         const marginLeft = parseInt($('.history .history-swiper .swiper-pagination-bullet').css('margin-left')?.replace('px', ''));
         const marginRigth = parseInt($('.history .history-swiper .swiper-pagination-bullet').css('margin-right')?.replace('px', ''));
         const itemWidth = $('.history .history-swiper .swiper-pagination-bullet').width();
-        const leftValue = -((itemWidth + marginLeft + marginRigth) * current);
-        $('.history .bullet-container').css({ 'transform': `translateX( ${leftValue}px )`});
+        const leftValue = (itemWidth + marginLeft + marginRigth) * realIndex;
+        $('.history .bullet-container').css({ 'transform': `translateX( -${leftValue}px )`});
 
         if(isDesktop){
           let slideImg = $('.history .swiper-pagination-bullet');
@@ -158,15 +157,13 @@
           if (current === i) {
             text += `<div class='swiper-pagination-bullet swiper-pagination-bullet-active'>
             <div class="activetxt">${activeTxt}</div>
-            <a href="http://tastyzine.co.kr/main/index/${linkNumber}">
-              <img src='./imgs/${historyPaginationImgs[i - 1]}.png' art="#" />
-            </a>
+            <img src='./imgs/${historyPaginationImgs[i - 1]}.png' art="#" />
+            <a href="http://tastyzine.co.kr/main/index/${linkNumber}"></a>
           </div>`;
           } else {
             text += `<div class='swiper-pagination-bullet'>
-              <a href="http://tastyzine.co.kr/main/index/${linkNumber}">
-                <img src='./imgs/${historyPaginationImgs[i - 1]}.png' art="#" />
-              </a>
+              <img src='./imgs/${historyPaginationImgs[i - 1]}.png' art="#" />
+              <a href="http://tastyzine.co.kr/main/index/${linkNumber}"></a>
             </div>`;
           }
         }

@@ -145,11 +145,7 @@ import {fetchData} from './ajax.js';
         wrapperEl.style.transform = 'translate3d('+ leftValue +'px, 0, 0)';
       },
       slideChange: function () {
-        const previousIndex = this.previousIndex;
-        const lastIndex = this.loopedSlides - 1;
         const activeIndex = this.activeIndex;
-        const activerealIndexIndex = this.realIndex;
-
         const wrapperEl = this.wrapperEl;
         const marginLeft = parseInt($('.history .thumbs-swiper .swiper-slide').css('margin-left')?.replace('px', ''));
         const marginRigth = parseInt($('.history .thumbs-swiper .swiper-slide').css('margin-right')?.replace('px', ''));

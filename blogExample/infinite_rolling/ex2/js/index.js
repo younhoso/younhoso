@@ -179,4 +179,13 @@ import {fetchData} from './ajax.js';
     subThumbs.slideTo(clickedIndex);
     historySwiperPc.slideTo(clickedIndex);
   });
+
+  subThumbs.on('click', function(){
+    if(subThumbs.activeIndex === this.clickedIndex){//활성화된 부분만 식별
+      const slideLink = this.slides[this.clickedIndex].querySelector('a').getAttribute('href');
+      if (slideLink) {
+        window.location.href = slideLink;
+      }
+    }
+  });
 })();

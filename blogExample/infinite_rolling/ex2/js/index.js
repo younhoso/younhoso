@@ -1,3 +1,5 @@
+import {fetchData} from './ajax.js';
+
 (() => {
   const isDesktop = window.innerWidth > 1080;
 
@@ -42,41 +44,42 @@
     `;
   };
 
+  // 데이터 처리
+  function processData(response) {
+    // 데이터 처리 로직 작성
+    const templateHtmlSelectPc = response.map((datas) => {
+      return successTemplateSelectPc(datas)
+    }).join('');
+    const templateHtmlImgsPc = response.map((datas) => {
+      return successTemplateImgsPc(datas)
+    }).join('');
+    const templateHtmlMo = response.map((datas) => {
+      return successTemplateMo(datas)
+    }).join('');
 
-  const fetchData = (path) => {
-    $.ajax({
-      url: path, // 서버의 엔드포인트를 지정합니다.
-      method: 'GET',
-      dataType: 'json',
-      async: false, // 동기식으로 통신함.
-      success: function(response) {
-        // 통신 성공 시 템플릿을 만들어 추가합니다.
-        const templateHtmlSelectPc = response.map((datas) => {
-          return successTemplateSelectPc(datas)
-        }).join('');
-        const templateHtmlImgsPc = response.map((datas) => {
-          return successTemplateImgsPc(datas)
-        }).join('');
-        const templateHtmlMo = response.map((datas) => {
-          return successTemplateMo(datas)
-        }).join('');
-
-        $('.history_pc .swiper-wrapper.select-swiper').html(templateHtmlSelectPc);
-        $('.history_pc .thumbs-swiper .swiper-wrapper').html(templateHtmlImgsPc);
-        $('.history_mo .swiper-wrapper').html(templateHtmlMo);
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        // 통신 실패 시 템플릿을 만들어 추가합니다.
-        const errorHTML = errorTemplate(errorThrown);
-        $('.history_pc .swiper-wrapper.select-swiper').html(errorHTML)
-        $('.history_pc .thumbs-swiper .swiper-wrapper').html(errorHTML);
-        $('.history_mo .swiper-wrapper').html(errorHTML);
-      }
-    });
+    $('.history_pc .swiper-wrapper.select-swiper').html(templateHtmlSelectPc);
+    $('.history_pc .thumbs-swiper .swiper-wrapper').html(templateHtmlImgsPc);
+    $('.history_mo .swiper-wrapper').html(templateHtmlMo);
   };
 
-  //첫 로드될때 실행
-  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/data/history.json");
+  // 오류 처리
+  function handleError(error) {
+    console.error('오류 발생:', error);
+    //  통신 실패 시 템플릿을 만들어 추가합니다.
+    const errorHTML = errorTemplate(errorThrown);
+    $('.history_pc .swiper-wrapper.select-swiper').html(errorHTML)
+    $('.history_pc .thumbs-swiper .swiper-wrapper').html(errorHTML);
+    $('.history_mo .swiper-wrapper').html(errorHTML);
+  };
+
+  // Ajax 요청 수행 및 처리
+  fetchData('https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/data/history.json')
+  .done(function(response) {
+    processData(response);
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    handleError(errorThrown);
+  });
 
   /** HISTORY 모바일 영역 */
   new Swiper(".history-swiper.mo", {
@@ -136,7 +139,7 @@
         const activeIndex = this.activeIndex;
         const marginLeft = parseInt($('.history .thumbs-swiper .swiper-slide').css('margin-left')?.replace('px', ''));
         const marginRigth = parseInt($('.history .thumbs-swiper .swiper-slide').css('margin-right')?.replace('px', ''));
-        const itemWidth = this.slides[0].offsetWidth;
+        const itemWidth = this.slides[0]?.offsetWidth;
 
         const leftValue = -((itemWidth + (marginLeft + marginRigth)) * activeIndex);
         wrapperEl.style.transform = 'translate3d('+ leftValue +'px, 0, 0)';
@@ -150,13 +153,14 @@
         const wrapperEl = this.wrapperEl;
         const marginLeft = parseInt($('.history .thumbs-swiper .swiper-slide').css('margin-left')?.replace('px', ''));
         const marginRigth = parseInt($('.history .thumbs-swiper .swiper-slide').css('margin-right')?.replace('px', ''));
-        const itemWidth = this.slides[0].offsetWidth;
+        const itemWidth = this.slides[0]?.offsetWidth;
 
         const leftValue = -((itemWidth + (marginLeft + marginRigth)) * activeIndex);
         wrapperEl.style.transform = 'translate3d(' + leftValue + 'px, 0, 0)';
       },
     },
   });
+  /** HISTORY PC - 이미지 영역 슬라이드 끝*/
   
   /** HISTORY PC - 선택 영역 슬라이드 */
   const historySwiperPc = new Swiper(".history .history-swiper.pc", {
@@ -170,6 +174,7 @@
     centeredSlides: true,
     allowTouchMove : false,
   });
+  /** HISTORY PC - 선택 영역 슬라이드 끝*/
 
   $('.history .swiper-wrapper').on('click', '.swiper-slide', function(e) {
     e.preventDefault(); // 슬라이드 전환 중 클릭 이벤트 방지
@@ -178,5 +183,4 @@
     subThumbs.slideTo(clickedIndex);
     historySwiperPc.slideTo(clickedIndex);
   });
-  
 })();

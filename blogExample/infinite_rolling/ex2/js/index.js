@@ -122,18 +122,6 @@
     },
   });
   /** HISTORY 모바일 영역 끝*/
-
-   // 히스토리 이미지 Pagination
-   const historyPaginationImgs = [
-    "history_2023_6_img",
-    "history_2023_4_img",
-    "history_2023_2_img",
-    "history_2022_12_img",
-    "history_2022_10_img",
-    "history_2022_8_img",
-    "history_2022_6_img",
-    "history_2022_4_img",  
-  ];
   
   /** HISTORY PC - 이미지 영역 슬라이드 */
   const subThumbs = new Swiper('.history .thumbs-swiper', {

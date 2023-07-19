@@ -70,7 +70,7 @@ import {fetchData} from './ajax.js';
     $('.history_pc .swiper-wrapper.select-swiper').html(errorHTML)
     $('.history_pc .thumbs-swiper .swiper-wrapper').html(errorHTML);
     $('.history_mo .swiper-wrapper').html(errorHTML);
-  };
+  }
 
   // Ajax 요청 수행 및 처리
   fetchData('https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/data/history.json')

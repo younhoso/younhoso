@@ -156,10 +156,13 @@
 
   .history-swiper .swiper-slide {
     padding-top: 50px;
+  }  
+  .history-swiper .thumb {
+    width: 230px;
+    height: 295px;
   }
-
   .history-swiper .swiper-slide-active .thumb {
-    transform: scale(1.1) !important;
+    transform: scale(1.25) !important;
   }
   .history .title-section .container {
     width: 100%;

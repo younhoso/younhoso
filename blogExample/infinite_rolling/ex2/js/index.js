@@ -69,13 +69,14 @@
         // 통신 실패 시 템플릿을 만들어 추가합니다.
         const errorHTML = errorTemplate(errorThrown);
         $('.history_pc .swiper-wrapper.select-swiper').html(errorHTML)
+        $('.history_pc .thumbs-swiper .swiper-wrapper').html(errorHTML);
         $('.history_mo .swiper-wrapper').html(errorHTML);
       }
     });
   };
 
   //첫 로드될때 실행
-  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/history.json");
+  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/data/history.json");
 
   /** HISTORY 모바일 영역 */
   new Swiper(".history-swiper.mo", {

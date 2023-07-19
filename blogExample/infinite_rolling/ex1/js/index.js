@@ -58,7 +58,7 @@
   };
 
   //첫 로드될때 실행
-  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/data/history.json");
+  fetchData("https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex1/data/history.json");
 
   /** HISTORY 모바일 영역 */
   new Swiper(".history-swiper.mo", {

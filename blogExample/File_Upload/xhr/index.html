@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>File_Upload XMLHttpRequest</title>
 
 	<style>
 		.progress {height: 10px;}
@@ -39,6 +39,7 @@
 
 				const xhrFun = (e) => {
 					e.preventDefault();
+					const files = $('input[type="file"]').files[0]
 					const xhr = new XMLHttpRequest();
 
 					xhr.upload.addEventListener('loadstart', function(e) {
@@ -49,13 +50,13 @@
 						전송할 총 바이트 수 total과 이벤트 및 loaded 필드에서 지금까지 전송 된 바이트 수를 받습니다.
 					*/
 					xhr.upload.addEventListener('progress', function(e) {
-						if( e.lengthComputable ) {
+						if( files ) {
 							// 업로드 진행률 계산
 							const percentComplete = Math.floor((e.loaded / e.total) * 100); 
-							console.log(percentComplete)
 							progressBar(percentComplete)
 						} else {
 							// 측정 불가
+							console.log('파일이 존재하지 않습니다.')
 						}
 					});
 					xhr.upload.addEventListener('load', function(e) {
@@ -78,9 +79,8 @@
 					xhr.open('POST', '/upload-file', true);
 					// xhr.open('POST', '/upload-file', false);  //false로 하면 동기 처리
 
-					const files = $('[name=file]').files;
 					const formData = new FormData();
-					formData.append('avatar', files[0]);
+					formData.append('avatar', files);
 
 					xhr.send(formData);
 				};

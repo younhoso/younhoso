@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./scroll.css">
+  <title>스크롤을 내렸을 때 나타나는 이미지 - 구현</title>
+</head>
+
+<body>
+  <div class="cursor">
+    <div class="cursor__default">
+      <span class="cursor__default__inner"></span>
+    </div>
+    <div class="cursor__trace">
+      <span class="cursor__trace__inner"></span>
+    </div>
+  </div>
+  <section class="preloader shown-area">
+    <button class="preloader__btn">
+      <span class="preloader__btn_hold">Hold</span>
+    </button>
+  </section>
+
+  <section class="header hidden-area">
+    <span class="circle circle-1"></span>
+    <span class="circle circle-2"></span>
+    <img src="./images/Lovepik_com-401467010-cube.png" alt="cube image" class="cube__image cube__image_1">
+    <img src="./images/Lovepik_com-401467010-cube.png" alt="cube image" class="cube__image cube__image_2">
+    <img src="./images/Lovepik_com-401467010-cube.png" alt="cube image" class="cube__image cube__image_3">
+    <img src="./images/Lovepik_com-401467010-cube.png" alt="cube image" class="cube__image cube__image_4">
+    <h1 class="header__title">
+      <div>LAST ART</div>
+      <div>PROJECTS</div>
+    </h1>
+  </section>
+  <section class="poster hidden-area">
+    <div class="poster__parallax">
+      <div id="poster-image_wrapper_1" class="poster-image_wrapper">
+        <img id="poster-image_1" src="./images/posterImages/poster_image_1.png" alt="" class="poster-image">
+      </div>
+      <div id="poster-image_wrapper_2" class="poster-image_wrapper">
+        <img id="poster-image_2" src="./images/posterImages/poster_image_2.png" alt="" class="poster-image">
+      </div>
+      <div id="poster-image_wrapper_3" class="poster-image_wrapper">
+        <img id="poster-image_3" src="./images/posterImages/poster_image_3.png" alt="" class="poster-image">
+      </div>
+    </div>
+  </section>
+</body>
+
+<script src="./scroll.js"></script>
+</html>

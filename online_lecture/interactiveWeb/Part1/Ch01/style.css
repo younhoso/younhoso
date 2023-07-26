@@ -1,0 +1,51 @@
+.logo {
+  height: 64px;
+  cursor: pointer;
+}
+.header {
+  display: flex;
+}
+.little-search {
+  min-width: 330px;
+  height: 40px;
+  padding: 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DDD;
+  border-radius: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%)
+}
+.button {
+  display: block;
+  flex-shrink: 0;
+  padding: 0 16px;
+  border: none;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  background-color: transparent;
+}
+
+.divider {
+  display: block;
+  flex-basis: 1px;
+  flex-shrink: 0;
+  height: 24px;
+  background-color: #DDD;
+}
+.magnifying-glass-wrapper {
+  flex-basis:32px;
+  height:32px;
+  flex-shrink:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff385c;
+  border-radius: 50%;
+}
+.magnifying-glass-icon {
+  width: 12px;
+}

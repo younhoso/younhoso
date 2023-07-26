@@ -158,20 +158,12 @@
             text += `<div class='swiper-pagination-bullet swiper-pagination-bullet-active'>
             <div class="activetxt">${activeTxt}</div>
             <img src='./imgs/${historyPaginationImgs[i - 1]}.png' art="#" />
-<<<<<<< HEAD
             <a href="${linkNumber}"></a>
-=======
-            <a href="http://tastyzine.co.kr/main/index/${linkNumber}"></a>
->>>>>>> 3a6781ee98f573971edd65a0509998216acee801
           </div>`;
           } else {
             text += `<div class='swiper-pagination-bullet'>
               <img src='./imgs/${historyPaginationImgs[i - 1]}.png' art="#" />
-<<<<<<< HEAD
               <a href="${linkNumber}"></a>
-=======
-              <a href="http://tastyzine.co.kr/main/index/${linkNumber}"></a>
->>>>>>> 3a6781ee98f573971edd65a0509998216acee801
             </div>`;
           }
         }

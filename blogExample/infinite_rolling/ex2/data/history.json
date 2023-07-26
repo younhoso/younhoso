@@ -1,0 +1,58 @@
+[
+  {
+    "id": 8,
+    "year": "2023",
+    "month": "JUNE",
+    "thumb": "https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/imgs/history_2023_6_img.png",
+    "link": "/main/index/8"
+  },
+  {
+    "id": 7,
+    "year": "2023",
+    "month": "APRILL",
+    "thumb": "https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/imgs/history_2023_4_img.png",
+    "link": "/main/index/7"
+  },
+  {
+    "id": 6,
+    "year": "2023",
+    "month": "FEBRUARY",
+    "thumb": "https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/imgs/history_2023_2_img.png",
+    "link": "/main/index/6"
+  },
+  {
+    "id": 5,
+    "year": "2022",
+    "month": "DECEMBER",
+    "thumb": "https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/imgs/history_2022_12_img.png",
+    "link": "/main/index/5"
+  },
+  {
+    "id": 4,
+    "year": "2022",
+    "month": "OCTOBER",
+    "thumb": "https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/imgs/history_2022_10_img.png",
+    "link": "/main/index/4"
+  },
+  {
+    "id": 3,
+    "year": "2022",
+    "month": "AUGUST",
+    "thumb": "https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/imgs/history_2022_8_img.png",
+    "link": "/main/index/3"
+  },
+  {
+    "id": 2,
+    "year": "2022",
+    "month": "JUNE",
+    "thumb": "https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/imgs/history_2022_6_img.png",
+    "link": "/main/index/2"
+  },
+  {
+    "id": 1,
+    "year": "2022",
+    "month": "APRIL",
+    "thumb": "https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2/imgs/history_2022_4_img.png",
+    "link": "/main/index/1"
+  }
+]

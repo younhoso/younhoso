@@ -103,9 +103,9 @@
         class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"
       >
         <!-- 장바구니의 가시성은 아래 div의 (id="shopping-cart") class명으로 제어합니다. 
-          translate-x-full: 장바구니 열기 translate-x-0: 장바구니 닫기 -->
+          translate-x-full: 장바구니 닫기 translate-x-0: 장바구니 열기 -->
         <section
-          class="pointer-events-auto w-screen max-w-md transition ease-in-out duration-500 translate-x-0"
+          class="pointer-events-auto w-screen max-w-md transition ease-in-out duration-500 translate-x-full"
           id="shopping-cart"
         >
           <div
@@ -132,76 +132,7 @@
                 </div>
               </div>
               <!-- 아래 하드코딩 되어있는 장바구니 목록들을 유저 상호작용에 맞게 렌더링 되도록 변경해주세요. -->
-              <div id="cart-list">
-                <ul class="divide-y divide-gray-200">
-                  <li class="flex py-6" id="4">
-                    <div
-                      class="h-24 w-24 overflow-hidden rounded-md border border-gray-200"
-                    >
-                      <img
-                        src="asset/salad.png"
-                        class="h-full w-full object-cover object-center"
-                      />
-                    </div>
-                    <div class="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div
-                          class="flex justify-between text-base font-medium text-gray-900"
-                        >
-                          <h3>안든든한 샐러드</h3>
-                          <p class="ml-4">3,000원</p>
-                        </div>
-                      </div>
-                      <div class="flex flex-1 items-end justify-between">
-                        <div class="flex text-gray-500">
-                          <button class="decrease-btn">-</button>
-                          <div class="mx-2 font-bold">1개</div>
-                          <button class="increase-btn">+</button>
-                        </div>
-                        <button
-                          type="button"
-                          class="font-medium text-sky-400 hover:text-sky-500"
-                        >
-                          <p class="remove-btn">삭제하기</p>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="flex py-6" id="3">
-                    <div
-                      class="h-24 w-24 overflow-hidden rounded-md border border-gray-200"
-                    >
-                      <img
-                        src="asset/fries.png"
-                        class="h-full w-full object-cover object-center"
-                      />
-                    </div>
-                    <div class="ml-4 flex flex-1 flex-col">
-                      <div>
-                        <div
-                          class="flex justify-between text-base font-medium text-gray-900"
-                        >
-                          <h3>감자튀김</h3>
-                          <p class="ml-4">1,500원</p>
-                        </div>
-                      </div>
-                      <div class="flex flex-1 items-end justify-between">
-                        <div class="flex text-gray-500">
-                          <button class="decrease-btn">-</button>
-                          <div class="mx-2 font-bold">1개</div>
-                          <button class="increase-btn">+</button>
-                        </div>
-                        <button
-                          type="button"
-                          class="font-medium text-sky-400 hover:text-sky-500"
-                        >
-                          <p class="remove-btn">삭제하기</p>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              <div id="cart-list"></div>
             </div>
             <div class="border-t border-gray-200 p-6">
               <div class="flex justify-between font-medium">

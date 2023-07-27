@@ -2,6 +2,7 @@ class CartList {
   constructor($target, initialData){
     this.$target = $target;
     this.$container = document.createElement('ul');
+    this.$totalCount = document.querySelector('#total-count');
     this.state = initialData;
     this.$target.append(this.$container);
     this.render();
@@ -18,6 +19,8 @@ class CartList {
   }
 
   render() {
+    const totalValue = this.state.reduce((acc, cur) => cur.price * cur.count + acc, 0);
+    this.$totalCount.innerHTML = totalValue.toLocaleString() + '원' //현재 장바구니 상태의 총 금액의 합!
     this.$container.innerHTML = this.state.map((item) => {
       return `
       <li class="flex py-6" id="4">

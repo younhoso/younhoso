@@ -16,14 +16,19 @@ class CartList {
   addCartItem(productData) {
     const newState = [...this.state, {...productData, count: 1}];
     this.setState(newState);
-  }
+  };
+
+  removeCartItem(id) {
+    const newState = this.state.filter((item) => item.id !== id);
+    this.setState(newState);
+  };
 
   render() {
     const totalValue = this.state.reduce((acc, cur) => cur.price * cur.count + acc, 0);
     this.$totalCount.innerHTML = totalValue.toLocaleString() + '원' //현재 장바구니 상태의 총 금액의 합!
     this.$container.innerHTML = this.state.map((item) => {
       return `
-      <li class="flex py-6" id="4">
+      <li class="flex py-6" id=${item.id}>
         <div class="h-24 w-24 overflow-hidden rounded-md border border-gray-200">
           <img
             src=${item.imgSrc}

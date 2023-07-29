@@ -1,3 +1,5 @@
+const MIN_COUNT = 1;
+const MAX_COUNT = 10;
 class CartList {
   constructor($target, initialData){
     this.$target = $target;
@@ -14,9 +16,42 @@ class CartList {
   }
 
   addCartItem(productData) {
-    const newState = [...this.state, {...productData, count: 1}];
+    let newState
+    const clickedProductId = productData.id;
+    // 현재 장바구니 데이터에, 지금 추가하려고 하는 아이템이 존재하는지를 파악
+    const checkeiIdx = this.state.findIndex((item) => item.id === clickedProductId)
+    if(checkeiIdx === -1) {
+      newState = [...this.state, {...productData, count: 1}];
+    } else {
+      newState = [...this.state];
+      newState[checkeiIdx].count += 1;
+    }
+    
     this.setState(newState);
   };
+
+  increaseCartItem(id) {
+    const newState = [...this.state];
+    const checkdIdx = this.state.findIndex((item) => item.id === id);
+    if(newState[checkdIdx].count < MAX_COUNT){
+      newState[checkdIdx].count += 1
+    } else {
+      alert('장바구니에 담을 수 있는 최대 수량은 10개입니다.');
+    }
+    
+    this.setState(newState);
+  }
+
+  decreaseCartItem(id) {
+    const newState = [...this.state];
+    const checkdIdx = this.state.findIndex((item) => item.id === id);
+    if(newState[checkdIdx].count > MIN_COUNT){
+      newState[checkdIdx].count -= 1
+    } else {
+      alert('장바구니에 담을 수 있는 최소 수량은 1개입니다.');
+    }
+    this.setState(newState);
+  }
 
   removeCartItem(id) {
     const newState = this.state.filter((item) => item.id !== id);
@@ -41,7 +76,7 @@ class CartList {
               class="flex justify-between text-base font-medium text-gray-900"
             >
               <h3>${item.name}</h3>
-              <p class="ml-4">${item.price.toLocaleString()}원</p>
+              <p class="ml-4">${(item.price * item.count).toLocaleString()}원</p>
             </div>
           </div>
           <div class="flex flex-1 items-end justify-between">

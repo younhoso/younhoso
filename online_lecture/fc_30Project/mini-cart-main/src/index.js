@@ -9,11 +9,13 @@ const $closeCartBtn = document.querySelector('#close-cart-btn');
 const $shoppingCart = document.querySelector('#shopping-cart');
 const $backdrop = document.querySelector('#backdrop');
 const $cartList = document.querySelector('#cart-list');
+const $paymentBtn = document.querySelector('#payment-btn');
 
 let productData = [];
+const initialCartState = localStorage.getItem('cartState') ? JSON.parse(localStorage.getItem('cartState')) : [];
 
 const productList = new ProductList($productGrid, []);
-const cartList = new CartList($cartList, []);
+const cartList = new CartList($cartList, initialCartState);
 
 const toggleCart = () => {
   $shoppingCart.classList.toggle('translate-x-full');
@@ -54,6 +56,11 @@ const modifyCartItem = (e) => {
   }
 };
 
+const saveToLocalStorge = () => {
+  // 장바구니 데이터를 localStorage에 저장!
+  cartList.saveToLocalStorge()
+};
+
 feachProductData();
 
 $openCartBtn.addEventListener('click', toggleCart);
@@ -61,3 +68,4 @@ $closeCartBtn.addEventListener('click', toggleCart);
 $backdrop.addEventListener('click', toggleCart);
 $productGrid.addEventListener('click', addCartItem);
 $cartList.addEventListener('click', modifyCartItem);
+$paymentBtn.addEventListener('click', saveToLocalStorge);

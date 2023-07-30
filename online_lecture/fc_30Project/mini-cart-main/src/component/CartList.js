@@ -58,6 +58,10 @@ class CartList {
     this.setState(newState);
   };
 
+  saveToLocalStorge(){
+    localStorage.setItem('cartState', JSON.stringify(this.state));
+  }
+
   render() {
     const totalValue = this.state.reduce((acc, cur) => cur.price * cur.count + acc, 0);
     this.$totalCount.innerHTML = totalValue.toLocaleString() + '원' //현재 장바구니 상태의 총 금액의 합!

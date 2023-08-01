@@ -14,6 +14,10 @@ function App() {
         setIsCartOpen((prev) => !prev);
     };
 
+    const totalCount = cartItems
+        .reduce((acc, cur) => cur.price * cur.count + acc, 0)
+        .toLocaleString();
+
     const feachProductData = async () => {
         const result = await api.getProductData();
         setProductItems(result);
@@ -51,7 +55,12 @@ function App() {
                         {productItems.length === 0 ? (
                             <h1>상품이 없습니다.</h1>
                         ) : (
-                            <ProductList productItems={productItems} />
+                            <ProductList
+                                productItems={productItems}
+                                toggleCart={toggleCart}
+                                cartItems={cartItems}
+                                setCartItems={setCartItems}
+                            />
                         )}
                     </div>
                 </section>
@@ -61,7 +70,7 @@ function App() {
             <aside className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
                 <section
                     className={`pointer-events-auto w-screen max-w-md transition ease-in-out duration-500 translate-x-${
-                        isCartOpen ? 0 : 'full'
+                        isCartOpen ? 'full' : 0
                     }`}
                     id="shopping-cart"
                 >
@@ -83,7 +92,7 @@ function App() {
                                             stroke="currentColor"
                                         >
                                             <path
-                                                stroke-width="2"
+                                                strokeWidth="2"
                                                 d="M6 18L18 6M6 6l12 12"
                                             ></path>
                                         </svg>
@@ -99,7 +108,7 @@ function App() {
                             <div className="flex justify-between font-medium">
                                 <p>결제금액</p>
                                 <p className="font-bold" id="total-count">
-                                    0원
+                                    {totalCount + '원'}
                                 </p>
                             </div>
                             <a

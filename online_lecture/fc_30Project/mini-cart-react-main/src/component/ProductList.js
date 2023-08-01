@@ -1,6 +1,28 @@
-const ProductList = ({ productItems }) => {
-    return productItems.map(({ id, name, imgSrc, price }) => (
-        <article>
+const ProductList = ({ productItems, toggleCart, cartItems, setCartItems }) => {
+    const handleAddProduct = (idx) => {
+        const currentProduct = productItems[idx];
+        // 중복된 상품 인지 아닌지 확인하는 로직
+        const ckeckedIndx = cartItems.findIndex(
+            (item) => item.id === currentProduct.id
+        );
+        if (ckeckedIndx === -1) {
+            //중복된 상품 아닐때 장바구니에 아이템 추가
+            const newCartItems = [
+                ...cartItems,
+                { ...currentProduct, count: 1 },
+            ];
+            setCartItems(newCartItems);
+        } else {
+            //중복된 상품일때 count 1씩 증가
+            const newCartItems = [...cartItems];
+            newCartItems[ckeckedIndx].count += 1;
+            setCartItems(newCartItems);
+        }
+        toggleCart();
+    };
+
+    return productItems.map(({ id, name, imgSrc, price }, idx) => (
+        <article onClick={() => handleAddProduct(idx)} key={id}>
             <div className="rounded-lg overflow-hidden border-2 relative">
                 <img
                     src={imgSrc}

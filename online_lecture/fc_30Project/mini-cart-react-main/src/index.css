@@ -9,3 +9,10 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
+
+.translate-x-full {
+    transform: translateX(0);
+}
+.translate-x-0 {
+    transform: translateX(100%);
+}

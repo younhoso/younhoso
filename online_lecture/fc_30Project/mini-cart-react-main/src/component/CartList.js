@@ -2,7 +2,7 @@ const CartList = ({ cartItems }) => {
     return (
         <ul className="divide-y divide-gray-200">
             {cartItems.map(({ id, name, imgSrc, price, count }) => (
-                <li className="flex py-6" id={id}>
+                <li className="flex py-6" id={id} key={id}>
                     <div className="h-24 w-24 overflow-hidden rounded-md border border-gray-200">
                         <img
                             src={imgSrc}

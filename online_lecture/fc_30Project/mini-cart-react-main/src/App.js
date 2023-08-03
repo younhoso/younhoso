@@ -6,8 +6,10 @@ import Backdrop from './component/Backdrop';
 import { api } from './api/getProductData';
 
 function App() {
+    const localCartSate = localStorage.getItem('cartState');
+    const initalCartItem = localCartSate ? JSON.parse(localCartSate) : [];
     const [productItems, setProductItems] = useState([]);
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState(initalCartItem);
     const [isCartOpen, setIsCartOpen] = useState(false);
 
     const toggleCart = () => {
@@ -21,6 +23,10 @@ function App() {
     const feachProductData = async () => {
         const result = await api.getProductData();
         setProductItems(result);
+    };
+
+    const saveToLocalStorage = () => {
+        localStorage.setItem('cartState', JSON.stringify(cartItems));
     };
 
     useEffect(() => {
@@ -101,7 +107,10 @@ function App() {
                             </div>
                             {/* 아래 하드코딩 되어있는 장바구니 목록들을 유저 상호작용에 맞게 렌더링 되도록 변경해주세요.  */}
                             <div id="cart-list">
-                                <CartList cartItems={cartItems} />
+                                <CartList
+                                    cartItems={cartItems}
+                                    setCartItems={setCartItems}
+                                />
                             </div>
                         </div>
                         <div className="border-t border-gray-200 p-6">
@@ -115,6 +124,7 @@ function App() {
                                 id="payment-btn"
                                 href="./"
                                 className="flex items-center justify-center rounded-md border border-transparent bg-sky-400 px-6 py-3 mt-6 font-medium text-white shadow-sm hover:bg-sky-500"
+                                onClick={saveToLocalStorage}
                             >
                                 결제하기
                             </a>

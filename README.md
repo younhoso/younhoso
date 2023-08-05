@@ -12,7 +12,7 @@ TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입�
 |Project|Live Demo|BLOG Link|
 |---|---|---|
 [voice_search](https://github.com/younhoso/younhoso/tree/main/blogExample/voice_search/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/voice_search/)|[음성 인식 검색(JS)](https://triplexblog.kr/167)|
-[슬라이드 인터렉션 효과](https://github.com/younhoso/younhoso/tree/main/blogExample/lifeplus/index.html)|[Live Demo]()|[슬라이드 인터렉션 효과](https://triplexblog.kr)|
+[슬라이드 인터렉션 효과](https://github.com/younhoso/younhoso/tree/main/blogExample/lifeplus/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/lifeplus/)|[슬라이드 인터렉션 효과](https://triplexblog.kr)|
 [무한 롤링 기능 2](https://github.com/younhoso/younhoso/tree/main/blogExample/infinite_rolling/ex2)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/infinite_rolling/ex2)|[무한 롤링 기능(Swiper 커스텀)](https://triplexblog.kr/259)|[slider_custom](https://github.com/younhoso/younhoso/tree/main/blogExample/slider_custom/)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/slider_custom/)|[slider_custom](https://triplexblog.kr/82)|
 [lazy_load_blur](https://github.com/younhoso/younhoso/tree/main/blogExample/lazy_load_blur)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/lazy_load_blur/)|[Image lazy load](https://triplexblog.kr/129)|
 [Newest_Best_by_JavaScript](https://github.com/younhoso/younhoso/tree/main/blogExample/Newest_Best_by_JavaScript)|[Live Demo](https://younhoso.github.io/younhoso/blogExample/Newest_Best_by_JavaScript/)|[JavaScript로 최신순, 베스트순](https://triplexblog.kr/190)|

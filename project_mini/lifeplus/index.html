@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/common.css" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  
+  <div class="sec_inner wrapper">
+    <ul class="box_list">
+        <li class="box">
+            <a href="#0" title="" class="list_box">
+                <div class="img_box">
+                    <div class="back_box"></div>
+                    <img class="back_img" src="/assets/imgs/none_img.png" alt="">
+                    <img class="thumb_img" src="/assets/imgs/thumb-1.png" alt="">
+                </div>
+                <div class="copy_box">
+                    <div class="enHWMedium copy_title">triplexlab</div>
+                    <div class="enHWBold copy_desc">urban dweller’s <br>accessories</div>
+                </div>
+            </a>
+        </li>
+        <li class="box bottom">
+            <a href="#0" title="" class="list_box">
+                <div class="img_box">
+                    <div class="back_box"></div>
+                    <img class="back_img" src="/assets/imgs/none_img.png" alt="">
+                    <img class="thumb_img" src="/assets/imgs/thumb-2.png" alt="">
+                </div>
+                <div class="copy_box">
+                    <div class="enHWMedium copy_title">triplexlab</div>
+                    <div class="enHWBold copy_desc"> Spiral Dot</div>
+                </div>
+            </a>
+        </li>
+        <li class="box">
+            <a href="#0" title="" class="list_box">
+                <div class="img_box">
+                    <div class="back_box"></div>
+                    <img class="back_img" src="/assets/imgs/none_img.png" alt="">
+                    <img class="thumb_img" src="/assets/imgs/thumb-3.png" alt="">
+                </div>
+                <div class="copy_box">
+                    <div class="enHWMedium copy_title">triplexlab</div>
+                    <div class="enHWBold copy_desc">cloud scent</div>
+                </div>
+            </a>
+        </li>
+        <li class="box">
+            <a href="#0" title="" class="list_box">
+                <div class="img_box">
+                    <div class="back_box"></div>
+                    <img class="back_img" src="/assets/imgs/none_img.png" alt="">
+                    <img class="thumb_img" src="/assets/imgs/thumb-4.png" alt="">
+                </div>
+                <div class="copy_box">
+                    <div class="enHWMedium copy_title">triplexlab</div>
+                    <div class="enHWBold copy_desc">Blossom Power-up</div>
+                </div>
+            </a>
+        </li>
+        <li class="box bottom">
+            <a href="#0" title="" class="list_box">
+                <div class="img_box">
+                    <div class="back_box"></div>
+                    <img class="back_img" src="/assets/imgs/none_img.png" alt="">
+                    <img class="thumb_img" src="/assets/imgs/thumb-6.png" alt="">
+                </div>
+                <div class="copy_box">
+                    <div class="enHWMedium copy_title">triplexlab</div>
+                    <div class="enHWBold copy_desc">POsitive emOtion kit</div>
+                </div>
+            </a>
+        </li>
+        <li class="box">
+            <a href="#0" title="" class="list_box">
+                <div class="img_box">
+                    <div class="back_box"></div>
+                    <img class="back_img" src="/assets/imgs/none_img.png" alt="">
+                    <img class="thumb_img" src="/assets/imgs/thumb-5.png" alt="">
+                </div>
+                <div class="copy_box">
+                    <div class="enHWMedium copy_title">triplexlab</div>
+                    <div class="enHWBold copy_desc">WELLNESS KIT</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="btn_area" style="display: none;">
+        <a href="javascript:;" class="btn_more koBold koEB">더보기</a>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const $$ = (ele) => Array.from(document.querySelectorAll(ele));
+      const $ = (ele) => (el) => ele.querySelector(el);
+
+      const addClassDelay = (element, className, delay) => {
+        setTimeout(() => {
+          element.classList.add(className);
+        }, delay);
+      };
+
+      $$('.sec_inner .box').map((el, idx) => {
+        addClassDelay(el, 'active', idx * 200);
+        addClassDelay($(el)('.list_box'), 'active', idx * 200);
+        addClassDelay($(el)('.back_box'), 'active', idx * 200);
+        addClassDelay($(el)('.thumb_img'), 'active', idx * 200);
+      });
+
+    })();
+  </script>
+</body>
+</html>

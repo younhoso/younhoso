@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --primary: #ffffff;
+    --secondary: aliceblue;
+    --highlight: #4cabff;
+    --overlay: #8ac8ff;
+    --text: black;
+}

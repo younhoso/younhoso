@@ -17,19 +17,27 @@ const Container = styled.div`
 function App() {
     const [data, setData] = useState({});
     const [query, setQuery] = useState('');
+    const [order, setOrder] = useState('popular');
+    const [orientation, setOrientation] = useState('all');
 
     useEffect(() => {
         const fetch = async () => {
-            const data = await api.getProductData({ q: query });
+            const data = await api.getProductData({
+                q: query,
+                orientation: orientation,
+                order: order,
+            });
             setData(data);
         };
         fetch();
-    }, [query]);
+    }, [query, orientation, order]);
 
     return (
         <>
             <Container>
-                <QueryContext.Provider value={{ query, setQuery }}>
+                <QueryContext.Provider
+                    value={{ query, setQuery, setOrder, setOrientation }}
+                >
                     <Hero />
                 </QueryContext.Provider>
                 <DataContext.Provider value={{ data }}>

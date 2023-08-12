@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as SearchIcon } from '../asset/search.svg';
 import SearchTag from './SearchTag';
 import SearchOption from './SearchOption';
+import { QueryContext } from '../context/DataContext';
 
 const SearchTagContainer = styled.div`
     display: flex;
@@ -46,7 +47,8 @@ const SearchOptionButton = styled.p`
     color: #5e5e5e;
 `;
 
-const Search = ({ setQuery }) => {
+const Search = () => {
+    const { setQuery } = useContext(QueryContext);
     const savedSearchTags = localStorage.getItem('searchTags');
     const initialSearchTags = savedSearchTags
         ? JSON.parse(savedSearchTags)
@@ -106,6 +108,7 @@ const Search = ({ setQuery }) => {
                 {searchTags.map((tag, idx) => {
                     return (
                         <SearchTag
+                            key={idx}
                             tag={tag}
                             searchTag={() => searchTag(tag)}
                             deleteTag={() => deleteTag(idx)}

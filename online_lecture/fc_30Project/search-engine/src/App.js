@@ -5,6 +5,7 @@ import ToggleThemeButton from './component/ToggleThemeButton';
 import Hero from './component/Hero';
 import ResultContainer from './component/ResultContainer';
 import Footer from './component/Footer';
+import { DataContext, QueryContext } from './context/DataContext';
 import './App.css';
 
 const Container = styled.div`
@@ -28,8 +29,12 @@ function App() {
     return (
         <>
             <Container>
-                <Hero query={query} setQuery={setQuery} />
-                <ResultContainer data={data} />
+                <QueryContext.Provider value={{ query, setQuery }}>
+                    <Hero />
+                </QueryContext.Provider>
+                <DataContext.Provider value={{ data }}>
+                    <ResultContainer />
+                </DataContext.Provider>
                 <Footer />
                 <ToggleThemeButton />
             </Container>

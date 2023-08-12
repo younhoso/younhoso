@@ -4,6 +4,8 @@ import ImageCard from './ImageCard';
 import ImageModal from './ImageModal';
 import Pagination from './Pagination';
 import EmptyResult from './EmptyResult';
+import { useContext } from 'react';
+import { DataContext } from '../context/DataContext';
 
 const Container = styled.div`
     max-width: 1830px;
@@ -19,7 +21,9 @@ const ResultsWrapper = styled.div`
     width: 100%;
 `;
 
-const ResultContainer = ({ data }) => {
+const ResultContainer = () => {
+    const { data } = useContext(DataContext);
+
     return (
         <Container>
             {/* ImgCard 클릭 시 해당 이미지의 정보로 ImageModal이 나타나야 합니다. */}

@@ -21,6 +21,7 @@ function App() {
     const [orientation, setOrientation] = useState('all');
     const [page, setPage] = useState(1);
     const [perPage, setPerPage] = useState(20);
+    const [currentImageDetail, setCurrentImageDetail] = useState(null);
 
     const numOfPages = data.totalHits ? Math.ceil(data.totalHits / perPage) : 0;
 
@@ -53,7 +54,14 @@ function App() {
                     <Hero />
                 </QueryContext.Provider>
                 <DataContext.Provider
-                    value={{ data, page, setPage, numOfPages }}
+                    value={{
+                        data,
+                        page,
+                        setPage,
+                        numOfPages,
+                        currentImageDetail,
+                        setCurrentImageDetail,
+                    }}
                 >
                     <ResultContainer />
                 </DataContext.Provider>

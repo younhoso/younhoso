@@ -22,17 +22,28 @@ const ResultsWrapper = styled.div`
 `;
 
 const ResultContainer = () => {
-    const { data } = useContext(DataContext);
+    const { data, currentImageDetail, setCurrentImageDetail } =
+        useContext(DataContext);
 
+    console.log(currentImageDetail);
     return (
         <Container>
             {/* ImgCard 클릭 시 해당 이미지의 정보로 ImageModal이 나타나야 합니다. */}
-            {/* <ImageModal /> */}
+            {currentImageDetail && (
+                <ImageModal
+                    currentImageDetail={currentImageDetail}
+                    setCurrentImageDetail={setCurrentImageDetail}
+                />
+            )}
             {data.hits?.length > 0 && <Pagination />}
             <ResultsWrapper>
                 {data.hits?.length > 0 ? (
                     data.hits?.map((imgData) => (
-                        <ImageCard key={imgData.id} imgData={imgData} />
+                        <ImageCard
+                            key={imgData.id}
+                            imgData={imgData}
+                            onClick={() => setCurrentImageDetail(imgData)}
+                        />
                     ))
                 ) : (
                     <EmptyResult />

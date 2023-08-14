@@ -9,3 +9,9 @@ html {
     --overlay: #8ac8ff;
     --text: black;
 }
+
+html[data-theme='dark'] {
+    --primary: #1e1f21;
+    --secondary: #292a2d;
+    --text: #ffffff;
+}

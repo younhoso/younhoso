@@ -1,6 +1,8 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as PrevIcon } from '../asset/prev.svg';
 import { ReactComponent as NextIcon } from '../asset/next.svg';
+import { DataContext } from '../context/DataContext';
 
 const Nav = styled.nav`
     display: flex;
@@ -25,17 +27,40 @@ const PageSelect = styled.select`
 `;
 
 const Pagination = () => {
+    const { page, setPage, numOfPages } = useContext(DataContext);
     return (
         <Nav>
-            <PrevIcon width="24" cursor="pointer" fill="var(--text)" />
-            {`총 10 중 `}
-            <PageSelect name="page">
-                <option value={1} key={1}>
-                    1
-                </option>
+            {page !== 1 && (
+                <PrevIcon
+                    width="24"
+                    cursor="pointer"
+                    fill="var(--text)"
+                    onClick={() => setPage((prev) => prev - 1)}
+                />
+            )}
+            {`총 ${numOfPages} 중 `}
+            <PageSelect
+                name="page"
+                value={page}
+                onChange={(e) => setPage(parseInt(e.target.value))}
+            >
+                {Array(numOfPages)
+                    .fill()
+                    .map((data, idx) => (
+                        <option value={idx + 1} key={idx + 1}>
+                            {idx + 1}
+                        </option>
+                    ))}
             </PageSelect>
             페이지
-            <NextIcon width="24" cursor="pointer" fill="var(--text)" />
+            {page !== numOfPages && (
+                <NextIcon
+                    width="24"
+                    cursor="pointer"
+                    fill="var(--text)"
+                    onClick={() => setPage((prev) => prev + 1)}
+                />
+            )}
         </Nav>
     );
 };

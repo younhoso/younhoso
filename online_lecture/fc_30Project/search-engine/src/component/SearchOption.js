@@ -27,7 +27,7 @@ const SearchOptionLabel = styled.p`
 `;
 
 const SearchOption = () => {
-    const { setOrder, setOrientation } = useContext(QueryContext);
+    const { setOrder, setPerPage } = useContext(QueryContext);
 
     return (
         <SearchOptionContainer>
@@ -84,7 +84,10 @@ const SearchOption = () => {
                 </SearchOptionLi>
                 <SearchOptionLi>
                     <SearchOptionLabel>페이지 당 갯수</SearchOptionLabel>
-                    <form id="per_page">
+                    <form
+                        id="per_page"
+                        onChange={(e) => setPerPage(e.target.value)}
+                    >
                         <input
                             type="radio"
                             name="per_page"
@@ -97,6 +100,7 @@ const SearchOption = () => {
                             name="per_page"
                             id="20"
                             value={20}
+                            defaultChecked={true}
                         />
                         <label htmlFor="20">20</label>
                         <input

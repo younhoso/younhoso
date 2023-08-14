@@ -19,6 +19,10 @@ function App() {
     const [query, setQuery] = useState('');
     const [order, setOrder] = useState('popular');
     const [orientation, setOrientation] = useState('all');
+    const [page, setPage] = useState(1);
+    const [perPage, setPerPage] = useState(20);
+
+    const numOfPages = data.totalHits ? Math.ceil(data.totalHits / perPage) : 0;
 
     useEffect(() => {
         const fetch = async () => {
@@ -26,21 +30,31 @@ function App() {
                 q: query,
                 orientation: orientation,
                 order: order,
+                page: page,
+                per_page: perPage,
             });
             setData(data);
         };
         fetch();
-    }, [query, orientation, order]);
+    }, [query, orientation, order, page, perPage]);
 
     return (
         <>
             <Container>
                 <QueryContext.Provider
-                    value={{ query, setQuery, setOrder, setOrientation }}
+                    value={{
+                        query,
+                        setQuery,
+                        setOrder,
+                        setOrientation,
+                        setPerPage,
+                    }}
                 >
                     <Hero />
                 </QueryContext.Provider>
-                <DataContext.Provider value={{ data }}>
+                <DataContext.Provider
+                    value={{ data, page, setPage, numOfPages }}
+                >
                     <ResultContainer />
                 </DataContext.Provider>
                 <Footer />

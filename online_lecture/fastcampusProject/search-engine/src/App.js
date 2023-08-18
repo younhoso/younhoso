@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { api } from './api/request';
 import ToggleThemeButton from './component/ToggleThemeButton';
 import Hero from './component/Hero';
@@ -8,6 +8,7 @@ import Footer from './component/Footer';
 import { DataContext, QueryContext } from './context/DataContext';
 import './App.css';
 import EmptyResult from './component/EmptyResult';
+import useInfiniteScroll from './hooks/useInfiniteScroll';
 
 const Container = styled.div`
     position: relative;
@@ -23,7 +24,9 @@ function App() {
     const [page, setPage] = useState(1);
     const [perPage, setPerPage] = useState(20);
     const [currentImageDetail, setCurrentImageDetail] = useState(null);
-    const target = useRef(null);
+    const { lastItemRef } = useInfiniteScroll(() => {
+        setPage((prev) => prev + 1);
+    });
 
     const numOfPages = data.totalHits ? Math.ceil(data.totalHits / perPage) : 0;
 
@@ -48,20 +51,6 @@ function App() {
         };
         fetch();
     }, [query, orientation, order, page, perPage]);
-
-    const callback = ([entries]) => {
-        if (entries.isIntersecting) {
-            setPage((prev) => prev + 1);
-        }
-    };
-
-    useEffect(() => {
-        if (!target.current) return;
-        const observer = new IntersectionObserver(callback, {
-            threshold: 1,
-        });
-        observer.observe(target.current);
-    }, []);
 
     useEffect(() => {
         setPage(1);
@@ -94,7 +83,7 @@ function App() {
                     <ResultContainer />
                 </DataContext.Provider>
                 {page !== numOfPages && (
-                    <div ref={target}>
+                    <div ref={lastItemRef}>
                         <EmptyResult isLoading={data.totalHits} />
                     </div>
                 )}

@@ -1,9 +1,9 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { ReactComponent as SearchIcon } from '../asset/search.svg';
+import { ReactComponent as SearchIcon } from '../../asset/search.svg';
 import SearchTag from './SearchTag';
 import SearchOption from './SearchOption';
-import { QueryContext } from '../context/DataContext';
+import { QueryContext } from '../../context/DataContext';
 
 const SearchTagContainer = styled.div`
     display: flex;

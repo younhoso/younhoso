@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { api } from './api/request';
 import ToggleThemeButton from './component/ToggleThemeButton';
 import Hero from './component/Hero';
-import ResultContainer from './component/ResultContainer';
+import ResultContainer from './component/Image/ImageContainer';
 import Footer from './component/Footer';
 import { DataContext, QueryContext } from './context/DataContext';
 import './App.css';

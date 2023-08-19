@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import DummyData from '../asset/dummyData';
+import DummyData from '../../asset/dummyData';
 import ImageCard from './ImageCard';
 import ImageModal from './ImageModal';
 // import Pagination from './Pagination';
 import { useContext } from 'react';
-import { DataContext } from '../context/DataContext';
+import { DataContext } from '../../context/DataContext';
 
 const Container = styled.div`
     max-width: 1830px;

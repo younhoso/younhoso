@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as LikeIcon } from '../asset/like.svg';
-import { ReactComponent as DeleteIcon } from '../asset/delete.svg';
-import DummyData from '../asset/dummyData';
+import { ReactComponent as LikeIcon } from '../../asset/like.svg';
+import { ReactComponent as DeleteIcon } from '../../asset/delete.svg';
 
 const Modal = styled.div`
     position: fixed;

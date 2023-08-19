@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { QueryContext } from '../context/DataContext';
+import { QueryContext } from '../../context/DataContext';
 
 const SearchOptionContainer = styled.div`
     display: flex;

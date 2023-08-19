@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Search from './Search';
+import Search from './Search/Search';
 
 const Container = styled.div`
     position: relative;

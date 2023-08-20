@@ -24,8 +24,6 @@ const ResultContainer = () => {
     const { data, currentImageDetail, setCurrentImageDetail } =
         useContext(DataContext);
 
-    console.log(currentImageDetail);
-
     return (
         <Container>
             {/* ImgCard 클릭 시 해당 이미지의 정보로 ImageModal이 나타나야 합니다. */}

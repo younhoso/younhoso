@@ -1,4 +1,6 @@
+import { MouseEventHandler } from 'react';
 import styled from 'styled-components';
+import { IPaper } from 'types';
 
 const Card = styled.div`
     margin-left: 8px;
@@ -15,7 +17,12 @@ const Img = styled.img`
     border-radius: 4px;
 `;
 
-const ImageCard = ({ imgData, onClick }) => {
+interface IImageCard {
+    imgData: IPaper;
+    onClick: MouseEventHandler<HTMLDivElement>;
+}
+
+const ImageCard = ({ imgData, onClick }: IImageCard) => {
     const { webformatURL, id } = imgData;
     return (
         <Card onClick={onClick}>

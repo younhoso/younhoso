@@ -1,4 +1,6 @@
-const apiFetchHandler = async (url) => {
+import { IParamObj } from 'types';
+
+const apiFetchHandler = async (url: string) => {
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -15,11 +17,11 @@ const apiFetchHandler = async (url) => {
 const BASE_URL = 'https://pixabay.com/api';
 
 const defaultParam = {
-    key: process.env.REACT_APP_PIXABAY,
+    key: process.env.REACT_APP_PIXABAY || '',
 };
 
 export const api = {
-    getProductData: (paramObj) => {
+    getProductData: (paramObj: IParamObj) => {
         const params = new URLSearchParams({
             ...defaultParam,
             ...paramObj,

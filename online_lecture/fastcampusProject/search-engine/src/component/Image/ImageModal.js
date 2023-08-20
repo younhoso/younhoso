@@ -38,7 +38,7 @@ const ImageModal = ({ currentImageDetail, setCurrentImageDetail }) => {
                 width="24px"
                 cursor="pointer"
                 fill="#FFFFFF"
-                onClick={() => setCurrentImageDetail(null)}
+                onClick={() => setCurrentImageDetail(false)}
             />
             <ModalImg src={largeImageURL} />
             <p>{tags}</p>

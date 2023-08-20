@@ -9,6 +9,7 @@ import { DataContext, QueryContext } from './context/DataContext';
 import './App.css';
 import EmptyResult from './component/EmptyResult';
 import useInfiniteScroll from './hooks/useInfiniteScroll';
+import { IGetPapersResponse, Order, Orientation } from 'types';
 
 const Container = styled.div`
     position: relative;
@@ -17,13 +18,17 @@ const Container = styled.div`
 `;
 
 function App() {
-    const [data, setData] = useState({ total: 0, totalHits: 0, hits: [] });
+    const [data, setData] = useState<IGetPapersResponse>({
+        total: 0,
+        totalHits: 0,
+        hits: [],
+    });
     const [query, setQuery] = useState('');
-    const [order, setOrder] = useState('popular');
-    const [orientation, setOrientation] = useState('all');
+    const [order, setOrder] = useState<Order>('popular');
+    const [orientation, setOrientation] = useState<Orientation>('all');
     const [page, setPage] = useState(1);
     const [perPage, setPerPage] = useState(20);
-    const [currentImageDetail, setCurrentImageDetail] = useState(null);
+    const [currentImageDetail, setCurrentImageDetail] = useState(false);
     const { lastItemRef } = useInfiniteScroll(() => {
         setPage((prev) => prev + 1);
     });
@@ -36,8 +41,8 @@ function App() {
                 q: query,
                 orientation: orientation,
                 order: order,
-                page: page,
-                per_page: perPage,
+                page: page.toString(),
+                per_page: perPage.toString(),
             });
             if (page === 1) {
                 setData(data);

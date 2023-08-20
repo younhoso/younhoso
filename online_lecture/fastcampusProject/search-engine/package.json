@@ -6,7 +6,8 @@
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "react-scripts": "5.0.0",
-        "styled-components": "^5.3.5"
+        "styled-components": "^5.3.5",
+        "typescript": "^5.1.6"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -33,6 +34,11 @@
         ]
     },
     "devDependencies": {
+        "@types/jest": "^29.5.3",
+        "@types/node": "^20.5.1",
+        "@types/react": "^18.2.20",
+        "@types/react-dom": "^18.2.7",
+        "@types/styled-components": "^5.1.26",
         "prettier": "^2.5.1"
     }
 }

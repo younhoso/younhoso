@@ -19,8 +19,8 @@ import {
 } from "firebase/auth";
 import md5 from "md5";
 import { getDatabase, ref, set } from "firebase/database";
-// import { useDispatch } from "react-redux";
-// import { setUser } from "../store/userReducer";
+import { useDispatch } from "react-redux";
+import { setUser } from '../store/useReducer';
 const IsPasswordValid = (password, confirmPassword) => {
   if (password.length < 6 || confirmPassword.length < 6) {
     return false;
@@ -32,27 +32,25 @@ const IsPasswordValid = (password, confirmPassword) => {
 };
 
 function Join() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const postUserData = useCallback(
     async (name, email, password) => {
       setLoading(true);
       try {
-        const { user } = await createUserWithEmailAndPassword(
-          getAuth(),
-          email,
-          password
-        );
+        const { user } = await createUserWithEmailAndPassword(getAuth(),email,password);
         await updateProfile(user, {
           displayName: name,
           photoURL: `https://www.gravatar.com/avatar/${md5(email)}?d=retro`,
         });
+
         await set(ref(getDatabase(), "users/" + user.uid), {
           name: user.displayName,
           avatar: user.photoURL,
         });
-        // dispatch(setUser(user));
+        
+        dispatch(setUser(user));
       } catch (e) {
         setError(e.message);
         setLoading(false);
@@ -106,7 +104,7 @@ function Join() {
         <Typography component="h1" variant="h5">
           회원가입
         </Typography>
-        <Box component="form" noValidate sx={{ mt: 3 }}>
+        <Box component="form" noValidate sx={{ mt: 3 }} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField

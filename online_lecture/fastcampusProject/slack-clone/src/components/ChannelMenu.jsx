@@ -1,7 +1,9 @@
-import { Dialog, DialogContent, DialogContentText, DialogTitle, IconButton, List, ListItem, ListItemIcon, ListItemText, TextField } from '@mui/material';
-import React, { useCallback, useState } from 'react';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, List, ListItem, ListItemIcon, ListItemText, TextField, keyframes } from '@mui/material';
+import React, { useCallback, useEffect, useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import "../firebase";
+import { child, getDatabase, onChildAdded, push, ref, set, update } from "firebase/database";
 
 function ChannelMenu() {
   const [open, setOpen] = useState(false);
@@ -9,6 +11,7 @@ function ChannelMenu() {
   const handleClose = useCallback(() => setOpen(false), []);
   const [channelName, setChannelName] = useState("");
   const [channelDetail, setChannelDetail] = useState("");
+  const [channels, setChannels] = useState([]);
   const handleChangeChannelName = useCallback((e) => {
     setChannelName(e.target.value)
   },[]);
@@ -17,9 +20,38 @@ function ChannelMenu() {
     setChannelDetail(e.target.value)
   },[]);
 
+  useEffect(() => {
+    const db = getDatabase();
+    const unsubscribe = onChildAdded(ref(db, "channels"), (snapshot) => {
+      setChannels((channelArr) => [...channelArr, snapshot.val()]);
+    });
+
+    return () => {
+      setChannels([]);
+      unsubscribe();
+    }
+  }, [])
+
   const handleSubmit =  useCallback(async () => {
-    
-  },[]);
+    const db = getDatabase();
+    const key = push(child(ref(db), "chennels")).key;
+    const newChannel = {
+      id: key,
+      name: channelName,
+      details: channelDetail
+    }
+    const updates = {};
+    updates["/channels/" + key] = newChannel;
+
+    try {
+      await update(ref(db), updates);
+      setChannelName("");
+      setChannelDetail("");
+      handleClose();
+    } catch(error) {
+      console.error(error)
+    }
+  },[channelDetail, channelName]);
 
   return (
     <>
@@ -38,6 +70,13 @@ function ChannelMenu() {
             sx={{ wordBreak: "break-all", color: "#9A939B" }}
           />
         </ListItem>
+        {
+          channels.map(channel => (
+            <ListItem button key={channel.id}>
+              <ListItemText primary={`# ${channel.name}`} sx={{wordBreak: "break-all", color: "#918890"}} />
+            </ListItem>
+          ))
+        }
       </List>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>채널 추가</DialogTitle>

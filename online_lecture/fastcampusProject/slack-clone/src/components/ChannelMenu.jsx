@@ -12,6 +12,8 @@ function ChannelMenu() {
   const [channelName, setChannelName] = useState("");
   const [channelDetail, setChannelDetail] = useState("");
   const [channels, setChannels] = useState([]);
+  const [activeChannelId, setActiveChannelId] = useState("");
+  const [firstLoaded, setFirstLoaded] = useState(true);
   const handleChangeChannelName = useCallback((e) => {
     setChannelName(e.target.value)
   },[]);
@@ -30,7 +32,11 @@ function ChannelMenu() {
       setChannels([]);
       unsubscribe();
     }
-  }, [])
+  }, []);
+
+  const changeChannel = (channel) => {
+    setActiveChannelId(channel.id);
+  }
 
   const handleSubmit =  useCallback(async () => {
     const db = getDatabase();
@@ -53,6 +59,13 @@ function ChannelMenu() {
     }
   },[channelDetail, channelName]);
 
+  useEffect(() => {
+    if(channels.length > 0 && firstLoaded){
+      setActiveChannelId(channels[0].id);
+      setFirstLoaded(false);
+    }
+  },[channels, firstLoaded]);
+
   return (
     <>
     {/* TODO 테마반영 */}
@@ -70,14 +83,17 @@ function ChannelMenu() {
             sx={{ wordBreak: "break-all", color: "#9A939B" }}
           />
         </ListItem>
-        {
-          channels.map(channel => (
-            <ListItem button key={channel.id}>
-              <ListItemText primary={`# ${channel.name}`} sx={{wordBreak: "break-all", color: "#918890"}} />
-            </ListItem>
-          ))
-        }
+        <List component="div" disablePadding sx={{pl:3}}>
+          {
+            channels.map(channel => (
+              <ListItem button selected={channel.id === activeChannelId} onClick={() => changeChannel(channel)} key={channel.id}>
+                <ListItemText primary={`# ${channel.name}`} sx={{wordBreak: "break-all", color: "#918890"}} />
+              </ListItem>
+            ))
+          }
+        </List>
       </List>
+
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>채널 추가</DialogTitle>
         <DialogContent>

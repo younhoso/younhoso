@@ -4,6 +4,8 @@ import AddIcon from '@mui/icons-material/Add';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "../firebase";
 import { child, getDatabase, onChildAdded, push, ref, set, update } from "firebase/database";
+import { useDispatch } from 'react-redux';
+import { setCurrentChannel } from '../store/channelReducer';
 
 function ChannelMenu() {
   const [open, setOpen] = useState(false);
@@ -14,6 +16,8 @@ function ChannelMenu() {
   const [channels, setChannels] = useState([]);
   const [activeChannelId, setActiveChannelId] = useState("");
   const [firstLoaded, setFirstLoaded] = useState(true);
+  const dispatch = useDispatch();
+
   const handleChangeChannelName = useCallback((e) => {
     setChannelName(e.target.value)
   },[]);
@@ -36,7 +40,8 @@ function ChannelMenu() {
 
   const changeChannel = (channel) => {
     setActiveChannelId(channel.id);
-  }
+    dispatch(setCurrentChannel(channel))
+  };
 
   const handleSubmit =  useCallback(async () => {
     const db = getDatabase();
@@ -62,9 +67,10 @@ function ChannelMenu() {
   useEffect(() => {
     if(channels.length > 0 && firstLoaded){
       setActiveChannelId(channels[0].id);
+      dispatch(setCurrentChannel(channels[0]))
       setFirstLoaded(false);
     }
-  },[channels, firstLoaded]);
+  },[channels, dispatch, firstLoaded]);
 
   return (
     <>
@@ -86,7 +92,11 @@ function ChannelMenu() {
         <List component="div" disablePadding sx={{pl:3}}>
           {
             channels.map(channel => (
-              <ListItem button selected={channel.id === activeChannelId} onClick={() => changeChannel(channel)} key={channel.id}>
+              <ListItem 
+              button 
+              selected={channel.id === activeChannelId} 
+              onClick={() => changeChannel(channel)} 
+              key={channel.id}>
                 <ListItemText primary={`# ${channel.name}`} sx={{wordBreak: "break-all", color: "#918890"}} />
               </ListItem>
             ))

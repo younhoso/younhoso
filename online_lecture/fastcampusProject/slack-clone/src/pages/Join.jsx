@@ -56,7 +56,7 @@ function Join() {
         setLoading(false);
       }
     },
-    []
+    [dispatch]
   );
   const handleSubmit = useCallback(
     (event) => {

@@ -1,6 +1,6 @@
 import { AppBar, Avatar, Box, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import TagIcon from "@mui/icons-material/Tag";
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
 import "../firebase";
 import { getAuth, signOut } from 'firebase/auth';
@@ -8,14 +8,14 @@ import { getAuth, signOut } from 'firebase/auth';
 function Header() {
   const { user, theme } = useSelector((state) => state);
   const [anchorEl, setAnchorEl] = useState(null);
-  const handleOpenMenu = (evebt) => {
+  const handleOpenMenu = useCallback((evebt) => {
     setAnchorEl(evebt.currentTarget);
-  };
+  }, []);
 
-  const handleCloseMenu = () => setAnchorEl(null);
-  const handleLogout = async () => {
+  const handleCloseMenu = useCallback(() => setAnchorEl(null), []);
+  const handleLogout = useCallback(async () => {
    await signOut(getAuth());
-  }
+  }, []);
 
   return (
     <>

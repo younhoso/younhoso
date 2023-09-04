@@ -18,6 +18,12 @@ function ChannelMenu() {
   const [firstLoaded, setFirstLoaded] = useState(true);
   const dispatch = useDispatch();
 
+  const changeChannel = useCallback((channel) => {
+    if(channel.id === activeChannelId) return;
+    setActiveChannelId(channel.id);
+    dispatch(setCurrentChannel(channel))
+  }, [activeChannelId, dispatch]);
+
   const handleChangeChannelName = useCallback((e) => {
     setChannelName(e.target.value)
   },[]);
@@ -38,10 +44,6 @@ function ChannelMenu() {
     }
   }, []);
 
-  const changeChannel = (channel) => {
-    setActiveChannelId(channel.id);
-    dispatch(setCurrentChannel(channel))
-  };
 
   const handleSubmit =  useCallback(async () => {
     const db = getDatabase();
@@ -62,7 +64,7 @@ function ChannelMenu() {
     } catch(error) {
       console.error(error)
     }
-  },[channelDetail, channelName]);
+  },[channelDetail, channelName, handleClose]);
 
   useEffect(() => {
     if(channels.length > 0 && firstLoaded){

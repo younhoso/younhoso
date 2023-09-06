@@ -2,6 +2,7 @@ import React from 'react'
 import ChatHeader from './ChatHeader'
 import { Divider, Grid, List, Paper, Toolbar } from '@mui/material'
 import { useSelector } from 'react-redux'
+import ChatInput from './ChatInput';
 
 function Chat() {
   const { channel } = useSelector((state) => state);
@@ -18,7 +19,7 @@ function Chat() {
           
         </List>
         <Divider />
-        {/* 채팅 인풋 */}
+        <ChatInput />
       </Grid>
     </>
   )

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Avatar, Grid, LiskItem, ListItemAvatar, ListItemText } from '@mui/material'
+import { Avatar, Grid, ListItem, ListItemAvatar, ListItemText } from '@mui/material'
 
 function ChatMessage() {
   return (
-    <LiskItem>
+    <ListItem>
       <ListItemAvatar sx={{alignSelf: "stretch"}}>
         <Avatar variant='rounded' sx={{width:50, height:50}} alt="profile image"/>
       </ListItemAvatar>
@@ -18,10 +18,12 @@ function ChatMessage() {
           />
         </Grid>
         <Grid item xs={12}>
+          <ListItemText align="left" xs={{wordBreak:"break-all"}} primary={"채팅메세지입니다."}></ListItemText>
           {/* TODO 이미지 추가 */}
+          <img alt='message' src='' style={{maxWidth:"100%"}} />
         </Grid>
       </Grid>
-    </LiskItem>
+    </ListItem>
   )
 }
 

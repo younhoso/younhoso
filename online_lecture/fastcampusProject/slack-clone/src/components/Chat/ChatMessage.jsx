@@ -16,7 +16,7 @@ function ChatMessage({message, user}) {
           <ListItemText 
             sx={{display: "flex"}} 
             primary={message.user.name} 
-            primaryTypographyProps={{fontWeight:"bold", color: message.user.id === user.currentUser?.uid ? "orange" : "black"}} 
+            primaryTypographyProps={{fontWeight:"bold", color: message.user.id === user.currentUser?.uid ? "orange" : "black"}}
             secondary={dayjs(message.timestamp).fromNow()}
             secondaryTypographyProps={{color: "gray", ml: 1}}
           />

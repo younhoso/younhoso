@@ -1,3 +1,4 @@
+import AdjacentPostCard from "@/components/AdjacentPostCard";
 import PostContent from "@/components/PostContent";
 import { getPostData } from "@/service/posts";
 import Image from "next/image";
@@ -21,9 +22,9 @@ export default async function PostPage({params: { slug }}: Props) {
         height={420}
       />
       <PostContent post={post}/>
-      <section>
-        {prev && <p>{prev.title}</p>}
-        {next && <p>{next.title}</p>}
+      <section className="flex shadow-md">
+        {prev && <AdjacentPostCard post={prev} type="prev" />}
+        {next && <AdjacentPostCard post={next} type="next" />}
       </section>
     </article>
   );

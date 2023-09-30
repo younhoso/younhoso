@@ -11,34 +11,17 @@ type Props = {
 }
 
 export default function MultiSwiper({children}: Props) {
-  
   return (
-    <Swiper 
-    slidesPerView={3}
-    spaceBetween={30}
-    pagination={{
-      clickable:true
-    }}
-    modules={[Pagination]}
-    breakpoints={{
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-      },
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-    }}
-    className="mySwiper">
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={30}
+      freeMode={true}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Pagination]}
+      className="mySwiper"
+    >
       {React.Children.map(children, (child) => (
         <SwiperSlide>{child}</SwiperSlide>
       ))}

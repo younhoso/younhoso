@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 
-.swiper-slide {
+.swiper-wrapper {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -33,3 +33,4 @@ body::-webkit-scrollbar {
   height: 100%;
   object-fit: cover;
 }
+

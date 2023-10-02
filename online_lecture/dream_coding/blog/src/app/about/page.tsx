@@ -1,4 +1,10 @@
 import Hero from "@/components/Hero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'About Me',
+  description: 'triplexlab 커러어 소개',
+}
 
 const TITLE_CLASS = 'text-2xl font-bold text-gray-800 my-2'
 export default function AboutPage() {

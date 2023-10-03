@@ -4,7 +4,7 @@ import './globals.css';
 import styles from './layout.module.css';
 
 export const metadata: Metadata = {
-  title: '멋진 제품 사이트',
+  title: '멋진 제품 사이트 | %s',
   description: '멋진 제품을 판매하는 곳입니다.',
   icons: {
     icon: '/favicon.ico',

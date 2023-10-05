@@ -1,7 +1,7 @@
 # SYH
-- Languages : javascript
+- Languages : JavaScript | TypeScript
 - Frameworks : Next.js
-- Style : css3, scss, styled-components
+- Style : css3 | scss | styled-components
 
 # BLOG
 [TriplexLab](https://triplexlab.tistory.com/)

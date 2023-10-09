@@ -11,7 +11,8 @@ type Props = {
 
 export default async function SignPage({searchParams: {callbackUrl}} : Props) {
   const session = await getServerSession(authOptions);
-
+  console.log('session',session)
+  
   if(session){
     return { redirect: { destination: "/" } };
   }
@@ -19,7 +20,7 @@ export default async function SignPage({searchParams: {callbackUrl}} : Props) {
   const providers = (await getProviders()) ?? {};
   
   return (
-    <section className="flex justify-center mt-24">
+    <section>
       <Signin providers={providers} callbackUrl={callbackUrl ?? '/'}/>
     </section>
   )

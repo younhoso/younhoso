@@ -1,0 +1,3 @@
+[submodule "blogExample/blogExample/nextlogo"]
+	path = blogExample/blogExample/nextlogo
+	url = https://github.com/younhoso/younhoso.git

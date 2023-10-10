@@ -22,4 +22,5 @@ export default function SideBar({useer: {name, username, image}}: Props) {
       </p>
     </>
   );
-} 
+}
+

@@ -21,4 +21,4 @@ export default function Signin({providers, callbackUrl}: Props) {
       ))}
     </>
   );
-} 
+}

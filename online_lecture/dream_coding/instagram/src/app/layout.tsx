@@ -1,7 +1,7 @@
 import './globals.css';
+import { Open_Sans } from 'next/font/google';
 import Header from '@/components/Header';
 import AuthContext from '@/context/AuthContext';
-import { Open_Sans } from 'next/font/google';
 import SWRConfigContext from '@/context/SWRConfigContext';
 
 const openSans = Open_Sans({ subsets: ['latin'] })

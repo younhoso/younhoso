@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
-import StyledComponentsRegistry from '@/lib/styled-components'
-import Header from '@/components/Header'
-import AuthContext from '@/context/AuthContext'
+import type { Metadata } from 'next';
+import StyledComponentsRegistry from '@/lib/styled-components';
+import Header from '@/components/Header';
+import AuthContext from '@/context/AuthContext';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

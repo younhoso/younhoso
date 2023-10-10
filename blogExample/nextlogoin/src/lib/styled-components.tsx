@@ -1,8 +1,10 @@
 'use client'
- 
 import React, { useState } from 'react'
 import { useServerInsertedHTML } from 'next/navigation'
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from '@/styles/GlobalStyle';
+import theme from '@/styles/theme';
  
 export default function StyledComponentsRegistry({
   children,
@@ -21,7 +23,10 @@ export default function StyledComponentsRegistry({
  
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-      {children}
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        {children}
+      </ThemeProvider>
     </StyleSheetManager>
   )
 }

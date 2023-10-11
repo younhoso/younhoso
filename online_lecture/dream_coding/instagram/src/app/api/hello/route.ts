@@ -1,9 +1,0 @@
-import { NextResponse } from "next/server";
-
-export async function GET(request: Request) {
-  return NextResponse.json('Hello, Next.js!')
-}
-
-// export async function POST() {
-//   return
-// }

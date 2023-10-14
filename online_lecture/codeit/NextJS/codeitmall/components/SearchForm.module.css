@@ -1,0 +1,24 @@
+.searchForm {
+  display: flex;
+  gap: 15px;
+}
+
+.searchInput {
+  width: 400px;
+  padding: 0px 30px;
+  color: #f9f9f9;
+  font-size: 18px;
+  background-color: #252525;
+  border: 1px solid #505050;
+  border-radius: 10px;
+  outline: none;
+}
+
+.searchButton {
+  padding: 16px 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  border: none;
+  border-radius: 10px;
+}

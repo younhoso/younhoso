@@ -45,7 +45,7 @@ export default function Dropdown({
       onBlur={handleBlur}
       ref={inputRef}
     >
-      {selectedOption.label}
+      {selectedOption?.label}
       <span className={styles.arrow}>▲</span>
       <div className={styles.options}>
         {options.map((option) => {

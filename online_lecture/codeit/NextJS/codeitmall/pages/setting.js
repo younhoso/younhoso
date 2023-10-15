@@ -1,13 +1,19 @@
 import Dropdown from '@/components/Dropdown';
 import { useTheme } from '@/lib/ThemeContext';
 import styles from '@/styles/Setting.module.css';
+import { common } from '@/utils/common';
 
 export default function Setting() {
-  const {theme, setTheme} = useTheme();
+  const {themeVider, setThemeVider} = useTheme();
 
   function handleDropdownChange(name, value) {
     const nextTheme = value;
-    if(document.body.classList.contains('dark')){
+    common.saveLocalStorage('theme', nextTheme);
+
+    if(common.getLocalStorage('theme') === 'dark'){
+      document.body.classList.remove('light');
+      document.body.classList.add(nextTheme);
+    } else if(common.getLocalStorage('theme') === 'light') {
       document.body.classList.remove('dark');
       document.body.classList.add(nextTheme);
     }
@@ -21,7 +27,7 @@ export default function Setting() {
         <Dropdown
             className={styles.dropdown}
             name="theme"
-            value={theme}
+            value={themeVider}
             options={[
               { label: '다크', value: 'dark' },
               { label: '라이트', value: 'light' },

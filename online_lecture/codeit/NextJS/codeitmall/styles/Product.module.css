@@ -44,11 +44,19 @@
   line-height: 26px;
 }
 
-.info {
+.bark .info {
   background: #1f1f1f;
   border: 1px solid #252525;
   border-radius: 10px;
 }
+
+.light .info {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+
 
 .infoTable {
   width: 100%;

@@ -3,11 +3,15 @@ import { useTheme } from '@/lib/ThemeContext';
 import styles from '@/styles/Setting.module.css';
 
 export default function Setting() {
-  const [theme, setTheme] = useTheme();
+  const {theme, setTheme} = useTheme();
 
   function handleDropdownChange(name, value) {
     const nextTheme = value;
-  }
+    if(document.body.classList.contains('dark')){
+      document.body.classList.remove('dark');
+      document.body.classList.add(nextTheme);
+    }
+  };
 
   return (
     <>

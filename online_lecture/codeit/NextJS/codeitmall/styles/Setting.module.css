@@ -1,21 +1,24 @@
 .title {
-  margin: 30px 0;
+  margin: 0;
+  border-bottom: 1px solid #1f1f1f;
+  padding-bottom: 30px;
   font-weight: 700;
   font-size: 26px;
   line-height: 38px;
 }
 
-.title+.section {
-  border-top: 1px solid #1f1f1f;
+:global(.light) .title {
+  border-color: #e1e1e1;
 }
 
 .sectionTitle {
-  margin: 35px 0;
+  margin: 35px 0 25px;
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
 }
 
-.input {
+.dropdown {
   width: 205px;
 }

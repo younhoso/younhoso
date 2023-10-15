@@ -1,11 +1,10 @@
+import Image from 'next/image'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { apis } from '@/lib/axios';
 import styles from '@/styles/Product.module.css';
 import SizeReviewList from '@/components/SizeReviewList';
 import StarRating from '@/components/StarRating';
-import Header from '@/components/Header';
-import Container from '@/components/Container';
 
 export default function Product() {
   const [product, setProduct] = useState();
@@ -37,15 +36,13 @@ export default function Product() {
 
   return (
     <>
-      <Header />
-      <Container>
         <h1 className={styles.name}>
           {product.name}
           <span className={styles.englishName}>{product.englishName}</span>
         </h1>
         <div className={styles.content}>
           <div>
-            <img className={styles.image} src={product.imgUrl} alt={product.name} />
+            <img className={styles.image} src={product.imgUrl} alt={product.name}/>
           </div>
           <div>
             <section className={styles.section}>
@@ -103,7 +100,6 @@ export default function Product() {
             </section>
           </div>
         </div>
-      </Container>
     </>
   );
 }

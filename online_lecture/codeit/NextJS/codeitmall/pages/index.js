@@ -4,19 +4,19 @@ import SearchForm from '@/components/SearchForm';
 import { apis } from '@/lib/axios';
 import styles from '@/styles/Home.module.css';
 
+export async function getStaticProps(){
+  const res = await apis.getProducts('/products');
+  const products = res.data.results;
 
-export default function Home() {
-  const [products, setProducts] = useState([]);
-
-  async function getProducts() {
-    const res = await apis.getProducts('/products');
-    const nextProducts = res.data.results;
-    setProducts(nextProducts);
+  return {
+    props: {
+      products
+    }
   }
+}
 
-  useEffect(() => {
-    getProducts();
-  }, []);
+export default function Home({ products }) {
+
 
   return (
     <>

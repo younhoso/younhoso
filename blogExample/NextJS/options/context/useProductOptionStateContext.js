@@ -6,8 +6,12 @@ const ProductOptionsStateContext = createContext();
 
 // Provider component
 export function ProductOptionsProvider ({ children }) {
-  const [selectorOptions, setSelectorOptions] = useState([]);
   const [originOption, setOriginOption] = useState({});
+  const [selected, setSelected] = useState({});
+
+  const handleChange = (event, key) => {
+    setSelected({...selected, [key]: event.target.value});
+  };
 
   useEffect(() => {
     async function fetchData () {
@@ -18,7 +22,7 @@ export function ProductOptionsProvider ({ children }) {
   }, []);
 
   return (
-    <ProductOptionsStateContext.Provider value={{ selectorOptions, originOption }}>
+    <ProductOptionsStateContext.Provider value={{ originOption, selected, handleChange }}>
       {children}
     </ProductOptionsStateContext.Provider>
   );

@@ -33,9 +33,9 @@ export default function Dropdown({
     };
   }, []);
 
-  const classNames = `${styles.input} ${
-    isOpen ? styles.opened : ''
-  } ${className}`;
+  const classNames = `${styles.input} ${isOpen ? styles.opened : ''
+    } ${className}`;
+
   const selectedOption = options.find((option) => option.value === value);
 
   return (
@@ -45,14 +45,15 @@ export default function Dropdown({
       onBlur={handleBlur}
       ref={inputRef}
     >
-      {selectedOption?.label}
-      <span className={styles.arrow}>▲</span>
+      <div>{selectedOption?.label}</div>
+      <span className={styles.arrow}>
+        ▴
+      </span>
       <div className={styles.options}>
         {options.map((option) => {
           const selected = value === option.value;
-          const className = `${styles.option} ${
-            selected ? styles.selected : ''
-          }`;
+          const className = `${styles.option} ${selected ? styles.selected : ''
+            }`;
           return (
             <div
               className={className}

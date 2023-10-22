@@ -1,14 +1,15 @@
-import Dropdown from '@/components/Dropdown';
 import { useTheme } from '@/lib/ThemeContext';
 import styles from '@/styles/Setting.module.css';
 import { common } from '@/utils/common';
+import dynamic from 'next/dynamic';
 
 export default function Setting() {
-  const {themeVider, setThemeVider} = useTheme();
+  const {theme, setTheme} = useTheme();
 
   function handleDropdownChange(name, value) {
     const nextTheme = value;
     common.saveLocalStorage('theme', nextTheme);
+    setTheme(nextTheme);
 
     if(common.getLocalStorage('theme') === 'dark'){
       document.body.classList.remove('light');
@@ -19,15 +20,17 @@ export default function Setting() {
     }
   };
 
+  const Dropdown = dynamic(() => import('@/components/Dropdown'), { ssr: false })
+
   return (
     <>
         <h1 className={styles.title}>설정</h1>
         <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>테마 설정</h2>
-        <Dropdown
+          <h2 className={styles.sectionTitle}>테마 설정</h2>
+          <Dropdown
             className={styles.dropdown}
             name="theme"
-            value={themeVider}
+            value={theme}
             options={[
               { label: '다크', value: 'dark' },
               { label: '라이트', value: 'light' },

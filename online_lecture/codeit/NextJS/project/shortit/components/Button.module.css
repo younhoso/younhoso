@@ -1,0 +1,28 @@
+.button {
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button.primary {
+  background-color: #613ad1;
+  color: #fafafc;
+}
+
+.button.secondary {
+  background-color: #383640;
+  color: #fafafc;
+}
+
+.button.outline {
+  background: #fafafc;
+  border: 1px solid #e4e3e8;
+  color: #383640;
+}
+
+.button.minimal {
+  background-color: #f1f0f5;
+  color: #383640;
+}

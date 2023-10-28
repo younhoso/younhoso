@@ -1,0 +1,15 @@
+.link {
+  color: #383640;
+  text-decoration: none;
+}
+
+.link.primary {
+  color: #613ad1;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.link.secondary {
+  color: #8a8797;
+  text-decoration: none;
+}

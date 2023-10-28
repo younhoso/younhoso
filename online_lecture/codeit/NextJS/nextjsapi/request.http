@@ -1,0 +1,29 @@
+GET http://localhost:3000/api/short-links
+
+###
+
+GET http://localhost:3000/api/short-links/6539e02c22fbe194c7dea739
+
+###
+
+POST http://localhost:3000/api/short-links
+Content-Type: application/json
+
+{
+  "title": "codeit2",
+  "url": "https://codeit.kr",
+  "shortUrl": "codeit"
+}
+
+###
+
+PATCH http://localhost:3000/api/short-links/6539e02c22fbe194c7dea739
+Content-Type: application/json
+
+{
+  "title": "codeit-edit-2"
+}
+
+###
+
+DELETE  http://localhost:3000/api/short-links/6539e02c22fbe194c7dea739

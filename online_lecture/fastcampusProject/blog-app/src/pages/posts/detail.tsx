@@ -1,4 +1,14 @@
+import Footer from "components/Footer";
+import Header from "components/Header";
+import PostDetail from "components/PostDetail";
+
 export default function PostsDetail() {
   
-  return <h1>Post Detail Page</h1>;
+  return (
+    <>
+      <Header />
+      <PostDetail />
+      <Footer />
+    </>
+  )
 } 

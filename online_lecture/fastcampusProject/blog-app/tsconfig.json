@@ -24,6 +24,7 @@
   "include": ["src"],
   "paths": {
     "pages/*": ["pages/*"],
-    "component/*": ["component/*"]
+    "component/*": ["component/*"],
+    "firebaseApp/*": ["firebaseApp/*"]
   }
 }

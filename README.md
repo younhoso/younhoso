@@ -1,6 +1,7 @@
 # SYH
+- Markup : HTML5
 - Languages : JavaScript | TypeScript
-- Frameworks : Next.js
+- Frameworks/library : Next.js | React
 - Style : css3 | scss | styled-components
 
 # BLOG

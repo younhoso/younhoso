@@ -14,6 +14,7 @@ export async function generateMetadata({
   params: { slug },
 }: Props): Promise<Metadata> {
   const { title, description } = await getPostData(slug);
+  console.log(title)
   return {
     title,
     description,

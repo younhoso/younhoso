@@ -15,7 +15,6 @@ export default function MultiSwiper({children}: Props) {
     <Swiper
       slidesPerView={3}
       spaceBetween={30}
-      freeMode={true}
       pagination={{
         clickable: true,
       }}

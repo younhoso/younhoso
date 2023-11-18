@@ -1,0 +1,44 @@
+body, div {
+    margin: 0;
+}
+
+.container {
+    background-color: #f3f5f7;
+    padding: 2rem;
+    border-collapse: collapse;
+}
+.container:nth-child(n+2){
+    margin-top: 1rem;
+}
+
+.draggable {
+    height: 82px;
+    line-height: 82px;
+    padding: 0 20px;
+    background-color: white;
+    border: 1px solid #c5cdd7;
+    border-bottom:none;
+    box-sizing: border-box;
+    cursor: move;
+}
+.draggable:last-child {
+    border-bottom: 1px solid #c5cdd7;
+}
+
+.draggable.dragging {
+    opacity: .5;
+    border: 2px dashed red;
+}
+
+.el {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ico-drag {
+    display: inline-block;
+    vertical-align: inherit;
+    width: 15px;
+    height: 15px;
+    background: url(./menu.png) no-repeat center top;
+    background-size: cover;
+}

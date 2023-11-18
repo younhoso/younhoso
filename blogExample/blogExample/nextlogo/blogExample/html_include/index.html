@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>include</title>
+</head>
+<body>
+    
+<div class="wrapper">
+    <!-- [include] header -->
+    <header data-include-file="./include/header.html" class="header-wrap includeJs"></header>
+    <!-- //[include] header -->
+    <!-- //[include] nav -->
+    <nav data-include-file="./include/nav.html" class="nav-wrap includeJs"></nav>
+    <!-- //[include] nav -->
+
+    <section class="container">
+        <h1>index html에서 공통영역인 header,nav,footer를 include함! </h1>
+    </section>
+
+     <!-- [include] header -->
+     <header data-include-file="./include/footer.html" class="footer-wrap includeJs"></header>
+     <!-- //[include] header -->
+</div>
+
+<script src="./common.js"></script>
+</body>
+</html>

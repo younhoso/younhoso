@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speech Detection</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="search">
+		<div class="input-bar">
+			<input type="text" placeholder="마이크 클릭후 음성으로 검색어 입력" autocomplete="off">
+			<button class="dictate">
+				<i class="ic-mike"></i>
+				<svg width="1.25rem" height="1.25rem" viewBox="0 0 100 100">
+					<g stroke="#fff" stroke-width="15">
+						<path d="M20,20 20,80">
+							<animate attributeName="d" values="M20,40 20,60;M20,20 20,80;M20,40 20,60" dur="1s" repeatCount="indefinite" />
+						</path>
+						<path d="M50,10 50,90">
+							<animate attributeName="d" values="M50,10 50,90;M50,40 50,60;M50,10 50,90" dur="1s" repeatCount="indefinite" />
+						</path>
+						<path d="M80,20 80,80">
+							<animate attributeName="d" values="M80,40 80,60;M80,20 80,80;M80,40 80,60" dur="1s" repeatCount="indefinite" />
+						</path>
+					</g>
+				</svg>
+			</button>
+		</div>
+	</div>
+	
+<script>
+	const $ = (el) => document.querySelector(el);
+	
+	const store = {
+		texts : '',
+		isRecognizing: true
+	};
+
+	(() => {
+		/* Speech API start */
+		let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+		if(!("webkitSpeechRecognition" in window)){
+			alert("지원 안되는 브라우저 입니다. !")
+		} else {			
+			const recognition = new SpeechRecognition();
+			recognition.interimResults = true; // true면 음절을 연속적으로 인식하나 false면 한 음절만 기록함
+			recognition.lang = 'ko-KR'; // 값이 없으면 HTML의 <html lang="en">을 참고합니다. ko-KR, en-US
+			recognition.continuous = false; //각 인식에 대해 연속 결과가 반환되는지 아니면 단일 결과만 반환되는지를 제어합니다. 기본값은 단일( false.)
+			recognition.maxAlternatives = 20000; // maxAlternatives가 숫자가 작을수록 발음대로 적고, 크면 문장의 적합도에 따라 알맞은 단어로 대체합니다.
+
+			recognition.onspeechend = function() { // 음성 감지가 끝날때 실행될 이벤트
+				recognition.stop();
+				$('.dictate').classList.remove("on");
+				store.isRecognizing = true;
+			};
+
+			recognition.onresult = function(e) { //result이벤트는 음성 인식 서비스가 결과를 반환할 때 시작됩니다.
+				store.texts = Array.from(e.results)
+								.map(results => results[0].transcript).join("");
+
+				console.log(store.texts)
+				$('input').value = store.texts;
+			};
+			/* // Speech API END */
+
+			const active = () => {
+				$('.dictate').classList.add('on')
+				recognition.start();
+				store.isRecognizing = false;
+			};
+
+			const unactive = () => {
+				$('.dictate').classList.remove('on')
+				recognition.stop();
+				store.isRecognizing = true;
+			};
+
+			$('.dictate').addEventListener('click', () => {
+				if(store.isRecognizing){
+					active();
+				} else {
+					unactive();
+				}
+			});
+		}
+	})();
+</script>
+</body>
+</html>

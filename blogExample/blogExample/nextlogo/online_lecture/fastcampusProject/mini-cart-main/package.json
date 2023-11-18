@@ -1,0 +1,24 @@
+{
+  "name": "mini-cart",
+  "version": "1.0.0",
+  "description": "미니 사전과제 3. 장바구니 - for FastCampus 30개 프로젝트로 배우는 프론트엔드 웹 개발 (with React)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanameee/mini-cart.git"
+  },
+  "author": "hanameee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanameee/mini-cart/issues"
+  },
+  "homepage": "https://github.com/hanameee/mini-cart#readme",
+  "dependencies": {
+    "fetch": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1"
+  }
+}

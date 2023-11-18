@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>File_Upload XMLHttpRequest</title>
+
+	<style>
+		.progress {height: 10px;}
+		.progressContainer{position:relative;width: 450px;padding:20px 10px;margin-top: 15px;height:10px;}
+		.progress{position:absolute;width: calc(100% - 20px);height: 10px;}
+		.progressTotal{background: rgba(80,90,100,0.15);border-radius: 10px;}
+		.progressNow{width: calc(0% - 20px);background: #057FEB;border-radius: 10px;}
+		.progressPer{background: transparent; text-align:center;color:#A6A6A6;}
+		.progressText{position: absolute; right: 0; top: 50%; transform: translate(100%, -50%)}
+	</style>
+</head>
+<body>
+	<form id="fileForm" action="/upload-file" method="post" enctype="multipart/form-data">
+		<input type="file" name="file" multiple>
+		<button type="button" id="btn">전송</button>
+	</form>
+
+	<div class="progressContainer">
+		<div class="progress progressTotal"></div>
+		<div class="progress progressNow" id="progressNow"></div>
+		<div class="progressText">0%</div>
+	</div>
+	
+	<script>
+		(() => {
+				const $ = (select) => document.querySelector(select)
+
+				const progressBar = (per) => {
+					$(".progressText").innerText = Math.floor(per)+" %";
+					$(".progressNow").style.width = "calc(" + per + "% - 20px)";
+				};
+
+				const xhrFun = (e) => {
+					e.preventDefault();
+					const files = $('input[type="file"]').files[0]
+					const xhr = new XMLHttpRequest();
+
+					xhr.upload.addEventListener('loadstart', function(e) {
+						console.log('시작')
+					});
+					/*
+						progress 이벤트 핸들러는
+						전송할 총 바이트 수 total과 이벤트 및 loaded 필드에서 지금까지 전송 된 바이트 수를 받습니다.
+					*/
+					xhr.upload.addEventListener('progress', function(e) {
+						if( files ) {
+							// 업로드 진행률 계산
+							const percentComplete = Math.floor((e.loaded / e.total) * 100); 
+							progressBar(percentComplete)
+						} else {
+							// 측정 불가
+							console.log('파일이 존재하지 않습니다.')
+						}
+					});
+					xhr.upload.addEventListener('load', function(e) {
+						console.log('upload complete', e);
+					});
+					xhr.upload.addEventListener('loadend', function(e) {
+						console.log('완료')
+					});
+
+					xhr.upload.addEventListener('error', function(e) {
+						console.log('요청이 실패했을 때')
+					});
+					xhr.upload.addEventListener('abort', function(e) {
+						console.log('요청이 중단되었을 때')
+					});
+					xhr.upload.addEventListener('timeout', function(e) {
+						console.log('요청이 완료되기 전에 작성자가 지정한 타임아웃이 지났을 때')
+					});
+
+					xhr.open('POST', '/upload-file', true);
+					// xhr.open('POST', '/upload-file', false);  //false로 하면 동기 처리
+
+					const formData = new FormData();
+					formData.append('avatar', files);
+
+					xhr.send(formData);
+				};
+
+				$('#btn').addEventListener('click', xhrFun);
+		})()
+	</script>
+</body>
+</html>

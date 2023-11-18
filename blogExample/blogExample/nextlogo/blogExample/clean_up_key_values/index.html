@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[JavaScript] 배열을 유용하게 활용하는 10가지 방법</title>
+</head>
+<body>
+    코드의 주석된 부분을 풀어서 하나씩 콘솔찍어 확인 해볼수 있습니다.
+
+    <script>
+        (function(){
+
+            const datas = [ 
+                { id: 1, type: "ko", name: '비빔밥', price : '8,000' }, 
+                { id: 2, type: "ko", name: "삼계탕", price : "12,000" }, 
+                { id: 3, type: "ko", name: "김치찌개", price : "8,500" }, 
+                { id: 4, type: "ko", name: "라볶이", price : "5,000" }, 
+                { id: 5, type: "ch", name: "짜장면", price : "8,000" }, 
+                { id: 6, type: "ch", name: "탕수육", price : "17,000" }, 
+                { id: 7, type: "ch", name: "짬뽕", price : "8,500" }, 
+                { id: 8, type: "jp", name: "라멘", price : "9,000" }, 
+                { id: 9, type: "jp", name: "스시", price : "14,900" }, 
+                { id: 10, type: "jp", name: "우동", price : "8,000" }, 
+                { id: 11, type: "jp", name: "나가사키 짬뽕", price : "7,500" } 
+            ];
+
+            // 간단한 검색(case-sensitive)
+            // const res = datas.filter(el => el.name.includes('비빔밥'));
+            // console.log(res)
+
+            // 음식 가격이 8,000원 가지고 있는지 여부 체크 
+            // const res = datas.some(el => el.price === '8,000');
+            // console.log(res)
+
+            // 음식 가격이 8,000원인 음식만 조회하기
+            // const res = datas.filter(el => el.price === '8,000');
+            // console.log(res)
+
+            // 특정 키의 빈도를 포함하는 객체를 만들기
+            // const res = datas.reduce((acc, el) => (
+            //   { ...acc, [el.price]: (acc[el.price] || 0) + 1 }
+            // ),{});
+            // console.log(res)
+
+            // name로 유저를 찾기위해 전체 array를 처리하는 것 대신에 datas의 name이 key로 작용하는 객체를 만들 수 있습니다. 
+            // const res = datas.reduce((acc, el) => ({...acc, [el.name]: el }), {});
+            // console.log(res)
+
+            // 배열 안의 각각의 datas에서 특정 키로 유일한 값들만 뽑아내기
+            // const res = [...new Set(datas.map(el => el.price))];
+            // console.log(res)
+
+            // const res = datas.map(el => 
+            //     el.id !== 11 ? el : {...el, price: '18,000'}
+            // );
+            // console.log(res)
+
+            // 객체를 쿼리 스트링으로 인코딩하기
+            // const params = {lat: 45, lng: 6, alt: 1000};
+            // const queryString = Object.entries(params).map(el => encodeURIComponent(el[0]) + '=' + encodeURIComponent(el[1])).join('&')
+            // console.log(queryString)
+        })();
+    </script>
+</body>
+</html>

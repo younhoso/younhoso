@@ -1,0 +1,83 @@
+.poster-image {
+  position: absolute;
+  opacity: 0;
+}
+
+.poster-image_wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+#poster-image_wrapper_1 {
+  right: 0;
+  height: 100%;
+}
+#poster-image_wrapper_2 {
+  top: 10%;
+  left: 5%;
+  height: 667px;
+}
+#poster-image_wrapper_3 {
+  top: 35%;
+  right: 0;
+  height: 772px;
+}
+#poster-image_1 {
+  width: 1127px; 
+  right: 0;
+}
+#poster-image_2 {
+  height: 100%;
+}
+#poster-image_3 {
+  right: 0;
+  height: 100%;
+}
+
+@keyframes appear-right-to-left {
+   0% {
+    opacity: 0;
+    transform: translateX(100%);
+   }
+   100% {
+    opacity: 1;
+    transform: translateX(0);
+   }
+}
+
+@keyframes appear-left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-bottom-to-top {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.poster-image_state_visible #poster-image_1{
+  animation: appear-right-to-left .2s .7s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.poster-image_state_visible #poster-image_2 {
+  animation: appear-left-to-right .6s .7s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.poster-image_state_visible #poster-image_3 {
+  animation: appear-bottom-to-top .10s .7s ease-in-out;
+  animation-fill-mode: forwards;
+}

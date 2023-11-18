@@ -1,0 +1,86 @@
+/*
+* Mobile( < 768px)
+* fixture: ------------- sm
+* columns: ------------- 4
+* unit: ---------------- (100% - (5px * 2)) / 4 - 20px
+* gutter: -------------- 20px
+* margin: -------------- 5px
+* container-size: ------ 100% - (5px * 2)
+*/
+
+/*
+* Tablet( >= 768px)
+* fixture: ------------- md
+* columns: ------------- 12
+* unit: ---------------- (100% - (30px * 2)) / 4 - 20px
+* gutter: -------------- 20px
+* margin: -------------- 30px
+* container-size: ------ 100% - (30px * 2)
+* max-container-size: -- 960px
+*/
+
+/*
+* DeskTop ( >= 1200px)
+* fixture: ------------- lg
+* columns: ------------- 12
+* unit: ---------------- 75px
+* gutter: -------------- 20px
+* margin: -------------- auto
+* container-size: ------ 1140px
+* max-container-size: -- 1140px
+*/
+$gutter: 20px;
+
+$sm-columns: 4;
+$sm-margin: 5px;
+
+$md-columns: 12;
+$md-margin: 30px;
+$md-max-container: 960px + $md-margin * 2;
+
+$lg-columns: 12;
+$lg-unit: 75px;
+$lg-max-container: ($lg-unit + $gutter) * $lg-columns;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $sm-margin;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  [class^='col-'] {
+    padding: 0 $gutter / 2;
+  }
+
+  @for $i from 1 through $sm-columns {
+    .col-sm-#{$i} {
+      width: percentage($i / $sm-columns);
+    }
+  }
+
+  @include deviceBreakpoint(T) {
+    max-width: $md-max-container;
+    padding: 0 $md-margin;
+
+    @for $i from 1 through $md-columns {
+      .col-md-#{$i} {
+        width: percentage($i / $md-columns);
+      }
+    }
+  }
+
+  @include deviceBreakpoint(D) {
+    max-width: $lg-max-container;
+    padding: 0;
+
+    @for $i from 1 through $lg-columns {
+      .col-lg-#{$i} {
+        width: ($lg-unit + $gutter) * $i;
+      }
+    }
+  }
+}

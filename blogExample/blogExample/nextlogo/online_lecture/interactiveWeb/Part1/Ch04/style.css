@@ -1,0 +1,129 @@
+
+body {
+  background-color: #111;
+}
+
+.main-img-wrapper {padding-top: 139px; text-align: center;}
+.main-img-wrapper img {width: 320px;}
+.intro-main {width:300px; margin: 54px auto 140px auto; display: flex; flex-direction: column; align-items:center; justify-content: center; gap:20px; color: #fff; font-size: 40px; font-weight: 500;}
+.intro-main p {
+  text-align: center;
+}
+
+.join-us-text{
+  margin-top: 73px;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: .6;
+}
+
+@keyframes upAndDown {
+  0%{
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.down-arrow-icon {
+  width: 33px;
+  animation: upAndDown 1s infinite;
+}
+.list-item-wrapper {
+  width: 383px;
+  margin: 0 auto 300px;
+}
+.list-item {
+  display: inline;
+  font-size: 48px;
+  font-weight: 600;
+}
+.list-item.on {
+  color: #fff;
+}
+.list-item:before {
+  content: '';
+  width: 51px;
+  height: 53px;
+  display: inline-block;
+  background-image: url('/Part1/Ch04/imgs/icons/dark_house.png');
+  background-size: 51px 53px;
+}
+.main {
+  overflow: hidden;
+}
+.panel-img {
+  position: relative;
+  height: 320px;
+  margin-bottom: 500px;
+}
+.flying-santa-image {
+  height: 380px;
+  position: absolute;
+  right: -80px;
+  transform: translate(80px, -13px) rotate(23deg);
+}
+.video {
+  display: block;
+  margin: 0 auto;
+  height: 350px;
+}
+.video-section {
+  margin-bottom: 1000px;
+}
+.fixed-description {
+  width: 622px;
+  margin: 30px auto 0;
+  color: #fff;
+  text-align: right;
+  line-height: 50px;
+  font-size: 35px;
+  font-weight: 600;
+  transform: translateY(120px);
+  opacity: 0;
+}
+.bank-beyond-wrapper{
+  height: 380px;
+}
+.bank-beyond {
+  display: flex;
+  justify-content: center;
+}
+.bank-beyond img {
+  width: 315px;
+}
+.white-wrapper {
+  position: relative;
+  padding-top: 80px;
+  background-color: #f7f7f7;
+  height: 1000px;
+  z-index: 1000;
+}
+.slider-container {
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+}
+.slider-content-wrapper {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.slider-content-wrapper::-webkit-scrollbar {display: none;}
+
+.slider-content {display: flex;}
+.slider-image {width: 300px; scroll-snap-align: center;}
+.slider-button {position: absolute; bottom: -110px;font-size: 40px; cursor: pointer;}
+.left-button {left: 10px;}
+.right-button {right: 10px;}
+
+.slider-index {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}

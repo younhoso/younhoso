@@ -10,7 +10,7 @@ export default function Star() {
 
   return (
     <div>
-      <StarRating count={5} size={90} value={rating} onChange={handleChange}/>
+      <StarRating count={5} size={70} value={rating} onChange={handleChange}/>
     </div>
   );
 } 

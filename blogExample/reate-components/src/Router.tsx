@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "./page/Root";
 import Star from "./page/Star";
+import Device from "./page/Device";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "/device",
+    element: <Device />,
+  }
 ]);
 
 export default router;

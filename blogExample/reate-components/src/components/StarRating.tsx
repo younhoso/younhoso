@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import star_active from '../assets/images/star_active.svg';
 import star_default from '../assets/images/star_default.svg';
@@ -22,7 +20,7 @@ const StarRating = ({count, size = 24, value, onChange }: StarRatingProps) => {
     <div>
       {stars.map((_, index) => {
         let star = index < value ? star_active : star_default;
-
+        
         return (
           <img key={index} src={star} alt={`star-${index+1}`} onClick={() => handleChange(index)} style={{ width: size, height: size, fontSize: size }}/>
         );

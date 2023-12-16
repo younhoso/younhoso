@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Review } from '../types/InfiniteScroll'
-import InfiniteScrollCursorList from "../components/Infinite_scroll_cursor_List";
+import InfiniteScrollCursorList from "../components/Infinite_scroll_cursor_list";
 
 const LIMIT = 6;
 type Order = 'createdAt' | 'rating';
@@ -64,7 +64,7 @@ export default function InfiniteScroll() {
 
   useEffect(() => {
     let options = {
-      threshold: 1.0,
+      threshold: 0.1,
     };
 
     // 새롭게 생성할 observer가 수행할 행동 정의

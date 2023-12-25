@@ -18,6 +18,7 @@ export const InitGlobalStyled = memo(createGlobalStyle`
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    background-color:${(props) => props.theme.colors.bgColor};
   }
 
   p {

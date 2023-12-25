@@ -38,10 +38,9 @@ export const colors = {
   gray5f5: "#F5F5F5",
   grayada: "#DADADA",
   grayaea: "#EAEAEA",
-  red937: "#E31937",
-  red32D: "#C6132D",
-  pinkebe: "#FFBEBE",
-  greena17: "#3C9A17",
+  bgColor: "#2f3640",
+  textColor: "#f5f6fa",
+  accentColor: "#9c88ff",
 };
 
 export const sizes = {

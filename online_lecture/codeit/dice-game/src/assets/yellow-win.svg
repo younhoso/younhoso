@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="166" height="169" viewBox="0 0 166 169">
+    <defs>
+        <filter id="bvlvmjrcga" width="110%" height="119.1%" x="-5%" y="-9.5%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+        </filter>
+        <filter id="q191x8ph9b" width="110%" height="119.1%" x="-5%" y="-9.5%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-50 -185) translate(50 185) translate(0 .5)">
+                    <path fill="#FF9100" d="M65.758 122.058L65.758 162 83.071 153.062 99.656 162 100.2 122.058z"/>
+                    <ellipse cx="82.57" cy="82.708" fill="#FC0" rx="60.207" ry="60.308"/>
+                    <path fill="#FFF" fill-opacity=".56" d="M67.948 26.708c33.252 0 60.207 27 60.207 60.307 0 .867-.018 1.728-.054 2.586-1.352-32.11-27.766-57.724-60.153-57.724S9.147 57.492 7.795 89.6c-.036-.857-.054-1.718-.054-2.585 0-33.307 26.956-60.307 60.207-60.307z" filter="url(#bvlvmjrcga)" transform="rotate(-30 67.948 58.154)"/>
+                    <path fill="#000" fill-opacity=".23" d="M98.052 78.4c33.251 0 60.207 27 60.207 60.308 0 .866-.018 1.728-.054 2.585-1.352-32.109-27.766-57.724-60.153-57.724s-58.801 25.615-60.153 57.723c-.036-.856-.054-1.718-.054-2.584C37.845 105.4 64.8 78.4 98.052 78.4z" filter="url(#q191x8ph9b)" transform="rotate(150 98.052 109.847)"/>
+                </g>
+                <path fill="#FF9100" fill-rule="nonzero" d="M74.175 53.91l1.756-6.228 1.756 6.227h2.214l2.826-9.932H80.49l-1.696 6.471-1.672-6.471h-2.274l-1.684 6.495-1.684-6.495h-2.345l2.826 9.932h2.214zm11.596 0v-9.933h-2.19v9.932h2.19zm3.74 0v-6.094l4.896 5.971h1.829v-9.932h-2.19v6.093l-4.895-5.971h-1.829v9.932h2.19z" transform="translate(-50 -185) translate(50 185)"/>
+            </g>
+        </g>
+    </g>
+</svg>

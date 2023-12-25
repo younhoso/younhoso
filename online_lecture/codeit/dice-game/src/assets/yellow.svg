@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="166" height="169" viewBox="0 0 166 169">
+    <defs>
+        <filter id="5zy0qa4uxa" width="110%" height="119.1%" x="-5%" y="-9.5%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+        </filter>
+        <filter id="zjzypj473b" width="110%" height="119.1%" x="-5%" y="-9.5%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-400 -185) translate(400 185) translate(0 .5)">
+                    <ellipse cx="82.57" cy="82.708" fill="#FC0" rx="60.207" ry="60.308"/>
+                    <path fill="#FFF" fill-opacity=".56" d="M67.948 26.708c33.252 0 60.207 27 60.207 60.307 0 .867-.018 1.728-.054 2.586-1.352-32.11-27.766-57.724-60.153-57.724S9.147 57.492 7.795 89.6c-.036-.857-.054-1.718-.054-2.585 0-33.307 26.956-60.307 60.207-60.307z" filter="url(#5zy0qa4uxa)" transform="rotate(-30 67.948 58.154)"/>
+                    <path fill="#000" fill-opacity=".23" d="M98.052 78.4c33.251 0 60.207 27 60.207 60.308 0 .866-.018 1.728-.054 2.585-1.352-32.109-27.766-57.724-60.153-57.724s-58.801 25.615-60.153 57.723c-.036-.856-.054-1.718-.054-2.584C37.845 105.4 64.8 78.4 98.052 78.4z" filter="url(#zjzypj473b)" transform="rotate(150 98.052 109.847)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

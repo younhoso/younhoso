@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="62" viewBox="0 0 64 62">
+    <defs>
+        <filter id="rz7yyy1rwa" width="140.4%" height="142%" x="-20.2%" y="-15%" filterUnits="objectBoundingBox">
+            <feOffset dy="3" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="3"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.219607843 0 0 0 0 0.0588235294 0 0 0 0 0.431372549 0 0 0 0.440805288 0"/>
+        </filter>
+        <filter id="9bury0udmc" width="111.5%" height="137.5%" x="-5.8%" y="-18.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+        </filter>
+        <filter id="6yk6ffa5zd" width="111.5%" height="137.5%" x="-5.8%" y="-18.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+        </filter>
+        <rect id="khldhi74eb" width="52" height="50" x="6" y="3" rx="14"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-1157 -98) translate(1157 98)">
+                    <use fill="#000" filter="url(#rz7yyy1rwa)" xlink:href="#khldhi74eb"/>
+                    <use fill="#FC0" xlink:href="#khldhi74eb"/>
+                </g>
+                <path fill="#000" d="M6 37c0 7.732 6.268 14 14 14h24c7.732 0 14-6.268 14-14v2c0 7.732-6.268 14-14 14H20c-7.732 0-14-6.268-14-14z" filter="url(#9bury0udmc)" opacity=".232" transform="translate(-1157 -98) translate(1157 98)"/>
+                <path fill="#FFF" d="M6 3c0 7.732 6.268 14 14 14h24c7.732 0 14-6.268 14-14v2c0 7.732-6.268 14-14 14H20C12.268 19 6 12.732 6 5z" filter="url(#6yk6ffa5zd)" opacity=".563" transform="translate(-1157 -98) translate(1157 98) matrix(1 0 0 -1 0 22)"/>
+                <path fill="#FFF" fill-rule="nonzero" d="M41.754 16.638l.054.143 1.333 3.993c.185.559.09 1.172-.254 1.644-.328.46-.848.742-1.39.769h-4.164c-1.012 0-1.833-.82-1.833-1.839.007-.424.16-.82.417-1.132l.07-.078c-3.96-2-8.84-.755-11.331 2.968l-.147.227c-2.585 4.127-1.328 9.563 2.809 12.143 4.137 2.58 9.587 1.325 12.173-2.803.876-1.399 1.341-3.015 1.342-4.665 0-1.01.821-1.83 1.834-1.83 1.012 0 1.833.82 1.833 1.83.01 6.889-5.577 12.481-12.48 12.492-6.904.01-12.51-5.565-12.52-12.454-.01-6.889 5.577-12.482 12.48-12.492 2.03-.003 4.021.486 5.806 1.416l.388.212.015-.114c.1-.619.51-1.166 1.118-1.421l.144-.054c.931-.305 1.93.16 2.303 1.045z" transform="translate(-1157 -98) translate(1157 98)"/>
+            </g>
+        </g>
+    </g>
+</svg>

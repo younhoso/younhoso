@@ -3,6 +3,7 @@ import Root from "./page/Root";
 import Star from "./page/Star";
 import Device from "./page/Device";
 import InfiniteScroll from "./page/Infinite_scroll";
+import Tabs from "./page/Tabs";
 
 const router = createBrowserRouter([
   {
@@ -11,9 +12,9 @@ const router = createBrowserRouter([
     children: [
       {
         path: "starrating",
-        element: <Star />
-      }
-    ]
+        element: <Star />,
+      },
+    ],
   },
   {
     path: "/device",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/infinite_scroll",
     element: <InfiniteScroll />,
+  },
+  {
+    path: "/tabs",
+    element: <Tabs />,
   },
 ]);
 

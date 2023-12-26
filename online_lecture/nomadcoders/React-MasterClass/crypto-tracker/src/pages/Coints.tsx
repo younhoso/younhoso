@@ -1,39 +1,52 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { CoinType } from "../Types/Coin";
+import { CoinType } from "../types/Coin";
+import { useQuery } from "@tanstack/react-query";
+
+const BASE_URL = "https://api.coinpaprika.com/v1";
 
 function Coins() {
-  const [coins, setCoins] = useState<CoinType[]>([]);
-
-  useEffect(() => {
-    (async () => {
-      const res = await fetch("https://api.coinpaprika.com/v1/coins");
-      const json = await res.json();
-      setCoins(json.slice(0, 100));
-    })();
-  }, []);
+  const { data: coins, isPending: coinsisLoding } = useQuery<CoinType[]>({
+    queryKey: [`${BASE_URL}/coins`],
+    queryFn: async ({ queryKey: [key] }) => {
+      const respons = await fetch(key as string);
+      const json = await respons.json();
+      return json.slice(0, 100);
+    },
+  });
 
   return (
     <Container>
       <Header>
         <Title>코인</Title>
       </Header>
-      <CoinsList>
-        {coins.map((coin) => (
-          <Coin key={coin.id}>
-            <Link to={`/${coin.id}`} state={{ name: coin.name }}>
-              <Img
-                src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
-              />
-              {coin.name} &rarr;
-            </Link>
-          </Coin>
-        ))}
-      </CoinsList>
+      {coinsisLoding ? (
+        <Loader>Loading...</Loader>
+      ) : (
+        <CoinsList>
+          {coins?.map((coin: CoinType) => (
+            <Coin key={coin.id}>
+              <Link to={`/${coin.id}`} state={{ name: coin.name }}>
+                <Img
+                  src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
+                />
+                {coin.name} &rarr;
+              </Link>
+            </Coin>
+          ))}
+        </CoinsList>
+      )}
     </Container>
   );
 }
+
+const Loader = styled.div`
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${(props) => props.theme.colors.white};
+`;
 
 const Container = styled.div`
   max-width: 480px;

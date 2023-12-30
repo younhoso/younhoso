@@ -27,6 +27,7 @@ export const InitGlobalStyled = memo(createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: inherit;
   }
 
   input,
@@ -36,10 +37,12 @@ export const InitGlobalStyled = memo(createGlobalStyle`
     font-family: 'Source Sans Pro', sans-serif;
     border: 0; 
     outline: none;
+    color: inherit;
   }
   
   button{
     background-color: transparent;
+    color: inherit;
   }
 
   ul,

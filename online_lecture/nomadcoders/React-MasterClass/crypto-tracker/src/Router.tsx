@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     element: <Coins />,
   },
   {
-    path: "/:coinId",
+    path: "/coin/:coinId",
     element: <Coin />,
   },
 ]);

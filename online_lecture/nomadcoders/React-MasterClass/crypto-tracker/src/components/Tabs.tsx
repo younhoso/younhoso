@@ -2,9 +2,16 @@ import styled from "styled-components";
 import Chart from "./Chart";
 import Price from "./Price";
 import useTabs from "../hook/useTabs";
+import { useParams } from "react-router-dom";
+import { IHistorical, RouteParams } from "../types/Coin";
 
-function Tabs() {
+type TabsProps = {
+  coinIdData?: IHistorical[];
+};
+
+function Tabs({ coinIdData }: TabsProps) {
   const { activeTab, handleTabChange } = useTabs("chart");
+  const { coinId } = useParams<RouteParams>();
 
   return (
     <TabStyle>
@@ -18,7 +25,7 @@ function Tabs() {
           }
           className={activeTab === "chart" ? "active" : ""}
         >
-          Tab1
+          CHART
         </button>
         <button
           onClick={() =>
@@ -29,12 +36,14 @@ function Tabs() {
           }
           className={activeTab === "price" ? "active" : ""}
         >
-          Tab2
+          PRICE
         </button>
       </div>
 
       <div>
-        {activeTab === "chart" && <Chart />}
+        {activeTab === "chart" && (
+          <Chart coinId={coinId} coinIdData={coinIdData} />
+        )}
         {activeTab === "price" && <Price />}
       </div>
     </TabStyle>
@@ -46,15 +55,14 @@ const TabStyle = styled.div`
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 400;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 7px 0px;
-  border-radius: 10px;
-  color: ${(props) => props.theme.accentColor};
+
   .tabs {
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   a {

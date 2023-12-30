@@ -7,7 +7,7 @@ import {
   useRoutes,
 } from "react-router-dom";
 import styled from "styled-components";
-import { InfoData, PriceData, RouteParams } from "../types/Coin";
+import { IHistorical, InfoData, PriceData, RouteParams } from "../types/Coin";
 import { useQuery } from "@tanstack/react-query";
 import Price from "../components/Price";
 import Chart from "../components/Chart";
@@ -15,6 +15,7 @@ import Tab from "../components/Tabs";
 import Tabs from "../components/Tabs";
 
 const BASE_URL = "https://api.coinpaprika.com/v1";
+const BASE_URL2 = "https://ohlcv-api.nomadcoders.workers.dev";
 
 function Coin() {
   const { coinId } = useParams<RouteParams>();
@@ -34,6 +35,17 @@ function Coin() {
       const respons = await fetch(key as string);
       return respons.json();
     },
+  });
+
+  const { data: coinIdData, isPending: coinIdIsLoading } = useQuery<
+    IHistorical[]
+  >({
+    queryKey: [`${BASE_URL2}/?coinId=${coinId}`],
+    queryFn: async ({ queryKey: [key] }) => {
+      const respons = await fetch(key as string);
+      return respons.json();
+    },
+    // refetchInterval: 1000,
   });
 
   const loading = coinsInfoIsLoding || tickersLoading;
@@ -64,8 +76,8 @@ function Coin() {
                 <span>${coinsInfo?.symbol}</span>
               </OverviewItem>
               <OverviewItem>
-                <span>Open Source:</span>
-                <span>{coinsInfo?.open_source ? "Yes" : "No"}</span>
+                <span>Price:</span>
+                <span>{tickersData?.quotes.USD.price.toFixed(3)}</span>
               </OverviewItem>
             </Overview>
             <Description>{coinsInfo?.description}</Description>
@@ -80,7 +92,7 @@ function Coin() {
               </OverviewItem>
             </Overview>
 
-            <Tabs />
+            <Tabs coinIdData={coinIdData} />
           </>
         )}
       </Container>
@@ -105,6 +117,7 @@ const Container = styled.div`
   padding: 0px 20px;
   max-width: 480px;
   margin: 0 auto;
+  color: ${(props) => props.theme.colors.white};
 `;
 
 const Header = styled.header`

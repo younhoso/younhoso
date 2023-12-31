@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function useTabs(defaultTab: string) {
-  const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState(defaultTab);
+type TabProps = {
+  queryKey: string;
+  queryValue: string;
+};
 
-  const handleTabChange = ({
-    queryKey,
-    queryValue,
-  }: {
-    queryKey: string;
-    queryValue: string;
-  }) => {
-    setActiveTab(queryValue);
+export default function useTabs({ queryKey, queryValue }: TabProps) {
+  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState({ queryKey, queryValue });
+
+  const handleTabChange = ({ queryKey, queryValue }: TabProps) => {
+    setActiveTab({ queryKey, queryValue });
     navigate(`?${queryKey}=${queryValue}`);
   };
 

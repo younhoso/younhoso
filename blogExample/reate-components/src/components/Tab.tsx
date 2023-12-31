@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useTabs from "../hook/useTabs";
+import { useState } from "react";
 
 function Chart() {
   return <h1>Chart</h1>;
@@ -10,7 +11,10 @@ function Price() {
 }
 
 function Tab() {
-  const { activeTab, handleTabChange } = useTabs("chart");
+  const { activeTab, handleTabChange } = useTabs({
+    queryKey: "search",
+    queryValue: "chart",
+  });
 
   return (
     <TabStyle>
@@ -22,7 +26,7 @@ function Tab() {
               queryValue: "chart",
             })
           }
-          className={activeTab === "chart" ? "active" : ""}
+          className={activeTab.queryValue === "chart" ? "active" : ""}
         >
           Tab1
         </button>
@@ -33,15 +37,15 @@ function Tab() {
               queryValue: "price",
             })
           }
-          className={activeTab === "price" ? "active" : ""}
+          className={activeTab.queryValue === "price" ? "active" : ""}
         >
           Tab2
         </button>
       </div>
 
       <div>
-        {activeTab === "chart" && <Chart />}
-        {activeTab === "price" && <Price />}
+        {activeTab.queryValue === "chart" && <Chart />}
+        {activeTab.queryValue === "price" && <Price />}
       </div>
     </TabStyle>
   );
@@ -52,7 +56,7 @@ const TabStyle = styled.div`
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 400;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(108, 15, 15, 0.5);
   padding: 7px 0px;
   border-radius: 10px;
   .tabs {

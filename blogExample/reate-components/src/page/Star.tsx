@@ -1,12 +1,11 @@
-import { useState } from "react";
-import StarRating from "../components/StarRating";
+import useStarRating from "../hook/useStarRating";
 
 export default function Star() {
-  const [rating, setRating] = useState(5);
+  const { starElements } = useStarRating({
+    totalStars: 5,
+    activeStars: 2,
+    size: 40,
+  });
 
-  return (
-    <div>
-      <StarRating count={5} size={70} value={rating} onChange={(value: number) => setRating(value)}/>
-    </div>
-  );
-} 
+  return <div>{starElements}</div>;
+}

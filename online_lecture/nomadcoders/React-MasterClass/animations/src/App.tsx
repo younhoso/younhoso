@@ -1,38 +1,37 @@
 import styled from "styled-components";
-import { motion, useMotionValue } from "framer-motion";
+import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
-
-const boxVariants = {
-  hover: { scale: 1.5, rotateZ: 90 },
-  clicl: { scale: 1, borderRadius: "100px" },
-  drag: { backgroundColor: "rgb(46, 204, 113)", transition: { duration: 1 } },
-};
 
 function App() {
   const biggerBoxRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
-
-  useEffect(() => {
-    x.on("change", () => console.log(x.get()));
-  }, [x]);
+  const rotateZ = useTransform(x, [-800, 800], [-360, 360]);
+  const gradient = useTransform(
+    x,
+    [-800, 800],
+    [
+      "linear-gradient(135deg, rgb(0, 210, 238), rgb(0, 83, 238))",
+      "linear-gradient(135deg, rgb(0, 238, 155), rgb(238, 178, 0))",
+    ]
+  );
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 2]);
 
   return (
-    <Wrapper>
+    <Wrapper style={{ background: gradient }}>
       <BiggerBox ref={biggerBoxRef}>
-        <button onClick={() => x.set(200)}>click me</button>
-        <Box style={{ x }} drag="x" dragSnapToOrigin />
+        <Box style={{ x, rotateZ, scale }} drag="x" dragSnapToOrigin />
       </BiggerBox>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.bgColor};
 `;
 
 const BiggerBox = styled.div`

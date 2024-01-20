@@ -3,44 +3,54 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const boxVariants = {
-  invisible: {
-    x: 500,
+  entry: (isBack: boolean) => ({
+    x: isBack ? -500 : 500,
     opacity: 0,
     scale: 0,
-  },
-  visible: {
+  }),
+  center: {
     x: 0,
     opacity: 1,
     scale: 1,
+    transition: {
+      duration: 1,
+    },
   },
-  exit: {
-    x: -500,
-    opacity: 0,
+  exit: (isBack: boolean) => ({
+    x: isBack ? 500 : -500,
+    option: 0,
     scale: 0,
-  },
+    transition: {
+      duration: 1,
+    },
+  }),
 };
 
 function App() {
   const [visible, setVisible] = useState(1);
-  const prevPlease = () => setVisible((prev) => (prev === 1 ? 1 : prev - 1));
-  const nextPlease = () => setVisible((prev) => (prev === 10 ? 10 : prev + 1));
+  const [isBack, setIsBack] = useState(false);
+  const prevPlease = () => {
+    setIsBack(true);
+    setVisible((prev) => (prev === 1 ? 1 : prev - 1));
+  };
+  const nextPlease = () => {
+    setIsBack(false);
+    setVisible((prev) => (prev === 10 ? 10 : prev + 1));
+  };
 
   return (
     <Wrapper>
-      <AnimatePresence>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) =>
-          i === visible ? (
-            <Box
-              key={i}
-              variants={boxVariants}
-              initial="invisible"
-              animate="visible"
-              exit="exit"
-            >
-              {i}
-            </Box>
-          ) : null
-        )}
+      <AnimatePresence custom={isBack}>
+        <Box
+          custom={isBack}
+          key={visible}
+          variants={boxVariants}
+          initial="entry"
+          animate="center"
+          exit="exit"
+        >
+          {visible}
+        </Box>
       </AnimatePresence>
       <button onClick={prevPlease}>prev</button>
       <button onClick={nextPlease}>next</button>
@@ -55,6 +65,10 @@ const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
+  button {
+    background-color: #fff;
+    margin-left: 10px;
+  }
 `;
 
 const Box = styled(motion.div)`

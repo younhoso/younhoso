@@ -23,6 +23,10 @@ export class MyElement extends LitElement {
   @property({ type: Number })
   count = 0
 
+  private _onClick() {
+    this.count++
+  }
+
   render() {
     return html`
       <div>
@@ -41,10 +45,6 @@ export class MyElement extends LitElement {
       </div>
       <p class="read-the-docs">${this.docsHint}</p>
     `
-  }
-
-  private _onClick() {
-    this.count++
   }
 
   static styles = css`

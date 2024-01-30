@@ -1,0 +1,46 @@
+{
+  "voteInfoResultResponse": {
+    "id": 1,
+    "minSelectionCount": 2,
+    "maxSelectionCount": 3,
+    "isOnlyOnce": true,
+    "isDisplayResult": true,               
+    "isActive": true,
+    "voteStartsAt": "2024-01-14 15:00:00",
+    "voteEndsAt": "2024-02-14 14:00:00",
+    "voteCandidateResults": [
+      {
+          "id": 201,
+          "title": "투표 후보 제목1",
+          "description": "투표 후보 설명 1",
+          "candidateLinkUrl": "https://youtube.com/?test=bbq1",
+          "candidateImageUrl": "/assets/imgs/thumImage1.png",
+          "totalScore": 40
+      },
+      {
+          "id": 202,
+          "title": "투표 후보 제목2",
+          "description": "투표 후보 설명 2",
+          "candidateLinkUrl": "https://youtube.com/?test=bbq2",
+          "candidateImageUrl": "/assets/imgs/thumImage2.png",
+          "totalScore": 104
+      },
+      {
+          "id": 203,
+          "title": "투표 후보 제목3",
+          "description": "투표 후보 설명 3",
+          "candidateLinkUrl": "https://youtube.com/?test=bbq3",
+          "candidateImageUrl": "/assets/imgs/thumImage3.png",
+          "totalScore": 44
+      },
+      {
+          "id": 204,
+          "title": "투표 후보 제목4",
+          "description": "투표 후보 설명 4",
+          "candidateLinkUrl": "https://youtube.com/?test=bbq4",
+          "candidateImageUrl": "/assets/imgs/thumImage1.png",
+          "totalScore": 34
+      }
+    ]
+  }
+}

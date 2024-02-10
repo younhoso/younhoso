@@ -25,5 +25,11 @@ export default {
       ],
       validation: (Rule: { unique: () => any; }) => Rule.unique()
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'name',
+      subtitle: 'email'
+    }
+  }
 }

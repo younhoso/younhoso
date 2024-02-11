@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pretendard } from '@/libs/fonts';
 import Header from "@/components/Header";
+import CustomThemeProvider from "@/provider/CustomThemeProvider";
 
 export const metadata: Metadata = {
   title: "Instantgram",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="ko" className={pretendard.className}>
       <body>
-        <Header />
-        {children}
+        <CustomThemeProvider>
+          <Header />
+          {children}
+        </CustomThemeProvider>
       </body>
     </html>
   );

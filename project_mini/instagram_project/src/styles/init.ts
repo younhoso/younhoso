@@ -25,6 +25,8 @@ export const InitGlobalStyled = memo(createGlobalStyle`
   }
 
   a {
+    color: inherit;
+    vertical-align: middle;
     text-decoration: none;
   }
 

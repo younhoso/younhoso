@@ -39,14 +39,14 @@ export const colors = {
   gray666: '#666',
   gray999: '#999',
   graybbb: '#BBB',
-  gray5f5: '#F5F5F5',
-  grayada: '#DADADA',
-  grayaea: '#EAEAEA',
-  graya6a: '#A6A6A6',
-  red937: '#E31937',
-  red32D: '#C6132D',
-  pinkebe: '#FFBEBE',
-  greena17: '#3C9A17',
+  grayF5F: '#F5F5F5',
+  grayDAD: '#DADADA',
+  grayEAE: '#EAEAEA',
+  grayA6A: '#A6A6A6',
+  redE31: '#E31937',
+  redC61: '#C6132D',
+  pinkFFB: '#FFBEBE',
+  green3C9: '#3C9A17',
 };
 
 export const sizes = {

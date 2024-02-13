@@ -1,6 +1,7 @@
 'use client';
 
 import { menu } from "@/app/sitemap";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ColorButton from "./ui/ColorButton";
@@ -9,6 +10,8 @@ import clsx from "clsx";
 
 export default function Header() {
  const pathName = usePathname();
+ const { data: session } = useSession();
+
  return (
   <HeaderStyled className={clsx('Header')}>
     <Link href="/">
@@ -21,7 +24,12 @@ export default function Header() {
             <Link href={item.href}>{pathName === item.href ? item.clickedIcon : item.icon}</Link>
           </li>
         ))}
-        <ColorButton text='Sign in' onClick={() => {}} />
+        {
+          session ? (
+            <ColorButton text='Sign out' onClick={() => signOut()} />
+        ) : (
+            <ColorButton text='Sign in' onClick={() => signIn()} />
+        )}
       </ul>
     </nav>
   </HeaderStyled>

@@ -12,7 +12,7 @@ export const menu = [
     clickedIcon: <HomeFillIcon />
   },
   {
-    href: '/sarch',
+    href: '/search',
     icon: <SearchIcon />,
     clickedIcon: <SearchFillIcon />
   },

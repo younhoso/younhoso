@@ -4,7 +4,7 @@ import { menu } from "@/app/sitemap";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ColorButton from "./ui/ColorButton";
+import ColorButton from "../ui/ColorButton";
 import { HeaderStyled } from "./styled";
 import clsx from "clsx";
 

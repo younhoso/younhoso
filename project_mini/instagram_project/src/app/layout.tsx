@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { pretendard } from '@/libs/fonts';
-import Header from "@/components/Header";
+import Header from "@/components/Header/Header";
 import CustomThemeProvider from "@/provider/CustomThemeProvider";
 import AuthProvider from "@/provider/AuthProvider";
 

@@ -7,10 +7,12 @@ import { usePathname } from "next/navigation";
 import ColorButton from "../ui/ColorButton";
 import { HeaderStyled } from "./styled";
 import clsx from "clsx";
+import Avatar from "../Avatar/Avatar";
 
 export default function Header() {
  const pathName = usePathname();
  const { data: session } = useSession();
+ const user = session?.user;
 
  return (
   <HeaderStyled className={clsx('Header')}>
@@ -24,8 +26,14 @@ export default function Header() {
             <Link href={item.href}>{pathName === item.href ? item.clickedIcon : item.icon}</Link>
           </li>
         ))}
-        {
-          session ? (
+        {user && (
+          <li>
+            <Link href={`/user/${user.username}`}>
+              <Avatar image={user.image}/>
+            </Link>
+          </li>
+        )}
+        {session ? (
             <ColorButton text='Sign out' onClick={() => signOut()} />
         ) : (
             <ColorButton text='Sign in' onClick={() => signIn()} />

@@ -73,4 +73,6 @@ export const InitGlobalStyled = memo(createGlobalStyle`
       text-decoration:none; 
     }
   }
+
+  img {width: inherit;}
 `);

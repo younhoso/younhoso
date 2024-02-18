@@ -11,7 +11,7 @@ type Props = {
 }
 
 export default function Signin({providers, callbackUrl}: Props) {
- console.log(providers)
+ console.log('providers', providers)
  return (
    <SigninStyled className={clsx('Signin')}>
       {Object.values(providers).map(({id, name}) => (

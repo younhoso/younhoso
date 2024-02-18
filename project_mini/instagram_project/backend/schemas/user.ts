@@ -7,6 +7,15 @@ export default {
     {title: 'Name', name: 'name', type: 'string'},
     {title: 'Email', name: 'email', type: 'string'},
     {title: 'Image', name: 'image', type: 'string'},
+    {title: 'Following', name: 'following', type: 'array', 
+      of: [
+        {
+          type: 'reference',
+          to: [{type: 'user'}]
+        }
+      ],
+      validation: (Rule: { unique: () => any }) => Rule.unique()
+    },
     {title: 'Followers', name: 'followers', type: 'array', 
       of: [
         {

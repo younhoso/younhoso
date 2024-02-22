@@ -1,8 +1,14 @@
 import { addUser } from "@/service/user";
-import NextAuth, { NextAuthOptions } from "next-auth";
+import NextAuth, { AuthOptions, NextAuthOptions } from "next-auth";
 import GoogleProvider from 'next-auth/providers/google';
 
-export const authOptions: NextAuthOptions = {
+export const authOptions: AuthOptions = {
+  providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_OAUTH_ID!,
+      clientSecret: process.env.GOOGLE_OAUTH_SECRET!,
+    }),
+  ],
   pages: {
     signIn: '/auth/signin',
   },
@@ -21,7 +27,6 @@ export const authOptions: NextAuthOptions = {
       return true
     },
     async session({ session }) {
-      console.log(session)
       const user = session?.user
       if(user){
         session.user = {
@@ -32,14 +37,8 @@ export const authOptions: NextAuthOptions = {
 
       return session
     }
-  },
-  providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_OAUTH_ID!,
-      clientSecret: process.env.GOOGLE_OAUTH_SECRET!,
-    }),
-  ]
-}
-const handler = NextAuth(authOptions)
+  }
+};
 
+const handler : NextAuthOptions = NextAuth(authOptions)
 export { handler as GET, handler as POST }

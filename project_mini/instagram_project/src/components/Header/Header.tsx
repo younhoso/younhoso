@@ -1,19 +1,19 @@
 'use client';
 
-import { menu } from "@/app/sitemap";
-import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import ColorButton from "../ui/ColorButton";
-import { HeaderStyled } from "./styled";
 import clsx from "clsx";
 import Avatar from "../Avatar/Avatar";
+import { menu } from "@/app/sitemap";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
+import { HeaderStyled } from "./styled";
 
 export default function Header() {
  const pathName = usePathname();
  const { data: session } = useSession();
  const user = session?.user;
-
+ 
  return (
   <HeaderStyled className={clsx('Header')}>
     <Link href="/">

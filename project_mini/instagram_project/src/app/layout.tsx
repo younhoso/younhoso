@@ -1,8 +1,10 @@
+import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { pretendard } from '@/libs/fonts';
 import Header from "@/components/Header/Header";
 import CustomThemeProvider from "@/provider/CustomThemeProvider";
 import AuthProvider from "@/provider/AuthProvider";
+import SWRConfigProvider from "@/provider/SWRConfigProvider";
 
 export const metadata: Metadata = {
   title: "Instantgram",
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
@@ -20,7 +22,11 @@ export default function RootLayout({
         <AuthProvider>
           <CustomThemeProvider>
             <Header />
-            {children}
+            <main>
+              <SWRConfigProvider>
+                {children}
+              </SWRConfigProvider>
+            </main>
           </CustomThemeProvider>
         </AuthProvider>
       </body>

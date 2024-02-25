@@ -8,4 +8,10 @@ export const AvatarStyled = styled.div`
   img {
     border-radius: 50%;
   }
+  &.size-large {
+    width: 50px;
+  }
+  &.sidebar-avatar {
+    align-items: center;
+  }
 `;

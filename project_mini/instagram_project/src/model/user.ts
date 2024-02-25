@@ -1,6 +1,6 @@
 export type User = {
-  name?: string | null;
-  username?: string | null;
-  email?: string | null;
-  image?: string | null;
+  name: string;
+  username: string;
+  email: string;
+  image?: string;
 }

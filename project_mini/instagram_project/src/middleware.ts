@@ -29,7 +29,6 @@ export async function middleware(req: NextRequest, _: NextFetchEvent) {
   }
 };
 
-// See "Matching Paths" below to learn more
 export const config = {
   matcher: "/((?!api|static|.*\\..*|_next).*)",
 };

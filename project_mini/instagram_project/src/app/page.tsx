@@ -1,16 +1,21 @@
 import FollowingBar from "@/components/FollowingBar/FollowingBar";
 import PostList from "@/components/PostList/PostList";
 import SideBar from "@/components/SideBar/SideBar";
-import { redirect } from "next/navigation";
-import { getSession } from "next-auth/react";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { getServerSession } from "next-auth";
+import { HomePageStyled } from '@/styles/pageStyled/HomePageStyled';
 
 export default async function HomePage() {
+  const session = await getServerSession(authOptions);
+  const user = session?.user!;
+
   return (
-    <section>
-      <FollowingBar />
-      <PostList />
-      {/* <SideBar user={user}/> */}
-    </section>
+    <HomePageStyled className="homePage">
+      <div>
+        <FollowingBar />
+        <PostList />
+      </div>
+      <SideBar user={user}/>
+    </HomePageStyled>
   );
 }

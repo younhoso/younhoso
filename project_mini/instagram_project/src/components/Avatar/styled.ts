@@ -14,4 +14,11 @@ export const AvatarStyled = styled.div`
   &.sidebar-avatar {
     align-items: center;
   }
+  &.following {
+    width: 70px;
+    height: 70px;
+    img {
+      object-fit: cover;
+    }
+  }
 `;

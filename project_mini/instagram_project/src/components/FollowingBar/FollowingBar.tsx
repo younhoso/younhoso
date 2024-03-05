@@ -13,16 +13,11 @@ import 'swiper/css/navigation';
 
 export default function FollowingBar() {
   const {data, isLoading: loading, error} = useSWR<DetailUser>('/api/me');
-  const users = data?.following && [
-    ...data?.following,
-    ...data?.following,
-    ...data?.following,
-    ...data?.following,
-  ]
+  const users = data?.following;
 
-if(loading){
-  return <PropagateLoader size={8} color='red' />
-}
+  if(loading){
+    return <PropagateLoader size={8} color='red' />
+  }
 
  return (
    <FollowingBarStyled className={clsx('FollowingBar')}>
@@ -30,23 +25,22 @@ if(loading){
       (!users || users.length === 0) && <p className='no-data'>{`You don't have following`}</p>
     }
     {
-      users && users.length > 0 && <ul>
+      users && users.length > 0 &&
          <Swiper
           modules={[Navigation]}
-          spaceBetween={1}
+          spaceBetween={20}
           slidesPerView={8}
           navigation
         >
           {users.map(({image, username}) => (
-            <SwiperSlide>
-              <Link href={`/user/${username}`} key={username}>
+            <SwiperSlide key={username}>
+              <Link href={`/user/${username}`}>
                 <Avatar className='following' image={image} />
                 <p className='ellipsis'>{username}</p>
               </Link>
             </SwiperSlide>
           ))}
         </Swiper>
-      </ul>
     }
    </FollowingBarStyled>
  );

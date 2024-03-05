@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 export const FollowingBarStyled = styled.div`
-  max-width: 760px;
+  width: 760px;
   overflow-x: hidden;
   padding: 10px 20px;
   margin-bottom: 30px;

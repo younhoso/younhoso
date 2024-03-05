@@ -6,6 +6,10 @@ import { DetailUser } from '@/model/user';
 import { PropagateLoader } from 'react-spinners';
 import Link from 'next/link';
 import Avatar from '../Avatar/Avatar';
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export default function FollowingBar() {
   const {data, isLoading: loading, error} = useSWR<DetailUser>('/api/me');
@@ -27,14 +31,21 @@ if(loading){
     }
     {
       users && users.length > 0 && <ul>
-        {users.map(({image, username}) => (
-          <li key={username}>
-            <Link href={`/user/${username}`}>
-              <Avatar className='following' image={image} />
-              <p className='ellipsis'>{username}</p>
-            </Link>
-          </li>
-        ))}
+         <Swiper
+          modules={[Navigation]}
+          spaceBetween={1}
+          slidesPerView={8}
+          navigation
+        >
+          {users.map(({image, username}) => (
+            <SwiperSlide>
+              <Link href={`/user/${username}`} key={username}>
+                <Avatar className='following' image={image} />
+                <p className='ellipsis'>{username}</p>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </ul>
     }
    </FollowingBarStyled>

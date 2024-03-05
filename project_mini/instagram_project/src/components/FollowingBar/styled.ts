@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const FollowingBarStyled = styled.div`
   max-width: 760px;
-  overflow-x: auto;
+  overflow-x: hidden;
   padding: 10px 20px;
   margin-bottom: 30px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.13);
@@ -22,5 +22,11 @@ export const FollowingBarStyled = styled.div`
   }
   .no-data {
     text-align: center;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    color: #fff;
+    &::after {
+      font-size: 28px;
+    }
   }
 `;

@@ -1,7 +1,12 @@
 import clsx from 'clsx';
 import { AvatarStyled } from './styled';
 
-export default function Avatar({className, image } : {className?: string ; image?: string | null}) {
+type Props = {
+  className?: string;
+  image?: string | null;
+}
+
+export default function Avatar({className, image} : Props) {
  
  return (
    <AvatarStyled className={clsx(className, 'Avatar')}>

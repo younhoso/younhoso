@@ -8,6 +8,12 @@ export const AvatarStyled = styled.div`
   img {
     border-radius: 50%;
   }
+  &.highlight {
+    img {
+      border-radius: 50%;
+      border: 1px solid red;
+    }
+  }
   &.size-large {
     width: 50px;
   }

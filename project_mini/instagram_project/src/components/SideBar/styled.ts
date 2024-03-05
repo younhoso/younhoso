@@ -11,7 +11,7 @@ export const SideBarStyled = styled.div`
     }
   }
   .copyright {
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .username {
     font-weight: 600;

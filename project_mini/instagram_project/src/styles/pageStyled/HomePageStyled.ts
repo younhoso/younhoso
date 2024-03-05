@@ -9,4 +9,8 @@ export const HomePageStyled = styled.section`
   > div {
     flex: 1;
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

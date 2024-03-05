@@ -1,7 +1,7 @@
 import { User } from '@/model/user';
 
 declare module 'next-auth' {
-  interface Session {
+  type Session = {
     user: User;
   }
 }

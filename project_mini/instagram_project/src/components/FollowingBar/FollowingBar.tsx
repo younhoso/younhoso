@@ -9,7 +9,12 @@ import Avatar from '../Avatar/Avatar';
 
 export default function FollowingBar() {
   const {data, isLoading: loading, error} = useSWR<DetailUser>('/api/me');
-  const users = data?.following;
+  const users = data?.following && [
+    ...data?.following,
+    ...data?.following,
+    ...data?.following,
+    ...data?.following,
+  ]
 
 if(loading){
   return <PropagateLoader size={8} color='red' />
@@ -18,7 +23,7 @@ if(loading){
  return (
    <FollowingBarStyled className={clsx('FollowingBar')}>
     { 
-      (!users || users.length === 0) && <p>{`You don't have following`}</p>
+      (!users || users.length === 0) && <p className='no-data'>{`You don't have following`}</p>
     }
     {
       users && users.length > 0 && <ul>
@@ -26,7 +31,7 @@ if(loading){
           <li key={username}>
             <Link href={`/user/${username}`}>
               <Avatar className='following' image={image} />
-              <p>{username}</p>
+              <p className='ellipsis'>{username}</p>
             </Link>
           </li>
         ))}

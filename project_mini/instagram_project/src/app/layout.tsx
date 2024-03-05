@@ -5,6 +5,8 @@ import Header from "@/components/Header/Header";
 import CustomThemeProvider from "@/provider/CustomThemeProvider";
 import AuthProvider from "@/provider/AuthProvider";
 import SWRConfigProvider from "@/provider/SWRConfigProvider";
+import { LayoutPageStyled } from "@/styles/pageStyled/LayoutPageStyled";
+import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: "Instantgram",
@@ -18,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
-      <body>
+      <LayoutPageStyled className={clsx('Layout')}>
         <AuthProvider>
           <CustomThemeProvider>
             <Header />
@@ -29,7 +31,7 @@ export default function RootLayout({
             </main>
           </CustomThemeProvider>
         </AuthProvider>
-      </body>
+      </LayoutPageStyled>
     </html>
   );
 }

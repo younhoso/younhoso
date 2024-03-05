@@ -15,7 +15,9 @@ export default async function HomePage() {
         <FollowingBar />
         <PostList />
       </div>
-      <SideBar user={user}/>
+      <div className="sidebar-inner">
+        <SideBar user={user}/>
+      </div>
     </HomePageStyled>
   );
 }

@@ -3,20 +3,20 @@ import clsx from 'clsx';
 import useSWR from 'swr';
 import { FollowingBarStyled } from './styled';
 import { DetailUser } from '@/model/user';
-import { PropagateLoader } from 'react-spinners';
 import Link from 'next/link';
 import Avatar from '../Avatar/Avatar';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Loading from '../Loading/Loading';
 
 export default function FollowingBar() {
   const {data, isLoading: loading, error} = useSWR<DetailUser>('/api/me');
   const users = data?.following;
 
   if(loading){
-    return <PropagateLoader size={8} color='red' />
+    return <Loading />
   }
 
  return (

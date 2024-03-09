@@ -6,7 +6,7 @@ import useSWR from 'swr';
 import { SimplePost } from '@/model/posts';
 
 export default function PostList() {
- const {data: posts, isLoading: loading} = useSWR<SimplePost[]>('/api/posts');
+  const {data: posts, isLoading: loading} = useSWR<SimplePost[]>('/api/posts');
 
  return (
    <PostListStyled className={clsx('PostList')}>

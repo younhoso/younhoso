@@ -7,7 +7,8 @@ import { HomePageStyled } from '@/styles/pageStyled/HomePageStyled';
 
 export default async function HomePage() {
   const session = await getServerSession(authOptions);
-  const user = session?.user!;
+  if(!session) return
+  const user = session?.user;
 
   return (
     <HomePageStyled className="homePage">

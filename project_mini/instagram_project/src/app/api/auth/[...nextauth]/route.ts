@@ -1,6 +1,11 @@
+import { User } from "@/model/user";
 import { addUser } from "@/service/user";
 import NextAuth, { AuthOptions, NextAuthOptions } from "next-auth";
 import GoogleProvider from 'next-auth/providers/google';
+
+export type CustomUser = {
+  username: string;
+};
 
 export const authOptions: AuthOptions = {
   providers: [

@@ -2,5 +2,5 @@
 
 import styled from 'styled-components';
 
-export const PostListStyled = styled.section`
+export const PostListCardStyled = styled.section`
 `;

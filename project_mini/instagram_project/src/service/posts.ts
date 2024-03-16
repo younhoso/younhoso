@@ -1,4 +1,5 @@
-import { client } from "./sanity";
+import { SimplePost } from "@/model/posts";
+import { client, urlFor } from "./sanity";
 
 const simplePost = `
   ...,
@@ -9,12 +10,12 @@ const simplePost = `
   "text": comments[0].comment,
   "comments": count(comments),
   "id":_id,
-  "createAt":_createAt
+  "createdAt":_createdAt
 `;
 export async function getFollowingPostsOf(username: string) {
   return client.fetch(
     `*[_type == "post" && author->username == "${username}"
       || author._ref in *[_type == "user" && username == "${username}"].following[]._ref]
       | order(_createdAt desc){${simplePost}}`
-  )
+  ).then((post) => post.map((post: SimplePost) => ({ ...post, image: urlFor(post.image) })))
 }

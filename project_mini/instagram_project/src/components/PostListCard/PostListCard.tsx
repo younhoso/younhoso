@@ -13,27 +13,26 @@ type Props = {
 }
 
 export default function PostListCard({post}: Props) {
-  console.log(post)
  const {userImage, username, image, createdAt, likes, text} = post;
  return (
-   <PostListCardStyled className={clsx('PostListCard')}>
-    <div>
-      <Avatar image={userImage} />
+   <PostListCardStyled className={clsx('PostListCard rounded')}>
+    <div className='flex'>
+      <Avatar className='following' image={userImage} />
       <span>{username}</span>
     </div>
     <Image src={image} alt={`photo by ${username}`} width={500} height={500} />
-    <div>
+    <div className='inner-icon'>
       <HeartIcon />
       <BookmarkIcon />
     </div>
-    <div>
+    <div className='like-icon'>
       <p>{`${likes?.length ?? 0} ${likes?.length > 1 ? 'likes' : 'like'}`}</p>
       <p>
-        <span>{username}</span>
+        <span className='username'>{username}</span>
         {text}
       </p>
-      <p>{parseDate(createdAt)}</p>
-      <form action="">
+      <p className='created-at'>{parseDate(createdAt)}</p>
+      <form action="" className='form-comment'>
         <SmileIcon />
         <input type="text" placeholder="Add a comment..." />
         <button>Post</button>

@@ -4,9 +4,9 @@ import clsx from 'clsx';
 import { PostListStyled } from './styled';
 import useSWR from 'swr';
 import { SimplePost } from '@/model/posts';
-import { GridLoader } from 'react-spinners';
 import PostListCard from '../PostListCard/PostListCard';
 import { LoadingPageStyled } from '@/styles/pageStyled/LoadingPageStyled';
+import GridSpinner from '../ui/GridSpinner';
 
 export default function PostList() {
   const {data: posts, isLoading: loading} = useSWR<SimplePost[]>('/api/posts');
@@ -14,7 +14,7 @@ export default function PostList() {
   if(loading){
     return (
       <LoadingPageStyled>
-        <GridLoader color='red '/>
+        <GridSpinner color='red' />
       </LoadingPageStyled>
     )
   }
@@ -22,9 +22,9 @@ export default function PostList() {
  return (
    <PostListStyled className={clsx('PostList')}>
     <ul>
-      {posts && posts.map(post => (
+      {posts && posts.map((post, index) => (
         <li key={post.id}>
-          <PostListCard post={post} />
+          <PostListCard post={post} priority={index < 2}/>
         </li>
       ))}
     </ul>

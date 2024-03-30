@@ -37,23 +37,7 @@ export const PostListCardStyled = styled.section`
     color: #555;
     text-transform: uppercase;
   }
-  .form-comment {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid #999;
-    margin: 10px 0 0 0;
-    padding-top: 10px;
-    input {
-      width: 100%;
-      margin-left: 10px;
-      padding: 10px;
-      outline: none;
-    }
-    button {
-      font-weight: 600;
-      padding: 10px;
-    }
-  }
+ 
   img {
     width: 100%;
     height: auto; /* 세로 크기를 auto로 설정하여 비율에 맞게 자동 조정되도록 함 */

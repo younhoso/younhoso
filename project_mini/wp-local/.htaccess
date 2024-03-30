@@ -1,0 +1,6 @@
+# BEGIN WordPress
+# "BEGIN WordPress"와 "END WordPress" 사이의 지시문(줄)은 
+# 동적으로 생성되며 워드프레스 필터를 통해서만 수정해야합니다. 
+# 이 표시 사이의 지시문을 변경하면 덮어쓰게 됩니다.
+
+# END WordPress

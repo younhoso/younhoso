@@ -14,6 +14,8 @@ services:
       MYSQL_PASSWORD: wordpress
     networks:
       - wpsite
+    ports:
+      - "3306:3306"
   # phpmyadmin
   phpmyadmin:
     depends_on:
@@ -24,7 +26,6 @@ services:
       - "8080:80"
     environment:
       PMA_HOST: db
-      PMA_USER: "root"
       MYSQL_ROOT_PASSWORD: password
     networks:
       - wpsite

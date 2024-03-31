@@ -4,3 +4,7 @@
 # 이 표시 사이의 지시문을 변경하면 덮어쓰게 됩니다.
 
 # END WordPress
+# wp-admin으로 리다이렉트 시킴
+RewriteEngine On
+RewriteBase /
+RewriteRule ^$ /wp-admin/ [R=301,L]

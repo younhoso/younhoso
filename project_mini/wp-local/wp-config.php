@@ -109,6 +109,12 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
  */
 define( 'WP_DEBUG', !!getenv_docker('WORDPRESS_DEBUG', '') );
 
+// 포스트 리비전 수
+define('WP_POST_REVISIONS', 2);
+
+// 휴지통 비우는 날짜 기준 정하기
+define('EMPTY_TRASH_DAYS', 7);
+
 /* Add any custom values between this line and the "stop editing" line. */
 
 // If we're behind a proxy server and using HTTPS, we need to alert WordPress of that fact

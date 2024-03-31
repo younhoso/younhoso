@@ -1,0 +1,32 @@
+# Translation of Plugins - Hello Dolly - Stable (latest release) in Korean
+# This file is distributed under the same license as the Plugins - Hello Dolly - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-25 18:32:21+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
+"Language: ko_KR\n"
+"Project-Id-Version: Plugins - Hello Dolly - Stable (latest release)\n"
+
+#. Author URI of the plugin
+msgid "https://ma.tt/"
+msgstr "https://ma.tt/"
+
+#. Author of the plugin
+msgid "Matt Mullenweg"
+msgstr "메트 뮐렌베그"
+
+#. Description of the plugin
+msgid "This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly</cite> in the upper right of your admin screen on every page."
+msgstr "단순한 플러그인이 아니라, 루이 암스트롱이 불러 가장 유명한 헬로, 달리 이 두 단어에 전 세대를 아우르는 희망과 열정을 상징화했어요. 활성화하면 매 페이지의 관리화면의 오른쪽 위에 <cite>헬로, 달리</cite>의 무작위 가사를 보게 될 거에요."
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/hello-dolly/"
+msgstr "https://wordpress.org/plugins/hello-dolly/"
+
+#. Plugin Name of the plugin
+msgid "Hello Dolly"
+msgstr "헬로우 달리"

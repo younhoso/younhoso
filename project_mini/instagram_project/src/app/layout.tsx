@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import { pretendard } from '@/libs/fonts';
+import { pretendard } from "@/libs/fonts";
 import Header from "@/components/Header/Header";
 import CustomThemeProvider from "@/provider/CustomThemeProvider";
 import AuthProvider from "@/provider/AuthProvider";
@@ -20,17 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
-      <LayoutPageStyled className={clsx('Layout')}>
+      <LayoutPageStyled className={clsx("Layout")}>
         <AuthProvider>
           <CustomThemeProvider>
             <Header />
             <main>
-              <SWRConfigProvider>
-                {children}
-              </SWRConfigProvider>
+              <SWRConfigProvider>{children}</SWRConfigProvider>
             </main>
           </CustomThemeProvider>
         </AuthProvider>
+        <div id="portal" />
       </LayoutPageStyled>
     </html>
   );

@@ -1,15 +1,15 @@
 export interface Category {
   title: string;
-  pageUrl: string;
+  href: string;
 }
 
 export const defaultSiteMaps: Category[] = [
   {
     title: "주소 줄이기",
-    pageUrl: "",
+    href: "/",
   },
   {
     title: "QR코드",
-    pageUrl: "",
+    href: "short-links/new",
   },
 ];

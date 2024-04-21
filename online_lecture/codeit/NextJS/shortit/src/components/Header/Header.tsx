@@ -19,10 +19,13 @@ export default function Header({ category }: HeaderProps) {
     <HeaderStyled className={clsx("Header", { mainHeader: pathname === "/" })}>
       <Wrapper>
         <div className="inner">
-          <Link href={"/"}></Link>
           <ul className="category-inner">
             {category.map((v) => {
-              return <div key={v.title}>{v.title}</div>;
+              return (
+                <Link href={v.href}>
+                  <div key={v.title}>{v.title}</div>
+                </Link>
+              );
             })}
           </ul>
         </div>

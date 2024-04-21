@@ -1,4 +1,4 @@
-import { forwardRef, InputHTMLAttributes } from "react";
+import { forwardRef } from "react";
 
 interface InputProps {
   [key: string]: unknown;

@@ -21,7 +21,6 @@ export default function HomePage() {
       title: url,
       url,
     });
-    console.log(res);
     const newShortUrl = res.data.shortUrl;
     setShortUrl(newShortUrl);
   }

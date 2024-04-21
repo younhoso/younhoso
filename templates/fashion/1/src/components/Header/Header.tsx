@@ -7,24 +7,18 @@ import Image from "next/image";
 // import logo from "@/assets/images/header/logo.png";
 import Wrapper from "@/provider/WrapperProvider";
 import { usePathname } from "next/navigation";
-import { Category } from "@/app/template";
 
-interface HeaderProps {
-  category: Category[];
-}
-
-export default function Header({ category }: HeaderProps) {
+export default function Header() {
   const pathname = usePathname();
 
   return (
     <HeaderStyled className={clsx("Header", { mainHeader: pathname === "/" })}>
       <Wrapper>
         <div className="inner">
-          <Link href={"/"}></Link>
+          <Link href={"/"}>
+          </Link>
           <ul className="category-inner">
-            {category.map((v) => {
-              return <div key={v.title}>{v.title}</div>;
-            })}
+            Header
           </ul>
         </div>
       </Wrapper>

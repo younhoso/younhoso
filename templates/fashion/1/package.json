@@ -9,26 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "axios": "^1.6.8",
     "clsx": "^2.1.0",
     "dompurify": "^3.0.11",
     "fetch-ponyfill": "^7.1.0",
     "isomorphic-dompurify": "^2.4.0",
-    "mongoose": "^8.3.2",
-    "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-qr-code": "^2.0.12",
+    "next": "14.2.2",
     "styled-components": "^6.1.2",
     "swiper": "^11.1.1",
     "swr": "^2.2.5"
   },
   "devDependencies": {
+    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.2",
-    "typescript": "^5"
+    "eslint-config-next": "14.2.2"
   }
 }

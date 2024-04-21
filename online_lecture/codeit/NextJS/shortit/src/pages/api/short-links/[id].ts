@@ -7,6 +7,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.query;
 
   switch(req.method) {
+    case 'GET':
+      const shortLink = await ShortLink.findById(id);
+      res.status(200).send(shortLink);
+      break;
+
     case 'PATCH':
       const updateShortLink = await ShortLink.findByIdAndUpdate(id, req.body, {
         new: true
@@ -14,11 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(200).send(updateShortLink);
       break;
     
-    case 'GET':
-      const shortLink = await ShortLink.findById(id);
-      res.status(200).send(shortLink);
-      break;
-
     case 'DELETE': 
       await ShortLink.findByIdAndDelete(id);
       res.status(204).send(null);

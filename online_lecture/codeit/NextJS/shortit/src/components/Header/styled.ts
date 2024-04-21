@@ -10,6 +10,7 @@ export const HeaderStyled = styled.div`
   position: static;
   &.mainHeader {
     position: fixed;
+    background-color: #fff;
   }
 
   .inner {

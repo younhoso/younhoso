@@ -3,11 +3,10 @@
 import clsx from "clsx";
 import { HeaderStyled } from "./styled";
 import Link from "next/link";
-import Image from "next/image";
 // import logo from "@/assets/images/header/logo.png";
 import Wrapper from "@/provider/WrapperProvider";
 import { usePathname } from "next/navigation";
-import { Category } from "@/app/template";
+import { Category } from "@/app/sitemap";
 
 interface HeaderProps {
   category: Category[];

@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import Wrapper from "@/provider/WrapperProvider";
 
 const footerInfo = {
-  title: "OMT Labs / Company Profile",
-  default: "Copyright © 2024 OMT Labs. All rights reserved.",
+  title: "TriplexStudio / Company Profile",
+  default: "Copyright © 2024 TriplexStudio. All rights reserved.",
 };
 
 export default function Footer() {

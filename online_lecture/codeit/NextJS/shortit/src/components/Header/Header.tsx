@@ -22,8 +22,8 @@ export default function Header({ category }: HeaderProps) {
           <ul className="category-inner">
             {category.map((v) => {
               return (
-                <Link href={v.href}>
-                  <div key={v.title}>{v.title}</div>
+                <Link href={v.href} key={v.title}>
+                  <div>{v.title}</div>
                 </Link>
               );
             })}

@@ -1,25 +1,21 @@
-"use client";
-import axios from "axios";
 import clsx from "clsx";
 import { ShortLinksPageStyled } from "@/styles/pageStyled/ShortLinksPageStyled";
-import ShortLinkForm from "@/components/ShortLinkForm/ShortLinkForm";
-import { useRouter } from "next/navigation";
+import dbConnect from "@/db/dbConnect";
+import ShortLink from "@/db/models/ShortLink";
+import ShortLinkList from "@/components/ShortLinkList/ShortLinkList";
 
 interface SubmitValues {
   title: string;
   url: string;
 }
 
-export default function shortLinksCreatePage() {
-  const router = useRouter();
-  async function handleSubmit(values: SubmitValues) {
-    axios.post("/api/short-links/", values);
-    router.push("/short-links/");
-  }
+export default async function shortLinksCreatePage() {
+  await dbConnect();
+  const shortLinks = JSON.parse(JSON.stringify(await ShortLink.find()));
 
   return (
     <ShortLinksPageStyled className={clsx("page")}>
-      short-links list
+      <ShortLinkList items={shortLinks} />
     </ShortLinksPageStyled>
   );
 }

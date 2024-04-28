@@ -3,7 +3,7 @@ import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/Button";
 import { HomePageStyled } from "@/styles/pageStyled/HomePageStyled";
-import copyToClipboard from "@/libs/copyToClipboard";
+import copyToClipboard from "@/utils/copyToClipboard";
 import axios from "@/libs/axios";
 
 export default function HomePage() {

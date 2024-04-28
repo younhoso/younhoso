@@ -1,8 +1,8 @@
-import { createHmac } from 'crypto';
+import { createHmac } from "crypto";
 
 export default function createShortURL(url: string) {
-  const hash = createHmac('sha256', 'shortit')
+  const hash = createHmac("sha256", "shortit")
     .update(url + Date.now())
-    .digest('hex');
+    .digest("hex");
   return hash.slice(0, 6);
 }

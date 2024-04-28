@@ -6,10 +6,10 @@ export interface Category {
 export const defaultSiteMaps: Category[] = [
   {
     title: "주소 줄이기",
-    href: "/",
+    href: "short-links/new",
   },
   {
     title: "QR코드",
-    href: "short-links/new",
+    href: "short-links/qr",
   },
 ];

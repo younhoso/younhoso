@@ -1,37 +1,82 @@
-"use client";
+'use client';
 
-import styled from "styled-components";
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 export const HeaderStyled = styled.div`
   width: 100%;
-  height: 80px;
-  line-height: 80px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  position: static;
   &.mainHeader {
     position: fixed;
   }
+`;
 
-  .inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    a {
-      display: inline-flex;
-    }
-    .category-inner {
-      display: flex;
-      gap: 32px;
+export const Nav = styled(motion.nav)`
+  width: 100%;
+  font-size: 14px;
+  padding: 20px 60px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+`;
 
-      .item {
-        font-size: ${(props) => props.theme.fontSizes.font16};
-        font-weight: ${(props) => props.theme.fontWeight.medium};
-        &.active {
-          color: ${(props) => props.theme.colors.main3F2};
-          font-weight: ${(props) => props.theme.fontWeight.bold};
-          border-bottom: 1px solid ${(props) => props.theme.colors.main3F2};
-        }
-      }
-    }
+export const Logo = styled(motion.svg)`
+  margin-right: 50px;
+  width: 95px;
+  height: 25px;
+  fill: ${props => props.theme.colors.red};
+  path {
+    stroke-width: 6px;
+    stroke: white;
   }
 `;
+
+export const Items = styled.ul`
+  display: flex;
+`;
+
+export const Item = styled.li`
+  margin-right: 20px;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &:hover {
+    color: ${props => props.theme.colors.white.lighter};
+  }
+`;
+
+export const Circle = styled(motion.span)`
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: ${props => props.theme.colors.red};
+`;
+
+export const logoVariants = {
+  normal: {
+    fillOpacity: 1,
+  },
+  active: {
+    fillOpacity: [0, 1, 0],
+    transition: {
+      repeat: Infinity,
+    },
+  },
+};
+
+export const navVariants = {
+  top: {
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    color: '#000',
+  },
+  scroll: {
+    backgroundColor: 'rgba(0, 0, 0, 1)',
+    color: '#fff',
+  },
+};

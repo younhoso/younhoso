@@ -1,0 +1,26 @@
+GET http://localhost:3000/api/short-links
+
+###
+GET http://localhost:3000/api/short-links/66234fe8d34a0e01f66213fe
+
+###
+POST http://localhost:3000/api/short-links
+Content-Type: application/json
+
+{
+  "title": "short-links",
+  "url": "https://en.wikipedia.org/wiki/Next.js"
+}
+
+###
+PATCH http://localhost:3000/api/short-links/66234fe8d34a0e01f66213fe
+Content-Type: application/json
+
+{
+  "id": "TEST-edit",
+  "title": "TEST-links",
+  "shortUrl": "https://en.TEST.org/wiki/Next.js"
+}
+
+###
+DELETE http://localhost:3000/api/short-links/66234fe8d34a0e01f66213fe

@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const HomePageStyled = styled.div`
@@ -19,7 +20,6 @@ export const HomePageStyled = styled.div`
 
 export const Banner = styled.div<{ 'data-bgphoto': string }>`
   height: 100vh;
-  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,4 +39,26 @@ export const Overview = styled.p`
   width: 50%;
   font-size: 18px;
   color: #fff;
+`;
+
+export const Slider = styled.div`
+  position: relative;
+  top: 0;
+`;
+
+export const Row = styled(motion.div)`
+  width: 100%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(6, 1fr);
+  position: absolute;
+  bottom: 0;
+`;
+
+export const Box = styled(motion.div)<{ 'data-bgphoto': string }>`
+  height: 200px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(${props => props['data-bgphoto']});
+  background-size: cover;
+  background-position: center center;
 `;

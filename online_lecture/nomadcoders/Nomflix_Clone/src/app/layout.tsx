@@ -4,7 +4,6 @@ import type { Metadata, Viewport } from 'next';
 
 import CustomThemeProvider from '@/provider/CustomThemeProvider';
 import ReactQueryProvider from '@/provider/ReactQueryProvider';
-import SWRConfigProvider from '@/provider/SWRConfigProvider';
 
 import { gmarket } from '../libs/fonts';
 

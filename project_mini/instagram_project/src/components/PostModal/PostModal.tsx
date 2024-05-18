@@ -4,8 +4,8 @@ import { PostModalStyled } from "./styled";
 import CloseIcon from "../ui/icons/CloseIcon";
 
 type Props = {
-  children: ReactNode;
   onClose: () => void;
+  children: ReactNode;
 };
 
 export default function PostModal({ onClose, children }: Props) {

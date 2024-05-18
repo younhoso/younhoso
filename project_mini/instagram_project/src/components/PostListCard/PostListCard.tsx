@@ -10,6 +10,8 @@ import FormComment from "../FormComment/FormComment";
 import ActionBar from "../ActionBar/ActionBar";
 import ModalPortal from "../ModalPortal/ModalPortal";
 import PostModal from "../PostModal/PostModal";
+import PostDetail from "../PostDetail/PostDetail";
+import PostUserAvatar from "../PostUserAvatar/PostUserAvatar";
 
 type Props = {
   post: SimplePost;
@@ -21,10 +23,7 @@ export default function PostListCard({ post, priority = false }: Props) {
   const { userImage, username, image, createdAt, likes, text } = post;
   return (
     <PostListCardStyled className={clsx("PostListCard rounded")}>
-      <div className="flex">
-        <Avatar className="following" image={userImage} />
-        <span>{username}</span>
-      </div>
+      <PostUserAvatar image={userImage} username={username} />
       <Image
         src={image}
         alt={`photo by ${username}`}
@@ -43,9 +42,7 @@ export default function PostListCard({ post, priority = false }: Props) {
       {openModal && (
         <ModalPortal>
           <PostModal onClose={() => setOpenMoal(false)}>
-            <div className="modal">
-              <div>포스트 상세 페이지!!</div>
-            </div>
+            <PostDetail post={post} />
           </PostModal>
         </ModalPortal>
       )}

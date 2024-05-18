@@ -21,7 +21,7 @@ export default function PostModal({ onClose, children }: Props) {
       <button onClick={() => onClose()}>
         <CloseIcon />
       </button>
-      {children}
+      <div className="contents">{children}</div>
     </PostModalStyled>
   );
 }

@@ -35,7 +35,15 @@ export default function PostDetail({ post }: PostDetailProps) {
             comments.map(
               ({ image, username: commentUsername, comment }, index) => (
                 <li key={index}>
-                  <Avatar image={image} />
+                  <Avatar
+                    image={image}
+                    size="small"
+                    highlight={commentUsername === username}
+                  />
+                  <div>
+                    <span>{commentUsername}</span>
+                    <span>{comment}</span>
+                  </div>
                 </li>
               )
             )}

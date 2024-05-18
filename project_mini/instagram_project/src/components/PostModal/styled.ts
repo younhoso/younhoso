@@ -24,4 +24,9 @@ export const PostModalStyled = styled.section`
     font-size: 30px;
     z-index: 10;
   }
+
+  .contents {
+    background-color: #fff;
+    width: 60%;
+  }
 `;

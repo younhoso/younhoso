@@ -5,11 +5,15 @@ export interface Category {
 
 export const defaultSiteMaps: Category[] = [
   {
-    title: "주소 줄이기",
-    pageUrl: "",
+    title: 'Accordion',
+    pageUrl: '/accordion',
   },
   {
-    title: "QR코드",
-    pageUrl: "",
+    title: 'Tab',
+    pageUrl: '/tab',
+  },
+  {
+    title: '이미지 파일 업로드 미리보기',
+    pageUrl: '/imageFile',
   },
 ];

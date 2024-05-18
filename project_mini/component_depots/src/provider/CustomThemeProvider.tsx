@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-import { DefaultTheme, ThemeProvider } from "styled-components";
+import { DefaultTheme, ThemeProvider } from 'styled-components';
 
-import StyledComponentsRegistry from "@/libs/registry";
-import { InitGlobalStyled } from "@/styles/init";
-import { colors, fontSizes, fontWeight } from "@/styles/theme";
+import StyledComponentsRegistry from '@/libs/registry';
+import { InitGlobalStyled } from '@/styles/init';
+import { colors, fontSizes, fontWeight } from '@/styles/theme';
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
     colors: typeof colors;
     fontWeight: typeof fontWeight;
@@ -22,11 +22,7 @@ export const theme: DefaultTheme = {
   fontSizes,
 };
 
-export default function CustomThemeProvider({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function CustomThemeProvider({ children }: { children: ReactNode }) {
   return (
     <StyledComponentsRegistry>
       <ThemeProvider theme={theme}>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   description: 'OMT Labs',
   icons: {
-    icon: [{ url: '/favicon.ico', rel: 'shortcut icon' }],
+    icon: [{ url: '/', rel: 'shortcut icon' }],
   },
   robots: {
     index: true,

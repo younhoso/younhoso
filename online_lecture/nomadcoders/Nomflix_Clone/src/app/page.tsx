@@ -3,6 +3,8 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
+import { useRouter } from 'next/navigation';
+
 import axios from 'axios';
 import { AnimatePresence } from 'framer-motion';
 
@@ -10,6 +12,7 @@ import {
   Banner,
   Box,
   HomePageStyled,
+  Info,
   Overview,
   Row,
   Slider,
@@ -22,6 +25,7 @@ import { makeImagePath } from '@/utils/makeImagePath';
 const offset = 6;
 
 export default function HomePage() {
+  const router = useRouter();
   const { data: movie, isPending: movieLoading } = useQuery<MoviesResponseData>({
     queryKey: ['/api/main'],
     queryFn: () => axios.get('/api/main'),
@@ -54,6 +58,37 @@ export default function HomePage() {
     },
   };
 
+  const boxVariants = {
+    normal: {
+      scale: 1,
+    },
+    hover: {
+      zIndex: 1,
+      scale: 1.2,
+      y: -40,
+      transition: {
+        delay: 0.2,
+        duaration: 0.1,
+        type: 'tween',
+      },
+    },
+  };
+
+  const infoVariants = {
+    hover: {
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        duaration: 0.1,
+        type: 'tween',
+      },
+    },
+  };
+
+  const onBoxClicked = (movieId: number) => {
+    router.push(`/movies/${movieId}`);
+  };
+
   return (
     <HomePageStyled>
       <Banner
@@ -78,7 +113,19 @@ export default function HomePage() {
               .slice(offset * index, offset * index + offset)
               .map(data => {
                 return (
-                  <Box key={data.id} data-bgphoto={makeImagePath(data.backdrop_path, 'w500')} />
+                  <Box
+                    key={data.id}
+                    initial="normal"
+                    whileHover="hover"
+                    variants={boxVariants}
+                    transition={{ type: 'tween' }}
+                    onClick={() => onBoxClicked(data.id)}
+                    data-bgphoto={makeImagePath(data.backdrop_path, 'w500')}
+                  >
+                    <Info variants={infoVariants}>
+                      <h4>{data.title}</h4>
+                    </Info>
+                  </Box>
                 );
               })}
           </Row>

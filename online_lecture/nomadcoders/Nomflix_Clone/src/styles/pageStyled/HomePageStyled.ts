@@ -57,8 +57,31 @@ export const Row = styled(motion.div)`
 
 export const Box = styled(motion.div)<{ 'data-bgphoto': string }>`
   height: 200px;
+  font-size: 66px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(${props => props['data-bgphoto']});
   background-size: cover;
   background-position: center center;
+  cursor: pointer;
+  &:first-child {
+    transform-origin: center left;
+  }
+  &:last-child {
+    transform-origin: center right;
+  }
+`;
+
+export const Info = styled(motion.div)`
+  padding: 10px;
+  color: ${props => props.theme.colors.white.lighter};
+  background-color: ${props => props.theme.colors.black.lighter};
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  h4 {
+    font-size: ${props => props.theme.fontSizes.font18};
+    font-weight: ${props => props.theme.fontWeight.medium};
+    text-align: center;
+  }
 `;

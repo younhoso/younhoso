@@ -1,4 +1,4 @@
-import { ChangeEvent, forwardRef, useEffect } from 'react';
+import { ChangeEvent, forwardRef } from 'react';
 
 import clsx from 'clsx';
 

@@ -6,6 +6,7 @@ import { FormEvent, useState } from 'react';
 import useSWR from 'swr';
 import { ProfileUser } from '@/model/user';
 import GridSpinner from '../ui/GridSpinner';
+import UserCard from '../UserCard/UserCard';
 
 export default function UserSearch() {
   // api/search/${keyword}
@@ -13,11 +14,9 @@ export default function UserSearch() {
   // 검색하는 keyword가 없다면 /api/search -> 전체 유저
   const [keyword, setKeyword] = useState('');
   const {data: users, isLoading, error} = useSWR<ProfileUser[]>(`/api/search/${keyword}`);
-  console.log(users)
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-
   }
 
  return (
@@ -32,7 +31,7 @@ export default function UserSearch() {
       <ul>
         {users && users.map(user => (
           <li key={user.username}>
-            <p>{user.username}</p>
+            <UserCard user={user} />
           </li>
         ))}
       </ul>

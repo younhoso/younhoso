@@ -1,17 +1,18 @@
-import { client } from './sanity';
+import { ProfileUser } from "@/model/user";
+import { client } from "./sanity";
 
 type OAuthUser = {
   id: string;
   email: string;
   name: string;
   username: string;
-  image?: string | null; 
+  image?: string | null;
 };
 
-export async function addUser({id, username, email, name, image}: OAuthUser) {
+export async function addUser({ id, username, email, name, image }: OAuthUser) {
   return client.createIfNotExists({
     _id: id,
-    _type: 'user',
+    _type: "user",
     username,
     email,
     name,
@@ -19,8 +20,8 @@ export async function addUser({id, username, email, name, image}: OAuthUser) {
     following: [],
     followers: [],
     bookmarks: [],
-  })
-};
+  });
+}
 
 export async function getUserByUsername(username: string) {
   return client.fetch(
@@ -31,19 +32,27 @@ export async function getUserByUsername(username: string) {
       followers[]->{username, image},
       "bookmarks":bookmarks[]->_id
     }`
-  )
+  );
 }
 
 export async function searchUsers(keyword?: string) {
-  const query = keyword 
+  const query = keyword
     ? `&& (name match "${keyword}") || (username match "${keyword}")`
-    : '';
-  
-  return client.fetch(
-    `*[_type == "user" ${query}]{
+    : "";
+
+  return client
+    .fetch(
+      `*[_type == "user" ${query}]{
       ...,
       "following": count(following),
       "followers": count(followers),
     }`
-  )
+    )
+    .then((users) =>
+      users.map((user: ProfileUser) => ({
+        ...user,
+        following: user.following ?? 0,
+        followers: user.followers ?? 0,
+      }))
+    );
 }

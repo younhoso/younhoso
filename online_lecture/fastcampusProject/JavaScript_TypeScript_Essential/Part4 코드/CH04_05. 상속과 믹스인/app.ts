@@ -27,9 +27,9 @@ interface NewsComment extends News {
   readonly level: number;
 }
 
-const NEWS_URL = 'https://api.hnpwa.com/v0/news/1.json';
-const CONTENT_URL = 'https://api.hnpwa.com/v0/item/@id.json';
-const container: HTMLElement | null = document.getElementById('root');
+const NEWS_URL = "https://api.hnpwa.com/v0/news/1.json";
+const CONTENT_URL = "https://api.hnpwa.com/v0/item/@id.json";
+const container: HTMLElement | null = document.getElementById("root");
 const store: Store = {
   currentPage: 1,
   feeds: [],
@@ -45,7 +45,7 @@ class Api {
   }
 
   getRequest<AjaxResponse>(): AjaxResponse {
-    this.ajax.open('GET', this.url, false);
+    this.ajax.open("GET", this.url, false);
     this.ajax.send();
 
     return JSON.parse(this.ajax.response);
@@ -64,7 +64,7 @@ class NewsDetailApi extends Api {
   }
 }
 
-function makeFeeds(feeds: NewsFeed[]):  NewsFeed[] {
+function makeFeeds(feeds: NewsFeed[]): NewsFeed[] {
   for (let i = 0; i < feeds.length; i++) {
     feeds[i].read = false;
   }
@@ -76,8 +76,8 @@ function updateView(html: string): void {
   if (container) {
     container.innerHTML = html;
   } else {
-    console.error('최상위 컨테이너가 없어 UI를 진행하지 못합니다.')
-  }  
+    console.error("최상위 컨테이너가 없어 UI를 진행하지 못합니다.");
+  }
 }
 
 function newsFeed(): void {
@@ -113,15 +113,19 @@ function newsFeed(): void {
     newsFeed = store.feeds = makeFeeds(api.getData());
   }
 
-  for(let i = (store.currentPage - 1) * 10; i < store.currentPage * 10; i++) {
+  for (let i = (store.currentPage - 1) * 10; i < store.currentPage * 10; i++) {
     newsList.push(`
-      <div class="p-6 ${newsFeed[i].read ? 'bg-red-500' : 'bg-white'} mt-6 rounded-lg shadow-md transition-colors duration-500 hover:bg-green-100">
+      <div class="p-6 ${
+        newsFeed[i].read ? "bg-red-500" : "bg-white"
+      } mt-6 rounded-lg shadow-md transition-colors duration-500 hover:bg-green-100">
         <div class="flex">
           <div class="flex-auto">
             <a href="#/show/${newsFeed[i].id}">${newsFeed[i].title}</a>  
           </div>
           <div class="text-center text-sm">
-            <div class="w-10 text-white bg-green-300 rounded-lg px-0 py-2">${newsFeed[i].comments_count}</div>
+            <div class="w-10 text-white bg-green-300 rounded-lg px-0 py-2">${
+              newsFeed[i].comments_count
+            }</div>
           </div>
         </div>
         <div class="flex mt-3">
@@ -135,9 +139,15 @@ function newsFeed(): void {
     `);
   }
 
-  template = template.replace('{{__news_feed__}}', newsList.join(''));
-  template = template.replace('{{__prev_page__}}', String(store.currentPage > 1 ? store.currentPage - 1 : 1));
-  template = template.replace('{{__next_page__}}', String(store.currentPage + 1));
+  template = template.replace("{{__news_feed__}}", newsList.join(""));
+  template = template.replace(
+    "{{__prev_page__}}",
+    String(store.currentPage > 1 ? store.currentPage - 1 : 1)
+  );
+  template = template.replace(
+    "{{__next_page__}}",
+    String(store.currentPage + 1)
+  );
 
   updateView(template);
 }
@@ -145,7 +155,7 @@ function newsFeed(): void {
 function makeComment(comments: NewsComment[]): string {
   const commentString = [];
 
-  for(let i = 0; i < comments.length; i++) {
+  for (let i = 0; i < comments.length; i++) {
     const comment: NewsComment = comments[i];
 
     commentString.push(`
@@ -163,12 +173,12 @@ function makeComment(comments: NewsComment[]): string {
     }
   }
 
-  return commentString.join('');
+  return commentString.join("");
 }
 
 function newsDetail(): void {
   const id = location.hash.substr(7);
-  const api = new NewsDetailApi(CONTENT_URL.replace('@id', id));
+  const api = new NewsDetailApi(CONTENT_URL.replace("@id", id));
   const newsDetail: NewsDetail = api.getData();
   let template = `
     <div class="bg-gray-600 min-h-screen pb-8">
@@ -199,29 +209,31 @@ function newsDetail(): void {
     </div>
   `;
 
-  for(let i=0; i < store.feeds.length; i++) {
+  for (let i = 0; i < store.feeds.length; i++) {
     if (store.feeds[i].id === Number(id)) {
       store.feeds[i].read = true;
       break;
     }
   }
 
-  updateView(template.replace('{{__comments__}}', makeComment(newsDetail.comments)));
+  updateView(
+    template.replace("{{__comments__}}", makeComment(newsDetail.comments))
+  );
 }
 
 function router(): void {
   const routePath = location.hash;
 
-  if (routePath === '') {
+  if (routePath === "") {
     newsFeed();
-  } else if (routePath.indexOf('#/page/') >= 0) {
+  } else if (routePath.indexOf("#/page/") >= 0) {
     store.currentPage = Number(routePath.substr(7));
     newsFeed();
   } else {
-    newsDetail()
+    newsDetail();
   }
 }
 
-window.addEventListener('hashchange', router);
+window.addEventListener("hashchange", router);
 
 router();

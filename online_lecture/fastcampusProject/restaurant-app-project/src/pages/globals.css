@@ -31,6 +31,7 @@
 
 .navbar__button {
   display: none;
+  cursor: pointer;
 }
 
 .navbar__list--item {
@@ -39,6 +40,10 @@
 
 .navbar__list--item:hover {
   color: darkgray;
+}
+
+.layout {
+  padding-top: 52px;
 }
 
 @media only screen and (max-width: 600px) {

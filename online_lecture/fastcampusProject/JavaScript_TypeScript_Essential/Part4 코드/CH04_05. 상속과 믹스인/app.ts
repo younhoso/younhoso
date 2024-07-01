@@ -44,7 +44,7 @@ class Api {
     this.url = url;
   }
 
-  getRequest<AjaxResponse>(): AjaxResponse {
+  protected getRequest<AjaxResponse>(): AjaxResponse {
     this.ajax.open("GET", this.url, false);
     this.ajax.send();
 

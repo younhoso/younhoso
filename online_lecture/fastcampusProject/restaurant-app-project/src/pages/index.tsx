@@ -1,29 +1,30 @@
-import Link from 'next/link';
+import { useState } from 'react';
 
-export default function Home() {
+import Map from '@/components/Map';
+import Markers from '@/components/Markers';
+import StoreBox from '@/components/StoreBox';
+import { DataItem, StoreType } from '@/types';
+
+export default function Home({ stores }: { stores: StoreType[] }) {
+  const [map, setMap] = useState<kakao.maps.Map | null>(null);
+  const [currentStore, setCurrentStore] = useState<DataItem | null>(null);
+
   return (
-    <ul>
-      <li>
-        <Link href="/stores">맛집 목록</Link>
-      </li>
-      <li>
-        <Link href="/stores/new">맛집 생성</Link>
-      </li>
-      <li>
-        <Link href="/stores/1">맛집 상세 페이지</Link>
-      </li>
-      <li>
-        <Link href="/stores/1/edit">맛집 수정 페이지</Link>
-      </li>
-      <li>
-        <Link href="/users/login">로그인 페이지</Link>
-      </li>
-      <li>
-        <Link href="/users/mypage">마이페이지</Link>
-      </li>
-      <li>
-        <Link href="/users/likes">찜한 맛집</Link>
-      </li>
-    </ul>
+    <>
+      <Map setMap={v => setMap(v)} />
+      <Markers storeDatas={stores} map={map} setCurrentStore={v => setCurrentStore(v)} />
+      <StoreBox store={currentStore} setStore={v => setCurrentStore(v)} />
+    </>
   );
+}
+
+export async function getStaticProps() {
+  const stores = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stores`).then(res =>
+    res.json(),
+  );
+
+  return {
+    props: { stores },
+    revalidate: 60 * 60,
+  };
 }

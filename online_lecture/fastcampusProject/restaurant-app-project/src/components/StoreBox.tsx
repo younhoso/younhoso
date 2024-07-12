@@ -8,10 +8,10 @@ import { HiOutlineMapPin } from 'react-icons/hi2';
 
 import Image from 'next/image';
 
-import { DataItem } from '@/types';
+import { StoreTypeCustom } from '@/types';
 
 interface StoreBoxProps {
-  store: DataItem | null;
+  store: StoreTypeCustom | null;
   setStore: (v: null) => void;
 }
 
@@ -25,8 +25,8 @@ export default function StoreBox({ store, setStore }: StoreBoxProps) {
               <div className="store-item">
                 <Image
                   src={
-                    store?.bizcnd_code_nm
-                      ? `/images/markers/${store?.bizcnd_code_nm}.png`
+                    store?.category
+                      ? `/images/markers/${store?.category}.png`
                       : `/images/markers/default.png`
                   }
                   width={40}
@@ -35,8 +35,8 @@ export default function StoreBox({ store, setStore }: StoreBoxProps) {
                   priority={true}
                 />
                 <div>
-                  <div className="font-semibold ">{store?.upso_nm}</div>
-                  <div className="font-sm">{store?.cob_code_nm}</div>
+                  <div className="font-semibold ">{store?.name}</div>
+                  <div className="font-sm">{store?.storeType}</div>
                 </div>
               </div>
               <button type="button" onClick={() => setStore(null)}>
@@ -45,19 +45,19 @@ export default function StoreBox({ store, setStore }: StoreBoxProps) {
             </div>
             <div className="mt-2 flex gap-2 items-center">
               <HiOutlineMapPin />
-              {store?.rdn_code_nm || 'coming soon'}
+              {store?.address || 'coming soon'}
             </div>
             <div className="mt-2 flex gap-2 items-center">
               <AiOutlinePhone />
-              {store?.tel_no || 'coming soon'}
+              {store?.phone || 'coming soon'}
             </div>
             <div className="mt-2 flex gap-2 items-center">
               <AiOutlineInfoCircle />
-              {store?.crtfc_gbn_nm || 'coming soon'}
+              {store?.storeType || 'coming soon'}
             </div>
             <div className="mt-2 flex gap-2 items-center">
               <AiOutlineCheck />
-              {store?.bizcnd_code_nm || 'coming soon'}
+              {store?.category || 'coming soon'}
             </div>
           </div>
           <button

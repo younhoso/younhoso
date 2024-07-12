@@ -3,11 +3,11 @@ import { useState } from 'react';
 import Map from '@/components/Map';
 import Markers from '@/components/Markers';
 import StoreBox from '@/components/StoreBox';
-import { DataItem, StoreType } from '@/types';
+import { StoreTypeCustom } from '@/types';
 
-export default function Home({ stores }: { stores: StoreType[] }) {
+export default function Home({ stores }: { stores: StoreTypeCustom[] }) {
   const [map, setMap] = useState<kakao.maps.Map | null>(null);
-  const [currentStore, setCurrentStore] = useState<DataItem | null>(null);
+  const [currentStore, setCurrentStore] = useState<StoreTypeCustom | null>(null);
 
   return (
     <>

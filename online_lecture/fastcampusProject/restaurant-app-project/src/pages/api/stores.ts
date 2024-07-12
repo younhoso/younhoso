@@ -1,11 +1,16 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { DataItem, StoreType } from '@/types';
+import { PrismaClient } from '@prisma/client';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<DataItem[]>) {
-  const data = await import('../../data/store_data.json');
-  const stores = (data as { default: StoreType }).default.DATA;
+import { StoreTypeCustom } from '@/types';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<StoreTypeCustom[]>,
+) {
+  const prisma = new PrismaClient();
+  const stores = await prisma.store.findMany();
 
   res.status(200).json(stores);
 }

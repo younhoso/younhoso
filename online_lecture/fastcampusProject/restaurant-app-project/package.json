@@ -16,8 +16,9 @@
     "react-icons": "^5.2.1"
   },
   "devDependencies": {
+    "@prisma/client": "^5.16.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@types/node": "^20",
+    "@types/node": "^14.14.21",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
@@ -26,7 +27,12 @@
     "eslint-plugin-prettier": "^5.1.0",
     "postcss": "^8",
     "prettier": "^3.1.1",
+    "prisma": "^5.16.1",
     "tailwindcss": "3.3.3",
+    "ts-node": "^9.1.1",
     "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }

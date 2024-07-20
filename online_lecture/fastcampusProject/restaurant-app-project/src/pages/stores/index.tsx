@@ -2,11 +2,33 @@ import Image from 'next/image';
 
 import { StoreTypeCustom } from '@/types';
 
-export default function StoreListPage({ stores }: { stores: StoreTypeCustom[] }) {
+import {useQuery} from '@tanstack/react-query';
+import Loading from '@/components/Loading';
+import axios from "axios";
+
+export default function StoreListPage() {
+  const {data, isPending, isError} = useQuery({
+    queryKey: ['stores'], 
+    queryFn: async () => {
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/stores`);
+      return {
+        stores: data as StoreTypeCustom[]
+      }
+    }
+  });
+
+  if(isPending){
+    return <Loading />
+  }
+
+  if(isError){
+    return <div className='w-full h-screen mx-auto pt-[10%] text-red-500 text-center font-semibold'>다시 시도해주세요</div>
+  }
+
   return (
     <div className="px-4 md:max-w-5xl mx-auto py-8">
       <ul role="list" className="divide-y divide-gray-100">
-        {stores?.map((store, index) => (
+        {data?.stores?.map((store, index) => (
           <li className="flex justify-between gap-x-6 py-5" key={index}>
             <div className="flex gap-x-4">
               <Image
@@ -41,25 +63,4 @@ export default function StoreListPage({ stores }: { stores: StoreTypeCustom[] })
   );
 }
 
-export async function getServerSideProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stores`);
 
-  if (!res.ok) {
-    console.error(`Failed to fetch stores: ${res.status} ${res.statusText}`);
-    return {
-      props: { stores: [] },
-    };
-  }
-
-  try {
-    const stores = await res.json();
-    return {
-      props: { stores },
-    };
-  } catch (error) {
-    console.error('Error parsing JSON:', error);
-    return {
-      props: { stores: [] },
-    };
-  }
-}

@@ -42,11 +42,24 @@ export default function StoreListPage({ stores }: { stores: StoreTypeCustom[] })
 }
 
 export async function getServerSideProps() {
-  const stores = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stores`).then(res =>
-    res.json(),
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stores`);
 
-  return {
-    props: { stores },
-  };
+  if (!res.ok) {
+    console.error(`Failed to fetch stores: ${res.status} ${res.statusText}`);
+    return {
+      props: { stores: [] },
+    };
+  }
+
+  try {
+    const stores = await res.json();
+    return {
+      props: { stores },
+    };
+  } catch (error) {
+    console.error('Error parsing JSON:', error);
+    return {
+      props: { stores: [] },
+    };
+  }
 }

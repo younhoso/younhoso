@@ -1,10 +1,10 @@
 import { useCallback, useEffect } from 'react';
 
-import { StoreTypeCustom } from '@/types';
+import { StoreApiResponse, StoreTypeCustom } from '@/types';
 
 interface MarkersProps {
   map: any;
-  storeDatas: StoreTypeCustom[];
+  storeDatas: StoreApiResponse;
   setCurrentStore: (v: StoreTypeCustom) => void;
 }
 
@@ -14,7 +14,7 @@ export default function Markers({ map, storeDatas, setCurrentStore }: MarkersPro
 
     if (map) {
       // 식당 데이터 마커 띄우기
-      storeDatas?.map(store => {
+      storeDatas.data?.map(store => {
         const imageSrc = store?.category // 마커이미지의 주소입니다
             ? `/images/markers/${store?.category}.png`
             : `/images/markers/default.png`,

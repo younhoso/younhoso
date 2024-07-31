@@ -1,37 +1,46 @@
-import Image from 'next/image';
+import { useQuery } from '@tanstack/react-query';
 
-import { StoreTypeCustom } from '@/types';
+import { useRouter } from 'next/router';
 
-import {useQuery} from '@tanstack/react-query';
+import axios from 'axios';
+
 import Loading from '@/components/Loading';
-import axios from "axios";
+import Pagination from '@/components/Pagination';
+import { StoreApiResponse } from '@/types';
 
 export default function StoreListPage() {
-  const {data, isPending, isError} = useQuery({
-    queryKey: ['stores'], 
+  const router = useRouter();
+  const { page = '1' }: any = router.query;
+
+  const { data, isPending, isError } = useQuery({
+    queryKey: [`stores-${page}`],
     queryFn: async () => {
-      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/stores`);
+      const { data } = await axios.get(`/api/stores?page=${page}`);
       return {
-        stores: data as StoreTypeCustom[]
-      }
-    }
+        stores: data as StoreApiResponse,
+      };
+    },
   });
 
-  if(isPending){
-    return <Loading />
+  if (isPending) {
+    return <Loading />;
   }
 
-  if(isError){
-    return <div className='w-full h-screen mx-auto pt-[10%] text-red-500 text-center font-semibold'>다시 시도해주세요</div>
+  if (isError) {
+    return (
+      <div className="w-full h-screen mx-auto pt-[10%] text-red-500 text-center font-semibold">
+        다시 시도해주세요
+      </div>
+    );
   }
 
   return (
     <div className="px-4 md:max-w-5xl mx-auto py-8">
       <ul role="list" className="divide-y divide-gray-100">
-        {data?.stores?.map((store, index) => (
+        {data?.stores.data?.map((store, index) => (
           <li className="flex justify-between gap-x-6 py-5" key={index}>
             <div className="flex gap-x-4">
-              <Image
+              <img
                 src={
                   store?.category
                     ? `/images/markers/${store?.category}.png`
@@ -40,7 +49,6 @@ export default function StoreListPage() {
                 width={48}
                 height={48}
                 alt="아이콘 이미지"
-                priority={true}
               />
               <div>
                 <div className="text-sm font-semibold leading-9 text-gray-900">{store?.name}</div>
@@ -59,8 +67,7 @@ export default function StoreListPage() {
           </li>
         ))}
       </ul>
+      {data.stores.totalPage && <Pagination total={data.stores.totalPage} page={page} />}
     </div>
   );
 }
-
-

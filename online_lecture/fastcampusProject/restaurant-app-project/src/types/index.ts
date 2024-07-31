@@ -76,3 +76,10 @@ export interface StoreTypeCustom {
   storeType: String | null; // cob_code_nm
   foodCertifyName: String | null; // crtfc_gbn_nm
 }
+
+export interface StoreApiResponse {
+  data: StoreTypeCustom[];
+  totalPage?: number;
+  totalCont?: number;
+  page?: number
+}

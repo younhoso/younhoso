@@ -1,19 +1,20 @@
 import { useState } from 'react';
 
+import axios from 'axios';
+
 import Map from '@/components/Map';
 import Markers from '@/components/Markers';
 import StoreBox from '@/components/StoreBox';
-import { StoreTypeCustom } from '@/types';
-import axios from "axios";
+import { StoreApiResponse, StoreTypeCustom } from '@/types';
 
-export default function Home({ stores }: { stores: StoreTypeCustom[] }) {
+export default function Home({ stores }: { stores: StoreApiResponse }) {
   const [map, setMap] = useState<kakao.maps.Map | null>(null);
   const [currentStore, setCurrentStore] = useState<StoreTypeCustom | null>(null);
 
   return (
     <>
       <Map setMap={v => setMap(v)} />
-      <Markers storeDatas={stores} map={map} setCurrentStore={v => setCurrentStore(v)} />
+      <Markers map={map} storeDatas={stores} setCurrentStore={v => setCurrentStore(v)} />
       <StoreBox store={currentStore} setStore={v => setCurrentStore(v)} />
     </>
   );

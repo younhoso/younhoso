@@ -5,9 +5,9 @@ import axios from 'axios';
 import Map from '@/components/Map';
 import Markers from '@/components/Markers';
 import StoreBox from '@/components/StoreBox';
-import { StoreApiResponse, StoreTypeCustom } from '@/types';
+import { StoreTypeCustom } from '@/types';
 
-export default function Home({ stores }: { stores: StoreApiResponse }) {
+export default function Home({ stores }: { stores: StoreTypeCustom[] }) {
   const [map, setMap] = useState<kakao.maps.Map | null>(null);
   const [currentStore, setCurrentStore] = useState<StoreTypeCustom | null>(null);
 

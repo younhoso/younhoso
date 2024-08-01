@@ -81,5 +81,5 @@ export interface StoreApiResponse {
   data: StoreTypeCustom[];
   totalPage?: number;
   totalCont?: number;
-  page?: number
+  page?: number;
 }

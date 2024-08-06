@@ -4,7 +4,7 @@ import { StoreTypeCustom } from '@/types';
 
 interface MarkersProps {
   map: any;
-  storeDatas: StoreTypeCustom[];
+  storeDatas: StoreTypeCustom[] | undefined;
   setCurrentStore: (v: StoreTypeCustom) => void;
 }
 

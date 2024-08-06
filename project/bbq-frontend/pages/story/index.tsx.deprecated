@@ -1,0 +1,44 @@
+/*
+import { Desktop, Mobile } from "@/components/functions";
+import { StoryPageTemplate } from "@/components/templates";
+import Head from "next/head";
+import { useState } from "react";
+
+export default function Story() {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentHistory, setCurrentHistory] = useState<string[]>([
+    "2020",
+    "2010",
+    "2000",
+    "1990",
+  ]);
+  const [currentTab, setCurrentTab] = useState<string>("STORY");
+  const [currentYoutube, setCurrentYoutube] = useState({
+    code: "AlrJAiKgP_s",
+    title:
+      "BBQ Garlicioso 3종 : 갈리시오소 바삭갈릭, 단짠갈릭, 착착갈릭 - 30s New Ver.",
+  });
+
+  const props = {
+    currentIndex,
+    setCurrentIndex,
+    currentHistory,
+    setCurrentHistory,
+    currentTab,
+    setCurrentTab,
+    currentYoutube,
+    setCurrentYoutube,
+  };
+
+  return (
+    <>
+      <Desktop>
+        <StoryPageTemplate {...props} />
+      </Desktop>
+      <Mobile>
+        <StoryPageTemplate.Mobile {...props} />
+      </Mobile>
+    </>
+  );
+}
+*/

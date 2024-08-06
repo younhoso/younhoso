@@ -1,0 +1,111 @@
+.sliderWrap-sl{
+			width:100vw;
+			/*width: calc( 100vw - 18px );*/
+			height:500px;
+			overflow: hidden;
+		}
+
+		.swiper-container-sl {
+		    position:relative;
+		   	width: 1968px;
+		    height: 500px;
+		    transform-origin: top center;
+		    transform : scale(1) translateX(-50%);
+		    margin-left:50%;
+		}
+
+
+		.swiper-container-sl .swiper-slide {
+		  width: 400px;
+		  height: 500px;
+		  display:flex;
+		  background: #CBD6D6;
+		  align-items: center;
+		  justify-content:center;
+		  transition:all 200ms linear;
+		  transform: scale(0.76) !important;
+		  overflow:hidden;
+		  border-radius: 32px;
+		}
+		
+		.swiper-container-sl .swiper-slide img {
+		  width:100%;
+		}
+
+		.swiper-container-sl .swiper-slide.swiper-slide-active {
+		  width: 400px;
+		  height: 500px;
+		  transform: scale(1) !important;
+		}
+
+		.swiper-container-sl .swiper-slide.swiper-slide-active > .ment{
+			opacity:1;	
+		}
+
+		.swiper-container-sl .swiper-slide-duplicate-active{
+		  width: 400px;
+		  height: 500px;
+		  transform: scale(1) !important;
+		}
+
+		.swiper-container-sl .swiper-slide__content {
+		  height: 500px;
+		}
+
+		.swiper-container-sl .swiper-slide > img{
+			width:100%;
+		}
+
+		.swiper-container-sl .swiper-slide > .ment {
+		  /*opacity:0;*/
+		}
+
+		.swiper-container-sl .ment{
+		    position: absolute;
+		    text-align: center;
+		    width : 400px;
+		    margin : 0 auto;
+		    font-size : 3.2rem;
+		    font-weight:bold;
+		}
+		.swiper-container-sl .sub .ment {}
+
+		.swiper-container-sl .mentTitle{
+			color:#fff;
+		}
+
+		.swiper-container-sl .mentSub{
+			color:#C2C2C2;
+		}
+
+		.swiper-container-sl .mentSub2{
+			color:#F3FFFF;
+		}
+
+		/* indicator */
+		
+		.swiper-pagination-sl{
+			transform: translateX(-50%);
+			margin-left:50%;
+			margin-top:28px;
+			position:relative;
+			text-align:center;
+			padding-bottom:98px;
+		}
+
+		.swiper-pagination-sl .swiper-pagination-bullet{
+			width:1.2rem;
+			height:1.2rem;
+			background-color:#e8edee;
+			opacity:1;
+			margin-left:1rem;
+			margin-right:1rem;
+		}
+
+		.swiper-pagination-sl .swiper-pagination-bullet-active{
+			background-color:#037781;
+		}		
+
+		@media all and (max-width:767px) {
+			.swiper-container-sl .ment{font-size:3.2rem;}
+		}

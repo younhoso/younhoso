@@ -1,0 +1,127 @@
+.news {
+  position: relative;
+  width: 100vw;
+  height: 890px;
+  margin-top: 70px;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.mobile {
+  display: none;
+}
+
+.pc-swiper {
+  /* 한화면에 버튼까지 담아달라는 요청으로 사이즈 임의수정 */
+  /* width: 1160px;
+  height: 812px; */
+  width: 1060px;
+  height: 742px;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px #0000001a;
+}
+
+.pc-swiper-pagination .swiper-pagination-bullet {
+  width: 42px;
+  height: 42px;
+  color: #c6c6c6;
+  font-size: 24px;
+  font-weight: 400;
+  background: none;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pc .container {
+  position: relative;
+  height: 100%;
+}
+
+.mobile-swiper-pagination .swiper-pagination-bullet {
+  width: 25px;
+  height: 25px;
+  color: #c6c6c6;
+  font-size: 13px;
+  font-weight: 400;
+  background: none;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pc-swiper-pagination {
+  position: absolute;
+  bottom: 40px !important;
+}
+.mobile-swiper-pagination {
+  margin-top: 43px;
+}
+
+.pc-swiper-pagination .swiper-pagination-bullet-active {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  background-color: transparent;
+  background-size: contain;
+}
+.mobile-swiper-pagination .swiper-pagination-bullet-active {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-color: transparent;
+  background-size: contain;
+}
+
+.pc-swiper-pagination .bullet-container,
+.mobile-swiper-pagination .bullet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pc .title {
+  position: absolute;
+  font-weight: bold;
+  transform: rotate(-90deg);
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  color: #ccc;
+  left: -75px;
+  top: 24px;
+}
+
+@media (max-width: 1080px) {
+  .news {
+    padding: 66px 16px 90px 16px;
+    margin-top: 52px;
+    display: block;
+    height: auto;
+  }
+  .swiper-pagination .swiper-pagination-bullet {
+    font-size: 13px;
+    width: 32px;
+  }
+  .swiper-pagination .swiper-pagination-bullet-active {
+    width: 25px;
+    height: 25px;
+  }
+  .pc {
+    display: none !important;
+  }
+  .mobile {
+    display: block !important;
+    overflow: hidden;
+  }
+}

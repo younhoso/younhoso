@@ -1,0 +1,379 @@
+<style>
+.event .content_wrap .event_main_img {margin-top:5rem; margin-bottom:8rem;}
+.event .content_wrap .event_main_img + p {font-size:3.6rem; color:#000;}
+.event .content_wrap .event_main_img + p + p {font-size:3.6rem; margin-top:4rem;}
+
+.event section + section h4 {font-size:3rem;}
+.event section + section h2 {font-size:4.4rem;}
+.event section + section img {margin-top: 4.6rem; margin-bottom: 9rem;}
+
+.event section img {max-width:100%;}
+
+.event .correct_box {padding:9rem 7rem; background:#F9F9F9; box-shadow: 0px 3px 6px #0000001A; border-radius: 16px;}
+.event .correct_box .correct {font-size:4.2rem; height:1em; line-height:1em; color:#000; font-weight:bold;}
+.event .correct_box .correct span {font-size:3.6rem; height:1em; line-height:1em; color:#c2c2c2; font-weight:400;}
+.event .correct_box ul li {font-size:3.8rem; height:1em; line-height:1em; font-weight:bold; color:#000; margin-top:1em;}
+.event .correct_box ul li span {font-weight:400; height:1em; line-height:1em;}
+.event .correct_box ul li span + span {font-weight:bold; color:#037781;}
+
+.event .reward {}
+.event .reward .msg {text-align:center;}
+.event .reward .msg span {padding:0rem 3.5rem; height:7rem; display:inline-flex; align-items:center; border:1px solid #acacac; border-radius:100px; font-size:3rem; color:#000; margin:0 auto; font-weight:500;}
+.event .reward .info {font-size:3.6rem; color:#000; font-weight:bold; line-height:4.4rem; text-align:center; margin-top:2rem;}
+.event .reward .info span {color:#fff; background:#037781; padding:0 1rem;}
+.event .reward ul {display:flex; flex-direction:column; margin-top:7.4rem;}
+.event .reward ul li {display:flex; flex-direction:column;}
+.event .reward ul li:after {display:block; content:''; height:1px; width:100%; background:#EFEFEF; margin:8rem 0;}
+.event .reward ul li:last-child {margin-bottom:0;}
+.event .reward ul li:last-child:after {display:none;}
+.event .reward .winner {display:flex; margin-bottom:5.2rem;}
+.event .reward .winner img {width:8.2rem; height:8.2rem; margin:0;}
+.event .reward .datas {margin-left:3.8rem;}
+.event .reward .datas .nickname {color: #037781; font-size:2.6rem; font-weight:bold; margin-bottom:1.2rem;}
+.event .reward .balloon {width:577px; background: #FFFFFF 0% 0% no-repeat padding-box; filter: drop-shadow(0px 3px 6px #0000001a); border: 1px solid #F3F3F3; border-radius: 1.6rem; opacity: 1; white-space: pre-wrap; position:relative; margin-bottom:1.7rem; font-size:1.9rem; color:#000;}
+.event .reward .balloon:last-child {margin-bottom:0;}
+.event .reward .balloon::before {display:block; content:''; position:relative; width: 3.5rem; height: 2.8rem; transform: skewX(50deg) translateX(-1.8rem); background: #FFFFFF 0% 0% no-repeat padding-box; border:1px solid #f3f3f3; opacity: 1; margin-top:1rem; margin-bottom:-4rem; z-index:-1;}
+.event .reward .balloon span {display:block; z-index:1; padding:2.4rem; background:#fff; border-radius:1.6rem;}
+.event .reward .balloon.noarrow::before {display:none;}
+.event .reward .presenter {display:flex; justify-content:flex-end; margin-right:3.2rem;}
+.event .reward .presenter .balloon {background: #037781 0% 0% no-repeat padding-box; filter: drop-shadow(0px 3px 6px #0049507F); border:0; color:#fff; width:493px;}
+.event .reward .presenter .balloon::before {background:#037781; transform:skewX(-50deg) translateX(47.2rem); border:0;}
+.event .reward .presenter .balloon span {background:transparent;}
+
+@media (min-width:1280px) {
+	.content_wrap {width:1280px;}
+	.content_wrap img {margin:0 auto;}
+}
+
+@media (max-width:1279px) {
+	.event .content_wrap .event_main_img + p {font-size:2.2rem;}
+	.event .content_wrap .event_main_img + p + p {font-size:2.2rem;}
+	
+	.event section + section h4 {font-size:2.2rem;}
+	.event section + section h2 {font-size:3.6rem;}
+	.event section + section img {margin-top: 2.6rem; margin-bottom: 7rem;}
+	
+	.event section img {max-width:100%;}
+	
+	.event .correct_box {padding:5rem 3.6rem;}
+	.event .correct_box .correct {font-size:3rem;}
+	.event .correct_box .correct span {font-size:2.4rem;}
+	.event .correct_box ul li {font-size:2.6rem; margin-top:2.6rem;}
+	
+	.event .reward .msg {text-align:center;}
+	.event .reward .msg span {padding:0rem 2.4rem; height:5rem; font-size:2.2rem;}
+	.event .reward .info {font-size:2.8rem; margin-top:1.2rem;}
+	
+	.event .reward ul li:after {margin:6.2rem 0;}
+	.event .reward .winner {margin-bottom:3.8rem;}
+	.event .reward .winner img {width:7.2rem; height:7.2rem; margin:0;}
+	.event .reward .datas .nickname {font-size:2.4rem;}
+	.event .reward .balloon {max-width:40.4rem; width:fit-content; margin-bottom:1rem; font-size:1.8rem;}
+	.event .reward .presenter .balloon {width:33.1rem;}
+	.event .reward .presenter .balloon::before {background:#037781; transform:skewX(-50deg) translateX(30.8rem);}
+}
+
+</style>
+<div class="contents event">
+	<div class="top_banner">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/event/event_main.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/event/pc_event_main.png" class="pc">
+		</div>
+		<div class="txt_wrap">
+			<h2>EVENT</h2>
+			<p>같이 즐겨봐</p>
+		</div>
+	</div>
+	
+	<section>
+		<div class="content_wrap">
+			<h4 data-aos="fade">마감된 이벤트</h4>
+			<h2 data-aos="fade">맛ZINE 탄생일 축하메시지 <br>당첨자 발표</h2>
+			
+			<img src="/assets/imgs/round/2/event/event_winner_pc_1.png" class="event_main_img" data-aos="fade">
+			
+			<p data-aos="fade">동심 이벤트에 남겨주신 모든 분들 감사드립니다. <br>앞으로도 맛ZINE에 많은 관심과 참여 부탁드립니다!</p>
+			<p data-aos="fade">※ 이벤트 당첨자 개별 안내 예정</p>
+		</div>
+	</section>
+	<section class="border_top">
+		<div class="content_wrap">
+			<h4 data-aos="fade-up">EVENT 01</h4>
+			<h2 data-aos="fade-up">롯데GRS만의 신조어의 정답은?</h2>
+			<img src="/assets/imgs/round/<?=$this->round?>/event/event_winner_pc_2.png" style="margin-top:3.2rem; margin-bottom:2.2rem;"  data-aos="fade-up">
+			
+			<div class="correct_box fullin" style="margin-bottom:9rem;"  data-aos="fade-up">
+				<div class="correct">괜아돼&nbsp;&nbsp;<span>괜찮아. 아직 어려도 돼</span></div>
+				<ul>
+					<li>1. <span>STORY – FOOD</span> <span>[it’s 괜아돼!]</span></li>
+					<li>2. <span>STORY – CULTURE</span> <span>[‘괜아돼’라는 따스한 말]</span></li>
+					<li>3. <span>NEWS – 어린이날 100주년</span> <span>[우리 어른이들, 괜아돼!]</span></li>
+				</ul>
+			</div>
+			
+			<div class="reward fullin"  data-aos="fade-up">
+				<div class="msg"><span>당첨을 축하합니다!</span></div>
+				<div class="info">닌텐도 스위치를 가져갈 <span>행운의 2인!</span></div>
+				
+				<ul>
+					<li>
+						<div class="winner"  data-aos="fade-up">
+							<img src="/assets/imgs/round/2/event/winner/1.png">
+							<div class="datas">
+								<div class="nickname">맛진아 사랑해</div>
+								<div class="balloon"><span>정답은 총 세개!! 
+"1.NEWS 채널의 어린이날 100주년"
+롯데리아 불고기버거세트 교환권을 증정하였다던데!
+어린이날은 있고 왜 어른이날은 없냐는 우리 어른이들, "괜아돼!"
+	
+"2. STORY 채널의 CULTURE 내용중.."
+세상 많~이 좋아졌다
+그래도 가끔은 책임의 그림자에서 벗어날 수 있는 어린아이로 살고 싶다.
+"괜아돼"라는 따스한 말을 건네며 말이다
+	
+"3. STORY 채널의 FOOD 내용중 띠뿌실 "
+*추억이 뭉게뭉게*
+구매력은 상승했지만 인기 없는 띠부씰을 뽑게 될 때 드는 속상한 마음,
+it’s "괜아돼! "늙어버린 우리가 잠깐이나마 어린이로 살 수 있는 순간이다.</span></div>
+								<div class="balloon noarrow"><span>맛진 이벤트 항상 응원합니다 전부 참여할게요!</span></div>
+							</div>
+						</div>
+						<div class="presenter" data-aos="fade-up">
+							<div class="balloon"><span>응원해주시는 따뜻한 마음 덕분에 맛ZINE은 정말 힘이 나요 !!! 
+이벤트 전부 참여해주신다는 그 말 믿을게요 ~~♥</span></div>
+						</div>
+					</li>
+					<li>
+						<div class="winner" data-aos="fade-up">
+							<img src="/assets/imgs/round/2/event/winner/2.png">
+							<div class="datas">
+								<div class="nickname">새벽</div>
+								<div class="balloon"><span>1.
+띠부씰(포켓몬 빵)
+빵을 사고 빵을 버린다. 등짝 스매싱 유발하는 이 행위는
+당시에 흔히 이루어졌다.
+이는 전부 빵에 동봉 되어있던 스티커, 일명 ‘띠부씰’을 모으기 위해서였다.
+김국진빵을 시작으로 핑클빵, 포켓몬빵, 디지몬빵, 캐로로빵,
+수많은 띠부씰 빵이 역사를 이어갔다.
+초딩들의 지갑을 털었던 띠부씰 빵은 20여년이 지난 지금 다시 광기를 띈
+유행으로 번져가는 중이다.
+그때 그 시절 용돈으로 사 모았던 띠부씰은
+이제 월급으로 가뿐히 사 모은다.
+구매력은 상승했지만 인기 없는 띠부씰을 뽑게 될 때 드는 속상한 마음,
+it’s 괜아돼! 늙어버린 우리가 잠깐이나마 어린이로 살 수 있는 순간이다.
+2.
+어려서는 어른이 되고 싶었다.
+그런데 어른이 되니 다시 어린이가 되고싶다.
+오래 전 기억을 더듬어보면 어른들의 자유로움이 부러웠던 것 같다.
+숙제가 없는 삶, 잔소리로부터 해방되고, 통금이 없는 삶.
+물론 그 자유의 그림자가 책임이라는 것을 알았을 때
+비로소 어른이 되었지만.
+그래도 가끔은 책임의 그림자에서 벗어날 수 있는 어린아이로 살고 싶다.
+‘괜아돼‘라는 따스한 말을 건네며 말이다.
+아이가 될 순 없어도, 잃었던 우리의 ‘동심’ 정도야
+잠시 되찾을 수 있지 않을까?
+3.
+어린이가 있다면 빠질 수 없지 !
+5월 5일 어린이날, 수원은 종일 시끄러웠다.
+바로 K 리그 수원 FC의 홈경기가 열렸기 때문.
+‘불고기는 롯데리아’의 테마를 주제로
+‘롯데리아 브랜드 DAY’가 당일 운영되었다.
+이날 경기가 열리는 수원종합운동장을 찾아준
+어린이와 동반 가족을 대상으로 진행된 ‘슛팅 이벤트’가 메인 이벤트!
+이날 우리 어른이 관람객들을 빼놓으면 섭섭하지.
+어른이들을 위해서는 선착순 SNS 업로드 이벤트가 진행되었다.
+전광판 및 경기장 내외에 있는 롯데리아와 관련된 컨텐츠를 촬영 후,
+SNS에 게시한 선착순 100명에게
+롯데리아 불고기버거세트 교환권을 증정하였다던데!
+어린이날은 있고 왜 어른이날은 없냐는 우리 어른이들, 괜아돼!</span></div>
+							</div>
+						</div>
+						<div class="presenter" data-aos="fade-up">
+							<div class="balloon"><span>열심히 작성한 저희 원고를 모두 남겨주시다니 ..! 
+다음호에도 참여해주시길 기대합니다 ~~♥</span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	
+	<section class="border_top">
+		<div class="content_wrap">
+			<h4 data-aos="fade-up">EVENT 02</h4>
+			<h2 data-aos="fade-up">나 다시 돌아갈래!</h2>
+			<img src="/assets/imgs/round/<?=$this->round?>/event/event_winner_pc_3.png" data-aos="fade-up">
+			
+			<div class="reward fullin" data-aos="fade-up">
+				<div class="msg"><span>당첨을 축하합니다!</span></div>
+				<div class="info">빌라드샬롯 밀키트를 가져갈 <span>행운의 5인!</span></div>
+				
+				<ul>
+					<li>
+						<div class="winner" data-aos="fade-up">
+							<img src="/assets/imgs/round/2/event/winner/3.png">
+							<div class="datas">
+								<div class="nickname">햄버거><</div>
+								<div class="balloon"><span>학창시절에 좋아하는 아이돌 그룹을 따라다녔을 때가 생각나요!!!!!!
+울 오빠들 사진, 영상 보는 것만으로도 그냥 좋기만 했어요
+오빠들의 앨범 수록곡, 오빠들이 나오는 모든 방송과 라디오를
+잊지 않고 다 챙겨보았고 내 시간의 대부분이  오빠들에게 맞춰져 있었던 것 같아요
+(엄마가 전교 1등하면 콘서트 보내준대서...전교 1등도 해본...ㅎ)
+요즘은 그때처럼 누군가를 순수하게 동경하는 게 힘들잖아요ㅠㅠ
+그때의 순수한 마음과 순수한 열정이 그립습니다ㅠㅠㅠ
+그 오빠들은 지금은 많이 늙었지만 항상 행복하시길...!ㅎㅎㅎㅎㅎ</span></div>
+							</div>
+						</div>
+						<div class="presenter" data-aos="fade-up">
+							<div class="balloon"><span>덕질 때문에 공부 안하는 사람들은 봤어도 덕질 때문에 전교 1등을 하다니.... !! 햄버거님의 열정은 정말 순수하고 이쁜 마음이네요 ෆු(*˃ர்˂*)ෆු</span></div>
+						</div>
+					</li>
+					<li>
+						<div class="winner" data-aos="fade-up">
+							<img src="/assets/imgs/round/2/event/winner/4.png">
+							<div class="datas">
+								<div class="nickname">곧 퇴사</div>
+								<div class="balloon"><span>자취 7년차 크리스피에서 일하고 있는 직원입니다. 
+몇일 전 엄마랑 같이 빵 집에  가는 꿈을 꾸었어요. 
+꿈속에서 엄마는 제가 먹고 싶은 빵으로 골라 담으라고 하더라구요.  
+꿈에서 깨고 고향에 계신 엄마가 저에게 무의식 중에 했던 말이 떠올랐습니다. 
+엄마는 27살이 된 지금의 저에게도 어디서든  무의식 중에 "아가야 가자."라고 하더라구요.
+엄마에게 전 늘 어린 아이겠죠. 
+그럴때는 아무 걱정없이..  엄마만을 의지하던 어린 시절로 돌아가고 싶습니다.</span></div>
+							</div>
+						</div>
+						<div class="presenter" data-aos="fade-up">
+							<div class="balloon"><span>엄마에게는 늘 어린아이라는 말이 마음을 울리네요 o(；△；)o 어릴때는 참 부모님이 듬직하게 보였는데, 지금은 어쩌면 저보다 작아진 부모님을 발견하는 것 같아요.</span></div>
+						</div>
+					</li>
+					<li>
+						<div class="winner" data-aos="fade-up">
+							<img src="/assets/imgs/round/2/event/winner/5.png">
+							<div class="datas">
+								<div class="nickname">커왁</div>
+								<div class="balloon"><span>출근 길에 버스를 타고 올때 가방을 메고 등교를 하는 아이들의 모습에서 저때의 어린시절에 중간고사,기말고사, 모의고사 먼 시험이 많지 어른되면 편할줄 알았느데.. 막상 어른이 되어서 매일 출근하는 모습과 아이들의 모습을 비교해보니 어린시절이 학창시절이 너무나도 행복하게 보였습니다 ☆⌒(*＾-゜)v</span></div>
+							</div>
+						</div>
+						<div class="presenter" data-aos="fade-up">
+							<div class="balloon"><span>맞아요 그때는 성인만 되면 얼른 취업하고 돈 많이 벌어서 내 마음대로 살아야지 했는데 ~ 어른의 무게는 정말 무겁기만 하네요 ‧º·(˚ ˃̣̣̥⌓˂̣̣̥ )‧º·˚</span></div>
+						</div>
+					</li>
+					<li>
+						<div class="winner" data-aos="fade-up">
+							<img src="/assets/imgs/round/2/event/winner/6.png">
+							<div class="datas">
+								<div class="nickname">돈 많은 어린이</div>
+								<div class="balloon"><span>때는 6월 23일 출근길이었어요. 출근길에 콩나물 전철에서 지갑 소매치기를 당했습니다.
+생로랑 지갑이었고, 현금 5만원과 엔제리너스 제품교화권 10만원어치..가 들어있었죠.
+경찰에 신고했지만 감감무소식...
+
+며칠 안남은 제 생일에 저에게 주는 선물로 디올 지갑을 샀습니다.
+애지중지 들고다녔는데.. 구매 후 5일... 또 잃어버렸습니다.
+지갑에는 현금 10만원이 들어있었어요.
+경찰신고, 동선의 CCTV확인, 블랙박스 확인해도 어디서 분실했는지 나오지도 않습니다.
+
+1,2번째 지갑 금액을 합쳐보니 손해가 150만원이네요.
+다이어트 한다고 탄수화물을 많이 줄였는데 기억력이 감퇴되어 가는 것 같아 너무 속상합니다.
+돈 많은 어린이가 꼭 되고 싶었는데 점점 돈 없는 어른이 되고 있어요...
+
+지갑 분실을 엄마에게 또 말했고,  엄청나게 혼났어요
+혼나고 나서 생각해보니.. 제가 어린아이 같았습니다.
+언제 혼나봤는지 기억도 안났는데... 혼나고 나서 생각해보니 어린시절 효자손으로 혼났던 생각이 났어요.ㅎㅎ
+
+지갑을 들고 다니지 않아도 되고 엄마 돈으로 생활했었던 어린시절!
+그때로 돌아가고 싶습니다.
+엄마 지갑으로 과자먹던, 옷 사입던 그때로... 다시 돌아갈뤠~~~~!!!★</span></div>
+							</div>
+						</div>
+						<div class="presenter" data-aos="fade-up">
+							<div class="balloon"><span>아이고 150만원이라니.....!!!!!! 왜 안좋은 일은 꼭 연속으로 올까요 ..(;*△*;) 돈 많은 어린이님의 속상한 마음 밀키트로 달래졌으면 좋겠어요 ! 200만원짜리 좋은일이 터지기를 기도합니당~ ♥</span></div>
+						</div>
+					</li>
+					<li>
+						<div class="winner" data-aos="fade-up">
+							<img src="/assets/imgs/round/2/event/winner/7.png">
+							<div class="datas">
+								<div class="nickname">이번주주인공은나야나</div>
+								<div class="balloon"><span>10살도 채 되지 않았을 때..
+교회에 내라고 받았던 헌금 1,000원으로 친구와 함께 놀았던 기억이 있네요.
+친구의 헌금과 합친 2,000원으로
+절반은 떡볶이, 절반은 오락실에서 놀다가 집에 갔던 시절이 있었어요.
+그때 먹었던 떡볶이가 너무 생각이 나서 작년에 와이프랑 찾아갔었는데
+아직도 그 자리에서 영업을 하더라구요,, 시장 내부는 리모델링 했지만 찾아가기 어렵진 않았습니다.
+그리고 그 떡볶이를 한입 먹는 순간.. 눈에서 주체못할 눈물이 와르르....
+그 순간 정말 앞뒤안가리고 재밌게 놀았던 그 시절로 돌아가고 싶었습니다.
+현재 그 떡볶이집은 며느님이 물려받아서 영업중이고, 할머니와 할아버지는 몸이 편찮으셔서 쉬고 계신다 합니다.
+25년이 훌쩍 넘었거든요!ㅋㅋ</span></div>
+							</div>
+						</div>
+						<div class="presenter" data-aos="fade-up">
+							<div class="balloon"><span>25년동안 그자리를 지키고 계셨다니 마음이 몽글몽글해지네요 ... o(╥﹏╥)o 어린시절에서 먹었던 떡볶이는 특별하지 않았더라도 참 잊을 수 없는 것 같아요 ★</span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</section>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('body').on('mousedown',function(){
+		if( $(event.target).closest('.event_modal').length == 0 ) {
+			$('.event_modal').hide();
+		}
+	})
+});
+function toggle_reward(target) {
+	var on = false;
+	if( $(target).hasClass('on') ) {
+		on = true;
+	}
+	$('.reward .on').removeClass('on');
+	if( !on ) {
+		$(target).addClass('on');
+	}
+}
+function only_number() {
+	var hp = $('#user_hp').val().replace(/[^0-9]/gi,'');
+	$('#user_hp').val(hp);
+}
+function open_event_modal() {
+	$('.event_modal').show();
+	event.preventDefault();
+	event.stopPropagation();
+}
+function apply_event() {
+	
+	if( $('#user_name').val() == '' ) {
+		alert('이름을 입력해주세요.');
+		$('#user_name').focus();
+		return;
+	}
+	
+	var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+	var hp = $('#user_hp').val().replace(/-/gi,'');
+    if (regPhone.test(hp) === false) {
+    	alert('휴대번호를 정확하게 입력해주세요.');
+    	return;
+    }
+	
+	if( $('#text').val().length < 5 ) {
+		alert('축하 메시지를 최소 5자 이상 입력해주세요.');
+		$('#text').focus();
+		return;
+	}
+
+	$.post('/event/apply',$('#event_form').serialize(),function(result){
+		var r = JSON.parse(result);
+		
+		alert(r.msg);
+		
+		if( r.result ) {
+			location.reload();
+		}
+	});
+}
+</script>

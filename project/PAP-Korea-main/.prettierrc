@@ -1,0 +1,24 @@
+{
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "singleQuote": true,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 200
+      }
+    }
+  ],
+  "importOrder": [
+    "react",
+    "next",
+    "^~(.+)$",
+    "^[./]",
+    "^[a-zA-Z@/\\-]*\\.[a-zA-Z0-9]*$",
+    "^(.+)$"
+  ],
+  "importOrderSeparation": true,
+  "experimentalBabelParserPluginsList": ["jsx", "typescript", "typescriptreact"]
+}

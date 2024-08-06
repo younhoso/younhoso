@@ -1,0 +1,563 @@
+  <link rel="stylesheet" href="/assets/css/5/index.css">
+  <link rel="stylesheet" href="/assets/css/5/mainPostSection.css">
+  <script>
+    setTimeout(() => {
+      $('body').css({
+        'max-height' : 'none',
+        'overflow-y' : 'scroll'
+      })
+    }, 2000);
+  </script>
+  <style>
+    header {
+      background: transparent;
+      border-bottom: 1px solid transparent;
+    }
+  </style>
+
+  <div class="visual_box">
+    <div class="visual_area">
+      <div class="visual_img">
+        <img src="/assets/imgs/round/5/main/logo.png" alt="visual" title="visual" class="visualLogo">
+        <img src="/assets/imgs/round/5/main/Main_banner2.png" alt="visual" title="visual">
+        <img class="mobile_hide" src="/assets/imgs/round/5/main/Sub_banner2.png" alt="visual" title="visual">
+        <!-- <img class="mobile_hide" src="/assets/imgs/round/5/main/PC_main_visual_2.png" alt="visual" title="visual"> -->
+        
+        <div class="detail kr">
+          <div class="box">이달의 컨셉</div>
+          <div class="title">펑펑 내리는 눈, 그 속의 겨울</div>
+          <div class="text">동화 속 나라에 온 듯 아름다운 겨울<br/>꽁꽁 언 마음을 녹여줄 따뜻한 맛zine 속으로</div>
+        </div>
+        <div class="visual_mobile_img pc_hide">
+          <img src="/assets/imgs/round/5/MO/1. Main/Main_banner.png" alt="banner" title="banner">
+          <img src="/assets/imgs/round/5/MO/1. Main/Sub_banner.png" alt="banner" title="banner">
+        </div>
+      </div>
+
+      <div class="mobile_banner_text pc_hide">
+        <p class="kr">
+          이달의 컨셉
+        </p>
+
+        <h2 class="kr">펑펑내리는 눈, 그 속의 겨울</h2>
+        <div class="kr">
+          동화 속 나라에 온 듯 아름다운 겨울과 <br>
+          꽁꽁 언 마음을 녹여줄 따뜻한 맛zine 속으로
+        </div>
+      </div>
+      <div class="visual_prog_bar"></div>
+    </div>
+  </div>
+
+  <!-- POST 영역 -->
+  <div class="post main_section content_box wrap">
+    <div class="area_title flex aic jcsb">
+      <div class="mobile_title_empty"></div>
+      <h2 class="en">POST</h2>
+      <p class="kr">콘텐츠 모음집</p>
+    </div>
+
+    <div class="container wrap">
+      <div class="post_scroll">
+        <div class="cell" data-aos="fade-right" onclick="location='/post/sport/<?= $this->round ?>'">
+          <div class="image">
+            <img src="/assets/imgs/round/5/post/SPORT.png" alt="post" title="post">
+          </div>
+  
+          <div class="text">
+            <h3 class="kr">[SPORT] 스키로운 겨울생활</h3>
+            <p class="kr">짜릿한 겨울 스포츠 '스키'</p>
+          </div>
+        </div>
+  
+        <div class="cell" data-aos="fade-up" onclick="location='/post/style/<?= $this->round ?>'">
+          <div class="image">
+            <img src="/assets/imgs/round/5/post/STYLE.png" alt="post" title="post">
+          </div>
+  
+          <div class="text">
+            <h3 class="kr">[STYLE] 패션계의 비건 열풍</h3>
+            <p class="kr">입는 채식주의 비건패션</p>
+          </div>
+        </div>
+  
+        <div class="cell" data-aos="fade-left" onclick="location='/post/culture/<?= $this->round ?>'">
+          <div class="image">
+            <img src="/assets/imgs/round/5/post/CULTURE.png" alt="post" title="post">
+          </div>
+  
+          <div class="text">
+            <h3 class="kr">[CULTURE] 방구석 취미생활</h3>
+            <p class="kr">집콕하는 내가 가질 수 있는 취미생활</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view_more flex aic jcc " data-aos="fade-up">
+      <div class="en view_more_btn" onclick="location='/post/index/<?= $this->round ?>'">+ VIEW MORE</div>
+    </div>
+  </div>
+
+  <!-- VIDEO 영역 -->
+  <div class="video_content main_section content_box wrap">
+    <div class="video_basic flex jcsb pr">
+      <div class="video_list pc_video swiper" data-aos="fade-right">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <div class="video_item">
+              <div class="video_sum">
+                <a href="/video/index/<?= $this->round ?>" class="en">+ VIEW MORE</a>
+                <iframe src="https://player.vimeo.com/video/781742294?h=1b4486b14c" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <!-- <iframe src="https://player.vimeo.com/video/7817height="564" frameborder="0" allow="autoplay; fallowfullscreen"></iframe> -->
+                <!-- <iframe src="https://player.vimeo.com/video/710237148?h=aedc57da1f" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
+              </div>
+              <div class="video_info">
+                <div class="video_info_top">
+                  <span class="dark">NEW</span>
+                </div>
+                <div class="video_info_text flex fdc jcc">
+                  <h2 class="kr">[맛침표] KKD편</h2>
+                  <p class="kr sub_title">'맛'에대한 고민으로 뭉친 신메뉴 개발팀 <br>크리스피 크림 도넛의 비밀 레시피?</p>
+                  <!-- <p class="kr">"잊을 수 없다.. 나의 진상!" "이젠 말할 수 있다.. 사장님!"</p>
+                  <p class="kr divide">"오픈 VS 마감 여러분의 선택은?"</p>
+                  <p class="kr">알쓸롯잡 퀴즈! 아슬아슬 인터뷰까지! 함께 나누기 위해 롯취록을 준비했어~!</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="video_item">
+              <div class="video_sum">
+                <a href="/video/index/<?= $this->round ?>/new/2" class="en">+ VIEW MORE</a>
+                <iframe src="https://player.vimeo.com/video/781742096?h=41b47c09ac" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              </div>
+              <div class="video_info">
+                <div class="video_info_top">
+                  <span class="dark">NEW</span>
+                </div>
+                <div class="video_info_text flex fdc jcc">
+                  <h2 class="kr">[맛침표] 엔제리너스편</h2>
+                  <p class="kr sub_title">'맛'에대한 고민으로 뭉친 신메뉴 개발팀 <br>엔제리너스의 비밀 레시피?</p>
+                  <!-- <p class="kr">"잊을 수 없다.. 나의 진상!" "이젠 말할 수 있다.. 사장님!"</p>
+                  <p class="kr divide">"오픈 VS 마감 여러분의 선택은?"</p>
+                  <p class="kr">알쓸롯잡 퀴즈! 아슬아슬 인터뷰까지! 함께 나누기 위해 롯취록을 준비했어~!</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="video_item">
+              <div class="video_sum">
+                <a href="https://youtu.be/M6DbGMnw36A" target="_blank" class="en">+ VIEW MORE</a>
+                  <img src="/assets/imgs/round/5/video/12Playlist.png" alt="#" title="#">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/M6DbGMnw36A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              </div>
+              <div class="video_info">
+                <div class="video_info_top">
+                  <span class="hot">HOT</span>
+                </div>
+                <div class="video_info_text flex fdc jcc">
+                  <h2 class="kr">캐롤 Playlist</h2>
+                  <p class="kr sub_title">추운 겨울, 눈 내리는 날 <br>따뜻한 코코아 마시며 듣는 플리</p>
+                  <!-- <p class="kr">"잊을 수 없다.. 나의 진상!" "이젠 말할 수 있다.. 사장님!"</p>
+                  <p class="kr divide">"오픈 VS 마감 여러분의 선택은?"</p>
+                  <p class="kr">알쓸롯잡 퀴즈! 아슬아슬 인터뷰까지! 함께 나누기 위해 롯취록을 준비했어~!</p> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="video_item">
+              <div class="video_sum view_more_fixed">
+                <a href="/video/index/<?= $this->round ?>" class="en">+ VIEW MORE</a>
+                <iframe src="https://player.vimeo.com/video/761385631?h=42cbc1b0c1" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              </div>
+              <div class="video_info">
+                <div class="video_info_top">
+                  <span class="dark">OCT.</span>
+                </div>
+                <div class="video_info_text flex fdc jcc">
+                  <h2 class="kr">[롯취록] 롯데리아 수원매탄점</h2>
+                  <p class="kr sub_title">대화가 필요해~좋아하는 것도 <br>사는것도 다른 이들을 소개합니다.</p>
+                  <!-- <p class="kr">"잊을 수 없다.. 나의 진상!" "이젠 말할 수 있다.. 사장님!"</p>
+                  <p class="kr divide">"오픈 VS 마감 여러분의 선택은?"</p>
+                  <p class="kr">알쓸롯잡 퀴즈! 아슬아슬 인터뷰까지! 함께 나누기 위해 롯취록을 준비했어~!</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video_area_left">
+        <div class="video_area_title">
+          <div class="mobile_title_empty"></div>
+          <h2 class="en">VIDEO</h2>
+          <p class="kr">영상 콘텐츠 모음집</p>
+        </div>
+        <div class="flex">
+          <div class="video_move_btn btn flex jcc aic pointer prev">
+            <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+          </div>
+          <div class="video_move_btn btn flex jcc aic pointer next">
+            <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+          </div>
+        </div>
+      </div>
+
+      <div class="m_video_list mobile_video swiper" data-aos="fade-right">
+        <div class="m_video_item">
+          <div class="m_video_sum">
+            <img src="/assets/imgs/round/5/main/Enjoy_main.png" alt="video" title="video">
+          </div>
+          <div class="m_video_info kr">
+            <h2>[맛침표] KKD편</h2>
+            <p>'맛'에 대한 고민으로 뭉친 신메뉴 개발팀</p>
+            <p>크리스피 크림도넛의 비밀 레시피?</p>
+            <div class="m_video_sub">
+              <div>"잊을수 없다.. 나의 진상!" "잊을수 없다.. 나의 진상!"</div>
+              <div>"잊을수 없다.. 나의 진상!"</div>
+              <div>"잊을수 없다.. 나의 진상!"</div>
+            </div>
+          </div>
+        </div>
+        <div class="m_video_item">
+          <div class="m_video_sum">
+            <img src="/assets/imgs/round/5/main/Enjoy_main.png" alt="video" title="video">
+          </div>
+          <div class="m_video_info kr">
+            <h2>[맛침표] KKD편</h2>
+            <p>'맛'에 대한 고민으로 뭉친 신메뉴 개발팀</p>
+            <p>크리스피 크림도넛의 비밀 레시피?</p>
+            <div class="m_video_sub">
+              <div>"잊을수 없다.. 나의 진상!" "잊을수 없다.. 나의 진상!"</div>
+              <div>"잊을수 없다.. 나의 진상!"</div>
+              <div>"잊을수 없다.. 나의 진상!"</div>
+            </div>
+          </div>
+        </div>
+        <div class="m_video_item">
+          <div class="m_video_sum">
+            <img src="/assets/imgs/round/5/main/Enjoy_main.png" alt="video" title="video">
+          </div>
+          <div class="m_video_info kr">
+            <h2>[맛침표] KKD편</h2>
+            <p>'맛'에 대한 고민으로 뭉친 신메뉴 개발팀</p>
+            <p>크리스피 크림도넛의 비밀 레시피?</p>
+            <div class="m_video_sub">
+              <div>"잊을수 없다.. 나의 진상!" "잊을수 없다.. 나의 진상!"</div>
+              <div>"잊을수 없다.. 나의 진상!"</div>
+              <div>"잊을수 없다.. 나의 진상!"</div>
+            </div>
+          </div>
+        </div>
+        <div class="m_video_item">
+          <div class="m_video_sum">
+            <img src="/assets/imgs/round/5/main/Enjoy_main.png" alt="video" title="video">
+          </div>
+          <div class="m_video_info kr">
+            <h2>[맛침표] KKD편</h2>
+            <p>'맛'에 대한 고민으로 뭉친 신메뉴 개발팀</p>
+            <p>크리스피 크림도넛의 비밀 레시피?</p>
+            <div class="m_video_sub">
+              <div>"잊을수 없다.. 나의 진상!" "잊을수 없다.. 나의 진상!"</div>
+              <div>"잊을수 없다.. 나의 진상!"</div>
+              <div>"잊을수 없다.. 나의 진상!"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="m_view_more view_more flex aic jcc " data-aos="fade-up">
+        <div class="en view_more_btn" onclick="location='./post.html'">+ VIEW MORE</div>
+      </div>
+    </div>
+
+    <div class="video_500">
+      <div class="area_title flex aic jcsb">
+        <div class="mobile_title_empty"></div>
+        <h2 class="en">VIDEO</h2>
+        <p class="kr">영상 콘텐츠 모음집</p>
+      </div>
+
+      <div class="container flex jcsb aic">
+        <!-- <div class="btn flex jcc aic pointer prev mobileVideoPrev">
+          <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+        </div> -->
+
+        <div class="image videoMobileSlider swiper flex" data-aos="fade-up">
+          <div class="swiper-wrapper slide">
+            <a href="https://player.vimeo.com/video/720098882?h=e4af08c769" class="swiper-slide">
+              <div class="mo_video_sum">
+                <iframe src="https://player.vimeo.com/video/781742294?h=1b4486b14c" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              </div>
+              <div class="text mo_video_t">
+                <p class="kr">
+                  <br>
+                  <b>[맛침표] KKD편</b><br>
+                  <br>
+                  <p>'맛'에대한 고민으로 뭉친 신메뉴 개발팀 <br/> 크리스피 크림 도넛의 비밀 레시피?</p>
+                  <!-- <p>"잊을 수 없다.. 나의 진상!" "이젠 말할 수 있다.. 사장님!"</p>
+                  <p>"오픈 VS 마감 여러분의 선택은?"</p>
+                  <p>알쓸롯잡 퀴즈! 아슬아슬 인터뷰까지! 함께 나누기 위해 <br/> 롯취록을 준비했어~!</p> -->
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="btn flex jcc aic pointer prev mobileVideoNext">
+          <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+        </div> -->
+      </div>
+
+      <div class="videoMobileSlider swiper">
+        <div class="swiper-wrapper slide">
+        </div>
+      </div>
+    </div>
+
+    <div class="pc_hide">
+      <div class="view_more flex aic jcc " data-aos="fade-up">
+        <div class="en view_more_btn" onclick="location='/video/index/<?= $this->round ?>'">+ VIEW MORE</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="news_back main_section">
+    <div class="news_obj_img">
+      <img src="/assets/imgs/round/5/MO/4.News/news_오브제.png" alt="news" title="news">
+    </div>
+    <div class="news_area wrap">
+      <div class="news_content">
+        <div class="news_title">
+          <div class="mobile_title_empty"></div>
+          <h2 class="en">#NEWS</h2>
+          <p class="kr">롯데GRS 이슈</p>
+        </div>
+
+        <div class="news_list">
+          <div class="news_big" data-aos="fade-right">
+            <img src="/assets/imgs/round/5/news/01_news.png" alt="news" title="news">
+          </div>
+          <div class="news_items">
+            <div data-aos="fade-left">
+              <img src="/assets/imgs/round/5/news/02_news.png" alt="news" title="news">
+            </div>
+            <div data-aos="fade-left">
+              <img src="/assets/imgs/round/5/news/03_news.png" alt="news" title="news">
+            </div>
+            <div data-aos="fade-left">
+              <img src="/assets/imgs/round/5/news/04_news.png" alt="news" title="news">
+            </div>
+            <div data-aos="fade-left">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/5/news/05_news.png" alt="news" title="news">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_mobile">
+          <div class="image">
+            <img src="/assets/imgs/round/5/news/01_news.png" alt="news" title="news">
+          </div>
+        </div>
+
+        <div class="m_view_more view_more flex aic jcc " data-aos="fade-up">
+          <div class="en view_more_btn" onclick="location='/news/index/<?= $this->round ?>'">+ VIEW MORE</div>
+        </div>
+
+        <div class="pc_hide">
+          <div class="view_more flex aic jcc " data-aos="fade-up">
+            <div class="en view_more_btn" onclick="location='/news/index/<?= $this->round ?>'">+ VIEW MORE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 히스토리 -->
+  <div class="history main_section">
+    <!-- 타이틀 -->
+    <b class="title en">HISTORY</b>
+
+    <!-- 슬라이드 -->
+    <div class="container wrap flex jcc aic pr history_rap" data-aos="fade-up">
+      <div class="box flex jcsb controller">
+        <div class="btn flex jcc aic pointer prev">
+          <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+        </div>
+
+        <div class="btn flex jcc aic pointer next">
+          <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+        </div>
+      </div>
+
+      <div class="historySlider swiper">
+        <div class="swiper-wrapper slide">
+          <!-- 히스토리 데이터 삽입 됩니다. -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 텍스트 -->
+    <!-- <p class="text kr">
+      <b data-aos="fade-up">우리들의 축제는 지금부터야!</b><br>
+
+      <span>
+        <span data-aos="fade-up">뜨거운 여름은 갔지만, 우리들의 축제는 지금부터!</span>
+        <br>
+        <span data-aos="fade-up">여름과는 또다른, 신선한 열정을 담은 10월의 축제!</span>
+      </span>
+    </p> -->
+
+    <div class="pc_hide">
+      <div class="view_more flex aic jcc " data-aos="fade-up">
+        <div class="en view_more_btn" onclick="location='/about/index/<?= $this->round ?>'">+ VIEW MORE</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import {fetchData} from "/assets/js/history/fetchData.js";
+    AOS.init();
+
+    // 성공 템플릿
+    const successTemplate = ({title, description, imgs, link}, idx) => {
+      if(idx >= 1) {
+        return `
+          <div class="swiper-slide">
+            <a href="${link}">
+              <img src="${imgs}" alt="#" title="#">
+            </a>
+            <p class="text kr small">
+              <b>${title}</b><br/>
+              ${(() => {
+                let result = ``;
+                for(let i = 0; i < 1; i++) {
+                  result += `
+                    <span>
+                    <span>${description[0]}</span>
+                    <br>
+                    <span>${description[1]}</span>
+                    </span>
+                `};
+                return result;
+              })()}
+            </p>
+          </div>
+        `;
+      }
+    };
+
+    // 실패 템플릿
+    const errorTemplate = (errorThrown) => { 
+      return`
+        <div class="error">
+          <h2>통신 실패!</h2>
+          <p>에러 메시지: ${errorThrown}</p>
+        </div>
+      `;
+    };
+
+    //첫 로드될때 실행
+    fetchData("/assets/js/history/data.json")
+    .done(function(response) {
+      // 통신 성공 시 템플릿을 만들어 추가합니다.
+      const templateHtml = response.map((datas, idx) => {
+        return successTemplate(datas, idx)
+      }).join('');
+      $('.history .swiper-wrapper').html(templateHtml);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+      // 통신 실패 시 템플릿을 만들어 추가합니다.
+      const errorHTML = errorTemplate(errorThrown);
+      $('.history .swiper-wrapper').html(errorHTML)
+    });
+
+    window.addEventListener('scroll', function(e) {
+    if (window.scrollY > ($(`.visual_box`).height() - $(`header`).height())) {
+			$(`header`).css('background', '#000');
+		}
+
+    if (window.scrollY < $(`.visual_box`).height()) {
+			$(`header`).css('background', 'transparent');
+		}
+  });
+
+    const swiper = new Swiper('.historySlider', {
+      loop: true,
+      centeredSlides: true,
+
+      navigation: {
+        nextEl: '.controller .next',
+        prevEl: '.controller .prev',
+      },
+
+      breakpoints: {
+        1081: {
+          slidesPerView: 3,
+          spaceBetween: 100,
+        },
+
+        320: {
+          slidesPerView: 1.6,
+          spaceBetween: 10,
+          slidesOffsetBefore: 0,
+          centeredSlides: true,
+        }
+      }
+    });
+
+    swiper.slideNext()
+
+    const swiper2 = new Swiper('.video_list', {
+      loop: true,
+
+      navigation: {
+        nextEl: '.video_move_btn.next',
+        prevEl: '.video_move_btn.prev',
+      },
+    });
+
+    const swiper3 = new Swiper('.videoMobileSlider', {
+      loop: true,
+
+      navigation: {
+        prevEl: '.mobileVideoPrev',
+        nextEl: '.mobileVideoNext',
+      },
+    });
+
+    const swiper4 = new Swiper('.newsSlider', {
+      loop: true,
+
+      navigation: {
+        prevEl: '.newsPrev',
+        nextEl: '.newsNext',
+      },
+    });
+
+    if (window.innerWidth > 1080) {
+      swiper.on('slideChange', (v) => {
+        $('.historySlider .swiper-slide')
+          .removeClass('active')
+          .eq(v.realIndex)
+          .addClass('active');
+      })
+
+      swiper3.on(`slideChange`, (v) => {
+        $('.videoMobileSlider .swiper-slide')
+          .removeClass('active')
+          .eq(v.realIndex)
+          .addClass('active');
+      })
+
+      swiper4.on(`slideChange`, (v) => {
+        $('.newsSlider .swiper-slide')
+          .removeClass('active')
+          .eq(v.realIndex)
+          .addClass('active');
+      })
+    }
+  </script>

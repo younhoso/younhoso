@@ -1,0 +1,506 @@
+<link rel="stylesheet" href="/assets/css/6/food.css">
+<link rel="stylesheet" href="/assets/css/6/modal.css">
+
+<main>
+  <div class="post_wrapper mobile_hide">
+    <!-- post-banner -->
+    <div class="post-banner">
+      <div class="inner">
+        <h2>맛도 가격도 A급<br>'못난이 농산물'</h2>
+        <p>
+          <b>장 볼 때 고민 그만!</b>
+          못생겨도 맛만 좋더라~<br>
+          치솟는 물가 합리적인 가격으로 소비하기<br>
+          새로운 글로벌 트렌드, '푸드 리퍼브'
+        </p>
+      </div>
+    </div>
+
+    <!-- post-title -->
+    <div class="post-title">
+      <div class="container">
+        <img src="/assets/imgs/round/6/post/food/sub_banner_food.png">
+        <p>'맛'뿐 아니라 '멋'까지 챙겨야 하는 요즘 요리, 그만큼 재료를 고르는데도 많은 신경을 쓰는 편이지<br><strong>그런데 못생겨서 더~ 멋있고, 맛있을 수가 있다구?</strong></p>
+      </div>
+    </div>
+
+    <!-- post-section-01 -->
+    <div class="post-section-01">
+      <div class="container">
+        <div class="com-sm-title">
+          <b>서러워서 눈물 찔끔 흘리는 우리는 누구?</b>
+          <small>못난이 농산물</small>
+        </div>
+        <div class="com-image">
+          <img src="/assets/imgs/round/6/post/food/1.png">
+        </div>
+        <div class="com-text">
+          <p>
+            맛과 영양 등 품질에는 큰 차이가 없지만 <em>모양 비대칭,</em><br>
+            <em>작은 흠집으로 등급판정을 받지 못하는 못난이 농산물</em>
+          <p>
+          <p>못난이 농산물은 대부분 수분을 많이 함유해서 쉽게 부패한다고 해
+          <p>
+          <p>
+            매립지에 버려진 농산물은 악취가 심할 뿐만 아니라 수질오염을 일으키고<br>
+            <em>지구 온난화의 주범인 온실가스를 배출하는 등 환경오염을 심화시키지</em>
+          <p>
+        </div>
+        <small>(국내 과채 생산량의 10~30%는 ‘등급 외' 농산물로 분류)</small>
+      </div>
+    </div>
+
+    <!-- post-section-02 -->
+    <div class="post-section-02">
+      <div class="container">
+        <div class="com-sm-title">
+          <b>못난이 농산물의 재발견</b>
+          <small>못난이들의 대반란!</small>
+        </div>
+        <div class="com-zigzag">
+          <ul class="list">
+            <li class="list-item">
+              <div class="list-image">
+                <div class="com-image">
+                  <img src="/assets/imgs/round/6/post/food/2.png">
+                </div>
+              </div>
+              <div class="list-content gr">
+                <div class="com-text">
+                  <ul>
+                    <li>
+                      <small>2014년 프랑스의 슈퍼마켓 ‘엥테르마르셰(Intermarché)’는 <br><em>버려지는 것에서 상품성을 찾았어</em></small>
+                    </li>
+                    <li>
+                      <small>과일이나 채소를 고를 때 못생겨도 맛이나 품질 면에서<br>문제가 없음에도 겉모양이 예쁜 것을 선호하는데, </small>
+                    </li>
+                    <li>
+                      <small>여기서 착안해 캠페인을 진행했다고!</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- post-section-03 -->
+    <div class="post-section-03">
+      <div class="container">
+        <div class="com-text">
+          <p class="tc">저렴하게 판매하는 것 뿐 아니라 ‘못생긴 레몬', ‘우스꽝스러운 감자', ‘기괴한 사과' 등<br><em>못생긴 과일과 채소에 이름을 붙이고 전용 판매대를 만들었어</em>
+          </p>
+        </div>
+        <div class="com-image">
+          <img src="/assets/imgs/round/6/post/food/4.png">
+          <div>
+            <strong>못생긴 당근?<br>수프에 들어가면 상관없잖아</strong>
+            <small>멋진 포스터와 함께 해당 제품으로 만든 주스와 수프를 무료로 제공하기까지!</small>
+          </div>
+        </div>
+        <div class="com-image">
+          <img src="/assets/imgs/round/6/post/food/6.png">
+        </div>
+      </div>
+    </div>
+
+    <!-- post-section-04 -->
+    <div class="post-section-04">
+      <div class="com-zigzag">
+        <ul class="list">
+          <li class="list-item">
+            <div class="list-image">
+              <img src="/assets/imgs/round/6/post/food/7.png">
+            </div>
+            <div class="list-content">
+              <div class="com-text">
+                <ul>
+                  <li>
+                    <b>프랑스에서 출발한 ‘못난이 농산물’ 캠페인은<br>유럽 전역과 북미 지역으로 확산됐어</b>
+                    <small>
+                      영국의 대형 유통업체인 아스다(Asda)는 못난이 농산물 소비를 위한 캠페인과<br>
+                      함께 ‘못난이 채소 상품 박스’ (Wonky Veg Box) 판매로 소비자들의 관심을 유도했어<br>
+                      미국의 월마트(Wal Mart), 크로거(Kroger‘s)와 같은 대형 유통업체들도<br>
+                      일반 채소보다 30~50% 저렴한 가격으로 못난이 농산물을 판매하고 있지
+                    </small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <ul>
+      </div>
+    </div>
+
+    <!-- post-section-05 -->
+    <div class="post-section-05">
+      <div class="com-zigzag">
+        <ul class="list">
+          <li class="list-item reverse">
+            <div class="list-image">
+              <img src="/assets/imgs/round/6/post/food/8.png">
+            </div>
+            <div class="list-content">
+              <div class="com-lg-title">
+                <p>
+                  그렇게 시작된
+                  <b class="dot">트</b><b class="dot">렌</b><b class="dot">드</b>
+                </p>
+                <h3>푸드 리퍼브</h3>
+              </div>
+              <div class="com-text">
+                <ul>
+                  <li>
+                    <small>
+                      약간의 흠은 있지만, 성능에는 큰 문제가 없는 제품을 고쳐<br>
+                      정품보다 싸게 파는 ‘리퍼브'를 음식에 적용한 개념인 푸드 리퍼브!
+                    </small>
+                  </li>
+                  <li>
+                    <b>푸드 리퍼브가 주목받을 수 있었던 이유엔 가치 소비를 중시하는 소비자들이 있어</b>
+                  </li>
+                  <li>
+                    <small>
+                      필(必)환경 시대에 맞춰 저렴하게 음식을 소비하면서 환경도 지킬 수 있다는 점에서<br>
+                      ‘가심비'가 뛰어나 찾는 사람들이 날로 느는 중!
+                    </small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- post-section-06 -->
+    <div class="post-section-06">
+      <div class="container">
+        <div class="com-lg-title tc">
+          <p><small>그렇게 울퉁불퉁한 겉모습 때문에 버려지던</small></p>
+          <h3>‘못난이 농산물’이 화려하게 부활 중✨</h3>
+        </div>
+        <div class="com-image">
+          <img src="/assets/imgs/round/6/post/food/10.png">
+        </div>
+        <div class="com-text">
+          <ul>
+            <li>
+              <b>1. 이틀동안 무려 30t이나 판매가 된 못난이 감자🥔</b>
+            </li>
+            <li>
+              <small>
+                대표적인 국내 사례로 SBS 예능 ‘맛남의 광장’에서<br>
+                백종원 대표가 신세계 정용진 부회장에게 감자판매를 부탁했고,<br>
+                이마트에서 못난이 감자가 30t이나 판매됐대!
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- post-section-07 -->
+    <div class="post-section-07">
+      <div class="container">
+        <div class="com-zigzag">
+          <ul class="list">
+            <li class="list-item">
+              <div class="list-image">
+                <div class="com-image">
+                  <img src="/assets/imgs/round/6/post/food/12.png">
+                </div>
+              </div>
+              <div class="list-content flex-vc">
+                <div class="com-text">
+                  <ul>
+                    <li>
+                      <b>2. 못난이 딸기를 활용한 카페 프랜차이즈 음료 </b>
+                    </li>
+                    <li>
+                      <small>당도나 품질에는 문제가 없지만, 모양이 고르지 않아 상품성이 떨어지는<br>‘못난이 딸기'는 30~40% 저렴하게 판매가 되고 있어</small>
+                    </li>
+                    <li>
+                      <small>농가 입장에선 손실이 클 수밖에 없는데 한국농수산식품유통공사와<br>유명 카페 프랜차이즈 업체가 업무협약을 맺으며 딸기를 납품했대!</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- post-section-08 -->
+    <div class="post-section-08">
+      <div class="container">
+        <div class="com-zigzag">
+          <ul class="list">
+            <li class="list-item">
+              <div class="list-image">
+                <div class="com-image">
+                  <img src="/assets/imgs/round/6/post/food/13.png">
+                </div>
+              </div>
+              <div class="list-content flex-vc">
+                <div class="com-text">
+                  <ul>
+                    <li>
+                      <b>3. 오늘 팔지 못하면 버려질 음식과 식자재를<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;마감세일을 통해 구매할 수 있는 앱 '라스트오더'</b>
+                    </li>
+                    <li>
+                      <small>음식점이나 편의점 등에서 판매하는 음식물은<br>일정 시간이 지날 때까지 판매되지 않으면 폐기해야 한다고..</small>
+                    </li>
+                    <li>
+                      <small>그런데 소비자가 다양한 가게들의 마감세일 여부를 확인할 방법이 없어<br>실제적인 마감세일이 이뤄지기는 어려웠는데,</small>
+                    </li>
+                    <li>
+                      <small>이 점에 착안해서 나온 서비스 ! 위치 기반 검색으로 가까운 곳의 마감세일을 알려주는 앱</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- post-section-09 -->
+    <div class="post-section-09">
+      <div class="container">
+        <div class="com-md-title">
+          <h3 class="tc">착한 소비 트렌드에 힘입어<br><b>못난이 농산물을 적극적으로 소비하자는 움직임이 확산되고 있다</b></h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- post-section-10 -->
+    <div class="post-section-10">
+      <div class="container">
+        <div class="shadow-box">
+          <div class="shadow-inner-text">
+            <b>TIP</b>
+            <span>못난이 농산물을 만나보고 싶다면 추천!</span>
+          </div>
+          <div class="shadow-inner-box">
+            <div class="com-zigzag">
+              <ul class="list">
+                <li class="list-item flex-vc">
+                  <div class="list-image">
+                    <div class="com-image">
+                      <img src="/assets/imgs/round/6/post/food/14.png">
+                    </div>
+                  </div>
+                  <div class="list-content flex-vc">
+                    <div class="com-text">
+                      <ul>
+                        <li>
+                          <b>🥕 어글리어스</b>
+                          <small>유기농 못난이 농산물 정기배송 서비스</small>
+                        </li>
+                        <li>
+                          <small>
+                            - 유기농, 무농약 채소를 30% 저렴하게 구매 가능하다<br>
+                            - 1,2인 가구에 딱 맞는 구성<br>
+                            - 배송 단가 : 15,500원(1, 2인 가구) / 25,000원(3, 4인 가구)
+                          </small>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="shadow-inner-box">
+            <div class="com-zigzag">
+              <ul class="list">
+                <li class="list-item flex-vc">
+                  <div class="list-image">
+                    <div class="com-image">
+                      <img src="/assets/imgs/round/6/post/food/15.png">
+                    </div>
+                  </div>
+                  <div class="list-content flex-vc">
+                    <div class="com-text">
+                      <ul>
+                        <li>
+                          <b>🌽 예스어스</b>
+                          <small>버려진 친환경 농산물 정기배송 서비스</small>
+                        </li>
+                        <li>
+                          <small>
+                            - 취향을 반영한 5~10종의 채소와 과일로 구성돼있다<br>
+                            - 배송단가 : 회당 10,000원 / 회당 15,000원 / 회당 25,000원<br>
+                            - 배송주기 : 1주 / 2주 / 3주
+                          </small>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- post-section-11 -->
+    <div class="post-section-11">
+      <div class="com-footer">
+        <p>
+          "보기 좋은 떡이 맛도 좋지 않을까?" 라는 생각에<br>
+          이름이 못난이라고 맛까지 못났을 거란 편견은 놉!<br>
+
+          <b>자세히 보아야 사랑스러운 알뜰! 실속! 못난이 농산물이 대세다</b>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <a href="/post/sport/<?= $this->round ?>">
+      <img class="pc" src="/assets/imgs/round/6/post/1.png" />
+      <img class="mo" src="/assets/imgs/round/6/post/1_on.png" />
+      <div>SPORT</div>
+    </a>
+    <a href="/post/trip/<?= $this->round ?>">
+      <img class="pc" src="/assets/imgs/round/6/post/2.png" />
+      <img class="mo" src="/assets/imgs/round/6/post/2_on.png" />
+      <div>TRIP</div>
+    </a>
+    <a href="/post/food/<?= $this->round ?>" class="active">
+      <img class="pc" src="/assets/imgs/round/6/post/3.png" />
+      <img class="mo" src="/assets/imgs/round/6/post/3_on.png" />
+      <div>FOOD</div>
+    </a>
+    <a href="/post/style/<?= $this->round ?>">
+      <img class="pc" src="/assets/imgs/round/6/post/4.png" />
+      <img class="mo" src="/assets/imgs/round/6/post/4_on.png" />
+      <div>STYLE</div>
+    </a>
+    <a href="/post/culture/<?= $this->round ?>">
+      <img class="pc" src="/assets/imgs/round/6/post/5.png" />
+      <img class="mo" src="/assets/imgs/round/6/post/5_on.png" />
+      <div>CULTURE</div>
+    </a>
+  </div>
+</main>
+
+<script>
+  AOS.init();
+  const mobileCheck = function () {
+    let check = false;
+    (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
+    return check;
+  };
+
+  if (mobileCheck()) {
+    const ele = document.querySelector('.mobile_hide')
+    const imgEle = ele.querySelector('img')
+    imgEle.onload = () => {
+      const div = document.createElement('div')
+      const img = document.createElement('img')
+
+      const num = Math.ceil(Math.random() * 3)
+      img.src = `/assets/imgs/round/6/post/rabbit${num}.png`
+      img.style['object-fit'] = 'contain'
+
+      div.style.height = '150px'
+      div.style.width = '100px'
+      div.style.position = 'absolute'
+
+      const num1 = Math.max(0.1, Math.min(0.9, Math.random()))
+      const height = $(document).height();
+      div.style.top = `${parseInt(num1 * height)}px`;
+      const num2 = Math.random()
+      if (num2 > 0.5) {
+        div.style.left = '-150px'
+      } else {
+        div.style.right = "-150px"
+      }
+
+
+      div.style.transition = "all 0.2s"
+      div.onclick = () => {
+        $(`.modal`).css({
+          'visibility': 'visible',
+          'pointer-events': 'inherit',
+        })
+        $(`.event_popup_0`).css('display', 'block');
+      }
+
+      setTimeout(() => {
+        if (num2 > 0.5) {
+          div.style.left = '50px'
+        } else {
+          div.style.right = "50px"
+        }
+
+
+      }, 5000);
+      div.appendChild(img)
+
+      const body = document.querySelector('body')
+      body.appendChild(div)
+
+    }
+  } else {
+    const ele = document.querySelector('.pc_hide')
+    const imgEle = ele.querySelector('img')
+    imgEle.onload = () => {
+      const div = document.createElement('div')
+      const img = document.createElement('img')
+
+      const num = Math.ceil(Math.random() * 3)
+      img.src = `/assets/imgs/round/6/post/rabbit${num}.png`
+      img.style['object-fit'] = 'contain'
+
+      div.style.height = '200px'
+      div.style.width = '150px'
+      div.style.position = 'absolute'
+
+      const num1 = Math.max(0.1, Math.min(0.9, Math.random()))
+      const height = $(document).height();
+      div.style.top = `${parseInt(num1 * height)}px`;
+      const num2 = Math.random()
+      if (num2 > 0.5) {
+        div.style.left = '-200px'
+      } else {
+        div.style.right = "-200px"
+      }
+
+      div.style.transition = "all 0.2s"
+      div.style.cursor = 'pointer'
+
+      div.onclick = () => {
+        $(`.modal`).css({
+          'visibility': 'visible',
+          'pointer-events': 'inherit',
+        })
+        $(`.event_popup_0`).css('display', 'block');
+      }
+
+      setTimeout(() => {
+        if (num2 > 0.5) {
+          div.style.left = '100px'
+        } else {
+          div.style.right = "100px"
+        }
+
+
+      }, 5000);
+      div.appendChild(img)
+
+      const body = document.querySelector('body')
+      body.appendChild(div)
+
+    }
+  }
+</script>
+<script src="/assets/js/rabbit-event.js"></script>

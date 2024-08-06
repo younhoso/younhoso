@@ -1,0 +1,1 @@
+<h2><img src="img/lnb11_title.png" alt="커뮤니티" /></h2>

@@ -1,0 +1,29 @@
+/* ========== PC ========== */
+img {height: auto;}
+.bg-component .bg-wrap {position: relative;}
+.bg-component .bg-inner {width: 50%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex;flex-direction: column;justify-content: center;position: absolute; right: 0;top: 0;}
+.post-sport-05 .post-image{flex: 1;}
+.post-sport-09 .post-image{flex: 1;}
+
+.post-sport-10 .border{
+  border: 1px solid #C6C6C6;
+}
+.post-sport-10 .post-image:first-child{
+  width: 57%;
+}
+.post-sport-10 .post-image:last-child{
+  width: 41%;
+}
+
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .bg-component .bg-inner {width: 100%; position: static;}
+  .post-sport-05 .post-image{flex: auto;}
+  .post-sport-09 .post-image{flex: auto;}
+  .post-sport-10 .post-image:first-child{
+    width: 100%;
+  }
+  .post-sport-10 .post-image:last-child{
+    width: 100%;
+  }
+}

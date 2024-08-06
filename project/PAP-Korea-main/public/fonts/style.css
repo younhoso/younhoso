@@ -1,0 +1,143 @@
+@font-face {
+  font-family: GmarketSansTTF;
+  font-weight: 300;
+  font-display: swap;
+  src: url('GmarketSansTTF/GmarketSansTTFLight.woff2') format('woff2'),
+    url('GmarketSansTTF/GmarketSansTTFLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: GmarketSansTTF;
+  font-weight: 500;
+  font-display: swap;
+  src: url('GmarketSansTTF/GmarketSansTTFMedium.woff2') format('woff2'),
+    url('GmarketSansTTF/GmarketSansTTFMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: GmarketSansTTF;
+  font-weight: 700;
+  font-display: swap;
+  src: url('GmarketSansTTF/GmarketSansTTFBold.woff2') format('woff2'),
+    url('GmarketSansTTF/GmarketSansTTFBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-display: swap;
+  src: url('Montserrat_test/Montserrat-Light.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-display: swap;
+  src: url('Montserrat_test/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-display: swap;
+  src: url('Montserrat_test/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-display: swap;
+  src: url('Montserrat_test/Montserrat-ExtraBold.ttf.ttf');
+}
+
+@font-face {
+  font-family: ObjektivMk2W03;
+  font-weight: 300;
+  font-display: swap;
+  src: url('ObjektivMk2W03/ObjektivMk2W03-Light.ttf');
+}
+
+@font-face {
+  font-family: ObjektivMk2W03;
+  font-weight: 500;
+  font-display: swap;
+  src: url('ObjektivMk2W03/ObjektivMk2W03-Medium.ttf');
+}
+
+@font-face {
+  font-family: ObjektivMk2W03;
+  font-weight: 700;
+  font-display: swap;
+  src: url('ObjektivMk2W03/ObjektivMk2W03-Bold.ttf');
+}
+
+@font-face {
+  font-family: CheeseToast;
+  font-weight: 500;
+  font-display: swap;
+  src: url('Cheese-Toast.ttf');
+}
+
+@font-face {
+  font-family: AvenirNextCondensed;
+  font-weight: 500;
+  font-display: swap;
+  src: url('CarroisGothic-Regular.ttf');
+}
+
+@font-face {
+  font-family: AvenirNextCondensed;
+  font-weight: 700;
+  font-display: swap;
+  src: url('AvenirNextCondensed-DemiBold.ttf');
+}
+
+@font-face {
+  font-family: NotoSans;
+  font-weight: 300;
+  font-display: swap;
+  src: url('NotoSans/NotoSansKR-Light.otf');
+}
+
+@font-face {
+  font-family: NotoSans;
+  font-weight: 500;
+  font-display: swap;
+  src: url('NotoSans/NotoSansKR-Regular.otf');
+}
+
+@font-face {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-display: swap;
+  src: url('NotoSans/NotoSansKR-Bold.otf');
+}
+
+@font-face {
+  font-family: Mada;
+  font-weight: 300;
+  font-display: swap;
+  src: url('Mada/Mada-Light.ttf');
+}
+
+@font-face {
+  font-family: Mada;
+  font-weight: 500;
+  font-display: swap;
+  src: url('Mada/Mada-Bold.ttf');
+}
+
+@font-face {
+  font-family: Mada;
+  font-weight: 700;
+  font-display: swap;
+  src: url('Mada/Mada-Bold.ttf');
+}
+
+body,
+html,
+input,
+textarea {
+  font-family: Montserrat, NotoSans;
+  /* font-family: AvenirNextCondensed, NotoSans; */
+}

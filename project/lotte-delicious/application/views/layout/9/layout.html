@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" id="meta_og_title" content="맛진 TASTYZINE">
+  <meta property="og:url" id="meta_og_url" content="http://tastyzine.co.kr/">
+  <meta property="og:image" content="/assets/imgs/round/<?=$this->round?>/SEO.png">
+  <meta property="og:description" id="meta_og_description" content="세상에서 가장 맛있는 매거진">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="/assets/lib/aos/dist/aos.css">
+  <link rel="stylesheet" href="/assets/font/font.css">
+  <link rel="stylesheet" href="/assets/css/9/style.css">
+  <link rel="stylesheet" href="/assets/css/9/base.css?a=2">
+  <link rel="icon" href="/assets/imgs/pavicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="/assets/lib/aos/dist/aos.js"></script>
+  <script src="/assets/js/common.js?ver=<?=rand()?>"></script>
+  <script src="/assets/js/global.js"></script>	   
+  <title>롯데 맛진</title>
+  <style>
+  /* .story_sub #header::before {opacity:1; box-shadow: 0px 4px 10px #00000029;} */
+	.story_sub #header .wrap h1 a {color:#000;}
+	.story_sub #header .wrap h1 a.back_bt {display:inline-flex;}
+	.story_sub #header .wrap h1 a img.black_logo {display:block;}
+	.story_sub #header .wrap h1 a img.white_logo {display:none;}
+	.story_sub #header .wrap h1 a img.black_back {display:block;}
+	.story_sub #header .wrap h1 a img.white_back {display:none;}
+	.story_sub #header .menu-right ul {display:none;}
+	.story_sub #header .menu-right ul li a {color:#000;}
+	.story_sub #header .menu-right i {background:url('/assets/imgs/icon/MO_CAT_CLO_B.svg'); background-size:100%; background-repeat:no-repeat;}
+	.story_sub .progress {display:none; width:100%; height:10px; position:fixed; left:0; top:70px; z-index:100; width:100%; background:rgba(255,255,255,0.3);}
+	.story_sub .progress .bar {background-color:#73BF00 ; width:100%; height:10px;}
+	@media (max-width:1080px){
+	.story_sub .progress {top:53px;}
+	}
+  </style>   
+</head>
+
+<body>
+<? if( isset($this->main) ) { ?>
+<div id="container">
+<? } else if( isset($this->post_sub) ) { ?>
+<div id="container" class="subpage story_sub">
+<? } else { ?>
+<div id="container" class="subpage">
+<? } ?>
+  <!-- HEADER 영역 -->
+  <header id="header">
+    <div class="wrap flex jcsb">
+      <a href="/" class="logo">
+        <img src="/assets/imgs/round/7/header/logo_white.png" alt="#" title="#">
+      </a>
+
+      <div class="menu flex aic en">
+        <a href="/about/index/<?= $this->round ?>">ABOUT</a>
+        <a href="/post/index/<?= $this->round ?>">POST</a>
+        <a href="/video/index/<?= $this->round ?>">VIDEO</a>
+        <a href="/news/index/<?= $this->round ?>">NEWS</a>
+        <a href="/event/index/<?= $this->round ?>">EVENT</a>
+        <img src="/assets/imgs/round/5/MO/MENU/롯데_맛진_로고3.png" alt="menu" title="menu">
+      </div>
+    </div>
+  </header>	
+	<div class="progress">
+		<div class="bar"></div>
+	</div>
+
+  <?= $this->contents ?>
+
+  <!-- FOOTER 영역 -->
+  <footer class="section" style="height: auto">
+    <div class="wrap flex jcsb aie">
+      <div class="flex aie">
+        <a class="logo" href="/">
+          <img src="/assets/imgs/round/7/footer/logo.png" alt="#" title="#">
+        </a>
+
+        <p class="text kr">
+          <b>서울특별시 송파구 백제고분로 217 롯데GRS 79 SQUARE</b><br>
+          <span>COPYRIGHT &copy; 2022 LOTTE GRS. ALL RIGHTS RESERVED.</span>
+        </p>
+      </div>
+
+      <select class="footer_pc" onchange="window.open(value,'_blank');">
+        <option hidden>FAMILY SITE</option>
+        <option class="kr" value="http://www.lottegrs.com">롯데 GRS</option>
+        <option class="kr" value="http://www.lotteria.com">롯데리아</option>
+        <option class="kr" value="http://www.angelinus.com">엔제리너스</option>
+        <option class="kr" value="http://www.krispykreme.co.kr">크리스피 크림 도넛</option>
+      </select>
+      <ul class="footer_family footer_mo">
+        <li><a href="http://www.lottegrs.com">롯데 GRS</a></li>
+        <li><a href="http://www.lotteria.com">롯데리아</a></li>
+        <li><a href="http://www.angelinus.com">엔제리너스</a></li>
+        <li><a href="http://www.krispykreme.co.kr">크리스피 크림 도넛</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+  	AOS.init({ easing: 'ease-in-out-sine', duration:800, once : true });
+    function toggle_fsite() {
+      $('.family_site ul').toggleClass('on');
+    }
+	tasty.init();
+
+  const eventPath = window.location.pathname.split('/');
+  if(eventPath[1] === 'event'){
+    $('#header').addClass('headerEvent');
+  } else {
+    $('#header').removeClass('headerEvent');
+  }
+  </script>
+</div>
+</body>
+
+</html>

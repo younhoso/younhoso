@@ -1,0 +1,133 @@
+<style>
+section .content_wrap {padding-top:0;}
+.contents.story_sub section:first-of-type .content_wrap {overflow:hidden; padding-top:2rem;}
+.contents.story_sub section:first-of-type .txt_img {position:relative; margin-top:9.6rem;}
+.contents.story_sub section:first-of-type .txt_img .img_wrap {position:relative;}
+.contents.story_sub section:first-of-type .txt_img {margin-top:9.6rem;}
+.contents.story_sub section:first-of-type .img_wrap {margin-left:-7.2rem; width:calc( 100% + 7.2rem - 20.8rem );}
+.contents.story_sub section:first-of-type .img_wrap.pc {display:none;}
+.contents.story_sub section:first-of-type .txt_wrap {padding-right: calc( 7.5rem + 20.8rem );}
+.contents.story_sub section:first-of-type .content_wrap > p:last-of-type {margin-top:2rem; padding-left:21.8rem;}
+
+.contents.story_sub section:nth-of-type(2) h2+div img {width:100%;}
+.contents.story_sub section:nth-of-type(2) .content_wrap > p:last-of-type {margin-top:2rem;}
+
+.contents.story_sub section:nth-of-type(3) .img_wrap {width:calc( 100% + 14.4rem ); margin-left:-7.2rem; margin-right:-7.2rem;}
+.contents.story_sub section:nth-of-type(3) h2 {margin-top:4rem; text-align:center;}
+.contents.story_sub section:nth-of-type(3) p {margin-top:2rem; text-align:center;}
+
+.contents.story_sub section:nth-of-type(4) .img_wrap {width:calc( 100% + 14.4rem ); margin-left:-7.2rem; margin-right:-7.2rem;}
+.contents.story_sub section:nth-of-type(4) .txt_img .txt_wrap {z-index:1; justify-content:flex-end; padding-bottom:8rem;}
+.contents.story_sub section:nth-of-type(4) .txt_img .txt_wrap p {margin-top:2rem;}
+.contents.story_sub section:nth-of-type(4) .content_wrap > p:last-of-type {margin-top:2rem; text-align:center; margin-left:-7.2rem; margin-right:-7.2rem;}
+.contents.story_sub section:nth-of-type(4) .gra::after {content:''; position:absolute; top:0; left:0; width:calc( 100% + 14.4rem ); height:100%; margin-left:-7.2rem; margin-right:-7.2rem;}
+.contents.story_sub section:nth-of-type(4) .gra::after {background: transparent linear-gradient(180deg, #00000000 0%, #0000009C 100%) 0% 0% no-repeat padding-box;}
+
+@media all and (min-width:1280px) {
+	.contents.story_sub section:first-of-type .content_wrap {overflow:visible;}
+	.contents.story_sub section:first-of-type .topp {margin-left:60px; width:calc( 100% + 60px );}
+	.contents.story_sub section:first-of-type .img_wrap {margin-left:0; width:81.1rem; position:relative;}
+	.contents.story_sub section:first-of-type .img_wrap.mo {display:none;}
+	.contents.story_sub section:first-of-type .img_wrap.pc {display:block;}
+	.contents.story_sub section:first-of-type .txt_wrap {padding-right:12.2rem; width:81.1rem; padding-bottom:3rem;}
+	.contents.story_sub section:first-of-type .txt_img {margin-top:16rem;}
+	.contents.story_sub section:first-of-type .txt_img::after {width:81.1rem; margin-left:0; display:none;}
+	.contents.story_sub section:first-of-type .txt_img .txt_wrap h2 {padding-left:12rem;}
+	.contents.story_sub section:first-of-type .txt_img .txt_wrap p {padding-left:12rem;}
+	.contents.story_sub section:first-of-type .img_list {padding-left:11.8rem; margin-right:0; width:100%; margin-top:1.4rem;}
+	.contents.story_sub section:first-of-type .content_wrap > p:last-of-type {margin-top:3rem; padding-left:47.8rem;}
+	.contents.story_sub section:first-of-type .img_list div {margin-left:1.4rem;}
+	.contents.story_sub section:first-of-type .img_list div:first-child {margin-left:0;}
+	
+	.contents.story_sub section:nth-of-type(2) h2 {padding-left:12rem;}
+	.contents.story_sub section:nth-of-type(2) h2+div {padding-right:12rem; text-align:right;}
+	.contents.story_sub section:nth-of-type(2) h2+div img {width:69.3rem;}
+	.contents.story_sub section:nth-of-type(2) p {padding-left:12rem;}
+	.contents.story_sub section:nth-of-type(2) .content_wrap > p:last-of-type {margin-top:3rem;}
+	
+	.contents.story_sub section:nth-of-type(3) .img_wrap {margin:0 auto; width:104rem;}
+	.contents.story_sub section:nth-of-type(3) h2 {margin-top:6rem;}
+	.contents.story_sub section:nth-of-type(3) p {margin-top:3rem;}
+	
+	.contents.story_sub section:nth-of-type(4) .img_wrap {margin:0; width:100%;}
+	.contents.story_sub section:nth-of-type(4) .txt_img .txt_wrap {padding-bottom:13.4rem; }
+	.contents.story_sub section:nth-of-type(4) .txt_img .txt_wrap p {margin-top:3rem;}
+	.contents.story_sub section:nth-of-type(4) .content_wrap > p:last-of-type {margin-top:3rem;}
+	.contents.story_sub section:nth-of-type(4) .gra::after {width:100%; margin:0;}
+}
+</style>
+<div class="contents story_sub">
+	<div class="sub_top">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/story/style/main.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/story/style/style_main.png" class="pc">
+		</div>
+		<div class="txt_wrap" data-aos="fade-down">
+			<h2>힙해지고 싶어?</h2>
+			<p>골프는 힙 그 자체</p>
+		</div>
+	</div>
+	
+	<section>
+		<div class="content_wrap">
+			<p class="topp" data-aos="fade-left">골프는 더 이상 X세대만의 스포츠가 아니다. <br>최근 젊은 골퍼들이 늘어나면서, SNS에서 골프를 즐기는 <br class="mo">MZ세대를 쉽게 찾아볼 수 있다. <br><br>골프가 ‘인스타그래머블’ 한 스포츠로 자리잡고 있는 것이다. <br>이처럼 MZ세대가 골프에 열광하는 이유는 무엇일까?</p>
+			<div class="txt_img" data-aos="fade-right">
+				<div class="img_wrap">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/style/sub01.png" style="width:100%;" class="mo">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/style/style_sub01.png" style="width:100%;" class="pc">
+				</div>
+				<style>
+					.txt_img {position:relative;}
+					.txt_img h2 {color:#037781; line-height:4.8rem;}
+					.txt_img h2 span {font-weight:400; line-height:4.8rem;}
+				</style>
+				<div class="txt_wrap" style="z-index:1; align-items:flex-end;">
+					<h2 style="text-align:left;">코로나가 <br>부른 <br><b>나비효과</b></h2>
+				</div>
+			</div>
+			<p data-aos="fade-left">먼저 코로나 19의 영향을 빼놓을 수 없다. <br>코로나로 인해 실내 스포츠에 제한이 생기면서 <br>넓은 야외에서 적은 인원으로 즐길 수 있는 <br>골프가 주목받기 시작했다. <br><br>이와 더불어, 해외여행이 어려워지자 <br>MZ세대들은 보복소비 혹은 보상심리로 <br>비교적 고가의 스포츠인 골프를 접하기 <br>시작한 것이다.</p>
+		</div>
+	</section>
+	
+	<section>
+		<div class="content_wrap">
+			<div style="display:flex; justify-content:space-between;">
+				<h2 style="flex:0.33; text-align:left;" class="mint" data-aos="fade-right">너도 <br>골린이? <br><br><b>야! 나두 <br>골린이!</b></h2>
+				<div style="flex:0.66;" data-aos="fade-left">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/style/sub02.png" style="width:100%;" class="mo">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/style/style_sub02.png" style="width:100%;" class="pc">
+				</div>
+			</div>
+			<p>트렌드에 민감한 MZ 골린이들은 요즘 바쁘다. <br><br>‘#골스타그램’, ‘#라운딩룩’ 등을 찾아보며, <br>스윙할 때 남들보다 예쁜 옷을 찾아야하기 때문. <br>사진용과 연습용 골프룩이 따로 있을 정도로 이들은 골프 웨어에 진심이다. <br><br>아직까지 인스타그래머블한 골프 웨어를 찾지 못해 방황중인 이들에게 <br>‘맥케이슨’을 소개한다.</p>
+		</div>
+	</section>
+	<section>
+		<div class="content_wrap">
+			<div class="img_wrap" data-aos="fade-up">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/style/sub03.png" style="width:100%;" class="mo">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/style/style_sub03.png" style="width:100%;" class="pc">
+			</div>
+			<h2 class="mint" data-aos="fade-up"><b>배우 손예진이 입은 그 옷!</b></h2>
+			<p data-aos="fade-up">
+			최근 JTBC 드라마 ‘서른, 아홉’에서 손예진과 연우진이 착용한 브랜드 <br>맥케이슨은 이미 골린이들 마음 속에 저장된 상태. <br><br>특히 22SS 시그니처 아이템으로 출시된 <br>‘맥케이슨 여성 라인 포인트 니트 가디건 아이보리 컬러’는 <br>손예진이 드라마에 착용하고 나와 더욱 화제다.
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class="content_wrap">
+			<div class="txt_img" data-aos="fade-up">
+				<div class="img_wrap gra">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/style/sub04.png" style="width:100%;" class="mo">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/style/style_sub04.png" style="width:100%;" class="pc">
+				</div>
+				<div class="txt_wrap">
+					<h2 style="text-align:center; color:#fff;"><b>골프패션과 일상패션의 경계를 허물다.</b></h2>
+					<p style="margin-top:2rem; text-align:center;">언뜻 보면 골프 웨어 같지 않다. <br>일상복과 골프복의 경계가 없어지면서 <br>평상 시에도 활용이 가능한 ‘캐주얼 골프웨어’ 가 대세다.</p>
+				</div>
+			</div>
+			<p data-aos="fade-up">
+				X세대와 MZ세대를 아우르는 골프 사랑은 올 한해도 이어질 것으로 전망된다. <br>그러니 촌스러운 골프 웨어는 놓아주자.
+			</p>
+		</div>
+	</section>
+</div>

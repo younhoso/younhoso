@@ -1,0 +1,107 @@
+img {height: auto;}
+.wraper {max-width:1280px; margin:0 auto; padding:0 10px;position: relative;}
+.event-title {font-size: 42px;text-align: center;}
+.period {font-size: 20px; display: inline-block;border: 2px solid #E8E8E8;}
+@media (max-width: 991px){
+	.event {padding-top: 50px;}
+	.event-title {font-size: 20px;}
+	.period {font-size: 16px;}
+
+}
+
+.pc_banner {display: block;}
+.mo_banner {display: none;}
+.eventBtn {text-align: center;}
+.eventBtn a{width: 280px; height: 52px; line-height: 52px; color: #fff; font-size: 18px; text-align: center; display: inline-block; background-color: #73BF00;}
+@media (max-width: 991px){
+	.pc_banner {display: none;}
+	.mo_banner {display: block;}
+}
+
+/* event-item */
+.event-item {flex: 1;position: relative;}
+.event-item::before {content: '';width: 80%;height: 140%;display: block;background-color: #D2EAFF;border-radius: 50%;position: absolute;top: -122px;left: 50%;transform: translate(-50%, 0);z-index: -1;}
+.event-item .desc-inner {flex-grow: 1; background-color: white;box-shadow: 0px 3px 6px #00000029;border-radius: 30px;}
+.event-item .desc-inner .desc {letter-spacing: -0.060em; line-height: 1.5;}
+.event-item .article-thumbnail-inner {width: 250px;position: absolute;top: 0; left:50%; transform: translate(-50%, -83%); z-index: -1;}
+@media (max-width: 991px){
+    .event-item {flex: none;}
+}
+
+/* event-01 */
+.event-01 {background-color: #FFF9E3;}
+.event-01 .title{font-size: 42px;}
+.event-01 .event-image {max-width: 594px; height: 556px; flex: 1;background-color: #fff; border-radius: 30px;position: relative;}
+.event-01 .event-image .item_count {width: 88px; height: 42px; font-size: 20px;line-height: 42px; border-radius: 50px; text-align: center; position: absolute; top: 30px; left: 30px; background-color: #000; color: #fff;}
+@media (max-width:991px){
+    .event-01 .title {font-size: 30px;}
+		.event-01 .event-image {padding: 25px;}
+    .event-01 .event-image .item_count {font-size: 20px;}
+}
+
+/* event-02 */
+.event-02 {background:#FCFCFC; padding:86px 0 116px;}
+.event-02 b {font-size:20px; font-weight:500; position:relative; top:0px;}
+.event-02 ul {flex:1; min-width:0; list-style:none; padding:0 0 0 30px; margin:0;}
+.event-02 ul li {font-size:16px; font-weight:500; color:#666; line-height:1.5; margin:0 0 5px; position:relative; padding-left:10px;}
+.event-02 ul li:before {display:inline-block; content:""; position:absolute; left:0; top:10px; width:5px; height:1px; background:#666;}
+.event-02 ul li:last-of-type {margin:0;}
+@media (max-width:991px){
+.event-02 {padding:60px 15px;}
+.event-02 b {width:100%; font-size:18px;}
+.event-02 ul {flex:none; width:100%; padding:0; margin:15px 0 0;}
+.event-02 ul li {font-size:14px;}
+}
+
+
+/* 댓글 */
+.event-comment .comment-head {display:flex; flex-wrap:wrap; align-items:center; padding:20px 0 20px; margin-bottom: 50px; border-top: 1px solid #E8E8E8; border-bottom: 1px solid #E8E8E8;}
+.event-comment .comment-head .wraper {width: 1280px;}
+.event-comment .comment-head strong {font-size:26px; font-weight:bold; margin-right:15px;}
+.event-comment .comment-head ul {display:flex; flex-wrap:wrap; align-items:center;}
+.event-comment .comment-head ul li {display:flex; flex-wrap:wrap; align-items:center;}
+.event-comment .comment-head ul li:after {display:inline-block; content:""; width:1px; height:20px; background:#C6C6C6; margin:0 12px;}
+.event-comment .comment-head ul li:last-of-type:after {display:none;}
+.event-comment .comment-head ul li a {font-size:16px; color:#C6C6C6;}
+.event-comment .comment-head ul li.active a {color:#000; font-weight:500;}
+.event-comment .comment-head ul li:hover a {color:#000; font-weight:500;}
+.event-comment .comment-body .comment-tab {border-radius:25px 25px 0 0; margin:0 0 45px; overflow:hidden; background:#F2F2F2;}
+.event-comment .comment-body .comment-tab ul {display:table; table-layout:fixed; width:100%;}
+.event-comment .comment-body .comment-tab ul li {display:table-cell;}
+.event-comment .comment-body .comment-tab ul li a {display:flex; flex-wrap:wrap; align-items:center; justify-content:center; height:50px; font-size:16px; font-weight:bold; color:#D6D6D6;}
+.event-comment .comment-body .comment-tab ul li.active a {background:#1BB3E3; color:#fff; border-radius:25px 25px 0 25px;}
+.event-comment .comment-body .comment-tab ul li:first-of-type.active a {border-radius:25px 25px 25px 0;}
+.event-comment .comment-body .comment-list .list {padding:0; margin:0; list-style:none;}
+.event-comment .comment-body .comment-list .list .list-item {border-bottom:1px solid #E8E8E8; padding:60px 0;}
+.event-comment .comment-body .comment-list .list .list-item:first-of-type {padding-top:0;}
+.event-comment .comment-body .comment-list .list .list-item:last-of-type {border:0;}
+.event-comment .comment-body .comment-list .list .list-item .list-head {display:flex; flex-wrap:wrap; align-items:center;}
+.event-comment .comment-body .comment-list .list .list-item .list-head img {width:60px; height:60px; border-radius:50%; object-fit:cover; margin-right:15px;}
+.event-comment .comment-body .comment-list .list .list-item .list-head > div {flex:1; min-width:0;}
+.event-comment .comment-body .comment-list .list .list-item .list-head > div strong {display:block; font-size:16px; font-weight:bold;}
+.event-comment .comment-body .comment-list .list .list-item .list-head > div time {display:block; font-size:16px; color:#C6C6C6; margin:5px 0 0;}
+.event-comment .comment-body .comment-list .list .list-item .list-body {padding-left:75px; padding-top:25px;}
+.event-comment .comment-body .comment-list .list .list-item .list-body p {font-size:16px; line-height:1.5;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-image {display:flex; flex-wrap:wrap; margin:15px -7px -14px;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-image img {width:160px; height:160px; margin:0 7px 14px; object-fit:cover;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-like {margin:14px 0 0;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-like a {font-size:16px; font-weight:500; color:#C6C6C6; display:flex; flex-wrap:wrap; align-items:center;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-like a:before {margin-right:6px; display:inline-block; content:""; width:28px; height:28px; background:url('../../../assets/imgs/round/7/event/like.png') no-repeat center / cover;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-like a.active:before {background-image:url('../../../assets/imgs/round/7/event/like_on.png');}
+.event-comment .comment-body .comment-list .list-none {text-align:center; padding:60px 0 120px; text-align:center; font-size:18px; color:#C6C6C6;}
+@media (max-width:991px){
+.event-comment .comment-head ul li:after {height:13px; margin:0 7px;}
+.event-comment .comment-body .comment-tab {margin:0 0 20px;}
+.event-comment .comment-body .comment-list .list .list-item {padding:25px 0;}
+.event-comment .comment-body .comment-list .list .list-item .list-head img {width:45px; height:45px; margin-right:10px;}
+.event-comment .comment-body .comment-list .list .list-item .list-head > div strong {font-size:15px;}
+.event-comment .comment-body .comment-list .list .list-item .list-head > div time {font-size:13px;}
+.event-comment .comment-body .comment-list .list .list-item .list-body {padding-left:0; padding-top:15px;}
+.event-comment .comment-body .comment-list .list .list-item .list-body p {font-size:14px;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-image {margin:15px -5px -10px;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-image img {width:calc(25% - 10px); height:100%; margin:0 5px 10px;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-like {margin:10px 0 0;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-like a {font-size:14px;}
+.event-comment .comment-body .comment-list .list .list-item .list-body .list-body-like a:before {width:20px; height:20px; margin-right:5px;}
+.event-comment .comment-body .comment-list .list-none {padding:40px 0; font-size:16px;}
+}

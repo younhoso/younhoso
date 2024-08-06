@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  font-style: normal;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+#__next {
+  overflow-y: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/**
+  Swiper Customization
+**/
+.mainSwiper .swiper-button-prev,
+.mainSwiper .swiper-button-next {
+  color: #000000;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mainSwiper .swiper-button-prev:after,
+.mainSwiper .swiper-button-next:after {
+  font-size: 12px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.mainSwiper .swiper-pagination-bullet {
+  background: #43424a;
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+  border: none;
+  bottom: 1px;
+  position: relative;
+}
+
+.mainSwiper .swiper-pagination-bullet-active {
+  background: #ffffff;
+  border: 2px solid #000000;
+  width: 10px;
+  height: 10px;
+  bottom: 0px;
+}
+
+.mainSwiper .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 20px !important;
+}
+
+.pointer-none {
+  pointer-events: none !important;
+}

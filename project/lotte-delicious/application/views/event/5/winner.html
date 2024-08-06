@@ -1,0 +1,634 @@
+<style>
+	.line {
+		height: 8px;
+		background: #F5F5F5;
+	}
+
+	.event_content_wrap {
+		max-width: 1280px;
+		width: 100%;
+		margin: 0px auto 162px auto;
+	}
+
+
+	.event_content_wrap .box_text {
+		margin-top: 140px;
+	}
+
+	.event_content_wrap .box_text .kr {
+		font-size: 22px;
+		line-height: 55px;
+		text-align: center;
+	}
+
+	.event_content_wrap .box_text .kr span {
+		background: #222222;
+		color: #fff;
+		padding: 12px 27px;
+	}
+
+	.event_content_wrap .sub_text {
+		margin-top: 35px;
+	}
+
+	.event_content_wrap .sub_text .pc .kr {
+		font-size: 36px;
+		color: #222222;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.event_content_wrap .sub_text .pc .kr span {
+		color: #FF9A9C;
+	}
+
+	.event_content_wrap .sub_text .mo .kr {
+		font-size: 26px;
+		color: #222222;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.event_content_wrap .sub_text .mo .kr span {
+		color: #FF9A9C;
+	}
+
+	.event_content_wrap h2+p {
+		color: #000;
+		font-weight: 500;
+	}
+
+	.event_content_wrap .event_main_img {
+		margin-top: 50px;
+		margin-bottom: 80px;
+	}
+
+	.event_content_wrap .event_main_img+p {
+		font-size: 36px;
+		color: #000;
+	}
+
+	.event_content_wrap .event_main_img+p+p {
+		font-size: 36px;
+		margin-top: 40px;
+	}
+
+	.event_content_wrap .box_wrap {
+		display: flex;
+		gap: 32px;
+	}
+
+	.event_content_wrap .box_wrap .box {
+		padding: 0;
+		padding-bottom: 30px;
+		height: fit-content;
+	}
+
+	.event_content_wrap .box_wrap .box h5 {
+		height: 33px;
+		line-height: 32px;
+		border-bottom: 1px solid #d6d6d6;
+		font-size: 16px;
+		text-align: center;
+		font-weight: bold;
+		color: #425654;
+	}
+
+	.event_content_wrap .box_wrap .box p {
+		padding: 30px 10px 12px 10px;
+		margin: 0;
+		text-align: center;
+		font-size: 16px;
+		line-height: 25px;
+	}
+
+	.event_content_wrap .box_wrap .box img {
+		margin: 8px 10px 0px 10px;
+		width: calc(100% - 20px);
+	}
+
+	.event_content_wrap .box {
+		border: 1px solid #f2f2f2;
+		box-shadow: 4px 4px 12px #0000001C;
+		border-radius: 0px;
+		padding: 34px 30px 40px 26px;
+		flex: 1;
+		display: flex;
+		margin-bottom: 40px;
+	}
+
+	.event_content_wrap .box2 {
+		border: 1px solid #f2f2f2;
+		box-shadow: 4px 4px 12px #0000001C;
+		border-radius: 0px;
+		flex: 1;
+		display: flex;
+		margin-bottom: 40px;
+	}
+
+	.event_content_wrap .box .profile {
+		margin-right: 14px;
+	}
+
+	.event_content_wrap .box .profile img {
+		width: 72px;
+		height: 72px;
+		border-radius: 72px;
+		object-fit: cover;
+		margin: 0;
+	}
+
+	.event_content_wrap .box h5 {
+		color: #000;
+		font-size: 24px;
+		line-height: 72px;
+	}
+
+	.event_content_wrap .box p {
+		color: #222222;
+		font-size: 20px;
+		line-height: 34px;
+		text-align: left;
+	}
+
+	.event_content_wrap .box.benefit {
+		display: block;
+		margin-left: 0;
+	}
+
+	.event_content_wrap .box.benefit p {
+		text-align: center;
+		font-weight: 500;
+		margin-top: 0;
+	}
+
+	.event_content_wrap .box.benefit p+p {
+		color: #707070;
+		font-weight: 400;
+		margin-top: 8px;
+	}
+
+	.event_content_wrap .reward .pc {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 108px;
+	}
+
+	.event_content_wrap .reward .mo {
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-top: 50px;
+		margin-bottom: 94px;
+	}
+
+	.event_content_wrap .left {
+		width: 624px;
+		margin: 0;
+	}
+
+	.event_content_wrap .right {
+		width: 624px;
+		margin: 0;
+	}
+
+
+	@media (min-width:1280px) {
+		.event_content_wrap .reward .mo {
+			display: none;
+		}
+
+		.event_content_wrap .sub_text .mo {
+			display: none;
+		}
+
+		.image_mo {
+			display: none;
+		}
+	}
+
+	@media (max-width:1279px) {
+		.event_content_wrap .event_main_img+p {
+			font-size: 22px;
+		}
+
+		.event_content_wrap .event_main_img+p+p {
+			font-size: 22px;
+		}
+
+		.event_content_wrap .reward .pc {
+			display: none;
+		}
+
+		.event_content_wrap .sub_text .pc {
+			display: none;
+		}
+
+		.image_pc {
+			display: none;
+		}
+	}
+</style>
+
+<link rel="stylesheet" href="/assets/css/5/event.css">
+
+<div class="event content_box">
+	<div class="now_white flex pr">
+		<div class="now_slide flex jcsb en pa">
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p>EVENT</p>
+			<p class="hide">EVENT</p>
+			<p class="hide">EVENT</p>
+			<p class="hide">EVENT</p>
+			<p class="hide">EVENT</p>
+			<p class="hide">EVENT</p>
+			<p class="hide">EVENT</p>
+		</div>
+	</div>
+
+	<div class="image" data-aos="fade">
+		<div class="image_pc">
+			<img src="/assets/imgs/round/5/event/visusal2.png" alt="event" title="event">
+		</div>
+		<div class="image_mo">
+			<img src="/assets/imgs/round/5/event/m.png" alt="event" title="event">
+		</div>
+	</div>
+
+	<div class="event_content wrap">
+		<div class="title kr">
+			<h2>산타의 선물 컬렉션</h2>
+		</div>
+
+		<div class="contents_area">
+			<div class="top">
+				<p class="kr" style="text-align: center;">스피커, 빔프로젝트, 무선이어폰, 러그, 클렌저 <br> 5종 중 1종 <span
+						class="bold">랜덤증정 '당첨자
+						25인'</span></p>
+			</div>
+
+			<div class="gift_scroll">
+				<div class="gift_list">
+					<div class="gift" data-aos="fade-left">
+						<div class="gift_img">
+							<img src="/assets/imgs/round/5/event/gift_1.png" alt="gift" title="gift">
+						</div>
+						<div class="text kr">
+							<h3>마샬 스피커</h3>
+						</div>
+					</div>
+					<div class="gift" data-aos="fade-left">
+						<div class="gift_img">
+							<img src="/assets/imgs/round/5/event/gift_2.png" alt="gift" title="gift">
+						</div>
+						<div class="text kr">
+							<h3>삼성 스마트빔</h3>
+						</div>
+					</div>
+					<div class="gift" data-aos="fade-left">
+						<div class="gift_img">
+							<img src="/assets/imgs/round/5/event/gift_3.png" alt="gift" title="gift">
+						</div>
+						<div class="text kr">
+							<h3>갤럭시 버즈Pro</h3>
+						</div>
+					</div>
+					<div class="gift" data-aos="fade-left">
+						<div class="gift_img">
+							<img src="/assets/imgs/round/5/event/gift_4.png" alt="gift" title="gift">
+						</div>
+						<div class="text kr">
+							<h3>터프팅러그</h3>
+						</div>
+					</div>
+					<div class="gift" data-aos="fade-left">
+						<div class="gift_img">
+							<img src="/assets/imgs/round/5/event/gift_5.png" alt="gift" title="gift">
+						</div>
+						<div class="text kr">
+							<h3>비건 미니팩클렌저</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="explain text">
+				<p class="kr" style="color: #222222;">
+					당첨자 경품은 2월 내 발송예정입니다.<br></p>
+				<p class="kr">
+					※ 이벤트 당첨자 개별 안내 후 개인정보 회신 확인에 따라 순차적 발송됩니다.<br>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="line"></div>
+
+	<div class="event_content_wrap">
+		<div class="box_text">
+			<div class="kr" data-aos="fade">
+				<span>12월 EVENT</span>
+			</div>
+		</div>
+		<div class="sub_text">
+			<div class="pc">
+				<div class="kr" data-aos="fade">
+					<p>산타의 선물을 받을 <span>주인공 25인을</span> 소개합니다.</p>
+				</div>
+			</div>
+			<div class="mo">
+				<div class="kr" data-aos="fade">
+					<p>산타의 선물을 받을</br><span>주인공 25인을</span> 소개합니다.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="reward fullin mt60">
+			<div class="pc">
+				<div class="left">
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_1.png">
+						</div>
+						<div class="text kr">
+							<h5>불패레이서</h5>
+							<p>올 한해는 하루가 너무 순식간에 지나가는 한해였습니다. 첫째가 피부 묘기증과 같은 간지러움으로 21년 시작으로 22년 지금까지 갑자기 머리부터 발끝까지 몸 구석구석 간지러워 첫째 딸이 울며 괴로워하는 모습을 보고 우린 밤잠을 제대로 잠을 자지 못하였고, 유명하다는 피부과 및 큰 병원까지 내원하여 원인을 찾고 약물치료를 시행하였으며, 유난히 새벽이면 심해지는 이 원인 모를 병을 안고 부모로써 해줄 수 없어 괴롭고 힘든 한해였던 그런 나날들이었습니다. 다행히 지금은 조금 개선이 되어 간지러운 횟수는 줄어들었지만, 언제 어느 때 또다시 시작될지 두렵긴 하지만 큰딸과 의지로 반드시 나을 수 있도록 기도하고 있습니다. 사소한 이런 원인 모를 병으로 늘 잠을 제대로 자지 못해 나와 와이프는 피로도가 증가하며 건강까지 악화하지 않을까 걱정이 됩니다. 올해는 이런 가족들의 건강이 악화가 되지 않았느냐는 걱정으로 내년에는 첫째 딸 이 원인 모를 병이 완전히 없어지고 우리의 가정에는 모두 건강하고 밤에 잠을 잘 잘 수 있도록 간절히 기도해 봅니다. 우리의 몸이 건강해야 모든 삶에는 행복이 오지 않을까 싶으며, 내년에는 다른 추억으로 22년도 악몽 같은 나날을 지우려고 합니다. 롯데 GRS 직원들 또한 건강하고 가정에는 행복 가득한 나날들이 있길 소망해봅니다.^^</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_1.png">
+						</div>
+						<div class="text kr">
+							<h5>바니2</h5>
+							<p>안녕하세요. 산타님~~ 저는 향기로운 커피를 내리는 강남지점 SV 이효진이라고 합니다. 매일 아침 5시 40분을 기상으로 오후 8시쯤 집으로 돌아옵니다. 저를 기다리는 점포와 점주님들로 매일 4시간의 운전을 하며 점포 방문을 합니다. 향기로운 커피를 위해서요. 그런데 정작 저희 아들에게는 좋은 엄마가 되지 못하네영~~ 엄마로서의 역할과 가족과 함께 대화할 수 있는 주말 저희 가족은 캠핑을 떠나요. 캠핑에서 즐거운 캐럴송을 행복하게 들을 수 있도록 산타님이 저에게 마샬스피커를 선물로 주신다면 너무나도 행복한 크리스마스를 보낼 수 있을 것 같아요. 꼭 소원 들어주시길 기도합니다.</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_2.png">
+						</div>
+						<div class="text kr">
+							<h5>김산타걸</h5>
+							<p>안녕하세요. 엔제리너스에서 근무하고 있는 김한솔입니다. 메일을 보다 우연히 발견한 맛 ZINE 내용을 보고 이벤트 응모를 해봅니다! 우리 집이 작은 오피스텔의 복층으로 되어있는데, 1층은 생활공간이고, 2층은 자는 곳으로 침대를 놓아 생활하는 곳과 자는 곳을 분리해놨는데 2층에 티브이를 둘 곳이 없어서 1층에 티브이를 두고 누워서 티브이 보고 싶지만, 형편상, 집 구조상 티브이를 2층으로 올릴 수 없어 항상 1층 바닥에 불편하게 누워서 보던가 보다가 에잇 그만 보자 하고 2층 올라가서 마저 못 본 티브이 생각하다 잠들곤합니다,, 저는 빔프로젝트가 가지고 싶은데, 주시면, 2층에서 벽에 쏴서 편안히 티브이도 보고 유튜브도 보고 퇴근 후 여가 생활을 온전히, 즐겁게 잘 보낼 수 있지 않을까 바라봅니다~! 읽으시는 분들 모두 2022년도 한 해 수고 많으셨고 앞으로 빛날 미래만 가득하길 바라요!
+							</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_2.png">
+						</div>
+						<div class="text kr">
+							<h5>쏘니</h5>
+							<p>안녕하세요, 산타님 선물을 간절히 바라는 지구의 어른아이 입니다. 이제 돌이 되는 예쁜 딸아이를 가진 아빠이기도 합니다. 아기가 태어나면서 올해 참 좋은 일이 많았는데요,  아기 덕분에 좋은 집으로 이사도 하고 행복하게 잘 지내고 있습니다. 다만, 아기한테 안 좋을까 봐 집에 TV를 구입하지 않았어요. 그런데, 이제 돌이 지나고 나면 조금씩 성장 발달에 좋은 영상을 보여주고 싶더라고요, 핸드폰이나, 아이패드로 보여주기에는 너무 작고 눈에도 안좋아서,, 빔프로젝터로 보여주면 좋지 않을까 생각하고 있었는데,,, 이렇게 산타님께서 선물을 마련해주셔서 너무 감사드려요. 제가 받을 수 있다면 아기랑 우리 가족 셋이셋이서 너무너무 행복하게 올 연말 보낼 수 있을 것있을것 같아요. 산타님 제 기도가 들리시나요? 하늘에 닿을 때까지외쳐봅니다...  산타님 말이 길었네요. 그럼, 여기까지 감사합니다. 어른아이 쏘니 드림..</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_3.png">
+						</div>
+						<div class="text kr">
+							<h5>유한파파</h5>
+							<p>어릴 적 크리스마스가 되면 가지 않던 교회에 갔다. 하지 않던 연극도 하고 캐럴과 찬송가도 부르고..ㅋ 크리스마스 선물을 받기 위해 하는 어릴 적 행동이었다. 난 오늘도 크리스마스 선물을 받고 싶어 평소 안 해본 이벤트에 참여한다. 생각지 못한 선물을 꼭 받았으면..ㅋ</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_3.png">
+						</div>
+						<div class="text kr">
+							<h5>쳇바퀴</h5>
+							<p>한 해 한 해 시간이 지남에 따라, 칭찬의 필요성에 대해서 생각해봅니다. 잘 먹고, 잘 놀고, 잘 싸기만 해도 칭찬 받았던 어린 시절부터 학교, 회사에 다닐 때도 내가 이루어낸 결과물에 따라 물질적 정신적 칭찬을 받으며 성취감을 얻을 수 있었습니다. 그러나 어른이 되어 시간이 지날수록 칭찬받을 일이 줄어들며, 자신에 대한 사랑, 자신감 등이 많이 부족해지는 시기가 옵니다. 어른들에게도 더 많은 칭찬이 필요한 게 아닐까 싶습니다. 저뿐만 아니라 모두가 스스로를 칭찬할 줄 아는 어른이 되기를 바라고, 22년 많은 일들을 이루어낸 나를 위한 선물을 바라며 이벤트 응모합니다.</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_3.png">
+						</div>
+						<div class="text kr">
+							<h5>빡형</h5>
+							<p>메리 크리스마스~ 안녕하세요~ 싼타님 자녀 셋을 키우고 있는 가장입니다~ 이번에도 아이들에게 싼타님 대신해서 선물을 사주다보니 허리가 휘고 있습니다. 저 잘하고 있는거죠?싼타님? 다..다른건 아니고.. 제가 아직 무선 이어폰이라는 신문물을 접해보지 못해서요.. 2023년에는 조금이라도 새로운 것을 누려보고자 합니다. 싼타님 꼭 저를 뽑아주세요</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_4.png">
+						</div>
+						<div class="text kr">
+							<h5>♥똥겨리♥</h5>
+							<p>산타할아버지 안녕하세요. 요즘 우리 아들이 자주 아파서 걱정이 많아요.. 일하는 엄마라 아플 때마다 옆에 있어 주지도 못하고.. 아이한테도 너무 미안하네요.. 산타할아버지~ 제 소원은 우리 똥겨리 아프지않고 건강하고 똥꼬발랄하게 크는거예요 앞으로 나쁜 행동 안 하고 착하고 착하게 살게요. 제 소원 좀 꼬~옥 들어주세요!!</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_4.png">
+						</div>
+						<div class="text kr">
+							<h5>내턱은 더블x2</h5>
+							<p>여러분 0.1t으로 살아보셨나요? 0.1t 내인생에 큰 날벼락 맞은 22년 10월 어느날 병원에서 혈압이 높다며 약물복용을 권고를 받았어요???? 아직 젊은데..???? 한가지 방법이 있다며 그것은 바로 다이어트???? 그래.. 맨날 아가리어터인 저는 그까짓것 한번 해보자라는 생각하자마자 발걸음은 어느새..???????????????????? 집앞에 너무나도 맛있는 먹거리들이 나를 반기고 있었다???? 12년 동안 롯데리아와 함께하면서 처음으로 햄버거와 작별을하고 22년 11월21일 다이어트 시작으로 현재 -12KG을 감량하며 입고싶던 예쁜 옷들을 이젠 입을수 있게되었다???? 남은 22년과 새로올 23년의 소원이 있다면 건강한 몸으로 거듭나서 롯데리아 햄버거로 시작해서 엔제리너스 커피 후식으로 크리스피크림 도넛까지 하루 날잡고 마음껏 먹고싶다???? 그날이 하루 빨리 올수있길 소원합니다????????</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_5.png">
+						</div>
+						<div class="text kr">
+							<h5>방구석붕어빵</h5>
+							<p>안녕하세요. 붕어빵 포스팅 재밌게 봤습니다. 처음으로 붕어빵과 잉어빵의 차이를 알게 되었습니다! ㅋㅋㅋ 저는 잉어빵을 머리부터 먹는답니다. 부서원들과 심리테스트 하면서 재밌는 시간 보냈습니다. 지알에스 가족 여러분들의 먹는 방법도 궁금하네요! 다음에는 햄버거 먹는 심리테스트 기대할게요!!</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_5.png">
+						</div>
+						<div class="text kr">
+							<h5>김신영</h5>
+							<p>벌써 크리스마스, 벌써 연말이라는 게 믿고 싶지 않네요. 시간이 여기서 멈추었으면 좋겠어요. 한 5년, 아니 3년 전으로 돌아갔으면,, 합니다. 2023년이 오지 않았으면 좋겠어요, 멈추어라 얍</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_5.png">
+						</div>
+						<div class="text kr">
+							<h5>KimTom</h5>
+							<p>올해 부모님 두 분 다 암 판정을 받으셨어요. 수술과 항암치료로 너무너무 지치신 두 분께 내년에는 건강과 행복을 선물 해 드리고 싶습니다. 좋은 추억 많이 많이 쌓을 수 있게 도와주세요 :)</p>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_1.png">
+						</div>
+						<div class="text kr">
+							<h5>커피로 세계속으로</h5>
+							<p>제 간절한 소망은 결혼한 지 이제 곧 9년 차가 되는데 아직 소중한 생명인 아기가 찾아오지 못했습니다. 그동안 눈물 날만큼 큰 노력을 했는데 소식이 없었습니다. 농담으로 펠리컨이 물어다 줄 거라고 와이프한테 용기 주려고 얘기했는데 꼭꼭 23년 토끼해에는 저의 둘의 예쁜 아기가 꼭 생겼으면 좋겠습니다. 이렇게 소망을 담아봅니다.</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_1.png">
+						</div>
+						<div class="text kr">
+							<h5>민현기</h5>
+							<p>산타님, 안녕하세요! 작년 겨울보다 추워진 것 같은데 다들 잘 지내고 계시는지 항상 궁금합니다! 추운 겨울 속에서도 산타님의 선물들을 보며 마음이 잠시나마 따뜻해지는 것 같아요. 저도 나눔의 행복을 알고 있거든요. 선물을 나누면 왠지 받은 사람보다 기분이 더 좋아진다는 것을! 저도 이번 크리스마스에는 점포에서 일하며 고객님, 동료분들과 특별한 따뜻함을 나눌 예정이에요. 아쉽게도 사랑하는 가족은 못 보겠지만… 산타님의 깜짝 선물로 놀라게 해드리고 싶습니다! :) 아무쪼록 산타님을 포함한 모든 사람에게 각자만의 산타님이 있기를 기원하며, 모두 행복하고 따뜻한 겨울이 됐으면 좋겠습니다. 모두 메리 크리스마스~</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_1.png">
+						</div>
+						<div class="text kr">
+							<h5>날개</h5>
+							<p>제 소원은 엄청 많은데.. ㅎㅎ 욕심이 많은 사람인가 봅니다. 우선 가족 건강이겠죠? 시부모님.. 친정 식구들, 우리 사랑하는 남편,, 우리 쌍둥이들~ 올해 코로나로 고생했었는데.. 내년엔 우리 식구들 모두 건강한 한 해가 됐으면 좋겠네요.. 두번째는 로또!!! 모든 사람의 소원이라고 할 수 있겠죠? 매일, 혹은 매주 소원을 빈답니다. 1등 한번 되게 해달라고... ㅎㅎ 그럼 일부 기부도 좀 하고.. 빚도 갚고.. 가족끼리 화목하게 잘 쓰겠다고.. 그리고 다른 소원은.... 오지랍인가요..쌩뚱맞지만 우리나라 모든 사람이 잘 살게 해달라고.. 경제적으로도 풍족하고 행복하고 범죄 없는 나라가 되게 해달라고 빌고 있습니다. 나만 잘 살면 모합니까.. 같이 살아야 좋죠!!! 전부 소원이 이뤄지기 힘든 것만 빌고 있네요.. ㅎㅎㅎ 그래서 한가지 소원을 더 빌어볼려구요.. 우리 식구들은 캠핑을 좋아하는 캠핑족입니다. ㅎㅎ 얼마 전 스피커가 고장나서 하나 사려고 했었는데.. 똭!!! 소원을 빌면 주신다는 경품에 정말 똭!!!! ㅋㅋㅋㅋ 그래서 마지막 소원은 스피커 받고 싶네요.. ㅎㅎㅎ 모든 소원이 이뤄지면 정말 좋겠지만.. 마지막 소원은... 이뤄질수 있는다는 간절한(?) 소망을 갖고 신청해봅니다. ^^ 올 한해도 모두 수고 많으셨습니다. 올해보다 내년이 더 힘들어진다는데.. 모두의 예상을 뒤엎고 올해보다 더 경제적으로도 행복지수도 더 좋고 높은 해가 됐으면 싶네요.. 아자아자 힘내서.. 내년에도 잘 버텨봅시다~ ^^</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_2.png">
+						</div>
+						<div class="text kr">
+							<h5>나야나</h5>
+							<p>2022년에는 좋은 사람들과 좋은 시간을 많이 보냈습니다. 동료들과 맛있는 식사와 함께 선물을 주고받으며 첫 연말 파티도 경험했고, 그 외에도 마음 따뜻한 일들이 많이 있었고, 있을 것 같아 행복해요. 남은 연말뿐만 아니라 앞으로 있을 인생에 저도, 제 주변 사람들도 좋은 사람들과 함께 행복하게 웃을 수 있기를 소원합니다.♥</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_2.png">
+						</div>
+						<div class="text kr">
+							<h5>하숑</h5>
+							<p>22년이 시작되기 전에도 늘 그랬듯 우리 가족 모두 아픈 데 없고 무사히 한 해 보내게 해주세요. 소원을 빌었고 올해를 보내며 저에게 두 가족이 더 생겼습니다. 평생 함께할 나의 남편, 그리고 가슴으로 낳은 반려견 내년에는 가족이 더 늘었으니 지켜야 할게 많아졌어요. ㅎㅎ 크리스마스이브, 당일 아쉽게도 모두 돈 벌러 가야 하기에 함께이지 못한 아쉬운 마음을 글로 적어보아요. 이렇게나마 소원을 빌면 이루어질까요?</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_2.png">
+						</div>
+						<div class="text kr">
+							<h5>라봉</h5>
+							<p>텔레비전에 있는 스피커가 고장 나서 엄마가 가장 좋아하시는 트로트 프로그램을 노트북의 작은 화면으로 보신답니다. 삼성 스마트빔을 받게 된다면 엄마가 큰 화면으로 행복하게 프로그램을 즐기실 수 있으실 것 같아요! GRS가 산타가 되어 주세요!!!♥</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_3.png">
+						</div>
+						<div class="text kr">
+							<h5>바나나퀵</h5>
+							<p>올해 크리스마스는 비록 주말이라 눈물 한두 방울 티 안 내며 흘렸지만 출/퇴근 시간, 점심시간에 캐럴도 들으며 기분 좋게 하루를 시작하며 업무를 마무리하는 중입니다. 이번 2022년에도 행복한 일도 아쉬운 일도 많았지만 새로 다가오는 2023년을 맞이하기 위해 준비하려 합니다:3 내년에도 다이어트며 다양한 각오를 반복하며 다짐하지만, 이번 2023년에는 업무에 있어 더욱 성장하고 발전하는 저와 임직원분들을 응원합니다! 화이팅!!♡</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_3.png">
+						</div>
+						<div class="text kr">
+							<h5>썬쓰리</h5>
+							<p>안녕 GRS 산타 씨! 나는 아들 셋을 키우며, 15년째 근무 중인 워킹맘이야. 남들은 하나 키우기도 힘들다, 애기우면서 일 어떻게 하냐 등등 힘들어 하지만, 힘들어하지만, 그 어려운걸, 아들 셋이라고 하면 한숨부터 쉬는 남들보다 강도 높은 육아와 일을 하고 있어! 워낙 긍정적인 성격이라 크게 힘들다는 생각 많이 안 했는데, 요즘 사춘기에 발을 담그려는 첫째와, 마흔을 바라보는 나 자신을 보니 감정조절이 힘들다는 게 느껴져 ㅠㅠ 일할 때는 괜찮은데 퇴근 후 육아까지 하니 몸도 힘들고 감정조절이 힘들어지는 거 같아.. 나의 2023년 버킷리스트이자 목표가 집에서 감정 조절하기야! 아들 셋 키우며 쉽지 않지만, 나의 소원이 이루어질 수 있도록 같이 기도해줘~! 감정조절 잘해서 애들한테 화도 덜 내고 사춘기가 와도 좋은 엄마, 사랑하는 엄마가 되고 싶어~! 나에게 무한한 힘을 줘~! ^-^!!!</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_4.png">
+						</div>
+						<div class="text kr">
+							<h5>당모치와와</h5>
+							<p>최근에 본사 독산 세븐일레븐 앞에서 지갑을 주웠습니다 걸어서 20분이나 되는 우체국 통을 찾아서 보내드렸습니다. 산타님께서 착한 어른이에게만 선물을 주신다고 들었는데 저 선물 받을 수 있겠죠?</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_4.png">
+						</div>
+						<div class="text kr">
+							<h5>복실</h5>
+							<p>저희집엔 할머니 노견과 할머니 노인이 살아요 앞으로 딱 10년만 더 함께 아프지말고 살아갔으면 해요 10번의 크리스마스를 함께 하기를 소원해요</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_4.png">
+						</div>
+						<div class="text kr">
+							<h5>잠봉뵈르</h5>
+							<p>저는 KKD 부천커미서리에서 근무중입니다. 오늘 (25일)을 마지막으로 공장에서 큰 행사가 끝이 났어요.  저희는 가장 바쁜 성수기가 3월, 12월이거든요! 밤낮으로 하루 8시간은 기본이고 서로를 생각하며 3시간 4시간 연장을 해가며 근무를 한 우리 근무자들 올해는... 제발 누구 하나 시집·장가 좀 갔으면 하네요 아니면 연애라도 하던지.. 매일매일 공장에서 일만 하는 우리 직원들에게 제발 봄을 주세요!!</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_5.png">
+						</div>
+						<div class="text kr">
+							<h5>토끼남</h5>
+							<p>제발 몇 년째 솔로로 크리스마스 보내고 있는데 산타느님 간절히 기도하면 온 우주가 돕는다는 말이 있는데 이번엔 온 우주가 도와서 이벤트 당첨되면 같이 알콩달콩 써볼 수 있을 거 같아요. 70억 명 선물 준다고 바쁜 산타님 톡 주시고 '오다 주웠단 다 얘야'라고 해주세요. 이번 해 로또 5천 원도 안 되고 턱이 박살 난 삼재였는데 한 해 마무리 잘 됐으면 좋겠습니다. ( _ _)♥</p>
+						</div>
+					</div>
+					<div class="box" data-aos="fade-up">
+						<div class="profile">
+							<img src="/assets/imgs/round/5/event/gift_5.png">
+						</div>
+						<div class="text kr">
+							<h5>꿍디순디</h5>
+							<p>서울 상경 후 나 홀로 맞이한 겨울 몇십 년 만에 하늘에서 펑펑 내리는 눈도 보고 손끝 발끝 차디차게 시려도 보고 차가운 바람이 흩날리는 아침에 종종걸음으로 출근도 해보고 한 해 동안 많은 일들이 있었고 또 새로운 경험도 많이 해보았던 것 같다 늘 그렇듯 잘 버텨주고 있는 내가 대견하면서도 감사하다 산타클로스가 있다면 이렇게 한해 잘 버텨와 준 나에게 소소한 행복을 줄 수 있는 선물 하나 받고 싶은데…</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mo">
+				<div class="box2" data-aos="fade-up">
+					<img src="/assets/imgs/round/5/event/mm.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	AOS.init();
+
+	const swiper = new Swiper('.swiper', {
+		loop: false,
+		centeredSlides: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+		},
+
+		navigation: {
+			nextEl: '.controller .next',
+			prevEl: '.controller .prev',
+		},
+
+		breakpoints: {
+			1081: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				slidesOffsetBefore: 0,
+				centeredSlides: true,
+			}
+		}
+	});
+
+	$('.now_slide').html(new Array(5000).fill().map(_ => "<p>EVENT</p>"))
+</script>

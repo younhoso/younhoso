@@ -1,0 +1,137 @@
+body {
+  background: rgba(242, 242, 242);
+}
+
+.news {
+  padding-top: 150px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.now {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 100px;
+  height: auto;
+  /* background: rgba(242, 242, 242); */
+  background: none;
+}
+
+.swiper {
+  padding: 0 1rem;
+  box-shadow: 0 4px .7rem rgba(0,0,0,.1);
+}
+
+.now p {
+  color: rgba(0,0,0,.05) !important;
+  margin-right: 3.2rem;
+  font-size: 100px;
+}
+
+.controller {
+  transform: translateY(-100%);
+  position: relative;
+  z-index: 99;
+  padding: 1.5rem;
+}
+
+.controller > div {
+  background: #000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.controller img {
+  width: 14px;
+  height: auto;
+  transform: translateX(-2px);
+}
+
+.controller .next img {
+  transform: rotate(180deg);
+}
+
+.swiper.mobile {
+  display: none;
+}
+
+.pagination {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .swiper.mobile {
+    display: block;
+  }
+
+  .swiper.pc {
+    display: none;
+  }
+
+  .news {
+    padding-top: 100px;
+    padding-bottom: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: relative;
+    width: 100vw;
+  } 
+
+  .controller {
+    bottom: 0%;
+    transform: translateY(-8%);
+    left: 0;
+    position: absolute;
+    padding: 0 4vw;
+    width: 100%;
+    justify-content: space-between;
+    display: none;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .swiper-pagination-bullet {
+    border-radius: 0% !important;
+    height: 3px !important;
+    width: 12px !important;
+    margin: 0 2px !important;
+    background: rgba(0,0,0,.5) !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #000 !important;
+  }
+
+  .controller > div {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .controller > div img {
+    width: 20%;
+  }
+
+  footer {
+    border-top: none;
+  }
+
+  .top_button {
+    display: none !important;
+  }
+}
+
+footer {
+  background: #fff !important;
+}

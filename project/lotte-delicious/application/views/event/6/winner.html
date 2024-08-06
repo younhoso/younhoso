@@ -1,0 +1,751 @@
+<style>
+    .line {
+        height: 8px;
+        background: #F5F5F5;
+    }
+
+    .event_content_wrap {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0px auto 162px auto;
+    }
+
+
+    .event_content_wrap .box_text {
+        margin-top: 140px;
+    }
+
+    .event_content_wrap .box_text .kr {
+        font-size: 22px;
+        line-height: 55px;
+        text-align: center;
+    }
+
+    .event_content_wrap .box_text .kr span {
+        background: #222222;
+        color: #fff;
+        padding: 12px 27px;
+    }
+
+    .event_content_wrap .border_box_wrapper {
+        margin-top: 24px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .event_content_wrap .border_box_wrapper .border_box {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #E8E8E8;
+        border-radius: 32px;
+        padding: 10px 28px;
+        box-sizing: border-box;
+        text-align: center;
+        font: normal normal normal 24px/30px Pretendard;
+        letter-spacing: -0.6px;
+        color: #222222;
+        width: fit-content;
+    }
+
+    .event_content_wrap .sub_text {
+        margin-top: 120px;
+    }
+
+    .event_content_wrap .sub_text .pc .kr {
+        text-align: center;
+        font: normal normal bold 30px/55px Pretendard;
+        letter-spacing: -0.75px;
+        color: #222222;
+    }
+
+    .event_content_wrap .sub_text .pc .kr span {
+        color: #FF65A9;
+    }
+
+    .event_content_wrap .sub_text .mo .kr {
+        font: normal normal normal 16px/22px Pretendard;
+        color: #222222;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .event_content_wrap .sub_text .mo .kr span {
+        color: #FF9A9C;
+    }
+
+    .event_content_wrap h2 + p {
+        color: #000;
+        font-weight: 500;
+    }
+
+    .event_content_wrap .event_main_img {
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    .event_content_wrap .event_main_img + p {
+        font-size: 36px;
+        color: #000;
+    }
+
+    .event_content_wrap .event_main_img + p + p {
+        font-size: 36px;
+        margin-top: 40px;
+    }
+
+    .event_content_wrap .box_wrap {
+        display: flex;
+        gap: 32px;
+    }
+
+    .event_content_wrap .box_wrap .box {
+        padding: 0;
+        padding-bottom: 30px;
+        height: fit-content;
+    }
+
+    .event_content_wrap .box_wrap .box h5 {
+        height: 33px;
+        line-height: 32px;
+        border-bottom: 1px solid #d6d6d6;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+        color: #425654;
+    }
+
+    .event_content_wrap .box_wrap .box p {
+        padding: 30px 10px 12px 10px;
+        margin: 0;
+        text-align: center;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .event_content_wrap .box_wrap .box img {
+        margin: 8px 10px 0px 10px;
+        width: calc(100% - 20px);
+    }
+
+    .event_content_wrap .box {
+        border: 1px solid #f2f2f2;
+        box-shadow: 4px 4px 12px #0000001C;
+        border-radius: 0px;
+        padding: 34px 30px 40px 26px;
+        flex: 1;
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .event_content_wrap .box2 {
+        border: 1px solid #f2f2f2;
+        box-shadow: 4px 4px 12px #0000001C;
+        border-radius: 0px;
+        flex: 1;
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .event_content_wrap .box .profile {
+        margin-right: 14px;
+    }
+
+    .event_content_wrap .box .circle {
+        width: 64px;
+        height: 64px;
+        border: 2px solid #E8E8E8;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .event_content_wrap .box .profile .circle img {
+        width: 46px;
+        height: 46px;
+        object-fit: contain;
+        margin: 0;
+    }
+
+    .event_content_wrap .box h5 {
+        color: #000;
+        font-size: 24px;
+        line-height: 72px;
+    }
+
+    .event_content_wrap .box p {
+        color: #222222;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    .event_content_wrap .box.benefit {
+        display: block;
+        margin-left: 0;
+    }
+
+    .event_content_wrap .box.benefit p {
+        text-align: center;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    .event_content_wrap .box.benefit p + p {
+        color: #707070;
+        font-weight: 400;
+        margin-top: 8px;
+    }
+
+    .event_content_wrap .reward .pc {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+
+    .event_content_wrap .reward .mo {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 30px;
+        margin-bottom: 94px;
+    }
+
+    .event_content_wrap .left {
+        width: 624px;
+        margin: 0;
+    }
+
+    .event_content_wrap .right {
+        width: 624px;
+        margin: 0;
+    }
+
+
+    @media (min-width: 1280px) {
+        .event_content_wrap .reward .mo {
+            display: none;
+        }
+
+        .event_content_wrap .sub_text .mo {
+            display: none;
+        }
+
+        .image_mo {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1279px) {
+
+        .event_content_wrap .sub_text {
+            margin-top: 50px;
+        }
+
+        .event_content_wrap .event_main_img + p {
+            font-size: 22px;
+        }
+
+        .event_content_wrap .event_main_img + p + p {
+            font-size: 22px;
+        }
+
+        .event_content_wrap .reward .pc {
+            display: none;
+        }
+
+        .event_content_wrap .sub_text .pc {
+            display: none;
+        }
+
+        .image_pc {
+            display: none;
+        }
+
+        .border_box_wrapper {
+            margin-top: 14px;
+        }
+
+        .event_content_wrap .border_box_wrapper .border_box {
+            padding: 6px 17px;
+            font: normal normal normal 12px/12px Pretendard;
+        }
+
+        .reward .mo .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #0000001A;
+            border: 1px solid #F2F2F2;
+            margin-bottom: 16px;
+            padding: 20px 0 24px;
+        }
+
+        .reward .mo .box .img_wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #E8E8E8;
+        }
+
+        .reward .mo .box .img_wrapper img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+
+        .reward .mo .box .title {
+            text-align: center;
+            margin-top: 10px;
+            font: normal normal bold 14px/17px Pretendard;
+            letter-spacing: -0.6px;
+            color: #000000;
+        }
+
+        .reward .mo .box .user_list {
+            margin-top: 24px;
+            text-align: center;
+            font: normal normal normal 14px/20px Pretendard;
+            letter-spacing: -0.6px;
+            color: #363636;
+        }
+        .reward .mo .hint {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font: normal normal normal 14px/20px Pretendard;
+        }
+
+        .event_content_wrap {
+            margin-bottom: 54px;
+        }
+    }
+</style>
+
+<link rel="stylesheet" href="/assets/css/6/event.css">
+
+<div class="event content_box">
+    <div class="image" data-aos="fade">
+        <div class="image_pc">
+            <img src="/assets/imgs/round/6/event/winner/pc_banner.png" alt="event" title="event">
+        </div>
+        <div class="image_mo">
+            <img src="/assets/imgs/round/6/event/winner/mo_banner.png" alt="event" title="event">
+        </div>
+    </div>
+
+    <div class="event_content wrap">
+        <div class="event_title kr">
+            <div class="event_finish_sub_title">마감된 이벤트</div>
+            <div class="event_finish_title">
+                토끼의 숨바꼭질<br/>
+                당첨자 발표
+            </div>
+            <div class="event_finish_description">
+                “꼭꼭 숨어라~ 토끼 털 보일라~🎵”<br/>
+                맛진에 꼭꼭 숨어있던 말썽꾸러기 토끼 삼총사를 찾아준 맛둥이들 고마워!<br/>
+            </div>
+            <div class="event_finish_description-bold">다음 4월호도 재미있는 이벤트로 찾아올 테니까 기대해줘!</div>
+            <div class="event_finish_description-hint">
+                ※ 이벤트 당첨자 개별 안내 예정
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="event_content wrap">
+        <div class="event_finish_gift_title">
+            🎁<br/>
+            선물을 들고 돌아온, 토끼 삼총사!
+        </div>
+        <div class="gift_wrapper">
+            <div class="gift_item" data-aos="fade-up">
+                <div class="gift_item_count">10명</div>
+                <img class="gift_img" src="/assets/imgs/round/6/event/winner/bag.png"/>
+                <div class="gift_item_description">
+                    <span>코베아 엔제리너스</span><span> 하드 캐리 백 + 침낭 세트</span>
+                </div>
+            </div>
+            <div class="gift_item" data-aos="fade-up">
+                <div class="gift_item_count">10명</div>
+                <img class="gift_img" src="/assets/imgs/round/6/event/winner/iphone.png"/>
+                <div class="gift_item_description">
+                    케이스티파이 휴대폰 케이스
+                </div>
+                <div class="gift_item_description_hint">
+                    <span>※커스텀 제외,</span><span> 기종별 케이스 선택 가능</span>
+                </div>
+            </div>
+        </div>
+        <div class="gift_description_wrapper" data-aos="fade-up">
+            <div class="gift_description_title_1">
+                당첨자 경품은 4월 내 발송예정입니다.
+            </div>
+            <div class="gift_description_title_2">
+                ※ 이벤트 당첨자 개별 안내 후 개인정보 회신 확인에 따라 순차적 발송됩니다.
+            </div>
+            <div class="gift_description_title_2">
+                ※ 커스텀 제외, 기종별 케이스 선택 가능합니다.
+            </div>
+        </div>
+
+    </div>
+    <div class="line"></div>
+    <div class="event_content_wrap">
+        <div class="sub_text">
+            <div class="pc">
+                <div class="kr" data-aos="fade">
+                    <p>토끼가 선정한 <span>행운의 20인</span>을 소개합니다</p>
+                </div>
+            </div>
+            <div class="mo">
+                <div class="kr" data-aos="fade">
+                    <p>토끼가 선정한 <span>행운의 20인</span>을 소개합니다</p>
+                </div>
+            </div>
+        </div>
+        <div class="border_box_wrapper">
+            <div class="border_box">
+                당첨을 축하합니다!
+            </div>
+        </div>
+        <div class="reward fullin mt60">
+            <div class="pc">
+                <div class="left">
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>빵돌이</h5>
+                            <p>"토끼를 찾은 김에 토끼로 이행시를 지어보겠습니다 XD<br/>
+                                토 : 롯데GRS 맛ZINE<br/>
+                                끼 : 최고!!!"</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>복실</h5>
+                            <p>"대박 대박~~ 이번 맛진은 조금 더 MZ 스러워졌는걸?<br/>
+                                이번 기회에 클라이밍에 대해 자세히 알게 되었구<br/>
+                                한 번 도전해 보고 싶어졌어! 그리고 롯데리아, 엔제리너스 등<br/>
+                                항상 리뉴얼 되고 있는 것들이 궁금하고 흥미로워!"</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>오리지널좋아요</h5>
+                            <p>"POST 내용이 알차고 재밌었습니다 :)<br/>
+                                앞으로도 자주자주 보겠습니다.<br/>
+                                KKD 부산 연산점 오픈 VIDEO<br/>
+                                너무너무 재밌어요 속도감 무엇!<br/>
+                                점장님 너무너무 귀여워요!"</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>HS</h5>
+                            <p>토끼가 이쁘네요! </p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>킴점장</h5>
+                            <p>"엄청 트랜디하게 볼거리가 많네요~ KKD 부산 연산점 점장님 너무 귀여우십니다ㅋㅋ<br/>
+                                클라이밍이나 공항 정보 등등 앞으로 매달 자주 들어와서 보게 될 것 같아요~"</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>썬쓰리</h5>
+                            <p>공항에서 근무해서 이색공항 특히 기억에 남아! 그리고 나도 비행기 타고 여행 갈 날을 기다리며~~ 요번 달 맛zine도 채고!</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>잡았다 요놈!</h5>
+                            <p>"건강! 행복! 두 마리 토끼 모두 다 잡으며!<br/>
+                                2023 계묘년, 우리 롯데 자레쓰 꽃길만 걸어요✿"</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>찡이</h5>
+                            <p>좋은 정보 감사합니다. 구석구석에 숨은 흑토끼 삼총사 찾기 이벤트 재미있습니다. 소소한 정보도 얻고 이벤트 참여할 수 있어서 좋네요!</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>흐니흐니</h5>
+                            <p>"귀여운 토끼 찾았고, 리뉴얼 오픈도 이쁘고, 가습기도 뿜뿜<br/>
+                                열일하는 롯데 GRS 화이팅~!!<br/>
+                                엔제리너스, 롯데리아 화이팅 ~~<br/>
+                                콜라보 제품 귀염 뿜뿜!<br/>
+                                건강하게 춤추는 토끼 잡았다 요놈~<br/>
+                                귀여운 토끼 3마리 모두 발견 완료!!!!<br/>
+                                내용 읽다 보니 깜짝 등장하네요 잘 봤습니다."</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>흑묘의마법</h5>
+                            <p>"토끼 너무 귀여워요! 맛zine 이번 호도 잘 보고 갑니다.<br/>
+                                안산 DT점 동영상 보면서 리아 DT 매장이 활성화될 수 있겠구나 하는 확신이 드네요.  멋진 매장으로 거듭난 거 축하드리고 매장에 놀러 갈게요~@!!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>서율몬</h5>
+                            <p>클라이밍부터 시작해서 라이스버거 중량 늘어난 것까지 맛 zine으로 확인하다 보니 오른쪽에 토끼 한 마리가 보이는군요!! 잡았다 요놈!</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>찾았다 토끼</h5>
+                            <p>"포스트 너무 귀엽고 재밌어요<br/>
+                                귀여운 토끼랑 맛진에서 놀았네요 ㅋㅋㅋ<br/>
+                                지드래곤 에어 포스 진짜 너무이쁨..<br/>
+                                엔제리너스 코닥 팝업스토어 가보고 싶어요!"</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>사막여우</h5>
+                            <p>맛ZINE 볼거리 맛ZIP이네묘♥</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>토끼나라버거공주</h5>
+                            <p>"토~ㄲㅣ~너어~!<br/>
+                                찾느라 살짝 고생해짜냐~~~~<br/>
+                                그러면서 뉴스 한편 다 읽어쨔냐~~~ 검은 토끼 옆에서 툭 튀어나와서 놀래써^_^<br/>
+                                깡총깡총 안 뛰어나오고 스르륵 나오면 으뜨케>_<<br/>
+                                촵딱체처럼 촵땅겨져서 나오는 토끼 멋있어♥"</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/bag.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>맛진아 사랑해</h5>
+                            <p>맛진아 !! 2023년 계묘년 복 많이 받고 많은 포스트와 소식 기다릴게!!</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>검은토끼와 황금돼지</h5>
+                            <p>"몰랐던 내용을 알려주는 POST!<br/>
+                                꿀팁을 많이 알고 가서 정말 좋았습니다!<br/>
+                                자레쓰의 2월 호 뉴스 및 비디오도 정말 좋았어요!<br/>
+                                저는 POST 내용처럼 다양한 내용을 알려주시는 것도 좋지만<br/>
+                                신규점 오픈 및 롯데리아 기사를  뉴스화해서 공유해 주시는 게 제일 좋았습니다.<br/>
+                                특히 저는 롯데리아지만, KKD 내용도 함께 공유 받으면서<br/>
+                                같은 회사지만 다른 일을 하고 있는 직원분들의 소식을 들을 수 있어<br/>
+                                신선했어요!"</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>찐쓰</h5>
+                            <p>늘 알찬 콘텐츠로 새로운 정보와 재미까지~ 그리고 즐거운 이벤트로 잘 챙겨 보고 있습니다!!  GRS 사보의 업그레이드!! 무한 칭찬합니다!! 기다려지는 맛진 다음 맛진도 기다려집니다*^^*</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>행복한토끼해</h5>
+                            <p>"자레쓰의 소식도 한눈에 볼 수 있어 좋았지만<br/>
+                                스포츠, 여행 등 POST의 내용이 너무 알차서 좋았습니다."</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>쭈니겨리</h5>
+                            <p>사내 맛진 좋은 정보통인 것 같습니다. 평소 우리 회사는 어떤 것을 하고 있는지가 궁금했는데 많은 정보들이 있어 항상 재미있게 보고 있습니다. 많은 정보들을 공유할 수 있어서 좋은 것 같습니다. 롯데GRS 파이팅!</p>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up">
+                        <div class="profile">
+                            <div class="circle">
+                                <img src="/assets/imgs/round/6/event/winner/iphone.png">
+                            </div>
+                        </div>
+                        <div class="text kr">
+                            <h5>나야나야나</h5>
+                            <p>"스포츠, 트립, 푸드, 스타일, 컬처 모든 부분에서 23년 현재의 트렌드를 읽어볼 수 있는 자료를 쉽고 재미있게 읽을 수 있어서 좋습니다.<br/>
+                                <br/>
+                                특히 모든 콘텐츠들이 단순 소개에서만 끝나는 것이 아니라, 트립의 경우 롯데면세점의 캔디, 푸드에서는 못난이 농산물을 살 수 있는 정기배송업체 등 본문과 연결되는 내역을 자연스레 안내해 줘서 더 집중도 있고, 관심 가는 정보를 제공한 점에서 즐거운 경험이었습니다.<br/>
+                                못난이 농산물은 가치가 0에 수렴하여 버려지는 못난이 농산물들을 관점을 바꿔, 제품들의 가치를 창출했다는 점이 가장 큰 배울 점입니다.<br/>
+                                <br/>
+                                맛zine을 통해 트렌드와 함께 주변의 것들에서 가치를 이끌어내야 한다는 발상의 전환에 대해 생각해 보는 계기였습니다."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mo">
+                <div class="box">
+                    <div class="img_wrapper">
+                        <img src="/assets/imgs/round/6/event/winner/bag.png"/>
+                    </div>
+                    <div class="title">
+                        코베아 엔제리너스<br/>
+                        하드 캐리 백 + 침낭 세트<br/>
+                        10인
+                    </div>
+                    <div class="user_list">
+                        HS / 복실 / 킴점장 / 토끼나라버거공주 / 맛진아 사랑해<br/>
+                        서율몬 / 오리지널좋아요 / 사막여우 / 빵돌이 / 찾았다 토끼
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img_wrapper">
+                        <img src="/assets/imgs/round/6/event/winner/iphone.png"/>
+                    </div>
+                    <div class="title">
+                        케이스티파이 휴대폰 케이스<br/>10인
+                    </div>
+
+                    <div class="user_list">
+                        썬쓰리 / 잡았다 요놈! / 나야나야나 / 흐니흐니 / 흑묘의마법 <br/>
+                        검은토끼와 황금돼지 / 찐쓰 / 행복한토끼해 / 쭈니겨리 / 찡이
+                    </div>
+                </div>
+                <div class="hint">※행운의 댓글 내용은 웹에서 확인해 주세요!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    AOS.init();
+
+    const swiper = new Swiper('.swiper', {
+        loop: false,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+        navigation: {
+            nextEl: '.controller .next',
+            prevEl: '.controller .prev',
+        },
+
+        breakpoints: {
+            1081: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                slidesOffsetBefore: 0,
+                centeredSlides: true,
+            }
+        }
+    });
+</script>

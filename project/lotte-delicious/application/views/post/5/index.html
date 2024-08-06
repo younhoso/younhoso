@@ -1,0 +1,95 @@
+  <link rel="stylesheet" href="/assets/css/5/postSection.css">
+  <!-- POST 영역 -->
+  <div class="post content_box">
+    <div class="now_white flex pr">
+      <div class="now_slide flex en pa">
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p>POST</p>
+        <p class="hide">POST</p>
+        <p class="hide">POST</p>
+        <p class="hide">POST</p>
+        <p class="hide">POST</p>
+        <p class="hide">POST</p>
+        <p class="hide">POST</p>
+      </div>
+    </div>
+
+    <div class="container slide post_page wrap">
+      <div class="post_scroll post_page_scroll">
+        <div class="cell" data-aos="fade-up" onclick="location='/post/sport/<?= $this->round ?>'">
+          <div class="image">
+            <img src="/assets/imgs/round/5/post/SPORT.png" alt="post" title="post">
+          </div>
+
+          <div class="text">
+            <h3 class="kr">[SPORT] 스키로운 겨울생활</h3>
+            <p class="kr">짜릿한 겨울 스포츠 '스키'</p>
+          </div>
+        </div>
+
+        <div class="cell" data-aos="fade-up" onclick="location='/post/trip/<?= $this->round ?>'">
+          <div class="image">
+            <img src="/assets/imgs/round/5/post/trip_main.png" alt="post" title="post">
+          </div>
+
+          <div class="text">
+            <h3 class="kr">[TRIP] 온천으로, 일본으로!</h3>
+            <p class="kr">온천 맛집 일본으로 떠나자</p>
+          </div>
+        </div>
+
+        <div class="cell" data-aos="fade-up" onclick="location='/post/food/<?= $this->round ?>'">
+          <div class="image">
+            <img src="/assets/imgs/round/5/post/food_main.png" alt="post" title="post">
+          </div>
+
+          <div class="text">
+            <h3 class="kr">[FOOD] 국민 간식 붕어빵</h3>
+            <p class="kr">이천원을 품고 다녀야 하는 계절이 돌아왔다!</p>
+          </div>
+        </div>
+
+        <div class="cell" data-aos="fade-up" onclick="location='/post/style/<?= $this->round ?>'">
+          <div class="image">
+            <img src="/assets/imgs/round/5/post/STYLE.png" alt="post" title="post">
+          </div>
+
+          <div class="text">
+            <h3 class="kr">[STYLE] 패션계의 비건 열풍</h3>
+            <p class="kr">입는 채식주의 비건패션</p>
+          </div>
+        </div>
+
+        <div class="cell" data-aos="fade-up" onclick="location='/post/culture/<?= $this->round ?>'">
+          <div class="image">
+            <img src="/assets/imgs/round/5/post/CULTURE.png" alt="post" title="post">
+          </div>
+
+          <div class="text">
+            <h3 class="kr">[CULTURE] 방구석 취미생활</h3>
+            <p class="kr">집콕하는 내가 가질 수 있는 취미생활</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    AOS.init();
+
+    $('.now_slide').html(new Array(6000).fill().map(_ => "<p>POST</p>"))
+  </script>

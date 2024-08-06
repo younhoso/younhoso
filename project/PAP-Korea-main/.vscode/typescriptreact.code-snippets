@@ -1,0 +1,11 @@
+{
+  "Import next image": {
+    "prefix": [
+      "ini"
+    ],
+    "body": [
+      "import Image from 'next/image';"
+    ],
+    "description": "next/image Image 컴포넌트 import"
+  }
+}

@@ -1,0 +1,54 @@
+/* ========== PC ========== */
+img {height: auto;}
+.bg-component .bg-wrap {position: relative;}
+.bg-component .bg-inner {width: 50%; height: 100%; display: flex;flex-direction: column;justify-content: center;position: absolute; right: 0;top: 0;}
+.bg-component .bg-inner-00 {height: auto;background-color: rgba(255, 255, 255, 0.3);border-radius: 220px;top: 50%;right: 9%;transform: translate(0, -50%);}
+.bg-component .bg-inner-01 {background-color: #6CA5B8;}
+.bg-component .bg-inner-02 {background-color: #EA7314;}
+.bg-component .bg-inner-03 {background-color: #2BA7B5;}
+.post-style-01 .post-image {flex: 1;}
+.post-style-02 .section-pc { max-width: 960px; margin: 0 auto; position: relative;}
+
+.post-style-02 .section-pc .wrap {
+  display: flex;
+}
+.post-style-02 .post-detail .inner {
+  max-width: 1116px;
+  margin: 0 auto;
+  display: flex;
+  
+  align-items: center;
+}
+.post-style-02 .post-detail .post-content{
+  width: 100%;
+  height: 394px;
+  background-color: #F7F7F7;
+}
+
+.post-style-02 .post-detail.post-detail-1 .img-01 {width: calc(100% * 0.65);}
+.post-style-02 .post-detail.post-detail-2 .inner{flex-direction: row-reverse;}
+.post-style-02 .post-detail.post-detail-2 .img-01 {width: 100%;}
+.post-style-02 .post-detail.post-detail-3 .img-01 {width: calc(100% * 0.57);}
+.post-style-02 .img-inner {display: flex;}
+
+.post-style-05 .flex {display: flex; flex-wrap: nowrap;}
+.post-style-05 .inner {max-width: 926px;margin: 0 auto;}
+.post-style-06 .post-image {width: 848px;}
+.post-style-06 .flex:last-child .post-image {width: 100%;}
+
+
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .bg-component .bg-inner-00 {transform: none;}
+  .bg-component .bg-inner {width: 100%; position: static;}
+  .post-style-02 .post-detail .inner {flex-direction: column-reverse;}
+  .post-style-02 .post-detail.post-detail-1 .img-01 {width: 100%;}
+  .post-style-02 .post-detail.post-detail-2 .inner{flex-direction: column-reverse;}
+  .post-style-02 .post-detail.post-detail-3 .img-01 {width: 100%;}
+  .post-style-02 .post-detail .post-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

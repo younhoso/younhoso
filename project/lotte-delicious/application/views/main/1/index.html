@@ -1,0 +1,129 @@
+		<link rel="stylesheet" type="text/css" href="/assets/css/main.css?ver=<?=rand()?>">
+		
+		<div id="contents" class="main-contents"><!--contents-->
+	
+			<div class="main_visual">
+				<div class="img_area mo">
+					<img src="/assets/imgs/round/<?=$this->round?>/main_01.png">
+					<img src="/assets/imgs/round/<?=$this->round?>/main_02.png">
+				</div>
+				<div class="img_area pc">
+					<img src="/assets/imgs/round/<?=$this->round?>/pc_main_01.png">
+					<img src="/assets/imgs/round/<?=$this->round?>/pc_main_02.png">
+				</div>
+				<div class="txt_area">
+					<h2>세상에서 가장 맛있는 매거진 <span>‘<span>맛진</span>’</span></h2>
+					<p>롯데GRS만의 맛있는 이야기로 가득 채운 사내웹진 맛진,<br>
+최신 트렌드부터 롯데GRS의 다양한 소식이 두 달에 한 번씩 여러분을 찾아갑니다.</p>
+				</div>
+			</div>
+			
+			<script>
+				setTimeout(function(){
+					$('.main_visual').addClass('on');	
+				},500);
+			</script>
+		
+			<div class="concept">
+				<div class="img_wrap">
+					<img src="/assets/imgs/round/1/main_03.png" class="mo">
+					<img src="/assets/imgs/round/1/pc_main_03.png" class="pc">
+				</div>
+				<div class="txt_wrap">
+					<h4 style="display:none;">이달의 컨셉</h4>
+					<h2>MZ에 열광하라!</h2>
+					<p>MZ를 투영한 이색적인 콘텐츠로 <br>
+	세대 간 활발한 소통을 이루고 <br>
+	트렌디한 맛과 멋으로 진하게 이끌어 드립니다!</p>
+				</div>
+			</div>
+			
+			<div class="recommend">
+				<div class="content_wrap">
+					<h4 data-aos="fade">이달의 추천글</h4>
+					<h2 data-aos="fade">RECOMMEND</h2>
+					<div class="swiper swiper-container" id="recommend" data-aos="fade">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="slide-item">
+									<img src="/assets/imgs/round/<?=$this->round?>/main_thumb_01.png">
+									<a href="/story/food/<?=$this->round?>" data-aos="fade" data-aos-delay="1000"><span>구찌를<br><b>맛보다</b></span></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide-item">
+									<img src="/assets/imgs/round/<?=$this->round?>/main_thumb_02.png">
+									<a href="/story/trip/<?=$this->round?>" data-aos="fade" data-aos-delay="1000"><span>부산 <b>롯데월드</b>와 <br>화제의 뷰 맛집 <br><b>롯데리아</b>를 가다</span></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide-item">
+									<img src="/assets/imgs/round/<?=$this->round?>/main_thumb_03_2.png">
+									<a href="/interview/index/<?=$this->round?>" data-aos="fade" data-aos-delay="1000"><span>무엇이든 <br><b>말해보살</b></span></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide-item">
+									<img src="/assets/imgs/round/<?=$this->round?>/main_thumb_04.png">
+									<a href="/event/index/<?=$this->round?>" data-aos="fade" data-aos-delay="1000"><span>맛ZINE<br><b>탄생일</b></span></a>
+								</div>
+							</div>
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<script>
+			var agent = navigator.userAgent.toLowerCase();
+
+			if( navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1 || (agent.indexOf("msie") !=-1)) {
+				$('#recommend').addClass('isIE');
+			}
+
+			var recommend = new Swiper("#recommend", {
+				slidesPerView: "auto",
+				loop: false,
+				pagination: {
+					el: "#recommend .swiper-pagination",
+					type: "progressbar",
+				},
+				breakpoints: {
+					767: {
+						slidesPerView: "auto",
+						spaceBetween:10,
+					},
+					1280: {
+						slidesPerView: "auto",
+						spaceBetween:20,
+					}
+				},
+			});
+			</script>
+			
+			<div class="jaress">
+				<div class="content_wrap">
+					<h4 data-aos="fade">이달의 자레쓰</h4>
+					<h2 data-aos="fade">롯데GRS 잘했어</h2>
+					
+					<ul>
+						<li data-aos="fade">
+							<a href="/story/jaress/<?=$this->round?>?#jaress03">
+								<img src="/assets/imgs/round/<?=$this->round?>/jaress_1@2x.png">
+								<div class="title">크리스피크림 도넛 신제품</div>
+								<div class="date">2022.04.01</div>
+							</a>
+						</li>
+						<li data-aos="fade">
+							<a href="/story/jaress/<?=$this->round?>?#jaress04">
+								<img src="/assets/imgs/round/<?=$this->round?>/jaress_2@2x.png">
+								<div class="title">롯데리아 브랜드파워 24년 연속 1위</div>
+								<div class="date">2022.04.08</div>
+							</a>
+						</li>
+					</ul>
+					
+					<button class="mo" data-aos="fade" onclick="location.href='/story/jaress/<?=$this->round?>'">자레쓰 더보기</button>
+				</div>
+			</div>
+		</div>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5dd9e4"/>
+      <stop offset="1" stop-color="#037781"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="사각형_33642" data-name="사각형 33642" width="32" height="32" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_36805" data-name="그룹 36805" transform="translate(0.428 0)">
+    <g id="구성_요소_34_34" data-name="구성 요소 34 – 34" transform="translate(-0.428 0)">
+      <g id="그룹_36779" data-name="그룹 36779" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="패스_13137" data-name="패스 13137" d="M31.234,14.5a2.344,2.344,0,0,0,.658-2.443,2.206,2.206,0,0,0-1.908-1.575l-8.4-.7a.387.387,0,0,1-.326-.248L18.022,1.409a2.156,2.156,0,0,0-4.045,0L10.743,9.531a.391.391,0,0,1-.328.248l-8.4.7A2.2,2.2,0,0,0,.108,12.056,2.344,2.344,0,0,0,.766,14.5l6.4,5.725a.408.408,0,0,1,.124.4L5.335,29.181a2.333,2.333,0,0,0,.844,2.38,2.109,2.109,0,0,0,2.429.1L15.8,27.077a.368.368,0,0,1,.4,0l7.191,4.586a2.105,2.105,0,0,0,2.429-.1,2.333,2.333,0,0,0,.844-2.38l-1.954-8.559a.411.411,0,0,1,.124-.4Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>

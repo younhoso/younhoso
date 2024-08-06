@@ -1,0 +1,654 @@
+<style>
+
+.event .content_wrap h2 + p {color:#000; font-weight:500;}
+
+.event .content_wrap .event_main_img {margin-top:5rem; margin-bottom:8rem;}
+.event .content_wrap .event_main_img + p {font-size:3.6rem; color:#000;}
+.event .content_wrap .event_main_img + p + p {font-size:3.6rem; margin-top:4rem;}
+
+.event section + section h4 {font-size:3rem;}
+.event section + section h2 {font-size:4.4rem;}
+.event section + section h2 span {color:#fff; background:#037781; padding:0 1rem;}
+.event section + section img {margin-top: 3.2rem;}
+
+.event section img {max-width:100%;}
+
+.event .reward {}
+.event .reward .msg {text-align:center;}
+.event .reward .msg span {padding:0rem 3.5rem; height:7rem; display:inline-flex; align-items:center; border:1px solid #acacac; border-radius:100px; font-size:3rem; color:#000; margin:0 auto; font-weight:500;}
+.event .reward .info {font-size:2.8rem; color:#000; font-weight:bold; line-height:4rem; text-align:center; margin-top:2rem;}
+.event .reward .info span {color:#fff; background:#037781; padding:0 .6rem;}
+.event .content_wrap .box_wrap {display:flex; gap:3.2rem;}
+.event .content_wrap .box_wrap .box {padding:0; padding-bottom:3rem; height:fit-content;}
+.event .content_wrap .box_wrap .box h5 {height:3.3rem; line-height:3.2rem; border-bottom:1px solid #d6d6d6; font-size:1.6rem; text-align:center; font-weight:bold; color:#425654;}
+.event .content_wrap .box_wrap .box p {padding:3rem 1rem 1.2rem 1rem; margin:0; text-align:center; font-size:1.6rem; line-height:2.5rem;}
+.event .content_wrap .box_wrap .box img {margin:.8rem 1rem 0 1rem; width:calc( 100% - 2rem );}
+.event .content_wrap .box {border:1px solid #D6D6D6; box-shadow: 0px 0px .6rem #00000029; border-radius: 1.2rem; padding:3.4rem 0 3.4rem 2.6rem; flex:1; display:flex; margin-bottom:4.4rem;}
+.event .content_wrap .box .profile {margin-right:1.4rem;}
+.event .content_wrap .box .profile img {width:7.2rem; height:7.2rem; border-radius:7.2rem; object-fit:cover; margin:0;}
+.event .content_wrap .box h5 {color:#000; font-size:2.4rem; line-height:7.2rem;}
+.event .content_wrap .box p {color:#363636; font-size:2rem; line-height:3.4rem; margin-top:.6rem; text-align:left;}
+.event .content_wrap .box.benefit {display:block; margin-left:0;}
+.event .content_wrap .box.benefit p {text-align:center; font-weight:500; margin-top:0;}
+.event .content_wrap .box.benefit p + p {color:#707070; font-weight:400; margin-top:.8rem;}
+.event .content_wrap .reward .pc {display:flex; justify-content:space-between; margin-top:8.2rem;}
+.event .content_wrap .reward .mo { margin-top:8.2rem;}
+.event .content_wrap .left {width:62.4rem; margin:0;}
+.event .content_wrap .right {width:62.4rem; margin:0;}
+
+.content_wrap .subtext{font-size:3.6rem; line-height:5.5rem; font-weight:bold; text-align:center;}
+	.content_wrap .subtext span {background:#037781; color:#fff; padding:0 1rem;}
+
+@media (min-width:1280px) {
+	.content_wrap {width:62.4rem;}
+	.content_wrap.section1 {width:100%; padding:10rem 0 9.6rem 0;}
+	.event section + section .content_wrap.section2 {padding-top:7.2rem;}
+	.content_wrap img {margin:0 auto;}
+	
+	.event section:last-of-type .content_wrap {padding:6rem 0 7.2rem 0; width:1280px;}
+	
+	.event .content_wrap .reward .mo {display:none;}
+}
+
+@media (max-width:1279px) {
+	.event .content_wrap .event_main_img + p {font-size:2.2rem;}
+	.event .content_wrap .event_main_img + p + p {font-size:2.2rem;}
+	
+	.content_wrap.section1 {width:100%; padding:10rem 0 9.6rem 0;}
+	.event section + section .content_wrap.section2 {padding-top:7.2rem;}
+	
+	.event section + section h4 {font-size:2.2rem;}
+	.event section + section h2 {font-size:3.6rem;}
+	.event section + section img {margin-top: 3.2rem;}
+	
+	.event section img {max-width:100%;}
+	
+	.event .reward .msg {text-align:center;}
+	.event .reward .msg span {padding:0rem 2.4rem; height:5rem; font-size:2.2rem;}
+	.event .reward .info {font-size:2.8rem; margin-top:1.2rem;}
+	
+	.event .content_wrap .reward .pc {display:none;}
+}
+
+</style>
+
+<script src="/assets/js/event.js?12"></script>
+
+<div class="contents event">
+	<div class="top_banner">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/2/event/event_main.png" class="mo">
+			<img src="/assets/imgs/round/2/event/pc_event_main.png" class="pc">
+		</div>
+		<div class="txt_wrap">
+			<h2>EVENT</h2>
+			<p>같이 즐겨봐</p>
+		</div>
+	</div>
+	
+	<section>
+		<div class="content_wrap section1">
+			<h4 data-aos="fade">마감된 이벤트</h4>
+			<h2 data-aos="fade">자레쓰의 생일파티에 온 걸 환영해! <br>당첨자 발표</h2>
+			<div class="event_main_img"></div>
+			<p data-aos="fade">자레쓰 생일파티 이벤트에 참여해주신 모든 분들 감사드립니다 <br>앞으로도 맛ZINE에 많은 관심과 참여 부탁드립니다!</p>
+			<p data-aos="fade">※ 이벤트 당첨자 개별 안내 예정</p>
+		</div>
+	</section>
+	<section class="border_top">
+		<div class="content_wrap section2">
+			<div class="subtext" data-aos="fade"><span>맛zine 키트를</span> <br>소개합니다.</div>			
+			<img src="/assets/imgs/round/4/event/kit2.png" class="fullin mt30" data-aos="fade">
+			<p data-aos="fade" class="mt34">당첨자 경품인 ‘맛zine 키트’는 12월 내 발송예정입니다.</p>
+			<p data-aos="fade" class="mt24" style="color:#707070;">※ 이벤트 당첨자 개별 안내 예정</p>
+		</div>
+	</section>
+	<section class="border_top">
+		<div class="content_wrap">
+			<h2 data-aos="fade-up">맛zine 키트의 <br>주인공 20인을 소개합니다.</span></h2>
+			<div class="reward fullin mt60">
+				<div class="msg" data-aos="fade-up"><span>당첨을 축하합니다!</span></div>
+				<div class="pc">
+					<div class="left">
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/1.png">
+							</div>
+							<div class="content">
+								<h5>감튀삼촌</h5>
+								<p>젊은 베르테르의 슬픔 샤롯데~! <br>
+								젊은 시대를 맞춘 글로벌 레스토랑 서비스^^ <br>
+								세계적인 음식점 을 위한 이미지가 바로생각나네요 <br>
+								저보다 나이많은 형아 43살 롯데GRS 축하드립니다!!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/3.png">
+							</div>
+							<div class="content">
+								<h5>꿍2</h5>
+								<p>롯데GRS 43주년을 진심으로 축하드립니다:) <br>
+								어렸을때 생일파티 하던 롯데리아가 많이 생각나네요~ <br>
+								추억도 많은 롯데리아에 입사하여서 더뜻깊고 <br>
+								앞으로도 영원했으면 좋겠습니다:)</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/5.png">
+							</div>
+							<div class="content">
+								<h5>라희</h5>
+								<p>롯데GRS 43주년 축하합니다♥ <br>
+								입에서 살살녹는 크리스피크림의 대표 도넛 <br>
+								오리지널글레이즈드!! 당충전의 대명사로 100주년 가자아~~!!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/7.png">
+							</div>
+							<div class="content">
+								<h5>롯리사랑</h5>
+								<p>롯데GRS하면 어릴적 추억이 제일 먼저 떠올라요 <br>
+								어릴적 부모님 손잡고 소풍 다녀온 후 처음 먹었었던 <br>
+								롯데리아 치킨조각과 쉐이크, 햄버거 그리고 그안에서 가족들과 <br>
+								함께 웃고 즐기던 그때의 추억이 몽글몽글 떠오르거든요. <br>
+								롯데GRS를 생각하면 대부분 사람들은 부모님이나 친구들과 <br>
+								어릴적 롯데리아를 찾았던 기억을 가지고 있을거에요 <br>
+								모두에게 어릴적 좋았었던 기억을 떠오르게 하는 <br>
+								롯데 GRS는 가을햇살 처럼 "따뜻함" 입니다.</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/9.png">
+							</div>
+							<div class="content">
+								<h5>마산댁</h5>
+								<p>세계로 뻗어가는 글로벌 롯데 GRS ???? <br>
+								모짜렐라 인더버거 출시로 모든 외국인이 치즈가 늘어나는 <br>
+								제스처를 하며 구매하간다는 인천공항의 스팟!! 롯데리아???? <br>
+								저의 캡이 탐나던 그 외국인분과의 지난날의 <br>
+								추억을 생각하며...???? 43주년 너무너무 축하합니다????????</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/11.png">
+							</div>
+							<div class="content">
+								<h5>버거제일잘나가</h5>
+								<p>초등학교시절 부잣집 친구들이 생일파티를 했던 <br>
+								그 "롯데리아" 옛날의 명성은 솔직히 사라진지 오래지만 <br>
+								터닝포인트가 되어 굵직한 프랜차이즈 기업으로 <br>
+								성장하길 바랍니다!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/13.png">
+							</div>
+							<div class="content">
+								<p>롯데GRS의 창립43주년을 맞이하여.. <br>
+								롯데는 단순히 프랜차이즈의 일부가 아니고 대한민국 우리나라 <br>
+								그 자체가 아닌가 싶습니다. <br>
+								어렷을적 햄버거 라는 자체를 처음 접하게 해준 롯데리아 <br>
+								고정된 테이블과 딱딱하고 광택나는 매끄러운 의자 엄마와 함께 <br>
+								외출나갈땐 항상 들려 사주시던 새우버거 그 어느 브랜드와 <br>
+								견주어도 항상 1등 롯데GRS 43주년이라니 <br>
+								너무 뿌듯하고 자랑스럽습니다. 롯데GRS 화이팅입니다!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/15.png">
+							</div>
+							<div class="content">
+								<h5>신투더구</h5>
+								<p>롯데GRS하면 "니들이 게맛을 알어?"의 신구선생님이 <br>
+								CF로 출연한 크랩버거 광고를 리메이크한 최근 40주년 <br>
+								한정판매 "니들이 오징어 맛을 알어? "의 주인공 오징어 버거가 <br>
+								생각나요 !! 햄버거에 치즈 토핑에 <br>
+								매콤한 소스의 조합이 아직 잊혀지지 않네요 ㅎㅎ</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/17.png">
+							</div>
+							<div class="content">
+								<h5>자레스포에버</h5>
+								<p>인생의 3분의1을 GRS와 함께했고,앞으로도 남은 3분의1을 <br>
+								GRS와 함께 성장하는 파트너로써 같이가고 싶습니다. ^^</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/19.png">
+							</div>
+							<div class="content">
+								<h5>천사최준</h5>
+								<p>롯데 하면 시그니쳐인 강렬한 빨간색이고 빨간색하면 <br>
+								붉은악마죠!!! 어느덧 43주년을 맞이한 롯데GRS !! <br>
+								붉은 악마처럼 뜨거운 마음을 담아서 축하드려요! <br>
+								비록 사업부도 다르고 매장도 다르기에 각자의 위치에서 <br>
+								열심히 일하고 있지만 우리는 하나입니다 ♡ <br>
+								사랑합니다 쟈레쓰 ♡</p>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/2.png">
+							</div>
+							<div class="content">
+								<h5>김근성</h5>
+								<p>"43년" 오랜기간 함께 한 고마운 친구 롯데 GRS 친근함과 <br>
+								새로움 친구들과 생일,반장선거,운동회때 먹었던 불고기버거 <br>
+								성인이 되서 배달,휴게소,출근할때 반갑게 만나는 엔제리너스 <br>
+								커피 그러나 새로운 버거, 새로운 커피로 도전과 변화를 <br>
+								멈추지 않는 롯데 지알에스 앞으로도 늘 새롭고 멋지지만, <br>
+								친근하게 만날 수 있는 친구로 우리 옆에 영원하길</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/4.png">
+							</div>
+							<div class="content">
+								<h5>라이스버거</h5>
+								<p>떠오르는 이미지 - 라이스버거 다양한 사업부가 있지만 <br>
+								어릴때 라이스 버거 CM송이 아직도 기억이 납니다 앞으로 <br>
+								다양한 사업부에서도 앞으로 이러한 오랫동안 기억에 남는 <br>
+								다양한 광고 부탁드립니다! GRS 43년동안 쟈레쓰~</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/6.png">
+							</div>
+							<div class="content">
+								<h5>롯데GRS</h5>
+								<p>롯데GRS 하면 그래도 롯데리아가 떠오른네요! <br>
+								초중고등학교때 친구들이랑 생일파티도 하던 추억도 있고, <br>
+								동네에서 참 오래오래 같은자리를 지키고 있는 롯데리아! <br>
+								몇십년의 세월동안 함께 굳건히 동네를 지켜주어 고맙다~~ <br>
+								돈을 안벌던 시절에도, 돈을 버는 시절에도 모두에게 추억을 <br>
+								남겨주는 것 같은 롯데리아가 GRS하면 생각나는 존재가 아닌가 <br>
+								싶네요 같이 건강하게! 늙어보자!!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/8.png">
+							</div>
+							<div class="content">
+								<h5>리또</h5>
+								<p>롯데GRS는 제 동반자 입니다. <br>
+								고등학교 2학년 때 처음으로 롯데리아에서 아르바이트 하여 <br>
+								용돈을 벌었고, 대학교 졸업 후 입사하여 현재 10년 째 다니고 <br>
+								있는 제 소중한 직장 입니다. 현재 아내도 롯데리아에서 인연이 <br>
+								생겨 다음달에는 예쁜 아이도 태어날 예정입니다. <br>
+								언제나 함께 하고 싶은 롯데GRS 항상 응원합니다!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/10.png">
+							</div>
+							<div class="content">
+								<h5>밍밍</h5>
+								<p>친환경 기업 롯데GRS G구를 위해 환경을 위해 노력하는 <br>
+								롯데GRS R면 알수록 곳곳에서 환경보호를 위한 노력을 <br>
+								많이 하고 있어요 S는 만큼 더욱 깨끗한 지구에서 <br>
+								고객님들과 함께 하고 싶어요</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/12.png">
+							</div>
+							<div class="content">
+								<h5>브롸우니</h5>
+								<p>롯데GRS 하면 떠오르는 이미지? <br>
+								외식프랜차이즈 기업이라고 생각 합니다. <br>
+								왜? 롯데리아, 엔제리너스,. KKD, 그리고 플레이팅, <br>
+								컨세션사업까지 회사 G를 나타내는 글로벌을 향해 나아가고 <br>
+								있으며, 해당 목표를 위해 대표님, 임원분들 그리고 <br>
+								이하 직원분들이 모두 목표를 달성하기 위해 나아가고 <br>
+								노력하고 있으며, 그에따른 고객 서비스를 제공함으로써 <br>
+								고객들도 경험하고 알아가고 있기 때문이라고 생각 합니다. <br>
+								롯데GRS 화이팅!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/14.png">
+							</div>
+							<div class="content">
+								<h5>빵순이버거대장</h5>
+								<p>43주년 축하해여^_^ 롯데리아에서 에그타르트 먹던 <br>
+								시절부터 생각나네요 맛있는것들 천국이여서 내 몸이 <br>
+								지금 43x43 정도불어났네요~ 끊을 수 없는 <br>
+								매력적인 롯데리아 43주년 축하해요!!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/16.png">
+							</div>
+							<div class="content">
+								<h5>오군</h5>
+								<p>제게 있어서 롯데GRS는 젊은 시절 맛있게 먹었던 <br>
+								데리 버거 입니다. 대학 생활을 하며 햄버거를 사먹기 보다는 <br>
+								헌혈 하면 주는 쿠폰으로 먹었던 기억이 있습니다. <br>
+								그 시절 데리 버거는 어찌보면 내 피를 대신하여 먹게 되었는데 <br>
+								얼마나 맛있었는지 2,3주에 한번씩 헌혈하는 동기가 되었지요. <br>
+								지금은 사 먹을 수 있지만 <br>
+								그 당시 그 느낌으로 돌아가지는 못하네요.</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/18.png">
+							</div>
+							<div class="content">
+								<h5>쟈레스43살 나는28살</h5>
+								<p>- 떠오르는 이미지 : 수직, 수평 - 사유 : 아직까지 롯데라는 <br>
+								기업은 수직적인 이미지가 강하지만 43주년이 된 지금은 <br>
+								수직적인 문화보다는 수평적인 문화가 되어 업무 환경이 많이 <br>
+								나아지고 있습니다. 앞으로의 43주년도 수평적인 환경에서 <br>
+								근무하고 싶습니다. 롯데GRS, 롯데리아 화이팅!♥</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/20.png">
+							</div>
+							<div class="content">
+								<h5>커피로 세계속으로</h5>
+								<p>G : green 환경을 생각하고 <br>
+								R : rest 고객들에게 휴식과 편안함을 제공하고 <br>
+								S : super 고객들을 맞이할 준비가 되있는 대단한 사람들이 <br>
+								가득한곳 여기가 롯데 GRS입니다</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mo">
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/1.png">
+							</div>
+							<div class="content">
+								<h5>감튀삼촌</h5>
+								<p>젊은 베르테르의 슬픔 샤롯데~! <br>
+								젊은 시대를 맞춘 글로벌 레스토랑 서비스^^ <br>
+								세계적인 음식점 을 위한 이미지가 바로생각나네요 <br>
+								저보다 나이많은 형아 43살 롯데GRS 축하드립니다!!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/2.png">
+							</div>
+							<div class="content">
+								<h5>김근성</h5>
+								<p>"43년" 오랜기간 함께 한 고마운 친구 롯데 GRS 친근함과 <br>
+								새로움 친구들과 생일,반장선거,운동회때 먹었던 불고기버거 <br>
+								성인이 되서 배달,휴게소,출근할때 반갑게 만나는 엔제리너스 <br>
+								커피 그러나 새로운 버거, 새로운 커피로 도전과 변화를 <br>
+								멈추지 않는 롯데 지알에스 앞으로도 늘 새롭고 멋지지만, <br>
+								친근하게 만날 수 있는 친구로 우리 옆에 영원하길</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/3.png">
+							</div>
+							<div class="content">
+								<h5>꿍2</h5>
+								<p>롯데GRS 43주년을 진심으로 축하드립니다:) <br>
+								어렸을때 생일파티 하던 롯데리아가 많이 생각나네요~ <br>
+								추억도 많은 롯데리아에 입사하여서 더뜻깊고 <br>
+								앞으로도 영원했으면 좋겠습니다:)</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/4.png">
+							</div>
+							<div class="content">
+								<h5>라이스버거</h5>
+								<p>떠오르는 이미지 - 라이스버거 다양한 사업부가 있지만 <br>
+								어릴때 라이스 버거 CM송이 아직도 기억이 납니다 앞으로 <br>
+								다양한 사업부에서도 앞으로 이러한 오랫동안 기억에 남는 <br>
+								다양한 광고 부탁드립니다! GRS 43년동안 쟈레쓰~</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/5.png">
+							</div>
+							<div class="content">
+								<h5>라희</h5>
+								<p>롯데GRS 43주년 축하합니다♥ <br>
+								입에서 살살녹는 크리스피크림의 대표 도넛 <br>
+								오리지널글레이즈드!! 당충전의 대명사로 100주년 가자아~~!!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/6.png">
+							</div>
+							<div class="content">
+								<h5>롯데GRS</h5>
+								<p>롯데GRS 하면 그래도 롯데리아가 떠오른네요! <br>
+								초중고등학교때 친구들이랑 생일파티도 하던 추억도 있고, <br>
+								동네에서 참 오래오래 같은자리를 지키고 있는 롯데리아! <br>
+								몇십년의 세월동안 함께 굳건히 동네를 지켜주어 고맙다~~ <br>
+								돈을 안벌던 시절에도, 돈을 버는 시절에도 모두에게 추억을 <br>
+								남겨주는 것 같은 롯데리아가 GRS하면 생각나는 존재가 아닌가 <br>
+								싶네요 같이 건강하게! 늙어보자!!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/7.png">
+							</div>
+							<div class="content">
+								<h5>롯리사랑</h5>
+								<p>롯데GRS하면 어릴적 추억이 제일 먼저 떠올라요 <br>
+								어릴적 부모님 손잡고 소풍 다녀온 후 처음 먹었었던 <br>
+								롯데리아 치킨조각과 쉐이크, 햄버거 그리고 그안에서 가족들과 <br>
+								함께 웃고 즐기던 그때의 추억이 몽글몽글 떠오르거든요. <br>
+								롯데GRS를 생각하면 대부분 사람들은 부모님이나 친구들과 <br>
+								어릴적 롯데리아를 찾았던 기억을 가지고 있을거에요 <br>
+								모두에게 어릴적 좋았었던 기억을 떠오르게 하는 <br>
+								롯데 GRS는 가을햇살 처럼 "따뜻함" 입니다.</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/8.png">
+							</div>
+							<div class="content">
+								<h5>리또</h5>
+								<p>롯데GRS는 제 동반자 입니다. <br>
+								고등학교 2학년 때 처음으로 롯데리아에서 아르바이트 하여 <br>
+								용돈을 벌었고, 대학교 졸업 후 입사하여 현재 10년 째 다니고 <br>
+								있는 제 소중한 직장 입니다. 현재 아내도 롯데리아에서 인연이 <br>
+								생겨 다음달에는 예쁜 아이도 태어날 예정입니다. <br>
+								언제나 함께 하고 싶은 롯데GRS 항상 응원합니다!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/9.png">
+							</div>
+							<div class="content">
+								<h5>마산댁</h5>
+								<p>세계로 뻗어가는 글로벌 롯데 GRS ???? <br>
+								모짜렐라 인더버거 출시로 모든 외국인이 치즈가 늘어나는 <br>
+								제스처를 하며 구매하간다는 인천공항의 스팟!! 롯데리아???? <br>
+								저의 캡이 탐나던 그 외국인분과의 지난날의 <br>
+								추억을 생각하며...???? 43주년 너무너무 축하합니다????????</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/10.png">
+							</div>
+							<div class="content">
+								<h5>밍밍</h5>
+								<p>친환경 기업 롯데GRS G구를 위해 환경을 위해 노력하는 <br>
+								롯데GRS R면 알수록 곳곳에서 환경보호를 위한 노력을 <br>
+								많이 하고 있어요 S는 만큼 더욱 깨끗한 지구에서 <br>
+								고객님들과 함께 하고 싶어요</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/11.png">
+							</div>
+							<div class="content">
+								<h5>버거제일잘나가</h5>
+								<p>초등학교시절 부잣집 친구들이 생일파티를 했던 <br>
+								그 "롯데리아" 옛날의 명성은 솔직히 사라진지 오래지만 <br>
+								터닝포인트가 되어 굵직한 프랜차이즈 기업으로 <br>
+								성장하길 바랍니다!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/12.png">
+							</div>
+							<div class="content">
+								<h5>브롸우니</h5>
+								<p>롯데GRS 하면 떠오르는 이미지? <br>
+								외식프랜차이즈 기업이라고 생각 합니다. <br>
+								왜? 롯데리아, 엔제리너스,. KKD, 그리고 플레이팅, <br>
+								컨세션사업까지 회사 G를 나타내는 글로벌을 향해 나아가고 <br>
+								있으며, 해당 목표를 위해 대표님, 임원분들 그리고 <br>
+								이하 직원분들이 모두 목표를 달성하기 위해 나아가고 <br>
+								노력하고 있으며, 그에따른 고객 서비스를 제공함으로써 <br>
+								고객들도 경험하고 알아가고 있기 때문이라고 생각 합니다. <br>
+								롯데GRS 화이팅!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/13.png">
+							</div>
+							<div class="content">
+								<p>롯데GRS의 창립43주년을 맞이하여.. <br>
+								롯데는 단순히 프랜차이즈의 일부가 아니고 대한민국 우리나라 <br>
+								그 자체가 아닌가 싶습니다. <br>
+								어렷을적 햄버거 라는 자체를 처음 접하게 해준 롯데리아 <br>
+								고정된 테이블과 딱딱하고 광택나는 매끄러운 의자 엄마와 함께 <br>
+								외출나갈땐 항상 들려 사주시던 새우버거 그 어느 브랜드와 <br>
+								견주어도 항상 1등 롯데GRS 43주년이라니 <br>
+								너무 뿌듯하고 자랑스럽습니다. 롯데GRS 화이팅입니다!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/14.png">
+							</div>
+							<div class="content">
+								<h5>빵순이버거대장</h5>
+								<p>43주년 축하해여^_^ 롯데리아에서 에그타르트 먹던 <br>
+								시절부터 생각나네요 맛있는것들 천국이여서 내 몸이 <br>
+								지금 43x43 정도불어났네요~ 끊을 수 없는 <br>
+								매력적인 롯데리아 43주년 축하해요!!</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/15.png">
+							</div>
+							<div class="content">
+								<h5>신투더구</h5>
+								<p>롯데GRS하면 "니들이 게맛을 알어?"의 신구선생님이 <br>
+								CF로 출연한 크랩버거 광고를 리메이크한 최근 40주년 <br>
+								한정판매 "니들이 오징어 맛을 알어? "의 주인공 오징어 버거가 <br>
+								생각나요 !! 햄버거에 치즈 토핑에 <br>
+								매콤한 소스의 조합이 아직 잊혀지지 않네요 ㅎㅎ</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/16.png">
+							</div>
+							<div class="content">
+								<h5>오군</h5>
+								<p>제게 있어서 롯데GRS는 젊은 시절 맛있게 먹었던 <br>
+								데리 버거 입니다. 대학 생활을 하며 햄버거를 사먹기 보다는 <br>
+								헌혈 하면 주는 쿠폰으로 먹었던 기억이 있습니다. <br>
+								그 시절 데리 버거는 어찌보면 내 피를 대신하여 먹게 되었는데 <br>
+								얼마나 맛있었는지 2,3주에 한번씩 헌혈하는 동기가 되었지요. <br>
+								지금은 사 먹을 수 있지만 <br>
+								그 당시 그 느낌으로 돌아가지는 못하네요.</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/17.png">
+							</div>
+							<div class="content">
+								<h5>자레스포에버</h5>
+								<p>인생의 3분의1을 GRS와 함께했고,앞으로도 남은 3분의1을 <br>
+								GRS와 함께 성장하는 파트너로써 같이가고 싶습니다. ^^</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/18.png">
+							</div>
+							<div class="content">
+								<h5>쟈레스43살 나는28살</h5>
+								<p>- 떠오르는 이미지 : 수직, 수평 - 사유 : 아직까지 롯데라는 <br>
+								기업은 수직적인 이미지가 강하지만 43주년이 된 지금은 <br>
+								수직적인 문화보다는 수평적인 문화가 되어 업무 환경이 많이 <br>
+								나아지고 있습니다. 앞으로의 43주년도 수평적인 환경에서 <br>
+								근무하고 싶습니다. 롯데GRS, 롯데리아 화이팅!♥</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/19.png">
+							</div>
+							<div class="content">
+								<h5>천사최준</h5>
+								<p>롯데 하면 시그니쳐인 강렬한 빨간색이고 빨간색하면 <br>
+								붉은악마죠!!! 어느덧 43주년을 맞이한 롯데GRS !! <br>
+								붉은 악마처럼 뜨거운 마음을 담아서 축하드려요! <br>
+								비록 사업부도 다르고 매장도 다르기에 각자의 위치에서 <br>
+								열심히 일하고 있지만 우리는 하나입니다 ♡ <br>
+								사랑합니다 쟈레쓰 ♡</p>
+							</div>
+						</div>
+						<div class="box" data-aos="fade-up">
+							<div class="profile">
+								<img src="/assets/imgs/round/4/event/20.png">
+							</div>
+							<div class="content">
+								<h5>커피로 세계속으로</h5>
+								<p>G : green 환경을 생각하고 <br>
+								R : rest 고객들에게 휴식과 편안함을 제공하고 <br>
+								S : super 고객들을 맞이할 준비가 되있는 대단한 사람들이 <br>
+								가득한곳 여기가 롯데 GRS입니다</p>
+							</div>
+						</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</section>
+	
+</div>
+

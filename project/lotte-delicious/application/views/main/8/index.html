@@ -1,0 +1,580 @@
+  <link rel="stylesheet" href="/assets/css/8/postSection.css?a=1" />
+  <link rel="stylesheet" href="/assets/css/8/main.css" />
+  <script>
+    setTimeout(() => {
+      $(".intro-layer").css({
+        display: "none",
+      });
+    }, 1850);
+  </script>
+	
+  <div class="main-wrap">
+    <!-- 비주얼영역 -->
+    <div class="visual section">
+      <div class="visual-img">
+	  	<img src="/assets/imgs/round/8/main/main_PC.webp"  class="mo_hide"/>
+	  	<img src="/assets/imgs/round/8/main/main_MO.webp"  class="pc_hide"/>
+        <!-- 검정배경 팝업 인트로창 -->
+        <!-- <div class="intro-layer">
+          <img src="/assets/imgs/round/8/main/main_pop_4s.gif" alt="visual" title="visual" />
+        </div> -->
+      </div>
+    </div>
+
+    <!-- POST 영역 -->
+    <div class="post section">
+      <div class="post-container">
+        <div class="swiper post-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="post-thumb">
+                <img src="/assets/imgs/round/8/post/PC_MO_common/POST_thumb/1.png" />
+                <div class="active-shadow">
+                  <a href="/post/sport/<?= $this->round ?>">
+                    <div class="active-text">
+                      <div class="tag">#BASEBALL #HITANDRUN</div>
+                      <div class="title">HOT한 태양 아래<br/> 짜릿한 PLAYBALL</div>
+                      <div class="subtitle">재미와 감동이 함께 하는 야구</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="post-thumb">
+                <img src="/assets/imgs/round/8/post/PC_MO_common/POST_thumb/2.png" />
+                <div class="active-shadow">
+                  <a href="/post/trip/<?= $this->round ?>">
+                    <div class="active-text">
+                      <div class="tag">#EUROPE #COST</div>
+                      <div class="title">꿈의 여행지 유럽<br/> 얼마면 갈 수 있어?</div>
+                      <div class="subtitle">가성비 유럽 즐기기</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="post-thumb">
+                <img src="/assets/imgs/round/8/post/PC_MO_common/POST_thumb/3.png" />
+                <div class="active-shadow">
+                  <a href="/post/food/<?= $this->round ?>">
+                    <div class="active-text">
+                      <div class="tag">#FOOD #WORLD_SPICE</div>
+                      <div class="title">지구 반대편에 있는<br/> 내 최애 음식?</div>
+                      <div class="subtitle">볼수록 매력적인 향신료의 세계</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="post-thumb">
+                <img src="/assets/imgs/round/8/post/PC_MO_common/POST_thumb/4.png" />
+                <div class="active-shadow">
+                  <a href="/post/style/<?= $this->round ?>">
+                    <div class="active-text">
+                      <div class="tag">#VACATION LOOK #BLOCKCORE</div>
+                      <div class="title">감각 있는 여행의 완성,<br/> 바캉스룩</div>
+                      <div class="subtitle">여행 패션 고민은 그만</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="post-thumb">
+                <img src="/assets/imgs/round/8/post/PC_MO_common/POST_thumb/5.png" />
+                <div class="active-shadow">
+                  <a href="/post/culture/<?= $this->round ?>">
+                    <div class="active-text">
+                      <div class="tag">#UPCYCLING #VALUABLE</div>
+                      <div class="title">새로운 가치,<br/> 업사이클링</div>
+                      <div class="subtitle">깨끗한 미래를 향한 작은 발걸음</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-progress"></div>
+        </div>
+        <div class="post-section-title pc_hide">POST</div>
+      </div>
+    </div>
+
+    <!-- NEWS 영역 -->
+    <div class="news section">
+      <div class="news-container">
+        <div class="news-section-title">NEWS</div>
+        <div class="swiper news-swiper pc">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/news_pc01.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/news_pc02.png" /></a>
+            </div> 
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/news_pc03.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/news_pc04.png" /></a>
+            </div> 
+          </div>
+        </div>
+        <div class="swiper news-swiper mo">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/01_news.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/02_news.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/03_news.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/04_news.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/05_news.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/06_news.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/07_news.png" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/news/index/<?= $this->round ?>">
+                <img src="/assets/imgs/round/8/main/08_news.png" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="news-swiper-pagination mo"></div>
+        <div class="news-swiper-pagination pc"></div>
+      </div>
+    </div>
+
+    <!-- VIDEO 영역 -->
+    <div class="video section">
+      <div class="video-section-title">VIDEO</div>
+      <div class="video-flex">
+        <div class="video-list">
+          <!-- 첫번째영상 -->
+          <div class="video-item">
+            <div class="title">EPISODE.01</div>
+            <div class="content">
+              <img src="/assets/imgs/round/8/video/Video_thumbnail_01.png" alt="video-thumb" />
+              <div class="video-shadow hide">
+                <div class="text">
+                  <div class="episode-tag">#롯면뭐하니 #달콤인터뷰</div>
+                  <div class="episode-title">[롯면뭐하니] KKD사업팀</div>
+                </div>
+                <a href="/video/index/8/"></a>
+              </div>
+            </div>
+          </div>
+          <!-- 두번째영상 -->
+          <div class="video-item">
+            <div class="title">EPISODE.02</div>
+            <div class="content">
+              <img src="/assets/imgs/round/8/video/Video_thumbnail_02.png" alt="video-thumb" />
+              <div class="video-shadow hide">
+                <div class="text">
+                  <div class="episode-tag flex flex-vc">#제주감성 #엔제리너스</div>
+                  <div class="episode-title">[제주 단짠모음.ZIP 1편]</div>
+                </div>
+                <a href="/video/index/8/2"></a>
+              </div>
+            </div>
+          </div>
+          <!-- 세번째영상 -->
+          <div class="video-item">
+            <div class="title">EPISODE.03</div>
+            <div class="content">
+              <img src="/assets/imgs/round/8/video/Video_thumbnail_03.png" alt="video-thumb" />
+              <div class="video-shadow hide">
+                <div class="text">
+                  <div class="episode-tag flex-vc">#오늘은내가 #햄버거요리사</div>
+                  <div class="episode-title">[키자니아] 버거연구소 오픈</div>
+                </div>
+                <a href="/video/index/8/3"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="star1">
+          <img src="/assets/imgs/round/8/video/video_light1.png" class="light">
+        </div>
+        <div class="star2">
+          <img src="/assets/imgs/round/8/video/video_light2.png" class="light">
+        </div>
+        <div class="star3">
+          <img src="/assets/imgs/round/8/video/video_light3.png" class="light">
+        </div>
+      </div>
+      <div class="video-image">
+        <div class="video-inner">
+          <img src="/assets/imgs/round/8/video/video_image.png"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- HISTORY 영역 -->
+    <div class="history section">
+      <!-- 선택영역 -->
+      <div class="title-section">
+        <div class="container">
+          <div class="section-title mobile_hide">HISTORY</div>
+          <div class="history-swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- 이미지영역 -->
+      <div class="content-section">
+        <div class="swiper history-swiper">
+          <div class="section-title pc_hide">HISTORY</div>
+          <div class="swiper-wrapper">
+            <!-- 히스토리 데이터 삽입 됩니다. -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module">
+     import {fetchData} from "/assets/js/history/fetchData.js";
+    //pc화면크기
+    const isDesktop = window.innerWidth > 1080;
+
+    // 성공 템플릿 PC 이미지 영역
+    const successTemplateImgsPc = ({year, month, imgs, link}, idx) => {
+      if (idx >= 1) {
+        return `
+        <div class="swiper-slide">
+          <div class="active-title">
+            <span class="month">${month}</span> <span class="year">${year}</span>
+          </div>
+          <img class="thumb" src="${imgs}" alt="thumb" />
+          <a href="${link}"></a>
+        </div>
+        `;
+      }
+    };
+    // 실패 템플릿
+    const errorTemplate = (errorThrown) => { 
+      return`
+        <div class="error">
+          <h2>통신 실패!</h2>
+          <p>에러 메시지: ${errorThrown}</p>
+        </div>
+      `;
+    };
+
+    //첫 로드될때 실행
+    fetchData("/assets/js/history/data.json")
+    .done(function(response) {
+      // 통신 성공 시 템플릿을 만들어 추가합니다.
+      const templateHtmlImgsPc = response.map((datas, idx) => {
+        return successTemplateImgsPc(datas, idx)
+      }).join('');
+
+      $('.history .swiper-wrapper').html(templateHtmlImgsPc);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+      // 통신 실패 시 템플릿을 만들어 추가합니다.
+      const errorHTML = errorTemplate(errorThrown);
+      $('.history .swiper-wrapper').html(errorHTML)
+    });
+
+
+    const postSwiperProps = {
+      slidesPerView: 1.5,
+      spaceBetween: 16,
+      loop: true,
+      slideToClickedSlide: true,
+      initialSlide: 1,
+      centeredSlides: false,
+      speed: 1500,
+      // autoplay: {
+      //   // 자동 슬라이드 설정 , 비 활성화 시 false
+      //   delay: 3000, // 시간 설정
+      //   disableOnInteraction: true, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+      // },
+      breakpoints: {
+        1080: {
+          slidesPerView: 5,
+          centeredSlides: true,
+          spaceBetween: 0,
+        },
+      },
+    };
+
+    //포스트 스와이퍼
+    const postSwiper = new Swiper(".post-swiper", {
+      ...postSwiperProps,
+      on: {
+        init: function () {
+          if (isDesktop) {
+            document.querySelector(
+              ".post-swiper .swiper-wrapper"
+            ).style.marginLeft = "-256px";
+          }
+        },
+        slideChange: function () {
+          $(".active-shadow").css("display", "none");
+        },
+      },
+      pagination: {
+        el: isDesktop ? ".swiper-pagination" : ".swiper-progress",
+        clickable: true,
+        type: isDesktop ? "custom" : "progressbar",
+        renderCustom: function (swiper, current, total) {
+          let text = "<div class='bullet-container'>";
+          for (let i = 1; i <= total; i++) {
+            if (current == i) {
+              text += `<div class="swiper-pagination-bullet-active" style="background-image: url('/assets/imgs/icon/scrollBar.svg')"></div>`;
+            } else {
+              text += `<div class="swiper-pagination-bullet">${[i]}</div>`;
+            }
+          }
+          text += "</div>";
+          return text;
+        },
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,  //브라우저가 768보다 클 때
+          spaceBetween: 40,
+          centeredSlides: true,
+        },
+        1080: {
+          slidesPerView: 5,
+          spaceBetween: 0,
+          centeredSlides: true,
+        },
+      },
+    });
+
+    //포스트스와이퍼 마우스오버 시 재생 멈춤
+    $(".post-swiper .swiper-slide").on("mouseover", function () {
+      postSwiper.autoplay.stop();
+    });
+    $(".post-swiper .swiper-slide").on("mouseout", function () {
+      postSwiper.autoplay.start();
+    });
+
+    //뉴스 스와이퍼
+    const newsSwiper = new Swiper(".news-swiper.pc", {
+      loop: true,
+      pagination: {
+        el: ".news-swiper-pagination.pc",
+        clickable: true,
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
+          var text = "<div class='bullet-container'>";
+          for (let i = 1; i <= total; i++) {
+            if (current == i) {
+              text += `<div class="swiper-pagination-bullet-active" style="background-image: url('/assets/imgs/icon/scrollBar.svg')"></div>`;
+            } else {
+              text += `<div class="swiper-pagination-bullet">${[i]}</div>`;
+            }
+          }
+          text += "</div>";
+          return text;
+        },
+      },
+    });
+	  const newsSwiper2 = new Swiper(".news-swiper.mo", {
+      loop: true,
+      pagination: {
+        el: ".news-swiper-pagination.mo",
+        clickable: true,
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
+          var text = "<div class='bullet-container'>";
+          for (let i = 1; i <= total; i++) {
+            if (current == i) {
+              text += `<div class="swiper-pagination-bullet-active" style="background-image: url('/assets/imgs/icon/scrollBar.svg')"></div>`;
+            } else {
+              text += `<div class="swiper-pagination-bullet">${[i]}</div>`;
+            }
+          }
+          text += "</div>";
+          return text;
+        },
+      },
+    });
+
+    //비디오영역 마우스오버 동작
+    $(document).ready(function () {
+      $(".video-item").mouseover(function () {
+        $(this).children(".title").addClass("filled-text");
+        $(this).find(".video-shadow").toggleClass("hide");
+      });
+      $(".video-item").mouseout(function () {
+        $(this).children(".title").removeClass("filled-text");
+        $(this).find(".video-shadow").toggleClass("hide");
+      });
+    });
+
+     //히스토리 스와이퍼
+     const historyBulletWhite = [
+      "6_2023_W",  
+      "4_2023_W",
+      "2_2023_W",
+      "12_2022_W",
+      "10_2022_W",
+      "8_2022_W",
+      "6_2022_W",
+      "4_2022_W_edit",
+    ];
+    // 라인 텍스트
+    const historyBulletLine = [
+      "6_2023_L",  
+      "4_2023_L",
+      "2_2023_L",
+      "12_2022_L",
+      "10_2022_L",
+      "8_2022_L",
+      "6_2022_L",
+      "4_2022_L",
+    ];
+    const historyBulletWhiteMobile = [
+      "6_2023_W_vertical",  
+      "4_2023_W_vertical",
+      "2_2023_W_vertical",
+      "12_2022_W_vertical",
+      "10_2022_W_vertical",
+      "8_2022_W_vertical",
+      "6_2022_W_vertical",
+      "4_2022_W_vertical",
+    ];
+     // 라인 텍스트 모바일
+    const historyBulletLineMobile = [
+      "6_2023_L_vertical",  
+      "4_2023_L_vertical",
+      "2_2023_L_vertical",
+      "12_2022_L_vertical",
+      "10_2022_L_vertical",
+      "8_2022_L_vertical",
+      "6_2022_L_vertical",
+      "4_2022_L_vertical",
+    ];
+
+    function hoverText() {
+      //PC 히스토리 마우스오버 동작
+      const item = $(".history-swiper-pagination .swiper-pagination-bullet");
+
+      //마우스오버 시
+      item.mouseover(function () {
+        //흰색 텍스트로 이미지 교체
+        const i = $(this).attr("data-value");
+        $(this).css({
+          "background-image": `url('/assets/imgs/round/8/history/2022_2023_text_SVG/${historyBulletWhite[i - 1]
+            }.svg')`,
+          opacity: 1,
+        });
+
+        $(this).trigger("click");
+      });
+
+      //마우스아웃 시
+      item.mouseout(function () {
+        //테두리 텍스트로 이미지 교체
+        const i = $(this).attr("data-value");
+        $(this).css({
+          "background-image": `url('/assets/imgs/round/8/history/2022_2023_text_SVG/${historyBulletLine[i - 1]
+            }.svg')`,
+          opacity: 0.3,
+        });
+      });
+    }
+
+    var historySwiper = new Swiper(".history-swiper", {
+      slidesPerView: 1.4,
+      centeredSlides: true,
+      spaceBetween: 0,
+      loop: true,
+      initialSlide: 0,
+		  allowTouchMove: true,
+      breakpoints: {
+        1080: {
+			    allowTouchMove: false,
+          slidesPerView: 4,
+          centeredSlides: false,
+          spaceBetween: 0,
+        },
+      },
+      on: {
+        slideChange: function (swiper) {
+          $(".active-title").children("img").css("display", "none");
+
+          //하얀글자로 바뀔 때 애니메이션 (only 모바일)
+          $(
+            ".history-swiper-pagination .swiper-pagination-bullet-active"
+          ).addClass("animation");
+
+          if (isDesktop) {
+            hoverText();
+          }
+        },
+      },
+      pagination: {
+        el: ".history-swiper-pagination",
+        clickable: true,
+        type: "custom",
+        clickable: isDesktop ? true : false,
+        renderCustom: function (swiper, current, total) {
+          //데스크탑 pagination
+          if (isDesktop) {
+            let text = "<div class='bullet-container'>";
+            for (let i = 1; i <= total; i++) {
+              text += `<div class='swiper-pagination-bullet' data-value=${i} style='background-image:url("/assets/imgs/round/8/history/2022_2023_text_SVG/${historyBulletLine[i - 1]
+                }.svg")'></div>`;
+            }
+            text += "</div>";
+
+            return text;
+          }
+
+          //모바일 pagination
+          else {
+            let text = "<div class='bullet-container'>";
+            for (let i = 1; i <= total; i++) {
+              if (current == i) {
+                text += `<div class='swiper-pagination-bullet-active' style='order:${-1}; background-image:url("/assets/imgs/round/8/history/2022_2023_text_SVG/${historyBulletWhiteMobile[i - 1]
+                  }.svg")'></div>`;
+              } else {
+                text += `<div class='swiper-pagination-bullet' style='order:${i - current > 0 ? i - current : i + current
+                  }; background-image:url("/assets/imgs/round/8/history/2022_2023_text_SVG/${historyBulletLineMobile[i - 1]
+                  }.svg")'></div>`;
+              }
+            }
+            text += "</div>";
+            return text;
+          }
+        },
+      },
+    });
+
+    if (isDesktop) {
+      hoverText();
+    }
+  </script>

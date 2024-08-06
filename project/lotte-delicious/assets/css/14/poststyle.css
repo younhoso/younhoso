@@ -1,0 +1,14 @@
+.bg-eee {
+  background-color: #EEEEEE;
+  padding: 100px 140px;
+  box-sizing: border-box;
+}
+
+.bg-eee.bdr18 {
+  border-radius: 18% !important;
+}
+@media (max-width: 991px) {
+  .bg-eee {
+    padding: 60px 40px;
+  }
+}

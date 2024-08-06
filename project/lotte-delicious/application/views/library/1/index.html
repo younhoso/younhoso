@@ -1,0 +1,318 @@
+<div class="contents library">
+	<div class="top_banner">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/library/library_main.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/library/pc_library.png" class="pc">
+		</div>
+		<div class="txt_wrap">
+			<h2>LIBRARY</h2>
+			<p>우리의 기록</p>
+		</div>
+	</div>
+	<section>
+		<div class="content_wrap">
+			<h4 data-aos="fade">지난달의 발행본</h4>
+			<h2 data-aos="fade">맛진 몰아보기</h2>
+			<div> </div>
+		</div>
+	</section>
+</div>
+	<style>
+
+		.sliderWrap-sl{
+			width:100vw;
+			/*width: calc( 100vw - 18px );*/
+			height:500px;
+			overflow: hidden;
+		}
+
+		.swiper-container-sl {
+		    position:relative;
+		   	width: 1968px;
+		    height: 500px;
+		    transform-origin: top center;
+		    transform : scale(1) translateX(-50%);
+		    margin-left:50%;
+		}
+
+
+		.swiper-container-sl .swiper-slide {
+		  width: 400px;
+		  height: 500px;
+		  display:flex;
+		  background: #CBD6D6;
+		  align-items: center;
+		  justify-content:center;
+		  transition:all 200ms linear;
+		  transform: scale(0.76) !important;
+		  overflow:hidden;
+		  border-radius: 32px;
+		}
+
+		.swiper-container-sl .swiper-slide.swiper-slide-active {
+		  width: 400px;
+		  height: 500px;
+		  transform: scale(1) !important;
+		  background: #3a3a3a;
+		}
+
+		.swiper-container-sl .swiper-slide.swiper-slide-active > .ment{
+			opacity:1;	
+		}
+
+		.swiper-container-sl .swiper-slide-duplicate-active{
+		  width: 400px;
+		  height: 500px;
+		  transform: scale(1) !important;
+		  background: #3a3a3a;
+		}
+
+		.swiper-container-sl .swiper-slide__content {
+		  height: 500px;
+		}
+
+		.swiper-container-sl .swiper-slide > img{
+			width:100%;
+		}
+
+		.swiper-container-sl .swiper-slide > .ment {
+		  /*opacity:0;*/
+		}
+
+		.swiper-container-sl .ment{
+		    position: absolute;
+		    text-align: center;
+		    width : 400px;
+		    margin : 0 auto;
+		    font-size : 3.2rem;
+		    font-weight:bold;
+		}
+		.swiper-container-sl .sub .ment {}
+
+		.swiper-container-sl .mentTitle{
+			color:#fff;
+		}
+
+		.swiper-container-sl .mentSub{
+			color:#C2C2C2;
+		}
+
+		.swiper-container-sl .mentSub2{
+			color:#F3FFFF;
+		}
+
+		/* indicator */
+		
+		.swiper-pagination-sl{
+			transform: translateX(-50%);
+			margin-left:50%;
+			margin-top:28px;
+			position:relative;
+			text-align:center;
+			padding-bottom:98px;
+		}
+
+		.swiper-pagination-sl .swiper-pagination-bullet{
+			width:1.2rem;
+			height:1.2rem;
+			background-color:#e8edee;
+			opacity:1;
+			margin-left:1rem;
+			margin-right:1rem;
+		}
+
+		.swiper-pagination-sl .swiper-pagination-bullet-active{
+			background-color:#037781;
+		}		
+
+		@media all and (max-width:767px) {
+			.swiper-container-sl .ment{font-size:3.2rem;}
+		}
+
+	</style>
+	<div class="sliderWrap-sl">
+		<div class="swiper-container-sl">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide custom" style="background-color:#3a3a3a;">
+		        	<div class="ment">
+		        		<p class="mentTitle">COMING SOON</p>
+		        		<p class="mentSub">6월에 만나요!</p>
+		        	</div>
+		        </div>
+		        <div class="swiper-slide custom sub" style="background-color:#CBD6D6;">
+		        	<div class="ment">
+		        		<p class="mentTitle">COMING SOON</p>
+		        		<p class="mentSub2">8월에 만나요!</p>
+		        	</div>
+		        </div>
+		        <div class="swiper-slide custom sub" style="background-color:#CBD6D6;">
+		        	<div class="ment">
+		        		<p class="mentTitle">COMING SOON</p>
+		        		<p class="mentSub2">10월에 만나요!</p>
+		        	</div>
+		        </div>
+		        <div class="swiper-slide custom sub" style="background-color:#CBD6D6;">
+		        	<div class="ment">
+		        		<p class="mentTitle">COMING SOON</p>
+		        		<p class="mentSub2">12월에 만나요!</p>
+		        	</div>
+		        </div>
+		        <div class="swiper-slide custom sub" style="background-color:#CBD6D6;">
+		        	<div class="ment">
+		        		<p class="mentTitle">COMING SOON</p>
+		        		<p class="mentSub2">내년 2월에 만나요!</p>
+		        	</div>
+		        </div>
+		        <div class="swiper-slide custom sub" style="background-color:#CBD6D6;">
+		        	<div class="ment">
+		        		<p class="mentTitle">COMING SOON</p>
+		        		<p class="mentSub2">내년 4월에 만나요!</p>
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<div class="swiper-pagination-sl">
+
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			var sliderWrap = document.querySelector(".sliderWrap-sl");
+			var swiperContainer = document.querySelector(".swiper-container-sl");
+			
+			var $swiper = $(".swiper-container-sl");
+			var $bottomSlide = null;
+			var $bottomSlideContent = null;
+			var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+			var _fixGap = -8;
+			var _autoHeight = true;
+
+			//PC커스텀
+			if( !isMobile ){
+				var sliders = document.querySelectorAll(".custom");
+				var slids = document.querySelectorAll(".swiper-slide");
+
+				sliderWrap.style.height = "447px";	
+				swiperContainer.style["width"] = "1593px";//357
+				swiperContainer.style.height = "447px";
+				
+				sliders.forEach(
+				    function(target){
+				        target.style["width"] = "357px";
+				        target.style["height"] = "447px";
+				    }
+				)
+
+				slids.forEach(
+				    function(target){
+				        target.style["transform"] = "scale(0.7619047619047619) !important";
+				    }
+				)
+				_fixGap = -48;
+				_autoHeight = false;
+			}
+
+			var slider = new Swiper(".swiper-container-sl", {
+				spaceBetween: _fixGap,
+				slidesPerView: 5,
+				centeredSlides: true,
+				loop: true,
+				loopAdditionalSlides: 6,
+				centeredSlidesBounds: true,
+				autoHeight:_autoHeight,
+				on:{
+					init:function(){
+						setSliderResize(null);
+						setPosition();
+
+						if( !isMobile ){
+							document.querySelector(".swiper-wrapper").style.marginLeft = "-39px";
+						}
+
+					},
+				},
+				pagination: {
+					el: '.swiper-pagination-sl',
+				    type: 'bullets',
+				    clickable : "true",
+				}
+			});
+
+			slider.on('activeIndexChange', function () {
+				window.setTimeout(function(){
+					setPosition();
+				},10);
+
+			});
+
+			function setPosition(){
+
+				var slids = document.querySelectorAll(".swiper-slide");
+
+				slids.forEach(
+				    function(target){
+			        	if(target.style.marginRight=="-9px"){
+			        		target.style["margin-right"] = _fixGap+"px";	
+			        	}
+				    }
+				)
+				document.querySelector(".swiper-slide-prev").style["margin-right"] = "-9px";
+				document.querySelector(".swiper-slide-active").style["margin-right"] = "-9px";
+			}
+			window.visualViewport.onresize = setSliderResize;
+
+
+			function setSliderResize (e){
+				var getWidth = document.body.offsetWidth;
+				var outWidth = 768;
+				var fixHeight = 500;
+
+				if( getWidth < outWidth ){
+					swiperContainer.style.transform = "scale("+(getWidth/outWidth)+") translateX(-50%)";
+					swiperContainer.style.transformOrigin = "top left";
+					sliderWrap.style.height = ((getWidth/outWidth)*fixHeight)+"px";
+					sliderWrap.style.marginLeft = 0+"px";
+					
+					$('.swiper-container-sl .ment').css('transform',"scale("+(outWidth/getWidth)+")");
+
+					if( !isMobile ){
+						sliderWrap.style.width = "100%";
+					}
+				}else{
+					swiperContainer.style.transform = "scale(1) translateX(-50%)";
+					swiperContainer.style.marginLeft = "50%";
+					swiperContainer.style.transformOrigin = "top center";
+					sliderWrap.style.height = "500px";
+					
+					$('.swiper-container-sl .ment').css('transform',"scale(1)");
+
+					if( !isMobile ){
+						if(getWidth >= (1200) ){
+							sliderWrap.style.width = getWidth+"px"
+							// sliderWrap.style.marginLeft = ((((1200)-getWidth)/2))+"px";
+							// console.log( (((1200-18)-getWidth)/2) );
+						}else{
+							sliderWrap.style.width = "calc( 100vw - 18px )";
+							sliderWrap.style.marginLeft = 0+"px";
+						}
+					}
+				}
+				if( !isMobile ){
+					setPosition();
+					//357 447
+					// sliderWrap.style.height = "447px";	
+					// swiperContainer.style.height = "447px";
+					// console.log("pc");
+
+					// var sliders = document.querySelectorAll(".custom")
+					// array1.forEach(element => console.log(element))
+
+				}
+			}
+		});
+	</script>
+
+
+
+

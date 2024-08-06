@@ -1,0 +1,12 @@
+img {width: 100%;height: auto;}
+
+/* post-food-01 */
+.post-food-01 .flex .flex > div{flex: 1;}
+.post-food-01 .txt_inner01 {background-color: #F6F6F6;}
+.post-food-01 .txt_inner {padding: 20px 30px;}
+
+@media (max-width: 991px){
+  .post-food-01 .flex > div {flex: auto;}
+  .post-food-01 .flex .post-image-01 {width: 100%;}
+  .post-food-01 .flex .post-image-01 .post-image {width: 100%;}
+}

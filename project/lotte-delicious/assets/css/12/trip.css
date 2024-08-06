@@ -1,0 +1,13 @@
+/* ========== PC ========== */
+img {height: auto;}
+
+.post-trip-03 .imgSize{width: 48%;}
+.post-trip-03 .post-sport-01 .wrap {position: relative;}
+.post-trip-03 .post-sport-01 .inner {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column;}
+.post-trip-03 .flex > div {flex: 1;}
+.post-trip-03 .trip-02 .flex > div:first-child {flex: 0.5;}
+.post-trip-03 .trip-02 .flex > div:last-child {flex: 0.5;}
+.post-trip-03 .trip-02 img {height: 100%;}
+@media (max-width: 991px){
+  .post-trip-03 .imgSize {width: 100%;}
+}

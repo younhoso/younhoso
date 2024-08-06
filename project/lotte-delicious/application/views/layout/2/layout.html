@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>롯데 맛진</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="icon" href="/assets/imgs/pavicon.png">
+	 
+	<meta property="og:title" id="meta_og_title" content="맛진 TASTYZINE">
+	<meta property="og:url" id="meta_og_url" content="http://tastyzine.co.kr/">
+	<meta property="og:image" content="/assets/imgs/round/<?=$this->round?>/SEO.png">
+	<meta property="og:description" id="meta_og_description" content="세상에서 가장 맛있는 매거진">
+	<meta name="format-detection" content="telephone=no">
+	
+	 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+	<!-- <link href="/assets/font/font.css" rel="stylesheet"> -->
+
+	<!-- js -->
+	<script src="/assets/js/jquery-3.4.1.min.js"></script>
+
+	<!-- lib -->
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/swiperjs/swiper.css">
+	<script src="/assets/vendor/swiperjs/swiper.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/aos/aos.css">
+	<script src="/assets/vendor/aos/aos.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="/assets/css/2/common.css?ver=<?=rand()?>">
+	<script src="/assets/js/common.js?ver=<?=rand()?>"></script>
+	
+	<style>
+		
+	</style>
+</head>
+
+<body>
+	<? if( isset($this->main) ) { ?>
+	<div id="container">
+	<? } else if( isset($this->story_sub) ) { ?>
+	<div id="container" class="subpage story_sub">
+	<? } else { ?>
+	<div id="container" class="subpage">
+	<? } ?>
+		<!--container-->
+		<div id="header">
+			<!--header-->
+			<div class="wrap">
+				<h1 id="logo">
+					<a href="javascript:history.back()" class="back_bt">
+						<img src="/assets/imgs/icon/MO_BACK_W.svg" class="white_back">
+						<img src="/assets/imgs/icon/MO_BACK_B.svg" class="black_back">
+					</a>
+					<? if( isset($this->story_sub) ) { ?>
+					<a href="javascript:history.back()">
+						<?=$this->story_sub_title?>
+					</a>
+					<? } else { ?>
+					<a href="/main/index/<?=$this->round?>">
+						<img src="/assets/imgs/icon/GNB_logo@2x_black.png" class="black_logo">
+						<img src="/assets/imgs/icon/GNB_logo@2x_white.png" class="white_logo">
+					</a>
+					<? } ?>
+				</h1>
+
+				<div class="menu-right">
+				
+					<ul>
+						<li><a href="/about/index/<?=$this->round?>">ABOUT</a></li>
+						<li><a href="/story/index/<?=$this->round?>">STORY</a></li>
+						<li><a href="/interview/index/<?=$this->round?>">INTERVIEW</a></li>
+						<li><a href="/news/index/<?=$this->round?>">NEWS</a></li>
+						<li><a href="/event/index/<?=$this->round?>">EVENT</a></li>
+						<li><a href="/library/index/<?=$this->round?>">LIBRARY</a></li>
+					</ul>
+				
+					<? if( isset($this->story_sub) ) { ?>
+					<a href="javascript:history.back()" class="gnb_open">
+						<i class="icon-menu">전체메뉴</i>
+					</a>
+					<? } else { ?>
+					<a href="javascript:toggle_menu()" class="gnb_open">
+						<i class="icon-menu">전체메뉴</i>
+					</a>
+					<? } ?>
+				</div>
+			</div>
+			<!--//header-->
+			<div class="progress">
+				<div class="bar"></div>
+			</div>
+		</div>
+
+		<?= $this->contents ?>
+		
+		<div id="footer" class="footer">
+			<!--footer-->
+			<div class="top">
+				<div class="content_wrap">
+					<a href="/main/index/<?=$this->round?>" class="logo">
+						<img src="/assets/imgs/icon/GNB_logo@2x_black.png">
+					</a>
+					<div class="family_site">
+						<a href="javascript:toggle_fsite()">Family site</a>
+						<ul>
+							<li><a href="javascript:go_href('http://www.lottegrs.com')">롯데 GRS</a></li>
+							<li><a href="javascript:go_href('http://www.lotteria.com')">롯데리아</a></li>
+							<li><a href="javascript:go_href('http://www.angelinus.com')">엔제리너스</a></li>
+							<li><a href="javascript:go_href('http://www.krispykreme.co.kr')">크리스피 크림 도넛</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="content_wrap">
+					<p class="address">서울특별시 송파구 백제고분로 217 롯데GRS 79 SQUARE</p>
+					<p class="copyright">Copyright ©2022 LOTTE GRS. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+			<!--//footer-->
+		</div>
+		
+		<div id="gnb">
+			<!--gnb header-->
+			<!-- 
+			<div class="header_wrap">
+				<h1 id="logo">
+					<a href="/">
+						<img src="/assets/imgs/icon/GNB_logo@2x_white.png" class="white_logo">
+					</a>
+				</h1>
+
+				<div class="menu-right">
+					<a href="javascript:toggle_menu()" class="gnb_open">
+						<i class="icon-menu">전체메뉴</i>
+					</a>
+				</div>
+			</div>
+			-->
+			<!--//gnb header-->
+			<!--gnb-->
+			<ul> 
+				<li>
+					<a onclick="show_href('/about/index/<?=$this->round?>')">
+						<img src="/assets/imgs/icon/menu_about.svg">
+						<span>ABOUT</span>
+						<span><b>다시</b>, 처음</span>
+					</a>
+				</li>
+				<li>
+					<a onclick="show_href('/story/index/<?=$this->round?>')">
+						<img src="/assets/imgs/icon/menu_story.svg">
+						<span>STORY</span>
+						<span>우리의 이야기</span>
+					</a>
+				</li>
+				<li>
+					<a onclick="show_href('/interview/index/<?=$this->round?>')">
+						<img src="/assets/imgs/icon/menu_int.svg">
+						<span>INTERVIEW</span>
+						<span>한 번 들어볼래?</span>
+					</a>
+				</li>
+				<li>
+					<a onclick="show_href('/news/index/<?=$this->round?>')">
+						<img src="/assets/imgs/icon/NEWS.svg">
+						<span>NEWS</span>
+						<span>함께 걷는길</span>
+					</a>
+				</li>
+				<li>
+					<a onclick="show_href('/event/index/<?=$this->round?>')">
+						<img src="/assets/imgs/icon/menu_event.svg">
+						<span>EVENT</span>
+						<span>같이 즐겨봐</span>
+					</a>
+				</li>
+				<li>
+					<a onclick="show_href('/library/index/<?=$this->round?>')">
+						<img src="/assets/imgs/icon/menu_lib.svg">
+						<span>LIBRARY</span>
+						<span>우리의 기록</span>
+					</a>
+				</li>
+			</ul>
+			<!--//gnb-->
+			<!--gnb footer-->
+			<div class="footer">
+				<div class="top">
+					<div class="content_wrap">
+						<a href="/main/index/<?=$this->round?>" class="logo">
+							<img src="/assets/imgs/icon/GNB_logo@2x_black.png">
+						</a>
+						<div class="family_site">
+							<a href="javascript:toggle_fsite()">Family site</a>
+							<ul>
+								<li><a href="javascript:go_href('http://www.lottegrs.com')">롯데 GRS</a></li>
+								<li><a href="javascript:go_href('http://www.lotteria.com')">롯데리아</a></li>
+								<li><a href="javascript:go_href('http://www.angelinus.com')">엔제리너스</a></li>
+								<li><a href="javascript:go_href('http://www.krispykreme.co.kr')">크리스피 크림 도넛</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="content_wrap">
+						<p class="address">서울특별시 송파구 백제고분로 217 롯데GRS 79 SQUARE</p>
+						<p class="copyright">Copyright ©2022 LOTTE GRS. ALL RIGHTS RESERVED.</p>
+					</div>
+				</div>
+			</div>
+			<!--//gnb footer-->
+		</div>
+		
+		<a href="javascript:go_top()" class="floating_top" id="floating_top">
+			<img src="/assets/imgs/icon/PC_TOP.svg">
+		</a>
+		
+		<script>
+		AOS.init({ easing: 'ease-in-out-sine', duration:800, once : true });
+		
+		function toggle_menu(){
+			$('#header').toggleClass('on');
+			$('#gnb').toggleClass('on');
+		}
+		function toggle_fsite() {
+			$('.family_site ul').toggleClass('on');
+		}
+		function show_href(h) {
+			$(event.currentTarget).addClass('on');
+			setTimeout(function(){
+				$('#header').removeClass('on');
+				$('#gnb').removeClass('on');
+				$('#gnb ul li a').removeClass('on');
+				location.href = h
+			}, 500);
+		}
+		function go_href(h) {
+			if( $('#footer ul.on').length > 0 ) {
+				$('#footer ul.on').removeClass('on');
+			}
+			window.open(h,'_blank');
+		}
+		function go_top() {
+			$(window).scrollTop(0);
+		}
+		$(document).ready(function(){
+			$('#gnb > ul > li > a').hover(function(){
+				if( $(window).width() >= 1200 ) {
+					$(this).addClass('on');
+				}	
+			},function(){
+				if( $(window).width() >= 1200 ) {
+					$(this).removeClass('on');
+				}	
+			});
+			$('body').on('mousedown, touchstart',function(){
+				if( event.target.localName == 'a' ) return;
+				if( $('#footer ul.on').length > 0 ) {
+					$('#footer ul.on').removeClass('on');
+				}
+			});
+		});
+		
+		tasty.init();
+		
+		</script>
+	</div>
+</body>
+</html>

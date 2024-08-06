@@ -1,0 +1,124 @@
+<style>
+section.gray {background-color:#F5F5F5;}
+section.gray .content_wrap {padding-top:4.8rem;}
+.txt_wrap img {width:10rem; height:10rem; object-fit:cover; border-radius:1000px; margin-right:3.6rem;}
+.txt_wrap {display:flex;}
+.txt_wrap span {color:#717171; font-size:2.2rem;}
+.txt_wrap p {color:#3a3a3a; font-size:2.4rem; margin-top:.5rem;}
+.ballon {padding:2rem; margin-bottom:4.3rem; }
+.ballon span {font-size:2.4rem;}
+.ballon span:first-child {font-weight:bold; color:#037781;}
+.ballon.right span:first-child {margin-right:1.2rem;}
+.ballon.left span:first-child {margin-right:1.5rem; color:#037781;}
+.ballon.right::before {bottom:-4rem;}
+.ballon.left::before {bottom:-4rem;}
+.ballon.mint {background-color:#037781; color:#fff;}
+.ballon.mint span:first-child {color:#fff;}
+.ballon.mint::before {border-top: 4rem solid #037781; border-bottom: 5.2rem solid transparent; border-left: 0px solid #037781; border-right: 5.2rem solid #037781;}
+
+.contents .sub_header .content_wrap {padding:9.6rem 3.6rem 4rem 3.6rem;}
+.contents .video_wrap {position:relative; padding:56.25% 0 0 0; margin-top:4rem;}
+
+@media (min-width: 1280px) {
+	 section.gray .content_wrap {padding:10rem 0;}
+	.video {margin-top:7rem; width:100vw; margin-left: calc( 640px - 50vw ); margin-right: calc( 640px - 50vw );}
+	.video::after {background:url('/assets/imgs/icon/play_pc.svg'); background-size:12rem 12rem; background-position:center center; background-repeat: no-repeat;}
+	.ballon {padding:4rem; margin-bottom:9.6rem;}
+	.ballon span:first-child {color:#037781; font-size:4.8rem;}
+	.ballon span:last-child {font-size:4.9rem;}
+	
+	.contents .sub_header .content_wrap {padding:10rem 0 16rem;}
+	.contents .video_wrap {width:1280px; height:720px; margin:0 auto; padding:0; margin-top:6rem;}
+}
+</style>
+<div class="contents interview">
+	<div class="top_banner">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/interview/interview_main.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/interview/pc_main.png" class="pc">
+		</div>
+		<div class="txt_wrap">
+			<h2>INTERVIEW</h2>
+			<p>한 번 들어볼래?</p>
+		</div>
+	</div>
+	
+	<section class="sub_header">
+		<div class="content_wrap">
+			<h4 data-aos="fade">이달의 인터뷰</h4>
+			<h2 data-aos="fade">무엇이든 말해보살</h2>
+			<div class="video_wrap">
+				<iframe
+					src="https://player.vimeo.com/video/710208227?h=67e41c80f6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+					allowfullscreen
+					style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+					title="롯데GRS 웹진 대표님편_0425_최종 (1)"></iframe>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+		</div>
+	</section>
+	<section class="gray mo" style="display:none;">
+		<div class="content_wrap">
+			<div class="ballon right mint" data-aos="fade-up">
+				<span>Q</span>
+				<span>MZ세대의 'MZ'는 무엇의 줄임말일까?</span>
+			</div>
+			<div class="ballon left" data-aos="fade-up">
+				<span>A</span>
+				<span>그건 'Millennial Generation'과 'Z Generation'의 합성어죠!</span>
+			</div>
+			<div class="ballon right mint" data-aos="fade-up">
+				<span>Q</span>
+				<span>'갑통알' 은 무엇을 줄인 말일까?</span>
+			</div>
+			<div class="ballon left" data-aos="fade-up">
+				<span>A</span>
+				<span>갑자기......통화해서 알아서 해라...?</span>
+			</div>
+			<div class="ballon right mint" data-aos="fade-up">
+				<span>Q</span>
+				<span>대표님의 최애 여행지는 어디일까?</span>
+			</div>
+			<div class="ballon left" data-aos="fade-up">
+				<span>A</span>
+				<span>부산에 가서 바다도 보고 회도 먹고 하는 것을 좋아합니다.</span>
+			</div>
+		</div>
+	</section>
+	
+	<section class="gray">
+		<div class="content_wrap">
+			<div class="ballon right" data-aos="fade-up">
+				<div>
+					<span>Q</span>
+					<span>MZ세대의 'MZ'는 무엇의 줄임말일까?</span>
+				</div>
+				<div>
+					<span>A</span>
+					<span>그건 'Millennial Generation'과 'Z Generation'의 합성어죠!</span>
+				</div>
+			</div>
+			<div class="ballon left" data-aos="fade-up">
+				<div>
+					<span>Q</span>
+					<span>'갑통알' 은 무엇을 줄인 말일까?</span>
+				</div>
+				<div>
+					<span>A</span>
+					<span>갑자기......통화해서 알아서 해라...?</span>
+				</div>
+			</div>
+			<div class="ballon right" data-aos="fade-up">
+				<div>
+					<span>Q</span>
+					<span>대표님의 최애 여행지는 어디일까?</span>
+				</div>
+				<div>
+					<span>A</span>
+					<span>부산에 가서 바다도 보고 회도 먹고 하는 것을 좋아합니다.</span>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

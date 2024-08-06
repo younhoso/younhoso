@@ -1,0 +1,117 @@
+  <link rel="stylesheet" href="/assets/css/5/news.css">
+  <div class="news wrap">
+    <div class="now now_white flex en">
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+      <p>NEWS</p>
+    </div>
+    <div class="swiper pc">
+      <div class="swiper-wrapper slide">
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/news_pc01.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/news_pc02.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/news_pc03.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/news_pc04.png" alt="#" title="#">
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper mobile">
+      <div class="swiper-wrapper slide">
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/01_news.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/02_news.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/03_news.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/04_news.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/05_news.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/06_news.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/07_news.png" alt="#" title="#">
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/5/news/08_news.png" alt="#" title="#">
+        </div>
+      </div>
+    </div>
+
+    <div class="box flex jcsb controller wrap">
+      <div class="btn flex jcc aic pointer prev">
+        <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+      </div>
+
+      <div class="btn flex jcc aic pointer next">
+        <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+      </div>
+    </div>
+
+    <div class="pagination"></div>
+  </div>
+  
+  <script>
+    AOS.init();
+
+    const swiper = new Swiper('.swiper.pc', {
+      loop: true,
+
+      navigation: {
+        nextEl: '.controller .next',
+        prevEl: '.controller .prev',
+      },
+      slidesPerView: 1,
+    });
+
+    const swiper2 = new Swiper('.swiper.mobile', {
+      loop: true,
+
+      navigation: {
+        nextEl: '.controller .next',
+        prevEl: '.controller .prev',
+      },
+
+      pagination: {
+        el: '.pagination',
+        type: 'bullets',
+      },
+
+      slidesPerView: 1,
+      spaceBetween: 0,
+      slidesOffsetBefore: 0,
+      centeredSlides: true,
+    });
+  </script>

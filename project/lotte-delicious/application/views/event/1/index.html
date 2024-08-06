@@ -1,0 +1,197 @@
+<style>
+#footer {margin-bottom:9.6rem;}
+</style>
+<div class="contents event">
+	<div class="top_banner">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/event/event_main.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/event/pc_event_main.png" class="pc">
+		</div>
+		<div class="txt_wrap">
+			<h2>EVENT</h2>
+			<p>같이 즐겨봐</p>
+		</div>
+	</div>
+	
+	<section>
+		<div class="content_wrap">
+			<h4 data-aos="fade">이달의 이벤트</h4>
+			<h2 data-aos="fade">맛ZINE 탄생일 축하메시지</h2>
+			
+			<p data-aos="fade">'맛진'에게 축하 메세지를 남겨주신 분들에게 <br class="mo">추첨을 통해 이벤트 상품을 증정합니다!</p>
+			<p data-aos="fade">참여방법 : 이벤트에 응모하여 축하메시지 작성 <br>이벤트기간 : 2022.05.01 - 2022.05.30 <br>추첨일자 : 2022.05.31 오후 12시</p>
+			
+			<ul class="reward">
+				<li>
+					<div>
+						<span data-aos="fade-up">애사심 최상(2명)</span>
+						<a onclick="toggle_reward(this)">
+							<div class="img_wrap">
+								<img data-aos="fade-up" src="/assets/imgs/round/<?=$this->round?>/event/event_img.png?1">
+								<span class="toggle">경품 <br>부산시그니엘숙박권 <br>+부산롯데월드종합이용권 <br>+롯데상품권 30만원권 <br><br>추첨인원 : 2명</span>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<span data-aos="fade-up">센스가 비상(4명)</span>
+						<a onclick="toggle_reward(this)">
+							<div class="img_wrap">
+								<img data-aos="fade-up" src="/assets/imgs/round/<?=$this->round?>/event/event_img02.png">
+								<span class="toggle">경품 <br>롯데상품권 10만원권 <br><br>추첨인원 : 4명</span>
+							</div>
+						</a>
+					</div>
+					<div>
+						<span data-aos="fade-up">멘트가 환상(4명)</span>
+						<a onclick="toggle_reward(this)">
+							<div class="img_wrap">
+								<img data-aos="fade-up" src="/assets/imgs/round/<?=$this->round?>/event/event_img03.png?1">
+								<span class="toggle">경품 <br>모바일금액권 10만원권 <br><br>추첨인원 : 4명</span>
+							</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+			
+			<p data-aos="fade-up">상세사항을 보려면 배너를 클릭하세요!</p>
+			
+		</div>
+	</section>
+	<section>
+		<div class="content_wrap">
+			<h4 data-aos="fade">Giveaway</h4>
+			<h2 data-aos="fade">이벤트 경품</h2>
+			
+			<ul class="benefit">
+				<li>
+					<a href="https://www.lottehotel.com/busan-signiel/ko.html" target="_blank">
+						<span class="img_wrap" data-aos="fade-up">
+							<img src="/assets/imgs/round/<?=$this->round?>/event/event_thumb_01.png">
+							<span>더보기</span>
+						</span>
+						<span class="title" data-aos="fade-up">Giveaway 01</span>
+						<span class="desc" data-aos="fade-up">시그니엘 부산 1박 2일 숙박권</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://adventurebusan.lotteworld.com" target="_blank">
+						<span class="img_wrap" data-aos="fade-up">
+							<img src="/assets/imgs/round/<?=$this->round?>/event/event_thumb_02.png">
+							<span class="black">더보기</span>
+						</span>
+						<span class="title" data-aos="fade-up">Giveaway 02</span>
+						<span class="desc" data-aos="fade-up">롯데월드 어드벤처 부산 종합이용권</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span class="img_wrap" data-aos="fade-up">
+							<img src="/assets/imgs/round/<?=$this->round?>/event/event_thumb_03.png">
+						</span>
+						<span class="title" data-aos="fade-up">Giveaway 03</span>
+						<span class="desc" data-aos="fade-up">롯데백화점 상품권</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span class="img_wrap" data-aos="fade-up">
+							<img src="/assets/imgs/round/<?=$this->round?>/event/event_thumb_04.png">
+						</span>
+						<span class="title" data-aos="fade-up">Giveaway 04</span>
+						<span class="desc" data-aos="fade-up">롯데GRS 모바일금액권 10만원</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	
+	
+	<button class="event_open" onclick="open_event_modal()">이벤트 참여하기</button>
+</div>
+
+<div class="event_modal">
+	<div class="content_wrap">
+		<h4 data-aos="fade">이달의 이벤트</h4>
+		<h2 data-aos="fade">맛ZINE 탄생일 축하메시지</h2>
+		<form id="event_form">
+			<ul>
+				<li>
+					<label>이름</label>
+					<input name="user_name" id="user_name" placeholder="이름을 입력해주세요.">
+				</li>
+				<li>
+					<label>휴대폰 번호</label>
+					<input name="user_hp" id="user_hp" onchange="only_number()"  placeholder="-없이 입력해주세요.">
+				</li>
+				<li>
+					<label>축하메시지</label>
+					<textarea name="text"  id="text" placeholder="축하메시지를 입력해주세요."></textarea>
+				</li>
+			</ul>
+		</form>
+		<p>※ 본 이벤트는 롯데GRS 임직원 및 점주 한정 참여 가능합니다</p>
+	</div>
+	<button onclick="apply_event()">이벤트 응모하기</button>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('body').on('mousedown',function(){
+		if( $(event.target).closest('.event_modal').length == 0 ) {
+			$('.event_modal').hide();
+		}
+	})
+});
+function toggle_reward(target) {
+	var on = false;
+	if( $(target).hasClass('on') ) {
+		on = true;
+	}
+	$('.reward .on').removeClass('on');
+	if( !on ) {
+		$(target).addClass('on');
+	}
+}
+function only_number() {
+	var hp = $('#user_hp').val().replace(/[^0-9]/gi,'');
+	$('#user_hp').val(hp);
+}
+function open_event_modal() {
+	$('.event_modal').show();
+	event.preventDefault();
+	event.stopPropagation();
+}
+function apply_event() {
+	
+	if( $('#user_name').val() == '' ) {
+		alert('이름을 입력해주세요.');
+		$('#user_name').focus();
+		return;
+	}
+	
+	var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+	var hp = $('#user_hp').val().replace(/-/gi,'');
+    if (regPhone.test(hp) === false) {
+    	alert('휴대번호를 정확하게 입력해주세요.');
+    	return;
+    }
+	
+	if( $('#text').val().length < 5 ) {
+		alert('축하 메시지를 최소 5자 이상 입력해주세요.');
+		$('#text').focus();
+		return;
+	}
+
+	$.post('/event/apply',$('#event_form').serialize(),function(result){
+		var r = JSON.parse(result);
+		
+		alert(r.msg);
+		
+		if( r.result ) {
+			location.reload();
+		}
+	});
+}
+</script>

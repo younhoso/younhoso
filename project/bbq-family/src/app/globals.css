@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 600;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.min-h-inherit {
+  min-height: inherit;
+}
+.tremor-Tab-root > span {
+  display: block;
+  width: 100%;
+}
+.text-tremor-content {
+  color: #000000;
+}
+
+.bg-\[\#3ABA65\] {
+  background-color: #3ABA65;
+}
+
+.rounded button {
+  border-radius: 9999px !important;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+  border-radius: 9999px;
+}
+.react-datepicker__input-container {
+  border-radius: 9999px;
+  padding: 3px;
+  border: 1px solid rgb(229 231 235 / 1);
+  width: 100%;
+}
+.react-datepicker__day--selected {
+  background-color: #B92C35 !important;
+}
+.eclipse {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

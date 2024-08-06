@@ -1,0 +1,42 @@
+/* ========== PC ========== */
+img {height: auto;}
+.bg-component .bg-wrap {position: relative;}
+.bg-component .bg-inner {width: 50%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex;flex-direction: column;justify-content: center;position: absolute; right: 0;top: 0;}
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .bg-component .bg-inner {width: 100%; position: static;}
+}
+
+/* ========== PC ========== */
+.post-sport-02 .imgSize01 {width: 55%;}
+.post-sport-02 .imgSize02 {width: 43%;}
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .post-sport-02 .imgSize01 {width: 100%;}
+  .post-sport-02 .imgSize02 {width: 100%;}
+}
+
+/* ========== PC ========== */
+.post-sport-03 .post-image {width: 48%;}
+.post-sport-03 .flex:nth-child(3) .post-image:last-child {border-top: 3px solid #E8E8E8;}
+.post-sport-03 .flex:nth-child(4) {flex-direction: row-reverse;}
+.post-sport-03 .flex:nth-child(4) .post-image:last-child {border-top: 3px solid #E8E8E8;}
+.post-sport-03 .flex:nth-child(5) .post-image:last-child {border-top: 3px solid #E8E8E8;}
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .post-sport-03 .post-image {width: 100%;}
+}
+
+/* ========== PC ========== */
+.post-sport-05 .post-image{flex: 1;}
+.post-sport-05 .flex:nth-child(3) .post-image:last-child {border-top: 3px solid #E8E8E8;}
+.post-sport-05 .flex:nth-child(4) {flex-direction: row-reverse;}
+.post-sport-05 .flex:nth-child(4) .post-image:last-child {border-top: 3px solid #E8E8E8;}
+.post-sport-05 .flex:nth-child(5) .post-image:last-child {border-top: 3px solid #E8E8E8;}
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .post-sport-05 .post-image{flex: auto;}
+}
+
+/* ========== PC ========== */
+.post-sport-06 {text-align: center;}

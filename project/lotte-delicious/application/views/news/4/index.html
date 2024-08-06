@@ -1,0 +1,102 @@
+<style>
+.subpage #header::before {background: #fff; opacity: 1; box-shadow: 0px 4px 10px #00000029;}
+.subpage #header .wrap h1 a img.white_back {display:none;}
+.subpage #header .wrap h1 a img.black_back {display:block;}
+.subpage #header .wrap h1 a img.white_logo {display:none;}
+.subpage #header .wrap h1 a img.black_logo {display:block;}
+.subpage #header .menu-right i {background: url(/assets/imgs/icon/MO_CAT_B.svg); background-size: 100%; background-repeat: no-repeat;}
+.subpage #header.on .menu-right i {background: url(/assets/imgs/icon/MO_CAT_CLO_B.svg); background-size: 100%; background-repeat: no-repeat;}
+.subpage #header .menu-right ul li a {color:#000;}
+
+.news_header {padding-top:18rem; margin-left:3.6rem; margin-right:3.6rem;}
+.news_header .content_wrap {padding:0; display:flex; width:100%; justify-content:space-between;}
+.news .content_wrap {padding-top:0rem;}
+.news > .content_wrap li {margin-bottom:6rem;}
+.news > .content_wrap li:last-child {margin-bottom:0;}
+
+.open_wrap {display:flex; flex-wrap:wrap; row-gap:6rem;}
+.open_list:nth-child(2n-1) {flex:0.6 0 60%;}
+.open_list:nth-child(2n) {flex:0.4 0 40%;}
+.open_list h2 {font-size:3.6rem; color:#037781; font-weight:bold; text-align:left; margin-bottom:2rem;}
+.open_list div {display:flex; font-size:2.2rem; align-items:flex-start; margin-bottom:.8rem;}
+.open_list div:last-child {margin-bottom:0;}
+.open_list div span.new {border-radius:1.5rem; border:1px solid #C62626; background:#EB3D3D; color:#fff; width:4rem; height:2.4rem; display:flex; justify-content:center; align-items:center; font-size:1.4rem; margin-right:.8rem; transform:translate(0,.4rem);}
+.open_list div span.move {border-radius:1.5rem; border:1px solid #00545B; background:#037781; color:#fff; width:4rem; height:2.4rem; display:flex; justify-content:center; align-items:center; font-size:1.4rem; margin-right:.8rem; transform:translate(0,.4rem);}
+
+@media (min-width: 1500px) {
+	.news_header {margin:0;}
+	.news_header .content_wrap {width:696px;}
+	
+	.news .content_wrap {padding-left:0; padding-right:0;}
+	
+	/*
+	.news > .content_wrap {width:1452px; padding-left:0; padding-right:0;}
+	.news > .content_wrap ul {margin-left:-6rem; display:flex; flex-flow:column wrap; align-content: space-between; height:2680px;}
+	.news > .content_wrap li {margin-left:6rem; width:696px; margin-bottom:10rem;}
+	.news > .content_wrap li:nth-of-type(1) {order:1;}
+	.news > .content_wrap li:nth-of-type(2) {order:5;}
+	.news > .content_wrap li:nth-of-type(3) {order:2;}
+	.news > .content_wrap li:nth-of-type(4) {order:6;}
+	.news > .content_wrap li:nth-of-type(5) {order:3;}
+	.news > .content_wrap li:nth-of-type(6) {order:7;}
+	.news > .content_wrap li:nth-of-type(7) {order:4;}
+	.news > .content_wrap li:last-of-type {margin-bottom:0;}
+	*/
+	.content_wrap .open_img {width:calc( 100% + 7.2rem ); margin-left:-3.6rem; margin-right:-3.6rem;}
+	.open_wrap {padding:0 2.9rem;}
+	.open_list h2 {font-size:3.2rem;}
+	.open_list div {font-size:2.0rem; align-items:flex-start; margin-bottom:.7rem;}
+	.open_list div:last-child {margin-bottom:0;}
+	.open_list div span.new {width:3.7rem; height:2.2rem;font-size:1.2rem; margin-right:.7rem;}
+	.open_list div span.move {width:3.7rem; height:2.2rem;font-size:1.2rem; margin-right:.7rem;}
+}
+
+@media (min-width: 1280px) {
+
+}
+
+</style>
+
+<div class="contents news">
+	<div class="news_header">
+		<div class="content_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/news/main_txt.png" style="width:49.2rem;">
+			<img src="/assets/imgs/common/news_main_logo.png" style="width:5.2rem;">
+		</div>
+	</div>
+	<div class="content_wrap">
+		<ul class="mt60 fullhalf">
+			<li data-aos="fade-up">
+				<a href="/news/view/<?=$this->round?>/1">
+					<img class="fullin" src="/assets/imgs/round/<?=$this->round?>/news/NEWS_01_OL.svg">
+				</a>
+			</li>
+			<li data-aos="fade-up">
+				<a href="/news/view/<?=$this->round?>/2">
+					<img class="fullin" src="/assets/imgs/round/<?=$this->round?>/news/NEWS_02_OL.svg">
+				</a>
+			</li>
+			<li data-aos="fade-up">
+				<a href="/news/view/<?=$this->round?>/3">
+					<img class="fullin" src="/assets/imgs/round/<?=$this->round?>/news/NEWS_03_OL.svg?2">
+				</a>
+			</li>
+			<li data-aos="fade-up">
+				<a href="/news/view/<?=$this->round?>/4">
+					<img class="fullin" src="/assets/imgs/round/<?=$this->round?>/news/NEWS_04_OL.svg">
+				</a>
+			</li>
+			<li data-aos="fade-up">
+				<a href="/news/view/<?=$this->round?>/5">
+					<img class="fullin" src="/assets/imgs/round/<?=$this->round?>/news/NEWS_05_OL.svg">
+				</a>
+			</li>
+			<li data-aos="fade-up">
+				<a href="/news/view/<?=$this->round?>/6">
+					<img class="fullin" src="/assets/imgs/round/<?=$this->round?>/news/NEWS_06_OL.svg">
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+</div>

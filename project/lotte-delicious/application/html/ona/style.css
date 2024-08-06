@@ -1,0 +1,128 @@
+@keyframes motion {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+body {
+  background-color: #000;
+}
+.wrpper {
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+}
+.global-bg > img {
+  width: 100%;
+  height: 100%;
+}
+
+.global-bg.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.youtube-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  -webkit-transform: translate(-50%, -80%);
+  animation: motion 0.7s ease-in-out 0.2s infinite alternate;
+}
+
+.iframe-inner {
+  width: 90%;
+  height: 0;
+  padding-bottom: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  display: none;
+}
+.iframe-inner.active {
+  display: block;
+}
+
+.iframe-inner > iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  width: 9%;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  z-index: 3;
+}
+
+.click-icon {
+  width: 30%;
+  position: absolute;
+  top: 66%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.btn-inner {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}
+.button-icon {
+  width: 70%;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.sns-icon {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 170px;
+  width: 20%;
+}
+.sns-icon a {
+  width: 40%;
+}
+
+.info-inner {
+  color: #a6a6a6;
+  background-color: #180d18;
+  padding: 40px 20px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.info-inner > div {
+  display: flex;
+}

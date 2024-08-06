@@ -1,0 +1,145 @@
+<style>
+section .content_wrap {padding-top:0;}
+.contents.story_sub section:first-of-type .content_wrap {overflow:hidden; padding-top:2rem;}
+.contents.story_sub section:first-of-type .txt_img {position:relative; margin-top:9.6rem;}
+.contents.story_sub section:first-of-type .txt_img::after {
+	content:''; position:absolute; top:0; left:0; width:calc( 100% + 7.2rem ); height:100%; margin-left:-7.2rem;
+	background: transparent linear-gradient(189deg, #FFFFFF00 0%, #FDFDFD00 1%, #00000080 100%) 0% 0% no-repeat padding-box;
+}
+.contents.story_sub section:first-of-type .txt_img {margin-top:9.6rem;}
+.contents.story_sub section:first-of-type .img_wrap {margin-left:-7.2rem; width:calc( 100% + 7.2rem );}
+.contents.story_sub section:first-of-type .img_list {margin-right:-7.2rem; width:calc( 100% + 7.2rem ); display:flex; margin-top:.8rem;}
+.contents.story_sub section:first-of-type .img_list div {margin-left:.8rem;}
+.contents.story_sub section:first-of-type .content_wrap > p:last-of-type {text-align:center; margin-top:2rem;}
+
+.contents.story_sub section:nth-of-type(2) h2+div img {width:100%;}
+.contents.story_sub section:nth-of-type(2) .content_wrap > p:last-of-type {margin-top:2rem;}
+
+.contents.story_sub section:nth-of-type(3) .img_wrap {width:calc( 100% + 14.4rem ); margin-left:-7.2rem; margin-right:-7.2rem;}
+.contents.story_sub section:nth-of-type(3) h2 {margin-top:4rem;}
+.contents.story_sub section:nth-of-type(3) p {margin-top:2rem;}
+
+.contents.story_sub section:nth-of-type(4) .img_wrap {width:calc( 100% + 14.4rem ); margin-left:-7.2rem; margin-right:-7.2rem;}
+.contents.story_sub section:nth-of-type(4) .txt_img .txt_wrap {z-index:1; justify-content:flex-start; padding-top:8rem;}
+.contents.story_sub section:nth-of-type(4) .txt_img .txt_wrap p {margin-top:2rem;}
+.contents.story_sub section:nth-of-type(4) .content_wrap > p:last-of-type {margin-top:2rem;}
+
+@media all and (min-width:1280px) {
+	.contents.story_sub section:first-of-type .content_wrap {overflow:visible;}
+	.contents.story_sub section:first-of-type .topp {margin-left:60px; width:calc( 100% + 60px );}
+	.contents.story_sub section:first-of-type .img_wrap {margin-left:0; width:116rem; position:relative;}
+	.contents.story_sub section:first-of-type .txt_img {margin-top:16rem;}
+	.contents.story_sub section:first-of-type .txt_img::after {width:116rem; margin-left:0;}
+	.contents.story_sub section:first-of-type .txt_img .txt_wrap h2 {padding-left:12rem;}
+	.contents.story_sub section:first-of-type .txt_img .txt_wrap p {padding-left:12rem;}
+	.contents.story_sub section:first-of-type .img_list {padding-left:11.8rem; margin-right:0; width:100%; margin-top:1.4rem;}
+	.contents.story_sub section:first-of-type .content_wrap > p:last-of-type {margin-top:3rem; }
+	.contents.story_sub section:first-of-type .img_list div {margin-left:1.4rem;}
+	.contents.story_sub section:first-of-type .img_list div:first-child {margin-left:0;}
+	
+	.contents.story_sub section:nth-of-type(2) h2 {padding-left:12rem;}
+	.contents.story_sub section:nth-of-type(2) h2+div {padding-right:12rem; text-align:right;}
+	.contents.story_sub section:nth-of-type(2) h2+div img {width:69.3rem;}
+	.contents.story_sub section:nth-of-type(2) p {padding-left:12rem;}
+	.contents.story_sub section:nth-of-type(2) .content_wrap > p:last-of-type {margin-top:3rem;}
+	
+	.contents.story_sub section:nth-of-type(3) .img_wrap {margin:0; width:100%;}
+	.contents.story_sub section:nth-of-type(3) h2 {margin-top:6rem; padding-left:12rem;}
+	.contents.story_sub section:nth-of-type(3) p {margin-top:3rem; padding-left:12rem;}
+	
+	.contents.story_sub section:nth-of-type(4) .img_wrap {margin:0; width:100%;}
+	.contents.story_sub section:nth-of-type(4) .txt_img .txt_wrap {padding-top:13.4rem; }
+	.contents.story_sub section:nth-of-type(4) .txt_img .txt_wrap p {margin-top:3rem;}
+	.contents.story_sub section:nth-of-type(4) .content_wrap > p:last-of-type {margin-top:3rem;}
+}
+</style>
+<div class="contents story_sub">
+	<div class="sub_top">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/story/food/main.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/story/food/pc_food_main.png" class="pc">
+		</div>
+		<div class="txt_wrap" data-aos="fade-down">
+			<h2>구찌를 맛보다</h2>
+			<p>예상치 못한 조합 오히려 좋아!</p>
+		</div>
+	</div>
+	
+	<section>
+		<div class="content_wrap">
+			<p data-aos="fade-left" class="topp">예측하지 못한 것으로부터 희열을 느낄 때가 있다. <br>이번 ‘구찌 오스테리아 서울’이 그렇다. 명품 패션 브랜드에서 선보인 <br class="mo">레스토랑이라니, <br class="pc">MZ세대라면 입맛 다실 수 밖에 없을 것이다. <br><br>명품을 입고 신고 드는 것이 아닌, 음미할 수 있다는 데에서 <br class="mo">MZ세대들은 열광할 수 밖에 없다.</p>
+			<div class="txt_img" data-aos="fade-right">
+				<div class="img_wrap">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/food/food_sub01.png" style="width:100%; display:block;">
+				</div>
+				<div class="txt_wrap" style="z-index:1;">
+					<h2><b>문화와 <br>철학을 <br>맛보는 곳</b></h2>
+					<p style="margin-top:4rem;">구찌 오스테리아 서울은 이탈리아 피렌체 지점과 <br>동일하게 르네상스 양식과 구찌의 미학적 요소를 결합시켰다. <br>뿐만 아니라 이탈리아 식전주 문화인 ‘아페리티프’까지 즐길 수 있다. <br>구찌의 철학, 나아가 이탈리아 문화까지 체험해볼 수 있다.</p>
+				</div>
+			</div>
+			<div class="img_list">
+				<div style="flex:1;">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/food/food_sub02.png" style="width:100%;" data-aos="fade-left">
+				</div>
+				<div style="flex:1;">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/food/food_sub03.png" style="width:100%;" data-aos="fade-left">
+				</div>
+				<div style="flex:1;">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/food/food_sub04.png" style="width:100%;" data-aos="fade-left">
+				</div>
+			</div>
+			
+			<p data-aos="fade-up">‘거울의 방’과 같이 구찌 데코 컬렉션으로 꾸민 공간에서 <br>맛보는 구찌 푸드라니…! 그야말로 사방이 구찌천국이다.</p>
+		</div>
+	</section>
+	
+	<section>
+		<div class="content_wrap">
+			<div style="display:flex; justyfy-content:space-between;">
+				<h2 style="flex:0.33; text-align:left;" class="mint" data-aos="fade-right"><b>쉐프의 <br>실력까지 <br>명품</b></h2>
+				<div style="flex:0.66;" data-aos="fade-left">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/food/sub05.png">
+				</div>
+			</div>
+			<p data-aos="fade-up">이곳의 시그니처 메뉴는 ‘에밀리아 버거’와 <br>파마산 레지아노 크림을 곁들인 ‘토르텔리니’다. <br><br>미쉐린이 인정한 셰프, 마시모 보투라가 선보이는 명품은 무슨 맛일까. <br>이 밖에도 한국의 계절에서 영감을 받은 ‘서울 가든’이 유명하니, <br>메모해 둘 것.</p>
+		</div>
+	</section>
+	<section>
+		<div class="content_wrap">
+			<div class="img_wrap" data-aos="fade-up">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/food/food_sub06.png" style="width:100%;">
+			</div>
+			<h2 class="mint" data-aos="fade-up"><b>구찌 오스테리아는 피켓팅 중</b></h2>
+			<p data-aos="fade-up">
+			지난 16일 열린 구찌 오스테리아 서울 예약, <br>
+			오픈 20분만에 4월분까지 마감되었다. <br><br>
+			MZ세대들의 손은 바람보다 빨랐고, 예약에 실패한 사람들이 속출했다. <br>
+			하지만 실망하긴 이르다. <br><br>
+			4월 30일 18시에 5/16 ~ 6/30까지의 <br>
+			예약이 오픈되니 피켓팅에 도전해보자.<br><br>
+			<span class="mint">*예약은 ‘구찌 오스테리아 서울’ 공식홈페이지의 <br>RESERAVTION 탭에서 확인 가능합니다.</span>
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class="content_wrap">
+			<div class="txt_img img2" data-aos="fade-up">
+				<div class="img_wrap">
+					<img src="/assets/imgs/round/<?=$this->round?>/story/food/sub07.png" style="width:100%; display:block;">
+				</div>
+				<style>
+					.txt_img.img2::after {
+						display:none;
+					}
+				</style>
+				<div class="txt_wrap">
+					<h2 style="text-align:center;"><b>가심비 저격수</b></h2>
+					<p style="text-align:center;">한국의 20-30세대 명품 소비는 증가추세다. <br>이는 가격이 아닌, 심적 만족을 한 소비, <br>즉 가심비 소비자가 증가하는 트렌드의 영향이 크다.</p>
+				</div>
+			</div>
+			<p style="text-align:center;" data-aos="fade-up">
+				‘패션’ 카테고리에서 ‘푸드’ 카테고리까지의 진출, <br>명품 브랜드를 경험할 수 있는 비용이 상대적으로 낮아진 셈이다. <br><br>입는 명품은 부담스러워도, 먹는 명품은 시도해 볼만하지 않은가?
+			</p>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,261 @@
+@keyframes bigger {
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.46);
+  }
+}
+@keyframes biggerMobile {
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.18);
+  }
+}
+@keyframes fromBottom {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.post {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.post-container {
+  width: 1280px;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.post-swiper {
+  /* padding-top: 75px !important;
+  padding-bottom: 75px !important; */
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-swiper .swiper-slide-active {
+  animation: bigger 2.4s forwards;
+  z-index: 2;
+}
+
+.post-swiper .swiper-slide-active a {
+  box-shadow: -10px 10px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-swiper .swiper-slide-active .active-shadow {
+  display: block !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.post-swiper .swiper-pagination-bullet {
+  letter-spacing: -0.6px;
+  color: #e8e8e8;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 400;
+  width: 42px;
+  background: none;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-swiper .swiper-pagination-bullet-active {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  background-color: transparent;
+}
+.post-swiper .bullet-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 82px;
+  position: relative;
+}
+.post-swiper .swiper-pagination-custom {
+  bottom: 190px !important;
+}
+
+.post-swiper .post-thumb {
+  position: relative;
+}
+.post-swiper .active-shadow {
+  background: transparent
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%) 0% 0%
+    no-repeat padding-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.post-swiper .active-shadow a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.post-swiper .active-text {
+  position: absolute;
+  left: 42px;
+  bottom: 42px;
+  animation: fromBottom 1s;
+}
+.post-swiper .active-text div {
+  color: #fff;
+}
+.post-swiper .active-text .tag {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  margin-bottom: 13px;
+  letter-spacing: -0.4px;
+  font-weight: bold;
+}
+.post-swiper .active-text .title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 32px;
+  letter-spacing: -0.8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.post-swiper .active-text .subtitle {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.45px;
+}
+
+.post-section-title {
+  position: absolute;
+  font-weight: bold;
+  transform: rotate(-90deg);
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  color: #dedede;
+  margin-top: 34px;
+}
+
+.post-swiper .swiper-progress {
+  width: 286px !important;
+  height: 4px !important;
+  position: absolute;
+  bottom: 10px;
+  right: 250px;
+  top: auto !important;
+  left: auto !important;
+}
+.post-swiper .swiper-pagination-progressbar-fill {
+  background: #000 !important;
+}
+.post-swiper .swiper-pagination-progressbar {
+  background: #e8e8e8 !important;
+}
+
+/* 화면크기 768 이하 */
+@media (max-width: 768px) {
+  .post {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .post-container {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+  }
+
+  /* 페이지네이션 버튼숨김 */
+  .post-swiper .swiper-pagination-custom {
+    display: none !important;
+  }
+
+  /* 스와이퍼 자체 위치조절 */
+  .post-swiper .swiper-wrapper {
+    margin-left: 32px;
+    padding-top: 200px;
+    bottom: 80px;
+  }
+
+  /* 포스트소개 텍스트 위치 상단으로 */
+  .post-swiper {
+    /* padding-top: 330px !important;
+    padding-bottom: 135px !important; */
+    position: relative;
+  }
+
+  /* pc에서 1.46배 확대되는 효과 제거 */
+  .post-swiper .swiper-slide-active {
+    transform: none;
+  }
+
+  .post-swiper .active-text {
+    top: -168px;
+    left: 0px;
+  }
+  .post-swiper .active-text div {
+    color: #000;
+  }
+  .post-swiper .active-text .tag {
+    margin-bottom: 10px;
+    letter-spacing: -0.4px;
+  }
+  .post-swiper .active-text .title {
+    font-size: 30px;
+    margin-bottom: 16px;
+    letter-spacing: -0.75px;
+  }
+  .post-swiper .active-text .subtitle {
+    font-size: 16px;
+    letter-spacing: -0.4px;
+  }
+
+  .post-swiper .swiper-slide .post-thumb {
+    width: 75% !important;
+  }
+
+  .post-swiper .swiper-slide-active .post-thumb {
+    width: 100% !important;
+    z-index: 2;
+  }
+
+  /* 모바일에선 슬라이드 하단정렬 */
+  .post-swiper .swiper-slide {
+    align-items: flex-end;
+    height: 500px;
+  }
+
+  .post-swiper .swiper-progress {
+    width: 65% !important;
+    left: 16px !important;
+    bottom: 0px !important;
+  }
+  .post-swiper .swiper-slide-active {
+    animation: biggerMobile 1.2s forwards;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,119 @@
+<link rel="stylesheet" href="/assets/css/8/news.css" />
+<link rel="stylesheet" href="/assets/css/8/modal.css" />
+  <style>
+  header {background:#000 !important;}
+  </style>      
+<div class="news">
+  <!-- PC -->
+  <div class="pc">
+    <div class="container">
+      <div class="title">NEWS</div>
+      <div class="pc-swiper">
+        <div class="swiper-wrapper">
+					<div class="swiper-slide">
+            <img src="/assets/imgs/round/10/main/news_pc01.png" alt="#" title="#" />
+          </div>
+					<div class="swiper-slide">
+            <img src="/assets/imgs/round/10/main/news_pc02.png" alt="#" title="#" />
+          </div>
+					<div class="swiper-slide">
+            <img src="/assets/imgs/round/10/main/news_pc03.png" alt="#" title="#" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/imgs/round/10/main/news_pc04.png" alt="#" title="#" />
+          </div>
+					<div class="swiper-slide">
+            <img src="/assets/imgs/round/10/main/news_pc05.png" alt="#" title="#" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pc-swiper-pagination mobile_hide"></div>
+
+  <!-- 모바일 -->
+  <div class="mobile">
+    <div class="mobile-swiper">
+      <div class="swiper-wrapper">
+				<div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/01_news.png" alt="#" title="#" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/02_news.png" alt="#" title="#" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/03_news.png" alt="#" title="#" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/04_news.png" alt="#" title="#" />
+        </div>
+				<div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/05_news.png" alt="#" title="#" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/06_news.png" alt="#" title="#" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/07_news.png" alt="#" title="#" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/08_news.png" alt="#" title="#" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/imgs/round/10/main/09_news.png" alt="#" title="#" />
+        </div>
+      </div>
+    </div>
+    <div class="mobile-swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+	AOS.init();
+	// PC
+  const newsSwiper = new Swiper(".pc-swiper", {
+    loop: true,
+    slidesPerGroup: 1,
+    pagination: {
+      el: ".pc-swiper-pagination",
+      clickable: true,
+      type: "custom",
+      renderCustom: function (swiper, current, total) {
+        let text = "<div class='bullet-container'>";
+        for (let i = 1; i <= total; i++) {
+          if (current == i) {
+            text += `<div class="swiper-pagination-bullet-active" style="background-image: url('/assets/imgs/icon/scrollBar.svg')"></div>`;
+          } else {
+            text += `<div class="swiper-pagination-bullet">${[i]}</div>`;
+          }
+        }
+        text += "</div>";
+        return text;
+      },
+    },
+  });
+
+  // 모바일 (따로만들지 않으면 페이지네이션 불가)
+  const mobilePagination = new Swiper(".mobile-swiper", {
+    loop: true,
+    slidesPerGroup: 1,
+    pagination: {
+      el: ".mobile-swiper-pagination",
+      clickable: true,
+      type: "custom",
+      renderCustom: function (swiper, current, total) {
+        let text = "<div class='bullet-container'>";
+        for (let i = 1; i <= total; i++) {
+          if (current == i) {
+            text += `<div class="swiper-pagination-bullet-active" style="background-image: url('/assets/imgs/icon/scrollBar.svg')"></div>`;
+          } else {
+            text += `<div class="swiper-pagination-bullet">${[i]}</div>`;
+          }
+        }
+        text += "</div>";
+        return text;
+      },
+    },
+  });      
+</script>
+<script src="/assets/js/rabbit-event.js"></script>

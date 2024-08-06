@@ -1,0 +1,49 @@
+img {width: 100%;height: auto;}
+.txtBG {background-color: #000; color: #fff; display: inline-block; padding: 0 10px;}
+
+/* post-food-01 */
+.post-food-01 .flex .flex > div{flex: 1;}
+.post-food-01 .inner {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+.post-food-02 .flex > div {flex: 1;}
+.post-food-02 .flex-02 .flex > div:nth-child(1){flex: 0.46;}
+.post-food-02 .flex-02 .flex > div:nth-child(2){flex: 0.75;}
+.post-food-02 .flex-02 .flex > div.full {flex: 1;}
+.post-food-02 .inner {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.post-food-02 .flex-03 {width: 60%; margin: 0 auto;}
+.post-food-02 .flex-03 .flex > div:nth-child(1){flex: 0.74;}
+.post-food-02 .flex-03 .flex > div:nth-child(2){flex: 0.45;}
+
+.post-food-03 .flex:nth-child(1) > div:nth-child(1) {flex-shrink: 0;width: 50%;}
+.post-food-03 .flex:nth-child(1) > div:nth-child(2) {flex-grow: 1; padding-left: 60px;}
+.post-food-03 .flex:nth-child(2) > div:nth-child(1) {flex-grow: 1; padding-left: 60px;}
+.post-food-03 .flex:nth-child(2) > div:nth-child(2) {flex-shrink: 0;width: 50%;}
+.post-food-03 .flex-01 .wrap {display: flex; width: 75%;}
+.post-food-03 .flex-01 .wrap .inner {width: 100%;}
+.post-food-03 .flex-01 .wrap .inner img {height: 100%;}
+.post-food-03 .flex-02 .wrap {display: flex; width: 95%;}
+.post-food-03 .flex-02 .wrap .inner {width: 100%;}
+.post-food-03 .flex-02 .wrap .inner img {height: 100%;}
+.post-food-03 .flex-03 .wrap {display: flex; width: 75%;}
+.post-food-03 .flex-03 .wrap .inner {width: 100%;}
+.post-food-03 .flex-03 .wrap .inner img {height: 100%;}
+
+.post-food-04 .flex > div {flex: 1;}
+.post-food-04 .flex:nth-child(2) > div:nth-child(1) {flex: 1.1; flex-shrink: 0;width: 50%;}
+.post-food-04 .flex:nth-child(2) > div:nth-child(2) {flex-grow: 1; padding-left: 60px;}
+
+.post-food-04 .flex:nth-child(4) > div:nth-child(1) {flex: 1.1; flex-shrink: 0;width: 50%;}
+.post-food-04 .flex:nth-child(4) > div:nth-child(2) {flex-grow: 1; padding-left: 60px;}
+
+.post-food-04 .flex:nth-child(6) > div:nth-child(1) {flex: 1.1; flex-shrink: 0;width: 50%;}
+.post-food-04 .flex:nth-child(6) > div:nth-child(2) {flex-grow: 1; padding-left: 60px;}
+
+@media (max-width: 991px){
+
+}
+
+@media (max-width: 991px){
+  .post-food-03 .flex-01 .wrap{flex-direction: column;}
+  .post-food-03 .flex-02 .wrap{flex-direction: column;}
+  .post-food-03 .flex-03 .wrap{flex-direction: column;}
+}

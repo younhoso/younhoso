@@ -1,0 +1,63 @@
+{
+  "name": "bbq-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pretty": "yarn prettier './**/*.{ts,js,tsx,jsx}' --write"
+  },
+  "dependencies": {
+    "@next/third-parties": "^14.1.0",
+    "aos": "^2.3.4",
+    "axios": "^1.4.0",
+    "classnames": "^2.3.2",
+    "dayjs": "^1.11.9",
+    "formidable": "^3.5.1",
+    "lodash": "^4.17.21",
+    "lottie-react": "^2.4.0",
+    "mem": "^10.0.0",
+    "next": "13.3.4",
+    "next-auth": "^4.23.1",
+    "nookies": "^2.5.2",
+    "react": "18.2.0",
+    "react-daum-postcode": "^3.1.1",
+    "react-dom": "18.2.0",
+    "react-kakao-maps-sdk": "^1.1.9",
+    "recoil": "^0.7.7",
+    "sharp": "^0.33.4",
+    "styled-components": "^5.3.10",
+    "swiper": "^9.3.0",
+    "typescript": "5.0.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.0.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/aos": "^3.0.4",
+    "@types/axios": "^0.14.0",
+    "@types/classnames": "^2.3.1",
+    "@types/formidable": "^3.4.2",
+    "@types/lodash": "^4.14.197",
+    "@types/mem": "^4.2.0",
+    "@types/node": "18.16.3",
+    "@types/nookies": "^2.0.3",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "18.2.1",
+    "@types/recoil": "^0.0.9",
+    "@types/styled-components": "^5.1.26",
+    "@types/swiper": "^6.0.0",
+    "@types/uuid": "^9.0.2",
+    "babel-plugin-styled-components": "^2.1.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "eslint-plugin-prettier": "^5.1.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "prettier": "^3.1.1"
+  }
+}

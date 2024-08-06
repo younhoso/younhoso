@@ -1,0 +1,191 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css?ver=<?=rand()?>">
+<link rel="stylesheet" type="text/css" href="/assets/css/<?=$this->round?>/main.css?ver=<?=rand()?>">
+
+<div id="contents" class="main-contents"><!--contents-->
+
+	<div class="main_visual">
+		<div class="img_area mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/main/main.png">
+		</div>
+		<div class="img_area pc">
+			<img src="/assets/imgs/round/<?=$this->round?>/main/main_pc.png">
+		</div>
+		<div class="txt_area">
+			<h2>세상에서 가장 맛있는 매거진 ‘맛진’</h2>
+			<p>롯데GRS만의 맛있는 이야기로 가득 채운 사내웹진 맛진,<br>
+			최신 트렌드부터 롯데GRS의 다양한 소식이 두 달에 한 번씩 여러분을 찾아갑니다.</p>
+		</div>
+	</div>
+	
+	<script>
+		setTimeout(function(){
+			$('.main_visual').addClass('on');	
+		},500);
+	</script>
+
+	<div class="concept">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/main/main_scroll_01.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/main/pc/main_scroll_01.png" class="pc">
+		</div>
+		<div class="txt_wrap">
+			<h4 style="display:none;">이달의 컨셉</h4>
+			<h2 style="display:none;">MZ에 열광하라!</h2>
+			<p>바쁘게 살아가는 현대인들에게 <br>잠깐의 휴식과 여유로움, <br>그리고 즐거움을 주기 위해 <br><b>잠시 동심으로 돌아가보는 시간을 선사합니다!</b></p>
+		</div>
+	</div>
+	
+	<div class="recommend">
+		<div class="content_wrap">
+			<h4 data-aos="fade">이달의 추천글</h4>
+			<h2 data-aos="fade">RECOMMEND</h2>
+			<div class="swiper swiper-container" id="recommend" data-aos="fade">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="slide-item">
+							<img src="/assets/imgs/round/<?=$this->round?>/main/main_scroll_02_썸네일_news.png">
+							<a href="/news/view/<?=$this->round?>/2" data-aos="fade" data-aos-delay="1000"><span>나만의 <br><b>홈카페</b></span></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slide-item">
+							<img src="/assets/imgs/round/<?=$this->round?>/main/main_scroll_02_썸네일_interview.png?1">
+							<a href="/interview/index/<?=$this->round?>" data-aos="fade" data-aos-delay="1000"><span>니네가 <br><b>라떼를 알어?</b></span></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slide-item">
+							<img src="/assets/imgs/round/<?=$this->round?>/main/main_scroll_02_썸네일_style.png">
+							<a href="/story/style/<?=$this->round?>" data-aos="fade" data-aos-delay="1000"><span>유행은 <br><b>돌아오는거야!!</b></span></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slide-item">
+							<img src="/assets/imgs/round/<?=$this->round?>/main/main_scroll_02_썸네일_Event.png">
+							<a href="/event/index/<?=$this->round?>" data-aos="fade" data-aos-delay="1000"><span>내가 널 <br><b>찜했어 ~ ♥</b></span></a>
+						</div>
+					</div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+	var agent = navigator.userAgent.toLowerCase();
+
+	if( navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1 || (agent.indexOf("msie") !=-1)) {
+		$('#recommend').addClass('isIE');
+	}
+
+	var recommend = new Swiper("#recommend", {
+		slidesPerView: "auto",
+		loop: false,
+		pagination: {
+			el: "#recommend .swiper-pagination",
+			type: "progressbar",
+		},
+		breakpoints: {
+			767: {
+				slidesPerView: "auto",
+				spaceBetween:10,
+			},
+			1280: {
+				slidesPerView: "auto",
+				spaceBetween:20,
+			}
+		},
+	});
+	</script>
+	
+	<div class="jaress">
+		<div class="content_wrap">
+			<h4 data-aos="fade">이달의 NEWS</h4>
+			<h2 data-aos="fade">롯데GRS 잘했어</h2>
+			
+			<ul>
+				<li data-aos="fade">
+					<a href="/news/view/<?=$this->round?>/1">
+						<img src="/assets/imgs/round/<?=$this->round?>/main/자레쓰_01.jpg">
+						<div class="title">차별없는 공정사회를 꿈꾸는 우리</div>
+						<div class="date">LOTTEGRS</div>
+					</a>
+				</li>
+				<li data-aos="fade">
+					<a href="/news/view/<?=$this->round?>/2">
+						<img src="/assets/imgs/round/<?=$this->round?>/main/자레쓰_02.jpg">
+						<div class="title">취향에 맞춰 즐기는 나만의 홈카페</div>
+						<div class="date">ANGELINUS</div>
+					</a>
+				</li>
+			</ul>
+			
+			<button data-aos="fade" onclick="location.href='/news/index/<?=$this->round?>'">자레쓰 6월 NEWS 더보기</button>
+		</div>
+	</div>
+	
+	
+	<link rel="stylesheet" type="text/css" href="/assets/css/<?=$this->round?>/library.css">
+	<script src="/assets/js/library.js"></script>
+	
+	<div class="library">
+		<div class="content_wrap">
+			<h4 data-aos="fade">지난달의 발행본</h4>
+			<h2 data-aos="fade">맛진 몰아보기</h2>
+			<div class="sliderWrap-sl">
+				<div class="swiper-container-sl">
+						<div class="swiper-wrapper">
+							<!-- 히스토리 데이터 삽입 됩니다. -->
+						</div>
+				</div>
+			</div>
+			<div class="swiper-pagination-sl"></div>
+		</div>
+	</div>
+</div>
+
+<script type="module">
+	import {fetchData} from "/assets/js/history/fetchData.js";
+	(() => {
+		// 성공 템플릿
+		const successTemplate = ({title, description, imgs, link}, idx) => {
+			if(idx >= 1) {
+				return`
+					<div class="swiper-slide custom">
+						<a href="${link}" target="_blank">
+							<img src="${imgs}" />
+						</a>
+					</div>`;
+			}
+		};
+
+		// 실패 템플릿
+		const errorTemplate = (errorThrown) => { 
+			return`
+				<div class="error">
+					<h2>통신 실패!</h2>
+					<p>에러 메시지: ${errorThrown}</p>
+				</div>`;
+		};
+
+		//첫 로드될때 실행
+		fetchData("/assets/js/history/data.json")
+    .done(function(response) {
+      // 통신 성공 시 템플릿을 만들어 추가합니다.
+      const templateHtml = response.map((datas, idx) => {
+        return successTemplate(datas, idx)
+      }).join('');
+      $('.sliderWrap-sl .swiper-wrapper').html(templateHtml);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+      // 통신 실패 시 템플릿을 만들어 추가합니다.
+      const errorHTML = errorTemplate(errorThrown);
+      $('.sliderWrap-sl .swiper-wrapper').html(errorHTML)
+    });
+	})();
+</script>
+		
+		
+		
+		
+		

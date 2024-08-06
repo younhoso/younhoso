@@ -1,15 +1,19 @@
+import { SessionProvider } from 'next-auth/react';
+
 import type { AppProps } from 'next/app';
 
 import Layout from '@/components/Layout';
 import '@/pages/globals.css';
 import ReactQueryProvider from '@/provider/ReactQueryProvider';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps: { session, pageProps } }: AppProps) {
   return (
     <ReactQueryProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <SessionProvider session={session}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </SessionProvider>
     </ReactQueryProvider>
   );
 }

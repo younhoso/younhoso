@@ -1,0 +1,325 @@
+<style>
+.subpage #header::before {background:#fff;}
+.subpage #header .wrap h1 a img.white_back {display:none;}
+.subpage #header .wrap h1 a img.black_back {display:block;}
+.subpage #header .wrap h1 a img.white_logo {display:none;}
+.subpage #header .wrap h1 a img.black_logo {display:block;}
+.subpage #header .menu-right i {background: url(/assets/imgs/icon/MO_CAT_B.svg); background-size: 100%; background-repeat: no-repeat;}
+.subpage #header.on .menu-right i {background: url(/assets/imgs/icon/MO_CAT_CLO_B.svg); background-size: 100%; background-repeat: no-repeat;}
+.subpage #header .menu-right ul li a {color:#000;}
+.swiper-slide {width:41.6rem;}
+.img_wrap {width:41.6rem; position:relative;}
+.img_wrap img {width:41.6rem; height:41.6rem;}
+.img_wrap span {position:absolute; bottom:0; font-size:2.2rem; line-height:3.4rem; padding:.4rem 0; background-color:rgba(0,0,0,.3); display:block; width:100%; color:#fff; left:0; text-align:center;}
+
+#footer {margin-bottom:9.6rem;}
+
+@media (min-width: 1280px) {
+	.content_wrap .full {width:1442px; margin-left:-409px; margin-right:-409px;}
+	#event_swiper .swiper-wrapper {justify-content:space-between;}
+	#event_swiper .swiper-slide {width:277px;}
+	#event_swiper .swiper-slide .img_wrap {width:277px;}
+	#event_swiper .swiper-slide img {width:100%; height:auto;}
+	.img_wrap span {font-size:1.4rem; line-height:2.2rem;}
+	
+	#footer {margin-bottom:0;}
+}
+</style>
+<div class="contents event event_sub">
+	<div class="sub_top">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/event/event_01_main.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/event/event_main_01.png" class="pc">
+		</div>
+	</div>
+	<section>
+		<div class="content_wrap">
+			<h4 data-aos="fade">EVENT 02</h4>
+			<h2 data-aos="fade">나 다시 돌아갈래!</h2>
+			<p data-aos="fade">이 순간만큼은 <b class="mint">‘다시 어린아이로 돌아가고 싶다’</b> 느낀 적이 있나요? <br>
+			재치있는 사연을 남겨주신 5인에게는 롯데GRS 빌라드샬롯의 <br>
+			주력상품인 <b class="mint">‘빌라드샬롯 밀키트’ 5종</b>을 드립니다!</p>
+			<p data-aos="fade">2022. 06. 20 – 2022. 07. 27</p>
+			<div class="full mt60" data-aos="fade-up">
+				<div class="swiper-container" id="event_swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="img_wrap">
+								<img src="/assets/imgs/round/<?=$this->round?>/event/event_01_sub01.png">
+								<span>갈릭 크림 토마토 파스타</span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img_wrap">
+								<img src="/assets/imgs/round/<?=$this->round?>/event/event_01_sub02.png">
+								<span>감베리 알리오 올리오</span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img_wrap">
+								<img src="/assets/imgs/round/<?=$this->round?>/event/event_01_sub03.png">
+								<span>스트립 로인 스테이크</span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img_wrap">
+								<img src="/assets/imgs/round/<?=$this->round?>/event/event_01_sub04.png">
+								<span>통오징어 먹물 빠에야</span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img_wrap">
+								<img src="/assets/imgs/round/<?=$this->round?>/event/event_01_sub05.png">
+								<span>치킨 스튜 with 빠네</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					var event_swiper = null;
+					
+					function event_swiper_init() {
+						event_swiper = new Swiper('#event_swiper',{
+							slidesPerView: "auto",
+							loop: true,
+							centeredSlides: true,
+							breakpoints: {
+								767: {
+									slidesPerView: "auto",
+									spaceBetween:10,
+								},
+								1280: {
+									slidesPerView: "auto",
+									spaceBetween:20,
+								}
+							},
+						});
+					}
+				</script>
+			
+			</div>
+			
+			<a href="https://smartstore.naver.com/lottegrsmealkit" target="_blank" data-aos="fade-up"><b>빌라드샬롯 밀키트</b> 자세히 보러 가기</a>
+		</div>
+		
+	</section>
+	<section class="border_top">
+		<div class="list_search" id="list_search">
+			<select id="order">
+				<option value="1" selected>추천순</option>
+				<option value="2">최신순</option>
+			</select>
+			<button onclick="open_event_modal()"><b>빌라드샬롯 밀키트</b> 이벤트 참여하기</button>
+		</div>
+		<div class="content_wrap" id="list">
+			<div class="nodata">등록된 댓글이 없습니다.</div>
+			<ul>
+			</ul>
+			<div id="more">
+				<a href="javascript:show_more()">댓글 더보기</a>
+			</div>
+		</div>
+	</section>
+	
+	<button class="event_open" onclick="open_event_modal()">이벤트 참여하기</button>
+</div>
+
+<div class="event_modal">
+	<div class="content_wrap">
+		<h4 data-aos="fade">EVENT 02</h4>
+		<h2 data-aos="fade">나 다시 돌아갈래!</h2>
+		<form id="event_form">
+			<input type="hidden" name="round" value="<?=$this->round?>">
+			<input type="hidden" name="index" value="<?=$this->index?>">
+			<ul>
+				<li>
+					<label>닉네임<span>※ 댓글에 노출되는 이름입니다.</span></label>
+					<input name="user_nickname" id="user_nickname" placeholder="닉네임을 입력해주세요.">
+				</li>
+				<li>
+					<label>이름</label>
+					<input name="user_name" id="user_name" placeholder="이름을 입력해주세요.">
+				</li>
+				<li>
+					<label>부서/지점명</label>
+					<input name="department" id="department" placeholder="부서/지점명을 입력해주세요.">
+				</li>
+				<li>
+					<label>휴대폰 번호</label>
+					<input name="user_hp" id="user_hp" onchange="only_number()"  placeholder="-없이 입력해주세요.">
+				</li>
+				<li>
+					<label>축하메시지</label>
+					<textarea name="text"  id="text" placeholder="축하메시지를 입력해주세요."></textarea>
+				</li>
+			</ul>
+		</form>
+		<p>※ 본 이벤트는 롯데GRS 임직원 및 점주 한정 참여 가능합니다</p>
+	</div>
+	<button onclick="apply_event()">이벤트 응모하기</button>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('body').on('mousedown',function(){
+		if( $(event.target).closest('.event_modal').length == 0 ) {
+			$('.event_modal').hide();
+		}
+	});
+	$('#list_search select').on('change',function(){
+		init_reply_data();
+		get_reply_data();
+	});
+	
+	$('#list_search select').trigger('change');
+});
+$(window).resize(function(){
+	if( event_swiper ) {
+		event_swiper.destroy();
+		$('.swiper-wrapper').attr('style','');
+		$('.swiper-slide').removeClass('swiper-slide-next');
+		$('.swiper-slide').removeClass('swiper-slide-prev');
+		$('.swiper-slide').removeClass('swiper-slide-active');
+	}
+	
+	if( $(window).width() > 1280 ) {
+	} else {
+		event_swiper_init();
+	}
+});
+
+$(window).resize();
+
+function toggle_reward(target) {
+	var on = false;
+	if( $(target).hasClass('on') ) {
+		on = true;
+	}
+	$('.reward .on').removeClass('on');
+	if( !on ) {
+		$(target).addClass('on');
+	}
+}
+function only_number() {
+	var hp = $('#user_hp').val().replace(/[^0-9]/gi,'');
+	$('#user_hp').val(hp);
+}
+function open_event_modal() {
+	$('.event_modal').show();
+	event.preventDefault();
+	event.stopPropagation();
+}
+function apply_event() {
+	
+	if( $('#user_nickname').val() == '' ) {
+		alert('닉네임을 입력해주세요.');
+		$('#user_nickname').focus();
+		return;
+	}
+	
+	if( $('#user_name').val() == '' ) {
+		alert('이름을 입력해주세요.');
+		$('#user_name').focus();
+		return;
+	}
+	
+	if( $('#department').val() == '' ) {
+		alert('부서/지점명을 입력해주세요.');
+		$('#department').focus();
+		return;
+	}
+	
+	var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+	var hp = $('#user_hp').val().replace(/-/gi,'');
+    if (regPhone.test(hp) === false) {
+    	alert('휴대번호를 정확하게 입력해주세요.');
+    	return;
+    }
+	
+	if( $('#text').val().length < 5 ) {
+		alert('축하 메시지를 최소 5자 이상 입력해주세요.');
+		$('#text').focus();
+		return;
+	}
+
+	$.post('/event/apply',$('#event_form').serialize(),function(result){
+		var r = JSON.parse(result);
+		
+		alert(r.msg);
+		
+		if( r.result ) {
+			location.reload();
+		}
+	});
+}
+
+function show_more() {
+	get_reply_data();
+}
+
+function init_reply_data() {
+	$('#list ul').html('');
+}
+
+function get_reply_data() {
+	
+	$('#more').hide();
+	
+	var ignore_seq = [];
+	$('#list li').each(function(){
+		ignore_seq.push($(this).find('input[type="hidden"]').val());
+	})
+	
+	var round = '<?=$this->round?>';
+	var index = '<?=$this->index?>';
+	var order = $('#list_search select').val();
+	if( !order ) order = 1;
+	$.post('/event/get_reply_data',{round:round, index:index, order:order, ignore_seq:ignore_seq},function(result){
+		var r = JSON.parse(result);
+		if( r.result ) {
+			
+			var html = '';
+			
+			if( r.list.length ) {
+				for( var i=0; i<r.list.length; i++ ) {
+					html += '<li>';
+					html += '<input type="hidden" value="'+r.list[i].seq+'">';
+					html += '<h4>'+r.list[i].nickname+'</h4>';
+					html += '<p>'+r.list[i].text+'</p>';
+					html += '<span class="date">'+r.list[i].date+'</span>';
+					html += '<a href="javascript:like('+r.list[i].seq+')" id="like'+r.list[i].seq+'"><span class="like '+(r.list[i].log_seq?'on':'')+'">'+r.list[i].like.toLocaleString('en')+'</span></a>';
+					html += '</li>';
+				}
+				$('#more').show();
+			} else {
+				$('#more').hide();
+			}
+			
+			$('#list ul').append(html);
+			
+			if( $('#list ul li').length == 0 ) {
+				$('#list .nodata').show();
+			} else {
+				$('#list .nodata').hide();
+			}
+		}
+	});
+}
+
+function like(seq) {
+	$.post('/event/like',{seq:seq},function(result){
+		var r = JSON.parse(result);
+		if( r.result ) {
+			$('#like'+seq+' .like').html(r.after);
+			if( Number(r.after) > Number(r.before) ) {
+				$('#like'+seq+' .like').addClass('on');
+			} else {
+				$('#like'+seq+' .like').removeClass('on');
+			}
+		} else {
+			alert(r.msg);
+		}
+	});
+}
+
+</script>

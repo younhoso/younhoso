@@ -1,0 +1,97 @@
+<form action="/event/list" method="get">
+<input type="hidden" name="admin" value="woongq123">
+회차 : 
+<select name="round">
+	<option value="">전체</option>
+	<? for( $i=1; $i<=count($pages); $i++ ) { ?>
+	<option value="<?=$i?>" <?= ($i==$round ? 'selected':'' ) ?>><?=$i?></option>
+	<? } ?>
+</select>
+이벤트번호 : 
+<select name="index">
+	<option value="">전체</option>
+	<? foreach( $pages as $p ) { ?>
+	<option value="<?=$p?>" <?= ($p==$index ? 'selected':'' ) ?>><?=$p?></option>
+	<? } ?>
+</select>
+기간 : 
+<input type="date" name="from" value="<?=$from?>">
+<input type="date" name="to" value="<?=$to?>">
+<button type="submit">검색</button>
+</form>
+
+<style>
+table {margin-top:20px;}
+td {padding:4px 8px; white-space:pre-wrap;}
+</style>
+
+<script>
+function show(seq) {
+	$.post('/event/show',{seq:seq},function(result){
+		alert('복구되었습니다.');
+		location.reload();
+	});
+}
+
+function hide(seq) {
+	$.post('/event/hide',{seq:seq},function(result){
+		alert('삭제되었습니다.');
+		location.reload();
+	});
+}
+</script>
+
+
+<table border="1" style="width:100%; max-width:100%;">
+	<colgroup>
+		<col width="100">
+		<col width="100">
+		<col width="100">
+		<col width="100">
+		<col width="100">
+		<col width="150">
+		<col>
+		<col width="200">
+		<col width="100">
+		<col width="360">
+	</colgroup>
+	<tr>
+		<th>회차</th>
+		<th>이벤트번호</th>
+		<th>닉네임</th>
+		<th>이름</th>
+		<th>부서/지점명</th>
+		<th>휴대번호</th>
+		<th>축하메시지</th>
+		<th>작성일시</th>
+		<th>상태</th>
+		<th>이미지</th>
+	</tr>
+	<? foreach( $list as $row ) { ?>
+	<tr>
+		<td><?=$row->round?></td>
+		<td><?=$row->index?></td>
+		<td><?=$row->nickname?></td>
+		<td><?=$row->name?></td>
+		<td><?=$row->department?></td>
+		<td><?=$row->hp?></td>
+		<td><?=$row->text?></td>
+		<td><?=$row->reg_time?></td>
+		<td style="text-align:center;">
+			<? if( $row->deleted ) { ?>
+			<span style="color:red;">삭제됨</span>
+			<button onclick="show(<?=$row->seq?>)">복구</button>
+			<? } else { ?>
+			<button onclick="hide(<?=$row->seq?>)">삭제</button>
+			<? } ?>
+		</td>
+		<td>
+			<div style="display:flex; gap:20px;">
+			<? foreach( $row->image_datas as $img ) { ?>
+				<a href="/<?=$img->file_path?>" target="_blank"><img src="/<?=$img->file_path?>" style="width:100px; height:100px; object-fit:cover;"></a>
+			<? } ?>
+			</div>
+		</td>
+	</tr>
+	<? } ?>
+</table>

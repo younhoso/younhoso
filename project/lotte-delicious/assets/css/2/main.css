@@ -1,0 +1,69 @@
+.main_visual .img_area img:first-child {opacity:1;}
+.main_visual .img_area img:last-child {opacity:1;}
+.main_visual.on .img_area img:first-child {opacity:1;}
+.main_visual.on .img_area img:last-child {opacity:1;}
+
+.main_visual .txt_area h2 {color:#fff;}
+.main_visual .txt_area h2 span {color:#fff;}
+.main_visual .txt_area p {color:#fff;}
+
+.concept .txt_wrap {justify-content:center; padding-bottom:0; margin-top:0;}
+.concept .txt_wrap p {color:#64531A; transform:translate(0,20vw);}
+
+#recommend .swiper-slide .slide-item a span {letter-spacing:0;}
+
+.jaress {border-bottom:.8rem solid #f5f5f5;}
+
+.library .content_wrap {padding-left:0; padding-right:0;}
+.library .content_wrap .sliderWrap-sl {margin-top:10rem; }
+.library .content_wrap .swiper-pagination-sl {padding-bottom:0;}
+
+@media (min-width: 1680px) {
+	
+	.recommend .content_wrap {width:86.6rem;}
+	#recommend .swiper-slide {width:21.2rem;}
+	#recommend .swiper-slide .slide-item img {width:21.2rem; height:21.2rem;}
+	#recommend .swiper-slide .slide-item a {padding:1.6rem 1.4rem;}
+	#recommend .swiper-slide .slide-item a span {font-size:1.4rem; font-weight:400;}
+	#recommend .swiper-slide .slide-item a span::after {width:1.4rem; height:1.7rem; transform:translate(0.4rem,0.1rem)}
+	
+	.jaress .content_wrap {width:86.6rem;}
+}
+
+@media (min-width: 1280px) {
+	
+	/*
+	.main_visual .img_area.pc {}
+	.main_visual .img_area.pc img {height:1080px; object-fit:cover;}
+	*/
+	
+	.concept .txt_wrap p {transform:translate(0,10vw); margin-top:0;}
+	
+	.recommend .content_wrap {width:86.6rem; padding:10rem 0 5rem 0;}
+	#recommend {margin-top:2rem;}
+	#recommend .swiper-slide {width:21.2rem;}
+	#recommend .swiper-slide .slide-item img {width:21.2rem; height:21.2rem;}
+	#recommend .swiper-slide .slide-item a {padding:1.6rem 1.4rem;}
+	#recommend .swiper-slide .slide-item a span {font-size:1.4rem; font-weight:400;}
+	#recommend .swiper-slide .slide-item a span::after {width:1.4rem; height:1.7rem; transform:translate(0.4rem,0.1rem)}
+	
+	.recommend h4 {font-size:1.7rem;}
+	.recommend h2 {font-size:2.4rem; line-height:2.9rem;}
+	
+	.jaress {border-bottom:0;}	
+	.jaress .content_wrap {width:86.6rem; padding:5rem 0 5rem 0;}
+	
+	.jaress ul {margin-top:2rem; margin-left:-3rem;}
+	.jaress ul li {margin-left:3rem;}
+	.jaress li .title {margin-top:1.2rem; font-size:1.7rem;}
+	.jaress li .date {font-size:1.3rem; margin-top:0;}
+	.jaress h4 {font-size:1.7rem;}
+	.jaress h2 {font-size:2.4rem; line-height:2.9rem;}
+	.jaress button {margin-top:4rem; height:6.5rem; font-size:1.9rem;}
+	
+	.library h4 {font-size:1.7rem;}
+	.library h2 {font-size:2.4rem; line-height:2.9rem;}
+	.library .content_wrap {width:1000px; max-width:none; padding-top:5rem; overflow:hidden;}
+	.library .content_wrap .sliderWrap-sl {margin-top:2rem; margin-left: calc( 500px - 50vw); }
+	.library .swiper-container-sl .swiper-slide {background:unset;}
+}

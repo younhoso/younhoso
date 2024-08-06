@@ -1,0 +1,899 @@
+/* VISUAL 영역 */
+.visual {
+  height: 47.5rem;
+  background: #222222;
+}
+
+.visual .slide {
+  width: 60%;
+  background: #181818;
+}
+
+.visual .text {
+  width: 40%;
+  padding: 0 0 0 2.5rem;
+}
+
+.visual .text * {
+  color: #f2f2f2;
+}
+
+.visual .text b {
+  font-size: 54px;
+  margin: 0 0 4rem;
+}
+
+.visual .text b::before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -8px;
+  position: absolute;
+  background: #f2f2f2;
+}
+
+.visual .text p {
+  font-size: 20px;
+  line-height: 1.7rem;
+  font-weight: 200;
+  color: #dadada;
+}
+
+.visual .text p span {
+  line-height: 3.5rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.visual .text .pa {
+  bottom: 4rem;
+  right: 4rem;
+  font-size: 100px;
+  color: #3a3a3a;
+}
+
+/* INTRO 영역 */
+.intro {
+  padding: 3rem 0 0;
+}
+
+.intro .top .image {
+  height: 25rem;
+}
+
+.intro .top p {
+  padding: 2rem 0 6rem;
+  font-size: 18px;
+  text-align: center;
+  color: #666666;
+}
+
+.intro .top p b {
+  line-height: 4rem;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.intro .center {
+  padding: 8rem 0 5rem;
+}
+
+.intro .center .title {
+  padding: 0 0 0 1.5rem;
+  margin: 0 0 50px;
+}
+
+.intro .center .title b {
+  padding: 0 0 5px;
+  font-size: 20px;
+}
+
+.intro .center .title span {
+  font-weight: 400;
+  opacity: .8;
+  color: #666666;
+}
+
+.intro .center .title::before {
+  content: '';
+  width: 8px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background: #222222;
+}
+
+.intro .center .image {
+  width: 57.5%;
+  height: 25rem;
+}
+
+.intro .center .text {
+  padding: 0 0 0 2.5rem;
+  color: #4f4f4f;
+}
+
+.intro .center .text b {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 3rem;
+}
+
+.intro .center .text {
+  line-height: 1.5rem;
+}
+
+.intro .bottom {
+  padding: 0 0 8rem;
+}
+
+.intro .bottom .box {
+  width: 60%;
+}
+
+.intro .bottom .box .image {
+  height: 25rem;
+}
+
+.intro .bottom .box p {
+  padding: 2rem 0 0;
+  line-height: 1.5rem;
+  color: #4f4f4f;
+}
+
+.intro .bottom > .image {
+  width: 37.5%;
+}
+
+/* GUIDE 영역 */
+.guide .top {
+  padding: 0 calc((100% - 1280px) / 2) 0 0;
+}
+
+.guide .top .image {
+  width: calc(100vw * .6);
+  height: 40rem;
+}
+
+.guide .top .text {
+  padding: 3rem 0 3rem 3rem;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.guide .top .text .title {
+  padding: 0 0 20px;
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+
+.guide .top .text p {
+  line-height: 1.5rem;
+  color: #4f4f4f;
+}
+
+.guide .top .text p b {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 3.5rem;
+}
+
+.guide .top .container {
+  width: 35rem;
+  height: 17rem;
+  padding: 7rem;
+  transform: translateY(-10rem);
+  background: #222222;
+}
+
+.guide .top .container * {
+  color: #f2f2f2;
+}
+
+.guide .top .container b {
+  font-size: 20px;
+}
+
+.guide .top .container p {
+  padding: 1.5rem 0 0;
+  line-height: 1.8rem;
+  font-weight: 100;
+}
+
+.guide .center {
+  padding: 8rem 0 0;
+  transform: translateY(-10rem);
+}
+
+.guide .center .line {
+  margin: 0 0 8rem;
+}
+
+.guide .center .title {
+  padding: 0 0 0 1.5rem;
+  margin: 0 0 50px;
+}
+
+.guide .center .title b {
+  padding: 0 0 5px;
+  font-size: 20px;
+}
+
+.guide .center .title span {
+  font-weight: 400;
+  opacity: .8;
+  color: #666666;
+}
+
+.guide .center .title::before {
+  content: '';
+  width: 8px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background: #222222;
+}
+
+.guide .center > .image {
+  height: 25rem;
+}
+
+.guide .center .container {
+  padding: 2rem 0 0;
+}
+
+.guide .center .container .text b {
+  line-height: 3.5rem;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.guide .center .container .text {
+  line-height: 1.5rem;
+}
+
+.guide .center .container > div {
+  gap: 1.5rem;
+}
+
+.guide .center .container .image {
+  width: 28rem;
+  height: 17rem;
+}
+
+.guide .bottom {
+  padding: 0 calc((1903px - 1280px) / 2) 10rem 0;
+}
+
+.guide .bottom .left > b,
+.guide .bottom .left > p {
+  padding: 0 0 0 calc((1903px - 1280px) / 2);
+}
+
+.guide .bottom .left .title {
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.guide .bottom .left .text {
+  line-height: 1.5rem;
+}
+
+.guide .bottom .left .text b {
+  line-height: 3.5rem;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.guide .bottom .left .box {
+  width: 100%;
+  padding: 4rem 1rem 4.5rem calc((1903px - 1280px) / 2);
+  font-weight: 100;
+  line-height: 1.5rem;
+  color: #f2f2f2;
+  background: #222222;  
+}
+
+.guide .bottom .left .box b {
+  line-height: 4.5rem;
+  font-size: 20px;
+  color: #f2f2f2;
+}
+
+.guide .bottom .right {
+  gap: 1.2rem;
+}
+
+.guide .bottom .right .cell .image {
+  width: 23rem;
+  height: 28rem;
+}
+
+.guide .bottom .right .cell p {
+  padding: 10px 0 0;
+  line-height: 1.5rem;
+}
+
+.guide .bottom .right .cell p b {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 3rem;
+}
+
+/* GALLERY 영역 */
+.gallery .main {
+  font-size: 28px;
+}
+
+.gallery > .title b {
+  line-height: 3rem;
+}
+
+.gallery > * > .line {
+  margin: 7rem 0;
+}
+
+.gallery .title {
+  padding: 0 0 0 1.5rem;
+  margin: 0 0 50px;
+}
+
+.gallery .title b {
+  padding: 0 0 5px;
+  font-size: 20px;
+}
+
+.gallery .title span {
+  font-weight: 400;
+  opacity: .8;
+  color: #666666;
+}
+
+.gallery .title::before {
+  content: '';
+  width: 8px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background: #222222;
+}
+
+.gallery .top .container {
+  gap: 1rem;
+}
+
+.gallery .top .container .image {
+  width: 40rem;
+  height: 30rem;
+  object-fit: contain;
+}
+
+.gallery .top .container:nth-child(2) .image:first-child {
+  width: 75rem;
+}
+
+.gallery .top .text {
+  padding: 2rem 0 7rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.gallery .top .text b {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 3.5rem;
+}
+
+.gallery .center .image {
+  min-width: 50rem;
+  object-fit: contain;
+}
+
+.gallery .center .text {
+  line-height: 1.5rem;
+  padding: 0 0 0 2.5rem;
+  white-space: nowrap;
+}
+
+.gallery .center .text b {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.gallery .center .text p span {
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.gallery .center .container {
+  padding: 5rem 0;
+  margin: 10rem 0;
+  background: #222222;
+}
+
+.gallery .center .container * {
+  color: #f2f2f2;
+}
+
+.gallery .center .container p {
+  font-weight: 100;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.gallery .center .container p b {
+  font-size: 20px;
+  line-height: 3.5rem;
+}
+
+.gallery .bottom .container {
+  gap: 1rem;
+}
+
+.gallery .bottom .cell .image {
+  width: 26rem;
+  object-fit: contain;
+}
+
+.gallery .bottom .cell p {
+  padding: 2rem 0 0;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.layout_image_768 {
+  display: none;
+}
+
+.layout_image_768 img:nth-child(1) {
+  margin-top: 52px;
+}
+
+@media (max-width: 1480px) {
+  .guide .bottom .left > b, .guide .bottom .left > p {
+    padding: 0 0 0 calc((1480px - 1280px) / 2);
+  }
+
+  .guide .bottom {
+    padding: 0 calc((1480px - 1280px) / 2) 10rem 0;
+  }
+
+  .guide .bottom .left .box {
+    padding: 4rem 1rem 4.5rem calc((1480px - 1280px) / 2);
+  }
+}
+
+@media (max-width: 1080px) {
+  .guide .bottom .left > b, .guide .bottom .left > p {
+    padding: 0 0 0 calc((1080px - 960px) / 2);
+  }
+
+  .guide .bottom {
+    padding: 0 calc((1080px - 960px) / 2) 10rem 0;
+  }
+
+  .guide .bottom .left .box {
+    padding: 4rem 1rem 4.5rem calc((1080px - 960px) / 2);
+  }
+
+  .guide .bottom .right .cell .image {
+    width: 24rem;
+  }
+
+  .banner .image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    display: none !important;
+  }
+
+  .layout_image_768 {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block !important;
+  }
+
+  .intro .bottom .box .image {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .gallery .center .image {
+    min-width: 22rem;
+  }
+
+  .gallery .bottom .cell .image {
+    width: 18rem;
+  }
+
+  .visual {
+    display: block;
+    height: auto;
+    position: relative;
+    margin-bottom: 30vh;
+  }
+
+  .guide .center .container .text {
+    padding: 0 0 7rem !important;
+  }
+
+  .guide .center .container .text b {
+    font-weight: 700 !important;
+    line-height: 4.5rem;
+  }
+
+  .guide .bottom .left .title {
+    padding: 0 0 4rem calc((768px - 600px) / 2);
+  }
+
+  .gallery .top .container .image {
+    height: 20rem;
+  }
+
+  .intro .center p {
+    padding: 1.5rem 0 0 !important;
+    text-align: center;
+  }
+
+  .visual .slide {
+    width: 100%;
+  }
+
+  .visual .text {
+    width: 60%;
+    /* height: 20rem; */
+    padding: 4.5rem 4rem 7rem;
+    position: absolute;
+    top: 80%;
+    z-index: 1;
+    background: #222;
+  }
+
+  .visual .text b {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .visual .text p {
+    font-size: 1rem;
+  }
+
+  .visual .text .en {
+    font-size: 3.5rem;
+    color: #fff;
+    opacity: .3;
+    position: absolute;
+    right: 4%;
+    bottom: 10%;
+  }
+
+  .visual .text p {
+    font-size: 15px;
+  }
+
+  .intro .top p {
+    font-size: 16px;
+  }
+
+  .intro .top p b {
+    font-size: 26px;
+  }
+
+  .intro .center .image {
+    width: 100%;
+  }
+
+  .intro .center .title {
+    margin: 0 0 30px;
+  }
+
+  .intro .center .text b {
+    font-size: 18px;
+  }
+
+  .intro .center .text {
+    padding: 0 0 0 0;
+  }
+
+  .intro .center > div {
+    display: block;
+  }
+
+  .intro .bottom {
+    display: block;
+    padding: 0 0 2rem;
+  }
+
+  .intro .bottom .box {
+    width: 100%;
+  }
+
+  .intro .bottom .box p {
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+  }
+
+  .guide .top {
+    align-items: flex-start;
+  }
+
+  .guide .top .flex {
+    display: block;
+    width: 100%;
+    word-break: break-all;
+  }
+  
+  .guide .top .image {
+    padding: 0 2.4rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .guide .top .text {
+    white-space: initial;
+    /* margin-bottom: rem; */
+    padding: 1.5rem 0 2rem 8rem;
+  }
+
+  .guide .top .text p {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+
+  .guide .top .text .title {
+    line-height: 6rem;
+  }
+
+  .guide .top .text p b {
+    font-weight: 600;
+  }
+
+  .guide .top .container {
+    width: 60%;
+    transform: translateY(0%);
+    padding: 4rem 0rem 4rem 8rem;
+  }
+
+  .guide .center {
+    padding: 8rem 0 0;
+    transform: translateY(0);
+  }
+
+  .guide .center .pc_hide {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .guide .center .container > div {
+    gap: 1.5rem;
+  }
+
+  .guide .center .container .image {
+    width: 17rem;
+  }
+
+  .guide .center .container {
+    padding: 1.5rem 0;
+    display: block;
+  }
+
+  .guide .center .container .text {
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  .guide .center .container .text b {
+    font-weight: 600;
+  }
+
+  .guide .center .container .text {
+    font-size: 1.1rem;
+  }
+
+  .guide .bottom .right .cell {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .guide .bottom .right .cell .image {
+    width: 100%;
+  }
+
+  .guide .bottom .left > b, .guide .bottom .left > p {
+    padding: 0 0 0 calc((768px - 600px) / 2);
+  }
+
+  .guide .bottom .left .box {
+    width: 60%;
+    margin: 1.5rem 0;
+    padding: 2rem 1rem 2.5rem calc((768px - 600px) / 2);
+  }
+
+  .guide .bottom .right .cell p b {
+    font-size: 14.5px;
+    line-height: 2rem;
+  }
+  
+  .guide .bottom .right {
+    margin-top: 3rem;
+    padding: 0 calc((768px - 710px) / 2);
+  }
+
+  .guide .bottom .right .cell .image {
+    height: 40rem;
+  }
+  
+  .guide .bottom .right .cell p {
+    line-height: 2rem;
+  }
+
+  .guide .bottom {
+    padding: 0 0 10rem 0;
+    display: block;
+  }
+
+  .gallery .top .container:nth-child(2) .image:first-child {
+    width: 170%;
+  }
+
+  .gallery .top .container .image {
+    width: 100%;
+  }
+
+  .gallery .center .text {
+    display: block;
+    padding: 1.5rem 0;
+    white-space: initial;
+    text-align: center;
+  }
+
+  .gallery .center .text b {
+    line-height: 5rem;
+  }
+
+  .gallery .center .text p {
+    margin-bottom: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 200;
+  }
+
+  .gallery .center .text p span {
+    font-size: 1.4rem;
+    line-height: 3rem;
+  }
+
+  .gallery .center .wrap > div {
+    display: block;
+  }
+
+  .banner .image {
+    width: 100%;
+  }
+
+  .gallery .bottom .container {
+    flex-wrap: wrap;
+    row-gap: 2.4rem;
+  }
+
+  .gallery .bottom .cell .image {
+    width: 100%;
+  }
+  
+  .gallery .center .container {
+    margin: 5rem 0;
+  }
+
+  .banner {
+    width: 60%;
+  }
+
+  .banner .image {
+    height: 45rem;
+  }
+
+  .banner p {
+    font-size: 1.1rem;
+  }
+
+  .gallery .bottom .container .cell:nth-child(1) {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .gallery .bottom .cell:nth-child(1) .image {
+    width: 60%;
+    height: 45rem;
+  }
+
+  .gallery .bottom .cell:nth-child(1) p {
+    text-align: start;
+    padding: 2.4rem;
+    font-size: 1.1rem;
+  }
+
+  .gallery .bottom .container .cell:not(:nth-child(1)) {
+    width: 49%;
+  }
+}
+
+@media (max-width: 500px) {
+  .visual {
+    display: block;
+    height: auto;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .gallery .bottom p {
+    text-align: center !important;
+  }
+
+  .visual .slide {
+    width: 100%;
+  }
+
+  .visual .text {
+    width: 100%;
+    /* height: 20rem; */
+    padding: 4.5rem 4rem 7rem;
+    position: inherit;
+    background: #222;
+  }
+
+  .guide .top .container {
+    width: 100%;
+    padding: 4rem 0rem 4rem 4rem;
+  }
+
+  .guide .top .text {
+    padding: 1.5rem 0 2rem 2rem;
+  }
+
+  .guide .bottom .left > b, .guide .bottom .left > p {
+    padding: 0 0 0 calc((320px - 240px) / 2);
+  }
+
+  .guide .bottom .left .box {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 2rem 1rem 2.5rem calc((320px - 240px) / 2);
+  }
+
+  .guide .bottom .right .cell .image {
+    height: 30rem;
+  }
+
+  .gallery .bottom .container .cell:nth-child(1) {
+    display: block;
+  }
+
+  .gallery .bottom .cell:nth-child(1) .image {
+    width: 100%;
+  }
+
+  .gallery .bottom .container .cell:not(:nth-child(1)) {
+    width: 100%;
+  }
+
+  .banner {width: 100%;}
+
+  .banner .image {
+    height: 30rem;
+  }
+
+  .gallery .top .container:nth-child(2) .image:first-child {
+    width: 100%;
+  }
+}
+
+.pc_hide {
+  display: none;
+}

@@ -1,0 +1,109 @@
+@charset "utf-8";
+#wrap{background-color:#F6F5D9}
+
+@keyframes come-in {
+ to {transform: translateY(0);opacity:1}
+}
+.module{margin-bottom:20px}
+.sec1{position: relative;margin-bottom:20px;z-index:20}
+.sec2{position: relative;margin-bottom:20px;z-index:20}
+.sec3{margin-bottom:0}
+.sec3 .inner{position: relative;}
+.sec4{background:url(/assets/images/mobile/well/bg4.jpg) 0 0 #17599C no-repeat;background-size:contain;}
+.sec5{background-color:#F6F5D9;}
+.sec6{background:url(/assets/images/mobile/well/bg5.jpg) 0 0 #01C73C no-repeat;background-size:contain;margin-bottom:0}
+.sec7{position: relative;background-color: #333;margin-bottom:0;z-index:20}
+.inner{width:100%;margin:0 auto}
+.inner .img_wrap img{width:100%}
+.sec1 .bi{position: absolute;top:4%;left:0;width:100%;text-align:center}
+.sec1 .txt{position: absolute;bottom:5%;left:0;width:100%}
+.sec2 .txt{position: absolute;bottom:3%;left:0;width:100%}
+.sec3 .txt{position: absolute;top:50%;left:0;width:100%;margin-top:-25px;text-align:center}
+.sec3 .bx1{background:#FFB400;padding:20px 20px 16px;position: relative;}
+.sec3 .bx1 .sel_wrap{position:relative}
+.sec3 .bx1 .sel_wrap:before{content:'';position:absolute;top:50%;right:10px;margin-top:-3px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #000;}
+.sec3 .bx1 select{line-height:42px;height:46px;background: #FF0000;font-size:14px;font-weight:500;color: #fff;border:2px solid #000;border-radius:3px;width:100%;text-indent:12px;-webkit-appearance: none; appearance: none;}
+.sec3 .bx1:after{content:'';position: absolute;left:20px;bottom:0;right:20px;height:1px;background:#000;}
+.sec3 .bx1:before{content:'';position: absolute;left:50%;bottom:-13px;width:15px;height:15px;border-bottom:1px solid #000;border-right:1px solid #000;background-color:#FFB400;-webkit-transform:rotate(45deg) translateX(-50%);transform:rotate(45deg) translateX(-50%);z-index:1}
+.sec3 .bx2{background:#FFB400;padding:0}
+.sec3 .map_top{padding:35px 20px 0}
+.sec3 .map_top .tit{padding:0 10px;border:0px solid #A57400;line-height:36px;text-align: center;border-radius:18px;font-size:13px;font-weight:500;color:#FFF;background:url(/assets/images/mobile/well/tit_bg.jpg) 0 0 no-repeat;background-size: 375px auto;max-width: 335px;margin:0 auto;}
+.sec3 .map_top .desc{padding:20px 0 15px}
+.sec3 .map_top .desc dl{margin-bottom:6px}
+.sec3 .map_top .desc dl:after{content:'';display:block;clear:both}
+.sec3 .map_top .desc dt{float:left;width:90px;position: relative;padding-left:8px;font-size:12px}
+.sec3 .map_top .desc dt:before{content:'';position: absolute;top:8px;left:0;width:3px;height:3px;background:#000;border-radius:50%}
+.sec3 .map_top .desc dd{float:left;font-size:12px;font-weight:500}
+.sec3 .map_cont{position: relative;height:300px;margin:0 -20px}
+.sec3 .map_cont .dd{position: absolute;width:120px;height:75px;background:url(/assets/images/mobile/well/dd2.png) 0 0 no-repeat;background-size:120px auto;color:#FFCC00;padding-top:45px;bottom:10px;left:10px;text-align: center;}
+.sec3 .map_cont .dd p{font-size:10px;line-height:15px;}
+.sec3 .map_cont .dd strong{font-size:15px;font-weight:500;line-height:18px}
+.sec3 .map_thmb{padding:20px 0 35px}
+.sec3 .map_thmb ul > li{margin-top:15px;}
+.sec3 .map_thmb ul > li:first-child{margin-top:0}
+.sec3 .map_thmb ul > li img{vertical-align: top;width:100%}
+.sec3 .tit_ss{text-align:center;padding:20px 20px 0;background:#FFB400}
+.sec3 .tit_ss .tt{display:block;font-size: 20px;font-weight:bold;color:#fff;line-height:45px;background:#FF3600;border:1px solid #783600;border-radius:23px;}
+.sec3 .tit_ss2{text-align:center;padding:20px 20px 0;background:#FFB400}
+.sec3 .tit_ss2 .tt{display:block;font-size: 16px;font-weight:bold;color:#073f92;line-height:20px;padding-bottom:6px}
+.sec3 .tit_ss2 .ts{display:block;font-size: 14px;font-weight:normal;color:#073f92;line-height:18px;}
+.sec4{padding:35px 0 50px}
+.sec4 .bx-wrapper{border:0;background:none;box-shadow:none;margin:0 20px 30px 20px;}
+.sec4 .well_slider{overflow:hidden}
+.sec4 .bx-wrapper .bx-controls-direction a.bx-prev{background:url(/assets/images/mobile/well/arr_l.png) 0 0 no-repeat;width:13px;height:40px;position: absolute;top:50%;left:10px;margin-top:-20px;background-size:13px auto}
+.sec4 .bx-wrapper .bx-controls-direction a.bx-next{background:url(/assets/images/mobile/well/arr_r.png) 0 0 no-repeat;width:13px;height:40px;position: absolute;top:50%;right:10px;margin-top:-20px;background-size:13px auto}
+.sec4 .bx-wrapper img{width:100%}
+
+.sec5 .tit{padding:15px 0 25px;text-align:center}
+.sec5 .lst_vods{padding:0 20px}
+.sec5 .lst_vods li a{color:#000}
+.sec5 .lst_vods li .thmb img{width:100%}
+.sec5 .lst_vods li .cont{padding:13px 0 20px 0}
+.sec5 .lst_vods li .cont .tt{color:#DA0D16;border-bottom:1px solid #DA0D16}
+.sec5 .lst_vods li .cont .desc{display:block;letter-spacing:-.5px;font-weight:400;line-height:20px;font-size:13px;overflow:hidden}
+@media(min-width:500px){
+    .sec3 .map_thmb ul:after{content:'';clear:both;display:block}
+    .sec3 .map_thmb ul > li{float:left;width:49%;margin-bottom:2%;margin-top:0}
+    .sec3 .map_thmb ul > li:nth-child(odd){margin-right:1%}
+    .sec3 .map_thmb ul > li:nth-child(even){margin-left:1%}
+    .sec3 .map_thmb{padding-bottom:20px}
+    .sec4,.sec6{background-size: cover;}
+    .sec4 .bx-wrapper{margin:0 10% 30px}
+    
+    .sec5 .lst_vods:after{content:'';clear:both;display:block}
+    .sec5 .lst_vods li{float:left;width:49%;margin-bottom:1%;margin-top:0}
+    .sec5 .lst_vods > li:nth-child(odd){margin-right:1%}
+    .sec5 .lst_vods > li:nth-child(even){margin-left:1%}
+}
+.sec6{padding:10px 0 50px}
+.sec6 .s_togather{text-align: center;}
+.sec6 .s_togather .s_tit{color:#fff;font-size:11px;font-weight:300;line-height:20px}
+.sec6 .s_togather .s_tit span{font-weight:400}
+.sec6 .s_togather .h_tit {color:#fff;font-size:20px;line-height:25px;letter-spacing:-1px;margin-top:160px}
+.sec6 .s_togather .desc{color:#fff;font-size:15px;line-height:20px;letter-spacing:-.5px;margin-top:13px;font-weight:300}
+.sec6 .s_togather .link{font-size:12px;color:#fff;background:#FF0000;border-radius:2px;display:inline-block;height:35px;padding:0;line-height:35px;margin-top:23px;font-weight:500;width:140px;text-align: center;}
+
+.sec1.come-in .bi{transform: translateY(-150px);animation: come-in 1.2s ease forwards;}
+.sec1.come-in .txt{transform: translateY(-150px);animation: come-in .8s ease forwards;}
+.sec2.come-in .txt{transform: translateY(-150px);animation: come-in 1s ease forwards;text-align:center}
+.sec3.come-in .txt{transform: translateY(-200px);animation: come-in 1.5s ease forwards}
+.sec4.come-in .stit1{transform: translateY(-200px);opacity:0;animation: come-in 1s ease forwards;text-align:center}
+.sec4.come-in .stit2{transform: translateY(-200px);opacity:0;animation: come-in 1.5s ease forwards;text-align:center}
+.sec4.come-in .stit3{transform: translateY(-200px);opacity:0;animation: come-in 2s ease forwards;text-align:center}
+.sec5.come-in .txt{transform: translateY(-150px);animation: come-in .8s ease forwards;}
+
+.sec6.come-in .s_togather .s_tit{transform: translateY(-150px);opacity:0;animation: come-in 2s ease forwards;}
+.sec6.come-in .s_togather .h_tit{transform: translateY(-150px);opacity:0;animation: come-in 1.8s ease forwards;}
+.sec6.come-in .s_togather .desc{transform: translateY(-150px);opacity:0;animation: come-in 1s ease forwards;}
+.sec6.come-in .s_togather .link{transform: translateY(-150px);opacity:0;animation: come-in .5s ease forwards;}
+
+.already-visible .bi,
+.already-visible .txt{transform: translateY(0) !important;animation: none !important;}
+
+.sec7{text-align: center;padding:27px 0 70px;background:#333}
+.sec7 .logo{display:inline-block;vertical-align: middle;width:73px;height:65px;background:url(/assets/images/mobile/well/logo.png) 0 0 no-repeat;background-size:73px auto}
+.sec7 .txt{display:block;vertical-align: middle;font-size:11px;color:#fff;font-weight:300;text-align: center;margin-top:25px;font-weight:100}
+
+
+.dd_fix{position:fixed;bottom:10px;width:100vw;z-index:10;text-align:center}
+.dd_fix img{width:340px}

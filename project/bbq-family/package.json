@@ -1,0 +1,49 @@
+{
+  "name": "bbq-family",
+  "version": "0.1.0",
+  "private": true,
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pretty": "yarn prettier 'src/**/*.{ts,js,tsx,jsx}' --write"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.16",
+    "@heroicons/react": "^2.0.18",
+    "@tremor/react": "3.5.0",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9",
+    "form-data": "^4.0.0",
+    "formidable": "^3.5.1",
+    "mem": "^10.0.0",
+    "next": "13.4.12",
+    "next-auth": "^4.22.3",
+    "react": "18.2.0",
+    "react-datepicker": "^4.16.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/formidable": "^3.4.5",
+    "@types/mem": "^4.2.0",
+    "@types/react-datepicker": "^4.15.0",
+    "@types/uuid": "^9.0.7",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "eslint-plugin-prettier": "^5.1.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.1.1"
+  }
+}

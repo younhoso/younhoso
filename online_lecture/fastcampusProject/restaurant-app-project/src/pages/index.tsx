@@ -10,6 +10,7 @@ import { StoreTypeCustom } from '@/types';
 export default function Home({ stores }: { stores: StoreTypeCustom[] }) {
   const [map, setMap] = useState<kakao.maps.Map | null>(null);
   const [currentStore, setCurrentStore] = useState<StoreTypeCustom | null>(null);
+  console.log('Stores:', stores); // 데이터가 제대로 전달되는지 확인하는 로그
 
   return (
     <>

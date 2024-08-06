@@ -1,0 +1,156 @@
+<style>
+.event section:last-of-type .content_wrap {padding:6rem 7.2rem;}
+#footer {margin-bottom:9.6rem;}
+
+@media (min-width: 1280px) {
+	.event section:first-of-type .content_wrap > p:last-of-type {font-size:3.6rem;}
+	.event section:last-of-type .content_wrap {padding:6rem 0 7.2rem 0; width:1280px;}
+	
+	#footer {margin-bottom:0;}
+}
+</style>
+
+<script src="/assets/js/event.js?11"></script>
+
+<div class="contents event event_sub">
+	<div class="top_banner">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/2/event/event_main.png" class="mo">
+			<img src="/assets/imgs/round/2/event/pc_event_main.png" class="pc">
+		</div>
+		<div class="txt_wrap">
+			<h2>EVENT</h2>
+			<p>같이 즐겨봐</p>
+		</div>
+	</div>
+	
+	<section>
+		<div class="content_wrap" style="padding-bottom:6rem;">
+			<h4 data-aos="fade">이달의 이벤트</h4>
+			<h2 data-aos="fade" class="fullhalf">쟈레쓰의 생일 파티에 온 걸 환영해!</h2>
+			
+			<p data-aos="fade" style="color:#707070; font-weight:400;">2022. 10. 27 – 2022. 12. 07</p>
+			
+			<div class="fullhalf mt40">
+				<div class="video_wrap">
+					<iframe src="https://player.vimeo.com/video/764395489?h=bc4da06e38" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<p class="tcenter" data-aos="fade-up" style="margin-top:2rem; font-size:2.2rem; font-weight:400;">'롯데GRS' 창립 43주년을 축하해주세요! <br>
+			롯데GRS하면 떠오르는 이미지는 무엇일까요??? <br><br>
+			떠오르는 이미지와 이유를 재치있게 남기신 <br>
+			20명의 맛둥이분들께 처음으로 선보이는 <br>
+			맛진만의 특별한 굿즈가 담긴 '맛둥키트'를 선물로 드립니다! <br><br>
+			맛Zine은 뻔한 선물은 드리지 않아용! 알고 있죠? <br>
+			따끈따끈 첫번째 맛둥 키트의 주인공은 바로 여러분!</p>
+		</div>
+	</section>
+	<section class="border_top">
+		<div class="content_wrap" style="padding:6rem 0;">
+			<h4 data-aos="fade-up">이벤트 경품</h4>
+			<h2 data-aos="fade-up">슈퍼 맛둥 키트 (20명)</h2>
+			<img src="/assets/imgs/round/4/event/event_01.png" class="fullin mt20" data-aos="fade-up">
+		</div>
+	</section>
+	<section class="border_top">
+		<div class="list_search" id="list_search">
+			<select id="order">
+				<option value="1">추천순</option>
+				<option value="2" selected>최신순</option>
+			</select>
+			<button onclick="EVENT.open_event_modal()">쟈레쓰의 생일 파티 <b>이벤트 참여하기</b></button>
+		</div>
+		<div class="content_wrap" id="list">
+			<div class="nodata">등록된 댓글이 없습니다.</div>
+			<div class="mo">
+				<ul>
+				</ul>
+			</div>
+			<div class="pc">
+				<ul>
+				</ul>
+				<ul>
+				</ul>
+			</div>
+			<div id="more">
+				<a href="javascript:EVENT.show_more()">댓글 더보기</a>
+			</div>
+		</div>
+		<button class="event_open" onclick="EVENT.open_event_modal()">이벤트 참여하기</button>
+	</section>
+	<!-- 
+	<section class="gray">
+		<div class="content_wrap">
+			<ul class="info" data-aos="fade-up">
+				<li>당첨자 안내 후 경품은 10월 7일 이내에 개인 연락처로 안내드립니다.</li>
+				<li>본 이벤트 경품 수령 시에는 제세공과금 (22%) 발행하며 개인정보 및 <br class="mo">제세공과금 입금 확인 후 순차적으로 경품을 발송해드립니다.</li>
+				<li>수집된 개인정보는 이벤트 안내 및 경품 증정 이외에는 사용되지 않습니다.</li>
+				<li>20일 이상 경품 미수령자는 대상에서 제외될 수 있는 점 참고 부탁드립니다.</li>
+			</ul>
+		</div>
+	</section>
+		 -->
+</div>
+
+<div class="event_modal">
+	<form id="event_form">
+		<div class="event_cont on">
+			<div class="content_wrap">
+				<?=$this->load->view('/event/agree.html',null,true)?>
+			</div>
+			<button type="button" class="submit" onclick="EVENT.apply_event()">동의하고 계속하기</button>
+		</div>
+		<div class="event_cont">
+			<div class="content_wrap">
+				<h4 data-aos="fade">EVENT 01</h4>
+				<h2 data-aos="fade">쟈레쓰의 생일 파티</h2>
+				<input type="hidden" name="round" value="<?=$this->round?>" id="round">
+				<input type="hidden" name="index" value="<?=$this->index?>" id="index">
+				<input type="hidden" name="title" value="쟈레쓰의 생일 파티" id="title">
+				<ul>
+					<li>
+						<label>닉네임<span>※ 댓글에 노출되는 이름입니다.</span></label>
+						<input type="text" name="user_nickname" id="user_nickname" placeholder="닉네임을 입력해주세요.">
+					</li>
+					<li>
+						<label>이름</label>
+						<input type="text" name="user_name" id="user_name" placeholder="이름을 입력해주세요.">
+					</li>
+					<li>
+						<label>부서/지점명</label>
+						<input type="text" name="department" id="department" placeholder="부서/지점명을 입력해주세요.">
+					</li>
+					<li>
+						<label>휴대폰 번호</label>
+						<input type="text" name="user_hp" id="user_hp" onchange="EVENT.only_number()"  placeholder="-없이 입력해주세요.">
+					</li>
+					<li>
+						<label>내용</label>
+						<textarea name="text"  id="text" placeholder="내용을 입력해주세요."></textarea>
+					</li>
+					<li>
+						<label class="mint justify">사진 첨부<span>최대 3장</span></label>
+						<div class="user_images">
+							<button class="image_select" type="button" id="select_button">
+								<img src="/assets/imgs/round/3/event/camera.png">
+							</button>
+						</div>
+					</li>
+				</ul>
+				<input name="select_file" id="select_file" accept="image/png, image/jpeg" type="file" multiple style="display:none;">
+				<p>※ 본 이벤트는 롯데GRS 임직원 및 점주 한정 참여 가능합니다.</p>
+			</div>
+			<div class="buttons">
+				<button type="button" class="back" onclick="EVENT.apply_back()">뒤로가기</button>
+				<button type="button" class="submit" onclick="EVENT.apply_event()">이벤트 응모하기</button>
+			</div>
+		</div>
+	</form>
+	<a class="close" href="javascript:EVENT.hide_event_modal();">
+			<img src="/assets/imgs/icon/close_b.svg"/>
+		</a>
+</div>
+
+
+

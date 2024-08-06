@@ -1,0 +1,37 @@
+/* ========== PC ========== */
+img {height: auto;}
+.post-trip-01 .post-image{flex: 1;}
+.post-trip-01 .post-image:nth-child(2){background-color: #F5F5F5;border: 1px solid #E8E8E8; border-top-left-radius: 20px; border-top-right-radius: 20px; position: relative;}
+.post-trip-01 .post-image:nth-child(2) .inner {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.post-trip-02 .titleInner{text-align: center;}
+.post-trip-02 .custom-number {color: #A4DFFC;font-size: 58px; font-style: normal;}
+.post-trip-03 .post-image {flex: 1;}
+.post-trip-05 img {margin: 0 auto;}
+.post-image-banner {padding: 260px 0; background:#ccc url('/assets/imgs/round/8/post/trip/bottom_banner_trip.png') center center/cover no-repeat;}
+.post-trip-02 section {max-width: 1060px; margin: 0 auto;}
+.post-trip-02 .prague .custum-col-1 {width: 50%; flex: 1;}
+.post-trip-02 .prague .custum-col-2 {width: 50%;}
+.post-trip-02 .tbilisi .custum-col-3 {width: 52%;}
+.post-trip-02 .tbilisi .custum-col-4 {width: 38%;}
+.post-trip-02 .budapest .custum-col-5 {width: 42%;}
+.post-trip-02 .budapest .custum-col-6 {width: 50%;}
+
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .post-trip-01 .post-image{flex: none;}
+  .post-trip-01 .post-image:nth-child(2) .inner{position: static;transform: none;}
+  .post-trip-02 .prague .custum-col-1 {width: 100%; flex: auto;}
+  .post-trip-02 .prague .custum-col-2 {width: 100%;}
+  .post-trip-02 .tbilisi .custum-col-3 {width: 100%;order: 2;}
+  .post-trip-02 .tbilisi .custum-col-4 {width: 100%;}
+  .post-trip-02 .budapest .custum-col-5 {width: 100%;}
+  .post-trip-02 .budapest .custum-col-6 {width: 100%;}
+  .post-trip-03 .post-image {flex: auto;}
+}
+
+/* bg-component */
+.bg-component .bg-wrap {position: relative;}
+.bg-component .bg-inner {width: 50%; height: 100%; display: flex;flex-direction: column;justify-content: center;position: absolute; right: 0;top: 0;}
+@media (max-width: 991px){
+  .bg-component .bg-inner {width: 100%; position: static;}
+}

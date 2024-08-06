@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('※'),
+    url('./Roboto-Regular.woff') format('woff'),
+    url('./Roboto-Regular.ttf') format('truetype');
+    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('※'),
+    url('./Roboto-Regular.woff') format('woff'),
+    url('./Roboto-Regular.ttf') format('truetype');
+    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local('※'),
+    url('./Roboto-Regular.woff') format('woff'),
+    url('./Roboto-Regular.ttf') format('truetype');
+    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 100;
+    src: url('./Pretendard-ExtraLight.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 200;
+    src: url('./Pretendard-Light.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 300;
+    src: url('./Pretendard-Thin.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 400;
+    src: url('./Pretendard-Regular.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 500;
+    src: url('./Pretendard-Medium.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 600;
+    src: url('./Pretendard-SemiBold.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 700;
+    src: url('./Pretendard-Bold.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 800;
+    src: url('./Pretendard-ExtraBold.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pretendard;
+    font-weight: 900;
+    src: url('./Pretendard-Black.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Gfs;
+    src: url('./GFSDidot-Regular.ttf');
+    font-display: swap;
+}

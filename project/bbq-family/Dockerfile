@@ -1,0 +1,24 @@
+FROM node:20-alpine as builder
+WORKDIR /usr/app
+COPY package.json yarn.lock* package-lock.json* .env ./
+
+RUN yarn install --immutable --immutable-cache --check-cache
+COPY ./ ./
+RUN yarn build
+
+FROM node:18-alpine as runner
+WORKDIR /usr/app
+COPY --from=builder /usr/app/package.json .
+COPY --from=builder /usr/app/yarn.lock* .
+COPY --from=builder /usr/app/package-lock.json* .
+COPY --from=builder /usr/app/next.config.js ./
+COPY --from=builder /usr/app/public ./public
+COPY --from=builder /usr/app/.next/standalone ./
+COPY --from=builder /usr/app/.next/static ./.next/static
+COPY --from=builder /usr/app/.env ./.env
+
+RUN sed -i 's/process.env.HOSTNAME/undefined/g' /usr/app/server.js
+
+EXPOSE 3000
+
+CMD ["node", "server.js"]

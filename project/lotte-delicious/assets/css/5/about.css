@@ -1,0 +1,288 @@
+/* VISUAL 영역 */
+.visual {
+  padding: 70px 0 0;
+}
+
+.visual .image {
+  height: 700px;
+  overflow: hidden;
+}
+
+.visual .image img {
+  width: 100vw;
+}
+
+.visual .container {
+  height: calc(100vh - 655px);
+  padding: 70px 0;
+  transform: translateY(-100px);
+  text-align: center;
+  background: #000;
+}
+
+.visual .container b {
+  font-size: 30px;
+  font-weight: 600;
+  color: #f2f2f2;
+}
+
+.visual .container p {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 200;
+  color: #f2f2f2;
+}
+
+/* HISTORY 영역 */
+.history {
+  padding: 12.2rem 0;
+  text-align: center;
+}
+
+.history .title {
+  font-size: 46px;
+  font-weight: 100;
+}
+
+.history .container {
+  margin: 2rem auto 1rem;
+  overflow: hidden;
+}
+
+.history .swiper-slide p {
+  transition: .2s;
+}
+
+.history .swiper-slide-prev p,
+.history .swiper-slide-next p {
+  opacity: 0;
+}
+
+.controller > div {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 38%;
+  z-index: 99;
+  box-shadow: 0 0 3rem rgba(255,255,255,.3);
+}
+
+.controller .prev {
+  left: 27.6%;
+}
+
+.controller .next {
+  right: 27.6%;
+}
+
+.controller .next img {
+  margin-left: 3px;
+}
+
+.history .btn {
+  width: 70px;
+  height: 70px;
+  padding: 0 3px 0 0;
+  border-radius: 50%;
+  background: #222222;
+}
+
+.history .btn img {
+  width: 12px;
+  height: 20px;
+  transition: .2s;
+}
+
+.history .btn:last-child img {
+  transform: rotate(180deg);
+}
+
+.history .swiper-slide {
+  aspect-ratio: 0.8/1;
+}
+
+.history .swiper-slide img {
+  transition: .3s;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.history .swiper-slide-prev img,
+.history .swiper-slide-next img {
+  transform: scale(.76);
+}
+
+.history .text b {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 600;
+  display: block;
+  padding-top: 1.6rem;
+}
+
+.history .text span {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.history .text.small span {
+  word-break: keep-all;
+}
+
+.mobile_banner img,
+.mobile_banner {
+  display: none;
+}
+
+@media (min-width: 1081px) {
+  .controller > div {
+    transition: .2s;
+    border: 1px solid #000;
+  }
+  
+  .controller > div:hover {
+    transition: .2s;
+    background: white;
+  }
+
+  .controller > div:hover img {
+    filter: invert(1);
+  }
+}
+
+@media (max-width: 1080px) {
+  .visual .image {
+  }
+
+  .history {
+    padding-top: 2rem;
+  }
+
+  .normal_banner {
+    display: none;
+  }
+
+  .visual .image {
+    height: auto;
+  }
+
+  .historySlider {
+    width: calc(100%);
+  }
+
+  .history .swiper-slide img {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .history {
+    padding-top: 4rem;
+  }
+  
+  .visual {
+    padding: 4.4rem 0;
+  }
+
+  .history .text {
+    width: calc(130%);
+    transform: translateX(-12%);
+    word-break: keep-all;
+  }
+
+  .history .swiper-slide-prev img,
+  body .history .swiper-slide-next img {
+    transform: scale(.8) !important;
+  }
+
+  .history .wrap {
+    width: 100% !important;
+  }
+
+  .visual .image {
+    overflow: visible;
+  }
+  .mobile_banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  body .about_banner {
+    z-index: 2 !important;
+    width: 80vw !important;
+    position: relative;
+    margin: 6rem auto 0 auto;
+    display: block;
+  }
+
+  .mobile_banner img:nth-child(1) {
+    display: block;
+  }
+
+  .controller .prev {
+    left: 1.5rem;
+  }
+  
+  .controller .next {
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .history .btn {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .history .text b {
+    display: block;
+    white-space: nowrap;
+    padding: 1.6rem 0;
+}
+
+  .history .text br {
+    display: none;
+  }
+
+  .history .btn img {
+    width: 1rem;
+    height: 1.4rem;
+  }
+
+  .mobile_banner > img {
+    top: -35%;
+  }
+
+  .controller > div {
+    top: 33%;
+  }
+
+  .controller .prev {
+    left: 1.5rem;
+  }
+  
+  .controller .next {
+    right: 1.5rem;
+  }
+
+  .controller .next {
+    right: 2rem;
+  }
+
+  .controller .prev {
+    left: 2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .controller .next {
+    right: 1.8rem;
+  }
+
+  .controller .prev {
+    left: 1.8rem;
+  }
+}

@@ -1,0 +1,65 @@
+.bg-F6F6F6{
+  background-color: #F6F6F6;
+}
+/* post-image */
+.post-image img {display:block; width:auto !important; max-width:100%;}
+@media (max-width:991px){
+  .post-image img {width:100% !important; margin:0 auto;}
+  }
+
+/* ========== PC ========== */
+img {height: auto;}
+.bg-component .bg-wrap {position: relative;}
+.bg-component .bg-inner {width: 50%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex;flex-direction: column;justify-content: center;position: absolute; right: 0;top: 0;}
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .bg-component .bg-inner {width: 100%; position: static;}
+}
+
+/* ========== PC ========== */
+.post-sport-02 .imgSize01 {width: 50%;}
+.post-sport-02 .imgSize02 {width: 43%;}
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .post-sport-02 .imgSize01 {width: 100%;}
+  .post-sport-02 .imgSize02 {width: 100%;}
+}
+
+/* ========== PC ========== */
+.post-sport-03 .post-sport-width  {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .post-sport-03 .post-image {width: 100%;}
+}
+
+.post-sport-04 .post-sport-width {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ========== PC ========== */
+.post-sport-05 > div {}
+.post-sport-05 .post-sport-width {
+  max-width: 1030px;
+  margin: 0 auto;
+}
+/* ========== Tablet ========== */
+@media (max-width: 991px){
+  .post-sport-05 > div {flex-direction: column;}
+}
+
+/* ========== PC ========== */
+.post-sport-08 {}
+.post-sport-08 .post-image {display: flex; gap: 20px; justify-content: center;}
+.post-sport-08 .post-sport-width {
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
+/* ========== PC ========== */
+.post-sport-07 .post-image {
+  display: flex;
+}

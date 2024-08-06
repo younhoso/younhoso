@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- js -->
+	<script src="/assets/js/jquery-3.4.1.min.js"></script>
+	<script src="/assets/js/image-uploader.js"></script>
+
+</head>
+
+<body>
+	<form action="url" enctype="multipart/form-data">
+	  <div class="input-images"></div>
+	</form>
+	<script>
+		$(function(){
+		  $('.input-images').imageUploader();
+		});
+	</script>
+</body>
+</html>

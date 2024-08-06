@@ -1,0 +1,477 @@
+.button {
+  width: 26rem;
+  padding: 1.1rem 1.4rem;
+  font-size: 1.6rem;
+  background-color: #222222;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 0.5px solid #222222;
+}
+
+.button:hover {
+  background: #666666;
+}
+
+.p_btn {
+  width: 100%;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  text-align: center;
+  font: normal normal bold 26px/30px Pretendard;
+  height: 66px;
+  padding: 17px;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  background: rgba(0, 0, 0, 0.77);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.popup {
+  width: 580px;
+  height: 684px;
+  background: #fff;
+  position: relative;
+  display: none;
+  position: absolute;
+  padding: 40px 40px 0;
+}
+
+@media (max-width: 500px) {
+  .popup {
+    width: 85vw !important;
+    max-height: 80vh;
+    padding: 40px 20px 0;
+  }
+  .popup_small {
+    width: 85vw !important;
+    height: 440px !important;
+  }
+}
+
+@media (min-width: 501px) {
+  .popup_small {
+    width: 520px !important;
+    height: 440px !important;
+  }
+}
+
+.popup_close {
+  width: 16px;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #c6c6c6;
+}
+@media(max-width: 500px){
+  .popup_close {
+    right: 30px;
+    top: 40px;
+  }
+}
+
+.event_popup_5 .popup_close {
+  position: relative;
+  top: auto;
+  right: auto;
+}
+
+.comment_image_popup .popup_close {
+  right: -0rem;
+  top: -0rem;
+}
+
+.comment_image_popup .swiper-pagination {
+  bottom: 0px !important;
+}
+
+.comment_image_popup .swiper-pagination span {
+  border-radius: 0;
+  width: 14px;
+  height: 4px;
+  cursor: pointer;
+}
+
+.comment_image_popup .swiper-pagination-bullet-active {
+  background: white;
+}
+
+.popup_top {
+  text-align: center;
+}
+
+.popup_top > div:first-child {
+  font: normal normal normal 16px/20px Pretendard;
+}
+.popup_top > div:nth-child(2) {
+  margin-top: 8px;
+  font: normal normal bold 24px/30px Pretendard;
+}
+.popup_top > div:last-child {
+  margin-top: 14px;
+  font: normal normal normal 14px/16px Pretendard;
+}
+
+.popup_content {
+  padding-top: 44px;
+}
+
+.check_box label {
+  display: flex;
+  align-items: center;
+}
+
+.check_box .checkbox_text {
+  margin-left: 10px;
+  font: normal normal normal 16px/24px Pretendard;
+}
+
+/* // 체크박스 인풋은 숨김처리 */
+.checkbox input {
+  display: none;
+}
+
+/* // 체크박스 테두리 */
+.checkbox_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+}
+
+/* // 체크박스 가상요소 */
+.checkbox_icon::before,
+.checkbox_icon::after {
+  content: "";
+  /* // 가상요소 필수값 */
+  display: inline-block;
+  /* // 크기 지정 */
+  width: 3px;
+  height: 0;
+  /* // 체크박스가 체크가 되면 변화값으로 커지게 하기 위해 (일단 화면에는 나타나지 않음) */
+  background-color: #222;
+  position: absolute;
+  /* // 체크박스 테두리 기준으로 위치조정 가능 */
+  transform-origin: left top;
+  /* // 기울기 지정, 기준점을 왼쪽 상단 모서리로 (기본값은 중심임) */
+}
+
+/* // 가상요소 before */
+.checkbox_icon::before {
+  top: 9px;
+  /* // 위치값 top */
+  left: 2px;
+  /* // 위치값 left */
+  transform: rotate(-45deg);
+  /* // 회전값 */
+}
+
+/* // 가상요소 after  */
+.checkbox_icon::after {
+  top: 14px;
+  /* // 위치값 top */
+  left: 10px;
+  /* // 위치값 left */
+  transform: rotate(-135deg);
+  /* // 회전값 */
+}
+
+/* // 체크되었을 때 가상요소 before */
+/* #N_big:checked ~* .checkbox_icon::before,
+#N_one:checked ~.check_under_list .checkbox_icon::before,
+#N_one:checked + div label .checkbox_icon::before, */
+#N_big:checked ~ .checkbox_icon::before,
+.checkbox input:checked + .checkbox_icon::before {
+  height: 9px;
+  /* // 높이값 지정 */
+}
+
+/* // 체크되었을 때 가상요소 after */
+/* #N_big:checked ~* .checkbox_icon::after,
+#N_one:checked ~.check_under_list .checkbox_icon::after,
+#N_one:checked + div label .checkbox_icon::after, */
+#N_big:checked ~ .checkbox_icon::after,
+.checkbox input:checked + .checkbox_icon::after {
+  height: 12px;
+  /* // 높이값 지정 */
+}
+
+.check_all_t {
+  font: normal normal bold 18px/24px Pretendard;
+}
+
+.check_info {
+  padding: 16px 0 33px 40px;
+  font: normal normal normal 14px/20px Pretendard;
+  letter-spacing: -0.35px;
+  word-break: keep-all;
+  color: #c6c6c6;
+}
+
+.popup_content .check_detail > b:first-child {
+  padding: 34px 0 14px 34px;
+  display: block;
+  font: normal normal bold 16px/30px Pretendard;
+}
+
+.arrow_btn {
+  width: 5%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #666666;
+}
+
+.check_list {
+  padding-top: 1rem;
+}
+
+.check_under_list {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 10px 34px 22px;
+}
+
+.warn {
+  padding: 58px 0 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.p_btn {
+  width: 100%;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  text-align: center;
+  font: normal normal bold 26px/30px Pretendard;
+  height: 66px;
+  padding: 17px;
+}
+
+.info_box_pop {
+  padding: 2.4rem 1.8rem;
+  border: 1px solid #c6c6c6;
+}
+
+.info_intro_item:not(:first-child) {
+  padding-top: 1.2rem;
+}
+
+.info_intro_item p {
+  padding: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.info_back_item {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #f2f2f2;
+}
+
+.info_back_item h3 {
+  line-height: 2rem;
+  word-break: keep-all;
+}
+
+.event_popup_3 .info_box_pop {
+  padding: 2rem;
+}
+
+.event_popup_2 .warn,
+.event_popup_3 .warn,
+.event_popup_4 .warn {
+  padding: 2rem 0 1rem;
+}
+
+.event_popup_5 {
+  width: 580px;
+  white-space: nowrap;
+}
+
+.event_form > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event_form > div:not(:first-child) {
+  padding-top: 2rem;
+  
+}
+
+.event_form > div > div {
+  width: 49%;
+}
+
+.event_form > div p {
+  font-size: 0.9rem;
+}
+
+.event_form > div textarea,
+.event_form > div input {
+  width: 100%;
+}
+
+.event_form textarea,
+.event_form input {
+  background: #efefef;
+  padding: 0.9rem 1.1rem;
+  border: none;
+}
+
+.event_form textarea {
+  height: 9rem;
+}
+
+.event_form textarea::placeholder,
+.event_form input::placeholder {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.9rem;
+}
+
+.photo_label {
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  background: #efefef;
+}
+
+.images img {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 3px;
+}
+
+.form_photo_div p {
+  font-size: 1rem !important;
+}
+
+.form_photo_div {
+  padding-top: 1rem !important;
+  flex-direction: column;
+}
+
+.event_popup_5 {
+  height: auto;
+}
+
+.pop_top {
+  width: 100%;
+  padding: 0.5rem 1.4rem;
+  font-size: 2rem;
+  background-color: #222222;
+  color: #fff;
+  border: 0.5px solid #222222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pop_top p {
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.event_popup_5 .p_con {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.event_popup_5 .p_con h2 {
+  font-size: 1.8rem;
+}
+
+.event_popup_5 .p_con p {
+  line-height: 2.5rem;
+  font-size: 1.8rem;
+}
+
+.comment_image_popup {
+  background: transparent;
+}
+
+.event_popup_5 {
+  padding: 0 !important;
+}
+
+.modal .rabbit_img {
+  width: 250px;
+  margin-top: 20px;
+}
+.modal_description_title {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #222222;
+  font-weight: bold;
+}
+.modal_description_body {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #666666;
+}
+
+.modal .user_images button {
+  border: 0;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  padding: 0;
+  background: #efefef;
+}
+
+.modal .user_images button img {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+}
+
+.modal .user_image {
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 1070px) {
+  .event_popup_5 {
+    width: 80%;
+  }
+
+  .p_con {
+    height: 100%;
+    overflow: scroll;
+    padding-bottom: 2rem;
+  }
+  .p_con::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+.event_form > div > div.comment_write_desc {
+  width: 100%;
+  height: 240px;
+}
+.event_form > div > div.comment_write_desc textarea{
+  height: 100%;
+}
+@media (max-width: 1070px) {
+  .comment_write_desc {}
+}

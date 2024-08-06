@@ -1,0 +1,505 @@
+<style>
+.event .reward {width:auto;}
+.event .reward li > div {margin-right:0;}
+.event .reward .img_wrap img {width:69rem; margin:0 auto;}
+.event .reward li {flex-direction:column;}
+.event .reward li span {color:#EF9900; font-size:4.3rem; font-weight:bold; margin-bottom:1.8rem;}
+.event .reward li span.toggle {display:block; position:relative; border-radius:1.6rem; background:#F9F9F9; border:1px solid #D6D6D6; padding:3.8rem 0 ; font-size:3.8rem; color:#000; opacity:1; font-weight:400; margin-bottom:8rem;}
+.event .list {display:flex; gap:65px;}
+.event .list dl {flex: 1;}
+.event .list dl dd:not(.none) {border-radius:1.2rem; border:1px solid #D6D6D6; box-shadow: 0px 3px 6px #00000029;}
+.event .list dl .head {padding:.8rem 0; font-size:3.2rem; font-weight:bold; border-bottom:1px solid #D6D6D6; text-align:center;}
+.event .list dl .body {padding:13rem 0;}
+.event .list dl .body .name {font-size:3.2rem; color:#000; margin-bottom:1.2rem; text-align:center; font-weight:bold;}
+.event .list dl .body .subject {font-size:4.6rem; text-align:center; font-weight:bold; margin-bottom:1.2rem;}
+.event .list dl .body .content {font-size:3.5rem; text-align:center;}
+.event .list dl dd.none img {display:block; width:32.3rem; margin:0 auto; margin-top:8rem;}
+.event .reward>li {position:relative; margin-bottom:15rem;}
+.event .reward>li:nth-child(1) .list {margin-top:-12rem; position:relative; z-index:1;}
+.event .reward>li:nth-child(1) .list dl {display:grid; grid-template-columns:1fr 1fr; gap:65px;}
+.event .reward>li:nth-child(2) .list dl {display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:65px;}
+.event .reward>li:nth-child(3) .list dl {display:flex; flex-direction:column; gap:65px;}
+.event .reward>li:nth-child(1) .list dl .head {color:#EF9900;}
+.event .reward>li:nth-child(2) .list dl .head {color:#425654;}
+.event .reward>li:nth-child(3) .list dl .head {color:#8C3115;}
+.event .reward>li:nth-child(3) .list {display:grid; grid-template-columns:1fr 1fr;}
+.event .reward>li:nth-child(1) .list dl .body .subject {color:#EF9900;}
+.event .reward>li:nth-child(2) .list dl .body .subject {color:#425654;}
+.event .reward>li:nth-child(3) .list dl .body .subject {color:#8C3115;}
+.event .reward>li:nth-child(1) span {color:#EF9900;}
+.event .reward>li:nth-child(2) span {color:#425654;}
+.event .reward>li:nth-child(3) span {color:#8C3115;}
+.event .reward>li:nth-child(1) span.toggle {color:#000;}
+.event .reward>li:nth-child(2) span.toggle {color:#000;}
+.event .reward>li:nth-child(3) span.toggle {color:#000;}
+.event .reward li img {border-radius:0;}
+.event .owner {display:grid; grid-template-columns:22rem auto; grid-template-rows:12rem auto; position:relative; z-index:2;}
+.event .owner img {border-radius:0;}
+.event .owner img:nth-child(1) {width:19.4rem; border-radius:1.2rem; box-shadow: 0px 3px 6px #00000029; transform:scaleX(-1); grid-column:1 / 2; grid-row:1 / 3; margin-top:6.6rem;}
+.event .owner img:nth-child(2) {width:56rem; grid-column:2 / 3; grid-row:1 / 2;}
+.event .owner img:nth-child(3) {width:41.2rem; grid-column:2 / 3; grid-row:2 / 3;}
+.event .benefit {justify-content:center; padding-bottom:8rem; position:relative; display:grid;}
+.event .benefit img {width:1087px; border-radius:2rem; grid-column:1 / 2; grid-row:1 / 2;}
+.event .benefit span {color:#fff; width:100%; height:100%; font-size:3.8rem; display:flex; align-items:center; justify-content:center; grid-column:1 / 2; grid-row:1 / 2;}
+
+@media (max-width:1024px) {
+	.event .reward .img_wrap img {width:auto; max-width:80%;}
+	.event .reward li span {font-size:2.2rem;}
+	.event .reward li span.toggle {font-size:2rem; padding:2rem; margin-bottom:4rem;}
+	.event .owner {grid-template-columns:11rem auto; grid-template-rows:6.4rem auto;}
+	.event .owner img:nth-child(1) {width:9.6rem; margin-top:3.6rem;}
+	.event .owner img:nth-child(2) {width:28.5rem;}
+	.event .owner img:nth-child(3) {width:21.1rem;}
+	.event .list dl .head {font-size:1.6rem;}
+	.event .list dl .body {padding:3rem 0 6rem 0;}
+	.event .list dl .body .name {font-size:1.6rem;}
+	.event .list dl .body .subject {font-size:2.4rem;}
+	.event .list dl .body .content {font-size:1.6rem;}
+	.event .reward>li:nth-child(1) .list {margin-top:-5rem;}
+	.event .reward>li:nth-child(1) .list dl {gap:3.2rem;}
+	.event .reward>li:nth-child(2) .list dl {gap:3.2rem;}
+	.event .reward>li:nth-child(3) .list dl dd {gap:3.2rem;}
+	.event .list {gap:3.2rem;}
+	.event .reward>li:nth-child(3) .list dl {gap:3.2rem;}
+	.event .list dl dd.none img {width:19.4rem; margin-top:4rem;}
+	.event .benefit {padding-top:5rem; padding-bottom:0;}
+	.event .benefit img {width:100%;}
+	.event .benefit span {font-size:2.2rem;}
+}
+
+</style>
+<div class="contents event">
+	<div class="top_banner">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/event/event_main.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/event/pc_event_main.png" class="pc">
+		</div>
+		<div class="txt_wrap">
+			<h2>EVENT</h2>
+			<p>같이 즐겨봐</p>
+		</div>
+	</div>
+	
+	<section>
+		<div class="content_wrap">
+			<h4 data-aos="fade">마감된 이벤트</h4>
+			<h2 data-aos="fade">맛ZINE 탄생일 축하메시지 <br>당첨자 발표</h2>
+			
+			<p data-aos="fade">‘맛진’에게 축하메시지를 남겨주신 모든 분들 감사드립니다 <br>앞으로도 맛ZINE에 많은 관심과 참여 부탁드립니다!</p>
+			<p data-aos="fade">※ 이벤트 당첨자 개별 안내 예정</p>
+			
+			<ul class="reward">
+				<li>
+					<div>
+						<div class="img_wrap">
+							<img data-aos="fade-up" src="/assets/imgs/icon/winner1.svg?1">
+						</div>
+						<span data-aos="fade-up">애사심 최상 당첨자 (2명)</span>
+						<span class="toggle" data-aos="fade-up">시그니엘 부산 1박 2일 숙박권 <br>부산 롯데월드 자유이용권 <br>롯데백화점 상품권 30만원권</span>
+					</div>
+					<div class="owner" data-aos="fade-up">
+						<img src="/assets/imgs/round/<?=$this->round?>/event/owner.png">
+						<img src="/assets/imgs/round/<?=$this->round?>/event/balloon111.svg">
+						<img src="/assets/imgs/round/<?=$this->round?>/event/balloon222.svg">
+					</div>
+					<div class="list">
+						<dl>
+							<dd data-aos="fade-up">
+								<div class="head">
+									애사심 최상
+								</div>
+								<div class="body">
+									<div class="name">이**
+									</div>
+									<div class="subject">맛진의 탄생을 진심으로 <br>축하드립니당 (●'◡'●)⭐⭐⭐⭐⭐
+									</div>
+									<div class="content">MZ세대를 투영한 여러가지 <br>
+									콘텐츠로 세대 간의 원활한 소통을 위해 <br>
+									멋지게 태어난 우리 맛진 ! <br>
+									진짜 진짜 축하해 (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ <br>
+									활기차고 새로운 시선으로 우리 회사를 <br>
+									바라보는 MZ 세대의 <br>
+									당찬 뉴스들 잘 봤어요 ! <br><br>
+									같은 MZ세대로 나도 우리 회사와 <br>
+									소통하도록 더 노력할게요 ㅎㅅㅎ <br>
+									그리고 우리 맛진이 태어난 의도가 <br>
+									흐트러지지 않고 몇 년이 지나도 <br>
+									꾸준히 유지되어서 우리 회사 내에 <br>
+									모든 임원들이 자유롭게 소통하고 <br>
+									마찰이 최소화 될 수 있도록 함께 <br>
+									힘 써서 꾸려나갔으면 <br>
+									좋겠습니당 ✪ ω ✪ ???????? <br>
+									맛진, 롯데 GRS 그리고 <br>
+									MZ세대 화이팅 ☆* ╰(*°▽°*)╯⭐⭐
+									</div>
+								</div>
+							</dd>
+							<dd data-aos="fade-up">
+								<div class="head">
+									애사심 최상
+								</div>
+								<div class="body">
+									<div class="name">유**
+									</div>
+									<div class="subject">사보가 맛진으로 <br>다시 태어나 <br>정말 너무 축하합니다.
+									</div>
+									<div class="content">사보가 없어진지도 많은 시간이 지났었죠 <br>
+									사보를 보며 <br>
+									'아 나도 이 사보에서 한 획을 긋고싶다' <br>
+									라는 생각을 했었고 많은 이야기를 <br>
+									볼 수있어 너무 새로웠습니다. <br>
+									이제 맛진으로 다시 볼 수 있게되어 <br>
+									정말 너무 반갑고 축하합니다. <br><br>
+									이제 다시 나올때가 되었는데 <br>
+									하는 순간 새롭게 태어났네요 <br>
+									언젠가 이 맛진에 <br>
+									우리점포의 이름이 나올때까지, <br>
+									우리 점포 직원들의 노력들이 <br>
+									담겨질때까지 열심히 해보려고합니다. <br>
+									이렇게 다시한번 제가 맡고있는 <br>
+									일이 뿌듯하고 더 욕심이 생기네요 <br>
+									2개월에 한번씩 저에게 응원과 <br>
+									보람을 주는 맛진이 되어주세요 <br>
+									새로운 맛진 각자의 자리에서 <br>
+									한 획을 그어보아요 이글이 <br>
+									맛진을 기획하신 분들께도 <br>
+									응원과 보람이 되기를.. <br>
+									축하합니다, 맛ZINE
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li>
+					<div>
+						<div class="img_wrap">
+							<img data-aos="fade-up" src="/assets/imgs/icon/winner2.svg">
+						</div>
+						<span data-aos="fade-up">센스가 비상 당첨자 (4명)</span>
+						<span class="toggle" data-aos="fade-up">롯데백화점 상품권 10만원권</span>
+					</div>
+					<div class="list">
+						<dl>
+							<dd data-aos="fade-up">
+								<div class="head">
+									센스가 비상
+								</div>
+								<div class="body">
+									<div class="name">문**
+									</div>
+									<div class="subject">우리가 최고 맛ZINE?! <br>롯데가 최고 맛ZINE?! <br>트렌드 하면 맛ZINE?!
+									</div>
+									<div class="content">
+										다들 맛ZINE 응원하는거 맛ZINE?!<br>
+										맛ZINE 응원하면서 그랜절 올립니다<br>
+										<div>
+										&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅣ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅣ<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅣ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅣ<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅣ&nbsp;&nbsp;&nbsp;&nbsp;ㅣ<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅣ<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅣ<br>                                              
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;／&nbsp;&nbsp;＼<br>                                         
+										&nbsp;／&nbsp;&nbsp;&nbsp;(&nbsp;&nbsp;-_-&nbsp;&nbsp;)&nbsp;&nbsp;＼<br>                                   
+										＼&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;／<br>                                  
+										</div>
+									</div>
+								</div>
+							</dd>
+							<dd data-aos="fade-up">
+								<div class="head">
+									센스가 비상
+								</div>
+								<div class="body">
+									<div class="name">안**
+									</div>
+									<div class="subject">맛: 맛ZINE아 앗뇽★ <br>나는 오늘 부터 <br>너의 팬클럽이 되기로 했어
+									</div>
+									<div class="content">그런 의미에서 <br>
+									Z : Zㅣ얼 너의 탄생일을 <br>
+									넘흐 넘흐x1000 축하해 >_< <br>
+									I : IU 삼촌 팬클럽만큼의 파급력을 <br>
+									훗날 너가 가질 수 있도록 <br>
+									N : NAVER 그린팩토리마냥 <br>
+									너가 반짝반짝 빛날 수 있도록 <br>
+									E : E자리에서 나는 <br>
+									항상 널 응원할꼬야~ ♥ <br><br>
+									- 맛ZINE 팬클럽 회장이 되고 싶은 찐팬 1호-
+									</div>
+								</div>
+							</dd>
+							<dd data-aos="fade-up">
+								<div class="head">
+									센스가 비상
+								</div>
+								<div class="body">
+									<div class="name">지**
+									</div>
+									<div class="subject">안녕 맛진? <br>난 맛박사야
+									</div>
+									<div class="content">너의 탄생을 축하하고,, 고맙고,, 미안하고,, <br>
+									인생은 혼자야.. 즐겨..이자식아.. ! <br>
+									파티는 어디서하니 좌표좀 찍어줄래? <br>
+									운전잘하거든.. 파티에서 날 빼놓을순 없지. <br>
+									인생 최고의 탄생파티를 <br>
+									해줄게 혹시 장기자랑 하니? <br>
+									하지 않아도 나와 함께하는 <br>
+									댄동출신 멤버있어서 <br>
+									데리고 가서 춤으로 혼을 쏘-옥 빼줄게.. <br>
+									화려한 조명이 나를 감쌀때 까지.. <br>
+									마스크는 쓰고있을게.. <br>
+									얼굴보고 실망할까봐 무튼 난 휴가갈때 <br>
+									시그니엘 호텔 가고싶어 <br>
+									맛진아 이것만은 알아줘 난 너의 탄생일은 <br>
+									누구보다 제일 축하하는중이야.. <br>
+									난 열심히 일하면서 맛진 생각뿐인걸 <br>
+									모르는 사람이 없어 <br>
+									손님들도 다 알 정도로 <br>
+									너의 탄생일을 축하중이거든 <br>
+									다시한번 말하지만 잊지마 <br>
+									누구보다 너의 탄생일을 축하하고 있고, <br>
+									난 시그니엘 부산으로 떠나고 싶어,,! <br>
+									여름휴가 부산 가거든~_~ <br>
+									그래그래 친구 없으면 <br>
+									카톡하고 맛진 탄생일 축하한다,,! HBD:)♥
+									</div>
+								</div>
+							</dd>
+							<dd data-aos="fade-up">
+								<div class="head">
+									센스가 비상
+								</div>
+								<div class="body">
+									<div class="name">문**
+									</div>
+									<div class="subject">맛진이 안뇽 <br>ヾ(≧▽≦*)o
+									</div>
+									<div class="content">29일날 생일이였다니,,, <br>
+									늦게 알아서 미안해 <br>
+									맛진아,,,,,,,, 일찍 알았담,,, <br>
+									ㄴH가 근사한 선물이라도 <br>
+									준비했을텐데 못난 나의 사과를 <br>
+									받아주렴 ????????❤???? <br>
+									그리고 생일이였는데 <br>
+									역으로 이렇게 선물을 쏘다니 <br>
+									넌 정말 날개 없는 1004...✨ <br><br>
+									이렇게 대놓고 <br>
+									사심을 표하면 안되겠지만,,, <br>
+									만약에,,, 정말 만~~약에 <br>
+									내가 당첨이 된다면 <br>
+									정말 맨날 맨날 보러 올게 <br>
+									맛진아 >.< 늦었지만 생일 축하했 <br>
+									앞으로도 좋은 이야기 <br>
+									많이 들려주고 우리 회사 <br>
+									이렇게 열심히 한다!라고 <br>
+									널리널리 알려조 ヽ(✿ﾟ▽ﾟ)ノ <br>
+									맛진이 빠이팅????????
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li>
+					<div>
+						<div class="img_wrap">
+							<img data-aos="fade-up" src="/assets/imgs/icon/winner3.svg?1">
+						</div>
+						<span data-aos="fade-up">멘트가 환상 당첨자(4명)</span>
+						<span class="toggle" data-aos="fade-up">모바일 금액권 10만원권</span>
+					</div>
+					<div class="list">
+						<dl>
+							<dd data-aos="fade-up">
+								<div class="head">
+									멘트가 환상
+								</div>
+								<div class="body">
+									<div class="name">정**
+									</div>
+									<div class="subject">"맛ZINE"의 <br>"멋ZINE" 탄생일을 <br>축하합니다!!
+									</div>
+									<div class="content">세상에서 가장 맛있는 이야기가 <br>
+									가득한 매거진이 생겼다는 <br>
+									소식을 이제서야 접하다니.. <br>
+									자축파티 했다는 소식에 냉큼! <br>
+									달려와서 축하메세지 하나 남깁니다. <br>
+									오랜 역사를 자랑하는 롯데리아! <br>
+									그동안, 다양한 시도를 많이 해온걸 <br>
+									옆에서 직접 봐온 저로써 이번 <br>
+									"맛ZINE"의 탄생은 정말 획기적이네요!! <br>
+									롯데GRS의 사내 매거진으로써 앞으로도 <br>
+									다양한 소식들이 들려오길 바래봅니당!! <br>
+									아~ 그리고 맛ZINE! <br>
+									저도 축하해주세요~ ㅎㅎ <br><br>
+									2009년 20살 때 롯데리아 알바를 처음 <br>
+									시작해서 대학 다니던 4년 내내 대학보다도 <br>
+									더 출석체크를 잘하며 알바를 하던 <br>
+									제가 7년전, 롯데리아 점포관리자 <br>
+									양성과정에서 만난 제 평생의 짝꿍과 <br>
+									올해 결혼합니다!! <br>
+									롯데리아라는 같은 공통점이 있어서 <br>
+									더욱 더 끈끈한 저희가 되지않았나 싶어요~ <br>
+									"맛ZINE"도 저희 전국에 수많은 롯데리아 <br>
+									점포들과 본사GRS가 함께 어우러지는 <br>
+									소통의 장이 되었으면 좋겠어요! <br>
+									많은 활동 기대해볼께요!! <br>
+									탄생을 진심으로 축하드립니다!^^
+									</div>
+								</div>
+							</dd>
+							<dd data-aos="fade-up">
+								<div class="head">
+									멘트가 환상
+								</div>
+								<div class="body">
+									<div class="name">한**
+									</div>
+									<div class="subject">새로운 맛ZINE 탄생을 <br>축하하는 의미에서 <br>2행시를 지어봅니다!
+									</div>
+									<div class="content">맛 : 맛만 있는 줄 알았더니 <br>
+									진 : ZINE심으로 재밌는 구성! <br>
+									ZINE짜배기 정보에! <br>
+									ZINE솔한 인터뷰도 있는! <br>
+									GRS의 맛ZINE! 오픈하느냐 <br>
+									모두 고생많으셨습니다! 화이팅!
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd data-aos="fade-up">
+								<div class="head">
+									멘트가 환상
+								</div>
+								<div class="body">
+									<div class="name">조**
+									</div>
+									<div class="subject">맛: 맛있는 매거진 <br>롯데GRS의 맛진을 <br>이젠 인터넷으로 볼수있대!
+									</div>
+									<div class="content">진: 진즉 알고있었어.. <br>
+									아직 PC통신쓰는거 아니지?? <br>
+									롯데GRS의 맛있는 이야기를 전해줄 맛진♡ <br>
+									웹진으로의 창간 축하드립니다♡ <br>
+									이제 편하게 인터넷으로 <br>
+									볼수있어서 너무 좋아요♡ <br>
+									격월 발행은 사치다!!!! <br>
+									인기 엄청 많아져서 매월 발행으로 <br>
+									바뀌는 그날까지 열심히 읽고 <br>
+									유튜브 구독 좋아요 <br>
+									알람설정에 응원까지 보탬이 될게요♡ <br>
+									앞으로도 재밌고 맛있는 <br>
+									이야기 기대할게요!! <br>
+									화이팅!!!!!!!!!!!!!!!!
+									</div>
+								</div>
+							</dd>
+							<dd data-aos="fade-up">
+								<div class="head">
+									멘트가 환상
+								</div>
+								<div class="body">
+									<div class="name">허**
+									</div>
+									<div class="subject">안녕! 진아! 늦었지만 <br>생일을 진심으로 축하해 :)
+									</div>
+									<div class="content">맛'의 TASTY + 매거'진'의 ZINE = '맛ZINE' <br>
+									롯데GRS만의 맛있는 이야기로 <br>
+									가득 채운 사내웹진 맛진... <br>
+									너무기대되! 두달에 한번만 주지말고 <br>
+									한달에 한번씩 소식주면안될까? <br>
+									누구보다도 맛있는 이야기를 <br>
+									기다리고 있을게! <br>
+									사내에도 홍보가 많이 되고 <br>
+									주변에도 자랑할 수 있는 <br>
+									우리 GRS가 널리널리 소문 났음 좋겠어! <br>
+									맛진의 맛있는 <br>
+									6월 이야기 손꼽아 기다릴게 :) <br>
+									탄생 축하해!!!!!!!! ♥
+									</div>
+								</div>
+							</dd>
+							<dd class="none" data-aos="fade-up">
+								<img src="/assets/imgs/round/<?=$this->round?>/event/lotte_pc.png">
+							</dd>
+						</dl>
+					</div>
+				</li>
+			</ul>
+			<p></p>
+		</div>
+	</section>
+	<section>
+		<div class="content_wrap">
+			<h4 data-aos="fade">맛ZINE 다음 호 이벤트 경품 미리보기</h4>
+			<h2 data-aos="fade">다음 이벤트의 당첨자는 바로 당신!</h2>
+			
+			<div class="benefit">
+				<img src="/assets/imgs/round/<?=$this->round?>/event/nintendo.png">
+				<span>6월에 만나요 ♥</span>
+			</div>
+		</div>
+	</section>
+	
+</div>
+
+<script>
+$(document).ready(function(){
+	$('body').on('mousedown',function(){
+		if( $(event.target).closest('.event_modal').length == 0 ) {
+			$('.event_modal').hide();
+		}
+	})
+});
+function toggle_reward(target) {
+	var on = false;
+	if( $(target).hasClass('on') ) {
+		on = true;
+	}
+	$('.reward .on').removeClass('on');
+	if( !on ) {
+		$(target).addClass('on');
+	}
+}
+function only_number() {
+	var hp = $('#user_hp').val().replace(/[^0-9]/gi,'');
+	$('#user_hp').val(hp);
+}
+function open_event_modal() {
+	$('.event_modal').show();
+	event.preventDefault();
+	event.stopPropagation();
+}
+function apply_event() {
+	
+	if( $('#user_name').val() == '' ) {
+		alert('이름을 입력해주세요.');
+		$('#user_name').focus();
+		return;
+	}
+	
+	var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+	var hp = $('#user_hp').val().replace(/-/gi,'');
+    if (regPhone.test(hp) === false) {
+    	alert('휴대번호를 정확하게 입력해주세요.');
+    	return;
+    }
+	
+	if( $('#text').val().length < 5 ) {
+		alert('축하 메시지를 최소 5자 이상 입력해주세요.');
+		$('#text').focus();
+		return;
+	}
+
+	$.post('/event/apply',$('#event_form').serialize(),function(result){
+		var r = JSON.parse(result);
+		
+		alert(r.msg);
+		
+		if( r.result ) {
+			location.reload();
+		}
+	});
+}
+</script>

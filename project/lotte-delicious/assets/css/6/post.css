@@ -1,0 +1,45 @@
+.label{
+  margin-top:94px;
+  font: normal normal bold 36px/36px Pretendard;
+  display: block;
+  position: relative;
+  
+}
+
+.label::after{
+  position:absolute;
+  content: '';
+  width: 264px;
+  height: 4px;
+  background-color: black;
+  right: 0;
+  bottom:0;
+
+}
+.item_wrapper{
+  display: flex;
+  margin:32px 0;
+  flex-direction: column;
+  gap:40px;
+}
+
+.item{
+  display: flex;
+  padding-left: 16px;
+ gap:20px;
+ align-items: center;
+}
+
+.item > img {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+}
+
+.item > div >div:first-child{
+  font: normal normal bold 22px/26px Pretendard;
+}
+.item > div >div:last-child{
+  font: normal normal normal 16px/53px Pretendard;
+color: #C6C6C6;
+}

@@ -1,0 +1,136 @@
+<?php echo "test"; ?>
+<div id="container">
+    <div class="sub_tit">
+        <h1>아이러브아프리카(ILA)<strong>・ILA소식</strong></h1>
+    </div>
+    <div class="sub_cont">
+        <div class="h_desc">
+            아이러브아프리카는 아프리카 대륙을 전문으로 돕는 <br>
+            <strong>아프리카전문국제구호개발 비정부기구</strong><br>
+            <strong>(NGO, Non Governmental Organization)</strong>입니다.
+        </div>
+        <?php include APPPATH."views/$nation/desk/news/sub_tab.php"; ?>
+        <div class="sub_cont_s">
+            <div class="m_left">
+                <h3>특별자료실</h3>
+            </div>
+            <div class="m_ila_board">
+                <div class="wrap_vpub">
+                    <div id="pub_tab1" class="pub_tab" style="display:block">
+                        <div class="tab vpub">
+                            <ul>
+                                <li class="active"><a href="javascript:void(0)" onclick="fnTabPub(1)">단체소개책 &amp; 연간사업소개책</a></li>
+                                <li><a href="javascript:void(0)" onclick="fnTabPub(2)">연차보고서</a></li>
+                                <li><a href="javascript:void(0)" class="alt" onclick="fnTabPub(3)">국세청 공익법인공시 <span class="small">연간기부금 및 활용실적명세서</span></a></li>
+                            </ul>
+                        </div>
+                        
+                        <div id="issuu" class="issuu_wrap">
+                            <iframe src="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=_____________________________" id="ifrIssuu2" name="ifrIssuu2" frameborder="0" width="872" height="550" title="issuu.com" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="select_pub">
+                            <select name="selIssuu2" id="selIssuu2">
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=_____________________________">단체소개책(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=____9_optimize">단체소개책(영문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2019-2021___________________________">2019-2021 연간사업소개책(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2018-2020__________________________">2018-2020 연간사업소개책(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2018-2020___________________________4fa336336317cb">2018-2020 연간사업소개책(영문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2017-2019_____kor_180406&p=1">2017-2019 연간사업소개책(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2017-2019_____180406_eng">2017-2019 연간사업소개책(영문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=web_4f82e9bc72bb95">2016 연간사업소개책(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=2016_______________________________">2016 연간사업소개책(영문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=_______4c0fd56ba84c7e">2015 연간사업소개책(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=2015_______________________________">2015 연간사업소개책(영문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=160414________2014_i_love_africa_e-">2014 연간사업소개책(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=160414________2014_i_love_africa_e-_6adb4a4654dcb4">2014 연간사업소개책(영문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=2013_______________________________">2013 연간사업소개책(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica7&d=_________-_________-20150901">2013 연간사업소개책(영문)</option>
+                            </select>
+                            <span class="desc">※ 좌측 메뉴를 선택하시면 해당 자료를 보실 수 있습니다.</span>
+                        </div>
+                    </div>
+                    <div id="pub_tab2" class="pub_tab">
+                        <div class="tab vpub">
+                            <ul>
+                                <li><a href="javascript:void(0)" onclick="fnTabPub(1)">단체소개책 &amp; 연간사업소개책</a></li>
+                                <li class="active"><a href="javascript:void(0)" onclick="fnTabPub(2)">연차보고서</a></li>
+                                <li><a href="javascript:void(0)" class="alt" onclick="fnTabPub(3)">국세청 공익법인공시 <span class="small">연간기부금 및 활용실적명세서</span></a></li>
+                            </ul>
+                        </div>
+                        
+                        <div id="issuu" class="issuu_wrap">
+                            <iframe src="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2019____________________" id="ifrIssuu" name="ifrIssuu" frameborder="0" width="872" height="550" title="issuu.com" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                       <div class="select_pub">
+                            <select name="selIssuu" id="selIssuu">
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2019____________________">2019 연차보고서(국문)</option>
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=____15">2018 연차보고서(영문)</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=____7">2018 연차보고서(국문)</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=20170228__________optimize">2017 연차보고서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2016_____________________optimize">2016 연차보고서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2015_____________________optimize">2015 연차보고서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2014_____________________optimize">2014 연차보고서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2013______20140305__optimize">2013 연차보고서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2012_____________________2013.02.28">2012 연차보고서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=____8">2011 연차보고서</option>
+                            </select>
+                            <span class="desc">※ 좌측 메뉴를 선택하시면 해당 자료를 보실 수 있습니다.</span>
+                        </div>
+                    </div>
+                    <div id="pub_tab3" class="pub_tab">
+                        <div class="tab vpub">
+                            <ul>
+                                <li><a href="javascript:void(0)" onclick="fnTabPub(1)">단체소개책 &amp; 연간사업소개책</a></li>
+                                <li><a href="javascript:void(0)" onclick="fnTabPub(2)">연차보고서</a></li>
+                                <li class="active"><a href="javascript:void(0)" class="alt" onclick="fnTabPub(3)">국세청 공익법인공시 <span class="small">연간기부금 및 활용실적명세서</span></a></li>
+                            </ul>
+                        </div>
+                        
+                        <div id="issuu" class="issuu_wrap">
+                            <iframe src="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2019_____________________-___-____________________" id="ifrIssuu3" name="ifrIssuu3" frameborder="0" width="872" height="550" title="issuu.com" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="select_pub">
+                            <select name="selIssuu3" id="selIssuu3">
+	                            <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2019_____________________-___-____________________">2019 연간 기부금 모금액 및 활용실적 명세서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2018______________________">2018 연간 기부금 모금액 및 활용실적 명세서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2017______________________">2017 연간 기부금 모금액 및 활용실적 명세서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2016______________________">2016 연간 기부금 모금액 및 활용실적 명세서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2015______________________">2015 연간 기부금 모금액 및 활용실적 명세서</option>
+                                <option value="https://e.issuu.com/anonymous-embed.html?u=iloveafrica1&d=2014_______________________1">2014 연간 기부금 모금액 및 활용실적 명세서</option>
+                            </select>
+                            <span class="desc">※ 좌측 메뉴를 선택하시면 해당 자료를 보실 수 있습니다.</span>
+                        </div>
+                    </div>
+                </div>
+                <br /><br /><br />
+
+                <div class="tit_pub2">아이러브아프리카 CI 다운로드</div>
+                <div class="ci_download" style="margin-bottom:50px;">
+                    <a href="/assets/res/FIN_ILA-logo.ai" class="b1">AI 파일 다운로드 <em class="ic">⬇</em></a>
+                    <a href="/index.php/news/logoDownload" class="b2">JPG 파일 다운로드 <em class="ic">⬇</em></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+	$('#selIssuu').on('change',function(){
+		$('#ifrIssuu').attr('src',$(this).val())
+    });
+    $('#selIssuu2').on('change',function(){
+		$('#ifrIssuu2').attr('src',$(this).val())
+	});
+	$('#selIssuu3').on('change',function(){
+		$('#ifrIssuu3').attr('src',$(this).val())
+	});
+
+    //$('#ifrIssuu').attr('src', "https://e.issuu.com/embed.html?identifier=4avjsqrfx9l4&amp;embedType=script#15812229/54168489");
+    
+});
+
+function fnTabPub(n){
+	$('.pub_tab').hide();
+	$('#pub_tab'+n).show();
+}
+</script>

@@ -1,0 +1,90 @@
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+.pc .content {
+  position: absolute;
+  top: 32%;
+  left: 10%;
+}
+.pc .content img {
+  width: 635px;
+}
+.mobile .content img {
+  width: 288px;
+}
+.pc .content .bold {
+  font-weight: bold;
+  letter-spacing: -0.6px;
+  font-size: 24px;
+  color: #f2f2f2;
+  padding-top: 66px;
+  padding-bottom: 17px;
+  padding-left: 36px;
+}
+.pc .content .normal {
+  letter-spacing: -0.5px;
+  font-size: 20px;
+  color: #f2f2f2;
+  font-weight: 400;
+  padding-left: 36px;
+}
+
+.star1 {
+  position: absolute;
+  width: 200px;
+  height: 165px;
+  top: 182px;
+  left: 30%;
+}
+.star2 {
+  position: absolute;
+  width: 60px;
+  height: 129px;
+  left: 5%;
+  bottom: 24%;
+}
+.star3 {
+  position: absolute;
+  width: 42px;
+  height: 93px;
+  left: 12%;
+  bottom: 12%;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .pc {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    margin-top: 53px;
+	background-size:cover;
+	background-position:center;
+  }
+  .mobile .content .bold {
+    letter-spacing: -0.4px;
+    font-size: 16px;
+    color: #f2f2f2;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .mobile .content .normal {
+    letter-spacing: -0.3px;
+    font-size: 12px;
+    color: #f2f2f2;
+    line-height: 1.4;
+  }
+  .mobile .content {
+    text-align: center;
+    padding-top: 74px;
+  }
+}

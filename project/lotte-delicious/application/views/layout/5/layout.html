@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" id="meta_og_title" content="맛진 TASTYZINE">
+	<meta property="og:url" id="meta_og_url" content="http://tastyzine.co.kr/">
+	<meta property="og:image" content="/assets/imgs/round/<?=$this->round?>/SEO.png">
+	<meta property="og:description" id="meta_og_description" content="세상에서 가장 맛있는 매거진">
+	<meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="/assets/lib/aos/dist/aos.css">
+  <link rel="stylesheet" href="/assets/font/font.css">
+  <link rel="stylesheet" href="/assets/css/5/style.css">
+  <link rel="icon" href="/assets/imgs/pavicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="/assets/lib/aos/dist/aos.js"></script>
+  <script src="/assets/js/global.js"></script>
+  <title>롯데 맛진</title>
+</head>
+<body>
+  <div class="top_button flex jcc aic pointer" onclick="window.scrollTo(0,0)">
+    <img src="/assets/imgs/icon/back_w.svg" alt="#" title="#">
+  </div>
+
+  <!-- HEADER 영역 -->
+  <header>
+    <div class="wrap flex jcsb">
+      <a href="http://www.tastyzine.co.kr/main/index/5" class="logo">
+        <img src="/assets/imgs/round/5/header/logo_white.png" alt="#" title="#">
+      </a>
+
+      <div class="menu flex aic en">
+        <a href="/about/index/<?= $this->round ?>">ABOUT</a>
+        <a href="/post/index/<?= $this->round ?>">POST</a>
+        <a href="/video/index/<?= $this->round ?>">VIDEO</a>
+        <a href="/news/index/<?= $this->round ?>">NEWS</a>
+        <a href="/event/index/<?= $this->round ?>">EVENT</a>
+        <img src="/assets/imgs/round/5/MO/MENU/롯데_맛진_로고3.png" alt="menu" title="menu">
+      </div>
+    </div>
+  </header>
+
+		<?= $this->contents ?>
+		
+		<!-- FOOTER 영역 -->
+		<footer>
+			<div class="wrap flex jcsb aie">
+				<div class="flex aie">
+					<a class="logo" href="http://www.tastyzine.co.kr/main/index/5">
+						<img src="/assets/imgs/round/5/footer/logo.png" alt="#" title="#">
+					</a>
+		
+					<p class="text kr">
+						<b>서울특별시 송파구 백제고분로 217 롯데GRS 79 SQUARE</b><br>
+						<span>COPYRIGHT &copy; 2022 LOTTE GRS. ALL RIGHTS RESERVED.</span>
+					</p>
+				</div>
+	
+				<div class="family_site en" onclick="toggle_fsite()">
+					<a>Family site</a>
+					<ul>
+						<li><a href="http://www.lottegrs.com">롯데 GRS</a></li>
+						<li><a href="http://www.lotteria.com">롯데리아</a></li>
+						<li><a href="http://www.angelinus.com">엔제리너스</a></li>
+						<li><a href="http://www.krispykreme.co.kr">크리스피 크림 도넛</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			function toggle_fsite() {
+				$('.family_site ul').toggleClass('on');
+			}
+
+		</script>
+		
+</body>
+</html>

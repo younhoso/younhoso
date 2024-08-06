@@ -1,0 +1,282 @@
+<style>
+section .content_wrap {padding-top:0;}
+.contents.story_sub {padding-bottom:5.6rem;}
+.contents.story_sub ul {padding-top:6rem;}
+.contents.story_sub ul li {}
+.contents.story_sub ul li::after {content:''; display:block; width:100%; height:.8rem; background: #F5F5F5 0% 0% no-repeat padding-box; box-shadow: inset 0px 1px 2px #00000029;}
+.contents.story_sub ul li:last-child::after {display:none;}
+.contents.story_sub li img {width:100%;}
+.contents.story_sub ul li .content_wrap img.center {width:48.7rem; display:block; margin:4rem auto 2rem auto;}
+.contents.story_sub ul li .content_wrap img.left {width:48.7rem; display:block; margin:4rem auto 2rem 0;}
+.contents.story_sub ul li .content_wrap img.mo {display:block;}
+.contents.story_sub ul li .content_wrap img.pc {display:none;}
+.contents.story_sub ul li .content_wrap p.box {background:#fff; margin-top:-14rem; z-index:1; position:relative; padding:2rem; margin-left:18.8rem;}
+.contents.story_sub ul .content_wrap {padding:4rem 7.2rem 9.6rem 7.2rem;}
+.content_wrap {padding:4rem 7.2rem;}
+.content_wrap h4 {text-align:left; font-size:3rem; font-weight:bold;}
+.content_wrap h2 {text-align:left;}
+.content_wrap p {margin-top:2rem;}
+.content_wrap.grid {display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr auto;}
+.content_wrap.grid div {}
+.content_wrap.grid div h2  {color:#037781;}
+.contents.story_sub .content_wrap > div > p {color: #3A3A3A; font-size: 2.2rem;}
+.contents.story_sub .content_wrap > p > span {color:#037781;}
+.contents.story_sub .content_wrap > div:nth-child(1) {margin-bottom:4rem;}
+.contents.story_sub .content_wrap > div:nth-child(2) {margin-bottom:4rem;}
+.contents.story_sub .content_wrap > div:nth-child(4) {display:flex; align-items:flex-end;}
+.contents.story_sub .content_wrap > div img {width:19.4rem;}
+
+.contents.story_sub .img_wrap {position:relative;}
+.contents.story_sub .like {position:absolute; bottom:2rem; right:4rem; display:flex; justify-content:center; align-items:center; flex-direction:column;}
+.contents.story_sub .like .num {font-size:1.8rem; display:block; width:100%; text-align:center; margin-top:.4rem; color:#fff;}
+.contents.story_sub .like div {padding-top:.6rem; position:relative;}
+.contents.story_sub .like div img {display:block; width:4.6rem;}
+.contents.story_sub .like div img.cover {position:absolute; top:.6rem; left:0; opacity:0; transform:scale(0); transition:.3s;}
+.contents.story_sub .like div img.cover.on {opacity:1; transform:scale(1);}
+
+.contents.story_sub .sub_top .txt_wrap.mo {display:flex;}
+
+@media (min-width: 1280px) {
+
+	.contents.story_sub .sub_top .txt_wrap.mo {display:none;}
+
+	.contents.story_sub ul {width:128rem; margin:0 auto;}
+	.contents.story_sub li .content_wrap {padding:6.6rem 12rem 17rem 12rem;}
+	.contents.story_sub .content_wrap > div > p {font-size: 3.6rem;}
+	.contents.story_sub .content_wrap > div img {width:auto;}
+	
+	.content_wrap h4 {font-size:5rem;}
+	.content_wrap h2 {font-size:6rem;}
+	
+	.contents.story_sub ul li::after {display:none;}
+	
+	.contents.story_sub ul li .content_wrap img.center {width:81.2rem; display:block; margin:7rem auto 3.3rem auto;}
+	.contents.story_sub ul li .content_wrap img.left {width:81.2rem; display:block; margin:7rem auto 3.3rem -12rem;}
+	.contents.story_sub ul li .content_wrap img.mo {display:none;}
+	.contents.story_sub ul li .content_wrap img.pc {display:block;}
+	.contents.story_sub ul li .content_wrap p.box {margin-top:-21rem; z-index:1; position:relative; padding:3.4rem; margin-left:31.3rem;}
+}
+</style>
+<script>
+function jaress_like(id) {
+	var round = '<?=$this->round?>';
+	if( $('#'+id+' .like .cover').hasClass('on') ) {
+		console.log('minus');
+		$.get('/story/jaress_like',{jaressid:round+'_'+id,plus:0},function(result){
+			var r = $.trim(result);
+			$('#'+id).find('.like .num').html(r.toLocaleString('en'));
+			$('#'+id).find('.like .cover').removeClass('on');
+		});
+	} else {
+		console.log('plus');
+		$.get('/story/jaress_like',{jaressid:round+'_'+id,plus:1},function(result){
+			var r = $.trim(result);
+			$('#'+id).find('.like .num').html(r.toLocaleString('en'));
+			$('#'+id).find('.like .cover').addClass('on');
+		});
+	}
+}
+</script>
+<div class="contents story_sub">
+	<div class="sub_top">
+		<div class="img_wrap">
+			<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/jaress_main_MO.png" class="mo">
+			<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/jaress_main_PC.png" class="pc">
+		</div>
+		<div class="txt_wrap mo" data-aos="fade-down">
+			<h2>롯데가 롯데했다</h2>
+			<p>롯데GRS잘했어</p>
+		</div>
+	</div>
+	<section class="sub_header pc">
+		<div class="content_wrap">
+			<h4 data-aos="fade-up">롯데가 롯데했다</h4>
+			<h2 data-aos="fade-up">롯데GRS 잘했어</h2>
+			<p data-aos="fade-up">롯데인들에게 제일 핫한 소식과 정보를 <br>공유하는 맛진의 이야기 창고</p>
+		</div>
+	</section>
+	<section class="mo">
+		<div class="content_wrap">
+			<p class="topp" data-aos="fade-left">
+				롯데인들에게 제일 핫한 소식과 정보를 <br>공유하는 맛진의 이야기 창고
+			</p>
+		</div>
+	</section>
+	
+	<ul>
+		<li data-aos="fade" id="jaress01">
+			<div class="img_wrap">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/pc_sub01.png">
+				<div class="like" onclick="jaress_like('jaress01')">
+					<div class="heart">
+						<img src="/assets/imgs/icon/heart_stroke.svg">
+						<img src="/assets/imgs/icon/heart_fill.svg" class="cover">
+					</div>
+					<span class="num">좋아요</span>
+				</div>
+			</div>
+			<div class="content_wrap">
+				<h4>01</h4>
+				<h2>울진 산불피해 커피차 제공</h2>
+				<p>
+				‘선’은 언제나 승리한다. 엔제리너스가 울진 지역 대규모 산불로 피해를 <br>
+				입은 이들에게 힘을 보태고자 지난 17일부터 이틀간 커피차를 지원했다. </p>
+				
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/jaress_01_PC.png" data-aos="fade-up" class="center">
+				
+				<p style="text-align:center;" data-aos="fade-up">제빵 브랜드 랑콩뜨레와 협력하여, 선한 영향력을 보여준 순간이다. <br>
+				‘엔제리너스 망양휴게소점’은 제품 제조를 위한 장소를 제공하며 <br>
+				그들의 일상 회복을 응원했고, 이러한 선한 마음들이 모여 <br>
+				<span>우리는 울진을 지킬 수 있었다.</span></p>
+			</div>
+		</li>
+		<li data-aos="fade" id="jaress02">
+			<div class="img_wrap">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/pc_sub02.png">
+				<div class="like" onclick="jaress_like('jaress02')">
+					<div class="heart">
+						<img src="/assets/imgs/icon/heart_stroke.svg">
+						<img src="/assets/imgs/icon/heart_fill.svg" class="cover">
+					</div>
+					<span class="num">좋아요</span>
+				</div>
+			</div>
+			<div class="content_wrap">
+				<h4>02</h4>
+				<h2>결식 아동 프로젝트</h2>
+				<p>
+				롯데 GRS가 아동들의 희망에 불을 켰다. <br>
+				20년 넘게 운영한 ‘좋은세상만들기’의 명칭을 ‘희망ON’ 프로젝트로 <br>
+				변경하면서 결식 아동을 위한 릴레이 캠페인을 시작했기 때문. <p>
+				
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/jaress_PC2.png" data-aos="fade-up" class="center">
+				
+				<p style="text-align:center;" data-aos="fade-up">
+				차기 기부 지자체로 지정된 관악구청의 행보가 궁금해지는 가운데 <br>
+				연내 3호 희망ON 프로젝트가 진행될 것이라고 하니 전국적으로 <br>
+				전달될 이들의 온정, 기대되지 않나.</p>
+			</div>
+		</li>
+		<li data-aos="fade" id="jaress03">
+			<div class="img_wrap">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/pc_sub03.png">
+				<div class="like" onclick="jaress_like('jaress03')">
+					<div class="heart">
+						<img src="/assets/imgs/icon/heart_stroke.svg">
+						<img src="/assets/imgs/icon/heart_fill.svg" class="cover">
+					</div>
+					<span class="num">좋아요</span>
+				</div>
+			</div>
+			<div class="content_wrap">
+				<h4>03</h4>
+				<h2>크리스피크림 도넛 신제품 출시</h2>
+				<p>
+				창 밖에만 봄이 온 건 아니다. <br>
+				크리스피크림 도넛에서 싱그러운 봄의 정원을 형상화한 제품을 출시하여 <br>
+				우리들의 입 안에도 봄을 선사한다.</p>
+				
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/jaress_03_PC.png" data-aos="fade-up" class="left">
+				
+				<p data-aos="fade-left" class="box">
+				봄꽃을 표현한 밀크크림 플라워와 <br>
+				루비초코 블라썸, 그리고 귀여운 꿀벌을 담은 <br>
+				골드초코 허니비와 무당벌레를 <br>
+				형상화한 레이디버그까지. <br><br>
+				이 달 말까지만 한정 판매한다고 하니, <br>
+				얼마 남지 않은 봄 소중한 사람들과 <br>
+				미각으로 느껴봄이 어떨까.</p>
+			</div>
+		</li>
+		<li data-aos="fade" id="jaress04">
+			<div class="img_wrap">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/pc_sub04.png">
+				<div class="like" onclick="jaress_like('jaress04')">
+					<div class="heart">
+						<img src="/assets/imgs/icon/heart_stroke.svg">
+						<img src="/assets/imgs/icon/heart_fill.svg" class="cover">
+					</div>
+					<span class="num">좋아요</span>
+				</div>
+			</div>
+			<div class="content_wrap">
+				<h4>04</h4>
+				<h2>롯데리아 브랜드 파워 24년 연속 1위</h2>
+				<p>
+				학창시절 내내 1등하기도 힘든데, 24년 연속 1위를 지키는 브랜드가 있다. <br>
+				바로 롯데리아다. <br><br>
+				한국능률협회에서 실시한 ‘2022한국 산업의 브랜드파워’ 조사에서 <br>
+				패스트푸드산업 부문 1위를 차지하며 지난 7일 인증패를 수여받았다. <br><br>
+				
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/jaress_04_PC.png" data-aos="fade-up" class="center">
+				
+				<p style="text-align:center;" data-aos="fade-up">현재 이들은 K-푸드 메뉴를 버거로 재해석하는 시도 중에 있다. <br>
+				올해 한국에 놀러 오는 외국인 친구가 있다면, <br>
+				롯데리아에 데려가 볼 것. 불고기 말고, <br><br>
+				‘불고기 4DX’로 한국의 맛을 보여주자.</p>
+			</div>
+		</li>
+		<li data-aos="fade" id="jaress05">
+			<div class="img_wrap">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/pc_sub05.png">
+				<div class="like" onclick="jaress_like('jaress05')">
+					<div class="heart">
+						<img src="/assets/imgs/icon/heart_stroke.svg">
+						<img src="/assets/imgs/icon/heart_fill.svg" class="cover">
+					</div>
+					<span class="num">좋아요</span>
+				</div>
+			</div>
+			<div class="content_wrap">
+				<h4>05</h4>
+				<h2>직원 참여 사내 행사</h2>
+				<p>
+				코로나 이후, 감성 회복이 우선이다. <br>
+				장기적인 팬데믹으로 대면활동이 어려워지며 동료에게 <br>
+				따뜻한 마음을 전달하기란 쉽지 않다. <br>
+				이럴 때 롯데GRS 내 직원 참여 사내행사에서 나의 마음을 전달해보자! </p>
+				
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/jaress_05_PC.png" data-aos="fade-up" class="center">
+				
+				<p style="text-align:center;" data-aos="fade-up">3년째 운영 중인 재택봉사 프로젝트 희망의 무드등 제작과 <br>
+				기념일 이벤트인 식목일 맞이 화분 선물 그리고, 1년 운영 예정인 <br>
+				동료 칭찬 프로젝트 풀꽃 심기까지! <br><br>
+				따뜻한 마음을 담아 특별한 선물을 전달함으로써 <br>
+				이야기꽃을 피우는 시간을 가져보자.</p>
+				
+			</div>
+		</li>
+		<li data-aos="fade" id="jaress06">
+			<div class="img_wrap">
+				<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/pc_sub06.png">
+				<div class="like" onclick="jaress_like('jaress06')">
+					<div class="heart">
+						<img src="/assets/imgs/icon/heart_stroke.svg">
+						<img src="/assets/imgs/icon/heart_fill.svg" class="cover">
+					</div>
+					<span class="num">좋아요</span>
+				</div>
+			</div>
+			<div class="content_wrap grid">
+				<div>
+					<h2>롯데리아</h2>
+					<p>
+					정자역점 <br>세종새롬점 <br>용인시청점 (구 용인시청D/T) <br>대전도안점 (구 대전도안신도시)</p>
+				</div>
+				<div>
+					<h2>엔제리너스</h2>
+					<p>
+					문막휴게소점 (인천방향) <br>수원역로데오점 <br>대전둔산병원점 <br>제주시청D/I점</p>
+				</div>
+				<div>
+					<h2>컨세션사업</h2>
+					<p>
+					제주대병원점</p>
+				</div>
+				<div>
+					<img src="/assets/imgs/round/<?=$this->round?>/story/jaress/lotte_pc.png">
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

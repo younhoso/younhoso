@@ -9,6 +9,7 @@ import { HiOutlineMapPin } from 'react-icons/hi2';
 import Image from 'next/image';
 
 import { StoreTypeCustom } from '@/types';
+import { useRouter } from 'next/router';
 
 interface StoreBoxProps {
   store: StoreTypeCustom | null;
@@ -16,6 +17,8 @@ interface StoreBoxProps {
 }
 
 export default function StoreBox({ store, setStore }: StoreBoxProps) {
+  const router = useRouter();
+
   return (
     <div className="storeBox">
       {store && (
@@ -61,7 +64,7 @@ export default function StoreBox({ store, setStore }: StoreBoxProps) {
           </div>
           <button
             type="button"
-            onClick={() => alert('상세보기 작업중')}
+            onClick={() => router.push(`/stores/${store.id}`)}
             className="w-full bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 py-3 text-white font-semibold rounded-b-lg"
           >
             상세보기

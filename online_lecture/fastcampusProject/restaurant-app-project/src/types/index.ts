@@ -67,14 +67,14 @@ export interface StoreType {
 
 export interface StoreTypeCustom {
   id: number | null;
-  phone: String | null; // tel_no
-  address: String | null; // rdn_code_nm
-  lat: String | null; // y_dnts
-  lng: String | null; // x_cnts
-  name: String | null; // upso_nm
-  category: String | null; // bizcnd_code_nm
-  storeType: String | null; // cob_code_nm
-  foodCertifyName: String | null; // crtfc_gbn_nm
+  phone: string | null; // tel_no
+  address: string | null; // rdn_code_nm
+  lat: string | null; // y_dnts
+  lng: string | null; // x_cnts
+  name: string | null; // upso_nm
+  category: string | null; // bizcnd_code_nm
+  storeType: string | null; // cob_code_nm
+  foodCertifyName: string | null; // crtfc_gbn_nm
 }
 
 export interface StoreApiResponse {

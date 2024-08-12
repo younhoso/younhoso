@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+}
+body > div {
+  height: 100%;
+}
+
 .navbar {
-  @apply flex justify-between items-center fixed w-full h-[52px] top-0 shadow-sm bg-white;
+  @apply flex justify-between items-center fixed w-full h-[52px] top-0 shadow-sm bg-white z-[100];
 }
 
 .navbar__logo {
@@ -27,6 +35,7 @@
 }
 
 .layout {
+  height: 100%;
   @apply pt-[52px];
 }
 

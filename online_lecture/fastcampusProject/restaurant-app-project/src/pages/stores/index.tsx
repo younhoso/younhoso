@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import Loader from '@/components/Loader';
 import Loading from '@/components/Loading';
+import SearchFilter from '@/components/SearchFilter';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import { StoreTypeCustom } from '@/types';
 
@@ -34,7 +35,7 @@ export default function StoreListPage() {
     isError,
     isPending,
   } = useInfiniteQuery({
-    queryKey: ['stores'],
+    queryKey: ['infiniteStores'],
     queryFn: fetchStores,
     getNextPageParam: (lastPage, pages) => {
       return lastPage.data?.length > 0 ? lastPage.page + 1 : undefined;
@@ -86,6 +87,8 @@ export default function StoreListPage() {
 
   return (
     <div className="px-4 md:max-w-5xl mx-auto py-8">
+      {/* search filter */}
+      <SearchFilter />
       <ul role="list" className="divide-y divide-gray-100">
         {stores.pages?.map((page, index) => (
           <React.Fragment key={index}>

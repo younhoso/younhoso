@@ -38,13 +38,14 @@ jobs:
           cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
           npm run build
 
-      - name: List dist folder contents
-        run: |
-          cd project_mini/motion-min-project/dist
-          ls -al  # dist 폴더 내용 출력 (배포 전에 파일이 최신인지 확인)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./project_mini/motion-min-project/dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        id: deployment
+        uses: actions/deploy-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./project_mini/motion-min-project/dist # motion-min-projec 폴더 안의 dist를 배포

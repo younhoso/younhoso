@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "module": "ES2015" /* Specify what module code is generated. */,
+    "rootDir": "./src" /* Specify the root folder within your source files. */,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
+    "removeComments": true /* Disable emitting comments. */,
+    "noEmitOnError": true
+  },
+  "include": ["src"]
+}

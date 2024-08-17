@@ -1,43 +1,48 @@
-name: TypeScript Vite Project
+# GitHub Pages에 정적 콘텐츠를 배포하기 위한 간단한 워크플로우
+name: Deploy static content to Pages
 
 on:
+  # 기본 브랜치에 대한 푸시 이벤트 발생 시 실행
   push:
-    paths:
-      - "project_mini/motion-min-project/**" # 이 폴더의 변경사항이 있을 때만 작동
-    branches:
-      - main
+    branches: ["main"]
+
+# GITHUB_TOKEN의 권한을 설정하여 GitHub Pages에 배포할 수 있도록 함
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동시에 하나의 배포만 허용하도록 구성
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build:
+  # 단순히 배포만 수행하기에 하나의 잡으로만 구성
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          node-version: "18" # 원하는 Node.js 버전
-
-      - name: Cache Node.js modules #Node.js 패키지 캐시를 무효화
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('project_mini/motion-min-project/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 20
+          cache: "npm"
       - name: Install dependencies
-        run: |
-          cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
-          npm install
-      - name: Build project
-        run: |
-          cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
-          npm run build
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./project_mini/motion-min-project/dist # motion-min-projec 폴더 안의 dist를 배포
-          force_orphan: true # 강제 배포 설정
+          # dist 디렉터리 업로드
+          path: "./project_mini/motion-min-project/dist"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

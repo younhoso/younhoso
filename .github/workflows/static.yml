@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
-          run: npm install
+          npm install
 
       - name: Build project
         run: |

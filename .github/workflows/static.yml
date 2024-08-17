@@ -25,10 +25,14 @@ jobs:
           cache: "yarn"
 
       - name: Install dependencies
-        run: yarn install
+        run: |
+          cd project_mini/motion-min-project  # 올바른 디렉토리로 이동
+          yarn install
 
       - name: Build
-        run: yarn build
+        run: |
+          cd project_mini/motion-min-project  # 올바른 디렉토리로 이동
+          yarn build  # 빌드 명령어 실행
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

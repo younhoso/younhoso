@@ -9,6 +9,7 @@ on:
 
 jobs:
   build:
+    base: "/younhoso/project_mini/motion-min-project/dist"
     runs-on: ubuntu-latest
 
     steps:

@@ -3,7 +3,7 @@ name: Deploy Vite Project
 on:
   push:
     paths:
-      - "motion-min-project/**" # 이 폴더의 변경사항이 있을 때만 작동
+      - "project_mini/motion-min-project/**" # 이 폴더의 변경사항이 있을 때만 작동
     branches:
       - main
 
@@ -22,16 +22,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd motion-min-project  # Vite 프로젝트 폴더로 이동
+          cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
           run: npm install
 
       - name: Build project
         run: |
-          cd motion-min-projec  # Vite 프로젝트 폴더로 이동
+          cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
           npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./motion-min-projec/dist # motion-min-projec 폴더 안의 dist를 배포
+          publish_dir: ./project_mini/motion-min-project/dist # motion-min-projec 폴더 안의 dist를 배포

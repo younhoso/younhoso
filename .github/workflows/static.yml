@@ -28,25 +28,20 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('project_mini/motion-min-project/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
       - name: Install dependencies
         run: |
           cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
           npm install
-
       - name: Build project
         run: |
           cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
           npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./project_mini/motion-min-project/dist
-
+      - name: List dist folder contents
+        run: |
+          cd project_mini/motion-min-project/dist
+          ls -al  # dist 폴더 내용 출력 (배포 전에 파일이 최신인지 확인)
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./project_mini/motion-min-project/dist # motion-min-projec 폴더 안의 dist를 배포

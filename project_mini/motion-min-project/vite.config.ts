@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/project_mini/motion-min-project/", // 저장소명을 base로 설정
+  base: "/younhoso/project_mini/motion-min-project/dist", // 저장소명을 base로 설정
 });

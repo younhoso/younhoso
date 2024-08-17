@@ -45,9 +45,11 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # dist 디렉터리 업로드
-          path: "./project_mini/motion-min-project/dist"
+          path: "./project_mini/motion-min-project/dist" # dist 디렉터리 업로드
+          name: github-pages
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages

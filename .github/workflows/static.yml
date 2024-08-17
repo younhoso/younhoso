@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-    base: "/younhoso/project_mini/motion-min-project/dist"
     runs-on: ubuntu-latest
 
     steps:
@@ -21,25 +20,35 @@ jobs:
         with:
           node-version: "18" # 원하는 Node.js 버전
 
-      - name: Cache Node.js modules #Node.js 패키지 캐시를 무효화
+      - name: Cache Node.js modules # Node.js 패키지 캐시를 무효화
         uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('project_mini/motion-min-project/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: |
           cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
           npm install
+
+      - name: Update Vite base URL
+        run: |
+          cd project_mini/motion-min-project
+          echo "Updating Vite base URL in vite.config.ts..."
+          sed -i 's|base: \"/.*\"|base: \"/younhoso/project_mini/motion-min-project/dist/\"|' vite.config.ts
+
       - name: Build project
         run: |
           cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
           npm run build
+
       - name: List dist folder contents
         run: |
           cd project_mini/motion-min-project/dist
           ls -al  # dist 폴더 내용 출력 (배포 전에 파일이 최신인지 확인)
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

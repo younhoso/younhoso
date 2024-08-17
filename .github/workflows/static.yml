@@ -3,7 +3,7 @@ name: TypeScript Vite Project
 on:
   push:
     paths:
-      - "project_mini/motion-min-project/**" # 이 폴더의 변경사항이 있을 때만 작동
+      - "project_mini/motion-min-project/**"
     branches:
       - main
 
@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      id-token: write # ID 토큰에 대한 쓰기 권한 추가
-      contents: read # 리포지토리 내용 읽기 권한
-      pages: write # GitHub Pages에 대한 쓰기 권한
+      id-token: write
+      contents: read
+      pages: write
 
     steps:
       - name: Checkout
@@ -26,26 +26,23 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "yarn"
 
       - name: Install dependencies
         run: |
-          cd project_mini/motion-min-project  # 올바른 디렉토리로 이동
+          cd project_mini/motion-min-project
           yarn install
 
       - name: Build
         run: |
-          cd project_mini/motion-min-project  # 올바른 디렉토리로 이동
-          yarn build  # 빌드 명령어 실행
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+          cd project_mini/motion-min-project
+          yarn build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: "./project_mini/motion-min-project/dist" # dist 디렉터리 업로드
+          path: "./project_mini/motion-min-project/dist"
           name: github-pages
 
       - name: Deploy to GitHub Pages

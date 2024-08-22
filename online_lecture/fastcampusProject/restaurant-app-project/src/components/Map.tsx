@@ -1,23 +1,25 @@
 import Script from 'next/script';
 
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+
+import { locationState, mapState } from '@/atom';
+
 declare global {
   interface Window {
     kakao: any;
   }
 }
 
-const DEFAULT_LAT = 37.497625203;
-const DEFAULT_LNG = 127.03088379;
-const DEFAULT_ZOOM = 3;
-
 interface MapProps {
-  setMap: (v: kakao.maps.Map) => void;
   lat?: string | null;
   lng?: string | null;
   zoom?: number;
 }
 
-export default function Map({ setMap, lat, lng, zoom }: MapProps) {
+export default function Map({ lat, lng, zoom }: MapProps) {
+  const setMap = useSetRecoilState(mapState);
+  const location = useRecoilValue(locationState);
+
   const loadKakaoMap = () => {
     const { kakao } = window;
 
@@ -25,8 +27,8 @@ export default function Map({ setMap, lat, lng, zoom }: MapProps) {
       const mapContainer = document.getElementById('map');
 
       const mapOption = {
-        center: new kakao.maps.LatLng(lat ?? DEFAULT_LAT, lng ?? DEFAULT_LNG), //지도의 중심좌표.
-        level: zoom ?? DEFAULT_ZOOM, //지도의 레벨(확대, 축소 정도)
+        center: new kakao.maps.LatLng(lat ?? location.lat, lng ?? location.lng), //지도의 중심좌표.
+        level: zoom ?? location.zoom, //지도의 레벨(확대, 축소 정도)
       };
 
       const map = new kakao.maps.Map(mapContainer, mapOption); //지도 생성 및 객체 리턴

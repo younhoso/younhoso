@@ -1,13 +1,16 @@
 import { useCallback, useEffect } from 'react';
 
+import { useRecoilValue } from 'recoil';
+
+import { mapState } from '@/atom';
 import { StoreTypeCustom } from '@/types';
 
 interface MarkerProps {
-  map: any;
   store: StoreTypeCustom;
 }
 
-export default function Marker({ map, store }: MarkerProps) {
+export default function Marker({ store }: MarkerProps) {
+  const map = useRecoilValue(mapState);
   const loadKakoMarker = useCallback(() => {
     if (map && store) {
       const { kakao } = window;

@@ -13,7 +13,6 @@ import { StoreTypeCustom } from '@/types';
 export default function StoreEditPage() {
   const router = useRouter();
   const { id } = router.query;
-  const [map, setMap] = useState<kakao.maps.Map | null>(null);
 
   const fetchStore = async () => {
     const { data } = await axios(`/api/stores?id=${id}`);
@@ -99,8 +98,8 @@ export default function StoreEditPage() {
       </div>
       {isSuccess && (
         <div className="w-full mb-20 max-w-5xl mx-auto h-[60vh]">
-          <Map setMap={v => setMap(v)} lat={store?.lat} lng={store?.lng} zoom={1} />
-          <Marker map={map} store={store} />
+          <Map lat={store?.lat} lng={store?.lng} zoom={1} />
+          <Marker store={store} />
         </div>
       )}
     </>

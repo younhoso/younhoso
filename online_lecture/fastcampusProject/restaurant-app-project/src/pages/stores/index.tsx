@@ -1,5 +1,7 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+
+import Image from 'next/image';
 
 import axios from 'axios';
 
@@ -11,18 +13,27 @@ import { StoreTypeCustom } from '@/types';
 
 export default function StoreListPage() {
   const ref = useRef<HTMLDivElement | null>(null);
+  const pageRef = useIntersectionObserver(ref, {});
+  const isPageEnd = !!pageRef?.isIntersecting;
+  const [q, setQ] = useState<string | null>(null);
+  const [district, setDistrict] = useState<string | null>(null);
 
-  const { isIntersecting, observe, unobserve } = useIntersectionObserver({
-    threshold: 0.3,
-  });
+  const searchParams = {
+    q: q,
+    district: district,
+  };
+
+  console.log(searchParams);
 
   const fetchStores = async ({ pageParam = 1 }) => {
-    const { data } = await axios.get(`/api/stores?page=${pageParam}`, {
+    const { data } = await axios.get('/api/stores?page=' + pageParam, {
       params: {
         limit: 10,
         page: pageParam,
+        ...searchParams,
       },
     });
+
     return data;
   };
 
@@ -33,9 +44,9 @@ export default function StoreListPage() {
     isFetchingNextPage,
     hasNextPage,
     isError,
-    isPending,
+    isLoading,
   } = useInfiniteQuery({
-    queryKey: ['infiniteStores'],
+    queryKey: ['infiniteStores', searchParams],
     queryFn: fetchStores,
     getNextPageParam: (lastPage, pages) => {
       return lastPage.data?.length > 0 ? lastPage.page + 1 : undefined;
@@ -52,30 +63,15 @@ export default function StoreListPage() {
 
   useEffect(() => {
     let timerId: NodeJS.Timeout | undefined;
-    if (isIntersecting && hasNextPage) {
+
+    if (isPageEnd && hasNextPage) {
       timerId = setTimeout(() => {
         fetchNext();
       }, 500);
     }
+
     return () => clearTimeout(timerId);
-  }, [fetchNext, isIntersecting, hasNextPage]);
-
-  useEffect(() => {
-    const currentElement = ref.current;
-    if (currentElement) {
-      observe(currentElement);
-    }
-
-    return () => {
-      if (currentElement) {
-        unobserve(currentElement);
-      }
-    };
-  }, [observe, unobserve]);
-
-  if (isPending) {
-    return <Loading />;
-  }
+  }, [fetchNext, isPageEnd, hasNextPage]);
 
   if (isError) {
     return (
@@ -86,28 +82,29 @@ export default function StoreListPage() {
   }
 
   return (
-    <div className="px-4 md:max-w-5xl mx-auto py-8">
-      {/* search filter */}
-      <SearchFilter />
+    <div className="px-4 md:max-w-4xl mx-auto py-8">
+      <SearchFilter setQ={setQ} setDistrict={setDistrict} />
       <ul role="list" className="divide-y divide-gray-100">
-        {stores.pages?.map((page, index) => (
-          <React.Fragment key={index}>
-            {page.data.map((store: StoreTypeCustom, i: number) => {
-              return (
+        {isLoading ? (
+          <Loading />
+        ) : (
+          stores?.pages?.map((page, index) => (
+            <React.Fragment key={index}>
+              {page.data.map((store: StoreTypeCustom, i) => (
                 <li className="flex justify-between gap-x-6 py-5" key={i}>
                   <div className="flex gap-x-4">
-                    <img
+                    <Image
                       src={
                         store?.category
                           ? `/images/markers/${store?.category}.png`
-                          : `/images/markers/default.png`
+                          : '/images/markers/default.png'
                       }
                       width={48}
                       height={48}
                       alt="아이콘 이미지"
                     />
                     <div>
-                      <div className="text-sm font-semibold leading-9 text-gray-900">
+                      <div className="text-sm font-semibold leading-6 text-gray-900">
                         {store?.name}
                       </div>
                       <div className="mt-1 text-xs truncate font-semibold leading-5 text-gray-500">
@@ -120,18 +117,16 @@ export default function StoreListPage() {
                       {store?.address}
                     </div>
                     <div className="mt-1 text-xs truncate font-semibold leading-5 text-gray-500">
-                      {store?.phone || '번호없음'} | {store?.foodCertifyName} | {''}
-                      {store?.category}
+                      {store?.phone || '번호없음'} | {store?.foodCertifyName} | {store?.category}
                     </div>
                   </div>
                 </li>
-              );
-            })}
-          </React.Fragment>
-        ))}
+              ))}
+            </React.Fragment>
+          ))
+        )}
       </ul>
-
-      {(isPending || hasNextPage || isFetchingNextPage) && <Loader />}
+      {(isFetching || hasNextPage || isFetchingNextPage) && <Loader />}
       <div className="w-full touch-none h-10 mb-10" ref={ref} />
     </div>
   );

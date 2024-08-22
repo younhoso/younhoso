@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import { useState } from 'react';
 
 import axios from 'axios';
 
@@ -10,9 +9,6 @@ import StoreBox from '@/components/StoreBox';
 import { StoreTypeCustom } from '@/types';
 
 export default function Home() {
-  const [map, setMap] = useState<kakao.maps.Map | null>(null);
-  const [currentStore, setCurrentStore] = useState<StoreTypeCustom | null>(null);
-
   const {
     data: stores,
     isFetching,
@@ -37,9 +33,9 @@ export default function Home() {
 
   return (
     <>
-      <Map setMap={v => setMap(v)} />
-      <Markers map={map} storeDatas={stores} setCurrentStore={v => setCurrentStore(v)} />
-      <StoreBox store={currentStore} setStore={v => setCurrentStore(v)} />
+      <Map />
+      <Markers storeDatas={stores} />
+      <StoreBox />
     </>
   );
 }

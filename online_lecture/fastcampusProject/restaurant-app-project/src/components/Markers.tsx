@@ -1,8 +1,8 @@
 import { useCallback, useEffect } from 'react';
 
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 
-import { currentStoreState, mapState } from '@/atom';
+import { currentStoreState, locationState, mapState } from '@/atom';
 import { StoreTypeCustom } from '@/types';
 
 interface MarkersProps {
@@ -12,6 +12,7 @@ interface MarkersProps {
 export default function Markers({ storeDatas }: MarkersProps) {
   const map = useRecoilValue(mapState);
   const setCurrentStore = useSetRecoilState(currentStoreState);
+  const [location, setLocation] = useRecoilState(locationState);
 
   const loadKakaoMarkers = useCallback(() => {
     const { kakao } = window;
@@ -65,10 +66,15 @@ export default function Markers({ storeDatas }: MarkersProps) {
         kakao.maps.event.addListener(marker, 'click', function () {
           // 마커에 마우스아웃 이벤트가 발생하면 커스텀 오버레이를 제거합니다
           setCurrentStore(store);
+          setLocation({
+            ...location,
+            lat: store.lat,
+            lng: store.lng,
+          });
         });
       });
     }
-  }, [map, setCurrentStore, storeDatas]);
+  }, [map, storeDatas]);
 
   useEffect(() => {
     loadKakaoMarkers();

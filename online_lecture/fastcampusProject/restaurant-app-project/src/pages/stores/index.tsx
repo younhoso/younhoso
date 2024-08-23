@@ -2,6 +2,7 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import axios from 'axios';
 
@@ -12,6 +13,7 @@ import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import { StoreTypeCustom } from '@/types';
 
 export default function StoreListPage() {
+  const router = useRouter();
   const ref = useRef<HTMLDivElement | null>(null);
   const pageRef = useIntersectionObserver(ref, {});
   const isPageEnd = !!pageRef?.isIntersecting;
@@ -91,7 +93,11 @@ export default function StoreListPage() {
           stores?.pages?.map((page, index) => (
             <React.Fragment key={index}>
               {page.data.map((store: StoreTypeCustom, i) => (
-                <li className="flex justify-between gap-x-6 py-5" key={i}>
+                <li
+                  className="flex justify-between gap-x-6 py-5 cursor-pointer hover:bg-gray-50"
+                  key={i}
+                  onClick={() => router.push(`/stores/${store.id}`)}
+                >
                   <div className="flex gap-x-4">
                     <Image
                       src={

@@ -16,8 +16,8 @@ export const currentStoreState = atom<StoreTypeCustom | null>({
 export const locationState = atom<LocationType>({
   key: 'location',
   default: {
-    lat: 37.497625203,
-    lng: 127.03088379,
+    lat: '37.497625203',
+    lng: '127.03088379',
     zoom: 3,
   },
 });

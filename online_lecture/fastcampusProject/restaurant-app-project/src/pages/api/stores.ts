@@ -16,36 +16,46 @@ export default async function handler(
   res: NextApiResponse<StoreApiResponse | StoreTypeCustom[] | StoreTypeCustom>,
 ) {
   const { page = '', limit = '', q, district }: ResponseType = req.query;
-
-  if (page) {
-    const count = await prisma.store.count();
-    const skipPage = parseInt(page) - 1;
-    const stores = await prisma.store.findMany({
-      orderBy: { id: 'asc' },
-      where: {
-        name: q ? { contains: q } : {},
-        address: district ? { contains: district } : {},
-      },
-      take: parseInt(limit),
-      skip: skipPage * 10,
+  if (req.method === 'POST') {
+    // POST 요청 데이터 생성을 처리한다.
+    const data = req.body;
+    const result = await prisma.store.create({
+      data: { ...data },
     });
 
-    res.status(200).json({
-      page: parseInt(page),
-      data: stores,
-      totalCont: count,
-      totalPage: Math.ceil(count / 10),
-    });
-  } else {
-    const { id }: { id?: string } = req.query;
+    return res.status(200).json(result);
+  } else if (req.method === 'GET') {
+    // GET 요청 처리
+    if (page) {
+      const count = await prisma.store.count();
+      const skipPage = parseInt(page) - 1;
+      const stores = await prisma.store.findMany({
+        orderBy: { id: 'asc' },
+        where: {
+          name: q ? { contains: q } : {},
+          address: district ? { contains: district } : {},
+        },
+        take: parseInt(limit),
+        skip: skipPage * 10,
+      });
 
-    const stores = await prisma.store.findMany({
-      orderBy: { id: 'asc' },
-      where: {
-        id: id ? parseInt(id) : {},
-      },
-    });
+      res.status(200).json({
+        page: parseInt(page),
+        data: stores,
+        totalCont: count,
+        totalPage: Math.ceil(count / 10),
+      });
+    } else {
+      const { id }: { id?: string } = req.query;
 
-    return res.status(200).json(id ? stores[0] : stores);
+      const stores = await prisma.store.findMany({
+        orderBy: { id: 'asc' },
+        where: {
+          id: id ? parseInt(id) : {},
+        },
+      });
+
+      return res.status(200).json(id ? stores[0] : stores);
+    }
   }
 }

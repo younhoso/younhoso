@@ -5,15 +5,19 @@ import { useRouter } from 'next/router';
 
 import axios from 'axios';
 
+import AddressSearch from '@/components/AddressSearch';
 import { CATEGORY_ARR, FOOD_CERTIFY_ARR, STORE_TYPE_ARR } from '@/data/store';
+import { StoreTypeCustom } from '@/types';
 
 export default function StoresNewPage() {
   const router = useRouter();
   const {
     register,
     handleSubmit,
+    setValue,
+    watch,
     formState: { errors },
-  } = useForm();
+  } = useForm<StoreTypeCustom>();
   return (
     <form
       className="px-4 md:max-w-4xl mx-auto py-8"
@@ -104,25 +108,7 @@ export default function StoresNewPage() {
               </div>
             </div>
 
-            <div className="col-span-full">
-              <label
-                htmlFor="address"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                주소 (다음 주소 검색 API)
-              </label>
-              <div className="mt-2">
-                <input
-                  id="address"
-                  {...register('address', { required: true })}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 outline-none"
-                />
-                {errors.address?.type === 'required' && (
-                  <div className="pt-2 text-xs text-red-600">필수 입력사항입니다.</div>
-                )}
-              </div>
-            </div>
-
+            <AddressSearch setValue={setValue} register={register} errors={errors} watch={watch} />
             <div className="sm:col-span-2 sm:col-start-1">
               <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">
                 식품인증구분
@@ -180,7 +166,11 @@ export default function StoresNewPage() {
       </div>
 
       <div className="mt-6 flex items-center justify-end gap-x-6">
-        <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
+        <button
+          type="button"
+          onClick={() => router.back()}
+          className="text-sm font-semibold leading-6 text-gray-900"
+        >
           뒤로가기
         </button>
         <button

@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
+import { useSession } from 'next-auth/react';
 import { useState } from 'react';
 
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import axios from 'axios';
@@ -14,11 +16,6 @@ export default function StoreEditPage() {
   const router = useRouter();
   const { id } = router.query;
 
-  const fetchStore = async () => {
-    const { data } = await axios(`/api/stores?id=${id}`);
-    return data as StoreTypeCustom;
-  };
-
   const {
     data: store,
     isPending,
@@ -26,7 +23,10 @@ export default function StoreEditPage() {
     isError,
   } = useQuery({
     queryKey: [`store-${id}`],
-    queryFn: fetchStore,
+    queryFn: async () => {
+      const { data } = await axios.get(`/api/stores?id=${id}`);
+      return data as StoreTypeCustom;
+    },
     enabled: !!id,
   });
 
@@ -45,10 +45,24 @@ export default function StoreEditPage() {
   return (
     <>
       <div className="max-w-5xl mx-auto px-4 py-8">
-        <div className="px-4 sm:px-0">
-          <h3 className="text-base font-semibold leading-7 text-gray-900">{store?.name}</h3>
-          <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">{store?.address}</p>
+        <div className="md:flex justify-between items-center py-4 md:py-0">
+          <div className="px-4 sm:px-0">
+            <h3 className="text-base font-semibold leading-7 text-gray-900">{store?.name}</h3>
+            <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">{store?.address}</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              className="underline hover:text-gray-400 text-sm"
+              href={`/stores/${store?.id}/edit`}
+            >
+              수정
+            </Link>
+            <button type="button" className="underline hover:text-gray-400 text-sm">
+              삭제
+            </button>
+          </div>
         </div>
+
         <div className="mt-6 border-t border-gray-100">
           <dl className="divide-y divide-gray-100">
             <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">

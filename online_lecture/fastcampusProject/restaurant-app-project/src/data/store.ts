@@ -39,6 +39,7 @@ export const CATEGORY_ARR = [
   '탕류',
   '일식',
   '복어취급',
+  '정육점',
 ];
 
 export const FOOD_CERTIFY_ARR = [

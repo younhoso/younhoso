@@ -7,7 +7,8 @@ import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { status } = useSession();
+  const { data, status } = useSession();
+  console.log(data);
 
   return (
     <>

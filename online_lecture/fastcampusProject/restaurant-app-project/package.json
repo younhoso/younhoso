@@ -9,6 +9,9 @@
     "lint": "next lint",
     "pretty": "yarn prettier 'src/**/*.{ts,js,tsx,jsx}' --write"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "dependencies": {
     "next": "13.4.19",
     "next-auth": "^4.24.7",
@@ -40,8 +43,5 @@
     "tailwindcss": "3.3.3",
     "ts-node": "^9.1.1",
     "typescript": "^5"
-  },
-  "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }

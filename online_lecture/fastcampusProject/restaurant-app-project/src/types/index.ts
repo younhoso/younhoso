@@ -66,7 +66,7 @@ export interface StoreType {
 }
 
 export interface StoreTypeCustom {
-  id: number | null;
+  id: number;
   phone: string | null; // tel_no
   address: string | null; // rdn_code_nm
   lat: string | null; // y_dnts
@@ -75,6 +75,14 @@ export interface StoreTypeCustom {
   category: string | null; // bizcnd_code_nm
   storeType: string | null; // cob_code_nm
   foodCertifyName: string | null; // crtfc_gbn_nm
+  likes?: LikeInterface[];
+}
+
+export interface LikeInterface {
+  id: number;
+  storeId: number;
+  userId: number;
+  store?: StoreTypeCustom;
 }
 
 export interface StoreApiResponse {

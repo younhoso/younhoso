@@ -13,6 +13,8 @@ import { useRecoilState } from 'recoil';
 
 import { currentStoreState } from '@/atom';
 
+import Like from './Like';
+
 export default function StoreBox() {
   const router = useRouter();
   const [store, setStore] = useRecoilState(currentStoreState);
@@ -44,9 +46,12 @@ export default function StoreBox() {
                 <AiOutlineClose />
               </button>
             </div>
-            <div className="mt-2 flex gap-2 items-center">
-              <HiOutlineMapPin />
-              {store?.address || 'coming soon'}
+            <div className="flex justify-between gap-4">
+              <div className="mt-2 flex gap-2 items-center col-span-3">
+                <HiOutlineMapPin />
+                {store?.address || 'coming soon'}
+              </div>
+              <Like storeId={store.id} />
             </div>
             <div className="mt-2 flex gap-2 items-center">
               <AiOutlinePhone />

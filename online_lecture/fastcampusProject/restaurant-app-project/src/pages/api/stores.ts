@@ -1,5 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { authOptions } from './auth/[...nextauth]';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSession } from 'next-auth';
 
 import axios from 'axios';
 
@@ -19,6 +21,8 @@ export default async function handler(
   res: NextApiResponse<StoreApiResponse | StoreTypeCustom[] | StoreTypeCustom | null>,
 ) {
   const { page = '', limit = '', q, district, id }: ResponseType = req.query;
+  const session = await getServerSession(req, res, authOptions);
+
   if (req.method === 'POST') {
     // POST 요청 데이터 생성을 처리한다.
     const formData = req.body;
@@ -91,6 +95,11 @@ export default async function handler(
         orderBy: { id: 'asc' },
         where: {
           id: id ? parseInt(id) : {},
+        },
+        include: {
+          links: {
+            where: session ? { userId: session.user.id } : {},
+          },
         },
       });
 

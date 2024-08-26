@@ -91,7 +91,7 @@ export default function StoreListPage() {
         ) : (
           stores?.pages?.map((page, index) => (
             <React.Fragment key={index}>
-              {page.data.map((store: StoreTypeCustom, i) => (
+              {page.data.map((store: StoreTypeCustom, i: number) => (
                 <li
                   className="flex justify-between gap-x-6 py-5 cursor-pointer hover:bg-gray-50"
                   key={i}
@@ -107,6 +107,7 @@ export default function StoreListPage() {
                       width={48}
                       height={48}
                       alt="아이콘 이미지"
+                      fetchPriority="high"
                     />
                     <div>
                       <div className="text-sm font-semibold leading-6 text-gray-900">

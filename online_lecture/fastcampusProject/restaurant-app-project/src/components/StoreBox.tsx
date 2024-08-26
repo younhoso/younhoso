@@ -33,9 +33,10 @@ export default function StoreBox() {
                   width={40}
                   height={40}
                   alt="아이콘 이미지"
+                  fetchPriority="high"
                 />
                 <div>
-                  <div className="font-semibold ">{store?.name}</div>
+                  <div className="font-semibold">{store?.name}</div>
                   <div className="font-sm">{store?.storeType}</div>
                 </div>
               </div>

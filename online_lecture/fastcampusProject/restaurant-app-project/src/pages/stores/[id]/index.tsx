@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -15,6 +16,7 @@ import { StoreTypeCustom } from '@/types';
 export default function StoreEditPage() {
   const router = useRouter();
   const { id } = router.query;
+  const { status } = useSession();
 
   const {
     data: store,
@@ -29,6 +31,24 @@ export default function StoreEditPage() {
     },
     enabled: !!id,
   });
+
+  const handleDelete = async () => {
+    const confirm = window.confirm('해당 가계를 삭제하시겠습니끼?');
+    if (confirm && store) {
+      try {
+        const result = await axios.delete(`/api/stores?id=${store?.id}`);
+        if (result.status === 200) {
+          toast.success('가계를 삭제했습니다.');
+          router.replace('/');
+        } else {
+          toast.error('다시 시도해주세요.');
+        }
+      } catch (e) {
+        console.log(e);
+        toast.error('다시 시도해주세요!');
+      }
+    }
+  };
 
   if (isPending) {
     return <Loader className="mt-[20%]" />;
@@ -50,17 +70,23 @@ export default function StoreEditPage() {
             <h3 className="text-base font-semibold leading-7 text-gray-900">{store?.name}</h3>
             <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">{store?.address}</p>
           </div>
-          <div className="flex items-center gap-4">
-            <Link
-              className="underline hover:text-gray-400 text-sm"
-              href={`/stores/${store?.id}/edit`}
-            >
-              수정
-            </Link>
-            <button type="button" className="underline hover:text-gray-400 text-sm">
-              삭제
-            </button>
-          </div>
+          {status === 'authenticated' && (
+            <div className="flex items-center gap-4 px-4 py-3">
+              <Link
+                className="underline hover:text-gray-400 text-sm"
+                href={`/stores/${store?.id}/edit`}
+              >
+                수정
+              </Link>
+              <button
+                type="button"
+                className="underline hover:text-gray-400 text-sm"
+                onClick={handleDelete}
+              >
+                삭제
+              </button>
+            </div>
+          )}
         </div>
 
         <div className="mt-6 border-t border-gray-100">

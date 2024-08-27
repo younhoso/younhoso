@@ -21,7 +21,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  links         Like[]
+  likes         Like[]
 }
 
 model Store {
@@ -34,7 +34,7 @@ model Store {
   category  String?  // bizcnd_code_nm
   storeType String?  // cob_code_nm
   foodCertifyName String? // crtfc_gbn_nm
-  links           Like[]
+  likes           Like[]
 }
 
 model Like {

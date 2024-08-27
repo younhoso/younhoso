@@ -97,7 +97,7 @@ export default async function handler(
           id: id ? parseInt(id) : {},
         },
         include: {
-          links: {
+          likes: {
             where: session ? { userId: session.user.id } : {},
           },
         },

@@ -85,6 +85,12 @@ export interface LikeInterface {
   store?: StoreTypeCustom;
 }
 
+export interface LikeApiResponse {
+  data: LikeInterface[];
+  totalPage?: number;
+  page?: number;
+}
+
 export interface StoreApiResponse {
   data: StoreTypeCustom[];
   totalPage?: number;

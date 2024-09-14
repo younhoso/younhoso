@@ -1,0 +1,68 @@
+
+.AvatarMenu {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.AvatarMenuItem {
+  font-size: 18px;
+  color: #6F6F6F;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.AvatarMenuItem.active {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.AvatarSelectorContainer {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 27px 0 0;
+}
+
+.AvatarSelector {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.AvatarSelectorItem.active>.AvatarSelectorPreview {
+  border: 4px solid var(--primary-color);
+  background: #FFF3E9;
+}
+
+.AvatarSelectorItem.active>.AvatarSelectorLabel {
+  color: var(--primary-color);
+}
+
+.AvatarSelectorItem {
+  flex-shrink: 0;
+}
+
+.AvatarSelectorPreview {
+  width: 194px;
+  height: 114px;
+  border-radius: 13px;
+  background: #F0F0F0;
+  border: 4px solid #F0F0F0;
+  cursor: pointer;
+}
+
+.AvatarSelectorTitle {
+  color: #6F6F6F;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+}

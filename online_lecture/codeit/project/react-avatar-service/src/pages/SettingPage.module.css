@@ -1,0 +1,33 @@
+.Heading {
+  color: #000;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.Label,
+.Input,
+.TextArea,
+.Button {
+  display: block;
+  width: 100%;
+}
+
+.Label {
+  margin: 0;
+}
+
+.Input {
+  margin: 8px 0 24px;
+}
+
+.TextArea {
+  resize: none;
+}
+
+.Button {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 40px 0 32px;
+}

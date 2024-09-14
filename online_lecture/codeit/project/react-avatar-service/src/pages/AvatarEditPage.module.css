@@ -1,0 +1,63 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 48px);
+}
+
+.Nav {
+  max-width: 1080px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+
+.Preview {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AvatarContainer {
+  position: relative;
+}
+
+.AvatarProperties {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 111px);
+
+}
+
+.AvatarPropertiesTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.Properties {
+  display: grid;
+  width: max-content;
+  grid-template-columns: max-content minmax(128px, 1fr);
+  gap: 16px;
+}
+
+.PropertyName {
+  display: flex;
+  align-items: center;
+}
+
+.PropertyValue {
+  border-radius: 32px;
+  padding: 4px 16px;
+  background-color: #E6E6E6;
+}
+
+.Footer {
+  border-radius: 16px;
+  border: 9px solid #FFFFFF;
+  background: #FFF;
+  margin-top: 24px;
+  padding: 20px 8px 23px;
+}

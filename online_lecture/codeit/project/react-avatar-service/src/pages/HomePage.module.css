@@ -1,0 +1,61 @@
+.Header {
+  text-align: center;
+}
+
+.Heading {
+  color: #000;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.Description {
+  color: #6B6B6B;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  margin: 8px 0;
+}
+
+.Preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 72px 0 48px;
+}
+
+.Preview>* {
+  flex-shrink: 0;
+}
+
+.Avatar {
+  width: 254px;
+  height: 254px;
+}
+
+
+.AvatarPlaceholder {
+  width: 192px;
+  height: 200px;
+  filter: invert(100%) sepia(3%) saturate(733%) hue-rotate(212deg) brightness(115%) contrast(84%);
+}
+
+.AvatarPlaceholder:nth-child(2),
+.AvatarPlaceholder:nth-child(6) {
+  filter: invert(100%) sepia(3%) saturate(1176%) hue-rotate(241deg) brightness(116%) contrast(89%);
+}
+
+.AvatarPlaceholder:nth-child(1),
+.AvatarPlaceholder:nth-child(7) {
+  filter: invert(72%) sepia(80%) saturate(0%) hue-rotate(83deg) brightness(110%) contrast(108%);
+}
+
+.Footer {
+  border-radius: 16px;
+  border: 9px solid #FFFFFF;
+  background: #FFF;
+  padding: 20px 8px 23px;
+}

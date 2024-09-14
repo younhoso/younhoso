@@ -1,0 +1,10 @@
+.Link {
+  text-decoration: none;
+  color: #B45600;
+}
+
+.Link.secondary {
+  text-decoration: underline;
+  color: #767676;
+  font-weight: 400;
+}

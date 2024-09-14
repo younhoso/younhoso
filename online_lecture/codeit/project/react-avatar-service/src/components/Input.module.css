@@ -1,0 +1,10 @@
+.Input {
+  padding: 12px 24px;
+  border-radius: 32px;
+  border: 1px solid #D9D9D9;
+  color: #000000;
+}
+
+.Input::placeholder {
+  color: #8C8C8C;
+}

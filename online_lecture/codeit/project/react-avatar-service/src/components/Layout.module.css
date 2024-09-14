@@ -1,0 +1,71 @@
+.Layout {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.Layout.dark {
+  background-color: #F7F7F7;
+}
+
+.CardLayout {
+  min-height: 100vh;
+  padding: 64px;
+  background-color: #F7F7F7;
+}
+
+.CardContainer {
+  width: 100%;
+  max-width: 576px;
+  margin: 0 auto;
+  padding: 56px 48px;
+}
+
+.Main {
+  flex-grow: 1;
+  padding: 32px;
+}
+
+.Main.landing {
+  padding: 64px 40px;
+  background-image: url("../assets/grid-bg.svg");
+  background-color: #F7F7F7;
+  background-repeat: repeat;
+  background-position: -24px -24px;
+  padding: 64px 24px;
+}
+
+.Main.user {
+  padding-top: 0;
+}
+
+.Container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.BackLinkLayout {
+  padding: 67px;
+}
+
+.BackLink {
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.FullLayout {
+  min-height: 100vh;
+  background-image: url("../assets/grid-bg.svg");
+  background-color: #F7F7F7;
+  background-repeat: repeat;
+  background-position: -24px -24px;
+  padding: 24px;
+}

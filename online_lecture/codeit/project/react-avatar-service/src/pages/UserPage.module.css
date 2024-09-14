@@ -1,0 +1,76 @@
+.Header,
+.AvatarContainer {
+  background-color: #F7F7F7;
+}
+
+.Header {
+  border-radius: 14px;
+  text-align: center;
+  padding: 13px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  position: relative;
+  margin-top: 14px;
+}
+
+.AvatarContainer {
+  padding: 33px 88px 0;
+}
+
+.Avatar {
+  width: 304px;
+  height: 304px;
+  margin: 0 aut0;
+}
+
+.Header::before,
+.Header::after {
+  content: " ";
+  width: 11px;
+  height: 20px;
+  background-color: #ECECEC;
+  position: absolute;
+  top: -14px;
+  z-index: -1;
+}
+
+.Header::before {
+  left: 30%;
+}
+
+.Header::after {
+  right: 30%;
+}
+
+.AvatarContainer {
+  border-radius: 32px;
+  margin-bottom: 24px;
+}
+
+.Profile {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding: 32px;
+  gap: 11px 40px;
+}
+
+.Profile>* {
+  display: flex;
+  align-items: center;
+}
+
+.Label {
+  color: #838383;
+  font-weight: 500;
+}
+
+.Name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.Email {
+  font-weight: 500;
+}

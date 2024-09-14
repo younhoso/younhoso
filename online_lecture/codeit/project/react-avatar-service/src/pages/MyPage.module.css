@@ -1,0 +1,128 @@
+.Header,
+.AvatarContainer {
+  background-color: #F7F7F7;
+}
+
+.Header {
+  border-radius: 14px;
+  text-align: center;
+  padding: 13px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  position: relative;
+  margin-top: 14px;
+}
+
+.AvatarContainer {
+  padding: 0 88px;
+}
+
+.Header::before,
+.Header::after {
+  content: " ";
+  width: 11px;
+  height: 20px;
+  background-color: #ECECEC;
+  position: absolute;
+  top: -14px;
+  z-index: -1;
+}
+
+.Header::before {
+  left: 30%;
+}
+
+.Header::after {
+  right: 30%;
+}
+
+.AvatarContainer {
+  padding: 20px 0 0;
+  border-radius: 32px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.Avatar {
+  flex-shrink: none;
+  margin: 0 auto;
+  width: 304px;
+  height: 304px;
+}
+
+.AvatarEditLink {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ECECEC;
+  background-color: #FFF;
+  border-radius: 16px;
+}
+
+.Mock {
+  width: 290px;
+  height: 267px;
+  background-color: red;
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 24px 0;
+}
+
+.Profile {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding: 32px;
+  gap: 11px 40px;
+  position: relative;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.Profile:hover {
+  border-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.Profile:hover>.Edit {
+  opacity: 1;
+}
+
+.Profile>.Edit {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.Profile>* {
+  display: flex;
+  align-items: center;
+}
+
+.Label {
+  color: #838383;
+  font-weight: 500;
+}
+
+.Name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.Email {
+  font-weight: 500;
+}

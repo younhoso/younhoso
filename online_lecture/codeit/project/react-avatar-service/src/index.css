@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --primary-color: #E97000;
+  --max-width: 1440px;
+}
+
+body {
+  margin: 0;
+}

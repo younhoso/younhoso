@@ -1,0 +1,20 @@
+.HorizontalRule {
+  border: none;
+  width: auto;
+  height: 1px;
+  background-color: #E1E1E1;
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.Container > .HorizontalRule {
+  flex-grow: 1;
+}
+
+.Text {
+  color: #636363;
+}

@@ -1,0 +1,43 @@
+.Header {
+  border-radius: 8px;
+  background-color: #F2F2F2;
+}
+
+.Profile {
+  display: flex;
+  align-items: center;
+  padding: 32px 24px;
+  gap: 16px;
+}
+
+.Values {
+  flex-grow: 1;
+}
+
+.Name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.Email {
+  color: #767676;
+  font-weight: 500;
+}
+
+.Bio {
+  margin: 0;
+  padding: 28px;
+}
+
+.HorizontalRule {
+  margin: 24px 0;
+}
+
+.LinkList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}

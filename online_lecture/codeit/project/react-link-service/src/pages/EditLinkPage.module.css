@@ -1,0 +1,28 @@
+.Heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 32px 0;
+}
+
+.Label,
+.Input,
+.Button,
+.GoogleButton {
+  display: block;
+  width: 100%;
+}
+
+.Label {
+  margin: 0;
+}
+
+.Input {
+  margin: 8px 0 24px;
+}
+
+.Button {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 40px 0 32px;
+}
+

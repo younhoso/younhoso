@@ -1,0 +1,36 @@
+.Container {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D9D9D9;
+  padding: 16px 24px;
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: 48px;
+}
+
+.Nav.public {
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo {
+  height: 16px;
+}
+
+.Menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.Divider {
+  width: 1px;
+  height: 32px;
+  background-color: #DBDBDB;
+  margin: 0 8px;
+}

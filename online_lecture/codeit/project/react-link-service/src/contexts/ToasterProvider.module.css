@@ -1,0 +1,51 @@
+.ToastContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  transition: height 0.5s ease-in-out;
+}
+
+.Toast {
+  display: flex;
+  border-radius: 8px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  top: -8px;
+  opacity: 0;
+  transition: top 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.Toast.mounted {
+  top: 0;
+  opacity: 1;
+}
+
+.Icon {
+  width: 24px;
+  height: 24px;
+}
+
+.Toast.info {
+  color: #FFFFFF;
+  background-color: #299D65;
+}
+
+.Toast.warn {
+  color: #FFFFFF;
+  background-color: #FF5733;
+}
+
+.Icon {
+  width: 24px;
+  height: 24px;
+}

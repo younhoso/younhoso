@@ -1,0 +1,43 @@
+.Layout {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.Layout.dark {
+  background-color: #FCFCFC;
+}
+
+.Main {
+  flex-grow: 1;
+  padding: 32px;
+}
+
+.Main.landing {
+  padding: 96px 32px;
+}
+
+.Container {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.FullLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+  padding: 80px;
+}
+
+.BackLinkContainer {
+  margin-bottom: 40px;
+}
+
+.BackLink {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

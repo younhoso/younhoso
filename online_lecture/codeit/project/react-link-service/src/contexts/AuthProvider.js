@@ -1,5 +1,5 @@
-import axios from "axios";
-import { createContext, useContext, useState } from "react";
+import axios from "../lib/axios";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext({
   user: null,
@@ -35,6 +35,10 @@ export function AuthProvider({ children }) {
     const nextUser = res.data;
     setUser(nextUser);
   }
+
+  useEffect(() => {
+    getMe();
+  }, []);
 
   return (
     <AuthContext.Provider

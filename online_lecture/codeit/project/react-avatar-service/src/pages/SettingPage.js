@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import axios from "../lib/axios";
 import Label from "../components/Label";
 import Input from "../components/Input";
@@ -9,7 +8,6 @@ import styles from "./SettingPage.module.css";
 import { useAuth } from "../contexts/AuthProvider";
 
 function SettingPage() {
-  const [initialAvatar, setInitialAvatar] = useState("");
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -28,25 +26,19 @@ function SettingPage() {
   async function handleSubmit(e) {
     e.preventDefault();
     const { name, email } = values;
-
-    await updateMe({ name, email });
+    await axios.patch("/users/me", { name, email });
     navigate("/me");
   }
 
   useEffect(() => {
-    const { avatar, name, email } = user;
-    setValues({
-      name,
-      email,
-    });
-    setInitialAvatar(avatar);
+    if (user) {
+      const { name, email } = user;
+      setValues({ name, email });
+    }
   }, [user]);
 
   return (
     <>
-      <Helmet>
-        <title>프로필 편집 - avtr</title>
-      </Helmet>
       <h1 className={styles.Heading}>프로필 편집</h1>
       <form className={styles.Form} onSubmit={handleSubmit}>
         <Label className={styles.Label} htmlFor="name">

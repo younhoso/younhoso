@@ -1,6 +1,5 @@
-import { Helmet } from "react-helmet";
-import ToasterProvider from "../contexts/ToasterProvider";
 import { AuthProvider } from "../contexts/AuthProvider";
+import ToasterProvider from "../contexts/ToasterProvider";
 
 function Providers({ children }) {
   return (
@@ -11,14 +10,7 @@ function Providers({ children }) {
 }
 
 function App({ children }) {
-  return (
-    <Providers>
-      <Helmet>
-        <title>avtr</title>
-      </Helmet>
-      {children}
-    </Providers>
-  );
+  return <Providers>{children}</Providers>;
 }
 
 export default App;

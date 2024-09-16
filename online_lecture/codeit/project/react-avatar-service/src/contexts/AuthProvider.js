@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from "react";
 import axios from "../lib/axios";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext({
   user: null,
@@ -16,8 +16,8 @@ export function AuthProvider({ children }) {
 
   async function getMe() {
     const res = await axios.get("/users/me");
-    const user = res.data;
-    setUser(user);
+    const nextUser = res.data;
+    setUser(nextUser);
   }
 
   async function getMyAvatar() {
@@ -27,17 +27,20 @@ export function AuthProvider({ children }) {
   }
 
   async function login({ email, password }) {
-    await axios.post("/auth/login", { email, password });
+    await axios.post("/auth/login", {
+      email,
+      password,
+    });
+
     await getMe();
-    await getMyAvatar();
   }
 
-  async function logout() {
-    // ...
+  async function logout({ email, password }) {
+    /** @TODO 로그아웃 구현 */
   }
 
-  async function updateMe({ name, email }) {
-    const res = await axios.patch("/users/me", { name, email });
+  async function updateMe(formDate) {
+    const res = await axios.patch("/users/me", formDate);
     const nextUser = res.data;
     setUser(nextUser);
   }
@@ -47,6 +50,11 @@ export function AuthProvider({ children }) {
     const nextAvatar = res.data;
     setAvatar(nextAvatar);
   }
+
+  useEffect(() => {
+    getMe();
+    getMyAvatar();
+  }, []);
 
   return (
     <AuthContext.Provider

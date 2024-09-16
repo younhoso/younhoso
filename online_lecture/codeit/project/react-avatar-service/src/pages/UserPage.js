@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import axios from '../lib/axios';
 import Card from '../components/Card';
 import Avatar from '../components/Avatar';
@@ -35,9 +34,6 @@ function UserPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{user.name}님의 아바타 - avtr</title>
-      </Helmet>
       <header className={styles.Header}>{user.name}님의 아바타</header>
       <div className={styles.AvatarContainer}>
         <Avatar className={styles.Avatar} value={avatar} />

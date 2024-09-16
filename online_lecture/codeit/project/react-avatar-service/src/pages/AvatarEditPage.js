@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import axios from "../lib/axios";
 import Button from "../components/Button";
 import Avatar from "../components/Avatar";
@@ -43,7 +42,7 @@ function AvatarProperties({
 
 function AvatarEditPage() {
   const { avatar: initialAvatar, updateAvatar } = useAuth();
-  const [avatar, setAvatar] = useState(initialAvatar);
+  const [avatar, setAvatar] = useState(null);
   const navigate = useNavigate();
 
   function handleSelectProperty(key, value) {
@@ -62,17 +61,10 @@ function AvatarEditPage() {
     navigate("/me");
   }
 
-  useEffect(() => {
-    setAvatar(initialAvatar);
-  }, [initialAvatar]);
-
   if (!avatar) return null;
 
   return (
     <>
-      <Helmet>
-        <title>아바타 수정하기 - avtr</title>
-      </Helmet>
       <div className={styles.Container}>
         <nav className={styles.Nav}>
           <Button appearance="minimal" onClick={handleCancelClick}>

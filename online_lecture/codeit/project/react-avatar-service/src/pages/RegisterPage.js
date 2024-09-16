@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
+import axios from "../lib/axios";
 import Label from "../components/Label";
 import Input from "../components/Input";
 import Button from "../components/Button";
@@ -8,12 +9,9 @@ import Link from "../components/Link";
 import GoogleImage from "../assets/google.svg";
 import styles from "./RegisterPage.module.css";
 import { useToaster } from "../contexts/ToasterProvider";
-import instance from "../lib/axios";
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthProvider";
 
 function RegisterPage() {
-  const navigate = useNavigate();
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -21,6 +19,7 @@ function RegisterPage() {
     passwordRepeat: "",
   });
   const toast = useToaster();
+  const navigate = useNavigate();
   const { login } = useAuth();
 
   function handleChange(e) {
@@ -40,21 +39,13 @@ function RegisterPage() {
       return;
     }
     const { name, email, password } = values;
-    await instance.post("/users", {
-      name,
-      email,
-      password,
-    });
-
+    await axios.post("/users", { name, email, password });
     await login({ email, password });
     navigate("/me");
   }
 
   return (
     <>
-      <Helmet>
-        <title>회원가입 - avtr</title>
-      </Helmet>
       <h1 className={styles.Heading}>회원가입</h1>
       <Button
         className={styles.GoogleButton}

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
+import axios from "../lib/axios";
 import Label from "../components/Label";
 import Input from "../components/Input";
 import Button from "../components/Button";
@@ -7,16 +8,15 @@ import HorizontalRule from "../components/HorizontalRule";
 import Link from "../components/Link";
 import GoogleImage from "../assets/google.svg";
 import styles from "./LoginPage.module.css";
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthProvider";
 
 function LoginPage() {
-  const { login } = useAuth();
-  const navigate = useNavigate();
   const [values, setValues] = useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -32,14 +32,10 @@ function LoginPage() {
     const { email, password } = values;
     await login({ email, password });
     navigate("/me");
-    console.log({ email, password });
   }
 
   return (
     <>
-      <Helmet>
-        <title>로그인 - avtr</title>
-      </Helmet>
       <h1 className={styles.Heading}>로그인</h1>
       <form className={styles.Form} onSubmit={handleSubmit}>
         <Label className={styles.Label} htmlFor="email">

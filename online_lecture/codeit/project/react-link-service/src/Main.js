@@ -1,19 +1,19 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './components/App';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./components/App";
 import {
   FullLayout,
   LandingLayout,
   MyPageLayout,
   UserLayout,
-} from './components/Layout';
-import HomePage from './pages/HomePage';
-import MyPage from './pages/MyPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import UserPage from './pages/UserPage';
-import SettingPage from './pages/SettingPage';
-import CreateLinkPage from './pages/CreateLinkPage';
-import EditLinkPage from './pages/EditLinkPage';
+} from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import MyPage from "./pages/MyPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import UserPage from "./pages/UserPage";
+import SettingPage from "./pages/SettingPage";
+import CreateLinkPage from "./pages/CreateLinkPage";
+import EditLinkPage from "./pages/EditLinkPage";
 
 function Main() {
   return (

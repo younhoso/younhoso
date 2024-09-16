@@ -1,19 +1,21 @@
-import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import axios from '../lib/axios';
-import Label from '../components/Label';
-import Input from '../components/Input';
-import Button from '../components/Button';
-import styles from './EditLinkPage.module.css';
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "../lib/axios";
+import Label from "../components/Label";
+import Input from "../components/Input";
+import Button from "../components/Button";
+import styles from "./EditLinkPage.module.css";
+import { useAuth } from "../contexts/AuthProvider";
 
 function EditLinkPage() {
   const [values, setValues] = useState({
-    title: '',
-    url: '',
+    title: "",
+    url: "",
   });
   const params = useParams();
   const linkId = params.id;
   const navigate = useNavigate();
+  useAuth(true);
 
   async function getLink() {
     const res = await axios.get(`/users/me/links/${params.linkId}`);
@@ -33,11 +35,8 @@ function EditLinkPage() {
   async function handleSubmit(e) {
     e.preventDefault();
     const { title, url } = values;
-    await axios.patch(
-      `/users/me/links/${params.linkId}`,
-      { title, url }
-    );
-    navigate('/me');
+    await axios.patch(`/users/me/links/${params.linkId}`, { title, url });
+    navigate("/me");
   }
 
   useEffect(() => {

@@ -39,8 +39,12 @@ export function AuthProvider({ children }) {
     await getMe();
   }
 
-  async function logout({ email, password }) {
-    /** @TODO 로그아웃 구현 */
+  async function logout() {
+    await axios.delete('/auth/logout');
+    setValues((prevValues) => ({
+      ...prevValues,
+      user: null
+    }));
   }
 
   async function updateMe(formDate) {

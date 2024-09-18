@@ -39,7 +39,8 @@ export function AuthProvider({ children }) {
     await axios.delete('/auth/logout');
     setValues((prevValues) => ({
       ...prevValues,
-      user: null
+      user: null,
+      avatar: null,
     }));
   }
 

@@ -12,5 +12,5 @@ const apiFetchHandler = async (url) => {
 };
 
 export const api = {
-    getProductData: () => apiFetchHandler('/productData.json'),
+    getProductData: () => apiFetchHandler('./productData.json'),
 };

@@ -1,0 +1,21 @@
+.benefitzone {
+    .sec_banner {
+        @include vw-pc(height, 500); background: linear-gradient(#f6f7f1,#efdfe1);
+    
+        .pt_txt_box {
+            .pt_join_btn {@include vw-pc(width, 180); @include vw-pc(height, 48); @include vw-pc(font-size, 18); @include vw-pc(line-height, 32); letter-spacing: -0.05em; @include vw-pc(border-radius, 24);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_banner {
+            @include vw-mo(height, 615);
+        
+            .pt_txt_box {
+                .pt_join_btn {@include vw-mo(width, 280); @include vw-mo(height, 70); @include vw-mo(font-size, 30); @include vw-mo(line-height, 70); letter-spacing: -0.05em; @include vw-mo(border-radius, 40);}
+            }
+        }
+    }
+}

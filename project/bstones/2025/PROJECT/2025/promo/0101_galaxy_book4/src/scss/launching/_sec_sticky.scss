@@ -1,0 +1,238 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+.galaxy_book4_ultra {
+
+    .sec_sticky {
+        position: relative; height: auto; background-color: #fff;
+
+        // image lazy loading
+        &.pt_bg-image {
+            .pt_bnf__item--final .pt_bnf__price::after {background-image: url(../../../is/images/sticky_v2/gb4_line_through_mo.png);}
+            .pt_btn {
+                // &--present {
+                //     background-image: url(../../../is/images/buying/gs_btn_cart_btn_present.svg);
+                //     &.pt_btn--disabled {background-image: url("../../../is/images/sticky_v2/gb4_btn_cart_btn_present_disabled.svg");}
+                // }
+                &--pickup {
+                    background-image: url(../../../is/images/sticky_v2/gb4_btn_pickup.svg);
+                    &.pt_btn--disabled {background-image: url("../../../is/images/sticky_v2/gb4_btn_pickup_disabled.svg");}
+
+                    // 매장픽업 API 확인후 강제 비활성화, pt_btn--disabled 보다 우선 적용
+                    &.pt_btn-pickup--disabled {background-image: url("../../../is/images/sticky_v2/gb4_btn_pickup_disabled.svg");}
+                }
+                &--cart {
+                    background-image: url(../../../is/images/sticky_v2/gb4_btn_cart_mo.png);
+                    &.pt_btn--disabled,
+                    &.pt_btn--disabled_import {background-image: url("../../../is/images/sticky_v2/gb4_btn_cart_disabled_mo.png");}
+                }
+                &--benefit {
+                    background-image: url(../../../is/images/sticky_v2/gb4_btn_benefit.svg);
+                    &.pt_btn--disabled {background-image: url("../../../is/images/sticky_v2/gb4_btn_benefit_disabled.svg");}
+                }
+            }
+            .pt_benefit__total::before {
+                background: center / cover no-repeat url(../../../is/images/sticky_v2/gb4_total_line.svg);;
+            }
+            // .pt_benefit__item + .pt_benefit__item::after {
+            //     background: center / cover no-repeat url(../../../is/images/sticky_v2/gb4_btn_cart_benefit_line.svg);;
+            // }
+            .pt_benefit__coupon::after {
+                background: center / contain no-repeat url(../../../is/images/sticky_v2/gb4_btn_download.svg);
+            }
+        }
+
+        .pt_blue {color: #2680EB;}
+        .pt_sticky {
+            display: none; z-index: 20; transition: transform 0.3s ease-in;
+
+            &.pt_fixed {position: fixed; top: 0; left: 50%; display: block; width: 100%; background-color: #fff; transform: translateX(-50%);}
+            // &.opened::before {content: ''; display: block; width: 100%; height: 100vh; position: absolute; top: 100%; left: 0; background-color: rgba($color: #000000, $alpha: 0.3); z-index: 10;}
+            // &.pt_move {transform: translateY(-100%);}
+
+            &__inner {z-index: 2; position: relative; @include vw-mo(padding,0 24); @include vw-mo(box-shadow, 0 3 6 rgba(0, 0, 0, .1));}
+            &__top {display: flex; justify-content: space-between; @include vw-mo(padding-top,20);}
+            &__bottom {
+                position: relative; display: flex; align-items: center; justify-content: space-between; @include vw-mo(padding,44 0 24); @include vw-mo(margin-top,30);
+
+                .pt_bubble { // 말풍선
+                    position: absolute; @include vw-mo(top,10); @include vw-mo(left,27); z-index: 2; display: flex; align-items: center; justify-content: center; @include vw-mo(padding,0 15); @include vw-mo(height,36); color: #fff; @include vw-mo(font-size,20); font-weight: 700; letter-spacing: -0.03em; background: #1E81F8; @include vw-mo(border-radius,18);
+
+                    &__text {white-space: nowrap;}
+                    &::before {content: ""; position: absolute; @include vw-mo(bottom,-6); left: 50%; width: 0; height: 0; @include vw-mo(border-top,8 solid #1E81F8); @include vw-mo(border-left,8 solid transparent); @include vw-mo(border-right,8 solid transparent); transform: translateX(-50%);}
+                }
+            }
+            .pt_title {
+                position: relative; @include vw-mo(width,250);
+
+                &__name {@include vw-mo(margin-bottom,10); @include vw-mo(font-size,30); @include vw-mo(line-height,38);}
+                &__sku {color: #b2b2b2; @include vw-mo(font-size,20);}
+
+
+                .pt_sku__eyebrow-wrap {display: flex; align-items: center; justify-content: center; position: absolute; @include vw-mo(gap,10); @include vw-mo(left,326); @include vw-mo(top,146); @include vw-mo(width, 311);}
+                    .pt_sku__eyebrow {
+                        position: initial; display: inline-flex; align-items: center; justify-content: center; @include vw-mo(width,132); @include vw-mo(height,36); @include vw-mo(font-size,20); @include vw-mo(line-height,40); letter-spacing: -.03em; font-weight: 700; @include vw-mo(border-radius,18); background-color: #1E81F8; color: #ffffff;
+                        &--summer {@include vw-mo(width,169);}
+                    }
+            }
+            .pt_bnf {
+                position: relative; @include vw-mo(padding-left,20); @include vw-mo(padding-bottom,16); @include vw-mo(width,398);
+
+                &::before {content: ""; position: absolute; top: 50%; left: 0; display: block; width: 1px; height: 100%; background: #D5D5D5; transform: translateY(-50%);}
+                &__item {
+                    display: flex; justify-content: space-between; @include vw-mo(margin-bottom,10); color: #8E8E8E; @include vw-mo(font-size,24); font-weight: 700; @include vw-mo(line-height,32); letter-spacing: -0.05em;
+                    &:last-child {margin-bottom: 0;}
+
+                    &--final {
+                        .pt_bnf__title {color: #000; letter-spacing: -0.05em;}
+                        .pt_bnf__price {
+                            position: relative; color: #1E81F8; @include vw-mo(font-size,28);
+                            &::after {content:""; position: absolute; @include vw-mo(top,-26); right: 0; display: block; @include vw-mo(width,163); @include vw-mo(height,29); background-repeat: no-repeat; background-size: contain;}
+                        }
+                    }
+                }
+            }
+            .pt_btn--pdurl {position: absolute; @include vw-mo(bottom,130); left: 0; @include vw-mo(height,38); @include vw-mo(font-size,24); font-weight: 700; @include vw-mo(line-height,32); letter-spacing: -0.05em;}
+            .pt_btn--buy {
+                @include vw-mo(width,380); @include vw-mo(height,62); @include vw-mo(font-size,24); font-weight: 700; letter-spacing: -0.025em;  @include vw-mo(border-radius,31);
+                &:hover {color: #fff; background: #000;}
+                &.pt_btn--disabled {color: #aaa; background: #ddd; border-color: #ddd; pointer-events: none;}
+            }
+            .pt_btn--pickup {
+                display: inline-block; @include vw-mo(padding-left,44); @include vw-mo(height,48); @include vw-mo(font-size,24); font-weight: 700; @include vw-mo(line-height,48); letter-spacing: -0.05em; white-space: nowrap; background-repeat: no-repeat; background-position: left top; @include vw-mo(background-size,37); border-bottom: 1px solid #000;
+
+                &.pt_btn--disabled {color: #ddd; border-color: #ddd; pointer-events: none;}
+
+                // 매장픽업 API 확인후 강제 비활성화, pt_btn--disabled 보다 우선 적용
+                &.pt_btn-pickup--disabled {color: #ddd; border-color: #ddd; pointer-events: none;}
+            }
+            .pt_btn--cart {
+                @include vw-mo(width, 85); @include vw-mo(height,62); @include vw-mo(border, 2 solid #000); @include vw-mo(border-radius, 31); background-position: center; background-repeat: no-repeat; @include vw-mo(background-size,37);
+
+                &.pt_btn--disabled,
+                &.pt_btn--disabled_import {color: #ddd; border-color: #ddd; pointer-events: none;}
+            }
+            .pt_btn--benefit {
+                @include vw-mo(width, 44); @include vw-mo(height,44); border-radius: 50%; background-position: center; background-repeat: no-repeat; background-size: cover;
+
+                &.pt_btn--disabled {pointer-events: none;}
+                &.active {transform: rotate(180deg);}
+            }
+            // .pt_btn--present {
+            //     display: inline-block; @include vw-mo(width,101); @include vw-mo(height,62); background-repeat: no-repeat; background-position: center; @include vw-mo(background-size,43); border: 1px solid #000; @include vw-mo(border-width,3); @include vw-mo(border-radius,32);
+
+            //     &.pt_btn--disabled {border-color: #ddd; pointer-events: none;}
+            // }
+        }
+        .pt_sticky__dimm {content: ''; display: block; width: 100%; height: 100vh; position: absolute; top: 100%; left: 0; background-color: rgba($color: #000000, $alpha: 0.3); z-index: 10;}
+
+    }
+
+}
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width: 769px) {
+    .galaxy_book4_ultra {
+
+        .sec_sticky {
+
+            // image lazy loading
+            &.pt_bg-image {
+                .pt_bnf__item--final .pt_bnf__price::after {background-image: url(../../../is/images/sticky_v2/gb4_line_through_pc.png);}
+
+                .pt_benefit__total::before {background-image: url(../../../is/images/sticky_v2/gb4_total_line_pc.svg)}
+
+                .pt_btn {
+                    &--cart {
+                        background-image: url(../../../is/images/sticky_v2/gb4_btn_cart_pc.png);
+                        &.pt_btn--disabled,
+                        &.pt_btn--disabled_import{background-image: url("../../../is/images/sticky_v2/gb4_btn_cart_disabled_pc.png");}
+                    }
+                }
+            }
+
+            .pt_sticky {
+                border-bottom: 1px solid #d5d5d5; @include vw-pc(box-shadow, 0 10 20 rgba(0,0,0,0.15));
+
+                &.pt_fixed {display: flex; align-items: center; @include vw-pc(height,80); background-color: #fff;}
+                // &.opened::before {content: ''; display: block; width: 100%; height: 100vh; position: absolute; top: 100%; left: 0; background-color: rgba($color: #000000, $alpha: 0.3); z-index: 10;}
+                // &.pt_move {transform: translateY(-100%);}
+
+                &__inner {display: flex; justify-content: space-between; align-items: center; @include vw-pc(width, 1320); padding: 0; margin: 0 auto; box-shadow: none;}
+                &__top {padding: 0; @include vw-pc(width,720); align-items: center;}
+                &__bottom {
+                    padding: 0; align-items: center; @include vw-pc(gap,20); margin-top: 0;
+
+                    .pt_bubble { // 말풍선
+                        @include vw-pc(top,-14); @include vw-pc(left,190); @include vw-pc(padding,0 10); @include vw-pc(height,24); @include vw-pc(font-size,12);  @include vw-pc(border-radius,12); letter-spacing: -0.05em;
+
+                        &::before {@include vw-pc(bottom,-4); @include vw-pc(border-top,6 solid #1E81F8); @include vw-pc(border-left,6 solid transparent); @include vw-pc(border-right,6 solid transparent);}
+                    }
+                }
+                .pt_title {
+                    padding-right: 0; width: auto;
+
+                    &__name {@include vw-pc(margin-bottom,10); @include vw-pc(font-size,22); @include vw-pc(line-height,27);}
+                    &__sku {@include vw-pc(font-size,14);}
+
+                    .pt_sku__eyebrow-wrap {justify-content: left; @include vw-pc(gap,5); @include vw-pc(left,145); @include vw-pc(top,29); width: auto;}
+                    .pt_sku__eyebrow {
+                        @include vw-pc(width,90); @include vw-pc(height,24); @include vw-pc(font-size,14); @include vw-pc(line-height,16); letter-spacing: -.05em; 
+                        &--summer {@include vw-pc(width,114);}
+                    }
+                }
+                .pt_bnf {
+                    @include vw-pc(padding-left, 38); padding-bottom: 0; @include vw-pc(width,368);
+
+                    &::before {display: none;}
+                    &__item {
+                        align-items: center; @include vw-mo(margin-bottom,-1); @include vw-pc(font-size,16); @include vw-pc(line-height,23);
+
+                        .pt_bnf__price {@include vw-pc(font-size,18); @include vw-pc(line-height,23);}
+                        &--final {
+                            .pt_bnf__price {
+                                @include vw-pc(font-size,22); @include vw-pc(line-height,29);
+                                &::after {@include vw-pc(top,-11); @include vw-pc(width,135); @include vw-pc(height,25);}
+                            }
+                        }
+                    }
+                }
+                .pt_btn--pdurl {position: static; @include vw-pc(margin-right,17); @include vw-pc(height,24); @include vw-pc(font-size,16); @include vw-pc(line-height,21);}
+                .pt_btn--buy {
+                    @include vw-pc(width,236); @include vw-pc(height,40); @include vw-pc(font-size,16); @include vw-pc(border-radius,20);
+                }
+                // .pt_btn--present {
+                //     @include vw-pc(width,65); @include vw-pc(height,34); @include vw-pc(background-size,22); @include vw-pc(border-width,2); @include vw-pc(border-radius,17);
+                // }
+                .pt_btn--pickup {
+                    @include vw-pc(padding-left,26); @include vw-pc(height,28); @include vw-pc(font-size,16); @include vw-pc(line-height,28); @include vw-pc(background-size,22);
+                }
+                .pt_btn--cart {
+                    @include vw-pc(width, 64); @include vw-pc(height,40); @include vw-pc(border, 2 solid #000); @include vw-pc(border-radius, 20); @include vw-pc(background-size,24);
+                }
+                .pt_btn--benefit {
+                    @include vw-pc(width, 28); @include vw-pc(height,28);
+                }
+
+            }
+        }
+
+    }
+}
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

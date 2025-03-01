@@ -1,0 +1,227 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'notice';
+@import 'video';
+@import 'lnb';
+
+.petcare_event {
+
+    // KV START
+    .sec_kv {
+        .pt_title-box {
+            position: absolute; @include vw-pc(top, 185); @include vw-pc(left, 100); color: #fff;
+            &__pre {@include vw-pc(margin-bottom, 5); @include vw-pc(font-size, 24); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -.5);}
+            &__title {@include vw-pc(margin-bottom,29); @include vw-pc(font-size,52); @include vw-pc(line-height,68); letter-spacing: -0.05em; font-weight: 700;}
+            &__desc {@include vw-pc(margin-bottom, 28); @include vw-pc(font-size,20); @include vw-pc(line-height,28); letter-spacing: -0.025em;}
+            &__btn {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(width, 95); @include vw-pc(height, 40); @include vw-pc(border-radius, 20); @include vw-pc(font-size, 14); font-weight: 700; color: #000; @include vw-pc(letter-spacing, -.5); background-color: #fff;
+                &--black {background-color: #000; color: #fff;}
+            }
+
+            &--black{color: #000;}
+        }
+
+        .kv_swiper {
+            &.pt_ty-black {
+                .swiper-pagination-bullet-active {background-color: #000;}
+                .swiper_play {filter: invert(1);
+                    &.on {filter: invert(1);}
+                }
+            }
+        }
+
+        // swiper-controller
+        .pt_swiper-controller {
+            z-index: 10; position: absolute; top: 91%; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center;
+            
+            // 페이지네이션
+            .swiper_pagination{display: flex;}
+            .swiper-pagination-bullet {@include vw-pc(margin-right, 12); @include vw-pc(width,8); @include vw-pc(height,8); background: #8F8F8F; opacity: 1;}
+            .swiper-pagination-bullet-active {background: #fff;}
+
+            // 재생버튼
+            .swiper_play {background: url('../../is/images/fce_swiper_play_ico.png') no-repeat center; @include vw-pc(width, 10); @include vw-pc(height, 12);}
+            .swiper_play.on {background: url('../../is/images/fce_swiper_pause_ico.png') no-repeat center; @include vw-pc(width, 10); @include vw-pc(height, 12);}
+        }
+    }
+    // KV END
+
+    // EVENT START
+    .sec_event {
+        @include vw-pc(padding, 59 0 100);
+
+        .inner_1440 {@include vw-pc(padding, 0 20);}
+
+        .pt_event-tab {
+            display: flex; @include vw-pc(margin-bottom, 50); @include vw-pc(gap, 10);
+
+            &__button {display: flex; align-items: center; justify-content: center; @include vw-pc(height, 40); @include vw-pc(padding, 0 24); @include vw-pc(border-radius, 23); @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -1); font-weight: 700; @include vw-pc(border, 1 solid #B2B2B2);}
+            &__button.active {background-color: #000; color: #fff;}
+        }
+        .pt_event {
+            display: flex; flex-wrap: wrap; @include vw-pc(gap, 60 24);
+
+            &-contents {
+                display: contents;
+
+                &__link--end {pointer-events: none;
+                    .img_box::after {content: '종료'; position: absolute; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; @include vw-pc(font-size, 30); @include vw-pc(letter-spacing, -1); font-weight: 700; color: #fff; @include vw-pc(border-radius, 20); background-color: rgba(0, 0, 0, 0.4);}
+                }
+                
+                &__list {
+                    @include vw-pc(width, 330);
+
+                    .img_box {@include vw-pc(margin-bottom, 35);}
+
+                    .pt_title-box {
+                        @include vw-pc(padding-left, 25);
+                        
+                        &__title {@include vw-pc(margin-bottom, 40); @include vw-pc(font-size, 24); @include vw-pc(letter-spacing, -1); @include vw-pc(line-height, 28); font-weight: 700;}
+                        &__desc {@include vw-pc(height, 46); @include vw-pc(font-size, 15); @include vw-pc(letter-spacing, -1); @include vw-pc(line-height, 23); color: #707070;}
+                        &__date {@include vw-pc(font-size, 15); font-weight: 700; letter-spacing: -.05em; @include vw-pc(line-height, 28);}
+                        
+                    }
+                    
+                    // 종료딱지
+                    &--end {
+                        > .img_box::after {content: '종료'; position: absolute; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; @include vw-pc(font-size, 30); @include vw-pc(letter-spacing, -1); font-weight: 700; color: #fff; @include vw-pc(border-radius, 20); background-color: rgba(0, 0, 0, 0.4);}
+                    }
+                }
+            }
+        }
+    }
+    // EVENT END
+}
+
+// 폴드뷰
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+    .petcare_event {
+
+        .sec_kv {
+            .pt_title-box{
+                &__pre {@include vw-pc(font-size, 26); @include vw-pc(line-height, 32);}
+                &__title{@include vw-pc(font-size,56); @include vw-pc(line-height,72);}
+                &__desc{@include vw-pc(font-size,24); @include vw-pc(line-height,32);}
+                &__btn {@include vw-pc(font-size, 16);}
+            }
+             // swiper-controller
+            .pt_swiper-controller {
+                
+                // 페이지네이션
+                .swiper-pagination-bullet {@include vw-pc(margin-right, 14); @include vw-pc(width,10); @include vw-pc(height,10);}
+
+                // 재생버튼
+                .swiper_play {@include vw-pc(width, 12); @include vw-pc(height, 14);}
+                .swiper_play.on {background: url('../../is/images/fce_swiper_pause_ico.png') no-repeat center; @include vw-pc(width, 12); @include vw-pc(height, 14);}
+            }
+        }
+
+        // EVENT START
+        .sec_event {
+            .pt_event-tab {
+
+                &__button {@include vw-pc(height, 42); @include vw-pc(padding, 0 26); @include vw-pc(border-radius, 25); @include vw-pc(font-size, 16);}
+            }
+            .pt_event {
+                &-contents {
+
+                    &__link--end {pointer-events: none;
+                        .img_box::after {content: '종료'; position: absolute; top: 0; left: 0; @include vw-pc(font-size, 32); @include vw-pc(letter-spacing, -1); @include vw-pc(border-radius, 20);}
+                    }
+                    
+                    &__list {
+                        .pt_title-box {
+                            
+                            &__title {@include vw-pc(margin-bottom, 40); @include vw-pc(font-size, 26); @include vw-pc(line-height, 30);}
+                            &__desc {@include vw-pc(height, 48); @include vw-pc(font-size, 17); @include vw-pc(line-height, 25);}
+                            &__date {@include vw-pc(font-size, 17); @include vw-pc(line-height, 30);}
+                            
+                        }
+                        
+                        // 종료딱지
+                        &--end {
+                            > .img_box::after {content: '종료'; position: absolute; top: 0; left: 0; @include vw-pc(font-size, 32); @include vw-pc(letter-spacing, -1); @include vw-pc(border-radius, 20);}
+                        }
+                    }
+                }
+            }
+        }
+        // EVENT END
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .petcare_event {
+
+        .m_hidden {display: none;}
+        // KV START
+        .sec_kv {
+            .pt_title-box {
+                @include vw-mo(top, 147); @include vw-mo(left,40);
+                &__pre {@include vw-mo(margin-bottom, 4); @include vw-mo(font-size, 28); @include vw-mo(line-height, 37); letter-spacing: -0.025em;}
+                &__title {@include vw-mo(margin-bottom, 11); @include vw-mo(font-size,32); @include vw-mo(line-height,42); letter-spacing: -0.025em; font-weight: 700;}
+                &__desc {@include vw-mo(margin-bottom, 27); @include vw-mo(font-size,28); @include vw-mo(line-height,37); letter-spacing: -0.025em;}
+                &__btn {@include vw-mo(width, 140); @include vw-mo(height, 64); @include vw-mo(font-size, 24); letter-spacing: -0.025em; @include vw-mo(border-radius, 32);}
+
+            }
+    
+            // swiper-controller
+            .pt_swiper-controller {
+                position: absolute; top: 92%; left: 50%; transform: translateX(-50%);
+                
+                // 페이지네이션
+                .swiper-pagination-bullet {@include vw-mo(margin-right, 24); @include vw-mo(width,16); @include vw-mo(height,16);}
+                .swiper-pagination-bullet-active {background: #fff;}
+    
+                // 재생버튼
+                .swiper_play {background: url('../../is/images/fce_swiper_play_ico_mo.png') no-repeat; @include vw-mo(width, 20); @include vw-mo(height, 28); background-size: contain;}
+                .swiper_play.on {background: url('../../is/images/fce_swiper_pause_ico_mo.png') no-repeat center; @include vw-mo(width, 20); @include vw-mo(height, 26);}
+            }
+        }
+        // KV END
+        
+        // EVENT START
+        .sec_event {
+            @include vw-mo(padding, 77 0 119);
+    
+            .inner_1440 {@include vw-mo(padding, 0 24);}
+    
+            .pt_event-tab {
+                justify-content: center; @include vw-mo(margin-bottom, 50); @include vw-mo(gap, 15);
+    
+                &__button {@include vw-mo(height, 60); @include vw-mo(padding, 0 30); @include vw-mo(border-radius, 60); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1); @include vw-mo(border, 1 solid #B2B2B2);}
+            }
+            .pt_event {
+                display: flex; flex-wrap: wrap; justify-content: space-between; @include vw-mo(width,672); margin: 0 auto; @include vw-mo(gap, 59 32);
+    
+                &-contents {
+                    display: contents;
+
+                    &__link--end {pointer-events: none;
+                        .img_box::after {content: '종료'; @include vw-mo(font-size, 32); @include vw-mo(letter-spacing, -1);  @include vw-mo(border-radius, 40);}
+                    }
+    
+                    &__list {
+                        @include vw-mo(width, 320);
+    
+                        .img_box {@include vw-mo(margin-bottom, 82);}
+    
+                        .pt_title-box {
+                            @include vw-mo(padding-left, 0);
+    
+                            &__title {@include vw-mo(margin-bottom, 59); @include vw-mo(font-size, 32); @include vw-mo(letter-spacing, -1); @include vw-mo(line-height, 39);}
+                            &__desc {@include vw-mo(margin-bottom, 14); @include vw-mo(height, 74); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1); @include vw-mo(line-height, 40);}
+                            &__date {@include vw-mo(font-size, 24); @include vw-mo(line-height, 28);}
+                        }
+                        
+                        // 종료딱지
+                        &--end {
+                            > .img_box::after {content: '종료'; @include vw-mo(font-size, 32); @include vw-mo(letter-spacing, -1);  @include vw-mo(border-radius, 40);}
+                        }
+                    }
+                }
+            }
+        }
+        // EVENT END
+    }
+}

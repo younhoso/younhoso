@@ -1,0 +1,84 @@
+@import '../../../../../../scss_global/scss-common2';
+@import './bs_reset';
+@import './sec_kv';
+@import './sec_nav';
+@import './sec_benefit';
+@import './sec_buying';
+@import './simulator';
+@import './sec_comp_all';
+@import './sec_notice';
+
+.mx_academy { // MO
+
+    // common
+    .pt_font {
+        &--black {color:#000 !important;}
+        &--white {color:#fff !important;}
+        &--gray {color:#666 !important;}
+        &--blue {color:#1E81F8 !important;}
+
+        &--normal {font-weight: 400;}
+        &--bold {font-weight: 700;}
+    }
+    .pt_text {
+        &--underline {text-decoration: underline !important;}
+        &--ls0 {letter-spacing: 0 !important;}
+        &--nowrap {text-wrap: nowrap !important;}
+        &--break {word-break: break-all !important;}
+    }
+    .pt_ta {
+        &--left {text-align: left;}
+        &--right {text-align: right;}
+        &--center {text-align: center;}
+    }
+    .pt_va {
+        &--top {vertical-align: top;}
+        &--bottom {vertical-align: bottom;}
+        &--middle {vertical-align: middle;}
+    }
+
+    // 딤드
+    // .pt_dimmed_wrap > div.pt_dimmed > p.pt_dimmed__txt
+    .pt_dimmed {
+        position: absolute; top: 0; left: 0; z-index: 10; display: block; width: 100%; height: 100%; background: rgba(0,0,0,0.75);
+
+        &_wrap {position: relative; z-index: 1; overflow: hidden; cursor: default;}
+        &__txt {position: absolute; top: 50%; left: 50%; z-index: 11; display: flex; justify-content: center; align-items: center; @include vw-mo(width,200); @include vw-mo(height,200); color: #fff; @include vw-mo(font-size,38); font-weight: 700; @include vw-mo(line-height,42); letter-spacing: -0.05em; text-align: center; border: 1px solid #fff; @include vw-mo(border-width,5); border-radius: 50%; transform: translate(-50%,-50%);}
+    }
+
+}
+
+// 컴포넌트 수정
+.wrap-component {
+    // &:focus {outline: dashed 2px #2189ff !important; outline-offset: -3px; position: relative; z-index: 1;}
+
+    // 컴포넌트 탭 기능
+    &.pt_hide {
+        @include vw-pc(padding, 0 !important);
+        .component-contents {display: none !important;}
+    }
+    .component-contents {@include vw-pc(min-height, 700);}
+    // &.best-rank .component-contents {min-height: auto;}
+
+
+    // 스페셜 특가 
+    &.product-card {
+        background-color: #f7f7f7;
+        &.w1440px {max-width: 1920px !important;}
+        .visual-area { margin-top: 0 !important; }
+    }
+
+}
+
+
+@media screen and (min-width: 769px) { // PC
+    .mx_academy {
+        
+        // 딤드
+        // .pt_dimmed_wrap > div.pt_dimmed > p.pt_dimmed__txt
+        .pt_dimmed {
+            &__txt {@include vw-pc(width,180); @include vw-pc(height,180); @include vw-pc(font-size,36); @include vw-pc(line-height,42); @include vw-pc(border-width,5);}
+        }
+
+    }
+}

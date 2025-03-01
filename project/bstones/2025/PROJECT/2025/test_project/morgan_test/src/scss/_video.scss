@@ -1,0 +1,21 @@
+.morgan_test {
+    .sec_video {
+        h1{text-align: center; @include vw-pc(margin, 50 0 50);}
+        .video_box{@include vw-pc(width, 700); @include vw-pc(margin, 0 auto 50);
+            .video_test{@include vw-pc(width, 700);}
+        }
+
+        .basic_btn{
+            position: relative; left: 50%; transform: translateX(-50%); @include vw-pc(width, 200); @include vw-pc(height, 50); background-color: #fff; color: #000; @include vw-pc(border-radius, 25); @include vw-pc(margin-bottom, 50); @include vw-pc(border, 1 solid #000); pointer-events: none; 
+        }
+        .active{background-color: #000; color: #fff; pointer-events: visible;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .morgan_test {
+        .sec_video {
+            h1 {}
+        }
+    }
+}

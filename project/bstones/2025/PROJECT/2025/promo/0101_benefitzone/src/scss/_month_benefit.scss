@@ -1,0 +1,42 @@
+.benefitzone {
+    .sec_nongsim {
+        .pt_con {
+            &__box { position: relative; width: 100%; margin: 0 auto; @include vw-pc(padding, 175 0 79); background-color: #FAFAFA; text-align: center; }
+            &__box::before {content: ''; display: inline-block; position: absolute; @include vw-pc(top, 80); left: 50%; transform: translateX(-50%); @include vw-pc(width, 182); @include vw-pc(height, 61); background: url(../../is/images/benefit/nongsim/bfz_nongsim_sign_pc.png) no-repeat center/contain;}
+            &__date { @include vw-pc(margin-bottom, 6); @include vw-pc(font-size, 24); @include vw-pc(line-height, 22); font-weight: 700; }
+            &__tit { @include vw-pc(margin-bottom, 18); @include vw-pc(font-size, 42); @include vw-pc(line-height, 52); letter-spacing: -.05em; font-weight: 700; }
+            &__sub { @include vw-pc(margin-bottom, 20); @include vw-pc(font-size, 26); @include vw-pc(line-height, 42); letter-spacing: -.05em; font-weight: 700; }
+            &__desc { @include vw-pc(margin-bottom, 60); color: #5B6260; @include vw-pc(font-size, 18); @include vw-pc(line-height, 40); letter-spacing: -.05em; }
+            &__img { @include vw-pc(width, 439); @include vw-pc(height, 281); @include vw-pc(margin, 0 auto 59);}
+            &__btn { @include vw-pc(width, 198); @include vw-pc(height, 48); @include vw-pc(margin, 0 auto 29); }
+            &__btn--txt { width: 100%; height: 100%; @include vw-pc(border-radius, 50); @include vw-pc(font-size, 17); letter-spacing: -.05em; font-weight: 700; }
+            &__noti--txt { @include vw-pc(font-size, 17); letter-spacing: -.05em; font-weight: 700; }
+        
+            // 딤드처리
+            &__dim::after { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgb(0, 0, 0, .6); }
+            &__dim--txt { display: flex; justify-content: center; align-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); @include vw-pc(width, 264); @include vw-pc(height, 264); @include vw-pc(border, 3 solid #fff); border-radius: 50%; color: #fff; @include vw-pc(font-size, 50); @include vw-pc(line-height, 55); letter-spacing: -.025em; font-weight: 700; z-index: 1;}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_nongsim {
+            .pt_con {
+                &__box { @include vw-mo(padding, 193 0 99); }
+                &__box::before {content: ''; @include vw-mo(top, 100); @include vw-mo(width, 190); @include vw-mo(height, 76); background: url(../../is/images/benefit/nongsim/bfz_nongsim_sign_mo.png) no-repeat center/contain;}
+                &__date { @include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 26); @include vw-mo(line-height, 24); }
+                &__tit { @include vw-mo(margin-bottom, 25); @include vw-mo(font-size, 50); @include vw-mo(line-height, 60); letter-spacing: -.025em; }
+                &__sub { @include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 26); @include vw-mo(line-height, 36); letter-spacing: -.025em; }
+                &__desc { @include vw-mo(margin-bottom, 39); @include vw-mo(font-size, 24); @include vw-mo(line-height, 36); letter-spacing: -.05em; }
+                &__img { @include vw-mo(width, 440); @include vw-mo(height, 282); @include vw-mo(margin, 0 auto 57);}
+                &__btn { @include vw-mo(width, 308); @include vw-mo(height, 83); @include vw-mo(margin, 0 auto 37); }
+                &__btn--txt { @include vw-mo(border-radius, 50); @include vw-mo(font-size, 28); letter-spacing: -.05em; }
+                &__noti--txt { @include vw-mo(font-size, 26); letter-spacing: -.05em; }
+
+                // 딤드처리
+                &__dim--txt { @include vw-mo(width, 264); @include vw-mo(height, 264); @include vw-mo(border, 3 solid #fff); @include vw-mo(font-size, 50); @include vw-mo(line-height, 55);}
+            }
+        }
+    }
+}

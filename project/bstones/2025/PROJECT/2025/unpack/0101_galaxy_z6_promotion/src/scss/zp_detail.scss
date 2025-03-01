@@ -1,0 +1,54 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'monospace';
+@import 'notice';
+
+#bottom__navi {display: none !important;}
+
+.pt_zp_detail {
+    .sec_benefit {
+        .pt_btn-box {
+            display: flex; justify-content: center; align-items: center; position: fixed; bottom: 0; left: 0; width: 100%; @include vw-mo(height, 160); z-index: 90; background-color: #E5EEDD;
+            
+            &--gray {background-color: #DDD;}
+            &--skyblue {background-color: #f1f9ff;}
+            &--black {background-color: #000;}
+            &--protector {background-color: #eef2fe;}
+            &--common {background-color: #e8ebf5;}
+            &--yellow {background-color: #fffaeb;}
+            &--pastelblue {background-color: #d8ecf7;}
+            &--mint {background-color: #e4f9f2;}
+
+            .pt_btn {
+                @include vw-mo(width, 340); @include vw-mo(height, 80); @include vw-mo(font-size, 30); letter-spacing: -.025em;
+                &--preorder {border: 1px solid #fff;}
+                &--bgBlack {border: 1px solid #fff;}
+                &--soon {pointer-events: none; background-color: #DDDDDD; color: #AAAAAA; border: #DDDDDD;}
+            }
+
+            &__text {@include vw-mo(font-size, 28); @include vw-mo(line-height, 37); font-weight: 700; text-align: center;}
+        }
+
+        // 일반 구매 상세페이지 내 스마트태그2 사용법 보러 가기 버튼
+        .pt_btn_howto {position: absolute; bottom: 3.7%; left: 50%; transform: translateX(-50%); width: 62%; height: 3.2%;}
+    }
+}
+
+// fold view
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .pt_zp_detail {
+        .sec_benefit {
+            
+            .pt_btn-box {
+                @include vw-fold(height, 200);
+
+                .pt_btn {@include vw-fold(width, 408); @include vw-fold(height, 95); @include vw-fold(font-size, 36); @include vw-fold(border-radius, 50);}
+
+                &__text {@include vw-fold(font-size, 42); @include vw-fold(line-height, 54);}
+            }
+
+            // 일반 구매 상세페이지 내 스마트태그2 사용법 보러 가기 버튼
+            .pt_btn_howto {position: absolute; bottom: 3.7%; left: 50%; transform: translateX(-50%); width: 42%; height: 3.2%;}
+        }
+    }
+}

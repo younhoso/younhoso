@@ -1,0 +1,36 @@
+.samsung_tv_launching {
+    .sec_victory {
+        .pt_victory__wrap { @include vw-pc(margin, 100 0);}
+
+        .pt_victory {
+            position: relative;
+
+            &__contents {
+                position: absolute; @include vw-pc(top, 41); @include vw-pc(left, 360);
+
+                &--title { @include vw-pc(font-size, 35); line-height: 1.4; letter-spacing: -0.025em; font-weight: 700;}
+                &--txt { @include vw-pc(font-size, 18); line-height: 1.3; letter-spacing: -0.025em;}
+                &--detail { display: inline-block; @include vw-pc(margin-top, 18); @include vw-pc(font-size, 16); line-height: 1.2; font-weight: 400; letter-spacing: -0.025em; border-bottom: 1px solid #000;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+        .sec_victory {
+            .pt_victory__wrap { @include vw-mo(margin, 60 24);}
+
+            .pt_victory {
+                &__contents {
+                    @include vw-mo(top, 82); @include vw-mo(left, 80);
+    
+                    &--title { @include vw-mo(font-size, 36); line-height: 1.6; letter-spacing: -0.025em;}
+                    &--txt { @include vw-mo(font-size, 24); letter-spacing: -0.05em;}
+                    &--detail { @include vw-mo(margin-top, 20); @include vw-mo(font-size, 24);}
+                }
+            }
+        }
+    }
+    
+}

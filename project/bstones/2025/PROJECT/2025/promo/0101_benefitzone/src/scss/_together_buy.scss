@@ -1,0 +1,238 @@
+.benefitzone {
+    .sec_month {@include vw-pc(padding, 80 0); z-index: 2; background-color: #F3FAFB;
+        .pt_common_txt_box {
+            @include vw-pc(margin-bottom, 81);
+
+            .pt_subject,
+            .pt_subject::after {background-color: #247985;}
+            .pt_kr {font-weight: 700;}
+        }
+        .pt_contents {position: relative; @include vw-pc(width, 1240); @include vw-pc(margin, 0 auto 39);
+            .pt_bg_img {@include vw-pc(height, 436);}
+            .pt_txt_box {display: flex; flex-direction: column; position: absolute; top: 0; left: 0; width: 100%; height: 100%; @include vw-pc(padding, 79 58 0 56);
+                .pt_title {@include vw-pc(margin-bottom, 4); @include vw-pc(font-size, 42); @include vw-pc(line-height, 54); letter-spacing: -0.025em;}
+                .pt_des {@include vw-pc(margin-bottom, 74); @include vw-pc(font-size, 20); @include vw-pc(line-height, 28); letter-spacing: -0.025em;}
+                .pt_month_btn {@include vw-pc(gap, 5); position: relative; @include vw-pc(width, 188); @include vw-pc(height, 48); /*@include vw-pc(padding-right, 24);*/ background: #000; color: #fff; @include vw-pc(font-size, 18); letter-spacing: -0.05em; font-weight: 700; @include vw-pc(border-radius, 24);}
+                .pt_month_btn::after {content: ''; @include vw-pc(width, 14); @include vw-pc(height, 22); background: url('../../../is/images/benefit/bfz_kb_btn_icon_pc_v1.png') no-repeat center center / contain;}
+                .pt_dis {align-self: flex-end; @include vw-pc(margin-top, 25); @include vw-pc(bottom, 20); @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); letter-spacing: -0.05em; color: rgba(0, 0, 0, 0.6);}
+            }
+        }
+
+        //포인트
+        .pt_point {@include vw-pc(margin-bottom, 50);
+            &__list {display: flex; align-items: flex-start; justify-content: center; flex-wrap: wrap;margin: 0 auto; 
+                &.pt_plus_ico {
+                    &::after {content: ""; display: block; position: absolute; @include vw-pc(width, 64); height: auto; top: 44.5%; left: 48%; bottom: 0; transform: translate(-50%, -50%); background: url('../../is/images/benefit/bfz_point_icon_plus_pc.png') no-repeat center / 100%;}}
+                .pt_item {text-align: center;
+                    &--model {@include vw-pc(margin-right, 154); @include vw-pc(width, 419);}
+                    &--premium {@include vw-pc(width, 482);}
+                    &--point {@include vw-pc(margin-top, 56);}
+
+                    &__eyebrow {display: inline-block; @include vw-pc(padding, 9 30); @include vw-pc(margin-bottom, 15); @include vw-pc(border-radius, 6); background-color: #4D949F; @include vw-pc(font-size, 18); @include vw-pc(letter-spacing, -.9); color: #fff; font-weight: 700;}
+                    &__desc {
+                        @include vw-pc(margin-bottom, 7); @include vw-pc(font-size, 18); @include vw-pc(line-height, 22); @include vw-pc(letter-spacing, -.9); font-weight: 700;
+                        &--sub {@include vw-pc(margin-bottom, 24); @include vw-pc(font-size, 14); @include vw-pc(line-height, 22); color: rgba(0, 0, 0, .4); white-space: nowrap;}
+                        &--sub--minus { @include vw-pc(margin-left, -66);}
+                    }
+
+                    .pt_table {position: relative; display: flex; width: fit-content; margin: 0 auto; @include vw-pc(border-radius, 15); @include vw-pc(border, 1 solid #9EACB1); overflow: hidden; text-align: center;
+                        &::after {display: block; content: ""; position: absolute; top: 50%; transform: translateY(-50%); width: 100%; @include vw-pc(height, 1); background-color: #9EACB1;}
+                        + .pt_table {@include vw-pc(margin-top, 20);
+                            &--02 {
+                                .pt_table__column-inner {@include vw-pc(width, 89);}
+                            }
+                        }
+                        &__column {
+                            &:last-child {
+                                .pt_table__column-price {color: #247985;
+                                    &::after {display: none;}
+                                }
+                            }
+                            &--sum {
+                                .pt_table__column-price::after {background: url("../../../is/images/benefit/bfz_point_icon_result_pc.png") center/contain no-repeat;}
+                            }
+                            &-inner {position: relative; display: flex; align-items: center; justify-content: center; @include vw-pc(width, 87.5); @include vw-pc(height, 60.5); font-weight: 700;}
+                            &-name {@include vw-pc(font-size, 16); @include vw-pc(line-height, 20);
+                                &--tight {@include vw-pc(letter-spacing, -1.12);}
+                            }
+                            &-another{display: block; @include vw-pc(font-size, 12); @include vw-pc(line-height, 15) }
+                            &-price {@include vw-pc(font-size, 24); @include vw-pc(line-height, 29);
+                                &::after {display: block; content: ""; position: absolute; top: 50%; @include vw-pc(right, -6.5); transform: translateY(-50%); @include vw-pc(width, 14); @include vw-pc(height, 14); background: url("../../../is/images/benefit/bfz_point_icon_plus_pc.png") center/contain no-repeat;}
+                            }
+                        }
+                    }
+                    
+                    .pt_bebefit_table {
+                        position: relative; background: #fff; @include vw-pc(border-radius, 10); text-align: center; @include vw-pc(box-shadow, 0 5 18 0 rgba(140, 147, 159, 0.3)); overflow: hidden;
+                        .pt_bg {background: rgba(221, 240, 242, .2);}
+                        .pt_line {border-top: 1px solid #E6E6E6;}
+                        .pt_bold {color: #247985; font-weight: 700;}
+                        table {display: table; width: 100%;}
+                        tr th {display: table-cell; @include vw-pc(padding, 12 0); color: #fff; background-color: #4E9BA5;}
+                        td {display: table-cell; @include vw-pc(padding, 5 0);}
+                        th, tr > * {@include vw-pc(font-size, 18); @include vw-pc(line-height, 24);}
+                        .pt_table_first {font-weight: 600;}
+                        &.type02 {
+                            @include vw-pc(margin-bottom, 25);
+                            td, tr, th {border-bottom: 1px solid #E6E6E6; border-left: 1px solid #E6E6E6;}
+                            .pt_table_first {
+                                position: relative;
+                                span {position: absolute; top: 50%; transform: translate(-50%, -50%); white-space: nowrap;}
+                            }
+                            td {padding: 0;}
+                            .pt_tit_bg {background: #DDF0F2; color: #3F939F; font-weight: 500;}
+                            .pt_table_second {
+                                .pt_table_list {
+                                    @include vw-pc(padding, 9 0 10 49); text-align: left;
+                                    li {
+                                        position: relative; @include vw-pc(padding, 0 0 0 14); word-spacing: -0.2px;
+                                        &::after {content: ""; display: block; position: absolute; @include vw-pc(top, 9); left: 0; @include vw-pc(width, 4); @include vw-pc(height, 4); border-radius: 50%; background-color: #6F7070;}
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    .pt_model_btn_wrap {
+                        display: flex; align-items: center; flex-direction: column;
+                        .pt_model_txt {@include vw-pc(margin, 30 0 35); text-align: left}
+                        .pt_noti_title {@include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 18); @include vw-pc(line-height, 22); font-weight: 700;}
+                        .pt_noti_text {@include vw-pc(font-size, 18); @include vw-pc(line-height, 24); letter-spacing: -.025em;}
+                        .pt_noti_text em {@include vw-pc(margin-right, 1); font-weight: 700;}
+                        .pt_model_btn {display: flex; justify-content: center; align-items: center; @include vw-pc(padding, 11 17); @include vw-pc(height, 44); @include vw-pc(font-size, 18); letter-spacing: -0.05em; font-weight: 700; @include vw-pc(border-radius, 24); color: #000; border: 2px solid #000; background-color: transparent; text-align: center;}
+                        .pt_item__eyebrow--sort {@include vw-pc(margin, 31 0 15);}
+                    }
+                }
+            }
+            &__item {position: relative;}
+            &__bubble {display: flex; justify-content: center; position: absolute; @include vw-pc(top, -48); left: 50%; transform: translateX(-50%); @include vw-pc(width, 118); @include vw-pc(height, 56); @include vw-pc(padding-top, 14); margin: 0 auto; @include vw-pc(font-size, 16); letter-spacing: -.05em; color: #247985; font-weight: 700; background-image: url("../../../is/images/benefit/bfz_month_bubble_pc.png"); background-size: 100%; background-repeat: no-repeat;}
+        }
+        .pt_common_notice {
+            &--mb0 {margin-bottom: 0;}
+            .pt_noti_title {@include vw-pc(margin-bottom, 30); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23);}
+            .pt_notice_buy {display: flex; justify-content: center; align-items: center; @include vw-pc(margin, 0 auto 29); @include vw-pc(width, 240); @include vw-pc(height, 48); @include vw-pc(font-size, 17); letter-spacing: -.035em; font-weight: 700; color: #fff; @include vw-pc(border-radius, 24); background-color: #000;}
+            .pt_noti_text {@include vw-pc(margin, 0 0 70 432); @include vw-pc(text-indent, -153); @include vw-pc(font-size, 18); @include vw-pc(line-height, 24); text-align: left;}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_month {
+            @include vw-mo(padding, 100 0); z-index: 6;
+            .pt_common_txt_box {@include vw-mo(margin-bottom, 97);}
+
+            .pt_contents {@include vw-mo(width, 672); @include vw-mo(margin, 0 auto 54);
+                .pt_bg_img {@include vw-mo(height, 851);}
+                .pt_txt_box {@include vw-mo(padding, 47 66 60); text-align: center;
+                    .pt_title {order:0; @include vw-mo(margin-bottom, 13); @include vw-mo(font-size, 50); @include vw-mo(line-height, 63); letter-spacing: -0.025em;}
+                    .pt_des {order:0; @include vw-mo(margin-bottom, 416); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35); letter-spacing: -0.04em;}
+                    .pt_month_btn {order:1; align-self: center; @include vw-mo(gap, 8); @include vw-mo(width, 303); @include vw-mo(height, 80); /*@include vw-mo(padding-right, 35);*/ @include vw-mo(font-size, 28); letter-spacing: -0.025em; @include vw-mo(border-radius, 40);}
+                    .pt_month_btn::after {@include vw-mo(width, 22); @include vw-mo(height, 37); background-image: url('../../../is/images/benefit/bfz_kb_btn_icon_mo_v1.png');}
+                    .pt_dis {order:0; align-self: center; @include vw-mo(margin, 0 0 13); @include vw-mo(font-size, 20); @include vw-mo(line-height, 28); letter-spacing: -0.01em;}
+                }
+            }
+
+            //포인트
+            .pt_point {@include vw-mo(margin-bottom, 50);
+                &__header {@include vw-mo(margin, -48 auto 70);
+                    &-desc{@include vw-mo(margin-bottom, -48); @include vw-mo(padding-bottom, 8); @include vw-mo(width, 720); @include vw-mo(height, 281); background: url("../../../is/images/benefit/bfz_point_basic_bg_mo.png") no-repeat center / cover; @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -.6);}
+                    &-title {@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 34); @include vw-mo(line-height, 41); @include vw-mo(letter-spacing, -1.7);}
+                    &-date {@include vw-mo(font-size, 26); @include vw-mo(line-height, 31);
+                        &.kr {font-weight: 700;}
+                    }
+                }
+                &__bubble {@include vw-mo(top, -65); @include vw-mo(width, 168); @include vw-mo(height, 72); @include vw-mo(padding-top, 14); @include vw-mo(font-size, 26); letter-spacing: -.025em; background-image: url("../../../is/images/benefit/bfz_month_bubble_mo.png");}
+                &__list {
+                    width: 100%; flex-direction: column;
+
+                    &.pt_plus_ico {
+                        &::after {display: none;}
+                    }
+                    .pt_item {
+                        margin: 0 auto;
+
+                        &--model { @include vw-mo(width, 672);}
+                        &--premium {@include vw-mo(margin-top, 236); @include vw-mo(width, 672);}
+                        &--point {@include vw-mo(margin-top, 56);}
+        
+
+                        &--point {@include vw-mo(margin-top, 70);}
+    
+                        &__eyebrow {
+                            @include vw-mo(padding, 10 22); @include vw-mo(margin-bottom, 29); @include vw-mo(border-radius, 6); @include vw-mo(font-size, 33); @include vw-mo(letter-spacing, -1.1);
+
+                            &--pre {
+                                &::after {content: ''; position: absolute; @include vw-mo(width, 116); @include vw-mo(height, 116); @include vw-mo(top, -176); left: 50%; transform: translateX(-50%); background: url('../../is/images/benefit/bfz_point_icon_plus_mo.png') no-repeat center / 100%;}
+                            }
+                        }
+                        &__desc {
+                            @include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 26); @include vw-mo(line-height, 22); @include vw-mo(letter-spacing, -1.3);
+                            &--sub {@include vw-mo(margin-bottom, 49); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                            &--sub--minus { margin-left: 0;}
+                        }
+    
+                        .pt_table {@include vw-mo(border-radius, 15); @include vw-mo(border, 1 solid #9EACB1);
+                            &::after {@include vw-mo(height, 1);}
+                            + .pt_table {@include vw-mo(margin-top, 40);
+                                &--02 {
+                                    .pt_table__column-inner {@include vw-mo(width, 96);}
+                                }
+                            }
+                            &__column {
+                                &--sum {
+                                    .pt_table__column-price::after {background: url("../../../is/images/benefit/bfz_point_icon_result_mo.png") center/contain no-repeat;}
+                                }
+                                &-inner {@include vw-mo(width, 98.25); @include vw-mo(height, 72.5); font-weight: 700;}
+                                &-name {@include vw-mo(font-size, 18); @include vw-mo(line-height, 24);
+                                    &--tight {@include vw-mo(letter-spacing, -1.5);}
+                                }
+                                &-another{@include vw-mo(font-size, 14); @include vw-mo(line-height, 18) }
+                                &-price {@include vw-mo(font-size, 30); @include vw-mo(line-height, 97);
+                                    &::after {@include vw-mo(right, -7); transform: translateY(-50%); @include vw-mo(width, 16); @include vw-mo(height, 16); background: url("../../../is/images/benefit/bfz_point_icon_plus_mo.png") center/contain no-repeat;}
+                                }
+                            }
+                            
+                        }
+
+                        .pt_bebefit_table {
+                            @include vw-mo(border-radius, 10); @include vw-mo(box-shadow, 0 5 18 0 rgba(140, 147, 159, 0.3));
+                            tr th {@include vw-mo(padding, 12 0);}
+                            td {@include vw-mo(padding, 8 0);}
+                            th, tr > * {@include vw-mo(font-size, 32); @include vw-mo(line-height, 45);}
+                            &.type02 {
+                                @include vw-mo(margin-bottom, 60);
+                                .pt_table_second {
+                                    .pt_table_list {
+                                        @include vw-mo(padding, 25 0 27 32);
+                                        li {
+                                            @include vw-mo(padding, 0 0 0 23); @include vw-mo(font-size, 32);
+                                            &::after {@include vw-mo(top, 19); @include vw-mo(width, 7); @include vw-mo(height, 7);}
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        .pt_model_btn_wrap {
+                            .pt_model_txt {@include vw-mo(margin, 48 0);}
+                            .pt_noti_title {@include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                            .pt_noti_text {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32); @include vw-mo(text-indent, -198); @include vw-mo(margin-left, 198);}
+                            .pt_noti_text em {@include vw-mo(margin-right, 1);}
+                            .pt_model_btn {@include vw-mo(padding, 20 0); @include vw-mo(width, 300); @include vw-mo(height, 80); @include vw-mo(font-size, 28); @include vw-mo(line-height, 32); @include vw-mo(border, 4 solid #000); @include vw-mo(border-radius, 40);}
+                            .pt_item__eyebrow--sort {@include vw-mo(margin, 50 0 0);}
+                        }
+                    }
+                }
+                
+            }
+            .pt_common_notice {
+                margin-bottom: 0;
+                .pt_noti_title {@include vw-mo(margin-bottom, 51); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 400;}
+                .pt_noti_text {@include vw-mo(margin, 0 0 54 211); @include vw-mo(text-indent, -202); @include vw-mo(font-size, 24); @include vw-mo(line-height, 40);}
+                .pt_noti_text em {@include vw-mo(margin-right, 1);}
+                .pt_notice_buy {@include vw-mo(margin, 0 auto 37); @include vw-mo(width, 380); @include vw-mo(height, 80); @include vw-mo(font-size, 28); letter-spacing: -.05em; @include vw-mo(border-radius, 40);}
+            }
+        }
+    }
+}

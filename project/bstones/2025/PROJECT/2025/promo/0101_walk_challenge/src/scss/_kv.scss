@@ -1,0 +1,55 @@
+.walk_challenge {
+    .sec_kv {
+        .pt_kv{position: relative;}
+        .pt_text-box{position: absolute; @include vw-pc(top,61); @include vw-pc(left,135);
+            &__eyebrow{@include vw-pc(margin-bottom,11); @include vw-pc(width,458);}
+            &__title{@include vw-pc(margin-bottom,19); @include vw-pc(font-size,52); @include vw-pc(line-height,68);}
+            &__date{@include vw-pc(margin-bottom,10); @include vw-pc(font-size,20); @include vw-pc(line-height,25); font-weight: 700;}
+            &__desc{@include vw-pc(font-size,22); @include vw-pc(line-height,30); letter-spacing:-0.025em;}
+        }
+
+        .pt_logo{@include vw-pc(margin,0 auto 40); @include vw-pc(width,541);}
+
+        .pt_info{@include vw-pc(padding,40 0 100 0); text-align: center;
+            &__wrap{position: relative; display: flex; justify-content: center; @include vw-pc(gap,40); @include vw-pc(margin-bottom,81);
+                &::before{content:""; display: inline-block; position: absolute; @include vw-pc(bottom,-101); @include vw-pc(left,-38); @include vw-pc(width,151); @include vw-pc(height,280); background: url("../../is/images/wc_deco_tree_pc.png") no-repeat center / contain;}
+                &::after{content:""; display: inline-block; position: absolute; @include vw-pc(top,-148); @include vw-pc(right,-52); @include vw-pc(width,217); @include vw-pc(height,258); background: url("../../is/images/wc_deco_snowman_pc.png") no-repeat center / contain;}
+            }
+            &__box{display: flex; flex-direction: column; justify-content: center; align-items: center; @include vw-pc(width,700); @include vw-pc(height,320); @include vw-pc(border-radius,16); background-color: #E7EEFA;}
+            &__tit{@include vw-pc(margin-bottom,27); @include vw-pc(font-size,42); @include vw-pc(line-height,55); letter-spacing:-0.025em; font-weight:700; }
+            &__desc{display: flex; align-items: center; @include vw-pc(min-height,90); @include vw-pc(font-size,22); @include vw-pc(line-height,30); letter-spacing:-0.025em;}
+            &__text{@include vw-pc(font-size,24); @include vw-pc(line-height,32); letter-spacing:-0.025em; font-weight:700;}
+            &__app{display: inline-block; @include vw-pc(width,40); @include vw-pc(height,40); background: url("../../is/images/wc_healthapp_ico.png") no-repeat center / contain; vertical-align: middle;}
+            &__btn{@include vw-pc(width,268); @include vw-pc(height,64); @include vw-pc(font-size,24); @include vw-pc(border-radius,50);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .walk_challenge {
+        .sec_kv {
+            .pt_kv{position: relative;}
+            .pt_text-box{position: absolute; @include vw-mo(top,95); left: 50%; transform: translateX(-50%); width: 100%; text-align: center;
+                &__eyebrow{@include vw-mo(margin,0 auto 14); @include vw-mo(width,540);}
+                &__title{@include vw-mo(margin-bottom,19); @include vw-mo(font-size,50); @include vw-mo(line-height,66);}
+                &__date{@include vw-mo(margin-bottom,20); @include vw-mo(font-size,30); @include vw-mo(line-height,40); font-weight: 700;}
+                &__desc{@include vw-mo(font-size,30); @include vw-mo(line-height,42); letter-spacing:-0.025em;}
+            }
+
+            .pt_logo{@include vw-mo(margin,0 auto 76); @include vw-mo(width,527);}
+    
+            .pt_info{@include vw-mo(padding,56 0 59 0); text-align: center;
+                &__wrap{flex-direction: column; align-items: center; @include vw-mo(gap,40); @include vw-mo(margin,0 auto 81); @include vw-mo(width,580);
+                    &::before{@include vw-mo(bottom,-32); @include vw-mo(left,-32); @include vw-mo(width,109); @include vw-mo(height,202); background: url("../../is/images/wc_deco_tree_mo.png") no-repeat center / contain;}
+                    &::after{@include vw-mo(top,236); @include vw-mo(right,-50); @include vw-mo(width,176); @include vw-mo(height,209); background: url("../../is/images/wc_deco_snowman_mo.png") no-repeat center / contain;}
+                }
+                &__box{@include vw-mo(width,580); @include vw-mo(height,340); @include vw-mo(border-radius,16);}
+                &__tit{@include vw-mo(margin-bottom,27); @include vw-mo(font-size,38); @include vw-mo(line-height,50); letter-spacing:-0.025em; font-weight:700; }
+                &__desc{@include vw-mo(font-size,22); @include vw-mo(line-height,34); letter-spacing:-0.025em;}
+                &__text{@include vw-mo(font-size,24); @include vw-mo(line-height,32); letter-spacing:-0.025em; font-weight:700;}
+                &__app{display: inline-block; @include vw-mo(width,40); @include vw-mo(height,40); background: url("../../is/images/wc_healthapp_ico.png") no-repeat center / contain; vertical-align: middle;}
+                &__btn{left: 50%; transform: translateX(-50%); @include vw-mo(margin-top,-20); @include vw-mo(width,268); @include vw-mo(height,60); @include vw-mo(font-size,24); @include vw-mo(line-height,58); @include vw-mo(border-radius,44);}
+            }
+        }
+    }
+}

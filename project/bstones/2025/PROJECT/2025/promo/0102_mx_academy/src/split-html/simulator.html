@@ -1,0 +1,89 @@
+<!-- 
+    .sec_buying 영역진입시 .pt_simulator에 pt_fixed 추가
+    제품 1개이상 담을시 .pt_simulator에 active 추가
+    .pt_btn--open 클릭시 .pt_full-box에 pt_open 추가
+    .pt_btn--close 클릭시 .pt_full-box에 pt_open 삭제
+    담은 제품이 1개일때 .pt_btn--cart, .pt_btn--buy 숨김 / .pt_btn--buy.pt_disabled 노출
+    담은 제품이 2개이상일때 .pt_btn--cart, .pt_btn--buy 노출 / .pt_btn--buy.pt_disabled 숨김
+-->
+
+<div class="pt_simulator" data-buying-simulator>
+    <!-- 장바구니 비었을 때 -->
+    <div class="pt_empty-box">
+        <p class="pt_txt pt_bg-image">제품을 담고 혜택을 확인하세요!</p>
+    </div>
+
+    <!-- 장바구니 담기 했을 때 -->
+    <div class="pt_full-box">
+        <a href="javascript:;" title="열기" class="pt_btn pt_btn--simul pt_btn--open pt_bg-image" data-omni-type="microsite" data-omni="event:2025_galaxy_academy_festa:tab_togetherbuy_open" data-simul-open>열기</a>
+        <a href="javascript:;" title="닫기" class="pt_btn pt_btn--simul pt_btn--close pt_bg-image" data-omni-type="microsite" data-omni="event:2025_galaxy_academy_festa:tab_togetherbuy_close" data-simul-close>닫기</a>
+
+        <div class="pt_item">
+            <div class="pt_item__wish">
+                <div class="swiper-container pt_wish-slide">
+                    <div class="swiper-wrapper">
+                    </div>
+                </div>
+                <span class="pt_arrow pt_arrow--prev"><p class="blind">이전 버튼</p></span>
+                <span class="pt_arrow pt_arrow--next"><p class="blind">다음 버튼</p></span>
+            </div>
+            <div class="pt_item__bnf">
+                <div class="pt_bnf">
+                    <div class="pt_bnf__standard">
+                        <span class="pt_bnf__standard--txt">기준가</span>
+                        <span class="pt_bnf__standard--price"><em class="en" data-simul-price="priceA">0</em>원</span>
+                    </div>
+                    <ul class="pt_bnf__list">
+                        <li class="pt_bnf__item" style="display: none;">
+                            <span class="pt_bnf__item--txt">즉시할인</span>
+                            <div class="pt_bnf__item--price" data-login-tag><strong>- <em class="en" data-simul-price="priceB">0</em></strong>원</div>
+                        </li>
+                        <li class="pt_bnf__item" style="display: none;">
+                            <span class="pt_bnf__item--txt">동시구매 할인</span>
+                            <div class="pt_bnf__item--price" data-login-tag><strong>- <em class="en" data-simul-price="priceC">0</em></strong>원</div>
+                        </li>
+                        <li class="pt_bnf__item" style="display: none;">
+                            <span class="pt_bnf__item--txt">워치·버즈 아카데미 특가 쿠폰</span>
+                            <div class="pt_bnf__item--price" data-login-tag><strong>- <em class="en" data-simul-price="priceD_1">0</em></strong>원</div>
+                        </li>
+                        <li class="pt_bnf__item" style="display: none;">
+                            <span class="pt_bnf__item--txt">로그인 쿠폰</span>
+                            <div class="pt_bnf__item--price" data-login-tag><strong>- <em class="en" data-simul-price="priceD_2">0</em></strong>원</div>
+                        </li>
+                        <li class="pt_bnf__item" style="display: none;">
+                            <span class="pt_bnf__item--txt">태블릿 아카데미 특가 쿠폰</span>
+                            <div class="pt_bnf__item--price" data-login-tag><strong>- <em class="en" data-simul-price="priceD_3">0</em></strong>원</div>
+                        </li>
+                        <li class="pt_bnf__item" style="display: none;">
+                            <span class="pt_bnf__item--txt">신용카드 금액대별 결제일할인<br>(카드별 월 1회 혜택 제공)</span>
+                            <div class="pt_bnf__item--price" data-login-tag><strong>- <em class="en" data-simul-price="priceE">0</em></strong>원</div>
+                        </li>
+                    </ul>
+                    <div class="pt_bnf__total">
+                        <span class="pt_bnf__total--txt">신용카드 금액대별 결제 혜택가</span>
+                        <div class="pt_bnf__total--price" data-login-tag><en class="en" data-simul-price="priceF">0</en>원</div>
+                    </div>
+                </div>
+                <ul class="pt_item__desc">
+                    <li class="pt_font--blue">※ 삼성닷컴 즉시할인가는 회원 구매 시에만 적용됩니다.</li>
+                    <li>※ 모델별 배송일정은 주문결제 페이지에서 확인 바랍니다.</li>
+                    <li>
+                        ※ 신용카드 금액대별 결제 혜택 제공 카드 :&nbsp;
+                        <a href="https://www.samsung.com/sec/eventList/creditcard_benefit/?anc=cardbenefit" target="_blank" title="신용카드 혜택 상세 페이지로 이동(새창 열림)" data-omni="event:2025_galaxy_academy_festa:viewmore_togetherbuy_card" data-omni-type="microsite" class="pt_text--underline">자세히보기</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pt_btn--box">
+            <!-- <a href="javascript:;" class="pt_btn pt_btn--cart pt_bg-image" style="display:none;" data-role="btnCartAll" data-omni-type="microsite" data-omni="" title="장바구니 페이지로 이동"><span class="blind">장바구니</span></a> -->
+            <a href="javascript:;" class="pt_btn pt_btn--buy" style="display:none;" data-role="btnBuyAll" data-omni-type="microsite" data-omni="event:2025_galaxy_academy_festa:buy_togetherbuy_close" title="구매하기 페이지로 이동">
+                <p class="pt_count">총 <em class="en" data-simul-cnt></em>개 <span class="pt_count--txt">구매하기</span></p>
+                <!-- <span class="pt_card">신용카드 결제일할인가 <em class="en" data-simul-price="priceF">0</em>원</span> -->
+            </a>
+            <div class="pt_btn pt_btn--buy pt_disabled" data-role="btnEmpty">
+                제품 담기
+            </div>
+        </div>
+    </div>
+</div>

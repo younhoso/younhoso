@@ -1,0 +1,187 @@
+// ★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★
+// MOBILE
+.galaxy_book4_ultra {
+    .sec_pod {        
+        @include vw-mo(margin, 0 24 126); transition: color,background-color 0.4s;
+        .pt_sec_pod-title{
+            @include vw-mo(margin-bottom, 38); text-align:center; @include vw-mo(font-size, 51); @include vw-mo(line-height, 66);
+        }
+
+        .pt_pod_tab {
+            display: flex; justify-content: space-between;  @include vw-mo(margin-bottom, 60);
+            .btn_common {display:block; @include vw-mo(width, 326);  text-align: center; @include vw-mo(font-size, 28); letter-spacing: -0.025em; @include vw-mo(line-height, 35); color:#B2B2B2; border-width: 2px; border-color: #B2B2B2; }
+            .btn_common.active {color:#000; border-color: #000;}
+        }
+        .pt_pod_tab_alarm {
+            .btn_common {@include vw-mo(width, 210);}
+        }
+        // pod 공통
+        .pt_pod{
+            &__btn{display: block; position: relative; overflow: hidden; width: 100%; height: 100%; @include vw-mo(border-radius,20);}
+            &__text{z-index: 1; position: absolute; @include vw-mo(top,32); @include vw-mo(left,32); @include vw-mo(font-size,30); @include vw-mo(line-height,40); font-weight:700; color:#fff;}
+            &__text--black {color: #000;}
+            &__text::after{content: ''; position: absolute; @include vw-mo(bottom,-1); width: 0; left: 0; @include vw-mo(height,1.5); transition: width 0.4s ease; background-color: #fff;}
+            &__text--black::after{content: ''; position: absolute; @include vw-mo(bottom,-1); width: 0; left: 0; @include vw-mo(height,1.5); transition: width 0.4s ease; background-color: #000;}
+            &__btn:hover .pt_pod__text::after{width: 100%;}
+            &__btn .img_box{transition: transform 0.7s ease;}
+            &__btn:hover .img_box{transform: scale(1.05)}
+        }
+        // 갤북 4 사용
+        .pt_pod_type01{
+            @include vw-mo(width,672);
+            &__item_warp  { 
+                display: grid; 
+                @include vw-mo(grid-template-columns, 324 324); // 각 칸 가로 넓이
+                @include vw-mo(grid-auto-rows, 324 52 100 200 324); // 한 줄 세로 높이
+                grid-template-areas: "a b" // 각 칸의 영역 지정
+                                    "c b"
+                                    "c d"
+                                    "c d"
+                                    "e e";
+                @include vw-mo(grid-gap, 24 24); // 앞에 숫자는 세로 뒤에 숫자는 가로 여백
+            }
+            &__item { @include vw-mo(border-radius, 26); // 각 칸의 공통 스타일
+                &--01 { grid-area: a;
+                } // 1번 칸은 a 영역에 대응
+                &--02 { grid-area: b;
+                } // 2번 칸은 b 영역에 대응
+                &--03 { grid-area: c;
+                } // 3번 칸은 c 영역에 대응
+                &--04 { grid-area: d;
+                } // 4번 칸은 d 영역에 대응
+                &--05 { grid-area: e;
+                } // 5번 칸은 e 영역에 대응
+            }
+            &__btn{display: block; width: 100%; height: 100%;}
+        }
+
+        .pt_pod_type_ultra {
+            &__item_wrap  { 
+                @include vw-mo(grid-auto-rows, 324 324 52 324); // 한 줄 세로 높이
+                grid-template-areas: "a a" // 각 칸의 영역 지정
+                                    "b c"
+                                    "b e"
+                                    "d e";
+            }
+        }
+        
+        .btn_common {border-color: #B2B2B2; color: #B2B2B2;
+            &.active {border-color: #000; color: #000;}
+        }
+    }
+
+    // pod modal 공통
+    .pt_pod_modal{
+        display: none; z-index: 111; position: absolute; left: 50%; transform: translateX(-50%); @include vw-mo(width,688); @include vw-mo(height,1210); overflow: hidden; background-color: #000; @include vw-mo(border-radius,40);
+        &.pt_modal_on{display: block;}
+        &__btn-close{position: absolute; z-index: 1; left: auto; bottom: auto; @include vw-mo(top, 30); @include vw-mo(right, 30); @include vw-mo(width, 52); @include vw-mo(height, 52); transform: none; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.2);}
+        &__btn-close.pt_add-bg{background: #fff url('../../is/images/pod/gb4_btn_modal_close_mo.png') no-repeat center; @include vw-mo(background-size, 22);}
+
+        .swiper-slide { position: relative; @include vw-mo(height,1210);}
+        // swiper btn
+        .pt_pod_next,.pt_pod_prev{@include vw-mo(width, 74); @include vw-mo(height, 74);}
+        .pt_pod_next::after,.pt_pod_prev::after{display: none;}
+        .pt_pod_next{@include vw-mo(right, 24);}
+        .pt_pod_next.pt_add-bg{ background: url('../../is/images/pod/gb4_pod_next.png') no-repeat center / contain;}
+        .pt_pod_prev{@include vw-mo(left, 24);}
+        .pt_pod_prev.pt_add-bg{background: url('../../is/images/pod/gb4_pod_prev.png') no-repeat center / contain;}
+        
+        &__text-box {position:absolute; @include vw-mo(top,86); left:0; z-index: 10; width:100%; @include vw-mo(padding, 0 30); letter-spacing:-0.05em;}
+        &__main-text{@include vw-mo(margin-bottom, 27); @include vw-mo(font-size, 48); @include vw-mo(line-height,60); font-weight:700; color:#fff; letter-spacing:-0.05em;
+            .en {letter-spacing:-0.05em;}
+        }
+        &__sub-text{@include vw-mo(margin-bottom,48); @include vw-mo(font-size,28); @include vw-mo(line-height,40);  color:#fff; letter-spacing:-0.05em;
+            .en {letter-spacing:-0.05em;}
+        }
+        &__desc-text li{@include vw-mo(padding-left,14); @include vw-mo(font-size,22); @include vw-mo(line-height,30); @include vw-mo(text-indent,-14); color:rgba(255, 255, 255, .6);letter-spacing:-0.05em;}
+
+        // .img_box { position: absolute; left: 0; top: 0; height: 100%;}
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★
+// PC
+@media screen and (min-width: 769px) {
+    .galaxy_book4_ultra {
+        .sec_pod {
+            @include vw-pc(margin, 0 auto 120);
+            .pt_sec_pod-title{
+                @include vw-pc(margin-bottom, 39); @include vw-pc(font-size, 46); @include vw-pc(line-height, 54);
+            }
+
+            .pt_pod_tab{
+                @include vw-pc(width, 518); @include vw-pc(margin, 0 auto 60);
+                .btn_common {@include vw-pc(width, 244); @include vw-pc(font-size, 18); @include vw-pc(line-height, 24);  }
+            }
+
+            .pt_pod_tab_alarm {@include vw-pc(width, 792);}
+
+            // pod 공통
+            .pt_pod{
+                &__btn{@include vw-pc(border-radius, 20);}
+                &__text{@include vw-pc(top,17); @include vw-pc(left,20); @include vw-pc(font-size,24); @include vw-pc(line-height,36);}
+                &__text::after{@include vw-pc(bottom,0); @include vw-pc(height,1.5);}
+                &__text--black::after{@include vw-pc(bottom,0); @include vw-pc(height,1.5);}
+                &__text--bottom{@include vw-pc(bottom,17); @include vw-pc(left,20); top: initial;}
+            }
+
+            // 갤북 4 사용
+            .pt_pod_type01{
+                width: 100%;
+                &__item_warp  { 
+                    display: grid; 
+                    @include vw-pc(grid-template-columns, 424 200 200 424); // 각 칸 가로 넓이
+                    @include vw-pc(grid-auto-rows, 275); // 한 줄 세로 높이
+                    grid-template-areas: "a b b c" // 각 칸의 영역 지정
+                                        "d d e e";
+                    @include vw-pc(grid-gap, 24 24); // 앞에 숫자는 세로 뒤에 숫자는 가로 여백
+                }
+                &__item {@include vw-pc(border-radius, 20); // 각 칸의 공통 스타일
+                    &--01 { grid-area: a; } // 1번 칸은 a 영역에 대응
+                    &--02 { grid-area: b; } // 2번 칸은 b 영역에 대응
+                    &--03 { grid-area: c; } // 3번 칸은 c 영역에 대응
+                    &--04 { grid-area: d; } // 4번 칸은 d 영역에 대응
+                    &--05 { grid-area: e; } // 5번 칸은 e 영역에 대응
+                }
+            }
+
+            .pt_pod_type_ultra {
+                &__item_wrap  { 
+                    grid-template-areas: "a a b b" // 각 칸의 영역 지정
+                                        "c d d e"; 
+                }
+            }
+            
+        }
+
+        // pod modal 공통
+        .pt_pod_modal{
+            @include vw-pc(width,1300); @include vw-pc(height,588); @include vw-pc(border-radius, 20);
+            
+            &__btn-close{@include vw-pc(top, 30); @include vw-pc(right, 30); @include vw-pc(width, 52); @include vw-pc(height, 52);}
+            &__btn-close.pt_add-bg {@include vw-pc(background-size, 22);}
+
+            .swiper-slide {@include vw-pc(height,588);}
+            .pt_pod_next,.pt_pod_prev{@include vw-pc(width,60); @include vw-pc(height,60);}
+            .pt_pod_next{@include vw-pc(right,30);}
+            .pt_pod_prev{@include vw-pc(left,30);}
+            .pt_pod_next.pt_add-bg{ background: url('../../is/images/pod/gb4_pod_next_pc.png') no-repeat center / contain;}
+            .pt_pod_prev.pt_add-bg{background: url('../../is/images/pod/gb4_pod_prev_pc.png') no-repeat center / contain;}
+            
+            &__text-box{position:absolute; @include vw-pc(top,77); @include vw-pc(left,110); width:auto; padding:0;}
+            &__main-text{@include vw-pc(margin-bottom, 24); @include vw-pc(font-size, 34); @include vw-pc(line-height, 39); letter-spacing: -0.025em;}
+            &__sub-text{@include vw-pc(margin-bottom, 39); @include vw-pc(font-size, 18); @include vw-pc(line-height, 26);}
+            &__desc-text li{@include vw-pc(padding-left,8); @include vw-pc(font-size,14); @include vw-pc(line-height,20); @include vw-pc(text-indent,-8);}
+
+        }
+        
+        
+    }
+}
+// ★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★

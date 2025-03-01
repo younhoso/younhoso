@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="36" viewBox="0 0 48 36">
+  <g id="icon" transform="translate(3717.5 -1440.82)">
+    <rect id="사각형_25897" data-name="사각형 25897" width="48" height="36" transform="translate(-3717.5 1440.82)" fill="none"/>
+    <path id="패스_8127" data-name="패스 8127" d="M4900.5,5084.82H4928v-26.491a.505.505,0,0,0-.5-.509h-27a.5.5,0,0,0-.5.509v25.981A.5.5,0,0,0,4900.5,5084.82Z" transform="translate(-8615.5 -3615)" fill="none" stroke="#1e81f8" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="패스_8130" data-name="패스 8130" d="M4910,5107.32a4.5,4.5,0,1,0,4.5-4.5,4.5,4.5,0,0,0-4.5,4.5" transform="translate(-8620.501 -3636.5)" fill="#fff"/>
+    <circle id="타원_691" data-name="타원 691" cx="4.5" cy="4.5" r="4.5" transform="translate(-3710.5 1466.32)" fill="none" stroke="#1e81f8" stroke-linejoin="round" stroke-width="3"/>
+    <path id="패스_8126" data-name="패스 8126" d="M4956,5068.819h9.605a3.234,3.234,0,0,1,3.018,2.573l3.145,16.855a2.069,2.069,0,0,1-2.06,2.572H4956" transform="translate(-8643.313 -3620.999)" fill="none" stroke="#1e81f8" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="패스_8128" data-name="패스 8128" d="M4956,5107.319a4.5,4.5,0,1,0,4.5-4.5,4.5,4.5,0,0,0-4.5,4.5" transform="translate(-8642.5 -3636.5)" fill="#fff"/>
+    <path id="패스_8129" data-name="패스 8129" d="M4956,5107.319a4.5,4.5,0,1,0,4.5-4.5A4.5,4.5,0,0,0,4956,5107.319Z" transform="translate(-8642.5 -3636.5)" fill="none" stroke="#1e81f8" stroke-linejoin="round" stroke-width="3"/>
+    <path id="패스_8131" data-name="패스 8131" d="M4976,5077.82h-7.442a.548.548,0,0,0-.558.538v5.924a.548.548,0,0,0,.558.539H4976" transform="translate(-8649.501 -3624)" fill="none" stroke="#1e81f8" stroke-miterlimit="10" stroke-width="3"/>
+  </g>
+</svg>

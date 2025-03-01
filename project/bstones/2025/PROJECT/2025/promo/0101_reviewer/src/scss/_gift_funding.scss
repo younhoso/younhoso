@@ -1,0 +1,34 @@
+.reviewer {
+    .sec_gift_funding {
+        position: relative; @include vw-pc(height, 152); @include vw-pc(padding, 31 0); background-color: #FFFBF2; overflow: hidden;
+        
+        &::before {content: ""; display: block; position: absolute; @include vw-max(left, 1041); bottom: 0; @include vw-pc(width, 880); @include vw-pc(height, 152); background: url('../../is/images/rc_gift_funding_bg_pc.png') no-repeat center/contain; }
+
+        .pt_gift {
+            display: flex; justify-content: space-between; @include vw-pc(width, 1320); 
+            &__txt-box {display: flex; flex-direction: column; @include vw-pc(gap, 7);}
+            &__tit {@include vw-pc(font-size, 34); @include vw-pc(line-height, 45); font-weight: 700; letter-spacing: -.025em;}
+            &__logo {@include vw-pc(width, 203); @include vw-pc(height,39)}
+            &__btn {align-self: flex-end; @include vw-pc(font-size, 22); @include vw-pc(line-height, 29); font-weight: 700; letter-spacing: -.025em; border-bottom: 1px solid #000;}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reviewer {
+        .sec_gift_funding {
+            @include vw-mo(height, 108); @include vw-mo(padding, 22 0); 
+        
+            &::before {left:0; width: 100%; @include vw-mo(height, 108); background: url('../../is/images/rc_gift_funding_bg_mo.png') no-repeat center/contain; }
+    
+            .pt_gift {
+                width: 100%; @include vw-mo(padding, 0 40); 
+                &__txt-box {@include vw-mo(gap, 7);}
+                &__tit {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                &__logo {@include vw-mo(width, 143); @include vw-mo(height,27)}
+                &__btn {align-self: center; @include vw-mo(font-size, 16); @include vw-mo(line-height, 21); letter-spacing: -.04em;}
+            }
+            
+        }
+    }
+}

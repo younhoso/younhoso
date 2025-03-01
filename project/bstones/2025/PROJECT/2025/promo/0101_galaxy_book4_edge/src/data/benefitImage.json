@@ -1,0 +1,20 @@
+{
+   "src": "../../is/images/launching/buying/",
+   "product": {
+      "40.6cm": {
+         "image":"gbe_16_bg_pc.png",
+         "imageMo":"gbe_16_bg_mo.png",
+         "alt":"갤럭시 북4 Edge 사파이어 블루 정면 대표 이미지"
+      },
+      "35.6cm": {
+         "image":"gbe_14_bg_pc.png",
+         "imageMo":"gbe_14_bg_mo.png",
+         "alt":"갤럭시 북4 Edge 사파이어 블루 정면 대표 이미지"
+      },
+      "39.6cm": {
+         "image":"gbe_NT750XQA-KC02B_bg_pc.png",
+         "imageMo":"gbe_NT750XQA-KC02B_bg_mo.png",
+         "alt":"갤럭시 북4 Edge 사파이어 블루 정면 대표 이미지"
+      }
+   }
+}

@@ -1,0 +1,127 @@
+.benefitzone {
+    .sec_card_benefit {
+        @include vw-pc(padding, 96 0 100);
+        
+        .pt_common_txt_box {@include vw-pc(margin-bottom, 39);}
+
+        .pt_card {
+            &__list {display: flex; align-items: center; justify-content: center; @include vw-pc(gap, 20); @include vw-pc(margin-bottom, 39);}
+            &__item {
+                @include vw-pc(width, 640); @include vw-pc(height, 203); @include vw-pc(padding, 33 0 0 25); @include vw-pc(border-radius, 10); @include vw-pc(box-shadow, 4 4 6 rgba(#000, 0.11)); @include vw-pc(border, 1 solid #E5E5E5); background-color: #FAFAFA;
+            }
+            &__img-list {
+                display: flex; flex-direction: row-reverse; align-items: center; position: absolute; @include vw-pc(right, 25); @include vw-pc(bottom, 36); @include vw-pc(width, 263); @include vw-pc(height, 65); @include vw-pc(padding-right, 4); background-color: #FAFAFA;
+
+                //로고 1개일때 그림자
+                &--01 {
+                    &::before {content: ""; position: absolute; @include vw-pc(bottom, -6); right: 0; @include vw-pc(width, 65); @include vw-pc(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow01_pc.png) no-repeat center/contain;}
+                }
+                //로고 2개일때 그림자
+                &--02 {
+                    &::before {content: ""; position: absolute; @include vw-pc(bottom, -6); right: 0; @include vw-pc(width, 98); @include vw-pc(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow02_pc.png) no-repeat center/contain;}
+                }
+                //로고 3개일때 그림자
+                &--03 {
+                    &::before {content: ""; position: absolute; @include vw-pc(bottom, -6); right: 0; @include vw-pc(width, 132); @include vw-pc(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow03_pc.png) no-repeat center/contain;}
+                }
+                //로고 4개일때 그림자
+                &--04 {
+                    &::before {content: ""; position: absolute; @include vw-pc(bottom, -6); right: 0; @include vw-pc(width, 165); @include vw-pc(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow04_pc.png) no-repeat center/contain;}
+                }
+                //로고 5개일때 그림자
+                &--05 {
+                    &::before {content: ""; position: absolute; @include vw-pc(bottom, -6); right: 0; @include vw-pc(width, 199); @include vw-pc(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow05_pc.png) no-repeat center/contain;}
+                }
+                //로고 6개일때 그림자
+                &--06 {
+                    &::before {content: ""; position: absolute; @include vw-pc(bottom, -6); right: 0; @include vw-pc(width, 237); @include vw-pc(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow06_pc.png) no-repeat center/contain;}
+                }
+                //로고 7개일때 그림자
+                &--07 {
+                    &::before {content: ""; position: absolute; @include vw-pc(bottom, -6); right: 0; @include vw-pc(width, 263); @include vw-pc(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow07_pc.png) no-repeat center/contain;}
+                }
+            }
+            &__img {
+                z-index: 2; /*position: absolute; right: 0; top: 0;*/ @include vw-pc(width, 65); @include vw-pc(margin-left, -33);
+                // &--01 {@include vw-pc(right, 188);}
+                // &--02 {@include vw-pc(right, 155);}
+                // &--03 {@include vw-pc(right, 122);}
+                // &--04 {@include vw-pc(right, 99);}
+                // &--05 {@include vw-pc(right, 66);}
+                // &--06 {@include vw-pc(right, 33);}
+                // &--07 {@include vw-pc(right, 0);}
+            }
+
+            &__price {@include vw-pc(margin-bottom, 22); @include vw-pc(font-size, 34); @include vw-pc(line-height, 52); font-weight: 700; letter-spacing: -.025em; color: #5267b3;}
+            &__num {@include vw-pc(font-size, 42);}
+            &__title {@include vw-pc(font-size, 22); @include vw-pc(line-height, 29); font-weight: 700; letter-spacing: -.025em;}
+        }
+
+        .pt_model_btn {display: block; @include vw-pc(width, 182); margin: 0 auto; @include vw-pc(height, 48); border-radius: 100px; @include vw-pc(font-size, 17); @include vw-pc(line-height, 48); letter-spacing: -0.05em; font-weight: 700; text-align: center; }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_card_benefit {
+            @include vw-mo(padding, 100 0);
+            
+            .pt_common_txt_box {@include vw-mo(margin-bottom, 38);}
+
+            .pt_card {
+                &__list {flex-direction: column; @include vw-mo(gap, 36); @include vw-mo(margin-bottom, 60);}
+                &__item {
+                    @include vw-mo(width, 671); @include vw-mo(height, 225); @include vw-mo(padding, 35 0 0 39); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 6 10 10 rgba(#000, 0.11)); @include vw-mo(border, 2 solid #E5E5E5);
+                }
+                &__img-list {
+                    @include vw-mo(right, 40); @include vw-mo(bottom, 36); @include vw-mo(width, 250); @include vw-mo(height, 62); @include vw-mo(padding-right, 4);
+                    
+                    //로고 1개일때 그림자
+                    &--01 {
+                        &::before {@include vw-mo(bottom, -7); @include vw-mo(width, 62); @include vw-mo(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow01_mo.png) no-repeat center/contain;}
+                    }
+                    //로고 2개일때 그림자
+                    &--02 {
+                        &::before {@include vw-mo(bottom, -7); @include vw-mo(width, 93); @include vw-mo(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow02_mo.png) no-repeat center/contain;}
+                    }
+                    //로고 3개일때 그림자
+                    &--03 {
+                        &::before {@include vw-mo(bottom, -7); @include vw-mo(width, 126); @include vw-mo(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow03_mo.png) no-repeat center/contain;}
+                    }
+                    //로고 4개일때 그림자
+                    &--04 {
+                        &::before {@include vw-mo(bottom, -7); @include vw-mo(width, 157); @include vw-mo(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow04_mo.png) no-repeat center/contain;}
+                    }
+                    //로고 5개일때 그림자
+                    &--05 {
+                        &::before {@include vw-mo(bottom, -7); @include vw-mo(width, 190); @include vw-mo(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow05_mo.png) no-repeat center/contain;}
+                    }
+                    //로고 6개일때 그림자
+                    &--06 {
+                        &::before {@include vw-mo(bottom, -7); @include vw-mo(width, 225); @include vw-mo(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow06_mo.png) no-repeat center/contain;}
+                    }
+                    //로고 7개일때 그림자
+                    &--07 {
+                        &::before {@include vw-mo(bottom, -7); @include vw-mo(width, 250); @include vw-mo(height, 11);  background: url(../../../is/images/benefit/card_benefit/bfz_card_benefit_logo_shadow07_mo.png) no-repeat center/contain;}
+                    }
+                }
+                &__img {
+                    @include vw-mo(width, 62); @include vw-mo(margin-left, -31);
+                    // &--01 {@include vw-mo(right, 186);}
+                    // &--02 {@include vw-mo(right, 155);}
+                    // &--03 {@include vw-mo(right, 124);}
+                    // &--04 {@include vw-mo(right, 93);}
+                    // &--05 {@include vw-mo(right, 62);}
+                    // &--06 {@include vw-mo(right, 31);}
+                    // &--07 {@include vw-mo(right, 0);}
+                }
+
+                &__price {@include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 34); @include vw-mo(line-height, 50);}
+                &__num {@include vw-mo(font-size, 40);}
+                &__title {@include vw-mo(font-size, 34); @include vw-mo(line-height, 44);}
+            }
+
+            .pt_model_btn {@include vw-mo(padding, 20 0); @include vw-mo(width, 300); @include vw-mo(height, 80); @include vw-mo(font-size, 28); @include vw-mo(line-height, 32); @include vw-mo(border, 4 solid #000); @include vw-mo(border-radius, 40);}
+        }
+    }
+}

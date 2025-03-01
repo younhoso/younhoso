@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.block { display:block; }
+.ac{text-align:center !important;}
+.ar {text-align:right !important;}
+.al {text-align:left !important;}
+
+
+
+/* padding */
+.pb36{padding-bottom:36px !important;}
+.pb30{padding-bottom:30px !important;}
+
+/* margin */
+.mt14{margin-bottom:14px !important;}
+.ml20{margin-left:20px !important;}
+.mb60{margin-bottom:60px !important;}
+
+
+/* text */
+

@@ -1,0 +1,119 @@
+.benefitzone_card {
+    .sec_banner {
+        .pt_banner {
+            @include vw-pc(width, 1320);  overflow: hidden;
+
+            .pt_font {
+                &--c013DDA {color: #013DDA;}
+                &--c7C1018 {color: #7C1018;}
+            }
+
+            &__swiper {@include vw-pc(margin-bottom, 40);}
+            &__item {
+                @include vw-pc(height, 250); background: #fff no-repeat top center; @include vw-pc(background-size, 1320 250); @include vw-pc(border-radius, 20);
+
+                &--samsung.pt_add-bg {background-image: url('../../is/images/card/banner/bc_banner_samsung_pc.png');}
+                &--lotte.pt_add-bg {background-image: url('../../is/images/card/banner/bc_banner_lotte_pc.png');}
+            }
+            &__card-name {@include vw-pc(height, 42); @include vw-pc(border-radius, 20 20 0 0); background: no-repeat center center;}
+            &__cont {@include vw-pc(height, 250); @include vw-pc(padding, 73 10 36 40); @include vw-pc(border, 2 solid #EAEAEA); border-top: 0 none; @include vw-pc(border-radius, 20); background: no-repeat;}
+            &__tit {@include vw-pc(margin-bottom, 16); @include vw-pc(font-size, 27); @include vw-pc(line-height, 36); font-weight: 700; letter-spacing: -.025em;}
+            &__txt {display: flex; align-items: start; justify-content: space-between; @include vw-pc(gap, 15);}
+            &__sub {@include vw-pc(margin-bottom, 2); @include vw-pc(padding-right, 14); @include vw-pc(font-size, 16); @include vw-pc(line-height, 21); font-weight: 700; letter-spacing: -.025em;
+                &--dot {
+                    position: relative; 
+
+                    &::after {content: ':'; position: absolute; @include vw-pc(top, 0); @include vw-pc(right, 0);}
+                }
+            }
+            &__date {@include vw-pc(padding-left, 4); @include vw-pc(font-size, 18); font-weight: 700; @include vw-pc(line-height, 23);}
+            &__noti {
+                &-box {@include vw-pc(padding, 4 0 0 91);}
+                @include vw-pc(padding-left, 8); @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); letter-spacing: -.025em; color: #717171; @include vw-pc(text-indent, -8);
+
+                &:not(:last-child) {@include vw-pc(margin-bottom, 2);}
+            }
+            &__btn {
+                @include vw-pc(border-bottom, 1 solid #5a5a5a); @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); letter-spacing: -.025em; color: #5a5a5a; text-indent: 0;
+                &--mo {display: none;}
+            }
+
+            &__arrow {display: flex; justify-content: flex-end; align-items: center; @include vw-pc(gap, 60); @include vw-pc(margin-bottom, 36);
+                &--btn {@include vw-pc(width, 21); @include vw-pc(height, 32); background: no-repeat 0 0 / contain;
+                    &.swiper-button-disabled {opacity: .2; pointer-events: none;}
+                }
+                &.pt_add-bg {
+                    .pt_banner__arrow--btn {background-image: url('../../is/images/card/card/bc_ico_arrow_pc.png');}
+                }
+                .pt_banner__btn--prev {transform: rotate(-180deg);}
+            }
+
+            &__control {
+                display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 12);
+                .swiper-pagination {display: flex; align-items: center; @include vw-pc(gap, 12); position: static;
+                    .swiper-pagination-bullet {@include vw-pc(width, 12); @include vw-pc(height, 12); @include vw-pc(border, 1 solid #000); border-radius: 50%; background-color: #fff; opacity: 1;
+                        &.swiper-pagination-bullet-active {background-color: #000;}
+                    }
+                }
+                &--btn {width: 0; height: 0; border-style: solid; @include vw-pc(border-width, 7 0 7 11); border-color: transparent transparent transparent #000;
+                    &.pause {@include vw-pc(width, 11); @include vw-pc(height, 14); @include vw-pc(border-width, 0 3 0 3); border-color: transparent #000 transparent #000;}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone_card {
+        .sec_banner {
+            .pt_banner {
+                @include vw-mo(width, 672); @include vw-mo(margin-top, -20); 
+    
+                &__swiper {@include vw-mo(margin-bottom, 40);}
+                &__item {
+                    @include vw-mo(height, 337); @include vw-mo(border-radius, 20); @include vw-mo(background-size, 672 337);
+    
+                    &--samsung.pt_add-bg {background-image: url('../../is/images/card/banner/bc_banner_samsung_mo.png');}
+                    &--lotte.pt_add-bg {background-image: url('../../is/images/card/banner/bc_banner_lotte_mo.png');}
+                }
+                &__card-name {@include vw-mo(height, 44); @include vw-mo(border-radius, 20 20 0 0);}
+                &__cont {@include vw-mo(height, 337); @include vw-mo(padding, 56 24 32 24); @include vw-mo(border-width, 0 2 2 2); @include vw-mo(border-radius, 0 0 20 20);}
+                &__tit {@include vw-mo(margin-bottom, 8); @include vw-mo(font-size, 26); @include vw-mo(line-height, 38); letter-spacing: 0;}
+                &__txt {@include vw-mo(gap, 15);}
+                &__sub {@include vw-mo(margin-bottom, 9); @include vw-mo(padding-right, 14); @include vw-mo(font-size, 20); @include vw-mo(line-height, 24); font-weight: 700; letter-spacing: 0;
+                    &--dot {
+                        &::after {@include vw-mo(top, 0); @include vw-mo(right, 0);}
+                    }
+                }
+                &__date {@include vw-mo(padding-left, 1); @include vw-mo(font-size, 20); font-weight: 700; @include vw-mo(line-height, 26);}
+                &__noti {
+                    &-box {@include vw-mo(padding, 9 0 0 94);}
+                    @include vw-mo(padding-left, 10); @include vw-mo(font-size, 20); @include vw-mo(line-height, 27); letter-spacing: -.05em; @include vw-mo(text-indent, -10);
+
+                    &:not(:last-child) {margin-bottom: 0;}
+                }
+                &__btn {
+                    @include vw-mo(border-bottom-width, 1); @include vw-mo(font-size, 20); @include vw-mo(line-height, 26); letter-spacing: -.05em;
+                    &--pc {display: none;}
+                    &--mo {display: inline-flex;}
+                }
+                &__arrow {@include vw-mo(gap, 50); @include vw-mo(margin-bottom, 26);
+                    &--btn {@include vw-mo(width, 17); @include vw-mo(height, 28);}
+                    &.pt_add-bg {
+                        .pt_banner__arrow--btn {background-image: url('../../is/images/card/card/bc_ico_arrow_mo.png');}
+                    }
+                }
+    
+                &__control {@include vw-mo(gap, 14);
+                    .swiper-pagination {@include vw-mo(gap, 14);
+                        .swiper-pagination-bullet {@include vw-mo(width, 14); @include vw-mo(height, 14); @include vw-mo(border-width, 2);}
+                    }
+
+                    &--btn {@include vw-mo(border-width, 8 0 8 12);
+                        &.pause {@include vw-mo(width, 12); @include vw-mo(height, 16); @include vw-mo(border-width, 0 4 0 4);}
+                    }
+                }
+            }
+        }
+    }
+}

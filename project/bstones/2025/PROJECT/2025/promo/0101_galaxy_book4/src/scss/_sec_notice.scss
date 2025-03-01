@@ -1,0 +1,127 @@
+.galaxy_book4_ultra {
+    .pt_text--bold {font-weight: 700;}
+    .pt_text--word {word-break: break-all;}
+    .sec_notice {
+
+        background: #171717; @include vw-pc(padding, 100 0); @include vw-pc(font-size, 14); 
+        .inner_1440 {@include vw-pc(width, 1280); margin:0 auto;}
+        .pt_notice {
+            &__link {border-bottom: 1px solid #A3A3A3;}
+            &__cont {position: relative; display:flex; justify-content: flex-start;
+                &:not(:last-child) {@include vw-pc(padding-bottom, 49); @include vw-pc(margin-bottom, 50); @include vw-pc(border-bottom,1 solid rgba(255, 255, 255, 0.15));}
+            }
+            &__tit {@include vw-pc(width, 240); @include vw-pc(font-size, 14); line-height: 1.5; font-weight: 700; color: #fff;}
+            &__list {flex:1; color: #A3A3A3;
+                .btn_common {border-color: #A3A3A3; line-height: 1.1;
+                    &.type_arrow::after {border-color: #A3A3A3;}
+                }
+                .pt_notice__title {padding-left: 0;@include vw-pc(margin-top,20);
+                    &.pt_nomargin {margin-top: 0;}
+                    &::before {display: none;}
+                }
+                li {position:relative; @include vw-pc(padding-left,7); @include vw-pc(word-spacing, -0.2); @include vw-pc(font-size, 14); @include vw-pc(line-height, 28);
+                    a {color: #A3A3A3;}
+                    &.pt_notice__list--text {@include vw-pc(padding-left,88); @include vw-pc(text-indent,-81);}
+                }
+                dt {position:relative; @include vw-pc(word-spacing, -0.2); @include vw-pc(font-size, 14); font-weight:700; @include vw-pc(line-height, 28);
+                    &:not(:nth-of-type(1)) {
+                        @include vw-pc(margin-top,20);
+                    }
+                }
+                dd {position:relative; @include vw-pc(padding-left,7); @include vw-pc(word-spacing, -0.2); @include vw-pc(font-size, 14); @include vw-pc(line-height, 28);
+                    a {color: #A3A3A3;}
+                    &.pt_notice__list--text {@include vw-pc(padding-left,88); @include vw-pc(text-indent,-81);}
+                }
+                &--1depth {
+                    & > li::before {content: ''; position: absolute; left: 0; @include vw-pc(top, 13); @include vw-pc(width, 2);  @include vw-pc(height, 2); border-radius: 50%; background-color:#A3A3A3;}
+                    & > dd::before {content: ''; position: absolute; left: 0; @include vw-pc(top, 13); @include vw-pc(width, 2);  @include vw-pc(height, 2); border-radius: 50%; background-color:#A3A3A3;}
+                    
+                    .list_2depth {padding-left:0;
+                        li {padding-left:0; text-indent:0;}
+                    }
+                }
+            }
+    
+            &__item {margin-bottom: 0;
+            
+            }
+            &__table {position: static; width: 100%; @include vw-pc(margin, 5 0); transform: scale(1) translate(0, 0);}
+            &__th,
+            &__td {@include vw-pc(padding, 5 0); @include vw-pc(border, 1 solid rgba(#fff, 0.4)); text-align: center; vertical-align: middle; @include vw-pc(font-size, 14); font-weight: 400; letter-spacing: -.02em; word-break: keep-all;}
+            &__td {font-weight:700;}
+            &__strong {color: #fff;}
+            &__strong::before {background-color: #fff !important;}
+        }
+        .pt_none::before {display:none;}
+        .pt_strong{font-weight: 700;}
+        .pt_line{text-decoration: underline;}
+
+        .pt_table_wrap {
+            position: relative; width: 100%; @include vw-pc(height, 68);
+            .pt_table {position: relative; left: 0; top: 0; width: 200%; transform: scale(.5) translate(-50%, -45%); display: flex; flex-wrap: nowrap; @include vw-pc(border, 2 solid #fff);}
+            .pt_table_tr {@include vw-pc(border-right, 2 solid rgba(255,255,255,.5)); flex: auto; @include vw-pc(font-size, 28); @include vw-pc(line-height, 58); text-align: center; padding-left: 0;}
+            .pt_table_tr:last-child{border-right: 0}
+            .pt_table_td {@include vw-pc(border-top, 2 solid rgba(255,255,255,.5)); @include vw-pc(font-size, 28); @include vw-pc(line-height, 58); font-weight: 700; text-align: center; background-color: rgba(255,255,255,.08);}
+        }
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .galaxy_book4_ultra {
+        .sec_notice {
+            &.pt_add-bg::after{display: none;}
+            @include vw-mo(padding, 100 0);  @include vw-mo(font-size, 22); @include vw-mo(letter-spacing,-.5);
+            .inner_1440 {@include vw-mo(width, 644); @include vw-mo(margin,0 auto);}
+            .pt_notice {
+                &__cont {flex-direction:column;
+                    &:not(:last-child) {@include vw-mo(padding-bottom, 42); @include vw-mo(margin-bottom, 42); @include vw-mo(border-bottom,1 solid rgba(112, 112, 112, 1)); }
+                }
+                &__tit {display: block; width:100%; @include vw-mo(padding-bottom, 23); @include vw-mo(font-size, 24);}
+                &__list {
+                    .pt_notice__title {padding-left: 0;@include vw-mo(margin-top,20);
+                        &::before {display: none;}
+                    }
+                    li {@include vw-mo(padding-left, 14); @include vw-mo(line-height, 36); @include vw-mo(font-size, 22);
+                        &.pt_notice__list--text {@include vw-mo(padding-left,14); text-indent:0;}
+                    }
+                    dt {@include vw-mo(line-height, 36); @include vw-mo(font-size, 22);
+                        &:not(:nth-of-type(1)) {
+                            @include vw-mo(margin-top,20);
+                        }
+                    }
+                    dd {@include vw-mo(padding-left, 14); @include vw-mo(line-height, 36); @include vw-mo(font-size, 22);
+                        &.pt_notice__list--text {@include vw-mo(padding-left,14); text-indent:0;}      
+                        
+                    }
+                    &--1depth {
+                        & > li {
+                            &::before {@include vw-mo(top, 13); @include vw-mo(width, 5); @include vw-mo(height, 5);}
+                        }
+                        & > dd {
+                            &::before {@include vw-mo(top, 13); @include vw-mo(width, 5); @include vw-mo(height, 5);}
+                        }
+                        .list_2depth {@include vw-mo(padding-left, 5);}
+                    }
+                    &--2depth {
+                        & > li {@include vw-mo(padding-left, 12); @include vw-mo(text-indent, -12);}
+                        & > dd {@include vw-mo(padding-left, 12); @include vw-mo(text-indent, -12);}
+                    }
+                }
+                
+                &__item {
+                    &--table {@include vw-mo(margin-bottom, -60);}
+                }
+                &__table {position: relative; left: 0; top: 0; width: 200%; table-layout: fixed; @include vw-mo(margin, 5 0); border-collapse: collapse; transform: scale(.5) translate(-50%, -45%);}
+                &__th,
+                &__td {@include vw-mo(padding, 15 0); @include vw-mo(border-width, 1); @include vw-mo(font-size, 28);}
+            }
+            .pt_table_wrap {
+                position: relative; width: 100%; @include vw-mo(height, 66);
+                .pt_table {position: relative; left: 0; top: 0; width: 200%; transform: scale(.5) translate(-50%, -45%); display: flex; flex-wrap: nowrap; @include vw-mo(border, 2 solid #fff);}
+                .pt_table_tr {@include vw-mo(border-right, 2 solid rgba(255,255,255,.5)); flex: auto; @include vw-mo(font-size, 28); @include vw-mo(line-height, 56); text-align: center; padding-left: 0; padding-bottom: 0 !important;}
+                .pt_table_tr:last-child{border-right: 0}
+                .pt_table_td {@include vw-mo(border-top, 2 solid rgba(255,255,255,.5)); @include vw-mo(font-size, 28); @include vw-mo(line-height, 56); font-weight: 700; text-align: center; background-color: rgba(255,255,255,.08);}
+            }
+        }
+    }
+}

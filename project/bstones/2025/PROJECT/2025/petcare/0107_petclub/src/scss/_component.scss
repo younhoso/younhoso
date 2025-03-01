@@ -1,0 +1,55 @@
+// 컴포넌트
+.sec_category {
+    .pt_title-box {
+        display: flex; justify-content: center; align-items: center; flex-direction: column; @include vw-pc(padding, 96 0 39); text-align: center;
+
+        &__title {@include vw-pc(margin-bottom, 7); @include vw-pc(font-size, 36); @include vw-pc(line-height, 48); letter-spacing: -.025em;}
+        &__disc {@include vw-pc(font-size, 22); @include vw-pc(line-height, 29); letter-spacing: -0.025em;}
+        &__btn {height: fit-content; @include vw-pc(font-size, 18); @include vw-pc(letter-spacing, -.5); @include vw-pc(border-bottom, 1 solid #000); font-weight: 700;}
+    }   
+}
+@media screen and (max-width: 768px) {
+   
+    // 컴포넌트
+    .sec_category {
+        .pt_title-box {
+            @include vw-mo(padding, 76 0 39);
+
+            &__title {@include vw-mo(margin-bottom, 11); @include vw-mo(font-size, 42); @include vw-mo(line-height, 50); letter-spacing: -.05em;}
+            &__disc {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -.05em;}
+            &__btn {@include vw-mo(font-size, 30); @include vw-mo(letter-spacing, -.5); @include vw-mo(border-bottom, 1 solid #000);}
+        }   
+    }
+    
+}
+
+
+//컴포넌트 여백 적용
+.wrap-component {padding: 3px 0 !important;}
+.wrap-component.pt_hide{ @include vw-pc(padding, 0 !important);}
+.product-card .component-text .box-title .title {@include vw-pc(padding-bottom, 40);}
+
+//컴포넌트 탭 기능
+.wrap-component.pt_hide .component-contents {display: none !important;}
+.wrap-component .component-contents {@include vw-pc(min-height, 700);}
+
+//포커스 스타일
+.wrap-component:focus {outline: dashed 2px #2189ff !important; outline-offset: -3px; position: relative; z-index: 1;}
+
+@media screen and (max-width: 1100px){
+    .product-card .visual-area{@include vw-pc(margin-top, 0 !important);}
+}
+
+@media screen and (max-width:768px) {
+    //컴포넌트 여백 적용
+    .product-card .component-text .box-title .title { @include vw-pc(padding-bottom, 30); @include vw-mo(font-size, 44);}
+
+    //컴포넌트 탭 기능
+    .wrap-component {@include vw-mo(padding, 0 0 100 !important);}
+    .wrap-component.pt_hide {@include vw-mo(padding,0 !important);}
+
+    //포커스 스타일
+    .wrap-component:focus {outline: -webkit-focus-ring-color auto 1px !important; outline-offset: -2px;}
+    .wrap-component .component-contents {@include vw-mo(min-height, 700);}
+
+}

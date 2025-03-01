@@ -1,0 +1,570 @@
+<header id="header" role="banner">
+	<!--googleoff: all-->
+	<div class="s-skip-content">
+		<a href="#content" id="skipToContent">본문 바로가기</a>    </div>
+	
+	<div class="parsys ipar iparsys"><div class="section"><div class="new"></div>
+	</div><div class="iparys_inherited"><div class="parsys ipar iparsys"><div class="cm-g-static-content section">
+		
+		<script type="text/javascript">
+
+			/*** 검색 히스토리 설정 ***/
+			var secComLocalSearchHistory = {
+				setCookie : function(cname, cvalue, exdays) {
+					var d = new Date();
+					d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+					document.cookie = cname + "=" + cvalue + ";domain=.samsung.com;path=/comLocal/";
+				},
+				getCookie : function(cname) {
+					var str = "";
+					var name = cname + "=";
+					var ca = document.cookie.split(';');
+					for ( var i = 0; i < ca.length; i++) {
+						var c = ca[i];
+						while (' ' == c.charAt(0)) {
+							c = c.substring(1);
+						}
+						if (0 == c.indexOf(name)) {
+							str = c.substring(name.length, c.length);
+						}
+					}
+					return str;
+				},
+				delCookie : function(cname) {
+					document.cookie = cname + "=;domain=.samsung.com;path=/comLocal/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+				}
+			};
+		
+		</script>
+		
+		
+		<script>
+			;(function(win,doc,callback){'use strict';callback=callback||function(){};function detach(){if(doc.addEventListener){doc.removeEventListener('DOMContentLoaded',completed);}else{doc.detachEvent('onreadystatechange',completed);}}function completed(){if(doc.addEventListener||event.type==='load'||doc.readyState==='complete'){detach();callback(window,window.jQuery);}}function init(){if (doc.addEventListener){doc.addEventListener('DOMContentLoaded',completed);}else{doc.attachEvent('onreadystatechange',completed);}}init();})(window,document,function(win,$){
+				/**
+				 * SamsungWA.com 사이트 연계에 따른 Tracking samsungWA.init() referrer 도메인 체크
+				 * samsungWA.setCookie() referrer 체크 후 true 조건이면 WA.COM 관련 세션 쿠키 세팅
+				 */
+				var samsungWA = {
+					init : function() {
+						if (document.referrer.indexOf('http://www.samsungwa.com/') >= 0) {
+							return true;
+						} else {
+							return false;
+						}
+					},
+					setCookie : function(cname, cvalue, exdays) {
+						var d = new Date();
+						d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+						var expires = "expires=" + d.toUTCString();
+						//expires date 사용안함 주석처리, 향후 변경 가능성을 두고 매개변수는 유지
+						//document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+						document.cookie = cname + "=" + cvalue + ";domain=.samsung.com;path=/"
+					},
+					getCookieCheck : function(cname) {
+						var str = "";
+						var name = cname + "=";
+						var ca = document.cookie.split(';');
+						for(var i = 0; i < ca.length; i++) {
+							var c = ca[i];
+							while (' ' == c.charAt(0)) {
+								c = c.substring(1);
+							}
+							if (0 == c.indexOf(name)) {
+								str = c.substring(name.length, c.length);
+							}
+						}
+						if("" != str) {
+							return true;
+						} else {
+							return false;
+						}
+					}
+				};
+
+				if(false == samsungWA.getCookieCheck('from_wa_com')) {
+					if(true == samsungWA.init()) {
+
+						samsungWA.setCookie('from_wa_com', 'Y', 1);
+					}
+				}
+
+
+
+				try {
+					var secSearchHistory = secComLocalSearchHistory.getCookie('sk');
+					if ('' != secSearchHistory) {
+						secComLocalSearchHistory.setCookie('sk', secSearchHistory, 1);
+					}
+					$('.gb-gnb__search-history-close').on("click", function(){
+						secComLocalSearchHistory.delCookie('sk');
+					});
+				} catch (e) {}
+
+
+			});
+		</script>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="cm-g-gnb gnb">
+		<nav class="gb-gnb gb-gnb-2018" role="navigation">
+			<input type="hidden" name="isNewGNB" id="isNewGNB" value="Y"/>
+			<!--googleoff: all-->
+			
+			<input type="hidden" name="newShopCountryYn" id="newShopCountryYn"/>
+			
+			
+			
+			<input type="hidden" name="countryIsoCode" id="countryIsoCode"/>
+			
+			
+			
+			<input type="hidden" name="gnbMyAccountUrl" id="gnbMyAccountUrl" value="/sec/my-account/profile"/>
+			
+			
+			
+			
+			
+			<div class="gb-gnb__dimmed" style="display: none"></div>
+			
+			<div class="gb-gnb__bar">
+				<div class="gb-gnb__bar-inner">
+					
+					<a href="/sec/" class="s-svg-ico gb-gnb__logo"><span class="blind">Samsung</span></a>
+					
+					<button type="button" class="s-svg s-gnb-toggler"><span class="blind">Open the Menu</span></button>
+					
+					
+					<ul class="gb-gnb__main" role="tablist"></ul>
+					
+					
+					
+					
+					<div class="gb-gnb__drop-mobile drilldown" style="min-height: 575px">
+						<div class="gb-gnb__drop-mobile-wrap drilldown-container">
+							<div class="drilldown-root">
+								<ul class="s-depth1-wrap" id="mobile_left"></ul>
+								<!-- 20180305 한총 모바일 GNB 변경 :: S -->
+								<ul class="s-depth1-wrap">
+									
+									<li class="s-login_new">
+										<a href="https://account.samsung.com/mobile/account/check.do" class="s-depth1-link loginBtn" data-omni="login">로그인</a>
+									</li>
+									
+									<li class="s-mymenu_new" style="display: none">
+								<span class="s-mymenu s-mymenu_new">
+									<span class="s-svg s-ico-login"></span><span class="s-mymenu-name"></span>
+								</span>
+									</li>
+									<li>
+										<a href="https://store.samsung.com/sec/track-order" class="s-depth1-link" data-omni="orders">주문/배송 조회</a>
+									</li>
+									<li>
+										<a href="//membership.samsung.com/sec/sni/KoSniMain?menuSeq=3000000065" class="s-depth1-link" data-omni="membership benefits">멤버십 혜택 확인</a>
+									</li>
+									<li class="s-mymenu_new" style="display: none">
+										<a href="https://store.samsung.com/sec/my-account/profile" class="s-depth1-link" data-omni="my samsung">마이삼성</a>
+									</li>
+									<li class="s-mymenu_new" style="display: none">
+										<a href="#" class="s-depth1-link logoutBtn" data-omni="logout">로그아웃</a>
+									</li>
+								
+								</ul>
+								<!-- 20180305 한총 모바일 GNB 변경 :: E -->
+								<ul class="s-depth1-wrap" id="mobile_right">
+								
+								</ul>
+								<ul class="s-depth1-wrap s-member-wrap">
+									
+									<!-- 20170608 한총 신규 마크업 분기처리 :: S -->
+								
+								</ul>
+								<!-- 20170608 한총 신규 마크업 분기처리 :: E -->
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					<button type="button" class="s-svg s-ico-close js-mo-close"><span class="blind">Close the Menu</span></button>
+					
+					<div class="gb-gnb__sub">
+						<ul class="gb-gnb__sub-nav" role="tablist"></ul>
+						
+						<ul class="gb-gnb__utility">
+							<!-- 20170608 한총 신규 마크업 분기처리 :: S -->
+							
+							
+							<!-- 20170605 login UX개선 :: S -->
+							<li class="s-login_new">
+								
+								<button type="button" title="마이삼성" class="s-btn-utility" aria-expanded="false" data-omni="login">
+									<span class="s-svg s-ico-logout"><span class="blind">마이삼성 열기</span></span>
+								</button>
+								
+								<ul class="gb-gnb__my-layer">
+									<li class="loginBtn"><a href="https://account.samsung.com/mobile/account/check.do" data-omni="login">로그인</a></li>
+									<li><a href="https://store.samsung.com/sec/track-order" data-omni="orders">주문/배송 조회</a></li>
+									<li><a href="//membership.samsung.com/sec/sni/KoSniMain?menuSeq=3000000065" class="s-depth1-link" data-omni="membership benefits">멤버십 혜택 확인</a></li>
+								</ul>
+							
+							</li>
+							<!-- 20170605 login UX개선 :: E -->
+							<!-- 20170605 login UX개선 :: S -->
+							<li class="s-mymenu s-mymenu_new" style="display: none">
+								
+								<button type="button" title="마이삼성" class="s-btn-utility" aria-expanded="false">
+									<span class="s-svg s-ico-login"><span class="blind">마이삼성 열기</span></span>
+								</button>
+								
+								<ul class="gb-gnb__my-layer">
+									<li>
+										<span class="s-mymenu-name"></span>
+									</li>
+									<li>
+										<a href="https://store.samsung.com/sec/my-account/orders" data-omni="orders">주문/배송 조회</a>
+									</li>
+									<li>
+										<a href="//membership.samsung.com/sec/sni/KoSniMain?menuSeq=3000000065" class="s-depth1-link" data-omni="membership benefits">멤버십 혜택 확인</a>
+									</li>
+									<li>
+										<a href="https://store.samsung.com/sec/my-account/profile" data-omni="my samsung">마이삼성</a>
+									</li>
+									<li>
+										<a href="#" class="logoutBtn" data-omni="logout">로그아웃</a>
+									</li>
+								
+								</ul>
+							
+							</li>
+							<!-- 20170605 login UX개선 :: E -->
+							
+							<!-- 20170608 한총 신규 마크업 분기처리 :: E -->
+							
+							<!-- Cart Icon -->
+							<li>
+								
+								<a href="https://store.samsung.com/sec/cart" title="장바구니" class="s-btn-utility js-empty-cart" aria-haspopup="true" data-omni="cart">
+							<span class="s-svg s-ico-cart-empty">
+								<span class="blind">장바구니 열기</span>
+								<span class="s-cart-number" id="globalCartCount-empty" style="display: none"><span class="blind">제품 수 : </span>0</span>
+							</span>
+								</a>
+								
+								<a href="https://store.samsung.com/sec/cart" title="장바구니" class="s-btn-utility js-cart" aria-haspopup="true" data-omni="cart" style="display: none">
+							<span class="s-svg s-ico-cart">
+								<span class="blind">장바구니 열기</span>
+								<span class="s-cart-number" id="globalCartCount" style="display: none"><span class="blind">제품 수 : </span>0</span>
+							</span>
+								</a>
+							
+							
+							
+							</li>
+							
+							<li>
+								
+								<button type="button" class="s-btn-utility js-ico-search" title="검색" aria-expanded="false" data-omni="search"><span class="s-svg s-ico-search"><span class="blind">검색창 열기</span></span><span class="s-search-arrow"></span></button>
+								
+								<div class="gb-gnb__search">
+									<div class="gb-gnb__search-inner">
+										<div class="gb-gnb__search-bar">
+											<div class="gb-gnb__search-input-wrap">
+												<label for="inp_srch" class="blind">검색</label>
+												<input type="text" id="inp_srch" name="gnb_search" class="gb-gnb__search-input" placeholder="갤럭시 노트9" autocomplete="off">
+												<button type="submit" class="s-svg s-ico-search"><span class="blind">검색</span></button>
+												
+												<button type="button" class="s-svg s-ico-close"><span class="blind">닫기</span></button>
+											</div>
+											<div class="gb-gnb__search-history" style="display: ">
+												<div class="gb-gnb__search-history-title">검색 히스토리</div>
+												<ul></ul>
+												<button type="button" class="gb-gnb__search-history-close">히스토리 삭제</button>
+											</div>
+										</div>
+										<div class="gb-gnb__search-suggest">
+											<div class="gb-gnb__search-suggest-inner">
+												
+												<div class="gb-gnb__search-typeahead" style="display: none">
+													<div class="gb-gnb__search-typeahead-title"></div>
+													<ul></ul>
+												</div>
+												
+												
+												<p class="gb-gnb__search-suggest-nodata" style="display: ">추천 검색어가 없습니다.</p>
+												
+												<div class="gb-gnb__search-suggest-list" style="display: none"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+							</li>
+						
+						</ul>
+						<!-- 회원로그인 폼 (한글) -->
+						<form id="loginForm" name="loginForm" method="post" action="https://account.samsung.com/account/check.do">
+							<input type="hidden" name="actionID" value="StartAP">
+							<input type="hidden" name="serviceID" value="z734ero6v9">
+							<input type="hidden" name="serviceName" value="삼성전자 대표사이트(한국)">
+							<input type="hidden" name="domain" value="">
+							<input type="hidden" name="countryCode" value="KR">
+							<input type="hidden" name="languageCode" value="ko">
+							<input type="hidden" name="registURL" id="registURL" value="https://local.sec.samsung.com/comLocal/loginCheck.do">
+							<input type="hidden" name="returnURL" id="returnURL">
+							<input type="hidden" name="goBackURL" id="goBackURL" value="">
+							<input type="hidden" name="ssoType" value="ENC_TK">
+							<input type="hidden" name="svcIptLgnID" id="userId" value="">
+							<input type="hidden" name="svcIptLgnPD" id="userPass" value="">
+							<input type="hidden" name="emailActivationURL" id="emailActivationURL" value="/aemapi/data-login/emailActivationURL.sec.json">
+						</form>
+						<!-- 회원가입 폼 -->
+						<form id="joinForm" name="joinForm" method="post" action="https://account.samsung.com/account/check.do">
+							<input type="hidden" name="actionID" value="SignupAP">
+							<input type="hidden" name="serviceID" value="z734ero6v9">
+							<input type="hidden" name="serviceName" value="삼성전자 대표사이트(한국)">
+							<input type="hidden" name="domain" value="">
+							<input type="hidden" name="countryCode" value="KR">
+							<input type="hidden" name="languageCode" value="ko">
+							<input type="hidden" name="registURL" id="joinRegistURL" value="https://local.sec.samsung.com/comLocal/loginCheck.do">
+							<input type="hidden" name="returnURL" id="joinReturnURL">
+							<input type="hidden" name="goBackURL" id="joinGoBackURL" value="">
+							<input type="hidden" name="ssoType" value="ENC_TK">
+							<input type="hidden" name="emailActivationURL" id="joinEmailActivationURL" value="/aemapi/data-login/emailActivationURL.sec.json">
+						</form>
+						<!-- Find Email 폼 -->
+						<form id="findAccountForm" name="findAccountForm" method="post" action="https://account.samsung.com/account/check.do">
+							<input type="hidden" name="actionID" value="FindEmail">
+							<input type="hidden" name="serviceID" value="z734ero6v9">
+							<input type="hidden" name="serviceName" value="삼성전자 대표사이트(한국)">
+							<input type="hidden" name="domain" value="">
+							<input type="hidden" name="countryCode" value="KR">
+							<input type="hidden" name="languageCode" value="ko">
+							<input type="hidden" name="goBackURL" id="findGoBackURL" value="">
+							<input type="hidden" name="ssoType" value="ENC_TK">
+						</form>
+						
+						<!-- Account Modify Form -->
+						<form id="accountModifyForm" name="accountModifyForm" method="post" action="https://account.samsung.com/account/check.do">
+							<input type="hidden" name="actionID" value="ModifyUserInfo">
+							<input type="hidden" name="serviceID" value="z734ero6v9">
+							<input type="hidden" name="serviceName" value="삼성전자 대표사이트(한국)">
+							<input type="hidden" name="domain" value="">
+							<input type="hidden" name="countryCode" value="KR">
+							<input type="hidden" name="languageCode" value="ko">
+							<input type="hidden" name="goBackURL" id="goBackURL" value="">
+							<input type="hidden" name="ssoType" value="ENC_TK">
+						</form>
+						
+						<form id="textForm" name="textForm">
+							<input type="hidden" name="signBtnText1" id="signBtnText1" value="signBtnText1"/>
+							<input type="hidden" name="signBtnText2" id="signBtnText2" value="signBtnText2"/>
+							<input type="hidden" name="errorTitleText" id="errorTitleText" value="errorTitleText"/>
+							<input type="hidden" name="errorText1" id="errorText1" value="errorText1"/>
+							<input type="hidden" name="errorText2" id="errorText2" value="errorText2"/>
+							<input type="hidden" name="errorText3" id="errorText3" value="errorText3"/>
+							<input type="hidden" name="errorText4" id="errorText4" value="errorText4"/>
+							<input type="hidden" name="wishText" id="errorText4" value="위시리스트에 저장되었습니다."/>
+							<input type="hidden" name="badReqTest" id="errorText4" value="잘못된 요청입니다. 제공된 데이터의 일부 또는 전부가 소실되었습니다. 고객센터에 문의하시기 바랍니다."/>
+							<input type="hidden" name="productCountText" id="productCountText" value="제품 수"/>
+						</form>
+						
+						<input type="hidden" name="searchPath" id="searchPath" value="/sec/search.html"/>
+						
+						<input type="hidden" name="domain" id="domain" value="www.samsung.com"/>
+						<input type="hidden" name="siteCode" id="siteCode" value="sec"/>
+						<input type="hidden" name="useLogin" id="useLogin" value="Y"/>
+						<input type="hidden" name="useStore" id="useStore" value="Y"/>
+						<input type="hidden" name="storeDomain" id="storeDomain" value="https://store.samsung.com"/>
+						<input type="hidden" name="hiddenSearch" id="hiddenSearch" value="갤럭시 노트9"/>
+						<input type="hidden" name="loginURL" id="loginURL" value="/sec/login.html"/>
+						<input type="hidden" name="loginLinkURL" id="loginLinkURL" value="https://account.samsung.com/mobile/account/check.do"/>
+						<input type="hidden" name="updateProfileURL" id="updateProfileURL" value="/sec/my-account/profile"/>
+						<input type="hidden" name="isLoginWithNoStore" id="isLoginWithNoStore"/>
+						
+						<!-- No Access Layer Popup -->
+						<div class="layer_popup" id="confirmPopup" style="display:none;">
+							<div id="popup-type02" class="popAlign">
+								<div class="popup_wrap">
+									
+									
+									<h2 class="pop-tit"></h2>
+									<p class="msg-text tc"></p>
+									
+									<div class="pop-btn">
+										<a href="javascript:void(0)" class="button login-leave-btn" title="접근 불가 확인">확인</a>
+									</div>
+									<button class="close-button icon-close-x login-leave-btn" data-focus-id="shop-popover-close" data-tab-disable="true" tabindex="0">
+										<span class="blind">접근 불가 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!-- 장바구니 가득찬 경우 Layer Popup -->
+						<div class="layer_popup" style="display:none;">
+							<div id="gloval_message_popup" class="popup-nextgen-type popAlign">
+								<div class="popup_wrap">
+									<p class="msg-text tc">해당 제품이 장바구니에 담겨 있습니다.</p>
+									<div class="pop-btn">
+										<a href="#" class="button">확인</a>
+									</div>
+									<button class="close-button icon-close-x" data-focus-id="shop-popover-close" data-tab-disable="true" tabindex="0">
+										<span class="blind">닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!-- 장바구니 삭제버튼 클릭 시 Layer -->
+						<div class="layer_popup" style="display: none;">
+							<div id="popup_delete_product_cart" class="popup-nextgen-type popAlign">
+								<div class="popup_wrap">
+									<p class="pop-tit">삭제</p>
+									<p class="msg-text">해당 제품 없이는 쿠폰 또는 프로모션 코드를 사용하실 수 없습니다.<br>해당 제품을 삭제하시겠습니까?</p>
+									<div class="pop-btn">
+										<a style="display: inline-block;" href="#" class="button" id="btnMoveToWishList" onclick="javascript: removeConfirmButton('Y');">위시리스트에 담기</a>
+										<a href="#" class="button gray" onclick="javascript: removeConfirmButton('N');">삭제</a>
+									</div>
+									<button class="close-button icon-close-x" data-focus-id="shop-popover-close" data-tab-disable="true" tabindex="0">
+										<span class="blind">닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="layer_popup" style="display: none;">
+							<div id="popup_alert" class="popup-nextgen-type popAlign" tabindex="0" data-focus-id="shop-popover-wrap" data-tab-previous="shop-popover-close">
+								<div class="popup_wrap">
+									
+									
+									<p class="msg-text tc"></p>
+									
+									<div class="pop-btn">
+										<a href="javascript:void(0);" class="button alert-ok-button" data-popup="close">확인</a>
+									</div>
+									<button class="close-button icon-close-x" data-focus-id="shop-popover-close" data-tab-next="shop-popover-wrap" data-popup="close" data-tab-disable="true" tabindex="0">
+										<span class="blind">닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						
+						<!-- 정책동의 1단계 Layer -->
+						<div class="layer_popup" id="privacyPopup" style="display: none;">
+							<div id="popup_privacy" class="popAlign">
+								<form action="#" method="post" name="" id="">
+									<fieldset>
+										<legend>Privacy Policy</legend>
+										<div class="popup_wrap">
+											<div class="popup_title">Privacy Policy</div>
+											<div class="popup_cont">
+												<div class="privacy_wrap">
+													<div class="check_box">
+														<input type="checkbox" name="privacy-terms" id="privacy-terms">
+														<label for="privacy-terms" class="check_text">
+															
+															
+															
+															삼성전자 대표사이트 정보 수신에 동의합니다.
+														
+														</label>
+														<!-- ERROR : Clicked PROCEED TO STORE button : display:block -->
+														<p class="check_error" id="errorPrivacy" style="display: none;">삼성전자 대표사이트를 살펴보려면 동의를 선택하세요.</p>
+														<!-- //ERROR : Clicked PROCEED TO STORE button -->
+													</div>
+													<div class="check_box">
+														<input type="checkbox" name="privacy-terms2" id="privacy-terms2">
+														
+														
+														
+														
+														<label for="privacy-terms2" class="check_text">By ticking this box, I accept Samsung Service Updates, including : </label><p class="check_txt">Samsung.com Services and marketing information, new product and service announcements as well as special offers, events and newsletters.</p>
+													
+													</div>
+													<div class="privacy_btn">
+														<a href="javascript:void(0)" class="button" id="privacyBtn">동의</a>
+														<a href="javascript:void(0)" class="button login-leave-btn">미동의</a>
+													</div>
+												</div>
+											</div>
+											<button class="close-button icon-close-x login-leave-btn" data-focus-id="shop-popover-close" data-tab-disable="true" tabindex="0">
+												<span class="blind">닫기</span>
+											</button>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+						
+						<!-- 정책동의 2단계 Layer -->
+						<div class="layer_popup" id="preferencePopup" style="display: none;">
+							<div id="popup-type04" class="popAlign">
+								<div class="popup_wrap">
+									<p class="pop-tit">부가 정보 수정 요청</p>
+									<p class="msg-text">고객님의 부가 정보를 최신 정보로 업데이트 해 주세요.</p>
+									<div class="pop-btn">
+										<a href="javascript:void(0)" class="button" id="preferenceCheckBtn" title="부가정보 수정 페이지로 가기">네</a>
+										<a href="javascript:void(0)" class="button login-close-btn" id="privacyCloseBtn" title="아니오">나중에</a>
+									</div>
+									<button class="close-button icon-close-x login-close-btn" data-focus-id="shop-popover-close" data-tab-disable="true" tabindex="0">
+										<span class="blind">닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Black Background Area -->
+						<div id="dimContainer">
+							<div class="lightbox-skrim" style="display:none"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		
+		<div class="gb-gnb__cart-empty" role="dialog" style="display: none;">
+			<p class="gb-gnb__cart-empty-desc">장바구니에 담겨있는 상품이 없습니다</p>
+			<!--<a href="#" class="gb-gnb__cart-empty-link">Continue shopping Continue shopping Continue shopping</a> -->
+			<a href="#" class="gb-gnb__cart-empty-link js-cart-close">확인</a><!-- close type -->
+			<button type="button" class="gb-gnb__cart-empty-close js-cart-close"><span class="blind">닫기</span></button>
+		</div>
+		
+		
+		<div class="cm-custom-popup js-custom-pop" role="dialog" style="display: none">
+			<div class="cm-custom-popup__inner">
+				<div class="cm-custom-popup__popup-area" style="max-width: 414px;">
+					
+					<div class="cm-custom-popup__custom-area">
+					</div>
+					<div class="cm-custom-popup__checkbox-wrap">
+						<input type="checkbox" id="_nomore_shop_terms" class="cm-custom-popup__checkbox-input">
+						<label for="_nomore_shop_terms" class="cm-custom-popup__checkbox-label">Do not show again</label>
+					</div>
+					
+					<div class="cm-custom-popup__link-wrap">
+						<a href="#" class="cm-custom-popup__link" target="_blank" title="새창으로 열기">바로가기</a>
+					</div>
+					<button type="button" class="cm-custom-popup__close js-custom-pop-close"><span>닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!--googleon: all-->
+		
+		<div class="s-layer-dimmed" style="display: none;"></div>
+		
+		<div id="rawCodeLayerPopup_loginFail" role="dialog" style="position: absolute; z-index: 9999; width: 400px; padding: 20px; background: #fff; display: none">
+			<p class="cm-layer-alert__desc">일시적으로 서비스에 문제가 발생하였습니다.<br>잠시후 다시 로그인 해주세요.</p>
+			<a href="javascript:void(0)" class="cm-layer-alert__link">닫기</a>
+			<button type="button" class="cm-layer-alert__close"><span>닫기</span></button>
+		</div></div>
+	
+	<input type="hidden" name="typeAheadDomain" id="typeAheadDomain" value="//searchapi.samsung.com/search/" />
+	<input type="hidden" name="scene7domain" id="scene7domain" value="//images.samsung.com/is/image/samsung/" />
+	<input type="hidden" name="reviewUseYN" id="reviewUseYN" value="N"/>
+	<input type="hidden" name="reevooUseYN" id="reevooUseYN" value="N"/>
+	<input type="hidden" name="bvFlag" id="bvFlag" value="N"/>
+	<input type="hidden" name="frontApiStageInfo" id="frontApiStageInfo" value="live"/>
+	<input type="hidden" name="gnbRunmodeInfo" id="gnbRunmodeInfo" value="live"/>
+</header>

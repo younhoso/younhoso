@@ -1,0 +1,56 @@
+.petcare_event {
+    .sec_lnb {
+        .inner_1440 {display: flex; justify-content: space-between; align-items: center; @include vw-pc(padding, 0 20);}
+        .lnb_wrapper.fixed_start {z-index: 10; position: fixed; top: 0;max-width: 1920px; width: 100%; background-color: #fff; @include vw-pc(border-bottom, 1 solid #ddd);}
+        .pt_lnb-title {@include vw-pc(font-size, 17); font-weight: 700;}
+        .pt_lnb-swiper {margin-right: 0;}
+        .pt_lnb-box {
+            &__list {
+                width: auto; @include vw-pc(padding, 2);
+                a {display: flex; align-items: center; justify-content: center; @include vw-pc(height, 56); @include vw-pc(padding, 0 10); @include vw-pc(font-size, 15); @include vw-pc(letter-spacing, -.5);}
+            }
+        }
+    }
+}
+
+// 폴드뷰
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+    .petcare_event {
+        .sec_lnb {
+        
+            .pt_lnb-title {@include vw-pc(font-size, 19);}
+            .pt_lnb-box {
+                &__list {
+                    a { @include vw-pc(font-size, 17);}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .petcare_event {
+        .sec_lnb {
+            .inner_1440 {flex-direction: column; align-items: flex-start; }
+            .lnb_wrapper.fixed_start {width: 100%; @include vw-mo(border-bottom, 1 solid #ddd);}
+            .pt_lnb-title {display: flex; align-items: center; justify-content: flex-start; @include vw-mo(padding-left,56); @include vw-mo(height, 102); @include vw-mo(font-size, 34);}
+            .pt_lnb-wrap {position: relative; width: 100%;}
+            .pt_lnb-swiper {margin: 0 auto; @include vw-mo(width,580);}
+            .pt_lnb-box { display: flex; justify-content: space-between;
+                &__list {
+                    width: auto;
+    
+                    &:not(:last-child) {@include vw-mo(margin-right, 50);}
+                    a {display: flex; align-items: center; justify-content: center; @include vw-mo(height, 100); @include vw-mo(padding, 0); @include vw-mo(font-size, 30); @include vw-mo(letter-spacing, -.5);}
+                }
+            }
+
+            // navigation
+            .swiper-button-next {@include vw-mo(right, 26);}
+            .swiper-button-prev {@include vw-mo(left, 26);}
+            .swiper-button-disabled {display: none !important;}
+            .swiper-button-next, .swiper-button-prev {margin-top: 0; width: auto; height: auto; transform: translateY(-50%);}
+            .swiper-button-next::after, .swiper-button-prev::after {color: #000; @include vw-mo(font-size, 34);}
+        }
+    }
+}

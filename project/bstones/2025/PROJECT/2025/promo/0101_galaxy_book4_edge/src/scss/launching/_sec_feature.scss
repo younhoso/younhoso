@@ -1,0 +1,206 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+.galaxy_book4_edge_launching {
+    .sec_feature {
+        overflow: hidden;
+        // &.pt_bg-image.pt_add-bg{
+        //     .pt_feature__btn-play{background-image: url(../../../is/images/feature/bja_btn_pause_white.svg);}
+        //     .pt_feature__btn-play.pause{background-image: url(../../../is/images/feature/bja_btn_play_white.svg);}
+
+        // }
+        .pt_feature{
+            @include vw-mo(width,720); @include vw-mo(padding,70 0 100);
+            &__title-box{@include vw-mo(margin-bottom,49); text-align: center;}
+            &__pre{@include vw-mo(margin-bottom,14); @include vw-mo(font-size,30); font-weight:700;}
+            &__title{@include vw-mo(font-size,48); line-height: 1.2em;  letter-spacing: -0.04em; font-weight:700;}
+
+            &__nav-list{position: static; display: flex; flex-wrap: wrap; justify-content: space-between; @include vw-mo(gap,18); @include vw-mo(margin-bottom,40);}
+            &__btn-nav{position: relative; display: flex; align-items: center; flex-direction: column; @include vw-mo(width,120); @include vw-mo(height,164);  @include vw-mo(border-radius,10); @include vw-mo(border, 1 solid #E5E5E5); background-color: #fff; text-align: center; opacity: 1;}
+            &__btn-nav.swiper-pagination-bullet-active{background-color: #333333; border-color: #333333; color: #fff;}
+            &__icon{@include vw-mo(width,120);}
+            &__desc{position: absolute; inset: 0; @include vw-mo(padding-top,116);  @include vw-mo(font-size,22); letter-spacing: -0.025em;  font-weight:700;}
+
+            &__swiper{@include vw-mo(width,652); margin: 0 auto; overflow: visible;}
+            &__slide{position: relative; @include vw-mo(width,652 !important); @include vw-mo(margin-right,20); border: none;}
+            &__slide:last-child{margin-right: 0;}
+            &__text-box{
+                position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-start; background-color: transparent; @include vw-mo(padding-top, 56); text-align: center;
+
+                &--last {@include vw-mo(padding-top, 110);}
+            }
+            &__pod-coming{
+                position: absolute; @include vw-mo(top, 20); left: 50%; transform: translateX(-50%); width: 100%; @include vw-mo(margin-bottom,0); @include vw-mo(font-size,24); @include vw-mo(line-height,30); letter-spacing: -0.025em; font-weight:700; text-align: center;
+            }
+            &__pod-title{
+                @include vw-mo(margin-bottom,10); @include vw-mo(font-size,38); @include vw-mo(line-height,50); letter-spacing: -0.025em; font-weight:700;
+            }
+            &__pod-noti{position: absolute; @include vw-mo(top, 59); left: 50%; transform: translateX(-50%); width: 100%; @include vw-mo(font-size, 24); @include vw-mo(line-height,30); letter-spacing: -0.025em; text-align: center;}
+            &__pod-title .en{letter-spacing: 0;}
+            &__pod-summary{@include vw-mo(margin-bottom,8); @include vw-mo(font-size,26); @include vw-mo(line-height,35); letter-spacing: -0.025em;}
+            &__pod-desc{
+                position: absolute; @include vw-mo(top, 484); left: 50%; transform: translateX(-50%); width: 100%; @include vw-mo(font-size,24); @include vw-mo(line-height, 30); letter-spacing: -0.025em; text-align: center;
+
+                &::before {display: inline-block; content: '※ '; @include vw-mo(margin-right, 5); @include vw-mo(font-size,24); @include vw-mo(line-height, 30); letter-spacing: -0.025em;}
+            }
+            &__control-box{position: absolute; z-index: 1; left: 50%; transform: translateX(-50%); @include vw-mo(bottom,40); display: flex; align-items:center;}
+            &__bullet{
+                position: static;
+                .swiper-pagination-bullet{@include vw-mo(width,14); @include vw-mo(height,14); @include vw-mo(margin,0 6); @include vw-mo(border, 2 solid #000); opacity: 1; background-color: #fff;}
+                .swiper-pagination-bullet-active{background-color: #000; }
+            }
+            &__btn-play{display: none; @include vw-mo(width,18); @include vw-mo(height,20); @include vw-mo(margin,1.5 0 0 4); background: no-repeat center / contain;}
+            &__btn-prev{display: none;}
+            &__btn-next{display: none;}
+            &__conts--swiper.pt_blk {
+                .swiper-pagination-bullet { border-color: #fff; background-color: #000; }
+                .swiper-pagination-bullet-active{ background-color: #fff; }
+                // .pt_feature__conts-item { border: 0; }
+            }
+            &__wrapper {
+                @include vw-mo(padding,0 0);
+            }
+            &__conts--swiper {
+                @include vw-mo(width,652); overflow: visible;
+
+                &.pt_blk { color: #fff; } @include vw-mo(padding-right, 0);
+            }
+            &__conts-item {
+                @include vw-mo(width,652); @include vw-mo(margin-right, 20); @include vw-mo(border,2 solid #E2E2E2); @include vw-mo(border-radius,20); 
+                &:last-child {margin-right: 0;}
+            }
+            
+            .pt_icon__swiper {
+                @include vw-mo(margin-bottom,40); @include vw-mo(padding,0 24);
+                .pt_icon__item {
+                    @include vw-mo(height,164); @include vw-mo(width,120); @include vw-mo(margin-right,18); @include vw-mo(border,2 solid #E5E5E5); @include vw-mo(border-radius,10); @include vw-mo(padding-bottom,19); display: flex; justify-content: center; align-items: end; box-sizing: border-box; cursor: pointer;
+                    &:last-child { margin-right: 0; }
+                    &.active {
+                        border-color: #333; background-color: #333;
+                        span { color:#fff; }
+                        .pt_icon__default { display: none; }
+                        .pt_icon__active { display: block; }
+                    }
+                    .pt_icon__default { display: block; }
+                    .pt_icon__active { display: none; }
+                    span {
+                        @include vw-mo(font-size,22); @include vw-mo(line-height,30); font-weight: 700; letter-spacing: -.025em; z-index: 1;
+                        .pt_font__small { @include vw-mo(font-size,19); }
+                    }
+                    img {
+                        position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width: 769px) {
+    .galaxy_book4_edge_launching { 
+        .sec_feature {
+            .pt_feature{
+                @include vw-pc(padding,84 0 60); @include vw-pc(width,920); @include vw-pc(margin, 0 auto);
+                &__title-box{@include vw-pc(margin-bottom,50);}
+                &__pre{@include vw-pc(font-size,26); @include vw-pc(margin-bottom,5);}
+                &__title{@include vw-pc(font-size,46); @include vw-pc(line-height,58); letter-spacing: -.05em;}
+    
+                &__nav-list{flex-wrap: nowrap; @include vw-pc(width,646); @include vw-pc(gap,24); @include vw-pc(margin,0 auto 30);}
+                &__btn-nav{@include vw-pc(width,110); @include vw-pc(height,127); @include vw-pc(border-radius,10); @include vw-pc(border, 2 solid #E5E5E5);}
+                &__icon{@include vw-pc(width,110);}
+                &__desc{@include vw-pc(padding-top,90); @include vw-pc(font-size,16);}
+
+                &__pod-wrap{position: relative; @include vw-pc(width,920);}
+                &__swiper{@include vw-pc(width,920); overflow: hidden; @include vw-pc(border-radius,20); @include vw-pc(border, 2 solid #E5E5E5); @include vw-pc(border-radius,20); overflow: hidden; box-sizing: border-box;}
+                &__slide{@include vw-pc(width,916 !important); @include vw-pc(margin-right,0);}
+                &__text-box{
+                    justify-content: center; width: 100%; @include vw-pc(padding,0 0 0 80); text-align: left;
+
+                    &--last {@include vw-pc(padding-top, 0);}
+                }
+                &__pod-coming{
+                    position: absolute; @include vw-pc(top, 34); @include vw-pc(left, 80); transform: none; @include vw-pc(margin-bottom,0); @include vw-pc(font-size,18); @include vw-pc(line-height,22); letter-spacing: 0; font-weight:700; text-align: left;
+                }
+                &__pod-noti{position: absolute; @include vw-pc(top, 61); @include vw-pc(left, 80); transform: none; width: auto; @include vw-pc(font-size, 16); @include vw-pc(line-height, 21); letter-spacing: -0.08em; text-align: left;}
+                &__pod-title{ @include vw-pc(margin-bottom,8); @include vw-pc(font-size,24); @include vw-pc(line-height,30); letter-spacing: -.025em; }
+                &__pod-summary{ @include vw-pc(margin-bottom,10); @include vw-pc(font-size,18); @include vw-pc(line-height,23); letter-spacing: -.025em; }
+                &__pod-desc{
+                    position: absolute; @include vw-pc(top, 282); @include vw-pc(left, 96); transform: none; width: 100%; @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); letter-spacing: -0.08em; text-align: left;
+    
+                    &::before {display: inline-block; content: '※ '; @include vw-pc(margin-right, 0); @include vw-pc(font-size,16); @include vw-pc(line-height,20); letter-spacing: -0.08em; @include vw-pc(text-indent, -15);}
+                }
+                &__control-box{ transform: translateX(-50%);  @include vw-pc(bottom,25);}
+                &__bullet{
+                    .swiper-pagination-bullet{@include vw-pc(width,10); @include vw-pc(height,10); @include vw-pc(margin,0 4); @include vw-pc(border-width,1); opacity: 1;}
+                }
+                &__btn-play{@include vw-pc(width,18); @include vw-pc(height,20); @include vw-pc(margin,0 0 2 6); background: no-repeat center / contain;}
+                &__btn-prev{display: block; @include vw-pc(width,27); @include vw-pc(left,-59); background: url(../../../is/images/alarm/pod/gbe_feature_icon_prev.png) no-repeat center / contain;}
+                &__btn-next{display: block; @include vw-pc(width,27); @include vw-pc(right,-59); background: url(../../../is/images/alarm/pod/gbe_feature_icon_next.png) no-repeat center / contain;}
+                &__btn-prev::after{display: none;}
+                &__btn-next::after{display: none;}
+                &__wrapper { height: 100%; padding: 0; }
+                &__img {
+                    img { width: 100%; }
+                }
+
+                &__conts--swiper {
+                    position: relative; @include vw-pc(left, 0); width: 100%; height: 100%; padding-right: 0; overflow: hidden;
+                }
+                &__conts-item {
+                    width: 100%; @include vw-pc(border,2 solid #E2E2E2); @include vw-pc(border-radius,20); margin-right: 0;
+                }
+
+                .pt_icon__swiper {
+                    @include vw-pc(margin-bottom,32); width: 100%; padding: 0;
+                    .swiper-wrapper {
+                        display: flex; justify-content: space-between; @include vw-pc(padding, 2);
+                        .pt_icon__item {
+                            @include vw-pc(height,127); @include vw-pc(width,110); @include vw-pc(margin-right,18); @include vw-pc(border,2 solid #E5E5E5); @include vw-pc(border-radius,10); @include vw-pc(padding-bottom,12); display: flex; justify-content: center; align-items: end; box-sizing: border-box; cursor: pointer;
+                            &:last-child { margin-right: 0; }
+                            &.active {
+                                border-color: #333; background-color: #333;
+                                span { color:#fff; }
+                                .pt_icon__default { display: none; }
+                                .pt_icon__active { display: block; }
+                            }
+                            .pt_icon__default { display: block; }
+                            .pt_icon__active { display: none; }
+                            span {
+                                @include vw-pc(font-size,22); @include vw-pc(line-height,30); font-weight: 700; letter-spacing: -.025em; z-index: 1;
+                                .pt_font__small { @include vw-pc(font-size,19); }
+                            }
+                            img {
+                                position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .pt_icon__txt {
+                    position: absolute; @include vw-pc(top, 0); @include vw-pc(left, 100);
+                }
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

@@ -1,0 +1,61 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'notice';
+@import 'point';
+@import 'coupon';
+@import 'lnb';
+
+.petcare_point {
+    // KV START
+    .sec_kv {
+        .pt_kv-tit {
+            position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 135);
+
+            &__eyebrow {@include vw-pc(margin-bottom, 9); @include vw-pc(font-size,20); @include vw-pc(line-height,26); letter-spacing: -0.025em;}
+            &__main {@include vw-pc(margin-bottom,13); @include vw-pc(font-size,42); @include vw-pc(line-height,53); letter-spacing: -0.05em;}
+            &__date{@include vw-pc(font-size,20); @include vw-pc(line-height,26);}
+        }
+        .pt_kv-noti {@include vw-pc(margin-top, 40); text-align: center;}
+        .pt_cta-anchor {
+            display: inline-flex; justify-content: center; align-items: center; @include vw-pc(gap, 6); @include vw-pc(padding-bottom, 2); @include vw-pc(border-bottom, 2 solid #000); @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); letter-spacing: 0;
+            &::after {content: ''; @include vw-pc(width, 13); @include vw-pc(height, 8); background: url('../../is/images/pp_ico_arrow_pc.png') no-repeat center / contain;}
+        }
+    }
+    // KV END
+
+    .sec_comp {
+        @include vw-pc(margin-bottom, 40);
+
+        .pt_title {@include vw-pc(font-size, 42); @include vw-pc(line-height, 55); @include vw-pc(letter-spacing, -.5); text-align: center;}
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .petcare_point {
+        // KV START
+        .sec_kv {
+            .pt_kv-tit {
+                @include vw-mo(top, 60); left: 0; width: 100%; transform: none; text-align: center;
+    
+                &__eyebrow {@include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 28); @include vw-mo(line-height, 37); letter-spacing: -0.025em;}
+                &__main {@include vw-mo(margin-bottom, 17); @include vw-mo(font-size, 38); @include vw-mo(line-height, 48); letter-spacing: -0.025em;}
+                &__date{@include vw-mo(font-size, 22); @include vw-mo(line-height, 29);}
+            }
+            .pt_kv-noti {@include vw-mo(margin-top, 30);}
+            .pt_cta-anchor {
+                @include vw-mo(gap, 12); @include vw-mo(padding-bottom, 2); @include vw-mo(border-bottom-width, 1); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32);
+                &::after {@include vw-mo(width, 15); @include vw-mo(height, 9); background-image: url('../../is/images/pp_ico_arrow_mo.png');}
+            }
+        }
+
+
+        .sec_comp {
+            @include vw-mo(margin-bottom, 40);
+
+            .pt_title {@include vw-mo(font-size, 42); @include vw-mo(letter-spacing, -1);}
+        }
+    }
+}
+

@@ -1,0 +1,317 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+.galaxy_book4_edge_alarm {
+    .sec_benefit {
+        @include vw-mo(padding, 96 0 103);
+
+        .pt_benefit {
+            &__title {
+                @include vw-mo(margin-bottom, 22); text-align: center;
+
+                &--eyebrow {@include vw-mo(border-bottom, 6); @include vw-mo(font-size, 30); @include vw-mo(line-height, 38); font-weight: 700;}
+                &--main {@include vw-mo(font-size, 48); @include vw-mo(line-height, 60); font-weight: 700; letter-spacing: -0.025em;}
+            }
+
+            // &__tab {
+            //     display: flex; justify-content: center; align-items: center; @include vw-mo(width, auto); @include vw-mo(height, 68); @include vw-mo(gap, 23); @include vw-mo(margin, 0 auto);
+
+            //     &--btn {
+            //         @include vw-mo(padding, 12 24); border-bottom: 0; @include vw-mo(font-size, 27); font-weight: 700; letter-spacing: -0.025em;
+
+            //         .pt_benefit__tab--txt {
+            //             position: relative; @include vw-mo(padding-bottom, 8);
+
+            //             &::after {position: absolute; left: 0; bottom: 0; display: block; content: ''; width: 100%; @include vw-mo(height, 4); background-color: #fff;}
+            //         }
+
+            //         &.active {
+            //             .pt_benefit__tab--txt {
+            //                 position: relative; @include vw-mo(padding-bottom, 8);
+
+            //                 &::after {position: absolute; left: 0; bottom: 0; display: block; content: ''; width: 100%; @include vw-mo(height, 4); background-color: #000;}
+            //             }
+            //         }
+            //     }
+            // }
+
+            &__tab {
+                display: flex; justify-content: center; align-items: center; @include vw-mo(width, 672); @include vw-mo(height, 98); @include vw-mo(gap, 24); @include vw-mo(margin, 0 auto);
+
+                &--btn {
+                    display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid #E5E5E5; @include vw-mo(border-radius, 10);
+
+
+                    .pt_benefit__tab--txt {
+                        @include vw-mo(font-size, 24); @include vw-mo(line-height, 30); font-weight: 700; letter-spacing: -0.025em;
+
+                        &.txt01 {
+                            &::before {display: block; content: ''; @include vw-mo(width, 40); @include vw-mo(height, 40); margin: 0 auto; background: url('../../../is/images/alarm/tab/gbe_icon_tab01_mo_v1.png') no-repeat; @include vw-mo(background-size, 40 40);}
+                        }
+
+                        &.txt02 {
+                            &::before {display: block; content: ''; @include vw-mo(width, 40); @include vw-mo(height, 40); margin: 0 auto; background: url('../../../is/images/alarm/tab/gbe_icon_tab02_mo_v1.png') no-repeat; @include vw-mo(background-size, 40 40);}
+                        }
+                    }
+
+                    &.active {
+                        background-color: #333; border: 1px solid #333;
+
+                        .pt_benefit__tab--txt {color: #fff;}
+                    }
+                }
+            }
+
+            &__content{
+                @include vw-mo(width, 672); @include vw-mo(margin, 28 auto 0);
+                
+                .pt_benefit__box {
+                    .pt_benefit__insta {
+                        position: relative;
+
+                        &--num {position: absolute; @include vw-mo(top, 0); @include vw-mo(left, 20); display: block; @include vw-mo(min-width, 112); @include vw-mo(height, 32); @include vw-mo(margin-bottom, 13); background-color: #333; @include vw-mo(border-radius, 0 0 6 6); color: #fff; @include vw-mo(font-size, 20); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+                        &--title {z-index: 1; position: absolute; @include vw-mo(top, 31); left: 50%; transform: translateX(-50%); width: 100%; @include vw-mo(font-size, 36); @include vw-mo(line-height, 38); font-weight: 700; text-align: center; letter-spacing: -0.05em;}
+
+                        .pt_benefit__mission {
+                            z-index: 1; position: absolute; @include vw-mo(top, 262); left: 50%; transform: translateX(-50%); display: flex; justify-content: space-between; @include vw-mo(width, 614); @include vw-mo(height, 166);
+
+                            &--item {@include vw-mo(width, 298); @include vw-mo(height, 166); @include vw-mo(padding, 18 26); background-color: #fff; @include vw-mo(border-radius, 10); border: 1px solid #ddd; text-align: center;}
+                            &--tag {display: inline-block; @include vw-mo(width, 92); @include vw-mo(height, 38); @include vw-mo(margin-bottom, 13); border: 1px solid #333; @include vw-mo(border-radius, 19); @include vw-mo(font-size, 24); @include vw-mo(line-height, 38); font-weight: 700; letter-spacing: -0.03em; text-align: center;}
+                            &--title {@include vw-mo(font-size, 28); @include vw-mo(line-height, 40); font-weight: 700; letter-spacing: -0.03em;}
+
+                        }
+                        
+                        &--desc {z-index: 1; position: absolute; @include vw-mo(top, 450); left: 50%; transform: translateX(-50%); width: 100%; color: #666; @include vw-mo(font-size, 22); @include vw-mo(line-height, 32); letter-spacing: -0.03em; text-align: center;}
+
+                        &::after {z-index: 2; position: absolute; @include vw-mo(top, 325); @include vw-mo(left, 316); display: block; content: ''; @include vw-mo(width, 40); @include vw-mo(height, 40); background: url('../../../is/images/alarm/benefit/gbe_icon_plus_mo.png') no-repeat; @include vw-mo(background-size, 40 40);}
+                    }
+
+                    .pt_benefit__list {
+                        display: flex; flex-wrap: wrap;
+
+                        .pt_benefit__item {
+                            position: relative; display: flex; align-items: center; width: 100%; @include vw-mo(height, 210); @include vw-mo(margin-top, 24); @include vw-mo(padding-left, 24); border: 1px solid #DDD; @include vw-mo(border-radius, 10);
+
+                            &--num {position: absolute; @include vw-mo(top, 0); @include vw-mo(left, 20); display: block; @include vw-mo(min-width, 112); @include vw-mo(height, 32); @include vw-mo(margin-bottom, 13); background-color: #333; @include vw-mo(border-radius, 0 0 6 6); color: #fff; @include vw-mo(font-size, 20); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+                            &.pt_benefit__item--single02 {@include vw-mo(height, 210); @include vw-mo(padding-top, 20);}
+                            &.pt_benefit__item--single04 {@include vw-mo(padding-top, 20);}
+                            &.pt_benefit__item--single06 {@include vw-mo(height, 210);}
+
+                            &--img {z-index: -1; position: absolute; @include vw-mo(top, 1); @include vw-mo(left, 1); @include vw-mo(width, 670); @include vw-mo(height, 209);}
+
+                            .pt_benefit__txt {
+                                z-index: 1;
+
+                                &--eyebrow {@include vw-mo(margin-bottom, 6); color: #2294EF; @include vw-mo(font-size, 24); @include vw-mo(line-height, 34); font-weight: 700; letter-spacing: -0.07em;}
+                                &--title {@include vw-mo(font-size, 28); @include vw-mo(line-height, 36); font-weight: 700; letter-spacing: -0.05em;}
+                                &--blue {color: #2294EF;}
+
+                                .pt_benefit__btn {
+                                    &--detail {display: inline-block; @include vw-mo(margin-top, 7); border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em;}
+                                    &--more {
+                                        display: inline-block; @include vw-mo(margin-top, 8); @include vw-mo(font-size, 22); @include vw-mo(line-height, 22); font-weight: 700; letter-spacing: -0.05em;
+
+                                        &::after {display: inline-block; content: ''; @include vw-mo(width, 21); @include vw-mo(height, 21); @include vw-mo(margin-left, 3); background: url('../../../is/images/alarm/common/gbe_icon_more_mo.png') no-repeat; @include vw-mo(background-size, 21 21); vertical-align: middle;}
+                                    }
+                                }
+
+                                .pt_benefit__txt--desc {
+                                    &.single01 {@include vw-mo(margin-top, 15);}
+                                    &.single02 {@include vw-mo(margin-top, 11);}
+                                    &.single06 {@include vw-mo(margin-top, 9);}
+                                    &.common02 {@include vw-mo(margin-top, 7);}
+
+                                    li {color: #666; @include vw-mo(font-size, 20); @include vw-mo(line-height, 26); letter-spacing: -0.08em;}
+                                }
+                            }
+                            
+                        }
+                    }
+
+                    .pt_benefit__notice {
+                        @include vw-mo(margin-top, 45); text-align: center;
+
+                        &--btn-detail {display: block; @include vw-mo(width, 244); @include vw-mo(height, 60); @include vw-mo(margin, 0 auto 29); @include vw-mo(font-size, 24); @include vw-mo(line-height, 56); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+
+                        &--btn-notice {
+                            display: inline-block; border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em;
+
+                            &::after {display: inline-block; content: ''; @include vw-mo(width, 19); @include vw-mo(height, 12); @include vw-mo(margin-left, 10); background: url('../../../is/images/alarm/common/gbe_icon_benefit_mo.png') no-repeat; @include vw-mo(background-size, 19 12); vertical-align: middle;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width:769px) {
+    .galaxy_book4_edge_alarm {
+        .sec_benefit {
+            @include vw-pc(padding, 116 0 120);
+    
+            .pt_benefit {
+                &__title {
+                    @include vw-pc(margin-bottom, 15); text-align: center;
+    
+                    &--eyebrow {@include vw-pc(border-bottom, 6); @include vw-pc(font-size, 28); @include vw-pc(line-height, 35); font-weight: 700;}
+                    &--main {@include vw-pc(font-size, 46); @include vw-pc(line-height, 60); font-weight: 700; letter-spacing: -0.025em;}
+                }
+    
+                // &__tab {
+                //     display: flex; justify-content: center; align-items: center; @include vw-pc(width, auto); @include vw-pc(height, 38); @include vw-pc(gap, 16); @include vw-pc(margin, 0 auto);
+    
+                //     &--btn {
+                //         @include vw-pc(padding, 6 16); border-bottom: 0; @include vw-pc(font-size, 18); font-weight: 700; letter-spacing: -0.025em;
+    
+                //         .pt_benefit__tab--txt {
+                //             position: relative; @include vw-pc(padding-bottom, 4);
+    
+                //             &::after {position: absolute; left: 0; bottom: 0; display: block; content: ''; width: 100%; @include vw-pc(height, 2); background-color: #fff;}
+                //         }
+    
+                //         &.active {
+                //             .pt_benefit__tab--txt {
+                //                 position: relative; @include vw-pc(padding-bottom, 4);
+    
+                //                 &::after {position: absolute; left: 0; bottom: 0; display: block; content: ''; width: 100%; @include vw-pc(height, 2); background-color: #000;}
+                //             }
+                //         }
+                //     }
+                // }
+
+                &__tab {
+                    display: flex; justify-content: center; align-items: center; @include vw-pc(width, 584); @include vw-pc(height, 86); @include vw-pc(gap, 24); @include vw-mo(margin, 0 auto);
+    
+                    &--btn {
+                        display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid #E2E2E2; @include vw-pc(border-radius, 10);
+    
+    
+                        .pt_benefit__tab--txt {
+                            @include vw-pc(font-size, 26); @include vw-pc(line-height, 56); font-weight: 700; letter-spacing: -0.025em;
+    
+                            &.txt01 {
+                                &::before {display: inline-block; content: ''; @include vw-pc(width, 56); @include vw-pc(height, 56); margin: 0 auto; background: url('../../../is/images/alarm/tab/gbe_icon_tab01_pc_v1.png') no-repeat; @include vw-pc(background-size, 56 56); vertical-align: top;}
+                            }
+    
+                            &.txt02 {
+                                &::before {display: inline-block; content: ''; @include vw-pc(width, 56); @include vw-pc(height, 56); margin: 0 auto; background: url('../../../is/images/alarm/tab/gbe_icon_tab02_pc_v1.png') no-repeat; @include vw-pc(background-size, 56 56); vertical-align: top;}
+                            }
+                        }
+    
+                        &.active {
+                            background-color: #333; border: 1px solid #333;
+    
+                            .pt_benefit__tab--txt {color: #fff;}
+                        }
+                    }
+                }
+    
+                &__content{
+                    @include vw-pc(width, 1320); @include vw-pc(margin, 30 auto 0);
+                    
+                    .pt_benefit__box {
+                        .pt_benefit__insta {
+                            position: relative;
+
+                            &--num {position: absolute; @include vw-pc(top, 0); @include vw-pc(left, 43); display: block; @include vw-pc(min-width, 112); @include vw-pc(height, 34); @include vw-pc(margin-bottom, 0); background-color: #333; @include vw-pc(border-radius, 0 0 8 8); color: #fff; @include vw-pc(font-size, 18); @include vw-pc(line-height, 34); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+                            &--title {z-index: 1; position: absolute; @include vw-pc(top, 79); @include vw-pc(left, 56); transform: none; width: auto; @include vw-pc(font-size, 24); @include vw-pc(line-height, 38); font-weight: 700; text-align: center; letter-spacing: -0.05em;}
+    
+                            .pt_benefit__mission {
+                                z-index: 1; position: absolute; @include vw-pc(top, 41); @include vw-pc(left, 388); transform: none; display: flex; justify-content: space-between; @include vw-pc(width, 546); @include vw-pc(height, 134);
+
+                                &--item {@include vw-pc(width, 268); @include vw-pc(height, 134); @include vw-pc(padding, 25 54); background-color: #fff; @include vw-pc(border-radius, 10); border: 1px solid #ddd; text-align: center;}
+                                &--tag {display: inline-block; @include vw-pc(width, 71); @include vw-pc(height, 24); @include vw-pc(margin-bottom, 9); border: 1px solid #333; @include vw-pc(border-radius, 12); @include vw-pc(font-size, 16); @include vw-pc(line-height, 24); font-weight: 700; letter-spacing: -0.03em; text-align: center;}
+                                &--title {@include vw-pc(font-size, 18); @include vw-pc(line-height, 26); font-weight: 700; letter-spacing: -0.03em;}
+                            }
+    
+                            &--desc {z-index: 1; position: absolute; @include vw-pc(top, 121); @include vw-pc(left, 56); transform: none; width: auto; color: #666; @include vw-pc(font-size, 14); @include vw-pc(line-height, 17); letter-spacing: -0.03em; text-align: left;}
+
+                            &::after {z-index: 2; position: absolute; @include vw-pc(top, 89); @include vw-pc(left, 642); display: block; content: ''; @include vw-pc(width, 38); @include vw-pc(height, 38); background: url('../../../is/images/alarm/benefit/gbe_icon_plus_pc.png') no-repeat; @include vw-pc(background-size, 38 38);}
+                        }
+    
+                        .pt_benefit__list {
+                            display: flex; flex-wrap: wrap; @include vw-pc(width, 1320); margin: 0 auto;
+    
+                            .pt_benefit__item {
+                                position: relative; display: flex; align-items: center; @include vw-pc(width, 648); @include vw-pc(height, 174); @include vw-pc(margin-top, 24); @include vw-pc(padding-left, 43); @include vw-pc(border-radius, 15); border: none;
+    
+                                &--num {position: absolute; @include vw-pc(top, 0); @include vw-pc(left, 43); display: block; @include vw-pc(min-width, 112); @include vw-pc(height, 34); @include vw-pc(margin-bottom, 0); background-color: #333; @include vw-pc(border-radius, 0 0 8 8); color: #fff; @include vw-pc(font-size, 18); @include vw-pc(line-height, 34); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+
+                                &.pt_benefit__item--single02 {@include vw-pc(height, 174); @include vw-pc(padding-top, 20);}
+                                &.pt_benefit__item--single04 {@include vw-pc(padding-top, 20);}
+                                &.pt_benefit__item--single06 {@include vw-pc(height, 174);}
+                                &:nth-child(odd) {@include vw-pc(margin-right, 24);}
+                                
+                                &--common01 {@include vw-pc(margin-top, 0); @include vw-pc(padding-top, 10);}
+                                &--common02 {@include vw-pc(margin-top, 0); @include vw-pc(padding-top, 10);}
+    
+                                &--img {z-index: -1; position: absolute; @include vw-pc(top, 0); @include vw-pc(left, 0); @include vw-pc(width, 648); @include vw-pc(height, 174);}
+    
+                                .pt_benefit__txt {
+                                    z-index: 1;
+    
+                                    &--eyebrow {@include vw-pc(margin-bottom, 6); color: #2294EF; @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); font-weight: 700; letter-spacing: -0.07em;}
+                                    &--title {@include vw-pc(font-size, 24); @include vw-pc(line-height, 30); font-weight: 700; letter-spacing: -0.025em;}
+                                    &--blue {color: #2294EF;}
+    
+                                    .pt_benefit__btn {
+                                        &--detail {display: inline-block; @include vw-pc(margin-top, 5); border-bottom: 1px solid #000; @include vw-pc(border-width, 2); @include vw-pc(font-size, 14); @include vw-pc(line-height, 20); font-weight: 700; letter-spacing: 0;}
+                                        &--more {
+                                            display: inline-block; @include vw-pc(margin-top, 11); @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); font-weight: 700; letter-spacing: -0.05em;
+    
+                                            &::after {display: inline-block; content: ''; @include vw-pc(width, 14); @include vw-pc(height, 14); @include vw-pc(margin-top, -3); @include vw-pc(margin-left, 7); background: url('../../../is/images/alarm/common/gbe_icon_more_pc.png') no-repeat; @include vw-pc(background-size, 14 14); vertical-align: middle;}
+                                        }
+                                    }
+    
+                                    .pt_benefit__txt--desc {
+                                        &.single01 {@include vw-pc(margin-top, 19);}
+                                        &.single02 {@include vw-pc(margin-top, 13);}
+                                        &.single06 {@include vw-pc(margin-top, 10);}
+                                        &.common02 {@include vw-pc(margin-top, 9);}
+    
+                                        li {color: #666; @include vw-pc(font-size, 14); @include vw-pc(line-height, 20); letter-spacing: -0.05em;}
+                                    }
+                                }
+                                
+                            }
+                        }
+    
+                        .pt_benefit__notice {
+                            @include vw-pc(margin-top, 60); text-align: center;
+    
+                            &--btn-detail {display: block; @include vw-pc(width, 146); @include vw-pc(height, 42); @include vw-pc(margin, 0 auto 30); @include vw-pc(font-size, 16); @include vw-pc(line-height, 40); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+    
+                            &--btn-notice {
+                                display: inline-block; border-bottom: 1px solid #000; @include vw-pc(border-width, 2); @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); font-weight: 700; letter-spacing: 0;
+    
+                                &::after {display: inline-block; content: ''; @include vw-pc(width, 16); @include vw-pc(height, 16); @include vw-pc(margin-left, 3); background: url('../../../is/images/alarm/common/gbe_icon_benefit_pc.png') no-repeat; @include vw-pc(background-size, 16 16); vertical-align: middle;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

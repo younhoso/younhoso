@@ -1,0 +1,58 @@
+.mx_academy { // MO
+    .sec_nav {
+        @include vw-mo(height,100); background-color: #000;
+        .pt_nav {
+            &__outer {width: 100%; @include vw-mo(height,100); background: #000;}
+            &__list {display: flex; justify-content: center; align-items: center; height: 100%;}
+            &__item {
+                position: relative; height: 100%;
+
+                &::after {content: ""; position: absolute; top: 50%; @include vw-mo(right,-1); display: block; @include vw-mo(width,2); @include vw-mo(height,20); background: #DEDEDE; transform: translateY(-50%);}
+                &:last-child {
+                    &::after {display: none;}
+                }
+
+                // active
+                &.pt_on {
+                    .pt_nav__link {color: #fff;}
+                    .pt_nav__txt {
+                        &::after {
+                            content: ""; position: absolute; bottom: 0; left: 0; display: block; width: 100%; @include vw-mo(height, 4); background-color: #fff;
+                        }
+                    }
+                }
+            }
+            &__link {display: block; height: 100%; @include vw-mo(padding, 0 32); color: #888; @include vw-mo(font-size,24); @include vw-mo(line-height,32); letter-spacing: -.025em; font-weight: bold; outline-offset: -2px;}
+            &__txt {position: relative; display: flex; align-items: center; height: 100%;}
+        }
+
+        // fixed
+        &.pt_fixed {
+            .pt_nav__outer {
+                position: fixed; top: 0; left: 50%; z-index: 12; transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) { // PC
+    .mx_academy {
+        .sec_nav {
+            display: flex; justify-content: center; width: 100%; @include vw-pc(height,66);
+            .pt_nav {
+                &__outer {max-width: 1920px; @include vw-pc(height,66);}
+                &__item {
+                    &::after {right: 0; width: 1px; @include vw-pc(height,14);}
+
+                    // active
+                    &.pt_on {
+                        .pt_nav__txt {
+                            &::after {@include vw-pc(height, 2);}
+                        }
+                    }
+                }
+                &__link {@include vw-pc(padding,0 60); @include vw-pc(font-size,20); @include vw-pc(line-height,38);}
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.sec_kv {
+    .inner_1440 {
+        .pt_kv {
+            position: relative;
+            &__title--box {
+                position: absolute;
+                top: 0;
+                @include vw-pc(left, 194);
+                @include vw-pc(top,  85);
+                z-index: 1;
+            }
+            &__title {
+                @include vw-pc(font-size, 42);
+                @include vw-pc(line-height, 52);
+                letter-spacing: -0.025em;
+            }
+            &__date {
+                @include vw-pc(font-size, 18);
+                @include vw-pc(line-height, 23);
+                padding-top: 18px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .sec_kv {
+        .inner_1440 {
+            .pt_kv {
+                position: relative;
+                &__title--box {
+                    position: absolute;
+                    top: 0;
+                    @include vw-mo(left, 24);
+                    @include vw-mo(top,  88);
+                    z-index: 1;
+                }
+                &__title {
+                    @include vw-mo(font-size, 32);
+                    @include vw-mo(line-height, 44);
+                    letter-spacing: -0.025em;
+                }
+                &__date {
+                    @include vw-mo(font-size, 18);
+                    @include vw-mo(line-height, 23);
+                    padding-top: 18px;
+                }
+            }
+        }
+    }
+}

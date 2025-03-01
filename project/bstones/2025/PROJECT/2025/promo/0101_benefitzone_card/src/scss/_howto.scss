@@ -1,0 +1,95 @@
+.benefitzone_card {
+  .sec_card {
+      .pt_howto {
+            @include vw-pc(width, 1320); @include vw-pc(margin, 60 auto 70); @include vw-pc(padding, 20 0 47 66); @include vw-pc(border-radius, 20); background-color: #EFF6FF; border: 1px solid #EAEAEA;
+
+            &__tit {
+                position: relative; @include vw-pc(margin-bottom, 12); @include vw-pc(font-size, 32); @include vw-pc(line-height, 43); color: #013DDA; letter-spacing: -0.05em; font-weight: 700;
+                &:after {display:inline-block; content: ''; position: relative; @include vw-pc(top, 14); @include vw-pc(right, -10); @include vw-pc(width, 68); @include vw-pc(height, 68); background-image: url('../../is/images/card/howto/bc_howto_deco.png'); background-size: 100%;}
+            }
+            &__step {
+                @include vw-pc(padding-left, 90); @include vw-pc(text-indent, -90); @include vw-pc(font-size, 24); @include vw-pc(line-height, 38); letter-spacing: -0.035em;
+                &:last-child {@include vw-pc(margin-bottom, 27);}
+            }
+            &__sscard {@include vw-pc(font-size, 20); @include vw-pc(line-height, 38); color: #013DDA;}
+            &__st {@include vw-pc(font-size, 24); @include vw-pc(line-height, 38); color: #013DDA;}
+
+            &__npay {@include vw-pc(width, 70);}
+            &__toss {@include vw-pc(width, 70);}
+            &__kb {@include vw-pc(width, 132);}
+            &__woori {@include vw-pc(width, 90);}
+            &__lotte {@include vw-pc(width, 103);}
+            &__nh {@include vw-pc(width, 128);}
+
+            &__example {display: flex; @include vw-pc(gap, 12); @include vw-pc(padding, 27 0 0 187);}
+            &__ex {display: flex; align-items: center; @include vw-pc(height, 27); @include vw-pc(margin-top, 10); @include vw-pc(padding, 0 12); @include vw-pc(font-size, 18); letter-spacing: -0.025em; color: #797979; font-weight: 700; @include vw-pc(border-radius, 16); background-color: #E6E6E6;}
+            &__exwrap {display: flex; @include vw-pc(gap, 54);}
+            &__exitem {
+                position: relative; @include vw-pc(width, 244); @include vw-pc(height, 310); @include vw-pc(padding-top, 209); text-align: center; @include vw-pc(border-radius, 20); background-size: 100%; @include vw-pc(box-shadow, 0 2 16 #00000019);
+                
+                &--step1 {background-image: url('../../is/images/card/howto/bc_howto_ex_step1_pc.png');}
+                &--step2 {background-image: url('../../is/images/card/howto/bc_howto_ex_step2_pc.png');}
+                &--step3 {background-image: url('../../is/images/card/howto/bc_howto_ex_step3_pc.png');}
+                &.next::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, -38); @include vw-pc(width, 18); @include vw-pc(height, 35); background-image: url('../../is/images/card/howto/bc_howto_arrow_pc.png'); background-size: 100%; background-repeat: no-repeat;}
+            }
+            &__tag {display: inline-flex; align-items: center; @include vw-pc(height, 27); @include vw-pc(margin-bottom, 8); @include vw-pc(padding, 0 12); @include vw-pc(font-size, 18); color: #585858; font-weight: 700; @include vw-pc(border-radius, 16); background-color: #DEEDFF;}
+            &__desc { @include vw-pc(font-size, 18); @include vw-pc(line-height, 23);}
+
+            &__disc { 
+                @include vw-pc(margin-top, 38);
+                &--txt{ @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); letter-spacing: -.05em; font-weight: 400; color: #7E7E7E; }
+            }
+
+            .pt_ico {display: inline-block; vertical-align: middle;}          
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone_card {
+        .sec_card {
+            .pt_howto {
+                @include vw-mo(width, 672); @include vw-mo(margin, 60 auto); @include vw-mo(padding, 10 0 42 20); @include vw-mo(border-radius, 20); background-color: #EFF6FF; border: 1px solid #EAEAEA;
+
+                &__tit {
+                    position: relative; @include vw-mo(margin-bottom, 13); @include vw-mo(font-size, 32); @include vw-mo(line-height, 43);
+                    &:after {@include vw-mo(top, 18); @include vw-mo(right, -5); @include vw-mo(width, 60); @include vw-mo(height, 60);}
+                }
+                &__step {
+                    @include vw-mo(padding-left, 90); @include vw-mo(text-indent, -90); @include vw-mo(font-size, 24); @include vw-mo(line-height, 36); letter-spacing: -0.035em;
+                    &:last-child {@include vw-mo(margin-bottom, 27);}
+                }
+                &__sscard {@include vw-mo(font-size, 20); @include vw-mo(line-height, 38); color: #013DDA;}
+                &__st {@include vw-mo(font-size, 24); @include vw-mo(line-height, 38); color: #013DDA;}
+
+                &__npay {@include vw-mo(width, 70);}
+                &__toss {@include vw-mo(width, 70);}
+                &__kb {@include vw-mo(width, 140);}
+                &__woori {@include vw-mo(width, 102);}
+                &__lotte {@include vw-mo(width, 118);}
+                &__nh {@include vw-mo(width, 145);}
+
+                &__example {flex-direction: column; @include vw-mo(gap, 12); @include vw-mo(padding, 38 0 0 0);}
+                &__ex {justify-content: center; @include vw-mo(width, 46); @include vw-mo(height, 25); margin-top: 0; @include vw-mo(font-size, 16); @include vw-mo(border-radius, 13);}
+                &__exwrap {@include vw-mo(gap, 34);}
+                &__exitem {
+                    position: relative; @include vw-mo(width, 188); @include vw-mo(height, 240); @include vw-mo(padding-top, 156); text-align: center; @include vw-mo(border-radius, 20); background-size: 100%; @include vw-mo(box-shadow, 0 2 16 #00000019);
+                    
+                    &--step1 {background-image: url('../../is/images/card/howto/bc_howto_ex_step1_mo.png');}
+                    &--step2 {background-image: url('../../is/images/card/howto/bc_howto_ex_step2_mo.png');}
+                    &--step3 {background-image: url('../../is/images/card/howto/bc_howto_ex_step3_mo.png');}
+                    &.next::after {@include vw-mo(right, -25); @include vw-mo(width, 15); @include vw-mo(height, 28); background-image: url('../../is/images/card/howto/bc_howto_arrow_mo.png');}
+                }
+                &__tag {@include vw-mo(height, 23); @include vw-mo(margin-bottom, 8); @include vw-mo(padding, 0 11); @include vw-mo(font-size, 14); @include vw-mo(border-radius, 12);}
+                &__desc {@include vw-mo(font-size, 16); @include vw-mo(line-height, 20);}
+
+
+                &__disc { 
+                    @include vw-mo(margin-top, 23);
+                    &--txt{ @include vw-mo(font-size, 20); @include vw-mo(line-height, 28); }
+                    &--indent { display: inline-block; @include vw-mo(text-indent, 13);}
+                }
+            }
+        }
+    }
+}

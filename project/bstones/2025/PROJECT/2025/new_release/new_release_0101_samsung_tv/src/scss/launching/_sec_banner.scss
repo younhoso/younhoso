@@ -1,0 +1,110 @@
+.samsung_tv_launching {
+    .sec_banner {
+        @include vw-pc(padding, 76 0 0);
+        .pt_banner{
+            position: relative; @include vw-pc(margin, 0 auto); @include vw-pc(width, 1320); @include vw-pc(height, 315); background: #F4F4F4 no-repeat left top / contain; @include vw-pc(border-radius, 10);
+            &.pt_add-bg {background-image: url('../../../is/images/launching/banner/stv_alram_banner_2405_bg_pc_v1.png');}
+
+            .pt_tit{
+                @include vw-pc(padding-top, 41); @include vw-pc(padding-left, 137);
+                &__eyebrow{ @include vw-pc(font-size, 22); line-height: 1.2; color: #000;}
+                &__main{ @include vw-pc(margin-bottom, 7); @include vw-pc(font-size, 30); line-height: 1.2; color: #000; font-weight: 700; letter-spacing: -0.05em;}
+                &__txt{ @include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 22); line-height: 1.2; color: #000; font-weight: 400; letter-spacing: -0.05em;}
+                &__date{@include vw-pc(font-size, 22); line-height: 1.2; color: #000; font-weight: 700;}
+                .pt_title-box {
+                    &__btn {
+                        @include vw-pc(margin-top, 19); @include vw-max(width, 188); @include vw-max(height, 56); @include vw-max(border-radius, 33); @include vw-max(font-size, 18); letter-spacing: -0.025em;
+
+                        &--disabled { cursor: default; color: #fff!important; background-color: #b2b2b2!important; border-color: #b2b2b2!important; pointer-events: none;}
+                        &--disabled img { filter: invert(0)!important;}
+                    }
+                    &__btn:hover img {filter: invert(100%);}
+                    &__btn img {@include vw-max(width, 15); @include vw-max(margin-right, 4); transition: all 0.3s;}
+                }
+            }
+
+            &_benefit {
+                position: absolute; @include vw-pc(top, 37); @include vw-pc(right, 137); @include vw-pc(border-radius, 8); background-color: #fff;
+
+                &__list {
+                    @include vw-pc(width, 284); height: auto; @include vw-pc(padding, 0 16);
+
+                    &--btn {display: none;}
+
+                    &-item {
+                        position: relative; display: flex; flex-direction: column; justify-content: center; width: 100%;
+                        @include vw-pc(height, 85); @include vw-pc(border-bottom, 1 solid #E6E6E6); @include vw-pc(padding, 0 0 0 79);
+
+                        &_img { @include vw-pc(width, 40); @include vw-pc(height, 40); @include vw-pc(left, 24); position: absolute; top: 50%; transform: translateY(-50%);}
+                        &_txt { @include vw-pc(font-size, 15); font-weight: 700; line-height: 1.2; letter-spacing: -0.05em; color: #000}
+                        &_desc { @include vw-pc(margin-top, 5); @include vw-pc(font-size, 12); font-weight: 700; line-height: 1.2; letter-spacing: -0.05em; color: #666666;}
+
+                        &_bubble {
+                            position: absolute; @include vw-pc(top, -10); @include vw-pc(left, -9); @include vw-pc(padding, 4 10); background-color: #1E81F8;
+                            @include vw-pc(border-radius, 11); @include vw-pc(font-size, 12); font-weight: 700; line-height: 1.2; letter-spacing: -0.05em; color: #fff;
+
+                            &::before {
+                                display: block; content: ""; position: absolute; z-index: 1;
+                                @include vw-pc(bottom, -17); left: 50%; transform: scaleY(-1) translateX(-50%);
+                                @include vw-pc(border-top, 13 solid transparent);
+                                @include vw-pc(border-left, 13 solid transparent);
+                                @include vw-pc(border-right, 13 solid transparent);
+                                @include vw-pc(border-bottom, 13 solid #1E81F8);
+                            }
+
+                            &-txt { position: relative; z-index: 2;}
+                        }
+                        &:last-of-type { border-bottom: 0;}
+                    }
+                }
+            }
+        }
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+        .sec_banner {
+            @include vw-mo(padding, 60 0 0);
+            .pt_banner{
+                @include vw-mo(margin, 0 auto); @include vw-mo(width, 672); height: auto; @include vw-mo(padding, 56 0 60); background-position: center top; @include vw-mo(background-size, 672 1060);
+                &.pt_add-bg {background-image: url('../../../is/images/launching/banner/stv_alram_banner_2405_bg_mo_v1.png');}
+
+                .pt_tit{
+                    padding: 0; width: 100%; height: auto; @include vw-mo(margin-bottom, 316); text-align: center;
+                    &__eyebrow{ @include vw-mo(font-size, 24); @include vw-mo(line-height, 34);}
+                    &__main{ margin-top: 0; @include vw-mo(font-size, 36); line-height: 1.3;}
+                    &__txt{ @include vw-mo(margin-bottom, 8); @include vw-mo(font-size, 24); line-height: 1.3;}
+                    &__date{ @include vw-mo(margin-top, 12);@include vw-mo(font-size, 24); line-height: 1.3;}
+                    .pt_title-box {
+                        &__btn {@include vw-mo(margin-top, 14); @include vw-mo(width, 240); @include vw-mo(height, 64); @include vw-mo(border-radius, 2000); @include vw-mo(font-size, 24);}
+                        &__btn img {@include vw-mo(width, 28); @include vw-mo(margin-right, 6);}
+                    }
+                    &__disc{position: absolute; @include vw-mo(right, 0); @include vw-mo(bottom, 0); @include vw-mo(margin-top, 0); @include vw-mo(font-size, 24); @include vw-mo(line-height, 34);}
+                }
+
+                &_benefit {
+                    position: static; @include vw-mo(top, 37); @include vw-mo(right, 137); @include vw-mo(border-radius, 8); text-align: center; background-color: transparent;
+
+                    &__list {
+                        @include vw-mo(width, 600); height: auto; @include vw-mo(padding, 32 43 18); @include vw-mo(margin, -22 auto 0); background-color: #fff; @include vw-mo(border-radius, 6);
+
+                        &--btn {
+                            display: inline-flex; align-items: center; justify-content: flex-end; @include vw-mo(gap,10); @include vw-mo(width, 385); @include vw-mo(height, 44); @include vw-mo(padding-right, 7); @include vw-mo(border-radius, 23); @include vw-mo(font-size, 24); font-weight: 700; color: #fff; background-color: #1E81F8; letter-spacing: -.05em;
+                            &::after {content: ''; @include vw-mo(width, 32); @include vw-mo(height, 32); background: url('../../../is/images/launching/banner/stv_alram_banner_icon_arrow_mo.png') no-repeat center center / contain;}
+                        }
+
+                        &-item {
+                            @include vw-mo(min-height, 85); height: auto; @include vw-mo(padding, 5 0 5 123); @include vw-mo(border-bottom-width, 1); text-align: left;
+
+                            &_img { @include vw-mo(width, 72); @include vw-mo(height, 72); @include vw-mo(left, 24); position: absolute; top: 50%; transform: translateY(-50%);}
+                            &_txt { @include vw-mo(font-size, 24);}
+                            &_desc { @include vw-mo(margin-top, 4); @include vw-mo(font-size, 20);}
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

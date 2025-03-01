@@ -1,0 +1,5581 @@
+.sec_project_wrap .pt_howto {
+  margin: 0px auto 24px;
+  margin: 0vw auto 3.3333333333vw;
+  padding: 76px 0px 50px;
+  padding: 10.5555555556vw 0vw 6.9444444444vw;
+  width: 624px;
+  width: 86.6666666667vw;
+  background: #F4F4F4;
+  border-radius: 40px;
+  border-radius: 5.5555555556vw;
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content .pt_header__title:after {
+  background-image: url(../../is/images/howto/gf_line_blue.svg);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--samsung .pt_card__title {
+  background-image: url(../../is/images/howto/gf_logo_samsung_mo_v1.png);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--kb .pt_card__title {
+  background-image: url(../../is/images/howto/gf_logo_kb_mo_v1.png);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--lotte .pt_card__title {
+  background-image: url(../../is/images/howto/gf_logo_lotte_mo_v1.png);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_bill__label--npay .pt_img--npay {
+  background-image: url(../../is/images/howto/gf_logo_npay_mo_v1.png);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--dutch .pt_label--check {
+  background-image: url(../../is/images/howto/gf_label_check.svg);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--funding .pt_header__title:after {
+  background-image: url(../../is/images/howto/gf_line_blue_short.svg);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--tradein .pt_header__title:after {
+  background-image: url(../../is/images/howto/gf_line_blue_short.svg);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--tradein .pt_receipt:after {
+  background-image: url(../../is/images/howto/gf_bg_receipt_mo_v1.png);
+}
+.sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--tradein .pt_info__item {
+  background-image: url(../../is/images/howto/gf_ico_check_mo_v1.png);
+}
+.sec_project_wrap .pt_howto .fold_show {
+  display: none !important;
+}
+.sec_project_wrap .pt_howto .m_show.fold_show {
+  display: block !important;
+}
+.sec_project_wrap .pt_howto > .pt_header {
+  margin-bottom: 30px;
+  margin-bottom: 4.1666666667vw;
+  text-align: center;
+}
+.sec_project_wrap .pt_howto > .pt_header .pt_header__title {
+  font-size: 40px;
+  font-size: 5.5555555556vw;
+  font-weight: 700;
+  line-height: 48px;
+  line-height: 6.6666666667vw;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto .pt_tab--howto {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  gap: 1.3888888889vw;
+  margin-bottom: 60px;
+  margin-bottom: 8.3333333333vw;
+  padding: 0px 40px;
+  padding: 0vw 5.5555555556vw;
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+  display: inline-flex;
+  align-items: center;
+  height: 62px;
+  height: 8.6111111111vw;
+  border: solid 2px #ddd;
+  border: solid 2px #ddd;
+  border: solid 0.2777777778vw #ddd;
+  padding: 0px 24px;
+  padding: 0vw 3.3333333333vw;
+  font-size: 28px;
+  font-size: 3.8888888889vw;
+  font-weight: 700;
+  border-radius: 33px;
+  border-radius: 4.5833333333vw;
+  background: #fff;
+}
+.sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+.sec_project_wrap .pt_howto__content {
+  padding: 0px 30px;
+  padding: 0vw 4.1666666667vw;
+}
+.sec_project_wrap .pt_howto__content > .pt_header {
+  margin-bottom: 46px;
+  margin-bottom: 6.3888888889vw;
+  padding-left: 10px;
+  padding-left: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+  display: block;
+  margin-bottom: 16px;
+  margin-bottom: 2.2222222222vw;
+  font-size: 28px;
+  font-size: 3.8888888889vw;
+  line-height: 37px;
+  line-height: 5.1388888889vw;
+  letter-spacing: -0.025em;
+}
+.sec_project_wrap .pt_howto__content > .pt_header .pt_header__title {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-size: 44px;
+  font-size: 6.1111111111vw;
+  font-weight: 700;
+  line-height: 56px;
+  line-height: 7.7777777778vw;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto__content > .pt_header .pt_header__title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+  bottom: -2.9166666667vw;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+.sec_project_wrap .pt_howto__subtit {
+  margin-bottom: 20px;
+  margin-bottom: 2.7777777778vw;
+  font-size: 30px;
+  font-size: 4.1666666667vw;
+  font-weight: 700;
+  line-height: 38px;
+  line-height: 5.2777777778vw;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto__subtit * {
+  letter-spacing: inherit;
+}
+.sec_project_wrap .pt_howto .pt_btn--underline {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  height: 4.1666666667vw;
+  font-size: 22px;
+  font-size: 3.0555555556vw;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  border-bottom: 1px solid #000;
+}
+.sec_project_wrap .pt_howto__discs {
+  margin-top: 29px;
+  margin-top: 4.0277777778vw;
+}
+.sec_project_wrap .pt_howto__disc {
+  padding-left: 18px;
+  padding-left: 2.5vw;
+  color: #757575;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  line-height: 28px;
+  line-height: 3.8888888889vw;
+  letter-spacing: -0.036em;
+  text-indent: -18px;
+  text-indent: -2.5vw;
+}
+.sec_project_wrap .pt_howto__disc--highlight {
+  color: #3895FF;
+  font-weight: 700;
+}
+.sec_project_wrap .pt_howto .pt_slide--card {
+  position: relative;
+  left: -30px;
+  left: -4.1666666667vw;
+  width: 624px;
+  width: 86.6666666667vw;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-container {
+  padding: 0px 30px;
+  padding: 0vw 4.1666666667vw;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+  position: relative;
+  z-index: 1;
+  margin-right: 24px;
+  margin-right: 3.3333333333vw;
+  padding-top: 27px;
+  padding-top: 3.75vw;
+  padding-left: 30px;
+  padding-left: 4.1666666667vw;
+  width: 464px;
+  width: 64.4444444444vw;
+  height: 349px;
+  height: 48.4722222222vw;
+  text-align: left;
+  background: #fff;
+  border-radius: 12px;
+  border-radius: 1.6666666667vw;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-slide:last-child {
+  margin-right: 0;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7px;
+  margin-bottom: 0.9722222222vw;
+  width: 76px;
+  width: 10.5555555556vw;
+  height: 39px;
+  height: 5.4166666667vw;
+  color: #fff;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  background: #3895FF;
+  border-radius: 20px;
+  border-radius: 2.7777777778vw;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title {
+  font-size: 28px;
+  font-size: 3.8888888889vw;
+  line-height: 38px;
+  line-height: 5.2777777778vw;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title .pt_em {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-weight: 700;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title .pt_em:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 15px;
+  height: 2.0833333333vw;
+  background: #3895FF;
+  opacity: 0.2;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .img_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  gap: 3.3333333333vw;
+  margin-top: 46px;
+  margin-top: 6.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-pagination .swiper-pagination-bullet {
+  width: 16px;
+  width: 2.2222222222vw;
+  height: 16px;
+  height: 2.2222222222vw;
+  background: #757575;
+  opacity: 1;
+}
+.sec_project_wrap .pt_howto .pt_slide--card .swiper-pagination .swiper-pagination-bullet-active {
+  background: #000;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  gap: 3.3333333333vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__item {
+  flex: 1;
+  border-radius: 10px;
+  border-radius: 1.3888888889vw;
+  overflow: hidden;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__title {
+  display: block;
+  height: 80px;
+  height: 11.1111111111vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 238px;
+  background-size: 33.0555555556vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+  padding: 30px 0px;
+  padding: 4.1666666667vw 0vw;
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  line-height: 32px;
+  line-height: 4.4444444444vw;
+  letter-spacing: -0.05em;
+  text-align: center;
+  background: #fff;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt .pt_em {
+  font-weight: 700;
+  letter-spacing: inherit;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card .pt_card__item--samsung .pt_card__title {
+  background-color: #3895FF;
+  background-size: 312px;
+  background-size: 43.3333333333vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card .pt_card__item--kb .pt_card__title {
+  background-color: #F0C758;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card .pt_card__item--lotte .pt_card__title {
+  background-color: #731C1D;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 .pt_card__txt {
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_btn--underline {
+  margin-top: 22px;
+  margin-top: 3.0555555556vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+  margin-top: 50px;
+  margin-top: 6.9444444444vw;
+  padding: 36px 30px 40px;
+  padding: 5vw 4.1666666667vw 5.5555555556vw;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  border-radius: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+  margin-bottom: 16px;
+  margin-bottom: 2.2222222222vw;
+  font-size: 30px;
+  font-size: 4.1666666667vw;
+  line-height: 38px;
+  line-height: 5.2777777778vw;
+  text-align: left;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dl {
+  text-align: left;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__item {
+  display: flex;
+  justify-content: space-between;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dt, .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  line-height: 32px;
+  line-height: 4.4444444444vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+  font-weight: 700;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__price {
+  font-size: 28px;
+  font-size: 3.8888888889vw;
+  line-height: 35px;
+  line-height: 4.8611111111vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__disc {
+  margin-top: 8px;
+  margin-top: 1.1111111111vw;
+  color: #757575;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  line-height: 26px;
+  line-height: 3.6111111111vw;
+  letter-spacing: -0.025em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__origin {
+  padding-bottom: 20px;
+  padding-bottom: 2.7777777778vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf {
+  padding: 16px 0px 20px;
+  padding: 2.2222222222vw 0vw 2.7777777778vw;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-width: 4px;
+  border-width: 0.5555555556vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item {
+  margin-top: 25px;
+  margin-top: 3.4722222222vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item:first-child {
+  margin-top: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item--final {
+  margin-top: 25px;
+  margin-top: 3.4722222222vw;
+  padding-top: 18px;
+  padding-top: 2.5vw;
+  border-top: 1px solid #DDD;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+  padding-top: 19px;
+  padding-top: 2.6388888889vw;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  line-height: 26px;
+  line-height: 3.6111111111vw;
+  letter-spacing: -0.025em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__item {
+  align-items: center;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_em {
+  display: block;
+  margin: 5px 0px;
+  margin: 0.6944444444vw 0vw;
+  font-size: 28px;
+  font-size: 3.8888888889vw;
+  font-weight: 700;
+  line-height: 38px;
+  line-height: 5.2777777778vw;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dt {
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  line-height: 26px;
+  line-height: 3.6111111111vw;
+  letter-spacing: -0.025em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dd {
+  color: #3895FF;
+  font-size: 28px;
+  font-size: 3.8888888889vw;
+  font-weight: 700;
+  line-height: 38px;
+  line-height: 5.2777777778vw;
+  letter-spacing: -0.025em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__price {
+  font-size: 44px;
+  font-size: 6.1111111111vw;
+  font-weight: 700;
+  line-height: 55px;
+  line-height: 7.6388888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-top: 4.1666666667vw;
+  height: 48px;
+  height: 6.6666666667vw;
+  padding: 0px 10px;
+  padding: 0vw 1.3888888889vw;
+  color: #fff;
+  font-size: 22px;
+  font-size: 3.0555555556vw;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  background: linear-gradient(90deg, #2E8EFA 0, #00D070 100%);
+  border-radius: 10px;
+  border-radius: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+  position: relative;
+  top: -2px;
+  top: -0.2777777778vw;
+  display: inline-block;
+  margin: 0px 10px;
+  margin: 0vw 1.3888888889vw;
+  width: 75px;
+  width: 10.4166666667vw;
+  height: 26px;
+  height: 3.6111111111vw;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch > .pt_header .pt_header__title:after {
+  bottom: -23px;
+  bottom: -3.1944444444vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__section {
+  margin-bottom: 46px;
+  margin-bottom: 6.3888888889vw;
+  text-align: center;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__section:last-child {
+  margin-bottom: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__subtit {
+  text-align: left;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card {
+  text-align: left;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__item {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  margin-bottom: 1.3888888889vw;
+  padding: 30px 0px 30px 218px;
+  padding: 4.1666666667vw 0vw 4.1666666667vw 30.2777777778vw;
+  background: #fff;
+  border-radius: 10px;
+  border-radius: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__item:last-child {
+  margin-bottom: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt {
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  line-height: 26px;
+  line-height: 3.6111111111vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+  display: block;
+  margin-top: 5px;
+  margin-top: 0.6944444444vw;
+  margin-bottom: 10px;
+  margin-bottom: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em {
+  color: #3895FF;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+  margin-left: 10px;
+  margin-left: 1.3888888889vw;
+  font-size: 30px;
+  font-size: 4.1666666667vw;
+  line-height: 38px;
+  line-height: 5.2777777778vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .img_box {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  left: 4.1666666667vw;
+  z-index: -1;
+  width: 148px;
+  width: 20.5555555556vw;
+  transform: translateY(-50%);
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 10px 0px 29px;
+  padding: 0vw 1.3888888889vw 0vw 4.0277777778vw;
+  height: 36px;
+  height: 5vw;
+  color: #fff;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  background-color: #3895FF;
+  background-repeat: no-repeat;
+  background-position: left 8px center;
+  background-position: left 1.1111111111vw center;
+  background-size: 17px;
+  background-size: 2.3611111111vw;
+  border-radius: 10px;
+  border-radius: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bottom {
+  margin-top: 28px;
+  margin-top: 3.8888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+  margin-top: 27px;
+  margin-top: 3.75vw;
+  margin-bottom: 22px;
+  margin-bottom: 3.0555555556vw;
+  font-size: 30px;
+  font-size: 4.1666666667vw;
+  font-weight: 700;
+  line-height: 40px;
+  line-height: 5.5555555556vw;
+  letter-spacing: -0.05em;
+  text-align: center;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt .pt_em {
+  display: inline-block;
+  color: #3895FF;
+  font-size: 44px;
+  font-size: 6.1111111111vw;
+  font-weight: 700;
+  line-height: 58px;
+  line-height: 8.0555555556vw;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+  background-image: url(../../is/images/howto/gf_funding_bar_mo_v2.png);
+  background-size: 450px 10px;
+  background-size: 62.5vw 1.3888888889vw;
+  width: 450px;
+  width: 62.5vw;
+  height: 10px;
+  height: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+  background-image: url(../../is/images/howto/gf_funding_gift_mo_v2.png);
+  background-size: 52px 52px;
+  background-size: 7.2222222222vw 7.2222222222vw;
+  width: 52px;
+  width: 7.2222222222vw;
+  height: 52px;
+  height: 7.2222222222vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+  background-image: url(../../is/images/howto/gf_funding_friend1_mo_v2.png);
+  background-size: 34px 43px;
+  background-size: 4.7222222222vw 5.9722222222vw;
+  width: 34px;
+  width: 4.7222222222vw;
+  height: 43px;
+  height: 5.9722222222vw;
+  transform: translateY(-50%);
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+  background-image: url(../../is/images/howto/gf_funding_friend2_mo_v2.png);
+  background-size: 35px 51px;
+  background-size: 4.8611111111vw 7.0833333333vw;
+  width: 35px;
+  width: 4.8611111111vw;
+  height: 51px;
+  height: 7.0833333333vw;
+  transform: translateY(-50%);
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+  background-image: url(../../is/images/howto/gf_funding_friend3_mo_v2.png);
+  background-size: 36px 43px;
+  background-size: 5vw 5.9722222222vw;
+  width: 36px;
+  width: 5vw;
+  height: 43px;
+  height: 5.9722222222vw;
+  transform: translateY(-50%);
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding > .pt_header .pt_header__title:after {
+  bottom: -23px;
+  bottom: -3.1944444444vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__section {
+  margin-bottom: 46px;
+  margin-bottom: 6.3888888889vw;
+  text-align: center;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__section:last-child {
+  margin-bottom: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__section.pt_white_bg {
+  background: #fff;
+  border-radius: 10px;
+  border-radius: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit {
+  text-align: left;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+  text-align: center;
+  font-size: 30px;
+  font-size: 4.1666666667vw;
+  font-weight: 700;
+  line-height: 38px;
+  line-height: 5.2777777778vw;
+  padding-top: 39px;
+  padding-top: 5.4166666667vw;
+  margin-bottom: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img {
+  margin: 0 auto;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+  width: 180px;
+  width: 25vw;
+  margin-bottom: 20px;
+  margin-bottom: 2.7777777778vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+  width: 110px;
+  width: 15.2777777778vw;
+  margin-bottom: 20px;
+  margin-bottom: 2.7777777778vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding {
+  position: relative;
+  padding: 30px 30px 40px;
+  padding: 4.1666666667vw 4.1666666667vw 5.5555555556vw;
+  text-align: center; /*background: #fff; @include vw-mo(border-radius,10);*/
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+  position: absolute;
+  text-align: right;
+  top: 220px;
+  top: 30.5555555556vw;
+  right: 30px;
+  right: 4.1666666667vw;
+  font-size: 22px;
+  font-size: 3.0555555556vw;
+  line-height: 32px;
+  line-height: 4.4444444444vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dl {
+  text-align: left;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dt, .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  line-height: 32px;
+  line-height: 4.4444444444vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+  font-weight: 700;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__price {
+  font-size: 28px;
+  font-size: 3.8888888889vw;
+  line-height: 35px;
+  line-height: 4.8611111111vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-width: 4px;
+  border-width: 0.5555555556vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item {
+  border-top: 1px solid #DDD;
+  padding: 18px 0px 18px 51px;
+  padding: 2.5vw 0vw 2.5vw 7.0833333333vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item:first-child {
+  border-top: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+  position: relative;
+  padding-top: 83px;
+  padding-top: 11.5277777778vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--bar {
+  position: absolute;
+  top: 40px;
+  top: 5.5555555556vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--gift {
+  display: inline-block;
+  position: static;
+  transform: translateY(-3px);
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-right: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dt {
+  text-align: center;
+  font-size: 30px;
+  font-size: 4.1666666667vw;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-bottom: 1.6666666667vw;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dd {
+  position: relative;
+  text-align: center;
+  font-size: 44px;
+  font-size: 6.1111111111vw;
+  font-weight: 700;
+  color: #3895FF;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__discs {
+  margin-top: 43px;
+  margin-top: 5.9722222222vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein > .pt_header .pt_header__title:after {
+  left: auto;
+  right: 0;
+  bottom: -23px;
+  bottom: -3.1944444444vw;
+  width: 232px;
+  width: 32.2222222222vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item {
+  position: relative;
+  padding-bottom: 50px;
+  padding-bottom: 6.9444444444vw;
+  padding-left: 112px;
+  padding-left: 15.5555555556vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  left: 6.9444444444vw;
+  width: 1px;
+  height: 100%;
+  background: #3895FF;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:last-child {
+  padding-bottom: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:last-child:after {
+  display: none;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__title {
+  margin-left: -112px;
+  margin-left: -15.5555555556vw;
+  margin-bottom: 10px;
+  margin-bottom: 1.3888888889vw;
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-right: 1.3888888889vw;
+  padding: 0px 20px;
+  padding: 0vw 2.7777777778vw;
+  height: 50px;
+  height: 6.9444444444vw;
+  color: #fff;
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  background: #3895FF;
+  border-radius: 25px;
+  border-radius: 3.4722222222vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+  position: relative;
+  margin-bottom: 30px;
+  margin-bottom: 4.1666666667vw;
+  padding: 27px 30px 40px;
+  padding: 3.75vw 4.1666666667vw 5.5555555556vw;
+  background: #fff;
+  border-radius: 12px 12px 0px 0px;
+  border-radius: 1.6666666667vw 1.6666666667vw 0vw 0vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  bottom: -1.3888888889vw;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 10px;
+  height: 1.3888888889vw;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+  margin-bottom: 17px;
+  margin-bottom: 2.3611111111vw;
+  padding-bottom: 20px;
+  padding-bottom: 2.7777777778vw;
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  font-weight: 700;
+  line-height: 32px;
+  line-height: 4.4444444444vw;
+  letter-spacing: -0.05em;
+  border-bottom: 1px solid #ddd;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+  position: relative;
+  margin-top: 27px;
+  margin-top: 3.75vw;
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  font-weight: 700;
+  line-height: 31px;
+  line-height: 4.3055555556vw;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item:first-child {
+  margin-top: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__price {
+  display: inline-block;
+  width: 90px;
+  width: 12.5vw;
+  text-align: right;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__discs {
+  margin-top: 9px;
+  margin-top: 1.25vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+  padding-left: 18px;
+  padding-left: 2.5vw;
+  color: #757575;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  line-height: 26px;
+  line-height: 3.6111111111vw;
+  letter-spacing: -0.025em;
+  text-indent: -18px;
+  text-indent: -2.5vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+  margin-top: 19px;
+  margin-top: 2.6388888889vw;
+  padding-top: 19px;
+  padding-top: 2.6388888889vw;
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  font-weight: 700;
+  line-height: 32px;
+  line-height: 4.4444444444vw;
+  letter-spacing: -0.05em;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_small {
+  display: block;
+  margin-bottom: 3px;
+  margin-bottom: 0.4166666667vw;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  line-height: 26px;
+  line-height: 3.6111111111vw;
+  letter-spacing: -0.05em;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus {
+  position: relative;
+  display: block;
+  margin-bottom: 50px;
+  margin-bottom: 6.9444444444vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+  content: "+";
+  position: absolute;
+  bottom: -40px;
+  bottom: -5.5555555556vw;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  width: 3.8888888889vw;
+  height: 28px;
+  height: 3.8888888889vw;
+  color: #fff;
+  font-size: 22px;
+  font-size: 3.0555555556vw;
+  font-weight: 700;
+  background: #000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus .en {
+  font-size: 44px;
+  font-size: 6.1111111111vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt .pt_receipt__item--origin {
+  color: #aaa;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt .pt_receipt__item--dotcom .pt_receipt__discs {
+  text-align: right;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info {
+  padding: 30px 0px 30px 30px;
+  padding: 4.1666666667vw 0vw 4.1666666667vw 4.1666666667vw;
+  background: #fff;
+  border-radius: 12px;
+  border-radius: 1.6666666667vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+  margin-bottom: 2.3611111111vw;
+  padding: 0px 10px;
+  padding: 0vw 1.3888888889vw;
+  height: 36px;
+  height: 5vw;
+  color: #fff;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  background: #3895FF;
+  border-radius: 10px;
+  border-radius: 1.3888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+  margin-bottom: 17px;
+  margin-bottom: 2.3611111111vw;
+  padding-left: 36px;
+  padding-left: 5vw;
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  font-weight: 700;
+  line-height: 32px;
+  line-height: 4.4444444444vw;
+  letter-spacing: -0.05em;
+  background-repeat: no-repeat;
+  background-position: left top 3px;
+  background-position: left top 0.4166666667vw;
+  background-size: 28px;
+  background-size: 3.8888888889vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item:last-child {
+  margin-bottom: 0;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list {
+  margin-top: 16px;
+  margin-top: 2.2222222222vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+  padding-left: 27px;
+  padding-left: 3.75vw;
+  font-size: 24px;
+  font-size: 3.3333333333vw;
+  line-height: 38px;
+  line-height: 5.2777777778vw;
+  letter-spacing: -0.05em;
+  text-indent: -27px;
+  text-indent: -3.75vw;
+}
+.sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+  color: #3895FF;
+  font-size: 20px;
+  font-size: 2.7777777778vw;
+  font-weight: 700;
+  line-height: 28px;
+  line-height: 3.8888888889vw;
+  letter-spacing: -0.05em;
+}
+
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto {
+    margin-bottom: 24px;
+    padding: 48px 70px;
+    width: 1264px;
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto {
+    margin-bottom: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto {
+    padding: 3.3333333333vw 4.8611111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto {
+    width: 87.7777777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto {
+    border-radius: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--samsung .pt_card__title {
+    background-image: url(../../is/images/howto/gf_logo_samsung_pc_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--kb .pt_card__title {
+    background-image: url(../../is/images/howto/gf_logo_kb_pc_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--lotte .pt_card__title {
+    background-image: url(../../is/images/howto/gf_logo_lotte_pc_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_bill__label--npay .pt_img--npay {
+    background-image: url(../../is/images/howto/gf_logo_npay_pc_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--dutch > .pt_header .pt_header__title:after {
+    background-image: url(../../is/images/howto/gf_line_blue_long.svg);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--tradein .pt_header__title:after {
+    background-image: url(../../is/images/howto/gf_line_blue_long.svg);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--tradein .pt_receipt:after {
+    background-image: url(../../is/images/howto/gf_bg_receipt_pc_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--tradein .pt_info__item {
+    background-image: url(../../is/images/howto/gf_ico_check_pc_v1.png);
+  }
+  .sec_project_wrap .pt_howto .m_show.fold_show {
+    display: none !important;
+  }
+  .sec_project_wrap .pt_howto > .pt_header {
+    margin-bottom: 23px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto > .pt_header {
+    margin-bottom: 1.5972222222vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto > .pt_header .pt_header__title {
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -0.025em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto > .pt_header .pt_header__title {
+    font-size: 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto > .pt_header .pt_header__title {
+    line-height: 2.0138888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto {
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto {
+    gap: 0.5555555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto {
+    margin-bottom: 2.7777777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    height: 38px;
+    border: solid 1px #ddd;
+    padding: 0px 14px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 33px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    height: 2.6388888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    padding: 0vw 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    border-radius: 2.2916666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto__content {
+    padding: 0;
+  }
+  .sec_project_wrap .pt_howto__content > .pt_header {
+    margin-bottom: 36px;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__content > .pt_header {
+    margin-bottom: 2.5vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+    margin-bottom: 0.2777777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+    line-height: 1.4583333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__title {
+    display: inline-block;
+    font-size: 28px;
+    line-height: 37px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__title {
+    font-size: 1.9444444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__title {
+    line-height: 2.5694444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__title:after {
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__title:after {
+    bottom: -0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto__subtit {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__subtit {
+    margin-bottom: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__subtit {
+    font-size: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__subtit {
+    line-height: 1.8055555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_btn--underline {
+    height: 20px;
+    font-size: 14px;
+    letter-spacing: 0;
+    border-width: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_btn--underline {
+    height: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_btn--underline {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_btn--underline {
+    border-width: 0.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto__discs {
+    margin-top: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__discs {
+    margin-top: 1.1805555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto__disc {
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    text-indent: -10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__disc {
+    padding-left: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__disc {
+    font-size: 0.8333333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__disc {
+    line-height: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto__disc {
+    text-indent: -0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_slide--card {
+    position: static;
+    width: 100%;
+  }
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-container {
+    padding: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-wrapper {
+    gap: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    padding-top: 0;
+    padding-left: 40px;
+    width: 100%;
+    height: 148px;
+    border-radius: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    padding-left: 2.7777777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    height: 10.2777777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    border-radius: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    margin-bottom: 7px;
+    width: 55px;
+    height: 22px;
+    font-size: 14px;
+    border-radius: 11px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    margin-bottom: 0.4861111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    width: 3.8194444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    height: 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    border-radius: 0.7638888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title {
+    line-height: 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title .pt_em:after {
+    height: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title .pt_em:after {
+    height: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .img_box {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 30px;
+    width: 200px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .img_box {
+    right: 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .img_box {
+    width: 13.8888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-pagination {
+    display: none;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--card > .pt_header .pt_header__title:after {
+    bottom: -20px;
+    width: 100%;
+    height: 100%;
+    background-position: center bottom;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card > .pt_header .pt_header__title:after {
+    bottom: -1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_flex {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_flex__left {
+    width: 722px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_flex__left {
+    width: 50.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card {
+    gap: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__list {
+    display: flex;
+    gap: 24px;
+    width: 342px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__list {
+    gap: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__list {
+    width: 23.75vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__item {
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__item {
+    border-radius: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__title {
+    height: 50px;
+    background-size: 126px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__title {
+    height: 3.4722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__title {
+    background-size: 8.75vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+    padding: 20px 0px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+    padding: 1.3888888889vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+    line-height: 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt .pt_em {
+    display: block;
+    margin-top: 0;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 {
+    width: 22.2222222222vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 .pt_card__txt {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 .pt_card__txt {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card .pt_card__item--samsung .pt_card__title {
+    background-size: 120px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card .pt_card__item--samsung .pt_card__title {
+    background-size: 8.3333333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_card--flip .pt_card__title {
+    height: 72px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_card--flip .pt_card__title {
+    height: 5vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_card--flip .pt_card__txt {
+    padding: 45px 0px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_card--flip .pt_card__txt {
+    padding: 3.125vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_btn--underline {
+    margin-top: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_btn--underline {
+    margin-top: 1.1805555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+    position: relative;
+    margin-top: 0;
+    padding: 28px 30px;
+    width: 360px;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+    padding: 1.9444444444vw 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+    width: 25vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+    border-radius: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+    margin-bottom: 0.2083333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+    line-height: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dt, .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dt, .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dt, .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    line-height: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    font-size: 0.8333333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    line-height: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__price {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__price {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__price {
+    line-height: 1.1805555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__disc {
+    display: inline-block;
+    margin-top: 0;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.05em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__disc {
+    font-size: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__disc {
+    line-height: 0.9027777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__origin {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__origin {
+    padding-bottom: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf {
+    padding: 15px 0px;
+    border-width: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf {
+    padding: 1.0416666667vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf {
+    border-width: 0.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item {
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item {
+    margin-top: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item--final {
+    margin-top: 16px;
+    padding-top: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item--final {
+    margin-top: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item--final {
+    padding-top: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+    padding-top: 9px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.05em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+    padding-top: 0.625vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+    font-size: 0.8333333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+    line-height: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__item {
+    align-items: center;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_em {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_em {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_em {
+    line-height: 1.4583333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dt {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.05em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dt {
+    font-size: 0.8333333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dt {
+    line-height: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dd {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dd {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dd {
+    line-height: 1.5972222222vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__price {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__price {
+    font-size: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__price {
+    line-height: 1.7361111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    height: 43px;
+    padding: 0px;
+    font-size: 14px;
+    letter-spacing: -0.025em;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    margin-top: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    height: 2.9861111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    padding: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    border-radius: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    top: -1px;
+    margin: 0px 5px;
+    width: 49px;
+    height: 17px;
+    vertical-align: top;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    top: -0.0694444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    margin: 0vw 0.3472222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    width: 3.4027777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    height: 1.1805555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_howto__discs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 722px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_howto__discs {
+    width: 50.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch > .pt_header .pt_header__title:after {
+    bottom: -20px;
+    width: 100%;
+    height: 100%;
+    background-position: center bottom;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch > .pt_header .pt_header__title:after {
+    bottom: -1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_flex {
+    display: flex;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_flex {
+    gap: 2.7777777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__section {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__subtit {
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__subtit {
+    line-height: 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card {
+    display: flex;
+    justify-content: center;
+    padding: 49px 0px 41px;
+    background: #fff;
+    border-radius: 16px 16px 0px 0px;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card {
+    padding: 3.4027777778vw 0vw 2.8472222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card {
+    border-radius: 1.1111111111vw 1.1111111111vw 0vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__item {
+    margin-bottom: 38px;
+    padding: 0px 0px 0px 126px;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__item {
+    margin-bottom: 2.6388888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__item {
+    padding: 0vw 0vw 0vw 8.75vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt {
+    line-height: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    margin-top: 1px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    margin-top: 0.0694444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    margin-bottom: 0.2777777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    line-height: 1.4583333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em {
+    line-height: 1.5972222222vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+    margin-left: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+    font-size: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+    line-height: 1.7361111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .img_box {
+    left: 0;
+    width: 84px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .img_box {
+    width: 5.8333333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    padding: 0px 6px 0px 22px;
+    height: 25px;
+    font-size: 14px;
+    background-position: left 5px center;
+    background-size: 15px;
+    border-radius: 8px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    padding: 0vw 0.4166666667vw 0vw 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    height: 1.7361111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    background-position: left 0.3472222222vw center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    background-size: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    border-radius: 0.5555555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bottom {
+    margin-top: 0;
+    padding-bottom: 43px;
+    background: #fff;
+    border-radius: 0px 0px 16px 16px;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bottom {
+    padding-bottom: 2.9861111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bottom {
+    border-radius: 0vw 0vw 1.1111111111vw 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    margin-bottom: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    font-size: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    line-height: 1.8055555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt .pt_em {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+    background-image: url(../../is/images/howto/gf_funding_bar_pc.png);
+    background-size: 240px 8px;
+    width: 240px;
+    height: 8px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+    background-size: 16.6666666667vw 0.5555555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+    width: 16.6666666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+    height: 0.5555555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+    background-image: url(../../is/images/howto/gf_funding_gift_pc_v2.png);
+    background-size: 22px 22px;
+    width: 22px;
+    height: 22px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+    background-size: 1.5277777778vw 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+    width: 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+    height: 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+    background-image: url(../../is/images/howto/gf_funding_friend1_pc_v2.png);
+    background-size: 34px 34px;
+    width: 34px;
+    height: 34px;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+    background-size: 2.3611111111vw 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+    width: 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+    height: 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+    background-image: url(../../is/images/howto/gf_funding_friend2_pc_v2.png);
+    background-size: 34px 34px;
+    width: 34px;
+    height: 34px;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+    background-size: 2.3611111111vw 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+    width: 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+    height: 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+    background-image: url(../../is/images/howto/gf_funding_friend3_pc_v2.png);
+    background-size: 34px 34px;
+    width: 34px;
+    height: 34px;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+    background-size: 2.3611111111vw 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+    width: 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+    height: 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding > .pt_header .pt_header__title:after {
+    bottom: -15px;
+    width: 100%;
+    height: 100%;
+    background-position: center bottom;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding > .pt_header .pt_header__title:after {
+    bottom: -1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_flex {
+    display: flex;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_flex {
+    gap: 2.7777777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__section {
+    flex: 1;
+    margin: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__section.pt_white_bg {
+    background: transparent;
+    border-radius: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit {
+    text-align: left;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+    text-align: left;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    padding-top: 0;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+    font-size: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+    line-height: 1.8055555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+    margin-bottom: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img {
+    margin: 0 auto;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    width: 109px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    width: 7.5694444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    margin-bottom: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    width: 67px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    width: 4.6527777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    margin-bottom: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding {
+    position: relative;
+    margin-top: 0;
+    padding: 152px 30px 30px;
+    width: 542px;
+    border-radius: 16px;
+    background: #fff;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding {
+    padding: 10.5555555556vw 2.0833333333vw 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding {
+    width: 37.6388888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding {
+    border-radius: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    text-align: right;
+    top: 295px;
+    right: 30px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    top: 20.4861111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    right: 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    line-height: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox .en {
+    padding-left: 3px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox .en {
+    padding-left: 0.2083333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__title {
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__title {
+    margin-bottom: 0.2083333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__title {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__title {
+    line-height: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dt, .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dt, .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dt, .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    line-height: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    font-size: 0.8333333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    line-height: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__price {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__price {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__price {
+    line-height: 1.1805555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf {
+    padding: 0px;
+    border-width: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf {
+    padding: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf {
+    border-width: 0.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item {
+    margin-top: 0px;
+    padding: 15px 0px 15px 40px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item {
+    margin-top: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item {
+    padding: 1.0416666667vw 0vw 1.0416666667vw 2.7777777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item--final {
+    margin-top: 16px;
+    padding-top: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item--final {
+    margin-top: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item--final {
+    padding-top: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__list {
+    display: flex !important;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-top: 16px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__list {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__list {
+    padding-top: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__list dt {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__list dt {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__list .pt_funding__price {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__list .pt_funding__price {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 24px;
+    width: 288px;
+    height: 95px;
+    border-radius: 10px;
+    border: solid 1px #ddd;
+    background-color: #fff;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+    top: 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+    padding: 1.0416666667vw 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+    height: 6.5972222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+    border-radius: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--bar {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--bar {
+    top: 2.7777777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--gift {
+    display: inline-block;
+    position: static;
+    transform: translateY(-1px);
+    vertical-align: middle;
+    margin-right: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--gift {
+    margin-right: 0.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dt {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: -0.05em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dt {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dt {
+    margin-bottom: 1.7361111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dd {
+    position: relative;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3895FF;
+    letter-spacing: -0.05em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dd {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success:after {
+    content: "";
+    position: absolute;
+    background-image: url(../../is/images/howto/gf_funding_dot_pc_v2.png);
+    background-size: 3px 17px;
+    width: 3px;
+    height: 17px;
+    top: 101px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success:after {
+    background-size: 0.2083333333vw 1.1805555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success:after {
+    width: 0.2083333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success:after {
+    height: 1.1805555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success:after {
+    top: 7.0138888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_slide--card {
+    left: -31px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_slide--card {
+    left: -2.1527777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_slide--card .swiper-slide {
+    height: 168px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_slide--card .swiper-slide {
+    height: 11.6666666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__discs {
+    margin-top: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__discs {
+    margin-top: 1.1805555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein > .pt_header .pt_header__title:after {
+    left: 50%;
+    bottom: -23px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein > .pt_header .pt_header__title:after {
+    bottom: -1.5972222222vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 66px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period {
+    padding-top: 4.5833333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__flex {
+    display: flex;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__flex {
+    gap: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item {
+    z-index: 1;
+    padding: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    top: -54px;
+    left: 160px;
+    z-index: -1;
+    width: 854px;
+    height: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    top: -3.75vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    left: 11.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    width: 59.3055555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    height: 0.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item.pt_period__item--left .pt_period__title {
+    padding-right: 362px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item.pt_period__item--left .pt_period__title {
+    padding-right: 25.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__title {
+    position: absolute;
+    top: -66px;
+    left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__title {
+    top: -4.5833333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__title {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    display: inline-flex;
+    margin-right: 0;
+    margin-bottom: 7px;
+    padding: 0px 8px;
+    height: 25px;
+    font-size: 14px;
+    border-radius: 13px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    margin-bottom: 0.4861111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    padding: 0vw 0.5555555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    height: 1.7361111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    border-radius: 0.9027777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    margin-bottom: 8px;
+    padding: 27px 30px 30px;
+    width: 351px;
+    border-radius: 15px 15px 0px 0px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    margin-bottom: 0.5555555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    padding: 1.875vw 2.0833333333vw 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    width: 24.375vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    border-radius: 1.0416666667vw 1.0416666667vw 0vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt:after {
+    bottom: -8px;
+    height: 8px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt:after {
+    bottom: -0.5555555556vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt:after {
+    height: 0.5555555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    margin-bottom: 15px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    margin-bottom: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    padding-bottom: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    line-height: 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+    margin-top: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+    line-height: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__price {
+    width: 56px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__price {
+    width: 3.8888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__discs {
+    margin-top: 3px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__discs {
+    margin-top: 0.2083333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    padding-left: 10px;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.05em;
+    text-indent: -10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    padding-left: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    font-size: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    line-height: 0.9027777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    text-indent: -0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    margin-top: 16px;
+    padding-top: 15px;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.025em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    margin-top: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    padding-top: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    line-height: 1.4583333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_small {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.025em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_small {
+    font-size: 0.8333333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_small {
+    line-height: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus {
+    position: relative;
+    display: block;
+    margin-bottom: 26px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus {
+    margin-bottom: 1.8055555556vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    bottom: -21px;
+    width: 15px;
+    height: 15px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    bottom: -1.4583333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    width: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    height: 1.0416666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus .en {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus .en {
+    font-size: 1.3888888889vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-left: 30px;
+    background: #fff;
+    border-radius: 12px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info {
+    padding-left: 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info {
+    border-radius: 0.8333333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info--1month {
+    width: 346px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info--1month {
+    width: 24.0277777778vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info--12month {
+    width: 351px;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info--12month {
+    width: 24.375vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    margin-bottom: 19px;
+    padding: 0px 10px;
+    height: 33px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    margin-bottom: 1.3194444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    padding: 0vw 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    height: 2.2916666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    border-radius: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    margin-bottom: 10px;
+    padding-left: 27px;
+    font-size: 18px;
+    line-height: 24px;
+    background-position: left top 2px;
+    background-size: 21px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    margin-bottom: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    padding-left: 1.875vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    line-height: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    background-position: left top 0.1388888889vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    background-size: 1.4583333333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list {
+    margin-top: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list {
+    margin-top: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    padding-left: 19px;
+    font-size: 16px;
+    line-height: 22px;
+    text-indent: -19px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    padding-left: 1.3194444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    line-height: 1.5277777778vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    text-indent: -1.3194444444vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+    margin-top: 0.6944444444vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+    line-height: 1.4583333333vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto {
+    margin-bottom: 16px;
+    padding: 40px 24px;
+    width: 754px;
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto {
+    margin-bottom: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto {
+    padding: 4.9875311721vw 2.9925187032vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto {
+    width: 94.0149625935vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto {
+    border-radius: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--samsung .pt_card__title {
+    background-image: url(../../is/images/howto/gf_logo_samsung_mo_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--kb .pt_card__title {
+    background-image: url(../../is/images/howto/gf_logo_kb_mo_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_card__item--lotte .pt_card__title {
+    background-image: url(../../is/images/howto/gf_logo_lotte_mo_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_bill__label--npay .pt_img--npay {
+    background-image: url(../../is/images/howto/gf_logo_npay_mo_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--dutch > .pt_header .pt_header__title:after {
+    background-image: url(../../is/images/howto/gf_line_blue_long.svg);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--tradein .pt_receipt:after {
+    background-image: url(../../is/images/howto/gf_bg_receipt_mo_v1.png);
+  }
+  .sec_project_wrap .pt_howto.pt_bg-image.pt_add-bg .pt_howto__content--tradein .pt_info__item {
+    background-image: url(../../is/images/howto/gf_ico_check_mo_v1.png);
+  }
+  .sec_project_wrap .pt_howto .fold_show {
+    display: block !important;
+  }
+  .sec_project_wrap .pt_howto .fold_hide {
+    display: none !important;
+  }
+  .sec_project_wrap .pt_howto .m_show.fold_show {
+    display: block !important;
+  }
+  .sec_project_wrap .pt_howto > .pt_header {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto > .pt_header {
+    margin-bottom: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto > .pt_header .pt_header__title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto > .pt_header .pt_header__title {
+    font-size: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto > .pt_header .pt_header__title {
+    line-height: 2.8678304239vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto {
+    gap: 8px;
+    margin-bottom: 29px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto {
+    gap: 0.9975062344vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto {
+    margin-bottom: 3.6159600998vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    height: 33px;
+    padding: 0px 12px;
+    font-size: 14px;
+    border-radius: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    height: 4.114713217vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    padding: 0vw 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_tab--howto .pt_tab__btn {
+    border-radius: 2.1197007481vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header {
+    margin-bottom: 36px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header {
+    margin-bottom: 4.4887780549vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+    margin-bottom: 1px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+    margin-bottom: 0.1246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+    font-size: 1.6209476309vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__eyebrow {
+    line-height: 2.1197007481vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__title {
+    font-size: 2.9925187032vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__content > .pt_header .pt_header__title {
+    line-height: 3.9900249377vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__subtit {
+    margin-bottom: 11px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__subtit {
+    margin-bottom: 1.3715710723vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__subtit {
+    font-size: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__subtit {
+    line-height: 2.6184538653vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_btn--underline {
+    height: 16px;
+    font-size: 12px;
+    border-width: 1px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_btn--underline {
+    height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_btn--underline {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__discs {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__discs {
+    margin-top: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__disc {
+    padding-left: 10px;
+    font-size: 10px;
+    line-height: 16px;
+    text-indent: -10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__disc {
+    padding-left: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__disc {
+    font-size: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__disc {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto__disc {
+    text-indent: -1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-wrapper {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-wrapper {
+    gap: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 225px;
+    height: 207px;
+    border-radius: 12px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    padding-top: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    padding-left: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    width: 28.0548628429vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    height: 25.8104738155vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide {
+    border-radius: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    margin-bottom: 9px;
+    width: 52px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    margin-bottom: 1.1221945137vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    width: 6.4837905237vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    height: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_label {
+    border-radius: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title {
+    line-height: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title .pt_em:after {
+    height: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .pt_title .pt_em:after {
+    height: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-slide .img_box {
+    right: 0;
+    width: 100%;
+  }
+  .sec_project_wrap .pt_howto .pt_slide--card .swiper-pagination {
+    display: none;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--card > .pt_header .pt_header__title:after {
+    bottom: -14px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card > .pt_header .pt_header__title:after {
+    bottom: -1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_flex__left {
+    width: 402px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_flex__left {
+    width: 50.1246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card {
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card {
+    gap: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__item {
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__item {
+    border-radius: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__title {
+    height: 40px;
+    background-size: 100px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__title {
+    height: 4.9875311721vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__title {
+    background-size: 12.4688279302vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+    padding: 23px 0px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+    padding: 2.8678304239vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt {
+    line-height: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt .pt_em {
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card__txt .pt_em {
+    margin-top: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 {
+    width: 31.1720698254vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 .pt_card__txt {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_type2 .pt_card__txt {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card .pt_card__item--samsung .pt_card__title {
+    background-size: 130px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card .pt_card__item--samsung .pt_card__title {
+    background-size: 16.2094763092vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_card--flip .pt_card__txt {
+    padding: 44px 0px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_card.pt_card--flip .pt_card__txt {
+    padding: 5.4862842893vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_btn--underline {
+    margin-top: 21px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_btn--underline {
+    margin-top: 2.6184538653vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+    padding: 18px 16px 20px;
+    width: 286px;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+    padding: 2.2443890274vw 1.9950124688vw 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+    width: 35.6608478803vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill {
+    border-radius: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+    margin-bottom: 1.1221945137vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__title {
+    line-height: 2.1197007481vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dt, .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dt, .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dt, .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    font-size: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill dd {
+    line-height: 1.6209476309vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__price {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__price {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__price {
+    line-height: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__disc {
+    display: block;
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__disc {
+    font-size: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__disc {
+    line-height: 1.6209476309vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__origin {
+    padding-bottom: 9px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__origin {
+    padding-bottom: 1.1221945137vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf {
+    padding: 9px 0px;
+    border-width: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf {
+    padding: 1.1221945137vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf {
+    border-width: 0.2493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item {
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item {
+    margin-top: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item--final {
+    margin-top: 9px;
+    padding-top: 9px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item--final {
+    margin-top: 1.1221945137vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__bnf .pt_bill__item--final {
+    padding-top: 1.1221945137vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+    padding-top: 9px;
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+    padding-top: 1.1221945137vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+    font-size: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum {
+    line-height: 1.6209476309vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_em {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_em {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_em {
+    line-height: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dt {
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dt {
+    font-size: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dt {
+    line-height: 1.6209476309vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dd {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dd {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum dd {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__price {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__price {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__sum .pt_bill__price {
+    line-height: 2.1197007481vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    position: static;
+    margin-top: 20px;
+    height: 31px;
+    padding: 0px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    transform: none;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    margin-top: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    height: 3.8653366584vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    padding: 0vw 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay {
+    border-radius: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    top: -1px;
+    margin: 0px 3px;
+    width: 43px;
+    height: 15px;
+    vertical-align: middle;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    top: -0.1246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    margin: 0vw 0.3740648379vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    width: 5.36159601vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_bill__label--npay .pt_img--npay {
+    height: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_howto__discs {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 370px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_howto__discs {
+    bottom: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--card .pt_howto__discs {
+    width: 46.1346633416vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch > .pt_header .pt_header__title:after {
+    bottom: -16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch > .pt_header .pt_header__title:after {
+    bottom: -1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_flex {
+    display: block;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__section {
+    margin-bottom: 22px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__section {
+    margin-bottom: 2.7431421446vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__subtit {
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_howto__subtit {
+    line-height: 3.2418952618vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card {
+    display: block;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__list {
+    display: flex;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__list {
+    gap: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__item {
+    flex: 1;
+    margin-bottom: 0;
+    padding: 71px 0px 20px;
+    text-align: center;
+    border-radius: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__item {
+    padding: 8.8528678304vw 0vw 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__item {
+    border-radius: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    margin-top: 1px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    margin-top: 0.1246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    margin-bottom: 0.6234413965vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong {
+    line-height: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em {
+    line-height: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+    margin-left: 8px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+    margin-left: 0.9975062344vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+    font-size: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card__txt .pt_strong .pt_em .en {
+    line-height: 3.1172069825vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .img_box {
+    top: 20px;
+    left: 50%;
+    width: 62px;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .img_box {
+    top: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .img_box {
+    width: 7.7306733167vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    padding: 0px 6px 0px 20px;
+    height: 22px;
+    font-size: 12px;
+    background-position: left 6px center;
+    background-size: 12px;
+    border-radius: 8px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    padding: 0vw 0.7481296758vw 0vw 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    height: 2.7431421446vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    background-position: left 0.7481296758vw center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    background-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card .pt_label--check {
+    border-radius: 0.9975062344vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bottom {
+    margin-top: 15px;
+    padding: 0;
+    background: transparent;
+    border-top: 0;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bottom {
+    margin-top: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    margin-top: 15px;
+    margin-bottom: 11px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    margin-top: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    margin-bottom: 1.3715710723vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    font-size: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--dutch .pt_card_bttxt {
+    line-height: 2.8678304239vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+    background-image: url(../../is/images/howto/gf_funding_bar_fold_v2.png);
+    background-size: 300px 7px;
+    width: 300px;
+    height: 7px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+    background-size: 37.4064837905vw 0.8728179551vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+    width: 37.4064837905vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--bar {
+    height: 0.8728179551vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+    background-image: url(../../is/images/howto/gf_funding_gift_fold_v2.png);
+    background-size: 26px 26px;
+    width: 26px;
+    height: 26px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+    background-size: 3.2418952618vw 3.2418952618vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+    width: 3.2418952618vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--gift {
+    height: 3.2418952618vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+    background-image: url(../../is/images/howto/gf_funding_friend1_pc_v2.png);
+    background-size: 34px 34px;
+    width: 34px;
+    height: 34px;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+    background-size: 4.2394014963vw 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+    width: 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend1 {
+    height: 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+    background-image: url(../../is/images/howto/gf_funding_friend2_pc_v2.png);
+    background-size: 34px 34px;
+    width: 34px;
+    height: 34px;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+    background-size: 4.2394014963vw 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+    width: 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend2 {
+    height: 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+    background-image: url(../../is/images/howto/gf_funding_friend3_pc_v2.png);
+    background-size: 34px 34px;
+    width: 34px;
+    height: 34px;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+    background-size: 4.2394014963vw 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+    width: 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_bg-image.pt_add-bg.pt_ico--firend3 {
+    height: 4.2394014963vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding > .pt_header .pt_header__title:after {
+    bottom: -13px;
+    width: 100%;
+    height: 100%;
+    background-position: center bottom;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding > .pt_header .pt_header__title:after {
+    bottom: -1.6209476309vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_flex {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_flex {
+    gap: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__section {
+    flex: 1;
+    margin: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__section.pt_white_bg {
+    background: transparent;
+    border-radius: 0;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit {
+    text-align: left;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+    text-align: left;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 12px;
+    padding-top: 0;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+    font-size: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__subtit--type2 {
+    margin-bottom: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img {
+    position: absolute;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    top: 40px;
+    left: 80px;
+    width: 146px;
+    height: 202px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    top: 4.9875311721vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    left: 9.9750623441vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    width: 18.2044887781vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    height: 25.187032419vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--fold6 {
+    margin-bottom: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    top: 40px;
+    left: 109px;
+    width: 88px;
+    height: 202px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    top: 4.9875311721vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    left: 13.5910224439vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    width: 10.9725685786vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    height: 25.187032419vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__img--flip6 {
+    margin-bottom: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding {
+    position: relative;
+    margin-top: 0;
+    padding: 45px 40px 20px 311px;
+    width: 100%;
+    border-radius: 16px;
+    background: #fff;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding {
+    padding: 5.6109725686vw 4.9875311721vw 2.493765586vw 38.7780548628vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding {
+    border-radius: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    text-align: right;
+    top: 22px;
+    right: 40px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    top: 2.7431421446vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    right: 4.9875311721vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox {
+    line-height: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox .en {
+    padding-left: 3px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__txtbox .en {
+    padding-left: 0.3740648379vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__title {
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__title {
+    margin-bottom: 0.3740648379vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__title {
+    font-size: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__title {
+    line-height: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dt, .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dt, .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dt, .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    line-height: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding dd {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__price {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__price {
+    font-size: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__price {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf {
+    padding: 0px;
+    border-width: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf {
+    padding: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf {
+    border-width: 0.2493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item {
+    margin-top: 0px;
+    padding: 15px 0px 15px 40px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item {
+    margin-top: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item {
+    padding: 1.8703241895vw 0vw 1.8703241895vw 4.9875311721vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item--final {
+    margin-top: 16px;
+    padding-top: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item--final {
+    margin-top: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__bnf .pt_funding__item--final {
+    padding-top: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__list {
+    display: none !important;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+    position: static;
+    transform: translateY(0);
+    padding: 20px 24px 0px;
+    width: 100%;
+    height: auto;
+    border: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success {
+    padding: 2.493765586vw 2.9925187032vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--bar {
+    position: static;
+    display: block;
+    transform: translateX(0);
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--bar {
+    margin-bottom: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--gift {
+    display: inline-block;
+    position: static;
+    transform: translateY(-2px);
+    vertical-align: middle;
+    margin-right: 7px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success .pt_ico--gift {
+    margin-right: 0.8728179551vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dt {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.05em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dt {
+    font-size: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dt {
+    margin-bottom: 0.9975062344vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dd {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    color: #3895FF;
+    letter-spacing: -0.05em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dd {
+    font-size: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success dd {
+    margin-bottom: 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_funding__success:after {
+    display: none;
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_slide--card .swiper-slide {
+    height: 212px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_slide--card .swiper-slide {
+    height: 26.433915212vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__discs {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--funding .pt_howto__discs {
+    margin-top: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein > .pt_header .pt_header__title:after {
+    bottom: -20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein > .pt_header .pt_header__title:after {
+    bottom: -2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period {
+    padding-top: 62px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period {
+    padding-top: 7.7306733167vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__flex {
+    gap: 8px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__flex {
+    gap: 0.9975062344vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    top: -45px;
+    left: 120px;
+    width: 440px;
+    height: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    top: -5.6109725686vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    left: 14.9625935162vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    width: 54.8628428928vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item:after {
+    height: 0.2493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item.pt_period__item--left .pt_period__title {
+    padding-right: 221px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__item.pt_period__item--left .pt_period__title {
+    padding-right: 27.5561097257vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__title {
+    top: -62px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__title {
+    top: -7.7306733167vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__title {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__title {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    margin-bottom: 3px;
+    padding: 0px 8px;
+    height: 28px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    margin-bottom: 0.3740648379vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    padding: 0vw 0.9975062344vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    height: 3.4912718204vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    font-size: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_period__label {
+    border-radius: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    margin-bottom: 6px;
+    padding: 19px 16px 16px;
+    width: 237px;
+    border-radius: 12px 12px 0px 0px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    margin-bottom: 0.7481296758vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    padding: 2.3690773067vw 1.9950124688vw 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    width: 29.5511221945vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt {
+    border-radius: 1.4962593516vw 1.4962593516vw 0vw 0vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt:after {
+    bottom: -6px;
+    height: 6px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt:after {
+    bottom: -0.7481296758vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt:after {
+    height: 0.7481296758vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    margin-bottom: 11px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    margin-bottom: 1.3715710723vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    padding-bottom: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__title {
+    line-height: 2.7431421446vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+    margin-top: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__item {
+    line-height: 2.1197007481vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__price {
+    width: 48px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__price {
+    width: 5.9850374065vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__discs {
+    margin-top: 2px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__discs {
+    margin-top: 0.2493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    padding-left: 10px;
+    font-size: 10px;
+    line-height: 13px;
+    text-indent: -10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    padding-left: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    font-size: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    line-height: 1.6209476309vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__disc {
+    text-indent: -1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    margin-top: 12px;
+    padding-top: 11px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.05em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    margin-top: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    padding-top: 1.3715710723vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum {
+    line-height: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_small {
+    margin-bottom: 3px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_small {
+    margin-bottom: 0.3740648379vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_small {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_small {
+    line-height: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus {
+    margin-bottom: 26px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus {
+    margin-bottom: 3.2418952618vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    bottom: -21px;
+    width: 15px;
+    height: 15px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    bottom: -2.6184538653vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    width: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    height: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus:after {
+    font-size: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus .en {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_plus .en {
+    font-size: 1.9950124688vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_receipt__sum .pt_text--nowrap {
+    position: relative;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+  }
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info {
+    padding-left: 14px;
+    border-radius: 12px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info {
+    padding-left: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info {
+    border-radius: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info--1month {
+    width: 213px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info--1month {
+    width: 26.5586034913vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info--12month {
+    width: 224px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info--12month {
+    width: 27.9301745636vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    margin-bottom: 11px;
+    padding: 0px 6px;
+    height: 20px;
+    font-size: 8px;
+    border-radius: 6px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    margin-bottom: 1.3715710723vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    padding: 0vw 0.7481296758vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    height: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    font-size: 0.9975062344vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__title {
+    border-radius: 0.7481296758vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    background-position: left top 1px;
+    background-size: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    margin-bottom: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    padding-left: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    font-size: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    line-height: 2.2443890274vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    background-position: left top 0.1246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info__item {
+    background-size: 1.8703241895vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list {
+    margin-top: 11px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list {
+    margin-top: 1.3715710723vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    padding-left: 14px;
+    font-size: 12px;
+    line-height: 20px;
+    text-indent: -14px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    padding-left: 1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    font-size: 1.4962593516vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    line-height: 2.493765586vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num li {
+    text-indent: -1.7456359102vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+    margin-top: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+    font-size: 1.246882793vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 802px) and (max-width: 802px) {
+  .sec_project_wrap .pt_howto .pt_howto__content--tradein .pt_info .pt_list--num .pt_list__disc {
+    line-height: 1.9950124688vw;
+  }
+}/*# sourceMappingURL=howto.css.map */

@@ -1,0 +1,129 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+.galaxy_book4_edge_launching {
+    .sec_spec {
+
+        .pt_text-box {
+            position: absolute; @include vw-mo(top, 66); left:0; width: 100%; text-align: center;
+            &__title {
+                @include vw-mo(margin-bottom, 20); @include vw-mo(font-size, 36); letter-spacing: -.03em; @include vw-mo(line-height, 46); font-weight: 700;
+                .en {letter-spacing: .01em;}
+            }
+            &__sku {@include vw-mo(margin-bottom, 18); @include vw-mo(font-size, 16); @include vw-mo(line-height, 30); color: #888;}
+            &__tab {font-size: 0;}
+            &__btn {
+                display: inline-flex; align-items: center; justify-content: center; @include vw-mo(width, 267); @include vw-mo(height,50); @include vw-mo(margin-left,16); background-color: #fff; @include vw-mo(border,2 solid #BFBFBF); @include vw-mo(border-radius, 25); @include vw-mo(font-size, 24); letter-spacing: -.025em; text-align: center;
+                &:after { @include vw-mo(width,8); @include vw-mo(height,8); @include vw-mo(margin,0 2 6 8); @include vw-mo(border-bottom, 2 solid #000); @include vw-mo(border-right,2 solid #000); @include vw-mo(border-width,2); content: ''; display: inline-block; transform: rotate(45deg); }
+                &.active {
+                    background-color: #000; @include vw-mo(border,2 solid #000); color: #fff;
+                    &:after { @include vw-mo(margin,6 2 2 6); transform: rotate(225deg); border-color: #fff; }
+                }
+                &:first-child { margin-left: 0; }
+            }
+            &__sn { @include vw-mo(margin,36 0); @include vw-mo(font-size,26); @include vw-mo(line-height,48); display: block; text-align: center; }
+        }
+
+        #pt_spec__tab {
+            @include vw-mo(padding, 0 24 100);
+            dl {
+                &:not(:last-child) {@include vw-mo(margin-bottom, 46);}
+                &:last-child {@include vw-mo(margin-bottom, 118);}
+                dt {display: flex; align-items: center; @include vw-mo(margin-bottom, 17); @include vw-mo(font-size, 26); @include vw-mo(line-height, 34); font-weight: 700; white-space: nowrap; letter-spacing: -.025em;}
+                dt::after {content: ''; display: inline-block; width: 100%; @include vw-mo(height, 1); transform: translateY(-50%); @include vw-mo(margin-left, 20); background-color: #999;}
+                dd {
+                    @include vw-mo(font-size, 22); @include vw-mo(letter-spacing, -.5); @include vw-mo(line-height, 34); color: #666;
+                    p { @include vw-mo(padding-left,15); @include vw-mo(text-indent,-15); }
+                }
+            }
+            .pt_close-box {
+                text-align: center;
+
+                .pt_btn01 {
+                    @include vw-mo(font-size, 24); letter-spacing: -.025em;
+                    &:after { @include vw-mo(width,8); @include vw-mo(height,8); @include vw-mo(margin,6 2 0 6); @include vw-mo(border-bottom,2 solid #000); @include vw-mo(border-right,2 solid #000); @include vw-mo(border-width,2); content: ''; display: inline-block; transform: rotate(225deg); }
+                }
+
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width: 769px) {
+    .galaxy_book4_edge_launching {
+        .sec_spec {
+
+            .inner_1920 {@include vw-max(margin-bottom, 50);}
+    
+            .pt_text-box {
+                // position: absolute;
+                @include vw-max(width,1320); @include vw-max(top, 38); @include vw-max(left,400); @include vw-max(line-height,38); text-align: left;
+
+                &__title {@include vw-max(margin-bottom, 11); @include vw-max(font-size, 32); @include vw-max(letter-spacing, -1); @include vw-max(line-height, 48); }
+                &__sku {@include vw-max(margin-bottom, 36); @include vw-max(font-size, 26); @include vw-max(line-height, 42); color: #888;}
+                &__tab {font-size: 0;}
+                &__btn {
+                    @include vw-max(width, 183); @include vw-max(height, 38); @include vw-max(margin-left, 10); @include vw-max(border,2 solid #BFBFBF); @include vw-max(border-radius, 19); @include vw-max(font-size, 16); letter-spacing: -.025em; text-align: center;
+                    
+                    .pt_arrow_icon {@include vw-max(width, 8 !important); @include vw-max(height, 8 !important); @include vw-max(margin-left, 8); @include vw-max(letter-spacing, -.5);}
+                    
+                    &:after { @include vw-max(width,8); @include vw-max(height,8); @include vw-max(border-width,2); @include vw-max(margin,0 2 4 6); }
+
+                    &.active {
+                        &:after { @include vw-max(margin,6 2 0 6); }
+                    }
+                }
+                &__sn { @include vw-max(margin,20 0 38 0); @include vw-max(font-size,22); @include vw-max(line-height,38); text-align: left; }
+            }
+
+            #pt_spec__tab {
+                @include vw-max(width,920); padding: 0; margin: 0 auto;
+    
+                dl {
+                    &:not(:last-child) { @include vw-max(margin-bottom, 37); }
+                    &.last_dl { @include vw-max(margin-bottom, 78); }
+                    dt { @include vw-max(margin-bottom, 18); @include vw-max(font-size, 22); @include vw-max(line-height, 22); letter-spacing: -.025em; }
+                    dt::after {content: ''; @include vw-max(height, 1); transform: translateY(-50%); @include vw-max(margin-left, 30);}
+                    dd {
+                        @include vw-max(font-size, 16); @include vw-max(line-height, 28); letter-spacing: -0.025em;
+                        p { padding-left: 0; text-indent: 0; }
+                    }
+                }
+                .pt_close-box {
+    
+                    .pt_btn01 {
+                        @include vw-max(font-size, 16); @include vw-max(line-height, 20); letter-spacing: -.025em;
+                        &:after { @include vw-max(width,8); @include vw-max(height,8); @include vw-max(margin,6 2 0 6); @include vw-max(border-bottom,2 solid #000); @include vw-max(border-right,2 solid #000); @include vw-max(border-width,2); }
+                        &.active {
+                            &:after { @include vw-max(width,8); @include vw-max(height,8); @include vw-max(border-width,2); @include vw-max(margin,6 2 0 6); }
+                        }
+                    }
+                    .pt_btn01 span {@include vw-max(width, 8 !important); @include vw-max(height, 8 !important); @include vw-max(margin-left, 8); @include vw-max(letter-spacing, -.5);}
+                    .pt_btn01 span::after {@include vw-max(border-width, 2 !important);}
+    
+                }
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

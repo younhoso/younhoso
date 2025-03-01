@@ -1,0 +1,65 @@
+.walk_challenge {
+    .sec_howto {
+        @include vw-pc(padding-top, 100); @include vw-pc(margin-bottom, 100);
+        .pt_title {
+            position: relative; @include vw-pc(margin, 0 auto 74); @include vw-pc(width, 184); @include vw-pc(font-size, 42); @include vw-pc(line-height, 46); letter-spacing: -.055em; font-weight:700; text-align: center;
+            &::after {content:''; position: absolute; @include vw-pc(bottom, 3); @include vw-pc(left, 0); display: flex; width: 100%; @include vw-pc(height, 27); background: #2189FF; z-index: -1; opacity: .2;}
+        }
+
+        .pt_howto {
+            display: flex; flex-direction: column; align-items: center; position: relative; background: #E7EEFA; @include vw-pc(width, 1440); @include vw-pc(border-radius, 16); @include vw-pc(margin, 0 auto 30); @include vw-pc(padding, 60 0);
+            &__title {
+                display: inline-block; @include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 34); @include vw-pc(line-height, 45); font-weight: 700;
+                &--tag {
+                    position: relative; @include vw-pc(margin-bottom, 25); @include vw-pc(width, 162); @include vw-pc(height, 64); @include vw-pc(border-radius, 8); @include vw-pc(font-size, 34); @include vw-pc(line-height, 64); background: #2189FF; color: #fff; text-align: center;
+                    &::after {content: ''; position: absolute; left: 50%; transform: translateX(-50%);  display: block; width: 0; height: 0; @include vw-pc(border-left, 8 solid transparent); @include vw-pc(border-right, 8 solid transparent); @include vw-pc(border-top, 12 solid #2189FF);}
+                }
+            }
+            &__cont {@include vw-pc(font-size, 24); @include vw-pc(line-height, 30); @include vw-pc(margin-bottom, 39);}
+            &__img {@include vw-pc(width, 500);}
+
+            &--step2{padding: 0;}
+            &__text-box{position: absolute; @include vw-pc(top,60); left: 0; width: 100%; text-align: center;}
+            &__desc {position: absolute; @include vw-pc(font-size, 24); @include vw-pc(line-height, 30); color:#fff;
+               &--01{@include vw-pc(left,454); @include vw-pc(top,468);}
+               &--02{@include vw-pc(left,677); @include vw-pc(top,836);}
+            }
+        }
+
+        .pt_icon__samsung-fitness {
+            position: relative; display: inline-block; @include vw-pc(width, 33); @include vw-pc(height, 24); @include vw-pc(margin, 0 8);
+            &::after {content: ''; position: absolute; @include vw-pc(left, -1); @include vw-pc(top, -3); background: url(../../is/images/wc_icon_fitness_pc.png) no-repeat center/contain; ; @include vw-pc(width, 39); @include vw-pc(height, 37);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .walk_challenge {
+        .sec_howto { @include vw-mo(padding-top, 100);
+            .pt_title {
+                @include vw-mo(margin, 0 auto 60); @include vw-mo(width, 154); @include vw-mo(font-size, 38); @include vw-mo(line-height, 46);
+                &::after {@include vw-mo(bottom, 0); @include vw-mo(left, 0); @include vw-mo(height, 27);}
+            }
+    
+            .pt_howto {
+                @include vw-mo(width, 580); height: auto; @include vw-mo(border-radius, 16); @include vw-mo(margin, 0 auto 60); @include vw-mo(padding, 60 0); text-align: center;
+                &__title {
+                    @include vw-mo(width, 162); @include vw-mo(height, 64); @include vw-mo(border-radius, 8); @include vw-mo(font-size, 34); @include vw-mo(line-height, 64);
+                    &--tag {
+                        @include vw-mo(margin-bottom, 27); @include vw-mo(width, 162); @include vw-mo(height, 64); @include vw-mo(border-radius, 8); @include vw-mo(font-size, 34); @include vw-mo(line-height, 64);
+                        &::after {@include vw-mo(border-left, 8 solid transparent); @include vw-mo(border-right, 8 solid transparent); @include vw-mo(border-top, 12 solid #2189FF);}
+                    }
+                }
+                &__cont {justify-content: center; @include vw-mo(font-size, 26); @include vw-mo(line-height, 35); @include vw-mo(margin-bottom, 41);}
+                &__img {position: relative; top: initial; transform: initial; right: auto; @include vw-mo(width, 402);}
+                &--step2{padding: 0;}
+                &__text-box{position: absolute; @include vw-mo(top,60); left: 0; width: 100%; text-align: center;}
+                &__desc {position: absolute; @include vw-mo(font-size, 20); @include vw-mo(line-height, 30); width: 100%; left: 50%; transform: translateX(-50%); color:#fff;
+                   &--01{@include vw-mo(top,424);}
+                   &--02{@include vw-mo(top,714);}
+                }
+               
+            }
+        }
+    }
+}

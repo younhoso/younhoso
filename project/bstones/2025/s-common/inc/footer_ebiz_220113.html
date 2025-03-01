@@ -1,0 +1,117 @@
+<!-- s : 공통 팝업(alert)  -->
+<div class="layer-pop layer-default alert" id="commonAlert" tabindex="0" data-popup-layer="commonAlert" data-focus="commonAlert">
+    <div class="layer-header blind"><h2></h2></div>
+    <div class="layer-content">
+        <p style="word-break:keep-all;"></p>
+        <div class="btn-box">
+            <a href="javascript:void(0)" onclick="" class="btn btn-d btn-type2">확인</a>
+        </div>
+    </div>
+</div>
+<!-- e : 공통 팝업(alert)  -->
+<!-- s : 공통 팝업(confirm)  -->
+<div class="layer-pop layer-default" id="commonConfirm" tabindex="0" data-popup-layer="commonConfirm" data-focus="commonConfirm">
+    <div class="layer-header blind">
+        <h2></h2>
+    </div>
+    <div class="layer-content">
+        <p></p>
+        <div class="btn-box double">
+            <!-- 버튼 두개시 클래스 double 추가 -->
+            <a href="javascript:void(0)" class="btn btn-d btn-type1" id="commonConfirmCancelBtn" onclick="closeLayer('commonConfirm');">취소</a>
+            <a href="javascript:void(0)" class="btn btn-d btn-type2" id="commonConfirmOkBtn">확인</a>
+        </div>
+    </div>
+    <button type="button" class="pop-close" id="closeCommonConfirmBtn" name="closeCommonConfirmBtn" data-focus-next="commonConfirm">팝업닫기</button>
+</div>
+<!-- e : 공통 팝업(confirm)  --></div>
+		<!-- e : 본문 영역 -->
+
+		<!-- 플로팅 메뉴 -->
+		<div id="floatingSticky" class="floating-sticky">
+		<div class="menu-list">
+			<div class="inner">
+				<ul>
+				</ul>
+			</div>
+		</div>
+		<button type="button" class="btn-gotop">
+			<span>위로</span>
+		</button>
+	</div>
+	<script>
+		floatSticky();
+
+		function firstRecentGoods(){
+			$.ajax({
+				 url : "/event/galaxycampus/xhr/goods/getFirstRecentGoods"
+				,type : "POST"
+				,success : function(result) {
+					var recentGoodsData = JSON.parse(result);
+
+					if(recentGoodsData.recentYn === "Y"){
+						$("floatingSticky").find(".menu04").remove();
+						var html = "";
+						html += '<li class="menu04">'
+						html += '<a href="#" id = "btn-rcntgoods-floating" type="button" onclick="showLatestItem(self,\'latestItemLayer\'); getRecentGoods(); return false" data-st-path ="'+recentGoodsData.stContextPath+'">'
+						html += '<span> <img src="'+recentGoodsData.recentImgPath+'?$128_128_PNG$" alt="'+ recentGoodsData.recentGoodsNm +'"> 최근 본 제품 ('+recentGoodsData.recentGoodsLength+')</span>'
+						html += '</a>'
+						html += '</li>'
+
+						$("#floatingSticky").find("ul").append(html);
+					}
+				}
+			});
+		}
+		// firstRecentGoods();
+	</script>
+	<!-- //플로팅 메뉴 -->
+		<!-- s : 바닥글 영역 - b2c -->
+		<footer id="footer" class="footer-vertical">
+		<div class="footer-content">
+					<div class="footer-inner">
+						<div class="cs-btn">
+							<ul>
+								<li><a href="/event/galaxycampus/faq/" data-omni="footer:faq">FAQ</a></li>
+								<li><a href="/event/galaxycampus/notice/" data-omni="footer:notice">공지사항</a></li>
+							<!--  2021-08-17 1:1 문의게시판 임시 비활성화 : e-Store 강주호 파트장님 지시사항
+								<li><a href="/event/galaxycampus/my-account/my-qna/" data-omni="footer:my qna">1:1 문의</a></li>
+							-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			<div class="footer-content type-multiple">
+			<div class="footer-inner">
+				<div class="site-info">
+					<div class="info-links info-links-mo-inline">
+						<ul>
+							<li><a href="/event/galaxycampus/terms/" data-omni="footer:bottom_membership">이용약관</a></li>
+							<li><a href="/event/galaxycampus/info/privacy/01/" class="link-privacy" data-omni="footer:bottom_privacy">개인정보처리방침</a></li>
+							<li><a href="/event/galaxycampus/info/privacy/02/" data-omni="footer:bottom_privacy">이벤트 개인정보처리방침</a></li>
+							<li><a href="https://www.samsungsvc.co.kr/index.do" class="link-outlink" target="_blank" data-omni="footer:bottom_service center">서비스센터</a></li>
+							</ul>
+					</div>
+					<div class="info-detail">
+						<p>
+								    <span>삼성전자 주식회사 대표이사 : 김기남</span>
+								    <span class="mo-inline">사업자등록번호 : 124-81-00998</span>
+								    <span class="comp-wrap"><a href="https://www.ftc.go.kr/www/bizCommView.do?key=232&amp;apv_perm_no=2000374001130200515&amp;pageUnit=10&amp;searchCnd=wrkr_no&amp;searchKrwd=1248100998&amp;pageIndex=1" class="comp" title="새창 열림" target="_blank">사업자 정보확인</a></span>
+								    <span>통신판매업 신고 : 2000-경기수원-0515</span>
+								</p>
+								<p class="gap">
+								    <span>사업장주소 : 경기 수원시 영통구 삼성로 129(삼성전자)&nbsp;</span>
+								    <span>문의 전화 : 1588-6084</span>
+								</p>
+								<p>삼성전자 주식회사는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다.</p><p>본사이트의 컨텐츠는 저작권법의 보호를 받는바  무단 전재, 복사, 배포 등을 금합니다.</p>
+						<p class="copyright">Copyright &copy; 1995-2022 Samsung. All Rights Reserved.</p>
+	                </div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- e : 바닥글 영역 - b2c -->
+	</div>
+
+	</body>
+</html>

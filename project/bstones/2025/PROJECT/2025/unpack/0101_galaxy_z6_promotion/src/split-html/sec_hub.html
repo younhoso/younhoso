@@ -1,0 +1,113 @@
+<section class="sec_hub">
+    <div class="content s23fe_promotion">
+        <div class="promotion_tit">
+            <h2><em class="en">Galaxy</em> 구매 혜택 모아보기</h2>
+        </div>
+        <ul class="main_tab">
+            <li>
+                <button type="button" data-filter="phone" class="tab active" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_smartphone">스마트폰</button>
+            </li>
+            <!-- <li>
+                <button type="button" data-filter="watch" class="tab" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_watchbuds">워치ㅣ버즈</button>
+            </li> -->
+            <li>
+                <button type="button" data-filter="tablet" class="tab" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_tablet">태블릿</button>
+            </li>
+        </ul>
+
+        <div class="sub_tab_box">
+            <ul class="sub_tab active" data-item="phone">
+                <li>
+                    <button type="button" data-filter="Galaxy Z Fold6 | Z Flip6" class="tab active en">Z Fold6 l Z Flip6</button>
+                </li>
+                <li>
+                    <a href="https://www.samsung.com/sec/event/galaxy-s24/promotion/app/" class="tab en" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_smartphone_s24">S24 Series</a>
+                </li>
+                <li>
+                    <a href="https://www.samsung.com/sec/event/galaxy-s24fe/promotion/app" class="tab en" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_smartphone_s24fe">S24 FE</a>
+                </li>
+                <li>
+                    <a href="https://www.samsung.com/sec/event/galaxy-zfoldse/promotion/app/" class="tab en" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_smartphone_zfoldse">
+                        Z Fold Special Edition
+                    </a>
+                </li>
+            </ul>
+            <ul class="sub_tab" data-item="watch">
+                <li>
+                    <a href="https://www.samsung.com/sec/event/24-new-watchbuds/?tab=watch" class="tab en" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_watchbuds_watch7">Galaxy Watch7 l Watch Ultra</a>
+                </li>
+                <li>
+                    <a href="https://www.samsung.com/sec/event/24-new-watchbuds/?tab=buds" class="tab en" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_watchbuds_buds3">Galaxy Buds3 l Buds3 Pro</a>
+                </li>
+            </ul>
+            <ul class="sub_tab" data-item="tablet">
+                <li>
+                    <a href="https://www.samsung.com/sec/event/galaxy-tab/2025academy/" class="tab en" data-omni-type="microsite" data-omni="sec:event:galaxy-z6:promotion:app:tab_goto_tablet_tabs10">Galaxy Tab</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+
+	if (device.agent.indexOf("secapp") == -1) {
+		location.href = "https://www.samsung.com/sec/event/indexExhibitionCollection/?eventTypeCd=20#exhibitionHeight"
+	}
+	
+	let tabButton = document.querySelectorAll('.main_tab li button');
+    let tabSubBox = document.querySelectorAll('.sub_tab');
+	tabButton.forEach(item => {
+		item.addEventListener('click', (e) => {
+			tabSubBox.forEach(itemBox => {
+				let tabSubButtonState = item.getAttribute('data-filter');
+				let tabContentsState = itemBox.getAttribute('data-item');
+				if (tabSubButtonState == tabContentsState) {
+					itemBox.classList.add('active')
+				} else {
+					itemBox.classList.remove('active')
+				}
+				tabButton.forEach(tabCheck => {
+					tabCheck.classList.remove('active')
+				})
+			})
+			item.classList.add('active');
+		})
+	})
+
+</script>
+
+<style>
+    .content.s23fe_promotion {padding:0}
+    .s23fe_promotion .promotion_tit {padding:12px 17px}
+    .s23fe_promotion .promotion_tit h2 {color:#000;font-size:22px;font-weight:700;line-height:33px}
+    .s23fe_promotion .main_tab {display:flex;flex-wrap:nowrap;gap:0 5px;overflow-x:auto;border-bottom:1px solid #E5E5E5}
+    .s23fe_promotion .main_tab li {flex-shrink:0}
+    .s23fe_promotion .main_tab li .tab {display:flex;align-items:center;justify-content:center;height:32px;padding:0 15px;color:#000;font-size:13px;font-weight:700;line-height:17px}
+    .s23fe_promotion .main_tab li .tab.active {border-bottom:2px solid #000}
+    .s23fe_promotion .sub_tab {display:none;flex-wrap:nowrap;gap:0 5px;overflow-x:auto;padding:12px 0 12px 12px}
+    .s23fe_promotion .sub_tab.active {display:flex}
+    .s23fe_promotion .sub_tab li {flex-shrink:0}
+    .s23fe_promotion .sub_tab li .tab {display:flex;align-items:center;justify-content:center;height:32px;padding:0 15px;color:#000;font-size:13px;font-weight:700;line-height:33px;border-radius:24px;background:#ECECEC}
+    .s23fe_promotion .sub_tab li .tab.active {color:#fff;background:#000}
+    .s23fe_promotion .top_banner {width:100%;background:#BCE3D3}
+    .s23fe_promotion .top_banner img {display:block;margin:0 auto}
+	.s23fe_promotion .promotion_wrap {padding:20px 12px;background:#ECECEC}
+    .s23fe_promotion .con_wrap {display:none;flex-wrap:wrap;gap:14px 13px;width:789px;margin:0 auto}
+    .s23fe_promotion .con_wrap.active {display:flex}
+    .s23fe_promotion .con_wrap .promotion_item {position:relative;overflow:hidden;display:block;width:376px;height:135px;padding:25px 22px 24px;border-radius:24px;background:#fff}
+    .s23fe_promotion .con_wrap .promotion_item.coupon_pack {color:#fff;background:#000}
+    .s23fe_promotion .con_wrap .promotion_item.coupon_pack .item_txt,
+    .s23fe_promotion .con_wrap .promotion_item.coupon_pack .item_date {color:#B5B5B5}
+    .s23fe_promotion .con_wrap .promotion_item.film_service {color:#fff;background:#2A5BC2}
+    .s23fe_promotion .con_wrap .promotion_item .item_tit {font-size:18px;font-weight:700;line-height:20px}
+    .s23fe_promotion .con_wrap .promotion_item .item_txt {display:block;margin-top:7px;font-size:13px;line-height:18px}
+    .s23fe_promotion .con_wrap .promotion_item .item_date {position:absolute;left:23px;bottom:24px;font-size:11px;font-weight:700;line-height:16px}
+    @media (max-width:539px) {
+        .s23fe_promotion .con_wrap {gap:12px 0;width:100%}
+        .s23fe_promotion .con_wrap li {width:100%}
+		.s23fe_promotion .con_wrap .promotion_item  {margin:0 auto;width:100%}
+    }
+</style>
+
+<!-- [E] KDP-45159 [B2C] 닷컴 전사 프로모션 진입점 및 이벤트 페이지 스킴 통일 - 1차-->

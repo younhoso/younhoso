@@ -1,0 +1,3272 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+
+<title>Samsung 대한민국</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/reset.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/slick.css">
+<link rel="stylesheet" href="/sec/static/_css/common.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/layout.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/pf.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/pf_resp.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/content_part01.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/content_part02.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/content_part03.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/content_part04.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/content_part05.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/content_part06.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/order.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/cart.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/etc.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/component.css"><!-- 컴포넌트 스타일 -->
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/app.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/jquery-ui.min.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/swiper.min.css">
+<link rel="stylesheet" href="https://www.samsung.com/sec/static/_css/homefitness.css">
+
+<script src="https://www.samsung.com/sec/static/_script/jquery-3.3.1.min.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/jquery-ui.min.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/slick.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/slick-init.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/swiper.min.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/masonry.min.js"></script><!-- masonry js -->
+<script src="https://www.samsung.com/sec/static/_script/jquery.blockUI.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/base.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/layerPop.js"></script>
+<script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script>
+<script src="https://www.samsung.com/sec/static/_script/netfunnel.js" charset="UTF-8"></script>
+<script src="https://www.samsung.com/sec/static/_script/netfunnel_skin.js" charset="UTF-8"></script>
+<script src="https://www.samsung.com/sec/static/_script/common.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/custom.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/sticky.min.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/jquery.cookie.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/search.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/component.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/jquery.ui.touch-punch.min.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/event/event.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/clipboard.min.js"></script>
+<script src="https://www.samsung.com/sec/static/_script/buynow.js"></script>
+<script type="text/javascript" src="https://www.samsung.com/sec/static/_script/picturePolyfill.min.js"></script>
+<script type="text/javascript">
+	var checkActionTimeOut;
+	$(document).ready(function () {
+		/*
+		$.ajax({
+			 url : "https://www.samsung.com/sec/xhr/member/getSession"
+			,type : "POST"
+			,success : function(data) {
+				var session = JSON.parse(data);
+				if(session.mbrNo != 0){
+					resetLoginTimeOut();
+					$(document).on('click keypress' , 'body' , function(){
+						resetLoginTimeOut();
+					});
+				}
+			}
+		});
+		*/
+		if('251968' != 0){
+			resetLoginTimeOut();
+			$(document).on('click keypress' , 'body' , function(){
+				resetLoginTimeOut();
+			});
+		}
+	});
+
+	function resetLoginTimeOut() {
+		window.clearTimeout(checkActionTimeOut);
+		checkActionTimeOut = setTimeout(function() { // 30분 후 로그아웃
+			location.href="https://www.samsung.com/sec/member/logout/";
+		}, 24*60*60*1000);
+	}
+</script>
+<!-- s : AA 태깅 -->
+<script type="text/javascript">
+	var pageURL = window.location.href;
+	var siteCode = "sec";
+
+	var digitalData = {
+			"page" : {
+				"pageInfo" : {
+					"siteCode" : siteCode
+					, "siteSection" : ""
+					, "pageName" : ""
+					, "pageURL" : pageURL
+					, "pageTrack" : "microsite"
+					, "version" : "KDP"
+				}
+				, "pathIndicator" : {
+					"depth_2" : ""
+					, "depth_3" : ""
+					, "depth_4" : ""
+					, "depth_5" : ""
+				}
+			}
+			, "user" : {
+				"loginStatus" : ""
+			}
+			, "product" : {
+				"category" : ""
+				, "model_code" : ""
+				, "model_name" : ""
+				, "displayName" : ""
+				, "pvi_type_code" : ""
+				, "pvi_type_name" : ""
+				, "pvi_subtype_code" : ""
+				, "pvi_subtype_name" : ""
+
+			}
+		}
+
+	// depth Info.
+	var depth = window.location.href.split("/").length;
+	var depth_last = window.location.href.split("/")[depth-1];
+	if(depth_last =="" || depth_last.charAt(0)=="?"){
+	    depth -= 1;
+	}
+
+	// set site section value
+	if((digitalData.page.pathIndicator.depth_2 != "")||(digitalData.page.pageInfo.pageTrack == "flagship pdp")){
+		if(digitalData.page.pathIndicator.depth_2 == "shop" || digitalData.page.pathIndicator.depth_2 == "my account"){
+			digitalData.page.pageInfo.siteSection = siteCode + ":" + digitalData.page.pathIndicator.depth_2;
+	    }else{
+	    	digitalData.page.pageInfo.siteSection = siteCode + ":consumer"; //product page
+	    }
+	}else if(depth == 4){
+	    digitalData.page.pageInfo.siteSection = siteCode + ":home"; //home
+	}else{
+	     digitalData.page.pageInfo.siteSection = siteCode + ":" + window.location.href.split("/")[4];
+	}
+
+	// set product category value
+/* 	if(digitalData.page.pathIndicator.depth_3 != ""){
+	    digitalData.product.category = digitalData.page.pathIndicator.depth_3;
+	} */
+
+	// set pathIndicator(not product page)
+	if(digitalData.page.pathIndicator.depth_2 == ""){
+	    if(depth >= 5) digitalData.page.pathIndicator.depth_2 = window.location.href.split("/")[4].toLowerCase();
+	    if(depth >= 6) digitalData.page.pathIndicator.depth_3 = window.location.href.split("/")[5].toLowerCase();
+	    if(depth >= 7) digitalData.page.pathIndicator.depth_4 = window.location.href.split("/")[6].toLowerCase();
+	    if(depth >= 8) digitalData.page.pathIndicator.depth_5 = window.location.href.split("/")[7].toLowerCase();
+	}
+
+	// set pageName
+	var pageName = siteCode;
+	if(digitalData.page.pathIndicator.depth_2 != "")
+	    pageName += ":" + digitalData.page.pathIndicator.depth_2;
+	if(digitalData.page.pathIndicator.depth_3 != "")
+	    pageName += ":" + digitalData.page.pathIndicator.depth_3;
+	if(digitalData.page.pathIndicator.depth_4 != "")
+	    pageName += ":" + digitalData.page.pathIndicator.depth_4;
+	if(digitalData.page.pathIndicator.depth_5 != "")
+	    pageName += ":" + digitalData.page.pathIndicator.depth_5.replace(/^\s+|\s+$/gm,'');
+
+	// check PD, GPD
+	var pageTrackName = digitalData.page.pageInfo.pageTrack;
+	if(pageTrackName == "product detail" || pageTrackName == "generic product details"){
+	    pageName += ":" + digitalData.product.model_code;
+	    var displayName = "".replace(/(<([^>]+)>)/gi, "");
+	    digitalData.product.displayName = displayName;
+	}
+	digitalData.page.pageInfo.pageName = pageName;
+
+	</script>
+	<script async src="//assets.adobedtm.com/c8a575b84bb9/0d8938615268/launch-160c25cdcd93.min.js"></script>
+<!-- e : AA 태깅 -->
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NVX3V74');</script>
+<!-- End Google Tag Manager -->
+
+<script>
+var stGbCd = '10';
+
+function chat_open() {
+	fcTrack('click','floating chat:chat bot');
+	var popupX = (window.screen.width / 2) - (356 / 2);
+    var popupY = (window.screen.height / 2) - (750 / 2);
+    window.open('/sec/chatbot/', 'chatbot', 'status=no, height=750, width=356, left=' + popupX + ', top=' + popupY + ', screenX=' + popupX + ', screenY= ' + popupY);
+}
+
+function chat_open2() {
+	fcTrack('click','floating chat:chat online');
+
+	var gType = Math.round(Math.random() * 1) ? 'm' : 'f';
+
+	var popupX = (window.screen.width / 2) - (356 / 2);
+    var popupY = (window.screen.height / 2) - (750 / 2);
+    window.open('/sec/chatbot/?type=ep&c='+ gType, '_chatbot2', 'status=no, height=750, width=356, left=' + popupX + ', top=' + popupY + ', screenX=' + popupX + ', screenY= ' + popupY);
+}
+
+function chat_open3() {
+	fcTrack('click','floating chat:offline store');
+}
+
+function floating_open() {
+	fcTrack('click','floating chat');
+}
+// logger("prd");
+
+$(document).ready(function(){
+    var userAgent=navigator.userAgent.toUpperCase();
+    if(userAgent.indexOf("SECAPP")>-1){
+            $("#header").hide();
+    }
+});
+
+</script>
+<script type="text/javascript" src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var observer = lozad();
+		observer.observe()
+	});
+
+</script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+		<script src="https://www.samsung.com/sec/static/_script/snsShare.js"></script>
+		<script type="text/javascript"> shareInit('5880e4317936087f2764a5d340e6bca6', ''); </script>
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-0761dbd1-c6cc-41f1-a4e6-597ee42d10b5","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"true","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="VRZKC-5BSTD-4EWS3-R2J59-B8GYB",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"VRZKC-5BSTD-4EWS3-R2J59-B8GYB",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="cookiepresent",n="zp2nukaxb5qeayo73wia-f-1b8da6008-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"32","ak.cp":"143520","ak.ai":parseInt("293013",10),"ak.ol":"0","ak.cr":144,"ak.ipv":4,"ak.proto":"h2","ak.rid":"1749050d","ak.r":23331,"ak.a2":e,"ak.m":"x","ak.n":"essl","ak.bpcip":"203.244.218.0","ak.cport":14548,"ak.gh":"184.86.250.143","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1642061200","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==MYWauGx30QZjXOAYYLEF7GEg8Tgm602LmctJE09j9zKE/PbHrRVBYQNM2TjMcIgR1sIgS7W8mqivaxLCxyMileDErAXX6l5JwJKJ9um/JHfnMelnzcaTnYnD92f4pX/JNMcr63P8rXk6Dp5cZQ8PomdB+rRqWpPC71wQCvvouKccVUbBd3vhsKj5LN/xZyK3T2bmYuIuytctP3VOBras31QOC8CsgAkNTUnG6FDbC7OMSDtnxFGOI+lOSSoRMj3d6bhDsbxa9T3AI77XfGitBemS71Mgsr345+2dsvI+zoo1rlOJYuFuJwCyvu+LubTQgcFFJuhz0ww9ObqiHWqA/r5n2oMFvF0T6Dcoz4HBqUvY3Kq7FaT39aBMAsrsGdslobKVwu4cAlGjap/u/inZizRiywWGBDe8Yib0d4KTJtU=","ak.pv":"2406","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"143520",ustr:"cookiepresent",originlat:"0",clientrtt:"144",ghostip:"184.86.250.143",ipv6:false,pct:"10",clientip:"203.244.218.40",requestid:"1749050d",region:"23331",protocol:"h2",blver:14,akM:"x",akN:"ae",akTT:"O",akTX:"1",akTI:"1749050d",ai:"293013",ra:"true",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    </head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVX3V74"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<!-- s : 스킵 -->
+	<div id="skip_content">
+		<a href="#container" class="">본문 바로가기</a>
+			</div>
+	<!-- e : 스킵 -->
+
+	<div id="wrap">
+		<!-- s : 머리글 영역 -->
+			<script>
+		var __ST_GB_CD = "b2c";
+
+		$(document).ready(function(){
+			// ts_hostChk('local');
+			// getSessionInfo();
+			getCartCnt();
+		});
+		var apiFlag = 0;
+		var clipboard = new ClipboardJS('#lUrl');
+		clipboard.on('success', function(e) {
+			let alertData = {
+					 title: ""
+					,content : "링크가 복사되었습니다."
+					,callback : ""
+					,btnText : "확인"
+				};
+				commonAlert(alertData);
+				openLayer('commonAlert');
+		});
+		clipboard.on('error', function(e) {
+			let alertData = {
+					 title: ""
+					,content : "다시 시도하여 주십시오."
+					,callback : ""
+					,btnText : "확인"
+				};
+				commonAlert(alertData);
+				openLayer('commonAlert');
+		});
+		$(document).on('click' , '.link-cart' , function(){
+			var options = {
+					url : '/sec/xhr/order/gnbCartList' ,
+					dataType : "html" ,
+					done : function(data){
+						$(".gnb-cartList").html(data);
+				}
+			}
+			ajax.call(options);
+		});
+
+		// 뒤로가기 시 이벤트
+		$(window).bind("pageshow", function(event){
+			if(event.originalEvent.persisted || window.performance && window.performance.navigation.type == 2){
+				getCartCnt();
+			}
+		});
+
+		function getSessionInfo() {
+			$.ajax({
+				 url : "https://www.samsung.com/sec/xhr/member/getSession"
+				,type : "POST"
+				,success : function(result) {
+					result = JSON.parse(result);
+					if (result.mbrNo == "0") {
+						$("input[name=useLogin]").val("N");
+						$(".link-login i").addClass("ico-people");
+						$(".loginAfter").remove();
+					} else {
+						$("input[name=useLogin]").val("Y");
+						$(".link-login i").addClass("ico-people-logged");
+						$(".loginBefore").remove();
+
+						var htmlMo = "안녕하세요! <span>" + result.mbrNm + "</span>님";
+						var htmlPc = "안녕하세요! " + result.mbrNm + "님";
+						$(".loginAfter .welcomeMsg").html(htmlMo);
+						$(".loginAfter .greet-txt").html(htmlPc);
+					}
+				}
+			});
+		}
+
+		function getCartCnt() {
+			$.ajax({
+				 url : "https://www.samsung.com/sec/xhr/order/gnbCartCount"
+				,type : "POST"
+				,success : function(result) {
+					if (result > 0) {
+						$('.cart-inner-count').show();
+						$('.cart-inner-count').text(result);
+					}
+					else {
+						$('.cart-inner-count').hide();
+					}
+				}
+			});
+		}
+
+		function getApiMemid(sessionInfo) {
+			var jsonResult = JSON.stringify(sessionInfo);
+			$.ajax({
+				 url : "https://www.samsung.com/sec/xhr/member/getMemberShipNo"
+				, type : "POST"
+				, data : { mbrNo : sessionInfo.mbrNo, loginId : sessionInfo.loginId}
+				, success : function(result) {
+					apiFlag = result.updateCnt;
+				}
+			});
+		}
+	</script>
+	<input type="hidden" id="loginYn" value="" />
+	<header id="header" >
+		<div class="s-inner">
+			<a href="https://www.samsung.com/sec/" class="logo"><img src="https://www.samsung.com/sec/static/_images/common/logo_samsung_black.svg" alt="삼성" /></a>
+				<div class="new-gnb">
+				<nav class="gnb">
+					<ul class="gnb1depth">
+						<li>
+							<a href="#" aria-controls="700000112-menu" aria-selected="false" data-omni="Product" >제품</a>
+							<div class="gnb2depth">
+								<div class="inner">
+									<ul class="list">
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:new" >신제품<span class="flag-new">NEW</span></a>
+											<div class="gnb3depth new-prd-list">
+												<div class="prd-list-wrap">
+													<div class="main-prd">
+															<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip3/" class="rec-link" aria-selected="false" data-omni="Product:new:galaxy-bespoke">
+																	<span class="pic-wrap">
+																	<span class="pc-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/71743da2-3c30-4321-b3d5-e8c8428532d8.png?$ORIGIN_JPG$);"></span>
+																	<span class="mo-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/38e8f02f-b3e1-4291-b760-2bb24290a8ca.png?$ORIGIN_JPG$);"></span>
+																	</span>
+
+																<span class="txt-grp">
+																	<span class="tit theme-blk">갤럭시 Z 플립3<br>비스포크 스튜디오</span>
+																	<span class="desc theme-blk">나만의 갤럭시를 디자인하다<br>비스포크 에디션을 만나보세요</span>
+																</span>
+															</a>
+														</div>
+													<div class="sub-prd num-1">
+															<a href="https://www.samsung.com/sec/smartphones/galaxy-z-fold3-5g-sm-f926/SM-F926NZKEKOO/" class="rec-link" aria-selected="false" data-omni="Product:new:Galaxy Z Fold3 5G">
+																	<span class="pic-wrap">
+																	<span class="pc-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/f21f1b34-ddca-4b27-a405-0a0fea47e140.png?$ORIGIN_JPG$);"></span>
+																	<span class="mo-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/647040a0-9d7c-47a5-8f2b-959944fd9368.png?$ORIGIN_JPG$);"></span>
+																	</span>
+																<span class="txt-grp">
+																	<span class="tit theme-blk"><span>Galaxy Z Fold3 5G</span></span>
+																	<span class="desc theme-blk">나를 새로 활짝 <br>Unfold your world</span>
+																</span>
+															</a>
+														</div>
+													<div class="sub-prd num-2">
+															<a href="https://www.samsung.com/sec/store-model/bespoke-qooker/" class="rec-link" aria-selected="false" data-omni="Product:new:BESPOKE Cooker">
+																	<span class="pic-wrap">
+																	<span class="pc-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/cf7f1877-37cf-4f5f-9532-5eb7ccdf9a3f.png?$ORIGIN_JPG$);"></span>
+																	<span class="mo-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/319eaf4c-9675-446f-bee3-41a0e928bdc8.png?$ORIGIN_JPG$);"></span>
+																	</span>
+																<span class="txt-grp">
+																	<span class="tit theme-blk"><span>BESPOKE 큐커</span></span>
+																	<span class="desc theme-blk">지금 My 큐커 플랜 가입하면<br>BESPOKE 큐커가 단 5만원에!</span>
+																</span>
+															</a>
+														</div>
+													<div class="sub-prd num-3">
+															<a href="https://www.samsung.com/sec/event/galaxy-watch4/" class="rec-link" aria-selected="false" data-omni="Product:new:Galaxy Watch4 I <br>Watch4 Classic">
+																	<span class="pic-wrap">
+																	<span class="pc-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/f8e57d52-7fa9-48c4-9488-424904472f27.png?$ORIGIN_JPG$);"></span>
+																	<span class="mo-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/daacb6c6-bc5a-417a-9e27-b485e721b618.png?$ORIGIN_JPG$);"></span>
+																	</span>
+																<span class="txt-grp">
+																	<span class="tit theme-blk"><span>Galaxy Watch4 I <br>Watch4 Classic</span></span>
+																	<span class="desc theme-blk">일상을 스마트하게 <br>스타일링하다!</span>
+																</span>
+															</a>
+														</div>
+													<div class="sub-prd num-4">
+															<a href="https://www.samsung.com/sec/event/galaxybookacademy/" class="rec-link" aria-selected="false" data-omni="Product:new:Galaxy Book<br>Pro 360 5G ">
+																	<span class="pic-wrap">
+																	<span class="pc-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/0f6dd488-cf0e-48ec-9165-5ffbd0dd3ac2.png?$ORIGIN_JPG$);"></span>
+																	<span class="mo-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/2d85493a-d574-4c93-bcae-3d3b6c6ab746.png?$ORIGIN_JPG$);"></span>
+																	</span>
+																<span class="txt-grp">
+																	<span class="tit theme-blk"><span>Galaxy Book<br>Pro 360 5G </span></span>
+																	<span class="desc theme-blk">초고속 5G 탑재로 더욱 강력해진<br>갤럭시 북</span>
+																</span>
+															</a>
+														</div>
+													<div class="sub-prd num-5">
+															<a href="https://www.samsung.com/sec/new-release/thefreestyle/pre-order" class="rec-link" aria-selected="false" data-omni="Product:new:The Freestyle">
+																	<span class="pic-wrap">
+																	<span class="pc-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/0e839163-1ca3-4b08-8b7f-ab4120210843.png?$ORIGIN_JPG$);"></span>
+																	<span class="mo-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/ef4d9368-7245-45be-98d4-aa8c8c5fe4a0.png?$ORIGIN_JPG$);"></span>
+																	</span>
+																<span class="txt-grp">
+																	<span class="tit theme-blk"><span>The Freestyle</span></span>
+																	<span class="desc theme-blk">한정수량 조기 완판!<br>1/18일 Live로 돌아옵니다</span>
+																</span>
+															</a>
+														</div>
+													<div class="sub-prd num-6">
+															<a href="https://www.samsung.com/sec/store-model/2021bespoke/buy/" class="rec-link" aria-selected="false" data-omni="Product:new:BESPOKE Refrigerator">
+																	<span class="pic-wrap">
+																	<span class="pc-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/771e067a-e0f9-469c-82d3-7694c324e70a.png?$ORIGIN_JPG$);"></span>
+																	<span class="mo-pic" style="background-image:url(//images.samsung.com/kdp/display/gnb/c0a64cff-ade0-4ccc-b2c6-90f2247b71ce.png?$ORIGIN_JPG$);"></span>
+																	</span>
+																<span class="txt-grp">
+																	<span class="tit theme-blk"><span>BESPOKE 냉장고</span></span>
+																	<span class="desc theme-blk">21년 BESPOKE 냉장고의<br>새로운 컬러를 만나보세요</span>
+																</span>
+															</a>
+														</div>
+													</div>
+												<!-- 2dep banner -->
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:reference-model" >공동구매</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/event/salefesta2022/buy/?anc=groupdeal" aria-selected="false" data-omni="Product:reference-model:salefesta2022" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/event/salefesta2022/buy/?anc=groupdeal" data-omni="feature image:Product:삼성전자 세일 페스타:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/6118d24a-43bf-4369-a24a-8d45a0673b93.png?$ORIGIN_JPG$" alt="공동구매">
+																</div>
+															<p class="txt">삼성전자 세일 페스타</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/event/salefesta2022/buy/?anc=groupdeal" data-omni="feature image:Product:삼성전자 세일 페스타:learn more" class="link">
+			                        								<span>공동 구매하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:mobile" >모바일</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/galaxy/home/" aria-selected="false" data-omni="Product:mobile:Everything about the Galaxy" >갤럭시의 모든 것</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/" aria-selected="false" data-omni="Product:mobile:Galaxy bespoke" >갤럭시 비스포크</a>
+																</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:smartphones" >스마트폰</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="http://www.samsung.com/sec/smartphones/galaxy-z/" aria-selected="false" data-omni="Product:mobile:smartphones:smartphones recommendation" >추천 스마트폰</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/all-smartphones/" aria-selected="false" data-omni="Product:mobile:smartphones:view-all" >전체 스마트폰</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/all-smartphones/?galaxy-z" aria-selected="false" data-omni="Product:mobile:smartphones:galaxy-z" >갤럭시 Z</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/all-smartphones/?galaxy-s" aria-selected="false" data-omni="Product:mobile:smartphones:galaxy-s" >갤럭시 S</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/all-smartphones/?galaxy-note" aria-selected="false" data-omni="Product:mobile:smartphones:galaxy-note" >갤럭시 노트</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/all-smartphones/?galaxy-a" aria-selected="false" data-omni="Product:mobile:smartphones:galaxy-a" >갤럭시 A</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/all-smartphones/?galaxy-m" aria-selected="false" data-omni="Product:mobile:smartphones:Galaxy M" >갤럭시 M</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?smartphones" aria-selected="false" data-omni="Product:mobile:smartphones:mobile accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:tablets" >태블릿</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tablets/" aria-selected="false" data-omni="Product:mobile:tablets:tablets learn more" >추천 태블릿</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tablets/all-tablets/" aria-selected="false" data-omni="Product:mobile:tablets:view-all" >전체 태블릿</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tablets/all-tablets/?galaxy-tabs" aria-selected="false" data-omni="Product:mobile:tablets:galaxy-tabs" >갤럭시 탭 S</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tablets/all-tablets/?galaxy-taba" aria-selected="false" data-omni="Product:mobile:tablets:galaxy-taba" >갤럭시 탭 A</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?tablets" aria-selected="false" data-omni="Product:mobile:tablets:tablet accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:Galaxy Book" >갤럭시 북</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/pc" aria-selected="false" data-omni="Product:mobile:Galaxy Book:Recommended Galaxy Book" >추천 갤럭시 북</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxybook/all-galaxybook" aria-selected="false" data-omni="Product:mobile:Galaxy Book:All Galaxy Book" >전체 갤럭시 북</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxybook/all-galaxybook/?galaxybook-pro-360" aria-selected="false" data-omni="Product:mobile:Galaxy Book:Galaxy Book Pro 360" >갤럭시 북 Pro 360</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxybook/all-galaxybook/?galaxybook-pro" aria-selected="false" data-omni="Product:mobile:Galaxy Book:Galaxy Book Pro" >갤럭시 북 Pro</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxybook/all-galaxybook/?galaxybook-flex-flex-alpha" aria-selected="false" data-omni="Product:mobile:Galaxy Book:Galaxy Book Flex" >갤럭시 북 Flex</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxybook/all-galaxybook/?galaxybook-ion" aria-selected="false" data-omni="Product:mobile:Galaxy Book:Galaxy Book Ion" >갤럭시 북 Ion</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxybook/all-galaxybook/?galaxybook-s" aria-selected="false" data-omni="Product:mobile:Galaxy Book:Galaxy Book S" >갤럭시 북 S</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxybook/all-galaxybook/?notebook-plus" aria-selected="false" data-omni="Product:mobile:Galaxy Book:Notebook Plus" >노트북 Plus</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:watches" >워치</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/watches/galaxy-watch/" aria-selected="false" data-omni="Product:mobile:watches:watches learn more" >추천 워치</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/watches/all-watches/" aria-selected="false" data-omni="Product:mobile:watches:view-all" >전체 워치</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/watches/all-watches/?galaxy-watch4+galaxy-watch4-classic" aria-selected="false" data-omni="Product:mobile:watches:galaxy-watch4" >갤럭시 워치4</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/watchstudio/" aria-selected="false" data-omni="Product:mobile:watches:watchstudio" >갤럭시 워치4 비스포크 스튜디오</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/watches/all-watches/?galaxy-fit" aria-selected="false" data-omni="Product:mobile:watches:galaxy-fit" >갤럭시 핏</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?watch" aria-selected="false" data-omni="Product:mobile:watches:accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:buds" >버즈</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/buds/galaxy-buds2/" aria-selected="false" data-omni="Product:mobile:buds:buds learn more" >추천 버즈</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/buds/all-buds/" aria-selected="false" data-omni="Product:mobile:buds:view-all" >전체 버즈</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/buds/all-buds/?galaxy-buds-pro" aria-selected="false" data-omni="Product:mobile:buds:galaxy-buds-pro" >갤럭시 버즈 프로</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/buds/all-buds/?galaxy-buds-live" aria-selected="false" data-omni="Product:mobile:buds:galaxy-buds" >갤럭시 버즈 라이브</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/buds/all-buds/?galaxy-buds2" aria-selected="false" data-omni="Product:mobile:buds:galaxy-buds2" >갤럭시 버즈2</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?cover+buds" aria-selected="false" data-omni="Product:mobile:buds:cover" >갤럭시 버즈 커버</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:mobile-accessories" >모바일 액세서리</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/" aria-selected="false" data-omni="Product:mobile:mobile-accessories:all-mobile-accessories" >전체 액세서리</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?smart-tag" aria-selected="false" data-omni="Product:mobile:mobile-accessories:galaxy-smart-tag" >갤럭시 스마트태그</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?smartphones" aria-selected="false" data-omni="Product:mobile:mobile-accessories:smartphones-accessories" >스마트폰 액세서리</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?tablets" aria-selected="false" data-omni="Product:mobile:mobile-accessories:tablets-accessories" >태블릿 액세서리</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?watch" aria-selected="false" data-omni="Product:mobile:mobile-accessories:watch-accessories" >워치 액세서리</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?buds" aria-selected="false" data-omni="Product:mobile:mobile-accessories:buds-accessories" >버즈 액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:online" >체험존</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/event/galaxy-z/galaxystudio/experience" aria-selected="false" data-omni="Product:mobile:online:galaxy-z experience" >갤럭시 Zㅣ갤럭시 워치4ㅣ갤럭시 버즈2</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxy-s21/experience/" aria-selected="false" data-omni="Product:mobile:online:galaxy-note21/experience/" >갤럭시 S21ㅣS21+ㅣS21 Ultra</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/event/galaxy-z/galaxystudio/search/" aria-selected="false" data-omni="Product:mobile:online:galaxystudio" >갤럭시 스튜디오</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:app_service" >One UI</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/one-ui" aria-selected="false" data-omni="Product:mobile:app_service:	 One UI Overview" >One UI 알아보기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/apps/" aria-selected="false" data-omni="Product:mobile:app_service:apps learn more" >앱&서비스 알아보기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/Samsung-Care-Plus/IM/" aria-selected="false" data-omni="Product:mobile:app_service:Samsung Care+" >Samsung Care+</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/apps/galaxy-store/" aria-selected="false" data-omni="Product:mobile:app_service:galaxy store" >갤럭시 스토어</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/apps/bixby/" aria-selected="false" data-omni="Product:mobile:app_service:bixby" >빅스비</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/samsung-pay/" aria-selected="false" data-omni="Product:mobile:app_service:Samsung Pay" >삼성페이</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/apps/samsung-health-monitor/" aria-selected="false" data-omni="Product:mobile:app_service:amsung-health-monitor" >삼성 헬스 모니터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/apps/samsung-dex/" aria-selected="false" data-omni="Product:mobile:app_service:samsung-dex" >Samsung DeX</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/apps/samsung-members/" aria-selected="false" data-omni="Product:mobile:app_service:samsung-members" >Samsung Members</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxyclub/" aria-selected="false" data-omni="Product:mobile:app_service:Galaxy Club" >갤럭시클럽</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/trade-in/" aria-selected="false" data-omni="Product:mobile:app_service:Trade-in" >트레이드인</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:mobile:contents" >추천 콘텐츠</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/galaxy-z-fold3-5g/" aria-selected="false" data-omni="Product:mobile:contents:Galaxy Z Fold 3 5G Product Information (NEW)" >갤럭시 Z 폴드3 5G 제품 정보</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/galaxy-z-flip3-5g" aria-selected="false" data-omni="Product:mobile:contents:Galaxy Z Flip3 5G Product Information" >갤럭시 Z 플립3 5G 제품정보</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/galaxy-s21-5g" aria-selected="false" data-omni="Product:mobile:contents: Galaxy S21ㅣS21+  5G Product Information (NEW)" >갤럭시 S21ㅣS21+ 5G 제품 정보</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/smartphones/galaxy-s21-ultra-5g" aria-selected="false" data-omni="Product:mobile:contents:Galaxy 21 Ultra 5G Product Information (NEW)" >갤럭시 S21 Ultra 5G 제품 정보</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/watches/galaxy-watch/" aria-selected="false" data-omni="Product:mobile:contents:Galaxy Watch4 Product Information (NEW)" >갤럭시 워치4 시리즈 제품 정보</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/buds/galaxy-buds2/" aria-selected="false" data-omni="Product:mobile:contents:Galaxy Buds2 Product Information (NEW)" >갤럭시 버즈2 제품 정보</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/event/galaxy-z/galaxystudio/" aria-selected="false" data-omni="Product:mobile:contents:Galaxy studio" >갤럭시 스튜디오</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/awards/" aria-selected="false" data-omni="Product:mobile:contents:Awarded Products at a Glance" >한눈에 보는 수상 제품</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/videogallery/?group=mobile" aria-selected="false" data-omni="Product:mobile:contents:Product video at a glance" >한눈에 보는 제품 영상</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxy-5g/" aria-selected="false" data-omni="Product:mobile:contents:Galaxy 5G" >갤럭시 5G</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="https://www.samsung.com/sec/mobile/why-galaxy/" aria-selected="false" data-omni="Product:mobile:Life to get used to something amazing" >갤럭시가 특별한 이유</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip3/" data-omni="feature image:Product:galaxy-bespoke:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/1d986122-2191-45d7-820e-6b95dbba2032.jpg?$ORIGIN_JPG$" alt="갤럭시 Z 플립3 비스포크 스튜디오">
+																</div>
+															<p class="txt">갤럭시 Z 플립3 비스포크 스튜디오</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip3/" data-omni="feature image:Product:galaxy-bespoke:learn more" class="link">
+			                        								<span>나만의 Z 플립3 디자인 하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:tv&audio" >TV&오디오</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/micro-led/micro-led-ms1acxkr/MNA110MS1ACXKR/" aria-selected="false" data-omni="Product:tv&audio:micro-led" >MICRO LED </a>
+																</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:tv&audio:tv" >TV</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/neo-qled-8k" aria-selected="false" data-omni="Product:tv&audio:tv:tv learn more" >추천 TV</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/all-tvs/" aria-selected="false" data-omni="Product:tv&audio:tv:view-all" >전체 TV</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/all-tvs/?neo-qled-8k" aria-selected="false" data-omni="Product:tv&audio:tv:Neo QLED 8K" >Neo QLED 8K</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/all-tvs/?neo-qled-4k" aria-selected="false" data-omni="Product:tv&audio:tv:Neo QLED 4K" >Neo QLED 4K</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/all-tvs/?qled-8k-tv" aria-selected="false" data-omni="Product:tv&audio:tv:qled_8k_tv" >QLED 8K</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/all-tvs/?qled-4k-tv" aria-selected="false" data-omni="Product:tv&audio:tv:qled_4k_tv" >QLED 4K</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/all-tvs/?crystal-uhd" aria-selected="false" data-omni="Product:tv&audio:tv:crystal_uhd" >Crystal UHD</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tv-accessories/all-tv-accessories/?TVs" aria-selected="false" data-omni="Product:tv&audio:tv:tv_accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:tv&audio:lifestyletv" >Lifestyle TV</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/home/" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:lifestyletv recommend" >보다 The 나답게, Lifestyle TV의 모든 것</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/all-lifestyletv/" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:view-all" >전체 Lifestyle TV</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/all-lifestyletv/?the-freestyle" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:The Freestyle" >The Freestyle</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/all-lifestyletv/?the-serif" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:the-serif" >The Serif</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/all-lifestyletv/?the-frame" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:the-frame" >The Frame</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/all-lifestyletv/?the-premiere" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:The Premiere" >The Premiere</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/all-lifestyletv/?the-sero" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:the-sero" >The Sero</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/all-lifestyletv/?the-terrace" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:the-terrace" >The Terrace</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tv-accessories/all-tv-accessories/?frame" aria-selected="false" data-omni="Product:tv&audio:lifestyletv:frame_tv_accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:tv&audio:sound_bar" >삼성 사운드바</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/audio-devices/Sound-bar/" aria-selected="false" data-omni="Product:tv&audio:sound_bar:Recommand_Product" >추천 삼성 사운드바</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/samsung-audio/all-samsung-audio/" aria-selected="false" data-omni="Product:tv&audio:sound_bar:all-samsung-audio" >전체 삼성 사운드바</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/samsung-audio/all-samsung-audio/?Q-Series-Soundbar" aria-selected="false" data-omni="Product:tv&audio:sound_bar:Q-Series-Soundbar" >Q시리즈 사운드바</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/samsung-audio/all-samsung-audio/?S-Series-Soundbar" aria-selected="false" data-omni="Product:tv&audio:sound_bar:S-Series-Soundbar" >S시리즈 사운드바</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/samsung-audio/all-samsung-audio/?T-Series-Soundbar" aria-selected="false" data-omni="Product:tv&audio:sound_bar:T-Series-Soundbar" >T시리즈 사운드바</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/samsung-audio/all-samsung-audio/?A-Series-Soundbar" aria-selected="false" data-omni="Product:tv&audio:sound_bar:A-Series-Soundbar" >A시리즈 사운드바</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/samsung-audio/all-samsung-audio/?Soundbar" aria-selected="false" data-omni="Product:tv&audio:sound_bar:Soundbar" >일반 사운드바</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/samsung-audio/all-samsung-audio/?Sound-Tower" aria-selected="false" data-omni="Product:tv&audio:sound_bar:Sound-Tower" >사운드타워</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:tv&audio:av_lifestyle" >라이프스타일 오디오</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/#lifestyle_audio" aria-selected="false" data-omni="Product:tv&audio:av_lifestyle:Recommended product" >추천 라이프스타일 오디오</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman-life-style-audio/all-harman-life-style-audio/" aria-selected="false" data-omni="Product:tv&audio:av_lifestyle:all-life-style-audio" >전체 라이프스타일 오디오</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/jbl/" aria-selected="false" data-omni="Product:tv&audio:av_lifestyle:JBL" >JBL</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/akg/" aria-selected="false" data-omni="Product:tv&audio:av_lifestyle:AKG" >AKG</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/harman-kardon/" aria-selected="false" data-omni="Product:tv&audio:av_lifestyle:harman/kardon" >harman/kardon</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:tv&audio:highend" >하이엔드 오디오</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/#highend_audio" aria-selected="false" data-omni="Product:tv&audio:highend:Recommended product" >추천 하이엔드 오디오</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/mark-levinson/" aria-selected="false" data-omni="Product:tv&audio:highend:Mark Levinson" >Mark Levinson</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/jbl-highend/" aria-selected="false" data-omni="Product:tv&audio:highend:JBL SYNTHESIS" >JBL SYNTHESIS</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/arcam/" aria-selected="false" data-omni="Product:tv&audio:highend:ARCAM" >ARCAM</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/revel/" aria-selected="false" data-omni="Product:tv&audio:highend:REVEL" >REVEL</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/lexicon/" aria-selected="false" data-omni="Product:tv&audio:highend:LEXICON" >LEXICON</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:tv&audio:Recommended-content" >추천 콘텐츠</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/qled-tv/highlights/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:Neo QLED 8K" >2021년 신제품 Neo QLED의 모든 것</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/the-serif/highlights/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:The Serif " >The Serif 제품 정보</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/lifestyletv/the-frame/highlights/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:The Frame" >The Frame 제품 정보</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/awards/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:awards" >한눈에 보는 수상 제품</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/videogallery/?group=tv" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:Product video at a glance" >한눈에 보는 제품 영상</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/super-big-tv/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content: The impression that grows as much as the larger screen" >커진 화면만큼 커지는 감동</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/tv-buying-guide/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:Everything on TV you need to know before buying" >구매 전 꼭 알아야 할 TV의 모든 것</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/tvs/smart-tv/highlights/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:More convenient life with smarter TV" >스마트 TV에 인텔리전트를 더하다</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/audio-devices/q-series-soundbar/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:q-series-soundbar" >극강의 서라운드 Q시리즈 사운드바</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman/smartadvice-lifestyle/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:smartadvice-lifestyle" >오디오 스마트 추천 더 알아보기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/harman-review-magazine/anc-review/" aria-selected="false" data-omni="Product:tv&audio:Recommended-content:anc-review" >노이즈 캔슬링 제품 전문 리뷰</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:tv&audio:experience" >체험존</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/bespoke/home/experience/" aria-selected="false" data-omni="Product:tv&audio:experience:Decorating the house" >BESPOKE - 나답게 집꾸</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/new-release/thefreestyle/pre-order/" data-omni="feature image:Product:The Freestyle 예약판매:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/48b02d40-a769-4cfb-9de9-b31b36787247.jpg?$ORIGIN_JPG$" alt="The Freestyle 예약판매">
+																</div>
+															<p class="txt">The Freestyle 예약판매</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/new-release/thefreestyle/pre-order/" data-omni="feature image:Product:View Benefit:learn more" class="link">
+			                        								<span>구매 혜택 보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:bespoke" >BESPOKE</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/bespoke/home/" aria-selected="false" data-omni="Product:bespoke:bespoke-home" >BESPOKE의 모든 것</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespokestudio/" aria-selected="false" data-omni="Product:bespoke:bespokestudio" >BESPOKE 제작소</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-refrigerators%20+bespoke-kimchi-refrigerators+bespoke-cube-refrigerators" aria-selected="false" data-omni="Product:bespoke:bespoke-new-benefit" >BESPOKE 냉장고/김치냉장고</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-water-purifier" aria-selected="false" data-omni="Product:bespoke:BESPOKE water-purifier" >BESPOKE 정수기</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-dishwashers" aria-selected="false" data-omni="Product:bespoke:bespoke_dishwasher" >BESPOKE 식기세척기</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-inductions" aria-selected="false" data-omni="Product:bespoke:BESPOKE-induction" >BESPOKE 인덕션</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-ovens+bespoke-microwaves+bespoke-qooker" aria-selected="false" data-omni="Product:bespoke:bespoke-ovens&microwaves" >BESPOKE 직화오븐/전자레인지/큐커</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-washing-machines+bespoke-dryers" aria-selected="false" data-omni="Product:bespoke:BESPOKE-GRANDE-AI" >BESPOKE 그랑데 AI</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-airdresser+bespoke-shoedresser" aria-selected="false" data-omni="Product:bespoke:bespoke-airdresser/shoedresser" >BESPOKE 에어드레서/슈드레서</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-air-conditioners" aria-selected="false" data-omni="Product:bespoke:bespoke-conditioners" >BESPOKE 무풍에어컨</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-air-cleaner" aria-selected="false" data-omni="Product:bespoke:BESPOKE CUBE™ Air" >BESPOKE 큐브™ Air</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/bespoke/all-bespoke/?bespoke-vacuum-cleaners" aria-selected="false" data-omni="Product:bespoke:BESPOKE JET/JETBOT/SLIM" >BESPOKE 제트/제트 봇/슬림</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/bespoke/home/experience/" data-omni="feature image:Product:BESPOKE Decorating the house:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/2e473df8-ecf3-4c82-b7b6-58a722ab6ac9.jpg?$ORIGIN_JPG$" alt="BESPOKE 나답게 집꾸 체험존">
+																</div>
+															<p class="txt">BESPOKE 나답게 집꾸 체험존</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/bespoke/home/experience/" data-omni="feature image:Product:BESPOKE Decorating the house:learn more" class="link">
+			                        								<span>집꾸 시작하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances" >주방가전</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators" >냉장고</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/bespoke/" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators: Recommended refrigerator" >추천 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/all-refrigerators/" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:refrigerators" >전체 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/all-refrigerators/?chefcollection" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:chefcollection" >셰프컬렉션 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/all-refrigerators/?bespoke" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:bespoke" >BESPOKE 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/all-refrigerators/?bespoke-familyhub" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:BESPOKE Refrigerator Familyhub" >BESPOKE 냉장고 패밀리허브</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/all-refrigerators/?bespoke-cube" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:BESPOKE cube refrigerators" >BESPOKE 큐브 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/all-refrigerators/?side-by-side" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:side-by-side" >양문형 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/all-refrigerators/?refrigerators" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:refrigerators" >일반 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/refrigerators/all-refrigerators/?business-refrigerator" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:refrigerators" >업소용 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kitchen-accessories/all-kitchen-accessories/?refrigerator-accessories" aria-selected="false" data-omni="Product:kitchen-appliances:refrigerators:accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:kimchi-refrigerators" >김치냉장고</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kimchi-refrigerators/" aria-selected="false" data-omni="Product:kitchen-appliances:kimchi-refrigerators:kimchi-refrigerators learn more" >추천 김치냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kimchi-refrigerators/all-kimchi-refrigerators/" aria-selected="false" data-omni="Product:kitchen-appliances:kimchi-refrigerators:view all" >전체 김치냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kimchi-refrigerators/all-kimchi-refrigerators/?bespoke" aria-selected="false" data-omni="Product:kitchen-appliances:kimchi-refrigerators:bespoke" >BESPOKE 김치플러스</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kimchi-refrigerators/all-kimchi-refrigerators/?stand" aria-selected="false" data-omni="Product:kitchen-appliances:kimchi-refrigerators:stand-4doors-kimchiplus" >김치플러스 스탠드형</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kimchi-refrigerators/all-kimchi-refrigerators/?covered" aria-selected="false" data-omni="Product:kitchen-appliances:kimchi-refrigerators:kimchiplus_cover" >김치플러스 뚜껑형</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kitchen-accessories/all-kitchen-accessories/?kimchirefrigerators-accessories" aria-selected="false" data-omni="Product:kitchen-appliances:kimchi-refrigerators:accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:Water-purifier" >정수기</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/water-purifier/" aria-selected="false" data-omni="Product:kitchen-appliances:Water-purifier:Recommended water purifier" >추천 정수기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/water-purifier/all-water-purifier/" aria-selected="false" data-omni="Product:kitchen-appliances:Water-purifier:all-water-purifier" >전체 정수기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kitchen-accessories/all-kitchen-accessories/?water-purifier-accessories" aria-selected="false" data-omni="Product:kitchen-appliances:Water-purifier:accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:dishwashers" >식기세척기</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dishwashers/" aria-selected="false" data-omni="Product:kitchen-appliances:dishwashers:Recommended product" >추천 식기세척기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dishwashers/all-dishwashers/" aria-selected="false" data-omni="Product:kitchen-appliances:dishwashers:view all" >전체 식기세척기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dishwashers/all-dishwashers/?bespoke" aria-selected="false" data-omni="Product:kitchen-appliances:dishwashers:builtin" >BESPOKE 식기세척기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dishwashers/all-dishwashers/?general" aria-selected="false" data-omni="Product:kitchen-appliances:dishwashers:dishwashers" >일반 식기세척기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kitchen-accessories/all-kitchen-accessories/?dishwashers-accessories" aria-selected="false" data-omni="Product:kitchen-appliances:dishwashers:accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range" >전기레인지</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/electric-range/" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:Recommended product" >추천 전기레인지</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/electric-range/all-electric-range/" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:view all" >전체 전기레인지</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/electric-range/all-electric-range/?chef-collection-induction" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:chef-collection-induction" >셰프컬렉션 인덕션</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/electric-range/all-electric-range/?BESPOKE-induction" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:BESPOKE-induction" >BESPOKE 인덕션</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/electric-range/all-electric-range/?induction" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:induction" >인덕션</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/electric-range/all-electric-range/?theplate-induction" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:induction-theplate" >더 플레이트 인덕션</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/electric-range/all-electric-range/?hybrid" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:hybrid" >하이브리드</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/electric-range/all-electric-range/?radiant" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:radiant" >라디언트</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kitchen-accessories/all-kitchen-accessories/?electricrange-accessories" aria-selected="false" data-omni="Product:kitchen-appliances:electric-range:accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:cooking-appliances" >오븐/전자레인지</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/cooking-appliances/bespoke-oven/" aria-selected="false" data-omni="Product:kitchen-appliances:cooking-appliances:Recommended product" >추천 오븐/전자레인지</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/cooking-appliances/all-cooking-appliances/" aria-selected="false" data-omni="Product:kitchen-appliances:cooking-appliances:view all" >전체 오븐/전자레인지</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/cooking-appliances/all-cooking-appliances/?bespoke-ovens" aria-selected="false" data-omni="Product:kitchen-appliances:cooking-appliances:bespoke-ovens" >BESPOKE 직화오븐</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/cooking-appliances/all-cooking-appliances/?bespoke-microwaves" aria-selected="false" data-omni="Product:kitchen-appliances:cooking-appliances:bespoke-microwaves" >BESPOKE 전자레인지</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/cooking-appliances/all-cooking-appliances/?microwaves" aria-selected="false" data-omni="Product:kitchen-appliances:cooking-appliances:microwaves" >일반 전자레인지</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:qooker" >큐커</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/qooker/bespoke-qooker/" aria-selected="false" data-omni="Product:kitchen-appliances:qooker:suggestion qooker" >추천 큐커</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/qooker/all-qooker/" aria-selected="false" data-omni="Product:kitchen-appliances:qooker:All qooker" >전체 큐커</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:builtin" >빌트인 가전</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/builtin/all-builtin/" aria-selected="false" data-omni="Product:kitchen-appliances:builtin:view all" >전체 빌트인 가전</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/builtin/all-builtin/?chef-collection-built-in" aria-selected="false" data-omni="Product:kitchen-appliances:builtin:chef-collection-built-in" >셰프컬렉션 빌트인</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/builtin/all-builtin/?refrigerators" aria-selected="false" data-omni="Product:kitchen-appliances:builtin:builtin-refrigerators" >빌트인 냉장고</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/builtin/all-builtin/?electric-range" aria-selected="false" data-omni="Product:kitchen-appliances:builtin:Built-in electric range" >빌트인 전기레인지</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/builtin/all-builtin/?dish-washer" aria-selected="false" data-omni="Product:kitchen-appliances:builtin:builtin-dish-washer" >빌트인 식기세척기</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:kitchen-appliances" >주방가전 액세서리</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/kitchen-accessories/all-kitchen-accessories/" aria-selected="false" data-omni="Product:kitchen-appliances:kitchen-appliances:kitchen-accessories" >전체 주방가전 액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="https://www.samsung.com/sec/Samsung-Care-Plus/CE/" aria-selected="false" data-omni="Product:kitchen-appliances:Samsung Care+" >Samsung Care+</a>
+																</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:Experience-Zone" >체험존</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/bespoke/home/experience/" aria-selected="false" data-omni="Product:kitchen-appliances:Experience-Zone:Decorating the house" >BESPOKE - 나답게 집꾸</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:kitchen-appliances:recommend" >추천 콘텐츠</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/awards/" aria-selected="false" data-omni="Product:kitchen-appliances:recommend:awards" >한눈에 보는 수상 제품</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/videogallery/?group=Kitchen-appliances" aria-selected="false" data-omni="Product:kitchen-appliances:recommend:Product video at a glance" >한눈에 보는 제품 영상</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/explore/health/self-care/a-showcase-of-freshness/" aria-selected="false" data-omni="Product:kitchen-appliances:recommend:showcase of freshness" >신선함을 그대로 건강함을 그대로</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/explore/health/self-care/cooking-less-effort-and-more-fun/" aria-selected="false" data-omni="Product:kitchen-appliances:recommend:Easy dishes that make me happy" >나를 행복하게 만드는 쉬운 요리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/store-model/bespoke-qooker/" data-omni="feature image:Product:View Benefit:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/fe2cf097-ac77-4ccc-bb63-175616e82d1d.jpg?$ORIGIN_JPG$" alt="BESPOKE 큐커">
+																</div>
+															<p class="txt">BESPOKE 큐커</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/store-model/bespoke-qooker/" data-omni="feature image:Product:View Benefit:learn more" class="link">
+			                        								<span>구매 혜택 보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:living" >생활가전</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:washing-machines" >세탁기</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/washing-machines/" aria-selected="false" data-omni="Product:living:washing-machines:Recommended product" >추천 세탁기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/washing-machines/all-washing-machines/" aria-selected="false" data-omni="Product:living:washing-machines:view all" >전체 세탁기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/washing-machines/all-washing-machines/?bespoke-grande-ai" aria-selected="false" data-omni="Product:living:washing-machines:BESPOKE Grande washer AI" >BESPOKE 그랑데 세탁기 AI</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/washing-machines/all-washing-machines/?grande-ai" aria-selected="false" data-omni="Product:living:washing-machines:grande-ai" >그랑데 세탁기 AI</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/washing-machines/all-washing-machines/?grande" aria-selected="false" data-omni="Product:living:washing-machines:grande" >그랑데 세탁기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/washing-machines/all-washing-machines/?bubble-shot+addwashing-bubble-shot" aria-selected="false" data-omni="Product:living:washing-machines:addwashing-bubble-shot" >드럼 세탁기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/washing-machines/all-washing-machines/?active-wash-wobble" aria-selected="false" data-omni="Product:living:washing-machines:active-wash-wobble" >그랑데 통버블/전자동</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/washing-machines/all-washing-machines/?babylove-washer" aria-selected="false" data-omni="Product:living:washing-machines:babylove-washer" >소형 세탁기</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:dryers" >건조기</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dryers/" aria-selected="false" data-omni="Product:living:dryers:Recommended product" >추천 건조기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dryers/all-dryers/" aria-selected="false" data-omni="Product:living:dryers:view all" >전체 건조기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dryers/all-dryers/?bespoke-grande-ai" aria-selected="false" data-omni="Product:living:dryers:BESPOKE Grande Dryer AI" >BESPOKE 그랑데 건조기 AI</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dryers/all-dryers/?grande-ai" aria-selected="false" data-omni="Product:living:dryers:grande-ai" >그랑데 건조기 AI</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dryers/all-dryers/?grande" aria-selected="false" data-omni="Product:living:dryers:grande dryers" >그랑데 건조기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/dryers/all-dryers/?9-kg" aria-selected="false" data-omni="Product:living:dryers:9kg-dryers" >건조기 9kg</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?dryer-top-kit" aria-selected="false" data-omni="Product:living:dryers:top-kit" >상단 설치 키트</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:airdresser" >에어드레서 </a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/airdresser/" aria-selected="false" data-omni="Product:living:airdresser:Recommended product" >추천 에어드레서</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/airdresser/all-airdresser/" aria-selected="false" data-omni="Product:living:airdresser:airdresser" >전체 에어드레서</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/airdresser/all-airdresser/?bespoke-airdresser" aria-selected="false" data-omni="Product:living:airdresser:bespoke-airdresser" >BESPOKE 에어드레서</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/airdresser/all-airdresser/?airdresser" aria-selected="false" data-omni="Product:living:airdresser:airdresser" >에어드레서</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?airdresser-accessories" aria-selected="false" data-omni="Product:living:airdresser:accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:Shoedresser" >슈드레서</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/shoedresser/bespoke-shoedresser/" aria-selected="false" data-omni="Product:living:Shoedresser:Recommendation shoedresser" >추천 슈드레서</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/shoedresser/all-shoedresser/" aria-selected="false" data-omni="Product:living:Shoedresser:all-shoedresser" >전체 슈드레서</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/shoedresser/all-shoedresser/" aria-selected="false" data-omni="Product:living:Shoedresser:BESPOKE Shoedresser" >BESPOKE 슈드레서</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:air-conditioners" >에어컨</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-conditioners/gallery/" aria-selected="false" data-omni="Product:living:air-conditioners:Recommended product" >추천 에어컨</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-conditioners/all-air-conditioners/" aria-selected="false" data-omni="Product:living:air-conditioners:view all" >전체 에어컨</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-conditioners/all-air-conditioners/?multi-type" aria-selected="false" data-omni="Product:living:air-conditioners:multi-type" >홈멀티 에어컨</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-conditioners/all-air-conditioners/?floorstanding" aria-selected="false" data-omni="Product:living:air-conditioners:floorstanding" >스탠드 에어컨</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-conditioners/all-air-conditioners/?wall-mount" aria-selected="false" data-omni="Product:living:air-conditioners:wall-mount" >벽걸이 에어컨</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-conditioners/all-air-conditioners/?window-type" aria-selected="false" data-omni="Product:living:air-conditioners:Window " >창문형 에어컨</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-conditioners/all-air-conditioners/?3multi-type" aria-selected="false" data-omni="Product:living:air-conditioners:3multi-type" >무풍에어컨 멀티</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?air-conditioners-accessories" aria-selected="false" data-omni="Product:living:air-conditioners:air-conditioners-accessory" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:air-cleaners" >공기청정기</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-cleaners/bespoke-cube/" aria-selected="false" data-omni="Product:living:air-cleaners:Recommended product" >추천 공기청정기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-cleaner/all-air-cleaner/" aria-selected="false" data-omni="Product:living:air-cleaners:view all" >전체 공기청정기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-cleaner/all-air-cleaner/?bespoke-cube-air" aria-selected="false" data-omni="Product:living:air-cleaners:BESPOKE CUBE™ Air" >BESPOKE 큐브™ Air</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-cleaner/all-air-cleaner/?cube" aria-selected="false" data-omni="Product:living:air-cleaners:cube" >무풍큐브</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/air-cleaner/all-air-cleaner/?blue-sky" aria-selected="false" data-omni="Product:living:air-cleaners:blue-sky" >블루스카이</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?aircleaner-accessories" aria-selected="false" data-omni="Product:living:air-cleaners:filter" >필터</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:vacuum-cleaners" >청소기</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/bespoke-jet/" aria-selected="false" data-omni="Product:living:vacuum-cleaners:Recommended product" >추천 청소기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/all-vacuum-cleaners/" aria-selected="false" data-omni="Product:living:vacuum-cleaners:view all" >전체 청소기</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/all-vacuum-cleaners/?bespoke-jet" aria-selected="false" data-omni="Product:living:vacuum-cleaners:BESPOKE JET" >BESPOKE 제트</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/all-vacuum-cleaners/?bespoke-jetbot" aria-selected="false" data-omni="Product:living:vacuum-cleaners:BESPOKE JETBOT" >BESPOKE 제트 봇</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/all-vacuum-cleaners/?bespoke-slim" aria-selected="false" data-omni="Product:living:vacuum-cleaners:BESPOKE slim" >BESPOKE 슬림</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/all-vacuum-cleaners/?jet" aria-selected="false" data-omni="Product:living:vacuum-cleaners:jet" >제트</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/all-vacuum-cleaners/?powerbot" aria-selected="false" data-omni="Product:living:vacuum-cleaners:powerbot" >파워봇</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/all-vacuum-cleaners/?powerstick" aria-selected="false" data-omni="Product:living:vacuum-cleaners:powerstick" >파워스틱</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/vacuum-cleaners/all-vacuum-cleaners/?POWERmotion" aria-selected="false" data-omni="Product:living:vacuum-cleaners:powermotion" >파워모션</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?vacuum-accessories" aria-selected="false" data-omni="Product:living:vacuum-cleaners:accessories" >액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="javascript:;" class="outlink " title="새창으로 열림" onclick="window.open('https://www.samsung.com/sec/business/system-air-conditioners/');"
+																		aria-selected="false" data-omni="Product:living:System-air-conditioner">시스템 에어컨</a>
+																</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:small-appliances" >소형가전</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/small-appliances/all-small-appliances/" aria-selected="false" data-omni="Product:living:small-appliances:view all" >전체 소형가전</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/small-appliances/all-small-appliances/?smart-beam" aria-selected="false" data-omni="Product:living:small-appliances:smart-beam" >스마트빔</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/small-appliances/all-small-appliances/?bidet" aria-selected="false" data-omni="Product:living:small-appliances:bidet" >비데</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/small-appliances/all-small-appliances/?digital-doorlock" aria-selected="false" data-omni="Product:living:small-appliances:digital-doorlock" >디지털 도어록</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/small-appliances/all-small-appliances/?led-desk-lamp" aria-selected="false" data-omni="Product:living:small-appliances:LED Desk Lamp" >LED 데스크 램프</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/small-appliances/all-small-appliances/?electric-fan" aria-selected="false" data-omni="Product:living:small-appliances:electricfan" >선풍기</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:led-lamp" >LED 조명</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/led-lamp/all-led-lamp/" aria-selected="false" data-omni="Product:living:led-lamp:view all" >전체 LED 조명</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/led-lamp/all-led-lamp/" aria-selected="false" data-omni="Product:living:led-lamp:livingroomlamp" >홈 LED(거실/방등)</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/led-lamp/all-led-lamp/?KitchenBathroom" aria-selected="false" data-omni="Product:living:led-lamp:kitchenbathroom" >홈 LED(주방/욕실등)</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/led-lamp/all-led-lamp/?hallway" aria-selected="false" data-omni="Product:living:led-lamp:hallway" >홈 LED(현관/복도등)</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:living:living appliances-accessory" >생활가전 액세서리</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/" aria-selected="false" data-omni="Product:living:living appliances-accessory:All Apparel Appliances Accessories" >전체 생활가전 액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="https://www.samsung.com/sec/Samsung-Care-Plus/CE/" aria-selected="false" data-omni="Product:living:Samsung Care+" >Samsung Care+</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/bespoke/home/experience/" data-omni="feature image:Product:BESPOKE Decorating the house:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/3b68b31f-3017-4d35-b183-1a2566cc3dda.jpg?$ORIGIN_JPG$" alt="생활가전">
+																</div>
+															<p class="txt">BESPOKE 나답게 집꾸 체험존</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/bespoke/home/experience/" data-omni="feature image:Product:BESPOKE Decorating the house:learn more" class="link">
+			                        								<span>집꾸 시작하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:it" >PC/주변기기</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="#" aria-selected="false" data-omni="Product:it:PC" >PC</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/pc/" aria-selected="false" data-omni="Product:it:PC:Recommended product" >추천 PC</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/galaxybook/all-galaxybook/" aria-selected="false" data-omni="Product:it:PC:galaxybook" >갤럭시 북</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/desktop/all-desktop/" aria-selected="false" data-omni="Product:it:PC:desktop" >데스크탑</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/pc-accessories/all-pc-accessories/" aria-selected="false" data-omni="Product:it:PC:pc-accessories" >PC 액세서리</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:it:monitors" >모니터</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/" aria-selected="false" data-omni="Product:it:monitors:monitors learn more" >추천 모니터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/all-monitors/" aria-selected="false" data-omni="Product:it:monitors:view-all" >전체 모니터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/all-monitors/?high-resolution-monitors" aria-selected="false" data-omni="Product:it:monitors:high-resolution-monitors" >고해상도 모니터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/smart-monitor/" aria-selected="false" data-omni="Product:it:monitors:smart-moniter" >스마트 모니터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/all-monitors/?gaming-monitors" aria-selected="false" data-omni="Product:it:monitors:gaming-monitors" >게이밍 모니터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/all-monitors/?led-monitors" aria-selected="false" data-omni="Product:it:monitors:monitors" >일반 모니터</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:it:printers" >프린터</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/printers/" aria-selected="false" data-omni="Product:it:printers:Recommended product" >추천 프린터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/printers/all-printers/" aria-selected="false" data-omni="Product:it:printers:view-all" >전체 프린터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/printers/all-printers/?color-laser-multifunction+laser-multifunction" aria-selected="false" data-omni="Product:it:printers:laser-multifunction" >레이저 프린터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/printers/all-printers/?genuine-Infinite-Inkjet+inkjet-multifunction" aria-selected="false" data-omni="Product:it:printers:inkjet-multifunction" >잉크젯 프린터</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/printer-supplies/all-printer-supplies/" aria-selected="false" data-omni="Product:it:printers:printer-supplies" >토너/잉크</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/printers/printer-supplies/" aria-selected="false" data-omni="Product:it:printers:Browse Toner Ink" >토너/잉크 찾아보기</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:it:memory-storage" >메모리/스토리지</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/memory-storage/" aria-selected="false" data-omni="Product:it:memory-storage:Recommended product" >추천 메모리/스토리지</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/memory-storage/all-memory-storage/" aria-selected="false" data-omni="Product:it:memory-storage:view-all" >전체 메모리/스토리지</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/memory-storage/all-memory-storage/?ssd" aria-selected="false" data-omni="Product:it:memory-storage:ssd" >SSD</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/memory-storage/all-memory-storage/?portable-ssd" aria-selected="false" data-omni="Product:it:memory-storage:portable-ssd" >포터블 SSD</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/memory-storage/all-memory-storage/?memory-card" aria-selected="false" data-omni="Product:it:memory-storage:memory-card" >메모리카드</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/memory-storage/all-memory-storage/?usb-flash-drive" aria-selected="false" data-omni="Product:it:memory-storage:usb-flash-drive" >USB Flash Drive</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/memory-storage/all-memory-storage/?ex-hdd" aria-selected="false" data-omni="Product:it:memory-storage:ex-hdd" >외장 HDD</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="Product:it:Recommended" >추천 콘텐츠</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/awards/" aria-selected="false" data-omni="Product:it:Recommended:Awarded products at a glance" >한눈에 보는 수상 제품</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/videogallery/?group=it" aria-selected="false" data-omni="Product:it:Recommended:Product video" >한눈에 보는 제품 영상</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/why-smart-monitor/" aria-selected="false" data-omni="Product:it:Recommended:Why Smart Monitar" >스마트모니터로 여는 새로운 라이프스타일</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/smart_monitors/" aria-selected="false" data-omni="Product:it:Recommended:Smart Monitar" >모든 일상을 만족시킬 스마트모니터</a>
+																				</li>
+																	<li >
+																		<a href="http://design.samsung.com/kr/contents/odyssey-monitor/?utm_source=scom&utm_medium=link&utm_campaign=vd&utm_content=kr" aria-selected="false" data-omni="Product:it:Recommended:Odyssey Expedition Adventure" >오디세이 원정대의 모험</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/monitors/odyssey" aria-selected="false" data-omni="Product:it:Recommended:Gaming monitor Odyssey" >게이밍 모니터 Odyssey</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/event/galaxybookacademy/" data-omni="feature image:Product:See purchase benefits:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/b33efe05-0de8-48d2-9ee9-7069243e155a.jpg?$ORIGIN_JPG$" alt="See purchase benefits">
+																</div>
+															<p class="txt">2022 New Galaxy Book Academy</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/event/galaxybookacademy/" data-omni="feature image:Product:Request Alram:learn more" class="link">
+			                        								<span>구매 혜택 보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:SmartHome" >스마트홈</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/smarthome/" aria-selected="false" data-omni="Product:SmartHome:recommended smarthome" >추천 스마트홈</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/SmartThings/all-SmartThings/" aria-selected="false" data-omni="Product:SmartHome:all-SmartThings" >스마트싱스 파트너 제품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/apps/smartthings/" aria-selected="false" data-omni="Product:SmartHome:app&service" >스마트싱스 앱 & 서비스</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/youmake/" data-omni="feature image:Product: #YouMake 프로젝트:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/25e5b827-51ef-47f0-9d76-f5982d86a89d.jpg?$ORIGIN_JPG$" alt=" #YouMake 프로젝트">
+																</div>
+															<p class="txt"> #YouMake 프로젝트</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/youmake/" data-omni="feature image:Product:View Benefit:learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="Product:expendables" >소모품</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/mobile-accessories/all-mobile-accessories/?smartphones+charger-n-cable" aria-selected="false" data-omni="Product:expendables:mobile-accessories" >스마트폰 소모품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?aircleaner-supplies" aria-selected="false" data-omni="Product:expendables:aircleaner-supplies" >공기청정기 소모품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?air-conditioners-supplies" aria-selected="false" data-omni="Product:expendables:air-conditioners-supplies" >에어컨 소모품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?washing-machines-supplies" aria-selected="false" data-omni="Product:expendables:washingmachines-supplies" >세탁기 소모품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?dryers-airdresser-supplies" aria-selected="false" data-omni="Product:expendables:airdresser-accessories" >건조기/에어드레서 소모품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/kitchen-accessories/all-kitchen-accessories/?refrigerator-accessories+kimchirefrigerators-accessories" aria-selected="false" data-omni="Product:expendables:kitchen-accessories" >냉장고 소모품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/living-accessories/all-living-accessories/?vacuum-supplies" aria-selected="false" data-omni="Product:expendables:vacuum-supplies" >청소기 소모품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/printer-supplies/all-printer-supplies/" aria-selected="false" data-omni="Product:expendables:printer-supplies" >프린터 소모품</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/templateEvent/2020_Supplies/" data-omni="feature image:Product:2020_Supplies:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/14de5e3e-dd1f-43ef-b340-d33066ba6dcb.jpg?$ORIGIN_JPG$" alt="소모품 통합 기획전">
+																</div>
+															<p class="txt">소모품 통합 기획전</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/templateEvent/2020_Supplies/" data-omni="feature image:Product:2020_Supplies:learn more" class="link">
+			                        								<span>구매 혜택 보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" aria-controls="700000113-menu" aria-selected="false" data-omni="promotion" >기획전</a>
+							<div class="gnb2depth">
+								<div class="inner">
+									<ul class="list">
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:promotion learn more" >기획전 모두보기</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/event/indexExhibitionCollection/" aria-selected="false" data-omni="promotion:promotion learn more:1" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/event/salefesta2022/buy" data-omni="feature image:promotion:공동 구매하기:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/dce810c3-32b2-40a9-b50e-436e9b192bd8.png?$ORIGIN_JPG$" alt="삼성전자 세일 페스타">
+																</div>
+															<p class="txt">삼성전자 세일 페스타</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/event/salefesta2022/buy" data-omni="feature image:promotion:삼성전자 세일 페스타:learn more" class="link">
+			                        								<span>공동 구매하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:samsung only" >삼성닷컴 단독</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/event/indexExhibitionCollection/?eventTypeCd=10" aria-selected="false" data-omni="promotion:samsung only:1" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip3/" data-omni="feature image:promotion:Galaxy Bespoke:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/fd492695-05bf-4808-a038-25d37261a4d4.png?$ORIGIN_JPG$" alt="갤럭시 Z 플립3 비스포크 스튜디오">
+																</div>
+															<p class="txt">갤럭시 Z 플립3 비스포크 스튜디오</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip3/" data-omni="feature image:promotion:Galaxy Bespoke:learn more" class="link">
+			                        								<span>나만의 Z 플립3 디자인 하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:groupdeal" >공동구매</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/event/salefesta2022/buy" aria-selected="false" data-omni="promotion:groupdeal:groupdeal" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/event/salefesta2022/buy" data-omni="feature image:promotion:삼성전자 세일 페스타:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/bec871ac-faf4-4c51-8543-e8646649e86b.png?$ORIGIN_JPG$" alt="삼성전자 세일 페스타">
+																</div>
+															<p class="txt">삼성전자 세일 페스타</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/event/salefesta2022/buy" data-omni="feature image:promotion:삼성전자 세일 페스타:learn more" class="link">
+			                        								<span>공동 구매하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:promotionwedding-honeymoon-shop" >웨딩 ∙ 신혼샵</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/store-model/weddingshop" aria-selected="false" data-omni="promotion:promotionwedding-honeymoon-shop:promotion-learn-more" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/store-model/weddingshop/" data-omni="feature image:promotion:promotionwedding-honeymoon-shop:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/d6f7ccde-e2ca-4fd4-92da-f54b5626ba8f.jpg?$ORIGIN_JPG$" alt="promotionwedding-honeymoon-shop">
+																</div>
+															<p class="txt">웨딩 ∙ 신혼샵</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/store-model/weddingshop/" data-omni="feature image:promotion:promotionwedding-honeymoon-shop:learn more" class="link">
+			                        								<span>인증하고 혜택 받기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:Galaxy_Campus_Store" >갤럭시 캠퍼스 스토어</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/galaxycampus/" aria-selected="false" data-omni="promotion:Galaxy_Campus_Store:View more" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/galaxycampus/" data-omni="feature image:promotion:Learn more:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/e781e980-68fe-4c7e-9619-0a4636282555.jpg?$ORIGIN_JPG$" alt="갤럭시 캠퍼스 스토어">
+																</div>
+															<p class="txt">갤럭시 캠퍼스 스토어</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/galaxycampus/" data-omni="feature image:promotion:Learn more:learn more" class="link">
+			                        								<span>자세히 보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:outlets" >아울렛</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/outlets/all-outlets" aria-selected="false" data-omni="promotion:outlets:outlets" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/outlets/all-outlets" data-omni="feature image:promotion::learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/f0364695-948d-44cb-84ae-025db5ad468d.jpg?$ORIGIN_JPG$" alt="아울렛">
+																</div>
+															<p class="txt">삼성닷컴 아울렛 오픈</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/outlets/all-outlets" data-omni="feature image:promotion::learn more" class="link">
+			                        								<span>구매하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:benefitzone" >혜택존</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/eventList/benefitzone/" aria-selected="false" data-omni="promotion:benefitzone:member-benefit" >닷컴 회원 혜택</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/eventList/benefitzone-point/" aria-selected="false" data-omni="promotion:benefitzone:benefitzone_point" >포인트 혜택</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/eventList/benefitzone-card/" aria-selected="false" data-omni="promotion:benefitzone:benefitzone_card" >카드 혜택</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip3/" data-omni="feature image:promotion:Galaxy Bespoke:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/61e73539-ee2a-468b-a0f5-263b69086ef8.png?$ORIGIN_JPG$" alt="갤럭시 Z 플립3 비스포크 스튜디오">
+																</div>
+															<p class="txt">갤럭시 Z 플립3 비스포크 스튜디오</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/mobile/galaxy-bespoke/galaxy-z-flip3/" data-omni="feature image:promotion:Galaxy Bespoke:learn more" class="link">
+			                        								<span>나만의 Z 플립3 디자인 하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:Event Zone" >이벤트존</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/event/indexExhibitionCollection/?eventTypeCd=90" aria-selected="false" data-omni="promotion:Event Zone:All View" >모두보기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/event/galaxy-z/galaxystudio/" data-omni="feature image:promotion:Event In:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/c75d1ef7-7281-4964-8161-dacdfd157bba.jpg?$ORIGIN_JPG$" alt="갤럭시 스튜디오">
+																</div>
+															<p class="txt">갤럭시 스튜디오</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/event/galaxy-z/galaxystudio/" data-omni="feature image:promotion:Event In:learn more" class="link">
+			                        								<span>입장하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:HomeFitness" >홈 피트니스</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/homefitness/" aria-selected="false" data-omni="promotion:HomeFitness:HomeFitness" >바로가기</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/homefitness/subscribe/" aria-selected="false" data-omni="promotion:HomeFitness:Subscribe" >구독 서비스</a>
+																</li>
+													<li >
+														<a href="#" aria-selected="false" data-omni="promotion:HomeFitness:Program" >프로그램</a>
+														<div class="gnb4depth">
+																<ul>
+																	<li >
+																		<a href="https://www.samsung.com/sec/homefitness/program/" aria-selected="false" data-omni="promotion:HomeFitness:Program:All" >전체 프로그램</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/homefitness/program/schedule/" aria-selected="false" data-omni="promotion:HomeFitness:Program:Schedule" >편성표</a>
+																				</li>
+																	<li >
+																		<a href="https://www.samsung.com/sec/homefitness/program/trainer/" aria-selected="false" data-omni="promotion:HomeFitness:Program:Trainer introduce" >트레이너 소개</a>
+																				</li>
+																	</ul>
+															</div>
+														</li>
+													<li >
+														<a href="https://www.samsung.com/sec/homefitness/myhome/myhomeSsbInfo/" aria-selected="false" data-omni="promotion:HomeFitness:My HomeFitness" >나의 홈 피트니스</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/homefitness/" data-omni="feature image:promotion:Start Homefitness:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/a0900b14-6f47-4440-b176-668d83b16153.jpg?$ORIGIN_JPG$" alt="삼성 홈 피트니스">
+																</div>
+															<p class="txt">삼성 홈 피트니스</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/homefitness/" data-omni="feature image:promotion:Start Homefitness:learn more" class="link">
+			                        								<span>홈 피트니스 시작하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:Samsung.com Live" >삼성닷컴 Live</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/store-model/live/" aria-selected="false" data-omni="promotion:Samsung.com Live:Samsung.com Live" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/store-model/live/" data-omni="feature image:promotion:Replay Live:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/3083b165-2b2e-46d5-be69-51b990984f9e.jpg?$ORIGIN_JPG$" alt="삼성닷컴 Live 알림 신청">
+																</div>
+															<p class="txt">삼성닷컴 Live 알림 신청</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/store-model/live/" data-omni="feature image:promotion:Replay Live:learn more" class="link">
+			                        								<span>Live 알림 신청하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="promotion:mdchoiceshop" >MD 초이스 샵</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/all-mdchoiceshop/all-all-mdchoiceshop/" aria-selected="false" data-omni="promotion:mdchoiceshop:all-mdchoiceshop" >MD 초이스 샵 모두 보기</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/event/brand_collections/" aria-selected="false" data-omni="promotion:mdchoiceshop:mdchoiceshop_specialedition" >삼성닷컴 프렌즈 기획전</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/mds-hot-deals/all-mds-hot-deals/" aria-selected="false" data-omni="promotion:mdchoiceshop:mds-hot-deals" >소형가전 핫딜</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/premium-brands/all-premium-brands/" aria-selected="false" data-omni="promotion:mdchoiceshop:premium-brands" >프리미엄 브랜드</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/appliance-accessories/all-appliance-accessories/" aria-selected="false" data-omni="promotion:mdchoiceshop:appliance-accessories" >가전 액세서리</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/mobile-it-accessories/all-mobile-it-accessories/" aria-selected="false" data-omni="promotion:mdchoiceshop:mobile-it-accessories" >모바일/IT 액세서리</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/idea-goods/all-idea-goods/" aria-selected="false" data-omni="promotion:mdchoiceshop:idea-goods" >아이디어 상품</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/SmartThings/all-SmartThings/" aria-selected="false" data-omni="promotion:mdchoiceshop:all-SmartThings" >스마트싱스 파트너 제품</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/all-mdchoiceshop/all-all-mdchoiceshop/" data-omni="feature image:promotion:mdchoiceshop:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/222c29db-796d-4f23-a99d-cc5e90629208.png?$ORIGIN_JPG$" alt="MD 초이스 샵">
+																</div>
+															<p class="txt">MD 초이스 샵</p>
+														</a>
+														<div class="link-box flex--center">
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" aria-controls="700000114-menu" aria-selected="false" data-omni="story" >스토리</a>
+							<div class="gnb2depth">
+								<div class="inner">
+									<ul class="list">
+										<li >
+											<a href="#" aria-selected="false" data-omni="story:recommended story" >추천 스토리</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/explore/home/" aria-selected="false" data-omni="story:recommended story:story home" >스토리 HOME</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/explore/photography/" aria-selected="false" data-omni="story:recommended story:photography" >사진 & 영상 TIP</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/explore/entertainment/" aria-selected="false" data-omni="story:recommended story:entertainment" >엔터테인먼트</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/explore/health/" aria-selected="false" data-omni="story:recommended story:health" >건강</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/explore/productivity/" aria-selected="false" data-omni="story:recommended story:productivity" >다양한 활용</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:미래를 위한 동행 @ CES 2022:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/78432002-3bca-4787-9acb-8bcf5f29d991.jpg?$ORIGIN_JPG$" alt="미래를 위한 동행 @ CES 2022">
+																</div>
+															<p class="txt">미래를 위한 동행 @ CES 2022</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:미래를 위한 동행 @ CES 2022:learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="story:curation#" >큐레이션#</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/curated/the-perfect-gift/" aria-selected="false" data-omni="story:curation#:#The Perfect Gift" >#The Perfect Gift</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/curated/our-planet-first/" aria-selected="false" data-omni="story:curation#:#Our Planet First" >#Our Planet First</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/curated/work-from-home/" aria-selected="false" data-omni="story:curation#:#Work From Home" >#Work From Home</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/curated/game-on/" aria-selected="false" data-omni="story:curation#:#Game On" >#Game On</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:미래를 위한 동행 @ CES 2022:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/bb0c45a9-e156-4dc8-9452-3cc7a0547891.jpg?$ORIGIN_JPG$" alt="미래를 위한 동행 @ CES 2022">
+																</div>
+															<p class="txt">미래를 위한 동행 @ CES 2022</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story: Learn more:learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="story:brande" >브랜드</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/explore/samsung-within/" aria-selected="false" data-omni="story:brande:Samsung Within" >Samsung Within</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/explore/samsung-within/galaxy-collaborations/" aria-selected="false" data-omni="story:brande:Galaxy Collaboration Story" >Galaxy Collaboration Story</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/explore/samsung-within/beyond-the-limits/" aria-selected="false" data-omni="story:brande:Beyond the Limits" >Beyond the Limits</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/explore/samsung-within/design/the-serif-design-story/" aria-selected="false" data-omni="story:brande:the-serif-design-story" >The Serif 디자인 스토리</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:미래를 위한 동행 @ CES 2022:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/f4519449-481f-4faf-8843-928571df6cf0.jpg?$ORIGIN_JPG$" alt="미래를 위한 동행 @ CES 2022">
+																</div>
+															<p class="txt">미래를 위한 동행 @ CES 2022</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:Learn more:learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="story:event" >전시/행사</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" aria-selected="false" data-omni="story:event:Samsung at CES 2022" >Samsung at CES 2022</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/explore/experiences/the-voyage-sets-sail/" aria-selected="false" data-omni="story:event:The Voyage Sets Sail" >The Voyage Sets Sail</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:미래를 위한 동행 @ CES 2022:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/4208dfbd-37f1-4ee1-bbdd-1485d6fd8be6.jpg?$ORIGIN_JPG$" alt="미래를 위한 동행 @ CES 2022">
+																</div>
+															<p class="txt">미래를 위한 동행 @ CES 2022</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:Learn more:learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="story:community" >커뮤니티</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="javascript:;" class="outlink " title="새창으로 열림" onclick="window.open('https://r1.community.samsung.com/t5/korea/ct-p/kr');"
+																		aria-selected="false" data-omni="story:community:Samsung Members Comunity">삼성멤버스 커뮤니티</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:미래를 위한 동행 @ CES 2022:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/05b8f471-a4cc-442a-a8eb-8706724db885.jpg?$ORIGIN_JPG$" alt="미래를 위한 동행 @ CES 2022">
+																</div>
+															<p class="txt">미래를 위한 동행 @ CES 2022</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/explore/experiences/ces2022/" data-omni="feature image:story:미래를 위한 동행 @ CES 2022:learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="story: #YouMake" > #YouMake 프로젝트</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/youmake/" aria-selected="false" data-omni="story: #YouMake:Learn more" >바로가기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/youmake/" data-omni="feature image:story: #YouMake 프로젝트:learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/0373b21a-9e9d-45d8-8a6d-173059a487ef.jpg?$ORIGIN_JPG$" alt=" #YouMake 프로젝트">
+																</div>
+															<p class="txt"> #YouMake 프로젝트</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/youmake/" data-omni="feature image:story:Learn more:learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" aria-controls="700000115-menu" aria-selected="false" data-omni="support" >고객 서비스</a>
+							<div class="gnb2depth">
+								<div class="inner">
+									<ul class="list">
+										<li >
+											<a href="#" aria-selected="false" data-omni="support:support" >무엇을 도와드릴까요?</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/support/" aria-selected="false" data-omni="support:support:support-learn-more" >무엇을 도와드릴까요?</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/support/" data-omni="feature image:support::learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/3823f581-fdc7-4936-8d3c-00cb35ada470.jpg?$ORIGIN_JPG$" alt="무엇을 도와드릴까요?">
+																</div>
+															<p class="txt">무엇을 도와드릴까요?</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/support/" data-omni="feature image:support::learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="support:selfserve" >제품 지원</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/support/" aria-selected="false" data-omni="support:selfserve:Manual-download" >매뉴얼 & 다운로드</a>
+																</li>
+													<li >
+														<a href="javascript:;" class="outlink " title="새창으로 열림" onclick="window.open('https://www.samsungsvc.co.kr/solution');"
+																		aria-selected="false" data-omni="support:selfserve:faqlist">제품 FAQ</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/info/contactus/" aria-selected="false" data-omni="support:selfserve:contactus" >이메일 상담</a>
+																</li>
+													<li >
+														<a href="javascript:;" class="outlink " title="새창으로 열림" onclick="window.open('https://www.samsungsvc.co.kr/consult/remote');"
+																		aria-selected="false" data-omni="support:selfserve:remote_service">원격 상담</a>
+																</li>
+													<li >
+														<a href="javascript:;" class="outlink " title="새창으로 열림" onclick="window.open('https://www.samsungsvc.co.kr/consult/call');"
+																		aria-selected="false" data-omni="support:selfserve:rescounselview">전화 상담 예약</a>
+																</li>
+													<li >
+														<a href="javascript:;" class="outlink " title="새창으로 열림" onclick="window.open('http://www.g-sis.co.kr/');"
+																		aria-selected="false" data-omni="support:selfserve:computeronline">컴퓨터 온라인 상담</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="support:information" >추천 부가정보</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/support/newsalert/" aria-selected="false" data-omni="support:information:newsalert" >고객서비스 알림</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/support/warranty/" aria-selected="false" data-omni="support:information:warranty" >워런티</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/faq/" aria-selected="false" data-omni="support:information:Samsung-faq" >삼성닷컴 FAQ</a>
+																</li>
+													<li >
+														<a href="javascript:;" class="outlink " title="새창으로 열림" onclick="window.open('https://r1.community.samsung.com/t5/Korea/ct-p/kr');"
+																		aria-selected="false" data-omni="support:information:community">삼성멤버스 커뮤니티</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/support/galaxy-battery/" aria-selected="false" data-omni="support:information:galaxy-battery" >갤럭시 배터리</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="support:Service center" >서비스 센터</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/digitalplaza/centerMain/" aria-selected="false" data-omni="support:Service center:Service-center_plaza" >서비스센터 찾기</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										<li >
+											<a href="#" aria-selected="false" data-omni="support:Samsung Care+" >Samsung Care+</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/Samsung-Care-Plus/IM/" aria-selected="false" data-omni="support:Samsung Care+:Mobile/PC" >모바일/PC</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/Samsung-Care-Plus/CE/" aria-selected="false" data-omni="support:Samsung Care+:Home appliance/TV" >가전/TV</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" aria-controls="700000116-menu" aria-selected="false" data-omni="membership" >멤버십</a>
+							<div class="gnb2depth">
+								<div class="inner">
+									<ul class="list">
+										<li >
+											<a href="#" aria-selected="false" data-omni="membership:membership_guide" >멤버십 가이드</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/membership/membershipMain/" aria-selected="false" data-omni="membership:membership_guide:membershipmain" >삼성전자 멤버십 소개</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/membership/membershipJoin/" aria-selected="false" data-omni="membership:membership_guide:membershipjoin" >가입 안내</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/membership/membershipPoint/" aria-selected="false" data-omni="membership:membership_guide:membershippoint" >포인트 안내</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/membership/membershipLevel/" aria-selected="false" data-omni="membership:membership_guide:membershiplevel" >등급 & 혜택 안내</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/membership/membershipBluecare/" aria-selected="false" data-omni="membership:membership_guide:membershipbluecare" >블루케어 서비스 안내</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/membership/membershipMileage/" aria-selected="false" data-omni="membership:membership_guide:membershipmileage" >혼수 혜택 안내</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/membership/membershipBluePackage/" aria-selected="false" data-omni="membership:membership_guide:membershipbluepackage" >블루패키지 안내</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="https://www.samsung.com/sec/membership/membershipJoin/" data-omni="feature image:membership::learn more">
+		                        								<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/cd1fbfcd-7d3c-4bb3-b285-94a7b56b74c0.jpg?$ORIGIN_JPG$" alt="나의 멤버십">
+																</div>
+															<p class="txt">나의 멤버십</p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="https://www.samsung.com/sec/membership/membershipJoin/" data-omni="feature image:membership::learn more" class="link">
+			                        								<span>더 알아보기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" aria-controls="700000117-menu" aria-selected="false" data-omni="digitalplaza" >디지털프라자<span class="icon-dpz" onclick="window.open('https://www.samsung.com/sec/digitalplaza/storeMain/');"><span class="blind">디지털프라자 지점찾기</span></span></a>
+									<div class="gnb2depth">
+								<div class="inner">
+									<ul class="list">
+										<li >
+											<a href="#" aria-selected="false" data-omni="digitalplaza:home" >디지털프라자</a>
+											<div class="gnb3depth ">
+												<ul>
+												<li >
+														<a href="https://www.samsung.com/sec/digitalplaza/main/" aria-selected="false" data-omni="digitalplaza:home:home" >디지털프라자 Home</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/digitalplaza/untact/" aria-selected="false" data-omni="digitalplaza:home:untact" >언택트 쇼핑 안내</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/digitalplaza/eventList/" aria-selected="false" data-omni="digitalplaza:home:plaza-eventList" >이벤트</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/digitalplaza/newOpenStore/" aria-selected="false" data-omni="digitalplaza:home:plaza-newOpenStore" >신규 오픈 매장</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/digitalplaza/storeMain/" aria-selected="false" data-omni="digitalplaza:home:store-main" >매장 찾기</a>
+																</li>
+													<li >
+														<a href="https://www.samsung.com/sec/customer/reservationstore/" aria-selected="false" data-omni="digitalplaza:home:reservationstore" >매장 상담 예약</a>
+																</li>
+													<li >
+														<a href="javascript:;" class="outlink " title="새창으로 열림" onclick="window.open('https://www.samsungdigitalplaza-vr.com/');"
+																		aria-selected="false" data-omni="digitalplaza:home:VRstore">VR스토어</a>
+																</li>
+													</ul>
+												<!-- 2dep banner -->
+												<div class="gnbBanner type2">
+														<a href="javascript:;" class="" title="새창으로 열림" onclick="window.open('https://www.samsungdigitalplaza-vr.com/');" data-omni="feature image:digitalplaza:VRstore:learn more">
+																<div class="img">
+																<img src="//images.samsung.com/kdp/display/gnb/28a4cdf9-58c5-4c2d-93e7-772b7d4b1467.jpg?$ORIGIN_JPG$" alt="VR스토어 체험하기">
+																</div>
+															<p class="txt"></p>
+														</a>
+														<div class="link-box flex--center">
+															<a href="javascript:;" class="outlink link" title="새창으로 열림" onclick="window.open('https://www.samsungdigitalplaza-vr.com/');" data-omni="feature image:digitalplaza:VRstore:learn more">
+																	<span>VR스토어 체험하기</span>
+															</a>
+															</div>
+													</div>
+												<!-- //2dep banner -->
+											</div>
+										</li>
+										</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+								<a href="javascript:;" class="outlink" title="새창으로 열림" onclick="window.open('http://csr.samsung.com/ko/main.do');"
+										aria-selected="false" data-omni="Social-contribution">사회공헌</a>
+									</li>
+						<li>
+								<a href="javascript:;" class="outlink" title="새창으로 열림" onclick="window.open('https://www.samsung.com/sec/business/');"
+										aria-selected="false" data-omni="Samsung Business">비즈니스</a>
+									</li>
+						</ul>
+
+					<!-- s: markup 추가 0713  모바일용 메뉴 추가 -->
+					<input type="hidden" name="useLogin" id="useLogin" value=""/>
+
+					<ul class="mob-onlyMenu loginBefore">
+						<li><a href="" onclick="NetFunnel_Action({action_id:'b2c_gnb_login'},'/sec/member/indexLogin/?returnUrl=/sec/youmake/');return false;" data-omni='login'>로그인</a></li>
+						<li><a href="https://www.samsung.com/sec/mypage/order/indexDeliveryList/" data-omni='orders'>주문/배송 조회</a></li>
+						<li><a href="https://www.samsung.com/sec/customer/myDigitalReservationSearch/" data-omni='store reservation'>매장상담예약신청 조회</a></li>
+						<li><a href="" onclick="NetFunnel_Action({action_id:'b2c_gnb_login'},'/sec/member/indexLogin/?returnUrl=/sec/youmake/');return false;" data-omni='login'>쿠폰존</a></li>
+					</ul>
+
+					<ul class="mob-onlyMenu loginAfter">
+						<li class="welcomeMsg"></li>
+						<li><a href="https://www.samsung.com/sec/membership/point/" data-omni='my account'>나의 정보</a></li>
+						<li><a href="https://www.samsung.com/sec/mypage/order/indexDeliveryList/" data-omni='orders'>주문/배송 조회</a></li>
+						<li><a href="https://www.samsung.com/sec/mypage/coupon/indexMyCoupon/" data-omni='coupon zone'>쿠폰존</a></li>
+						<li><a href="https://www.samsung.com/sec/member/logout/" data-omni='logout'>로그아웃</a></li>
+					</ul>
+					<!-- e: markup 추가 0713  모바일용 메뉴 추가 -->
+
+				</nav>
+				<button type="button" class="gnb-back" data-omni="gnb:back">이전 메뉴 보기</button>
+				<button type="button" class="gnb-close" data-omni="gnb:close">GNB 닫기</button>
+			</div>
+
+			<div class="header-right gnbMenu">
+				<ul>
+					<li>
+						<a href="javascript:;" id="link-search" class="link-search" data-omni="search"><i class="icon ico-large ico-zoom">검색</i></a>
+					</li>
+
+					<li>
+						<a href="javascript:;" aria-controls="cart-menu" aria-selected="false" class="link-cart" data-omni="cart"><i class="icon ico-large ico-cart">장바구니</i>
+							<span class="cart-inner-count"></span>
+						</a>
+						<div class="s-gnbSubWrap textSubWrap cartMenu" id="cart-menu">
+							<div class="gnbSubRound">
+								<div>
+									<ul class="gnb-cartList">
+									</ul>
+									<div class="btn-box">
+										<button type="button" class="btn btn-d btn-type2" onclick="NetFunnel_Action({action_id :'b2c_cart_view'},function(ev, ret){location.href='/sec/cart/';});" data-omni="cart">장바구니 보기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<input type="hidden" name="useLogin" id="useLogin" value=""/>
+
+						<a href="javascript:;" aria-controls="login-menu" aria-selected="false" class="link-login" data-omni="login"><i class="icon ico-large ico-people">로그인</i></a>
+						<div class="s-gnbSubWrap textSubWrap loginMenu" id="login-menu">
+							<div class="gnbSubRound loginBefore">
+								<div>
+									<dl>
+										<dt><a href="" onclick="NetFunnel_Action({action_id:'b2c_gnb_login'},'/sec/member/indexLogin/?returnUrl=/sec/youmake/');return false;" data-omni='login'>로그인</a></dt>
+										<dt><a href="https://www.samsung.com/sec/mypage/order/indexDeliveryList/" data-omni='orders'>주문/배송조회</a></dt>
+										<dt><a href="https://www.samsung.com/sec/customer/myDigitalReservationSearch/" data-omni='store reservation'>매장상담 예약 신청 조회</a></dt>
+										<dt><a href="" onclick="NetFunnel_Action({action_id:'b2c_gnb_login'},'/sec/member/indexLogin/?returnUrl=/sec/youmake/');return false;" data-omni='login'>쿠폰존</a></dt>
+									</dl>
+								</div>
+							</div>
+							<div class="gnbSubRound loginAfter">
+								<div>
+									<dl>
+										<dt><span class="greet-txt"></span></dt>
+										<dd><a href="https://www.samsung.com/sec/membership/point/" data-omni='my account'>나의 정보</a></dd>
+										<dd><a href="https://www.samsung.com/sec/mypage/order/indexDeliveryList/" data-omni='orders'>주문/배송 조회</a></dd>
+										<dd><a href="https://www.samsung.com/sec/mypage/coupon/indexMyCoupon/" data-omni='coupon zone'>쿠폰존</a></dd>
+										<dd><a href="https://www.samsung.com/sec/member/logout/" data-omni='logout'>로그아웃</a></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<li>
+						<a href="javascript:;" class="link-m-nav" data-omni="gnb:open"><i class="icon ico-large ico-nav">전체메뉴</i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+    </header>
+<!-- e : 머리글 영역 -->
+		<!-- s : 통합검색 -->
+		<script type="text/javascript">
+	var searchInputManager = {
+		isMobileDevice: function() {
+			var that = this,
+			winW = $(window).width();
+			if ( winW > 800 ) {
+				return 'N';
+			} else {
+				return 'Y';
+			}
+		},
+		init: function() {
+			var that = searchInputManager;
+			$.cookie.json = true;
+			$.cookie.data = {
+				SEARCH_HISTORY : 'sh-b2c',
+				SEARCH_MAX_SIZE: 10,
+				option: {
+					expires: 30,
+					path: '/'
+				}
+			};
+
+			that.$appendingTarget = {
+				searchHistory: $('#searchkeywordRecent ul.list'),
+				popular: $('#searchkeywordPopular ul.list'),
+				makeTime: $('#makeTime'),
+				autoComplete: $('#searchAuto ul.list')
+			};
+
+			that.cookieName = $.cookie.data.SEARCH_HISTORY;
+			that.isMobileYN = that.isMobileDevice();
+		},
+		searchHistoryTemplate: function(keyword) {
+			return {
+				keyword: keyword,
+	        	date: searchDatetimestampToString(new Date())
+			};
+		},
+		getKeywordList: function(cookieName) {
+			var searchKeywordList = new Array()
+			  , dataList = $.cookie(cookieName).data;
+
+			if (!dataList || '' == dataList || undefined == dataList) {
+				return searchKeywordList;
+			}
+
+			$.each(dataList, function (idx, element) {
+				searchKeywordList.push(element.keyword);
+			});
+
+			return searchKeywordList;
+		},
+		saveSearchHistory: function(keyword) {
+			var that = searchInputManager
+			  , $cookie = $.cookie
+			  , cookieValue = $cookie(that.cookieName)
+			  , dataList = null;
+
+			if ( cookieValue == undefined ) {
+				dataList = [ that.searchHistoryTemplate(keyword) ];
+			} else {
+				if ( cookieValue.length == 0 ) {
+					dataList = [ that.searchHistoryTemplate(keyword) ];
+
+				} else {
+					dataList = cookieValue.data;
+
+				    if($.inArray(keyword, that.getKeywordList(that.cookieName)) >= 0) {
+				    	return;
+					}
+
+				    if(dataList.length >= $cookie.data.SEARCH_MAX_SIZE) {
+				    	dataList.splice(0, 1);
+				    }
+				    dataList.push(that.searchHistoryTemplate(keyword));
+				}
+			}
+
+			$cookie(that.cookieName, {'data': dataList} , $cookie.data.option);
+		},
+		getSearchHistory: function() {
+			var cookieValue = $.cookie(searchInputManager.cookieName);
+
+			if (undefined != cookieValue) {
+				return cookieValue;
+			}
+		},
+		getSearchDate: function(keyword) {
+			var date = ''
+			  , that = searchInputManager
+			  , cookieValue = $.cookie(that.cookieName)
+			  , searchHistoryList = that.getSearchHistory();
+
+			if ( '' == searchHistoryList || searchHistoryList == undefined || cookieValue == undefined) {
+				return date;
+			}
+
+			var dataList = cookieValue.data;
+
+			var idx = -1;
+			for (var i = 0; i < dataList.length; ++i) {
+				var keywordInList = dataList[i].keyword;
+
+				if ( keywordInList != undefined ) {
+				    if (keywordInList.toLocaleLowerCase() == keyword.toLocaleLowerCase()) {
+				    	idx = i;
+				        break;
+				    }
+				}
+			}
+			if ( idx > -1 ) {
+				date = dataList[idx].date;
+			}
+
+			return date;
+		},
+		drawSearchHistory: function() {
+			var that = searchInputManager
+			  , $cookie = $.cookie
+			  , cookieValue = $cookie(that.cookieName);
+
+			if ( undefined == cookieValue ) {
+				return;
+			} else if ( cookieValue.length == 0 ) {
+				return;
+			}
+
+			var dataList = cookieValue.data
+			  , template = '';
+
+			for( var i = dataList.length-1 ; i >= 0; i--) {
+				var element = dataList[i], keyword = element.keyword;
+				template += '<li class="item">';
+				template += '<a href="javascript:void(0);" class="link">' + keyword + '</a>';
+				template += '<button type="button" class="btn-delete delete" keyword="' + keyword + '" onclick="searchInputManager.clearSearchHistory(this)">';
+				template += '<span class="blind">삭제</span>';
+				template += '</button>';
+				template += '</li>';
+			}
+			that.$appendingTarget.searchHistory.html(template);
+			that.$appendingTarget.searchHistory.off('click').on('click', 'a', function(e) {
+				that.getSearchResult($(e.target).text());
+			});
+		},
+		clearSearchHistory: function(element) {
+			var that = searchInputManager
+			  , $element = $(element)
+			  , $cookie = $.cookie;
+
+			if ($element.hasClass('delete-all')) {
+				$.removeCookie( that.cookieName , { path: $cookie.data.option.path });
+				that.$appendingTarget.searchHistory.empty();
+
+			} else if ($element.hasClass('delete')) {
+				var selectedKeyword = $element.attr('keyword')
+				  , cookieValue = $cookie(that.cookieName)
+				  , dataList = cookieValue.data;
+
+				var idx = -1;
+				for (var i = 0; i < dataList.length; ++i) {
+					var keyword = dataList[i].keyword;
+					if ( keyword == undefined ) {
+						keyword = 'undefined';
+					}
+
+				    if (keyword == selectedKeyword) {
+				    	idx = i;
+				        break;
+				    }
+				}
+				if ( idx > -1 ) {
+					dataList.splice(idx, 1);
+					$cookie(that.cookieName, {'data': dataList} , $cookie.data.option);
+
+					$element.parent().remove();
+				}
+			}
+		},
+		callAjax: function(options) {
+			$.ajax({
+				url: options.url,
+				type: options.type,
+				data: options.data
+
+			}).done(
+				function(data, textStatus, jqXHR) {
+					if (data.exCode != null && data.exCode !== "") {
+						if (options.fail !== undefined) {
+							options.fail();
+						}
+						let alertData = {
+			       			title: "alert",
+			       			content: data.exMsg
+			       	    };
+			        	commonAlert(alertData);
+			        	openLayer('commonAlert');
+					} else {
+						options.done(data);
+					}
+			}).fail(function(jqXHR, textStatus, errorThrown) {
+				if (options.fail !== undefined) {
+					options.fail();
+				}
+				if (jqXHR.status !== 0) {
+					ajax.error(jqXHR.status, jqXHR.responseText);
+				}
+			}).always(function() {
+			}).then(function(data, textStatus, jqXHR) {
+			});
+		},
+
+		getRecommendKeyword: function(callback) {
+			var that = searchInputManager;
+			that.callAjax(
+				{
+					url: '/sec/xhr/search/recommendkeyword/',
+					type: 'GET',
+					done: function(result) {
+						that.recommendKeyword = result.recommendKeyword;
+
+						if ( callback != undefined ) {
+							callback();
+						}
+					}
+				}
+			);
+		},
+		setRecommendKeyword: function() {
+			var that = searchInputManager;
+
+			if ( that.recommendKeyword == undefined ) {
+				that.getRecommendKeyword(that.setRecommendKeywordCallback);
+				return;
+			}
+			that.setRecommendKeywordCallback();
+		},
+
+		setRecommendKeywordCallback: function() {
+			var that = searchInputManager;
+			//$('#unifiedInputSearch').attr('placeholder', that.recommendKeyword); // 20200917 삭제
+			$('.inp-placeholder').text(that.recommendKeyword); // 20200917 추가
+		},
+
+		getPopularKeyword: function() {
+			var that = searchInputManager;
+			that.callAjax(
+				{
+					url: '/sec/xhr/search/popword/',
+					type: 'POST',
+					data: new wnAddonParamVo('', 'popword', 'D', 'B2C_SearchWord', 'json', ''),
+					done: function(result) {
+						var popwordResult = result.popwordResult;
+						if ( popwordResult.Data == undefined ) {
+							return;
+						}
+
+						var queryList = popwordResult.Data.Query
+						  , popularList = '';
+
+						$.each(queryList, function(idx, element) {
+						var order = idx + Number(1);
+						popularList += '<li class="item">'
+							         + '<span class="rank">' + order + '</span>'
+							         + '<a href="javascript:void(0);" class="link">' + element.content + '</a>';
+							if ( element.updown == 'U' ) {
+								popularList += '<span class="change arr-up"><span class="blind">순위상승</span></span>';
+							} else if ( element.updown == 'D' ) {
+								popularList += '<span class="change arr-down"><span class="blind">순위하락</span></span>';
+							} else if ( element.updown == 'C' ) {
+								popularList += '<span class="change arr-same"><span class="blind">순위유지</span></span>';
+							}
+							popularList += '</li>';
+						});
+
+						that.$appendingTarget.popular.off('click').on('click', 'a', function(e) {
+							that.getSearchResult($(e.target).text());
+						});
+						that.$appendingTarget.popular.empty();
+						that.$appendingTarget.makeTime.empty();
+
+						that.$appendingTarget.popular.append(popularList);
+						that.$appendingTarget.makeTime.append(popwordResult.Data.MakeTime + ' 기준');
+					}
+				}
+			);
+		},
+		getSearchInputAutoComplete: function(keyword) {
+			var that = searchInputManager;
+			keyword = keyword.trim();
+
+			that.callAjax(
+				{
+					url: '/sec/xhr/search/autocom/',
+					type: 'POST',
+					data: new wnAddonParamVo(keyword, 'b2c', '', '', 'json', 'fw'),
+					done: function(result) {
+						var template = '';
+						var autoCompleteResultList = result.autoCompleteResult;
+						that.$appendingTarget.autoComplete.empty();
+
+						if ( autoCompleteResultList.length > 0 && autoCompleteResultList != undefined ) {
+							$.each(autoCompleteResultList, function (idx, element) {
+								template += '<li class="item">';
+								template += '<a href="javascript:void(0);" class="link" text="' + element.text + '">';
+								template +=  (element.modified).replace(/\<!HS\>(.*)\<!HE\>/gi, "\<span class=\"key\"\>$1\</span\>");
+								template += '</a>';
+								template += '<span class="date">' + searchInputManager.getSearchDate(element.text) + '</span>';
+								template += '</li>';
+							});
+
+							that.$appendingTarget.autoComplete.html(template);
+
+							that.$appendingTarget.autoComplete.off('click').on('click', 'a', function(e) {
+								that.getSearchResult($(e.target).attr('text'));
+							});
+
+							$('.unified-search-layer.type-keyword').hide();
+							$('.unified-search-layer.type-auto').show();
+
+						} else {
+							$('.unified-search-layer.type-auto').hide();
+							if ( keyword == '' ) {
+								//$('#unifiedInputSearch').attr('placeholder', searchInputManager.recommendKeyword); // 20200917 삭제
+								$('.inp-placeholder').text(that.recommendKeyword); // 20200917 추가
+								$('.unified-search-layer.type-keyword').show();
+							}
+						}
+					}
+				}
+			)
+		},
+
+		getSearchResult: function(keyword, searchResultInputId) {
+			console.log(keyword);
+			keyword = escapeHtml(keyword);
+
+			var that = searchInputManager;
+			keyword = keyword.trim();
+			console.log("@@ keyword1 : " + keyword);
+			keyword = filterAcc(keyword); // 에어컨액세서리
+
+			if ( searchResultInputId != undefined ) {
+				that.searchResultInputId = searchResultInputId;
+			}
+
+			if ( keyword == '' ) {
+				var recommendKeyword = that.recommendKeyword;
+				if ( recommendKeyword == undefined ) {
+					that.getRecommendKeyword(that.getSearchResultNoKeywordCallback);
+				}
+				that.getSearchResultCallback(recommendKeyword);
+				return;
+			}
+			that.getSearchResultCallback(keyword);
+		},
+		getSearchResultNoKeywordCallback: function() {
+			var that = searchInputManager
+			  , recommendKeyword = that.recommendKeyword
+			  , searchResultInputId = that.searchResultInputId;
+
+			if ( searchResultInputId != undefined ) {
+				$(searchResultInputId).val(recommendKeyword);
+				$(searchResultInputId).attr('placeholder', recommendKeyword);
+			}
+
+			that.getSearchResultCallback(recommendKeyword);
+		},
+		getSearchResultCallback: function(keyword) {
+			console.log("@@ start getSearchResultCallback");
+			var that	   = searchInputManager
+			  , isMobileYN = that.isMobileDevice();
+			console.log("@@ keyword : " + keyword);
+			that.saveSearchHistory(keyword);
+			ajax.call({
+				url: '/sec/xhr/search/keywordRedirect?keyword=' + encodeURIComponent(keyword),
+				data: new WNSearchParamVo(keyword, '', '', '', '', '', '', '', '', '', '', '', '', 'b2c', isMobileYN),
+				dataType : 'json',
+				contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
+				done: function(result) {
+					console.log("@@ ajax success");
+					console.log("@@result : " + JSON.stringify(result));
+					//yhj
+					$(".unified-search-input-wrap").removeClass("is-active");
+					$("body").removeClass("is-pc is-mo");
+					$(".unified-search-layer").hide();
+					$("body").removeClass("fixed-scroll");
+					$("#gnbmask").hide();
+					$(".unified-search-input-wrap .inp").val("");
+					$(".unified-search-input-wrap .btn-inp-clear").hide();
+					$(".inp-placeholder").show();
+					if ( isSecApp() == "true" ) {
+						window.secapp.showAndHideGnb('VISIBLE');
+					}
+
+
+					var keywordRedirect = result.keywordRedirect;
+
+					if (keywordRedirect.totalCount > 0) {
+						window.location.href = keywordRedirect.REDIRECT_URL;
+						return;
+					}
+					var $form = document.createElement("form");
+					$form.setAttribute('charset', 'UTF-8');
+					$form.setAttribute('method', 'POST');
+					$form.setAttribute('action', '/sec/search/searchresult/?keyword=' + encodeURIComponent(keyword));
+
+					var $input = document.createElement('input');
+					$input.setAttribute('type', 'hidden');
+					$input.setAttribute('name', 'isMobileYN');
+					$input.setAttribute('value', searchInputManager.isMobileYN);
+					$form.appendChild($input);
+					document.body.appendChild($form);
+
+					$form.submit();
+				}
+			});
+		}
+	}
+
+	function filterAcc(keyword) {
+		if((keyword.indexOf("에어컨") > -1 || keyword.indexOf("무풍에어컨") > -1) && (keyword.indexOf("액세서리") > -1 || keyword.indexOf("악세서리") > -1 || keyword.indexOf("엑세서리") > -1) ) {
+			keyword = "에어컨액세서리";
+			console.log("@@ keyword2: " + keyword);
+		}
+		return keyword;
+	}
+
+	function escapeHtml (string) {
+		return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+        	return entityMap[s];
+        });
+	}
+	var entityMap = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '/': '&#x2F;', '`': '&#x60;', '=': '&#x3D;' };
+
+	/* s: APP용 함수 */
+	function isSecApp() {
+		return 'false';
+	}
+
+	function once(func) {
+		var flag
+		  , result;
+
+		return function() {
+			if ( flag ) {
+				return result;
+			}
+			flag = true;
+			return result = func.apply(this);
+		}
+	}
+
+	/* s : 20200917 수정 */
+	var searchLinkforApp = once(function() {
+		var that = searchInputManager;
+
+		that.setRecommendKeyword();
+		that.drawSearchHistory();
+		that.getPopularKeyword();
+
+	});
+
+	function searchOpenforApp() { // 20200917 추가
+		searchLinkforApp();
+		headerSearch.eventListener.uinifiedSearchOpen();
+	}
+	/* e : 20200917 수정 */
+
+	/* e: APP용 함수 */
+
+	$(document).ready(function() {
+		var that = searchInputManager;
+
+		$('#link-search').on('click', function() {
+			that.setRecommendKeyword();
+			that.drawSearchHistory();
+			that.getPopularKeyword();
+		});
+
+		$('#unifiedInputSearch').on('keyup', function(e) {
+			var $target = $(e.target)
+			  , keyword = $target.val().replace(/\\/gi, '');
+			$target.val(keyword);
+
+			that.getSearchInputAutoComplete(keyword);
+		});
+
+		$('#unifiedInputSearch').on('click', function() { //20210324 추가
+			$('.inp-placeholder').hide();
+		});
+	});
+</script>
+<!-- s : 통합검색 -->
+<div class="unified-search-input-wrap">
+	<div class="unified-search-input-inner">
+		<div class="search-box">
+			<label for="unifiedInputSearch" class="blind">통합 검색</label><!-- 20200622 for 값 변경 -->
+			<input type="text" id="unifiedInputSearch" class="inp" onfocus="headerSearch.eventListener.uinifiedSearchInp()"
+			onkeydown="headerSearch.eventListener.uinifiedSearchChange()">
+			<span class="inp-placeholder"></span><!-- 20200917 추천검색어 추가 -->
+			<button type="button" class="btn-inp-clear" title="삭제"><span class="blind">삭제</span></button><!-- 20200616 삭제 버튼 추가-->
+			<button type="button" class="btn-search" title="검색" id="unifiedSearchButton" onclick="javascript:searchInputManager.getSearchResult($('#unifiedInputSearch').val(), '#unifiedInputSearch')"><span class="blind">검색</span></button>
+		</div>
+	</div>
+
+	<!-- s : 검색레이어 : 최근, 인기-->
+	<div class="unified-search-layer type-keyword" style="display:none">
+		<div class="unified-search-layer-inner"><!-- 20200618 감싸는 태그 unified-search-layer-inner 추가 -->
+			<div class="layer-cont">
+				<div class="cont-inner box-recent" id="searchkeywordRecent" role="tabpanel">
+					<strong class="tit">최근 검색어</strong>
+					<ul class="list">
+					</ul>
+					<div class="etc"><a href="javascript:void(0);" class="btn-delete delete-all" onclick="searchInputManager.clearSearchHistory(this)">최근 검색어 전체 삭제</a></div>
+				</div>
+				<div class="cont-inner box-popular" id="searchkeywordPopular" role="tabpanel">
+					<strong class="tit">인기 검색어</strong>
+					<ul class="list">
+					</ul>
+					<div class="etc" id="makeTime"><p class="date"></p></div>
+				</div>
+			</div>
+		</div><!-- 20200618 감싸는 태그 unified-search-layer-inner의 닫는 태그 추가 -->
+		<button type="button" class="btn-close-search"><span class="blind">검색 레이어 닫기</span></button><!-- 20200618 닫는 태그 추가--><!-- 20200622 button type 변경-->
+	</div>
+	<!-- e : 검색레이어 : 최근, 인기-->
+
+	<!-- s : 검색레이어 : 자동 완성-->
+	<div class="unified-search-layer type-auto" style="display:none">
+		<div class="unified-search-layer-inner"><!-- 20200618 감싸는 태그 unified-search-layer-inner 추가 -->
+			<div class="layer-cont" id="searchAuto">
+				<ul class="list">
+				</ul>
+			</div>
+		</div><!-- 20200618 감싸는 태그 unified-search-layer-inner의 닫는 태그 추가 -->
+		<button type="button" class="btn-close-search"><span class="blind">검색 레이어 닫기</span></button><!-- 20200618 닫는 태그 추가--><!-- 20200622 button type 변경-->
+	</div>
+	<!-- e : 검색레이어 : 자동 완성-->
+
+	<button type="button" class="btn-close-search"><span class="blind">검색 레이어 닫기</span></button><!-- 20200622 button type 변경-->
+</div>
+<!-- e : 통합검색 --><!-- e : 통합검색 -->
+
+		<!-- s : 본문 영역 -->
+		<div id="container" class='' >
+
+			<!-- s : 페이지 로케이션 영역 -->
+				<script type="text/javascript">
+			getDispPathByUrl();
+
+			function getDispPathByUrl() {
+
+				let stId = "1";
+				let reqUri = "https://www.samsung.com/sec/youmake/";
+				reqUri = reqUri.replace("https://www.samsung.com/sec/", "");
+				if (reqUri.length == 0) return;
+
+				let tmp = "";
+
+				if("" === "Y") return;
+
+				if(reqUri.indexOf('homefitness') > -1) {
+					return;
+				}
+
+				$.ajax({
+					 url : "https://www.samsung.com/sec/xhr/display/getGnbByUrl"
+					,type : "POST"
+					,data : {stId:stId, linkUrl:reqUri}
+					,success : function(data) {
+						list = data.list;
+						if (list == null) return;
+
+						$.each(list, function(idx, obj) {
+							if (obj.linkUrl.length > 0) {
+		   						tmp += '<a href="https://www.samsung.com/sec/'+obj.linkUrl+'">'+obj.dispClsfNm+'</a>';
+							} else if(obj.dispClsfNm != obj.upDispClsfNm){	//동일명칭 Depth Skip 2020.09.14 YJU
+		   						tmp += "<span>"+obj.dispClsfNm+"</span>";
+		   					}
+		   				});
+
+						if (tmp == '') return;
+						let html = "";
+						html += "<div class=\"pg-location-inner locationDiv\">";
+						html += "<a href='/sec/'>HOME</a>";
+						html += tmp;
+						html += "</div>";
+						$(".pg-location").html(html);
+					}
+				});
+			}
+        </script>
+
+        <div class="pg-location">
+        </div><!-- e : 페이지 로케이션 영역 -->
+
+				<!-- s : 최근 본 제품 -->
+				<div id='latestItemLayer' class='layer-pop layer-normal floatingStyle'>
+	<div class='layer-header'>
+		<h2>최근 본 제품</h2>
+	</div>
+		<button type='button' class='pop-close' onclick = "closePop(latestItemLayer)" data-focus-next="latestItemLayer"><span class='blind'>최근 본 제품 닫기</span></button>
+	<div class="LatestItm-result">
+		<p class="result-tit">
+			<span>검색 결과</span><strong class="num">0</strong> 개
+		</p>
+		<button type="button" class="btn btn-d btn-allListClear" onclick = "deleteRecentGoods('Y')" data-st-path ="https://www.samsung.com/sec/" data-focus-next="latestItemLayer">전체삭제</button>
+	</div>
+	<div class="caution-note">※ 최근 본 제품은 7일간 보관됩니다.</div>
+</div><!-- e : 최근 본 제품 -->
+
+<link rel="stylesheet" href="https://images.samsung.com/kdp/event/sec/assets/css/promo_20240709.min.css"/>
+<script defer src="https:/www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<script defer src="https://images.samsung.com/kdp/event/sec/assets/js/modules_20240705.min.js"></script>
+<script defer>
+	$(document).ready(function(){
+		// bg에 lozad 적용
+		try {
+			const observer = lozad();
+			observer.observe();
+		} catch (e) {}
+
+		try {
+			const observerbg = lozad(".pt_bg-image", {
+				loaded: function (el) { el.classList.add("pt_add-bg"); }
+			});
+			observerbg.observe();
+		} catch (e) {}
+	});
+</script>

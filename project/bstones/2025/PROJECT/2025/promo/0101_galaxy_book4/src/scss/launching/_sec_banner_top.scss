@@ -1,0 +1,35 @@
+.galaxy_book4_ultra {
+    .sec_banner_top {
+        .pt_banner__outer {
+            background-color: #F4F4F4;@include vw-pc(padding-top, 150);@include vw-pc(width, 1920);position: relative;left: 50%;transform: translateX(-50%);
+            .pt_banner {
+                &__box {
+                    position: relative; @include vw-pc(width, 1320); @include vw-pc(height, 180); @include vw-pc(padding, 37 150); margin: 0 auto; background-color: #c4d9de; @include vw-pc(border-radius, 12);
+                    &.pt_add-bg {background: url('../../is/images/gb4_banner_top_pc.jpg') no-repeat center center / contain;}
+                }
+                &__main {@include vw-pc(margin-bottom, 14); @include vw-pc(font-size, 24); font-weight: 700; @include vw-pc(line-height, 34); letter-spacing: -.025em;}
+                &__sub {@include vw-pc(font-size, 16); @include vw-pc(line-height, 24); letter-spacing: -.025em;}
+                &__btn {padding-bottom: 0; @include vw-pc(font-size, 16); @include vw-pc(line-height, 21); font-weight: 700; letter-spacing: -.025em;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galaxy_book4_ultra {
+        .sec_banner_top {
+            .pt_banner__outer {
+                width: 100%; @include vw-mo(padding-top, 90);
+                .pt_banner {
+                    &__box {
+                        flex-direction: column; justify-content: center; align-items: flex-start; @include vw-mo(width, 672); @include vw-mo(height, 220); @include vw-mo(padding, 27 37); @include vw-mo(border-radius, 10);
+                        &.pt_add-bg {background: url('../../is/images/gb4_banner_top_mo.jpg') no-repeat center center / contain;}
+                    }
+                    &__main {@include vw-mo(margin-bottom, 6); @include vw-mo(font-size, 30); @include vw-mo(line-height, 41);}
+                    &__sub {@include vw-mo(font-size, 24); @include vw-mo(line-height, 34);}
+                    &__btn {@include vw-mo(font-size, 24); @include vw-mo(line-height, 30);}
+                }
+            }
+        }
+    }
+}

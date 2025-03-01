@@ -1,0 +1,158 @@
+{
+   "buyingSlideTop": {
+      "config": {
+         "src": "../../is/images/launching/buying/slide/",
+         "slideKey": {
+            "pc": "sku",
+            "mobile": "sku"
+         },
+         "alt": {
+            "**txt0**":"",
+
+            "**NT960XMB-KC01B_1**":"갤럭시 북4 Edge 사파이어 블루 정면 대표 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 1TB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT960XMB-KC01B_2**":"갤럭시 북4 Edge 사파이어 블루 위에서 내려다 본 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 1TB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT960XMB-KC01B_3**":"갤럭시 북4 Edge 사파이어 블루 측면 왼쪽 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 1TB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT960XMB-KC01B_4**":"갤럭시 북4 Edge 사파이어 블루 상단 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 1TB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT960XMB-KC01B_5**":"갤럭시 북4 Edge 사파이어 블루 측면 포트 두 개의 제품컷, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 1TB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+
+            "**NT960XMA-KC01B_1**":"갤럭시 북4 Edge 사파이어 블루 정면 대표 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT960XMA-KC01B_2**":"갤럭시 북4 Edge 사파이어 블루 위에서 내려다 본 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT960XMA-KC01B_3**":"갤럭시 북4 Edge 사파이어 블루 측면 왼쪽 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT960XMA-KC01B_4**":"갤럭시 북4 Edge 사파이어 블루 상단 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT960XMA-KC01B_5**":"갤럭시 북4 Edge 사파이어 블루 측면 포트 두 개의 제품컷,  좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+
+            "**NT940XMA-KC01B_1**":"갤럭시 북4 Edge 사파이어 블루 정면 대표 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT940XMA-KC01B_2**":"갤럭시 북4 Edge 사파이어 블루 위에서 내려다 본 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT940XMA-KC01B_3**":"갤럭시 북4 Edge 사파이어 블루 측면 왼쪽 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT940XMA-KC01B_4**":"갤럭시 북4 Edge 사파이어 블루 상단 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT940XMA-KC01B_5**":"갤럭시 북4 Edge 사파이어 블루 측면 포트 두 개의 제품컷,  좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+
+            "**NT750XQA-KC02B_1**":"갤럭시 북4 Edge 사파이어 블루 정면 대표 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT750XQA-KC02B_2**":"갤럭시 북4 Edge 사파이어 블루 위에서 내려다 본 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT750XQA-KC02B_3**":"갤럭시 북4 Edge 사파이어 블루 측면 왼쪽 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT750XQA-KC02B_4**":"갤럭시 북4 Edge 사파이어 블루 상단 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT750XQA-KC02B_5**":"갤럭시 북4 Edge 사파이어 블루 측면 포트 두 개의 제품컷,  좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+
+            "**NT750XQA-KC01B_1**":"갤럭시 북4 Edge 사파이어 블루 정면 대표 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT750XQA-KC01B_2**":"갤럭시 북4 Edge 사파이어 블루 위에서 내려다 본 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT750XQA-KC01B_3**":"갤럭시 북4 Edge 사파이어 블루 측면 왼쪽 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT750XQA-KC01B_4**":"갤럭시 북4 Edge 사파이어 블루 상단 이미지, 좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는",
+            "**NT750XQA-KC01B_5**":"갤럭시 북4 Edge 사파이어 블루 측면 포트 두 개의 제품컷,  좌측 상단에는 Windows 11 Home, Ram 16GB, SSD 512GB 딱지와 Copilot+PC 로고, Snapdragon로고가 붙어있는"
+         },
+         "blind": {
+            "**blind_ultra_pod_1**":"Galaxy AI is here, 최신 CPU와 GPU의 조화 극강의 AI 퍼포먼스",
+            "**blind_ultra_pod_2**":"Galaxy AI is here, PC와 스마트폰을 넘나드는 나만의 AI 비서 -  Microsoft Copilot",
+            "**blind_pro360_pod_1**":"Galaxy AI is here, 최신 기술과 강력한 AI 퍼포먼스 Intel® Core™ Ultra Processor",
+            "**blind_pro360_pod_2**":"Galaxy AI is here, PC와 스마트폰을 넘나드는 나만의 AI 비서 -  Microsoft Copilot",
+            "**blind_pro_pod_1**":"Galaxy AI is here, 최신 기술과 강력한 AI 퍼포먼스 Intel® Core™ Ultra Processor",
+            "**blind_pro_pod_2**":"Galaxy AI is here, PC와 스마트폰을 넘나드는 나만의 AI 비서 -  Microsoft Copilot",
+            "**blind_book4_pod_1**":"Galaxy AI is here, 신뢰할 수 있는 퍼포먼스 Intel® Core™ 프로세서",
+            "**blind_book4_pod_2**":"Galaxy AI is here, PC와 스마트폰을 넘나드는 나만의 AI 비서 -  Microsoft Copilot"
+         }
+      },
+      "pc": {
+         "NT960XMB-KC01B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_16_01_pc.png", "alt":"**NT960XMB-KC01B_1**", "tag": "O"},
+               {"image":"gbe_16_02_pc.png", "alt":"**NT960XMB-KC01B_2**", "tag": "O"},
+               {"image":"gbe_16_03_pc.png", "alt":"**NT960XMB-KC01B_3**", "tag": "O"},
+               {"image":"gbe_16_04_pc.png", "alt":"**NT960XMB-KC01B_4**", "tag": "O"},
+               {"image":"gbe_16_05_pc.png", "alt":"**NT960XMB-KC01B_5**", "tag": "O"}
+            ]
+         },
+         "NT960XMA-KC01B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_16_01_pc.png", "alt":"**NT960XMA-KC01B_1**", "tag": "O"},
+               {"image":"gbe_16_02_pc.png", "alt":"**NT960XMA-KC01B_2**", "tag": "O"},
+               {"image":"gbe_16_03_pc.png", "alt":"**NT960XMA-KC01B_3**", "tag": "O"},
+               {"image":"gbe_16_04_pc.png", "alt":"**NT960XMA-KC01B_4**", "tag": "O"},
+               {"image":"gbe_16_05_pc.png", "alt":"**NT960XMA-KC01B_5**", "tag": "O"}
+            ]
+         },
+         "NT940XMA-KC01B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_14_01_pc.png", "alt":"**NT940XMA-KC01B_1**", "tag": "O"},
+               {"image":"gbe_14_02_pc.png", "alt":"**NT940XMA-KC01B_2**", "tag": "O"},
+               {"image":"gbe_14_03_pc.png", "alt":"**NT940XMA-KC01B_3**", "tag": "O"},
+               {"image":"gbe_14_04_pc.png", "alt":"**NT940XMA-KC01B_4**", "tag": "O"},
+               {"image":"gbe_14_05_pc.png", "alt":"**NT940XMA-KC01B_5**", "tag": "O"}
+            ]
+         },
+         "NT750XQA-KC02B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_NT750XQA-KC02B_01_pc.png", "alt":"**NT750XQA-KC02B_1**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_02_pc.png", "alt":"**NT750XQA-KC02B_2**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_03_pc.png", "alt":"**NT750XQA-KC02B_3**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_04_pc.png", "alt":"**NT750XQA-KC02B_4**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_05_pc.png", "alt":"**NT750XQA-KC02B_5**", "tag": "O"}
+            ]
+         },
+         "NT750XQA-KC01B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_NT750XQA-KC02B_01_pc.png", "alt":"**NT750XQA-KC01B_1**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_02_pc.png", "alt":"**NT750XQA-KC01B_2**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_03_pc.png", "alt":"**NT750XQA-KC01B_3**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_04_pc.png", "alt":"**NT750XQA-KC01B_4**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_05_pc.png", "alt":"**NT750XQA-KC01B_5**", "tag": "O"}
+            ]
+         }
+      },
+      "mobile": {
+         "NT960XMB-KC01B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_16_01_mo.png", "alt":"**NT960XMB-KC01B_1**", "tag": "O"},
+               {"image":"gbe_16_02_mo.png", "alt":"**NT960XMB-KC01B_2**", "tag": "O"},
+               {"image":"gbe_16_03_mo.png", "alt":"**NT960XMB-KC01B_3**", "tag": "O"},
+               {"image":"gbe_16_04_mo.png", "alt":"**NT960XMB-KC01B_4**", "tag": "O"},
+               {"image":"gbe_16_05_mo.png", "alt":"**NT960XMB-KC01B_5**", "tag": "O"}
+            ]
+         },
+         "NT960XMA-KC01B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_16_01_mo.png", "alt":"**NT960XMA-KC01B_1**", "tag": "O"},
+               {"image":"gbe_16_02_mo.png", "alt":"**NT960XMA-KC01B_2**", "tag": "O"},
+               {"image":"gbe_16_03_mo.png", "alt":"**NT960XMA-KC01B_3**", "tag": "O"},
+               {"image":"gbe_16_04_mo.png", "alt":"**NT960XMA-KC01B_4**", "tag": "O"},
+               {"image":"gbe_16_05_mo.png", "alt":"**NT960XMA-KC01B_5**", "tag": "O"}
+            ]
+         },
+         "NT940XMA-KC01B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_14_01_mo.png", "alt":"**NT940XMA-KC01B_1**", "tag": "O"},
+               {"image":"gbe_14_02_mo.png", "alt":"**NT940XMA-KC01B_2**", "tag": "O"},
+               {"image":"gbe_14_03_mo.png", "alt":"**NT940XMA-KC01B_3**", "tag": "O"},
+               {"image":"gbe_14_04_mo.png", "alt":"**NT940XMA-KC01B_4**", "tag": "O"},
+               {"image":"gbe_14_05_mo_v1.png", "alt":"**NT940XMA-KC01B_5**", "tag": "O"}
+            ]
+         },
+         "NT750XQA-KC02B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_NT750XQA-KC02B_01_mo.png", "alt":"**NT750XQA-KC02B_1**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_02_mo.png", "alt":"**NT750XQA-KC02B_2**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_03_mo.png", "alt":"**NT750XQA-KC02B_3**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_04_mo.png", "alt":"**NT750XQA-KC02B_4**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_05_mo.png", "alt":"**NT750XQA-KC02B_5**", "tag": "O"}
+            ]
+         },
+         "NT750XQA-KC01B":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbe_NT750XQA-KC02B_01_mo.png", "alt":"**NT750XQA-KC01B_1**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_02_mo.png", "alt":"**NT750XQA-KC01B_2**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_03_mo.png", "alt":"**NT750XQA-KC01B_3**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_04_mo.png", "alt":"**NT750XQA-KC01B_4**", "tag": "O"},
+               {"image":"gbe_NT750XQA-KC02B_05_mo.png", "alt":"**NT750XQA-KC01B_5**", "tag": "O"}
+            ]
+         }
+      }
+   }
+}

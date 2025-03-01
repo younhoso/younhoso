@@ -1,0 +1,69 @@
+
+/* sec_brand */
+
+.sec_brand {@include vw-pc(padding-bottom,60); margin: 0 auto; @include vw-pc(width,1320);
+    .pt_banner{display: flex; justify-content: space-between; align-items: center; @include vw-pc(margin-bottom,50); @include vw-pc(padding,0 116 0 39); @include vw-pc(width,1320); @include vw-pc(height,200);
+        background: url("../../is/images/brand/pet_brand_banner_pc.png") no-repeat center / cover;
+
+        &__tit{@include vw-pc(margin-bottom,17); @include vw-pc(width,154); @include vw-pc(height,48); background: url("../../is/images/brand/pet_brand_pluspet_logo_pc.png") no-repeat center / contain;}
+        &__desc{ @include vw-pc(font-size,18); @include vw-pc(line-height,24); letter-spacing: -0.05em; color: #fff;}
+        &__btn{@include vw-pc(width,124); @include vw-pc(height,40); @include vw-pc(border-radius,24); @include vw-pc(font-size,18); letter-spacing: -0.04em;}
+    }
+
+    .pt_brand{ position: relative; @include vw-pc(margin, -4 0);
+        &__slide{@include vw-pc(width,1164); @include vw-pc(padding, 4);}
+        &__list{position: relative;}
+        &__item{
+            @include vw-pc(margin-right,30); @include vw-pc(width,100);
+            &:last-child{margin-right:0;}
+        }
+        &__link {display: block;}
+        &__img{@include vw-pc(margin-bottom,11); @include vw-pc(width,100);}
+        &__txt{@include vw-pc(font-size,20); @include vw-pc(line-height,26); letter-spacing: -0.05em; text-align: center;}
+        &__navi{z-index: 1; position: absolute; @include vw-pc(top,52); @include vw-pc(width,34); @include vw-pc(height,34); background: url("../../is/images/brand/pet_brand_arrow_pc.png") no-repeat center / contain;
+            
+            &--prev{@include vw-pc(left,20); transform: rotate(180deg); }
+            &--next{@include vw-pc(right,20);}
+            &.swiper-button-disabled{background: url("../../is/images/brand/pet_brand_arrow_disabled_pc.png") no-repeat center / contain;}
+        }
+    }
+}
+
+
+// 폴드뷰
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+    .sec_brand {
+        .pt_banner{
+    
+            &__desc{ @include vw-pc(font-size,20); @include vw-pc(line-height,26);}
+            &__btn{@include vw-pc(border-radius,22); @include vw-pc(font-size,20);}
+        }
+    
+        .pt_brand{ 
+            &__txt{@include vw-pc(font-size,22); @include vw-pc(line-height,28);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .sec_brand {@include vw-mo(padding,0 40 74); width: 100%;
+        .pt_banner{flex-direction: column; justify-content: flex-start; align-items: center; @include vw-mo(margin-bottom,43); @include vw-mo(padding,60 0); @include vw-mo(width,640); @include vw-mo(height,400); text-align: center;
+            background: url("../../is/images/brand/pet_brand_banner_mo.png") no-repeat center / cover;
+    
+            &__txt{display: flex; flex-direction: column; align-items: center;}
+            &__tit{@include vw-mo(margin-bottom,15); @include vw-mo(width,190); @include vw-mo(height,61); background: url("../../is/images/brand/pet_brand_pluspet_logo_mo.png") no-repeat center / contain;}
+            &__desc{@include vw-mo(margin,0 0 30 0); @include vw-mo(font-size,28); @include vw-mo(line-height,36); letter-spacing: -0.025em; }
+            &__btn{@include vw-mo(width,200); @include vw-mo(height,80); @include vw-mo(border-radius,40); @include vw-mo(font-size,28);}
+        }
+    
+        .pt_brand{margin: 0;
+            &__slide{width: 100%; padding: 0}
+            &__item{@include vw-mo(margin-right,26); @include vw-mo(width,125);}
+            &__img{@include vw-mo(margin-bottom,13); @include vw-mo(width,125);}
+            &__txt{@include vw-mo(font-size,24); @include vw-mo(line-height,24);}
+            &__navi{display: none;}
+        }
+    }
+
+}

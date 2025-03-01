@@ -1,0 +1,352 @@
+<div class="layer-pop layer-default alert" id="commonAlert" tabindex="0" data-popup-layer="commonAlert" data-focus="commonAlert">
+    <div class="layer-header blind"><h2></h2></div>
+    <div class="layer-content">
+        <p style="word-break:keep-all;"></p>
+        <div class="btn-box">
+            <a href="javascript:void(0)" onclick="" class="btn btn-d btn-type2">확인</a>
+        </div>
+    </div>
+</div>
+<!-- e : 공통 팝업(alert)  -->
+<!-- s : 공통 팝업(confirm)  -->
+<div class="layer-pop layer-default" id="commonConfirm" tabindex="0" data-popup-layer="commonConfirm" data-focus="commonConfirm">
+    <div class="layer-header blind">
+        <h2></h2>
+    </div>
+    <div class="layer-content">
+        <p></p>
+        <div class="btn-box double">
+            <!-- 버튼 두개시 클래스 double 추가 -->
+            <a href="javascript:void(0)" class="btn btn-d btn-type1" id="commonConfirmCancelBtn" onclick="closeLayer('commonConfirm');">취소</a>
+            <a href="javascript:void(0)" class="btn btn-d btn-type2" id="commonConfirmOkBtn">확인</a>
+        </div>
+    </div>
+    <button type="button" class="pop-close" id="closeCommonConfirmBtn" name="closeCommonConfirmBtn" data-focus-next="commonConfirm">팝업닫기</button>
+</div>
+<!-- e : 공통 팝업(confirm)  --></div>
+		<!-- e : 본문 영역 -->
+
+		<!-- 플로팅 메뉴 -->
+		<div id="floatingSticky" class="floating-sticky">
+		<div class="menu-list">
+			<div class="inner">
+				<a href="#" class="btn-floating" onclick="floating_open();"><span>메뉴 보기</span></a>
+				<ul>
+				<!-- 모바일 앱에서 AR 기능 한시적 OFF  // 210713 원복 jaedong.id-->
+					<li class="menu01" aria-hidden=""><a href="javascript:chat_open();">빠르고 편리하게 도와드리는<br>삼성닷컴 챗봇입니다.</a></li>
+					<li class="menu02" aria-hidden=""><a href="javascript:chat_open2();">무엇을 도와드릴까요?<br> 온라인 구매 상담사 입니다.</a></li>
+					<li class="menu03" aria-hidden="true" style="display:none;"><a href="/sec/customer/reservationstore/?ref=floating/ " onclick="chat_open3();">매장 방문 예약하고<br> 맞춤 상담을 받아보세요.</a></li>
+				</ul>
+			</div>
+		</div>
+		<button type="button" class="btn-gotop">
+			<span>위로</span>
+		</button>
+	</div>
+	<script>
+		floatSticky();
+
+		function firstRecentGoods(){
+			$.ajax({
+				 url : "/sec/xhr/goods/getFirstRecentGoods"
+				,type : "POST"
+				,success : function(result) {
+					var recentGoodsData = JSON.parse(result);
+
+					if(recentGoodsData.recentYn === "Y"){
+						$("floatingSticky").find(".menu04").remove();
+						var html = "";
+						html += '<li class="menu04">'
+						html += '<a href="#" id = "btn-rcntgoods-floating" type="button" onclick="showLatestItem(self,\'latestItemLayer\'); getRecentGoods(); return false" data-st-path ="'+recentGoodsData.stContextPath+'"  data-popup-target="latestItemLayer" >'
+						html += '<span> <img src="'+recentGoodsData.recentImgPath+'?$128_128_PNG$" alt="'+ recentGoodsData.recentGoodsNm +'"> 최근 본 제품 ('+recentGoodsData.recentGoodsLength+')</span>'
+						html += '</a>'
+						html += '</li>'
+
+						$("#floatingSticky").find("ul").append(html);
+					}
+				}
+			});
+		}
+		// firstRecentGoods();
+	</script>
+	<!-- //플로팅 메뉴 -->
+		<!-- s : 바닥글 영역 - b2c -->
+		<script type="text/javascript">
+	function showSafety() {
+		$(".dropDown-content .subDesc").hide();
+		$(".dropDown-content .dropButton").hide();
+
+		$(".dropDown-content .dropcontent").show();
+	}
+
+	// 약관 변경
+	$(document).on("click", "#dropClauseList01 .droplist-item", function(e) {
+		var id = $(this).attr("id");
+
+		if (id == "optServiceClause03") {
+			location.href = "/sec/membership/terms/";
+		}
+    });
+
+	function openPrivacy() {
+		var agent = navigator.userAgent.toLowerCase();
+
+		if ( ( (navigator.appName === 'Netscape' && agent.indexOf('trident') !== -1) || (agent.indexOf("msie") !== -1))){ // ie
+			window.open("https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=E&certNum=2021-E-R033", "popup", "width=650, height=900, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no");
+		} else {
+			window.open("https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=E&certNum=2021-E-R033", "popup", "width=550,height=750");
+		}
+	}
+
+	//협력회사 사이버 신문고(새창)
+	function openCyberVoc() {
+		var agent = navigator.userAgent.toLowerCase();
+		if ( ( (navigator.appName === 'Netscape' && agent.indexOf('trident') !== -1) || (agent.indexOf("msie") !== -1))){ // ie
+			window.open("https://www.secbuy.com/irj/servlet/prt/portal/prtroot/com.sec.gsrm.com.cybervoc.BoardComponent?submissionId=introductionGuest&boardId=E0009&entrance=samsung.com", "popup", "width=830,height=600, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no");
+		} else {
+			window.open("https://www.secbuy.com/irj/servlet/prt/portal/prtroot/com.sec.gsrm.com.cybervoc.BoardComponent?submissionId=introductionGuest&boardId=E0009&entrance=samsung.com", "popup", "width=830,height=600");
+		}
+	}
+</script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "13bc3440ce4191";
+if(window.wcs) {
+wcs_do();
+}
+</script>
+
+<footer id="footer" class="footer-b2c">
+	<div class="footer-content">
+		<nav class="footer-inner sitemap-links">
+			<h2 class="blind">페이지 링크</h2>
+			<ul>
+				<li class="over">
+					<h3>
+						<a href="javascript:;">제품</a>
+					</h3>
+					<ul>
+						<li><a href="https://www.samsung.com/sec/galaxy/home/" data-omni="product_smartphones">갤럭시</a></li>
+						<li><a href="https://www.samsung.com/sec/smartphones/galaxy-s/" data-omni="product_smartphones">스마트폰</a></li>
+						<li><a href="https://www.samsung.com/sec/tablets/galaxy-tabs/" data-omni="product_tablets">태블릿</a></li>
+						<li><a href="https://www.samsung.com/sec/pc/galaxybook/" data-omni="product_tablets">갤럭시북</a></li>
+						<li><a href="https://www.samsung.com/sec/watches/galaxy-watch-active/" data-omni="product_watches">워치</a></li>
+						<li><a href="https://www.samsung.com/sec/buds/galaxy-buds-pro/" data-omni="product_buds">버즈</a></li>
+						<li><a href="https://www.samsung.com/sec/tvs/neo-qled-8k/" data-omni="product_tvs">TV</a></li>
+						<li><a href="https://www.samsung.com/sec/lifestyletv/home/" data-omni="product_lifestyletv">Lifestyle TV</a></li>
+						<li><a href="https://www.samsung.com/sec/bespoke/home/" data-omni="product_bespoke">BESPOKE</a></li>
+						<!-- 25164 :  footer 영역 수정 BEGIN -->
+						<li><a href="https://www.samsung.com/sec/refrigerators/bespoke/" data-omni="product_refrigerators">냉장고</a></li>
+
+						<!-- 25164 :  footer 영역 수정 END -->
+					</ul>
+					<ul>
+						<li><a href="https://www.samsung.com/sec/kimchi-refrigerators/bespoke-kimchi-plus/" data-omni="product_kimchi-refrigerators">김치냉장고</a></li>
+						<!-- 25164 :  footer 영역 수정 BEGIN -->
+						<li><a href="https://www.samsung.com/sec/dishwashers/bespoke-dishwashers/" data-omni="product_dishwashers">식기세척기</a></li>
+						<li><a href="https://www.samsung.com/sec/electric-range/bespoke-induction/" data-omni="product_smartphones">전기레인지</a></li>
+						<li><a href="https://www.samsung.com/sec/washing-machines/grande-ai/" data-omni="product_washing-machines">세탁기</a></li>
+						<li><a href="https://www.samsung.com/sec/dryers/grande-ai/" data-omni="product_dryers">건조기</a></li>
+						<li><a href="https://www.samsung.com/sec/airdresser/bespoke-airdresser/" data-omni="product_smartphones">에어드레서</a></li>
+						<li><a href="https://www.samsung.com/sec/air-conditioners/gallery/" data-omni="product_air-conditioners">에어컨</a></li>
+						<li><a href="https://www.samsung.com/sec/air-cleaners/bespoke-cube/" data-omni="product_air-cleaners">공기청정기</a></li>
+						<li><a href="https://www.samsung.com/sec/vacuum-cleaners/bespoke-jet/" data-omni="product_vacuum-cleaners">청소기</a></li>
+						<li><a href="https://www.samsung.com/sec/printers/laser-multifunction/" data-omni="product_printers">프린터</a></li>
+						 <!-- 25164 :  footer 영역 수정 END -->
+					</ul>
+				</li>
+				<li>
+					<h3>
+						<a href="javascript:;">고객서비스</a>
+					</h3>
+					<ul>
+						<li><a href="/sec/faq/" data-omni="faq_faq">삼성닷컴 FAQ</a></li>
+						<li><a href="/sec/info/contactus/" data-omni="faq_contactus">이메일상담</a></li>
+						<li><a href="/sec/digitalplaza/storeMain/" data-omni="faq_shop locator">매장 찾기</a></li>
+						<li><a href="/sec/digitalplaza/centerMain/" data-omni="faq_service-locator">서비스센터 찾기</a></li>
+						<li><a href="/sec/digitalplaza/main/" data-omni="plaza_main">디지털프라자</a></li>
+						<li><a href="/sec/md-inv/" data-omni="faq_md_innovation">MD 비즈니스 협력제안</a></li>
+						<li><a href="https://www.secbuy.com/irj/portal/alluser?ume.logon.locale=ko&NavigationTarget=OBN%3A//BOTechnicalName%3DMainBannerOBN/BOSystemAlias%3DEPE_OBN/Operation%3Dnew_biz" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="faq_secbuy">비즈니스 협력제안</a></li>
+						<li><a href="https://r1.community.samsung.com/t5/Korea/ct-p/kr" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="faq_community">삼성멤버스 커뮤니티</a></li>
+						<li><a href="http://samsung.aiibook.net/b2c/" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="faq_e-catalog">E-카탈로그</a></li>
+						<li><a href="https://survey3.medallia.com/?web&c=39&lng=ko" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="faq_e-catalog">고객의 소리</a></li>
+					</ul>
+				</li>
+<!-- s : 2021-05-31 추가 및 수정 -->
+                    <li>
+                        <h3><a href="javascript:;">지속가능경영</a></h3>
+                        <ul>
+                            <li><a href="/sec/sustainability/overview/" data-omni="sustainability_overview">개요</a></li>
+                            <li><a href="/sec/sustainability/environment/" data-omni="sustainability_environment">환경</a></li>
+                            <li><a href="/sec/sustainability/corporate-citizenship/" data-omni="sustainability_corporate-citizenship">사회공헌</a></li>
+                            <li><a href="/sec/sustainability/digital-responsibility/" data-omni="sustainability_digital-responsibility">디지털 책임</a></li>
+                            <li><a href="/sec/sustainability/labor-and-human-rights/" data-omni="sustainability_labor-and-human-rights">노동과 인권</a></li>
+                            <li><a href="/sec/sustainability/diversity-and-inclusion/" data-omni="sustainability_diversity-and-inclusion">다양성과 포용</a></li>
+                            <li><a href="/sec/sustainability/sustainable-supply-chain/" data-omni="sustainability_sustainable-supply-chain">지속가능한 공급망</a></li>
+                            <li><a href="/sec/accessibility/overview/" data-omni="accessibility_overview">제품 접근성</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="javascript:;">회사소개</a></h3>
+                        <ul>
+                            <li><a href="/sec/about-us/company-info/" data-omni="about-us_company-info">기업정보</a></li>
+                            <li><a href="/sec/about-us/business-area/" data-omni="about-us_business-area">사업정보</a></li>
+                            <li><a href="/sec/about-us/brand-identity/" data-omni="about-us_brand-identity">브랜드 아이덴티티</a></li>
+							<li><a href="/sec/about-us/careers/kr/" data-omni="aboutsamsung_careers">채용</a></li>
+							<li><a href="/sec/ir/main/" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="about-us_ir-info">투자자 정보</a></li>
+							<li><a href="https://news.samsung.com/kr/" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="about-us_newsroom">뉴스룸</a></li>
+							<li><a href="/sec/about-us/ethics/" data-omni="about-us_ethics">윤리</a></li>
+							<li><a href="https://design.samsung.com/kr/" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="about-us_design-samsung">디자인 삼성</a></li>
+							<li><a href="https://dividend.samsung.com/" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="about-us_dividend">배당조회</a></li>
+							<li><a href="/sec/notice/" data-omni="about-us_notice">공지사항</a></li>
+                        </ul>
+					</li>
+					<!-- e : 2021-05-31 추가 및 수정 -->
+					<li>
+						<h3><a href="javascript:;">윤리&준법경영</a></h3>
+						<ul>
+							<li><a href="//sec-audit.com/common/businessPrinciple/viewBusinessPrincMain.do?_menuId=AVyA0fTVACzV4mS0&amp;_menuF=true&amp;s_gbn=PA100001" data-omni="ethics and law_principle" class="link-outlink" title="새창으로 열림">경영원칙</a></li>
+					    	<li><a href="//sec-audit.com/common/wrongReport/init.do?_menuId=AVyAoCSlAADV4mQ3&amp;_menuF=true&amp;s_gbn=PA100002" data-omni="ethics and law_wrong report" class="link-outlink" title="새창으로 열림">부정제보</a></li>
+					    	<li><a href="javascript:window.open('https://sec-compliance.net/gcc/gcc.do?method=gccReport&langCd=ko_KR' , 'CPMS' , 'width=1400px,height=1200px,resizable=yes,scrollbars=yes' );" data-omni="ethics and law_GCC" class="link-outlink" title="새창으로 열림">법위반제보</a></li>
+						</ul>
+					</li>
+					<!-- s : 2021-05-31 추가 및 수정 -->
+					<li>
+						<h3><a href="javascript:;">부가정보</a></h3>
+						<ul>
+							<li><a href="https://www.dacorkorea.com/" class="link-outlink" title="새창으로 열림" target="_blank" data-omni="additional information_dacorkorea">데이코</a></li>
+							<li><a href="javascript:openCyberVoc();" class="link-outlink" title="새창으로 열림" data-omni="">협력회사 사이버 신문고</a></li>
+							<li><a href="javascript:;" onclick="newWindowAndSubmit({url : '/sec/additional/indexWasteCartridgeRecallApply/' , method : 'GET' , stContextPath : '/sec/'});" data-omni="additional information_printer_green">폐카트리지 회수신청</a></li>
+						</ul>
+					</li>
+					<!-- e : 2021-05-31 추가 및 수정 -->
+			</ul>
+		</nav>
+	</div>
+	<div class="footer-content">
+		<div class="footer-inner">
+			<div class="info-detail">
+				<p>
+					<span>삼성전자 주식회사 대표이사 : 김기남</span>
+					<span class="mo-inline">사업자등록번호 : 124-81-00998</span>
+					<span class="comp-wrap"><a href="//www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2000374001130200515&pageUnit=10&searchCnd=wrkr_no&searchKrwd=1248100998&pageIndex=1" class="comp" title="새창 열림" target="_blank">사업자 정보확인</a></span>
+					<span>통신판매업 신고 : 2000-경기수원-0515</span>
+				</p>
+				<p class="gap">
+					<span>사업장주소 : 경기도 수원시 영통구 삼성로 129(매탄동)</span>
+					<span>호스팅서비스사업자 : 한국아이비엠(주)</span>
+					<span>대표번호 : 02-2255-0114</span>
+					<span>제품/서비스/멤버십: 1588-3366</span>
+					<span>구매문의 : 1588-6084</span>
+				</p>
+				<p>본 사이트에서 판매되는 상품 중에는 등록된 개별 판매자가 판매하는 상품이 포함되어 있습니다. </p>
+				<p>개별 판매자 판매 상품의 경우 삼성전자(주)는 통신판매중개업자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 상품, 거래정보 및 거래 등에 대해 책임을 지지 않습니다.</p>
+				<p>본 사이트의 컨텐츠는 저작권법의 보호를 받는 바  무단 전재, 복사, 배포 등을 금합니다.</p>
+				<p class="copyright">Copyright &copy; 1995-2022 Samsung. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer-content">
+		<div class="footer-inner">
+			<div class="cs-btn">
+                <ul>
+                	<li><a href="/sec/function/ipredirection/ipredirectionLocalList/">한국/한국어</a></li><!-- 200918 추가 -->
+                    <li><a href="javascript:;" title="이메일 무단 수집거부" data-popup-target="popupGatherRefuse" data-omni="footer:bottom_email_security">이메일 무단 수집거부</a></li>
+                    <li><a href="javascript:;" title="아이디어 정책" data-popup-target="popupIdeaPolicy" data-omni="footer:bottom_idea security">아이디어 정책</a></li>
+                    <li><a href="/sec/info/sitemap/" data-omni="footer:bottom_sitemap">사이트맵</a></li>
+                </ul>
+            </div>
+			<div class="clause-links">
+				<!-- s : Accessible Dropdown -->
+<!-- 				<span id="dropServiceClauseTitle" class="blind">서비스별 이용약관</span> -->
+				<div id="dropClauseList01" class="wrap-droplist rounded clause-use">
+					<button class="droplist-button" aria-haspopup="listbox" aria-labelledby="dropServiceClauseTitle dropServiceClauseBtn" id="dropServiceClauseBtn" title="서비스별 이용약관">이용약관<span class="blind">하위 메뉴 있음</span></button>
+					<ul class="droplist" tabindex="-1" aria-labelledby="dropServiceClauseTitle" aria-activedescendant="optServiceClause01">
+<!-- 						aria-activedescendant에 선택된 li의 id 삽입 -->
+						<li id="optServiceClause02" class="droplist-item" data-omni="footer:terms_legal"><a href="https://account.samsung.com/membership/etc/specialTC.do?fileName=samsungkorea.html" target="_blank" title="새 창으로 열림">삼성전자 대표사이트 이용약관</a></li>
+						<li id="optServiceClause03" class="droplist-item" data-omni="footer:terms_conditions"><a href="/sec/membership/terms/">삼성전자멤버십 이용약관</a></li>
+						<li id="optServiceClause04" class="droplist-item" data-omni="footer:terms_contents"><a href="https://account.samsung.com/membership/policy/terms" target="_blank" title="새 창으로 열림">Samsung 서비스 이용약관</a></li>
+					</ul>
+				</div>
+                <!-- s : Accessible Dropdown -->
+                <div id="dropClauseList02" class="wrap-droplist rounded  clause-private">
+                    <button class="droplist-button" title="서비스별 개인정보처리방침">개인정보처리방침<span class="blind">하위 메뉴 있음</span></button>
+                    <ul class="droplist" tabindex="-1" aria-labelledby="dropServicePrivateTitle" aria-activedescendant="optServicePrivate01"><!--aria-activedescendant에 선택된 li의 id 삽입-->
+                        <li id="optServicePrivate02" class="droplist-item"><a href="/sec/info/privacy/01">삼성닷컴 개인정보처리방침</a></li>
+                        <li id="optServicePrivate03" class="droplist-item"><a href="/sec/info/privacy/02">삼성닷컴 이벤트 개인정보처리방침</a></li>
+                        <li id="optServicePrivate04" class="droplist-item"><a href="/sec/info/privacy/03">삼성전자멤버십 개인정보처리방침</a></li>
+                        <li id="optServicePrivate05" class="droplist-item"><a href="/sec/info/privacy/04">멤버십블루 개인정보처리방침</a></li>
+                        <li id="optServicePrivate06" class="droplist-item"><a href="/sec/info/privacy/05">경력채용 개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <!-- e : Accessible Dropdown -->
+			</div>
+			<div class="link-box">
+				<div class="mark-box">
+					<a href="javascript;" class="btn-mark btn-wa" data-popup-target="popupWA" data-omni="local logo_wa">웹접근성 우수사이트</a>
+					<a href="javascript:openPrivacy();"
+						title="개인정보 보호 우수사이트 인증서 : 새창으로 열기" class="btn-mark btn-eprivacy" data-omni="local logo_eprivacy">개인정보보호 우수사이트</a>
+				</div>
+				<div class="sns-btn">
+					<div class="wrap-sns">
+						<span class="tit">SNS</span>
+						<ul>
+							<li><a href="//www.facebook.com/SamsungKorea" class="btn-fb" title="팝업 열기" target="_blank" data-omni="follow:facebook"><span class="blind">facebook</span></a></li>
+							<li><a href="//www.youtube.com/c/samsungkorea" class="btn-yt" title="팝업 열기" target="_blank" data-omni="follow:youtube"><span class="blind">youtube</span></a></li>
+							<li><a href="//www.instagram.com/samsungkorea" class="btn-ig" title="팝업 열기" target="_blank" data-omni="follow:instagram"><span class="blind">instagram</span></a></li>
+							<li><a href="//blog.naver.com/samsung_korea" class="btn-bl" title="팝업 열기" target="_blank" data-omni="follow:blog"><span class="blind">삼성전자 코리아 블로그</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- s : 이메일 무단 수집거부 -->
+<div class="layer-pop layer-normal" id="popupGatherRefuse" tabindex="0" data-popup-layer="popupGatherRefuse" data-focus="popupGatherRefuse">
+	<div class="layer-header">
+		<h2>이메일 무단 수집거부</h2>
+	</div>
+	<div class="layer-content">
+		<div class="etc-divWrap">
+			<p>본 웹사이트는 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단 수집되는 것을 거부합니다.<br>
+			이를 위반 시 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』등에 의해 처벌받을 수 있습니다.</p>
+		</div>
+	</div>
+	<button type="button" class="pop-close" data-focus-next="popupGatherRefuse">팝업닫기</button>
+</div>
+<!-- e : 이메일 무단 수집거부 -->
+
+<!-- s : 아이디어 정책 -->
+<div class="layer-pop layer-normal" id="popupIdeaPolicy" tabindex="0" data-popup-layer="popupIdeaPolicy" data-focus="popupIdeaPolicy">
+	<div class="layer-header">
+		<h2>아이디어 제안에 대한 정책</h2>
+	</div>
+	<div class="layer-content">
+		<div class="etc-divWrap">
+			<p>삼성전자 및 삼성전자 임직원은 당사가 공식적으로 요청하지 않았음에도 불구하고 여러분께서 일방적으로 당사에 제출하는 아이디어나 제안 등을 수령하거나 검토하지 않습니다.</p>
+
+			<p>이는 제출하신 내용이 당사 내부적으로 개발한 제품, 기술, 서비스와 유사할 경우 발생할 수 있는 오해와 분쟁을 방지하고 나아가 여러분의 창의적인 아이디어를 적극 보호하기 위함입니다.</p>
+
+			<p>이러한 취지를 이해하여 주시고 구체화되지 않은 아이디어나 콘셉트(Concept) 단계의 제안이 당사에 제출되지 않도록 하여 주시기 바랍니다.</p>
+		</div>
+	</div>
+	<button type="button" class="pop-close" data-focus-next="popupIdeaPolicy">팝업닫기</button>
+</div>
+<!-- e : 아이디어 정책 -->
+
+<!-- s : 웹접근성 우수사이트 인증서  -->
+<div class="layer-pop layer-default" id="popupWA" tabindex="0" data-popup-layer="popupWA" data-focus="popupWA">
+	<div class="layer-content">
+		<img src="https://www.samsung.com/sec/static/_images/common/WA-2021.jpg" alt="웹접근성 우수사이트 인증서">
+	</div>
+	<button type="button" class="pop-close" data-focus-next="popupWA">팝업닫기</button>
+</div>
+<!-- e : 웹접근성 우수사이트 인증서  -->
+<!-- e : 바닥글 영역 - b2c -->
+	</div>
+
+	</body>
+</html>

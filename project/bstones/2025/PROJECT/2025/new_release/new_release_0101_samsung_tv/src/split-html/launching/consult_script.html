@@ -1,0 +1,299 @@
+<input id="addHtmlPopupCounsel" name="addHtmlPopupCounsel" type="hidden"/>
+<style>
+    .layer-pop#popupCounsel .layer-content {}::-webkit-scrollbar {height:3px; width:3px; background:#8F8F8F;}
+    .layer-pop#popupCounsel .layer-content {}::-webkit-scrollbar-thumb {border:0px solid transparent; background:#313131; background-clip:padding-box; border-radius:10px}
+</style>
+<div class="layer-pop layer-normal layer-event-exhibition" id="popupCounsel" tabindex="0" data-popup-layer="popupCounsel" data-focus="popupCounsel" aria-hidden="false" data-zindex="301" style="z-index: 301;">
+    <script defer type="text/javascript">
+        $(document).ready(function () {
+
+        });
+
+    function memberFnSaveApplyCounsel(){
+        if(memberFnValidationCheck()){
+            var data = {
+            spcsTmplNo : "${template.spcsTmplNo}"
+            , mbrNo : "${member.mbrNo}"
+            , mbrNm : "${member.mbrNm}"
+            , mobile: $('#inpEnterCall').val()
+            , cusHopeDt: $('#inpCusDate').val()
+            , cusHopeTime: $('#inpCusTime.focused').text()
+            , iqrCont: $('#inpApplyText').val()
+            , rcvYns: [$('#chk-enter-1').prop("checked") ? 'Y' : 'N', $('#chk-enter-3').prop("checked") ? 'Y' : 'N', $('#chk-enter-4').prop("checked") ? 'Y' : 'N']
+            , termsNos: [$('#terms30No').val(), $('#terms45No').val(), $('#terms40No').val()]
+            }
+            var options = {
+                url : "${view.stContextPath}xhr/specialCounsel/applyCounsel/",
+                data : data,
+                done : function(result) {
+                    closeLayer("popupCounsel");
+                    if(result.result > 0){
+                        var alertData = {
+                            title: "alert",
+                            content: "신청이 완료되었습니다."
+                            ,callback : function() {
+                                location.reload();
+                            }
+                        };
+                        commonAlert(alertData);
+                        openLayer('commonAlert');
+                    } else{
+                        var alertData = {
+                            title: "alert"
+                            ,content : "오류가 발생했습니다."
+                            ,callback : function() {
+                                location.reload();
+                            }
+                        };
+                        commonAlert(alertData);
+                        openLayer('commonAlert');
+                    }
+                }
+            };
+            ajax.call(options);
+        }else {
+            var id = $("#focusTarget").val();
+            $("#" + id).focus();
+            return;
+        }
+    }
+
+    function memberFnValidationCheck() {
+        var passFlag = true;
+        var inpEnterCall = $('#inpEnterCall').val();
+        var inpCusDate = $('#inpCusDate').val();
+        var inpCusTime = $('#inpCusTime.focused').text();
+        var inpApplyText = $('#inpApplyText').val();
+
+        if(!$('#chk-enter-1').prop("checked")){
+            $('#termsBox1').addClass("error");
+            $("#focusTarget").val('chk-enter-1');
+            passFlag=false;
+        }else{
+            $('#termsBox1').removeClass("error");
+        }
+        if(inpApplyText == ''){
+            $('#cusTextInpBox').addClass("error");
+            $("#focusTarget").val('inpApplyText');
+            passFlag=false;
+        }else {
+            $('#cusTextInpBox').removeClass("error");
+        }
+        if(inpCusTime == ''){
+            $('#cusTimeInpBox').addClass("error");
+            $("#focusTarget").val('droplistPdBtn-1');
+            passFlag=false;
+        }else {
+            $('#cusTimeInpBox').removeClass("error");
+        }
+        if(inpCusDate == ''){
+            $('#cusDateInpBox').addClass("error");
+            $("#focusTarget").val('inpCusDate');
+            passFlag=false;
+        }else {
+            $('#cusDateInpBox').removeClass("error");
+        }
+        if(inpEnterCall == ''){
+            $('#mobileInpBox').addClass("error");
+            $("#focusTarget").val('inpEnterCall');
+            passFlag=false;
+        }else {
+            $('#mobileInpBox').removeClass("error");
+        }
+
+        if(passFlag){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    function setCounselDt(){
+        var data = {
+            spcsTmplNo : "${template.spcsTmplNo}"
+            , cusHopeDt: $('#inpCusDate').val()
+        }
+        var options = {
+            url : "${view.stContextPath}xhr/specialCounsel/setCounselDt/",
+            data : data,
+            done : function(result) {
+                $("#cusTimeList").empty();
+                var html = "";
+                var list = result.counselTimeList;
+                for(var i in list){
+                    html += '<li id="inpCusTime" role="option" class="droplist-item';
+                    if(list[i].counselAbleYn == 'N'){
+                        html += ' disabled';
+                    }
+                    html += '">';
+                    html += list[i].counselTime;
+                    html += '</li>';
+                }
+                $("#cusTimeList").append(html);
+            }
+        };
+        ajax.call(options);
+    }
+
+    </script>
+    <input id="holidayWeekList" name="holidayWeekList" value="${holidayWeekList }" type="hidden">
+    <input id="holidayList" name="holidayList" value="${holidayList }" type="hidden">
+    <input id="focusTarget" name="focusTarget" value="" type="hidden">
+    <div class="layer-header text-hide">
+        <h2>응모 하기</h2>
+    </div>
+    <div class="layer-content" style="padding-right:10px;">
+        <div class="frm-login ">
+            <form action="">
+            <fieldset class="secureInp">
+            <legend>상담 입력 폼</legend>
+            <div class="event-img">
+            <!-- <img src="/sec/static/_images/temp/event-exhibition.png" alt=""> -->
+            <img src="${template.kvImgPath }" alt="">
+        </div>
+
+        <div class="user-info-box secure-pop-form user-form">
+            <div class="secure-pop-tit bottom-line">상담 신청 <span class="ico-required">*<span>필수입력</span></span></div>
+            <div class="secure-pop form-write">
+            <div class="inp-box">
+            <label for="inpEnterName" class="lb-line">이름</label>
+        <div>
+        <input type="text" id="inpEnterName" class="inp-line" value="${member.mbrNm }" readonly="readonly">
+    </div>
+</div>
+
+<div id="mobileInpBox" class="inp-box">
+    <label for="inpEnterCall" class="lb-line">연락처</label>
+<div>
+<input type="text" id="inpEnterCall" class="inp-line" value="${member.mobile }" numberonly placeholder="(-) 없이 숫자만 입력해 주세요.">
+<!-- 에러시 div 'inp-box'에 클래스 error 삽입 -->
+<div class="error-msg">
+    <p>연락처를 입력해 주세요.</p>
+</div>
+</div>
+</div>
+
+<div id="cusDateInpBox" class="inp-box">
+<label for="inpCusDate" class="lb-line">상담 요청일</label>
+<div>
+<input type="text" id="inpCusDate" name="" placeholder="상담 요청일 일자를 선택해 주세요." class="inp-line inp-calendar" readonly="" >
+<div class="error-msg">
+<p>상담 요청일 일자를 선택해 주세요</p>
+</div>
+</div>
+</div>
+
+<div id="cusTimeInpBox" class="inp-box">
+<label for="prodSolSltLv1" class="lb-line">상담 요청 시간</label>
+<div id="" class="wrap-droplist">
+<button class="droplist-button" aria-haspopup="listbox" aria-labelledby="droplistTitleLv-1 droplistPdBtn-1" id="droplistPdBtn-1">선택하세요</button>
+<ul id="cusTimeList" class="droplist" tabindex="-1" role="listbox" aria-labelledby="droplistTitleLv-1" aria-activedescendant="pd-type01-01">
+<c:forEach var="counselTime" items="${counselTimeList}" varStatus="status">
+<li id="inpCusTime" role="option" class="droplist-item <c:if test='${counselTime.counselAbleYn eq "N" }'>disabled</c:if>">${counselTime.counselTime}</li>
+</c:forEach>
+</ul>
+<div class="error-msg">
+<p>상담 요청 시간을 선택해 주세요</p>
+</div>
+</div>
+</div>
+
+<div id="cusTextInpBox" class="inp-box">
+<label for="inpApplyText" class="lb-line">상담 내용</label>
+<div>
+<div class="inquiry-con">
+<textarea id="inpApplyText" class="inp-line pop-tArea" placeholder="${template.hldrText }"></textarea>
+<span class="txt-count"><em class="strong">0</em> / 1000자</span>
+</div>
+<p class="essential">${template.itdcWds }</p>
+<!-- 에러시 div 'inp-box'에 클래스 error 삽입 -->
+<div class="error-msg">
+<p>상담내용을 입력해 주세요.</p>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+<div class="help-box">
+<p>
+삼성전자 주식회사(이하 ‘회사’라 합니다)는 이용자가 삼성닷컴 전문상담 서비스 이용시 이용자로부터 아래와 같은 개인정보를 수집하고 있습니다.<br>
+이용자는 본 개인정보 수집·이용 동의서에 따른 동의 시, '필요한 최소한의 정보 외의 개인정보' 수집·이용에 동의하지 아니할 권리가 있습니다.<br>
+개인정보 처리에 대한 상세한 사항은 삼성닷컴 홈페이지(<a href="http://www.samsung.com/sec" class="link" target="_blank">www.samsung.com/sec</a>)에 공개한 '삼성닷컴 이벤트 개인정보 처리방침'을 참조하십시오. 다만, 본 동의서 내용과 상충되는 부분은 본 동의서의 내용이 우선합니다.
+</p>
+</div>
+<div class="user-info-box secure-pop-form terms-form">
+<div class="secure-pop-tit bottom-line">
+개인정보 수집·이용 동의 <span class="ico-required">*<span>필수입력</span></span>
+</div>
+
+<div class="secure-pop terms-con">
+<p class="txt-general">
+귀하께서는 본 동의 안내 문구를 숙지하셨으며, 안내문구에 대해 거절하실 수 있습니다.<br>
+단, 거절하신 경우에는 이벤트 응모가 제한되실 수 있습니다.
+</p>
+<div class="chk-form allChk-box">
+<input id="chk-enter-all" data-allchk-name="allCheck" data-children-name="checkSpecialCounselEnter" type="checkbox" required="" title="" class="checkBoxTerms">
+<label for="chk-enter-all" class="chk-all">모든 약관을 확인하고 전체 동의합니다.</label>
+</div>
+
+<div id="termsBox1" class="terms-wrap">
+<h4 class="terms-tit">개인정보 수집 및 이용 동의(필수)</h4>
+<div class="terms-box">
+${terms30.content}
+</div>
+<div class="chk-form terms-more">
+<input id="terms30No" value="${terms30.termsNo }" type="hidden" />
+<input id="chk-enter-1" data-chkgrp-name="checkSpecialCounselEnter" type="checkbox" required="" title="" class="inp-terms">
+<label for="chk-enter-1" class="chk-gray">위의 개인정보 수집 및 이용에 동의합니다. (필수)</label>
+</div>
+<!-- [D] 에러시 div 'terms-wrap'에 클래스 error 삽입 -->
+<div class="error-msg">
+<p>개인정보 수집 및 이용에 동의해 주세요.</p>
+</div>
+</div>
+
+<div id="termsBox2" class="terms-wrap">
+<h4 class="terms-tit">마케팅/광고 활용 목적의 개인정보 수집이용 동의(선택)</h4>
+<div class="terms-box">
+${terms45.content}
+</div>
+<div class="chk-form terms-more">
+<input id="terms45No" value="${terms45.termsNo }" type="hidden" />
+<input id="chk-enter-3" data-chkgrp-name="checkSpecialCounselEnter" type="checkbox" required="" title="" class="inp-terms">
+<label for="chk-enter-3" class="chk-gray">위의 개인정보 수집 및 이용에 동의합니다. (선택)</label>
+</div>
+</div>
+
+<div id="termsBox3" class="terms-wrap">
+<h4 class="terms-tit">광고성 정보 수신 동의(선택)</h4>
+<div class="terms-box">
+${terms40.content}
+</div>
+<div class="chk-form terms-more">
+<input id="terms40No" value="${terms40.termsNo }" type="hidden" />
+<input id="chk-enter-4" data-chkgrp-name="checkSpecialCounselEnter" type="checkbox" required="" title="" class="inp-terms">
+<label for="chk-enter-4" class="chk-gray">위의 광고성 정보 수신에 동의합니다. (선택)</label>
+</div>
+</div>
+
+</div>
+
+<div class="help-box">
+<p>
+개인정보 처리에 대한 상세한 사항은 삼성전자 웹사이트  (<a href="http://www.samsung.com/sec" class="link" target="_blank">www.samsung.com/sec</a>)에 공개한 "삼성닷컴 이벤트 개인정보 처리방침"을 참조하십시오.<br>
+다만, 본 동의서 내용과 상충되는 부분은 본 동의서 내용을 우선합니다.
+</p>
+</div>
+
+</div>
+</fieldset>
+</form>
+<div class="btn-box ">
+<button id="applyCounselBtn" ON-CLICK="memberFnSaveApplyCounsel()" type="button" class="btn btn-d btn-type2">상담신청</button>
+</div>
+</div>
+
+</div>
+<button type="button" class="pop-close" data-focus-next="popupCounsel">팝업닫기</button>

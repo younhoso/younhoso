@@ -1,0 +1,221 @@
+.reviewer {
+    .sec_step {
+        background: #fafafa; @include vw-pc(padding, 95 0 100);
+        .title_box {
+            @include vw-pc(padding-bottom, 45);
+            .title {@include vw-pc(font-size, 56); @include vw-pc(line-height, 67); text-align: center; @include vw-pc(width, 445); margin: 0 auto; letter-spacing: -.05rem; position: relative;}
+            .title.pt_bg-image.pt_add-bg::before {content: ''; position: absolute; @include vw-pc(width, 66); @include vw-pc(height, 48); background: url('../../is/images/rc_step_title_01_pc.png') no-repeat; @include vw-pc(background-size, 66 48); @include vw-pc(left, -81); @include vw-pc(top, 4);}
+            .title.pt_bg-image.pt_add-bg::after {content: ''; position: absolute; @include vw-pc(width, 50); @include vw-pc(height, 50); background: url('../../is/images/rc_step_title_02_pc.png') no-repeat; @include vw-pc(background-size, 50 50); @include vw-pc(right, -63); @include vw-pc(top, 4);}
+        }
+        .step_box {
+            @include vw-pc(width, 1300); margin: 0 auto;
+            ul {
+                width: 100%;
+                li {display: block; width: 100%; @include vw-pc(min-height, 112); @include vw-pc(border-radius, 12); @include vw-pc(margin-bottom, 24); @include vw-pc(border, 1 solid #000); @include vw-pc(box-shadow, 7 7 16 rgba(100,88,72,.1)); background-color: #fef5df; position: relative;}
+                li a.pt_bg-image.pt_add-bg {display: block; width: 100%; height: 100%; background-image:  url('../../is/images/rc_step_open_pc.png'); @include vw-pc(background-size, 27 27); @include vw-pc(background-position, 1220 42); background-repeat: no-repeat;}
+                li a.pt_bg-image.pt_add-bg.active {background-image: url('../../is/images/rc_step_close_pc.png'); @include vw-pc(background-size, 27 5); @include vw-pc(background-position, 1220 53);}
+                li.step_1.pt_bg-image.pt_add-bg {background-image: url('../../is/images/rc_icon_step_01_pc.png'); @include vw-pc(background-size, 53 51); background-repeat: no-repeat; @include vw-pc(background-position, 33 28);}
+                li.step_2.pt_bg-image.pt_add-bg {background-image: url('../../is/images/rc_icon_step_02_pc.png'); @include vw-pc(background-size, 54 51); background-repeat: no-repeat; @include vw-pc(background-position, 36 32);}
+                li.step_3.pt_bg-image.pt_add-bg {background-image: url('../../is/images/rc_icon_step_04_pc.png'); @include vw-pc(background-size, 41 50); background-repeat: no-repeat; @include vw-pc(background-position, 40 28);}
+                // li.step_4 {background-image: url('../../is/images/rc_icon_step_04_pc.png'); @include vw-pc(background-size, 39 50); background-repeat: no-repeat; @include vw-pc(background-position, 40 28);}
+                li dl {display: flex; @include vw-pc(gap, 13); width: 100%; @include vw-pc(height, 112); @include vw-pc(padding-left, 115); align-items: center;
+                    // 2024.06.26 복사하기추가
+                    .pt_hash_box{display: flex; align-items: center; @include vw-pc(width, 252); @include vw-pc(height, 51); @include vw-pc(border, 2 solid #F24724); @include vw-pc(border-radius, 9);
+                        .pt_hash_tit{display: flex; align-items: center; justify-content: center; @include vw-pc(width, 77); height: 100%; @include vw-pc(font-size, 18); @include vw-pc(border-radius, 0 9 9 0); font-weight: 700; background-color: #F24724; color: #fff;}
+                        .pt_hash_tit button{@include vw-pc(font-size, 18); font-weight: 700; color: #fff;}
+                        .pt_hash_txt{display: flex; justify-content: center; align-items: center; @include vw-pc(width, 175); height: 100%; @include vw-pc(font-size, 19); @include vw-pc(border-radius, 9); background-color: #fff;}
+                    }
+                }
+                li dt {display: inline-block; @include vw-pc(width, 87); @include vw-pc(height, 33); @include vw-pc(border-radius, 6); background: #000; color: #fff; @include vw-pc(font-size, 19); font-weight: 700; text-align: center; @include vw-pc(line-height, 33); @include vw-pc(margin-right, 12);}
+                li dd { @include vw-pc(font-size, 34); font-weight: 700; letter-spacing: -.05em;
+                    &.step_txt_tit { position: relative;
+                        .step_txt_disc { 
+                            @include vw-pc(font-size, 20); font-weight: 400; @include vw-pc(line-height, 22);
+                            
+                            &:first-of-type {@include vw-pc(margin-top, 9);}
+                        }
+                    }
+                }
+                
+                li dd .c_org {color: #F24724; vertical-align: top;}
+                li.active {height: unset; display: block;}
+                li .step_answer {@include vw-pc(border-top, 1 solid #000); background-color: #fdf8ed; @include vw-pc(padding, 50 0); @include vw-pc(border-radius, 0 0 12 12);}
+                
+                
+                .step {display: flex;}
+                #step_01 .step {@include vw-pc(padding-left, 258);}
+                #step_02 .step {@include vw-pc(padding-left, 70);}
+                #step_03 .step {@include vw-pc(padding-left, 280);}
+                .step .img_box.st01 {@include vw-pc(width, 288); @include vw-pc(margin-right, 89);}
+                .step .img_box.st02 {@include vw-pc(width, 572); @include vw-pc(margin-right, 70);}
+                .step .img_box.st03 {@include vw-pc(width, 289); @include vw-pc(margin-right, 70);}
+                .step .txt_box {display: flex; justify-content: center; flex-direction: column;}
+                .step .txt_box .en.pt_bg-image.pt_add-bg {background-image: url('../../is/images/rc_step_box_pc.png'); @include vw-pc(background-size, 123 52); @include vw-pc(width, 123); @include vw-pc(height, 52); @include vw-pc(padding, 2 6 6 2); @include vw-pc(line-height, 44); @include vw-pc(font-size, 29); text-align: center; color: #fff; @include vw-pc(margin-bottom, 19);}
+                .step .txt_box .step_txt {@include vw-pc(font-size, 28); @include vw-pc(line-height, 38); font-weight: 700;}
+                .step .txt_box .step_txt .c_org {color: #F24724; vertical-align: baseline;}
+                .step .txt_box .step_txt .line_44 {@include vw-pc(line-height, 54);}
+                .step .txt_box .step_txt .btn_round.bt_white {@include vw-pc(width, 154); @include vw-pc(height, 45); @include vw-pc(border-radius, 22); @include vw-pc(border, 2 solid #000); background-color: #fff; text-align: center; @include vw-pc(font-size, 24); @include vw-pc(line-height, 41); display: inline-block; vertical-align: top;}
+                .step .txt_box .step_txt .btn_round.bt_black {@include vw-pc(width, 108); @include vw-pc(height, 45); @include vw-pc(border-radius, 22); @include vw-pc(border, 2 solid #000); background-color: #000; text-align: center; color: #fff; @include vw-pc(font-size, 24); @include vw-pc(line-height, 41); display: inline-block; vertical-align: top;}
+                .step .txt_box .step_txt .btn_round.bt_black.w148 {@include vw-pc(width, 148);}
+                .step .txt_box .step_txt sup {@include vw-pc(font-size, 20); font-weight: 400; @include vw-pc(line-height, 41); vertical-align: top; color: #575551}
+                // 2024.06.26 복사하기추가
+                .step .txt_box .pt_hash_box{display: flex; @include vw-pc(width, 464); @include vw-pc(height, 48); @include vw-pc(border-radius, 9); @include vw-pc(border, 2 solid #F24724);
+                    .pt_hash_tit{display: flex; align-items: center;justify-content: center; @include vw-pc(width, 215); @include vw-pc(border-radius, 0 9 9 0); height: 100%; @include vw-pc(font-size, 24); font-weight: 700; background-color: #F24724; color: #fff; cursor: pointer;}
+                    .pt_hash_txt{display: flex; justify-content: center; align-items: center; @include vw-pc(width, 249); @include vw-pc(border-radius, 9); @include vw-pc(font-size, 24); background-color: #fff;}
+                }
+
+                .step .txt_box .step_txt .badge {@include vw-pc(width, 141); @include vw-pc(height, 45); background-color: #fff; @include vw-pc(border-radius, 3); @include vw-pc(border, 2 solid #268dfc); color: #268dfc; @include vw-pc(font-size, 24); font-weight: 700; text-align: center; vertical-align: top; letter-spacing: -.025rem; display: inline-block;}
+                .step .txt_box .step_txt .btn_check.pt_bg-image.pt_add-bg {display: inline-block; @include vw-pc(width, 24); @include vw-pc(height, 24); background: center / contain no-repeat; background-image: url('../../is/images/rc_check_icon_pc.png'); @include vw-pc(background-size, 24 24); @include vw-pc(vertical-align, -2);}
+
+                #step_02 .step .txt_box .step_txt .line_44 {@include vw-pc(line-height, 44);}
+
+                .step .txt_box.txt_c {text-align: center;}
+                .step .txt_box.txt_c .en {@include vw-pc(margin, 0 auto 19 auto); @include vw-pc(width, 123);}
+                .step .txt_box.txt_c .step_txt {@include vw-pc(padding-bottom, 5);}
+                .step .txt_box.txt_c .step_desc_txt {@include vw-pc(font-size, 20); @include vw-pc(padding-bottom, 12);}
+
+                .codescan_box{
+                    display: flex; justify-content: space-between; align-items: flex-start; @include vw-pc(padding, 0 28);
+                    .codescan_list{
+                        display: flex; justify-content: space-between; align-items: center; @include vw-pc(width, 880); @include vw-pc(padding-top, 35);
+                        li {position: relative; border: none; background-color: transparent; box-shadow: none;}
+                        li .code_num{position: absolute; top:0; @include vw-pc(left, 30); @include vw-pc(font-size, 24); border-bottom: 1px solid #000;}
+                        li .img_box {@include vw-pc(width, 174); margin: 0 auto;}
+                        li .code_box {@include vw-pc(padding-top, 15); text-align: center;}
+                        li .code_box .code_title {@include vw-pc(padding-bottom, 10); @include vw-pc(font-size, 24); letter-spacing: -.05rem; font-weight: 700;}
+                        li .code_box .code_text {display:block; @include vw-pc(padding-bottom, 10); @include vw-pc(font-size, 18); @include vw-pc(line-height, 26); letter-spacing: -.07rem;}
+                        li .code_box .code_sub_text {display:block; @include vw-pc(font-size, 12); @include vw-pc(line-height, 18); letter-spacing: -.06rem; color:#666;}
+                        // li .code_box .btn_popup02 .btn_code {position: relative; display: inline; @include vw-pc(font-size, 14); font-weight:400; border-bottom:1px solid #000;}
+                        // li .code_box .btn_popup02 .btn_code::after { content: ''; display: inline-block; @include vw-pc(width, 7); @include vw-pc(height, 4); @include vw-pc(margin-top, 5); @include vw-pc(margin-left, 3); vertical-align: top; background-image: url(../../is/images/rc_befri_ico_down_pc.png); background-repeat: no-repeat; @include vw-pc(background-size, 7 4); border:none; transform: rotate(-90deg);} 
+                    }
+                    // .codescan_img_box{
+                    //     position: relative; @include vw-pc(width, 185);
+                    //     &::after{content:''; position: absolute; top:40%; @include vw-pc(right, 240); @include vw-pc(width, 56); @include vw-pc(height, 30); background: url(../../is/images/rc_arr_code_pc.png); @include vw-pc(background-size, 56 30);}
+                    //     .code_box {text-align: center; @include vw-pc(padding-top, 19);}
+                    //     .code_text {@include vw-pc(font-size, 24); @include vw-pc(line-height, 30)}
+                    //     .code_title{@include vw-pc(font-size, 24); letter-spacing: -.05rem; font-weight: 700;}
+                    // }
+                }
+            }
+        }
+        .btn_box {@include vw-pc(padding-top, 0); text-align: center; position: absolute; @include vw-pc(top, 28); @include vw-pc(left, 772);}
+        .btn_box .btn_apply {@include vw-pc(width, 191); @include vw-pc(height, 55); @include vw-pc(font-size, 24); @include vw-pc(line-height, 51); @include vw-pc(border-radius, 27); display: inline-block; background: #000; color: #fff; @include vw-pc(border, 2 solid #000);}
+        .btn_box .btn_apply:hover {background: #fff; color: #000;}
+        .btn_box p.btn_apply {@include vw-pc(width, 191); @include vw-pc(height, 55); @include vw-pc(font-size, 24); @include vw-pc(line-height, 51); @include vw-pc(border-radius, 27); display: inline-block; background: #999; color: #fff; font-weight: 700; @include vw-pc(border, 2 solid #999);}
+        .btn_box p.btn_apply:hover {background: #999; color: #fff;}
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .reviewer {
+        .sec_step {
+            @include vw-mo(padding, 95 0 100);
+            .title_box {
+                @include vw-mo(padding-bottom, 45);
+                .title {@include vw-mo(font-size, 56); @include vw-mo(line-height, 64); text-align: center; @include vw-mo(width, 445); margin: 0 auto; letter-spacing: -.05rem; position: relative;}
+                .title.pt_bg-image.pt_add-bg::before {content: ''; position: absolute; @include vw-mo(width, 60); @include vw-mo(height, 44); background: url('../../is/images/rc_step_title_01_mo.png') no-repeat; @include vw-mo(background-size, 60 44); @include vw-mo(left, -70); @include vw-mo(top, 8);}
+                .title.pt_bg-image.pt_add-bg::after {content: ''; position: absolute; @include vw-mo(width, 47); @include vw-mo(height, 46); background: url('../../is/images/rc_step_title_02_mo.png') no-repeat; @include vw-mo(background-size, 47 46); @include vw-mo(right, -60); @include vw-mo(top, 8);}
+            }
+            .step_box {
+                @include vw-mo(width, 640); margin: 0 auto;
+                ul {
+                    width: 100%;
+                   
+                    li a.pt_bg-image.pt_add-bg {display: block; width: 100%; height: 100%; background-image:  url('../../is/images/rc_step_open_mo.png'); @include vw-mo(background-size, 25 25); @include vw-mo(background-position, 586 36); background-repeat: no-repeat;}
+                    li a.pt_bg-image.pt_add-bg.active {background-image: url('../../is/images/rc_step_close_mo.png'); @include vw-mo(background-size, 25 5); @include vw-mo(background-position, 586 49);}
+                    li.step_1.pt_bg-image.pt_add-bg {background-image: url('../../is/images/rc_icon_step_01_mo.png'); @include vw-mo(background-size, 53 51); background-repeat: no-repeat; @include vw-mo(background-position, 30 35);}
+                    li.step_2.pt_bg-image.pt_add-bg {background-image: url('../../is/images/rc_icon_step_02_mo.png'); @include vw-mo(background-size, 54 51); background-repeat: no-repeat; @include vw-mo(background-position, 36 40);}
+                    li.step_3.pt_bg-image.pt_add-bg {background-image: url('../../is/images/rc_icon_step_04_mo.png'); @include vw-mo(background-size, 41 50); background-repeat: no-repeat; @include vw-mo(background-position, 40 28);}
+                    // li.step_4 {background-image: url('../../is/images/rc_icon_step_04_mo.png'); @include vw-mo(background-size, 39 50);  background-repeat: no-repeat; @include vw-mo(background-position, 40 28);}
+                    li dl { display: flex; width: 100%; @include vw-mo(height, 99); @include vw-mo(padding-left, 97); align-items: center;
+                        // 2024.06.26 복사하기추가
+                        .pt_hash_box{position: absolute; @include vw-mo(top, 122); @include vw-mo(left, 195); @include vw-mo(width, 378); @include vw-mo(height, 36); @include vw-mo(border, 2 solid #F24724); @include vw-mo(border-radius, 9);
+                            .pt_hash_tit{@include vw-mo(width, 157); @include vw-mo(font-size, 18); @include vw-mo(border-radius, 0 10 10 0);}
+                            .pt_hash_tit button{@include vw-mo(font-size, 18);}
+                            .pt_hash_txt{@include vw-mo(width, 221); height: 100%; @include vw-mo(font-size, 18); @include vw-mo(border-radius, 9); font-weight: 700;}
+                        }
+                        .pt_absol{position: absolute; @include vw-mo(top, 75); @include vw-mo(left, 94);}
+                    }
+                    li dt {display: inline-block; @include vw-mo(width, 77); @include vw-mo(height, 33); @include vw-mo(border-radius, 5); background: #000; color: #fff; @include vw-mo(font-size, 18); font-weight: 700; text-align: center; @include vw-mo(line-height, 33); @include vw-mo(margin-right, 15);}
+                    li dd {position: relative; @include vw-mo(font-size, 26); @include vw-mo(line-height, 32); @include vw-mo(letter-spacing, -2.5);
+                        &.step_txt_tit {
+                            .step_txt_disc {@include vw-mo(font-size, 20); letter-spacing: -0.10em;
+                                &:first-of-type {@include vw-mo(margin-top, 6);}
+                            }
+                        }
+                    }
+                    li dd .c_org {color: #F24724; vertical-align: top;}
+                    li.active {height: unset; display: block;}
+                    li .step_answer {@include vw-mo(border-top, 1 solid #000); background-color: #fdf8ed; @include vw-mo(padding, 60 0 45); @include vw-mo(border-radius, 0 0 12 12);}
+                    
+
+                    li { display: block; width: 100%; @include vw-mo(min-height, 99); @include vw-mo(border-radius, 10); @include vw-mo(margin-bottom, 24); @include vw-mo(border, 1 solid #000); @include vw-mo(box-shadow, 7 7 16 rgba(100,88,72,.1));
+                        &.step_2 dl {align-items: baseline; @include vw-mo(padding-left, 195); @include vw-mo(padding-top, 28);@include vw-mo(height, 179);}
+                        &.step_1 dl {@include vw-mo(height, 130);}
+                        &.step_1 dl .step_txt_disc {@include vw-mo(font-size, 18); @include vw-mo(line-height, 22); @include vw-mo(letter-spacing, -1.5);}
+                    }
+
+                    #step_01 .step {padding-left: 0;}
+                    #step_02 .step {padding-left: 0;}
+                    #step_03 .step {padding-left: 0;}
+                    .step {display: block;}
+                    .step .img_box.st01 {@include vw-mo(width, 277); @include vw-mo(margin, 0 auto 20); @include vw-mo(padding-right, 20);}
+                    .step .img_box.st02 {@include vw-mo(width, 538); @include vw-mo(margin, 0 auto 20);}
+                    .step .img_box.st03 {@include vw-mo(width, 295); @include vw-mo(margin, 0 auto 10);}
+                    .step .txt_box {display: flex; justify-content: center; flex-direction: column; align-items: center;}
+                    .step .txt_box .en.pt_bg-image.pt_add-bg {background-image: url('../../is/images/rc_step_box_mo.png'); @include vw-mo(background-size, 117 49); @include vw-mo(width, 117); @include vw-mo(height, 49); @include vw-mo(padding, 2 6 6 2); @include vw-mo(line-height, 41); @include vw-mo(font-size, 26); @include vw-mo(margin-bottom, 13);}
+                    .step .txt_box .step_txt {@include vw-mo(font-size, 24); @include vw-mo(line-height, 34); font-weight: 700; text-align: center;}
+                    .step .txt_box .step_txt .c_org {color: #F24724;}
+                    .step .txt_box .step_txt .line_44 {@include vw-mo(line-height, 48);}
+                    .step .txt_box .step_txt .btn_round.bt_white {@include vw-mo(width, 141); @include vw-mo(height, 41); @include vw-mo(border-radius, 20); @include vw-mo(border, 2 solid #000); @include vw-mo(font-size, 22); @include vw-mo(line-height, 37);}
+                    .step .txt_box .step_txt .btn_round.bt_black {@include vw-mo(width, 120); @include vw-mo(height, 41); @include vw-mo(border-radius, 20.5); @include vw-mo(border, 2 solid #000); @include vw-mo(font-size, 22); @include vw-mo(line-height, 38);}
+                    .step .txt_box .step_txt .btn_round.bt_black.w148 {@include vw-mo(width, 141);}
+                    .step .txt_box .step_txt sup {display: inline-block; @include vw-mo(margin-top, 20); @include vw-mo(margin-bottom, 24); @include vw-mo(font-size, 20);}
+                    .step .txt_box .step_txt .badge {@include vw-mo(width, 134); @include vw-mo(height, 41); @include vw-mo(border-radius, 3); @include vw-mo(border, 2 solid #268dfc); @include vw-mo(font-size, 22);}
+                    .step .txt_box .step_txt .btn_check.pt_bg-image.pt_add-bg {display: inline-block; @include vw-mo(width, 21); @include vw-mo(height, 21); background: center / contain no-repeat; background-image: url('../../is/images/rc_check_icon_mo.png'); @include vw-mo(background-size, 21 21); @include vw-mo(vertical-align, -2);}
+                     
+                    // 2024.06.26 복사하기추가
+                    .step .txt_box .pt_hash_box{ @include vw-mo(width, 431); @include vw-mo(height, 45); @include vw-mo(border-radius, 9); @include vw-mo(border, 2 solid #F24724);
+                        .pt_hash_tit{@include vw-mo(width, 177); @include vw-mo(border-radius, 0 10 10 0); height: 100%; @include vw-mo(font-size, 22);}
+                        .pt_hash_txt{@include vw-mo(width, 254); @include vw-mo(border-radius, 9); @include vw-mo(font-size, 22); font-weight: 700;}
+                    }
+    
+                    
+                    .step .txt_box.txt_c {text-align: center;}
+                    .step .txt_box.txt_c .en {@include vw-mo(margin, 0 auto 19 auto); @include vw-mo(width, 117);}
+                    .step .txt_box.txt_c .step_txt {@include vw-mo(padding-bottom, 5);}
+                    .step .txt_box.txt_c .step_desc_txt {@include vw-mo(font-size, 20); @include vw-mo(padding-bottom, 12);}
+    
+                    // .codescan_box{
+                    //     display: flex; justify-content: space-between; align-items: flex-start; flex-direction: column; @include vw-mo(padding, 0 28);
+                    //     .codescan_list{
+                    //         display: flex; justify-content: space-between; align-items: center; flex-direction: column; width: 100%; @include vw-mo(padding-top, 35);
+                    //         li {position: relative; border: none; background-color: transparent; box-shadow: none; height: unset; display: flex;}
+                    //         li .code_num{position: absolute; top:0; @include vw-mo(left, 0); @include vw-mo(font-size, 24); border-bottom: 1px solid #000;}
+                    //         li .img_box {@include vw-mo(width, 177); @include vw-mo(margin, 0 25 0 30);}
+                    //         li .code_box {@include vw-mo(padding-top, 5); text-align: left;}
+                    //         li:nth-of-type(2) .code_box {@include vw-mo(padding-top, 9);}
+                    //         li:nth-of-type(3) .code_box {@include vw-mo(padding-top, 26);}
+                    //         li .code_box .code_title {@include vw-mo(padding-bottom, 11); @include vw-mo(font-size, 26);}
+                    //         li .code_box .code_text {@include vw-mo(padding-bottom, 13); @include vw-mo(font-size, 22); @include vw-mo(line-height, 30);}
+                    //         li .code_box .code_sub_text {display:block; @include vw-mo(font-size, 20); @include vw-mo(line-height, 28);}
+                    //         li .code_box .btn_popup02 .btn_code {@include vw-mo(font-size, 20); @include vw-mo(line-height, 22); position: relative;}
+                    //         li .code_box .btn_popup02 .btn_code::after { content: ''; position: absolute; display: inline-block; @include vw-mo(width, 7); @include vw-mo(height, 4); @include vw-mo(top, 7); @include vw-mo(margin-left, 3); vertical-align: top; background-image: url(../../is/images/rc_befri_ico_down_mo.png); background-repeat: no-repeat; background-size: cover; @include vw-mo(background-size, 7 4); border:none; transform: rotate(-90deg);} 
+                    //     }
+                    //     .codescan_img_box{
+                    //         position: relative; @include vw-mo(width, 294); @include vw-mo(padding-top, 115); margin: 0 auto;
+                    //         &::after{content:''; position: absolute; @include vw-mo(top, 29); @include vw-mo(left, 131); @include vw-mo(width, 31); @include vw-mo(height, 57); background: url(../../is/images/rc_arr_code_mo.png); @include vw-mo(background-size, 31 57);}
+                    //         .code_box {text-align: center; @include vw-mo(padding-top, 27);}
+                    //         .code_text {@include vw-mo(font-size, 26); @include vw-mo(line-height, 30)}
+                    //         .code_title{@include vw-mo(font-size, 26);}
+                    //     }
+                    // }
+                }
+            }
+            .btn_box {@include vw-mo(padding-top, 0); @include vw-mo(top, 15); @include vw-mo(left, 429);}
+            .btn_box .btn_apply {@include vw-mo(width, 142); @include vw-mo(height, 50); @include vw-mo(font-size, 18); @include vw-mo(line-height, 47); @include vw-mo(border-radius, 26); @include vw-mo(border, 2 solid #000);}
+            .btn_box p.btn_apply {@include vw-mo(width, 143); @include vw-mo(height, 51); @include vw-mo(font-size, 18); @include vw-mo(line-height, 47); @include vw-mo(border-radius, 26); @include vw-mo(border, 2 solid #999);}
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.walk_challenge {
+    .sec_benefit {
+        @include vw-pc(padding-top, 100); @include vw-pc(margin-bottom, 100);
+        .pt_title {
+            position: relative; @include vw-pc(margin, 0 auto 74); @include vw-pc(width, 184); @include vw-pc(font-size, 42); @include vw-pc(line-height, 46); letter-spacing: -.055em; font-weight:700; text-align: center;
+            &::after {content:''; position: absolute; @include vw-pc(bottom, 3); @include vw-pc(left, 0); display: flex; width: 100%; @include vw-pc(height, 27); background: #2189FF; z-index: -1; opacity: .2;}
+        }
+
+        .pt_benefit {
+            position: relative; background: #F5F7FE; @include vw-pc(width, 1200); @include vw-pc(height, 286); @include vw-pc(border-radius, 16); @include vw-pc(margin, 0 auto 15); @include vw-pc(padding, 40 60);
+            &__title {display: inline-block; @include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 26); @include vw-pc(line-height, 40); font-weight: 700;}
+            &__cont {@include vw-pc(font-size, 24); @include vw-pc(line-height, 30); @include vw-pc(margin-bottom, 8);}
+            &__img {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, 60); @include vw-pc(width, 370);}
+            &__desc {@include vw-pc(font-size, 18); @include vw-pc(line-height, 28);}
+        }
+
+        .pt_btn-box {
+            text-align: center; @include vw-pc(margin-top, 45);
+            .btn_samsung-fitness {display: block; @include vw-pc(width, 172); @include vw-pc(height, 42); @include vw-pc(font-size, 16); @include vw-pc(line-height, 42); @include vw-pc(border-radius, 21); @include vw-pc(margin, 0 auto 61);}
+            .btn_share {
+                display: block; @include vw-pc(width, 120); @include vw-pc(font-size, 14); @include vw-pc(line-height, 19); @include vw-pc(margin, 0 auto 71); text-align: left; @include vw-pc(padding, 0 0 4 6); @include vw-pc(border-bottom, 2 solid #000);
+                &::after {content:''; position: absolute; @include vw-pc(top, -3); @include vw-pc(right, 8); display: flex; @include vw-pc(width, 14); @include vw-pc(height, 21); background: url('../../is/images/share/wc_share_icon_pc.png') no-repeat center/contain;}
+            }
+            .pt_info{
+                &__text{@include vw-pc(margin-bottom,40); @include vw-pc(font-size,24); @include vw-pc(line-height,32); letter-spacing:-0.025em; font-weight:700;}
+                &__app{display: inline-block; @include vw-pc(width,40); @include vw-pc(height,40); background: url("../../is/images/wc_healthapp_ico.png") no-repeat center / contain; vertical-align: middle;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .walk_challenge {
+        .sec_benefit { @include vw-mo(padding-top, 100);
+            .pt_title {
+                @include vw-mo(margin, 0 auto 60); @include vw-mo(width, 154); @include vw-mo(font-size, 38); @include vw-mo(line-height, 46);
+                &::after {@include vw-mo(bottom, 0); @include vw-mo(left, 0); @include vw-mo(height, 27);}
+            }
+            
+            .pt_benefit {
+                @include vw-mo(width, 584); height: auto; @include vw-mo(border-radius, 16); @include vw-mo(margin, 0 auto 60); @include vw-mo(padding, 36 0 49); @include vw-mo(width, 580); text-align: center;
+                &__title {
+                    @include vw-mo(margin-bottom, 7); @include vw-mo(font-size, 38); @include vw-mo(line-height, 40);
+                }
+                &__cont {justify-content: center; @include vw-mo(font-size, 26); @include vw-mo(line-height, 35); @include vw-mo(margin-bottom, 29); letter-spacing: -.055em;}
+                &__img {position: relative; top: initial; transform: initial; right: auto; @include vw-mo(margin, 0 auto 29); @include vw-mo(width, 500);}
+                &__desc {@include vw-mo(font-size, 22); @include vw-mo(line-height, 34); letter-spacing: -.055em;}
+            }    
+            
+            .pt_btn-box {
+                text-align: center;
+                .btn_samsung-fitness {@include vw-mo(width, 268); @include vw-mo(height, 60); @include vw-mo(font-size, 24); @include vw-mo(line-height, 60); @include vw-mo(border-radius, 30); @include vw-mo(margin-bottom, 37);}
+                .btn_share {
+                    @include vw-mo(width, 166); @include vw-mo(font-size, 24); @include vw-mo(line-height, 33); @include vw-mo(margin, 0 auto 71); @include vw-mo(padding, 0 0 4 2); @include vw-mo(border-bottom, 2 solid #000);
+                    &::after {@include vw-mo(top, 4); right: 0; @include vw-mo(width, 17); @include vw-mo(height, 26); background: url('../../is/images/share/wc_share_icon_mo.png') no-repeat center/contain;}
+                }   
+                .pt_goto_app{left: 50%; transform: translateX(-50%); @include vw-mo(margin-bottom,56); @include vw-mo(width,268); @include vw-mo(height,60); @include vw-mo(font-size,24); @include vw-mo(line-height,58); @include vw-mo(border-radius,44);}
+
+            }
+        }
+        
+    }
+}

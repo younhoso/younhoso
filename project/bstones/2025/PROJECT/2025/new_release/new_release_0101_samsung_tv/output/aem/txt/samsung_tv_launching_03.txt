@@ -1,0 +1,29 @@
+<div class="sec_project_wrap samsung_tv_launching" id="pt_buying_compo02">
+
+    <section class="sec_together">
+        <div class="inner_1440">
+            <div class="pt_title">
+                <h3 class="pt_title__main pt_title__main--noicon">더 많은 추천 모델을 <br class="m_show"/>만나보세요</h3>
+                <p class="pt_title__sub en">TV</p>
+            </div>
+            
+            <div class="pt_category_box" data-compo-cate="product-card" data-swiper="true" data-sticky="false">
+                <div class="pt_slider_category_sticky">
+                    <div class="pt_slider_category_wrap">
+                        <div class="swiper-container">
+                            <p class="pt_category_title blind">제품 카테고리 선택</p>
+                            <ul class="swiper-wrapper pt_category_list">
+                                <li class="swiper-slide on"><a href="#" title="Neo QLED 8K 선택" class="pt_category_btn pt_category_btn--8k en">Neo QLED 8K<span class="blind">선택됨</span></a></li>
+                                <li class="swiper-slide"><a href="#" title="Neo QLED 선택" class="pt_category_btn pt_category_btn--neo en">Neo QLED</a></li>
+                                <li class="swiper-slide"><a href="#" title="QLED 선택" class="pt_category_btn pt_category_btn--qled en">QLED</a></li>
+                                <li class="swiper-slide"><a href="#" title="Crysyal UHD 선택" class="pt_category_btn pt_category_btn--uhd en">Crysyal UHD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</div>

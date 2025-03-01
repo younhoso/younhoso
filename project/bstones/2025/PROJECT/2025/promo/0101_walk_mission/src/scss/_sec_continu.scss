@@ -1,0 +1,37 @@
+@media screen and (max-width: 768px) {
+    .walk_mission {
+        .sec_continu{
+            .pt_continu{
+                @include vw-mo(padding,96 80 96 80);
+                &__title{
+                    @include vw-mo(font-size, 38);
+                    @include vw-mo(margin-bottom, 57);
+                    @include vw-mo(line-height, 48);
+                    text-align: center;
+                    font-weight: 700;
+                }
+                &__img{
+                    @include vw-mo(margin-bottom, 63);
+                }
+                &__des{
+                    @include vw-mo(font-size, 22);
+                    @include vw-mo(margin-bottom, 56);
+                    @include vw-mo(letter-spacing, -0.025);
+                    @include vw-mo(line-height, 34);
+                    text-align: center;
+                }
+                &__btn{
+                    display: flex;
+                    @include vw-mo(width, 244);
+                    @include vw-mo(height,80);
+                    @include vw-mo(border-radius, 44);
+                    @include vw-mo(font-size,26);
+                    margin: 0 auto;
+                    background-color: #000;
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

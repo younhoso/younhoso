@@ -1,0 +1,47 @@
+.galaxy_book4_ultra {
+    .sec_tradein_popup {
+        .pt_pop_wrap {
+            display: none;
+            position:fixed;left:50%;top:50%; transform:translate3d(-50%, -50%, 0); @include vw-pc(padding,50); @include vw-pc(max-width,500); width:100%; @include vw-pc(border-radius,20);  text-align:center;background:#fff;
+            .pt_pop_header h3{
+                @include vw-pc(padding-bottom,20); @include vw-pc(font-size,24); line-height: 1.2em; text-align: center;}
+            .pt_pop_content {
+                max-height:calc(100vh - 270px); transition:all 0.5s ease; overflow-x:hidden; overflow-y: auto; line-height: 1.4em;
+                p {font-size: 16px;} 
+                p ~ p { @include vw-pc(margin-top,23); }
+                .txt-bold {font-weight: 700;}
+                .txt-blue {color:#2189FF;}
+                .txt-red {color:#FF4337;}
+            }
+            .pt_pop_btn_wrap {@include vw-pc(padding-top,36);
+                .pop_btn {display: inline-block; @include vw-pc(width,96); @include vw-pc(line-height,38); @include vw-pc(border-radius,20); border:1px solid #000; @include vw-pc(font-size, 14); font-weight: 700;}
+                .pop_btn.black_btn {background: #000; color:#fff;}
+                .pop_btn:last-child {@include vw-pc(margin-left,16);}
+            }
+            &.active {display: block;}
+        }
+    }
+}
+
+@media  screen and (max-width:768px) {
+    .galaxy_book4_ultra {
+        .sec_tradein_popup {
+            .pt_pop_wrap {
+                @include vw-mo(padding,48 24 24); @include vw-mo(max-width,500); @include vw-mo(border-radius,20); 
+                .pt_pop_header h3{
+                    @include vw-mo(padding-bottom,20); @include vw-mo(font-size,24);}
+                .pt_pop_content {
+                    p ~ p { @include vw-mo(margin-top,23); }
+                    .btn-underline {@include vw-mo(font-size,16);}
+                }
+                .pt_pop_btn_wrap {@include vw-mo(padding-top,36);
+                    .pop_btn { @include vw-mo(width,96); @include vw-mo(line-height,38); @include vw-mo(border-radius,20); @include vw-mo(font-size, 14);}
+                    .pop_btn:last-child {@include vw-mo(margin-left,16);}
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,74 @@
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+
+<!-- split petcare_recommend_1.txt -->
+<link rel="stylesheet" href="./css/petcare_recommend.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "petcarestore";
+    digitalData.page.pathIndicator.depth_3 = "promotion";
+    digitalData.page.pathIndicator.depth_4 = "monthlydeal";
+    digitalData.page.pathIndicator.depth_5 = "launching";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap petcare_recommend" id="petcare_recommend">
+
+    @@include('./split-html/lnb.html')
+    <!-- LNB -->
+    
+	@@include('./split-html/kv.html')
+	<!--// sec_kv -->
+    
+    <!-- @@include('./split-html/coupon.html') -->
+    <!--// sec_coupon -->
+
+    <section class="sec_comp">
+        <div class="inner_1440">
+            <div class="pt_tit-box">
+                <h3 class="pt_title">쿠폰 적용 가능한 <span class="en">MD</span> 추천 상품!</h3>
+                <p class="pt_txt">합리적인 가격의 펫 패키지 상품을 만나보세요</p>
+            </div>
+            <div class="pt_category_box" data-compo-cate="product-card" data-swiper="false" data-sticky="false">
+                <div class="pt_slider_category_sticky">
+                    <div class="pt_slider_category_wrap">
+                        <!-- <button type="button" class="pt_btn_popup_category m_show" title="카테고리 탭 메뉴 열기"><span class="blind">카테고리 탭 메뉴 열기</span></button> -->
+                        <div class="swiper-container">
+                            <p class="pt_category_title">제품 카테고리 선택</p>
+                            <ul class="swiper-wrapper pt_category_list">
+                                <li class="swiper-slide pt_tab pt_tab--bigchew on"><a href="#" title="빅츄 추천 상품 탭" data-omni-type="microsite" data-omni="sec:petcarestore:promotion:monthlydeal:launching:tab_brand_bigchew">빅츄<span class="blind selected_option">선택됨</span></a></li>
+                                <li class="swiper-slide pt_tab pt_tab--ginipet"><a href="#" title="지니펫 추천 상품 탭" data-omni-type="microsite" data-omni="sec:petcarestore:promotion:monthlydeal:launching:tab_brand_ginipet">지니펫</a></li>
+                                <li class="swiper-slide pt_tab pt_tab--ziwipeak"><a href="#" title="지위픽 추천 상품 탭" data-omni-type="microsite" data-omni="sec:petcarestore:promotion:monthlydeal:launching:tab_brand_ziwi">지위픽</a></li>
+                                <li class="swiper-slide pt_tab pt_tab--purina"><a href="#" title="퓨리나 추천 상품 탭" data-omni-type="microsite" data-omni="sec:petcarestore:promotion:monthlydeal:launching:tab_brand_purina">퓨리나</a></li>
+                                <li class="swiper-slide pt_tab pt_tab--harim"><a href="#" title="하림 추천 상품 탭" data-omni-type="microsite" data-omni="sec:petcarestore:promotion:monthlydeal:launching:tab_brand_harim">하림</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- split stop -->
+
+<style type="text/css">.wrap-component .component-contents{height:100px}</style>
+@@for (var i = 0; i < 5; i++) {<div class="wrap-component product-card" data-cptno="${i}"><div class="component-contents">컴포넌트${i}</div></div>}
+
+<!-- split petcare_recommend_2.txt -->
+<div class="sec_project_wrap petcare_recommend">
+    @@include('./split-html/notice.html')
+</div>
+<script src="./js/petcare_recommend.min.js" inline></script>
+<script src="./js/isqa.min.js" inline></script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

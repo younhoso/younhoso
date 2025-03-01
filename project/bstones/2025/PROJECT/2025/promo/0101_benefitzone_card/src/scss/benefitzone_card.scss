@@ -1,0 +1,30 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'monospace';
+@import 'kv';
+@import 'category_nav';
+@import 'check';
+@import 'card';
+@import 'howto';
+@import 'banner';
+@import 'notice';
+
+.benefitzone_card {
+    .pt_title-box {
+        text-align: center;
+        
+        &__title {@include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); font-weight: 700; letter-spacing: -.025em;}
+        &__sub {@include vw-pc(font-size, 26); @include vw-pc(line-height, 35); letter-spacing: -.015em;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone_card {
+        .pt_title-box {
+            text-align: center;
+    
+            &__title {@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 40); @include vw-mo(line-height, 53); letter-spacing: -.05em;}
+            &__sub {@include vw-mo(font-size, 28); @include vw-mo(line-height, 37); letter-spacing: -.05em;}
+        }
+    }
+}

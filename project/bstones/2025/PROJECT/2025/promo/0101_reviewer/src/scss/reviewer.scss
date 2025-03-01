@@ -1,0 +1,90 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'lnb';
+@import 'kv';
+@import 'nav';
+@import 'banner';
+@import 'info';
+@import 'step';
+@import 'best_review';
+@import 'subscribe_event';
+@import 'subscribe_banner';
+@import 'gift_funding';
+@import 'banner_bottom';
+@import 'notice';
+
+.reviewer {
+    .sec_codescan { 
+        @include vw-pc(padding, 120 0 100); background-color:#fff; 
+        .title_box {
+            @include vw-pc(margin-bottom, 70); text-align: center;
+            .title {@include vw-pc(margin-bottom, 18); @include vw-pc(font-size, 56); letter-spacing: -.05rem;}
+            .sub_title {@include vw-pc(font-size, 24); letter-spacing: -.05rem;}
+        }
+        .codescan_box{
+            display: flex; justify-content: space-between; align-items: flex-start; @include vw-pc(padding, 0 140);
+            .codescan_list{
+                display: flex; justify-content: space-between; align-items: center; @include vw-pc(width, 800);
+                li {position: relative;}
+                li .code_num{position: absolute; top:0; right:0; @include vw-pc(font-size, 24); border-bottom: 1px solid #000;}
+                li .img_box {@include vw-pc(width, 174); margin: 0 auto;}
+                li .code_box {@include vw-pc(padding-top, 15); text-align: center;}
+                li .code_box .code_title {@include vw-pc(padding-bottom, 10); @include vw-pc(font-size, 24); letter-spacing: -.05rem; font-weight: 700;}
+                li .code_box .code_text {display:block; @include vw-pc(padding-bottom, 10); @include vw-pc(font-size, 14); @include vw-pc(line-height, 22); letter-spacing: -.07rem;}
+                li .code_box .code_sub_text {display:block; @include vw-pc(font-size, 12); @include vw-pc(line-height, 18); letter-spacing: -.06rem; color:#666;}
+                li .code_box .btn_popup02 .btn_code {position: relative; display: inline-block; @include vw-pc(font-size, 14); font-weight:400; border-bottom:1px solid #000;}
+                li .code_box .btn_popup02 .btn_code::after { content: ''; display: inline-block; @include vw-pc(width, 7); @include vw-pc(height, 4); @include vw-pc(margin-top, 5); @include vw-pc(margin-left, 3); vertical-align: top; background-image: url(../../is/images/rc_befri_ico_down_pc.png); background-repeat: no-repeat; @include vw-pc(background-size, 7 4); border:none; transform: rotate(-90deg);} 
+            }
+            .codescan_img_box{
+                position: relative; @include vw-pc(width, 185);
+                &::after{content:''; position: absolute; top:40%; @include vw-pc(right, 240); @include vw-pc(width, 56); @include vw-pc(height, 30); background: url(../../is/images/rc_arr_code_pc.png); @include vw-pc(background-size, 56 30);}
+            }
+        }
+    }  
+
+    // .pt_dimm {
+    //     position: relative;
+    //     &::after {display: flex; align-items: center; justify-content: center; content:'이벤트 종료'; position: absolute; left: 0; top:0; width: 100%; height: 100%; @include vw-pc(font-size, 26); font-weight: 700; color: #fff; background-color: rgba(0,0,0,0.7);}
+    // }
+}
+
+
+@media screen and (max-width: 768px) {
+    .reviewer {
+        .sec_codescan {
+            @include vw-mo(padding, 120 0 88);
+            .title_box {
+                @include vw-mo(margin-bottom, 55); text-align: center;
+                .title {@include vw-mo(margin-bottom, 26); @include vw-mo(font-size, 56);  @include vw-mo(line-height, 67); letter-spacing: -.028rem;}
+                .sub_title {@include vw-mo(font-size, 26); letter-spacing: -.050rem; @include vw-mo(line-height, 40); font-weight:400;}
+            }
+            .codescan_box{
+                display: flex; justify-content: center; align-items: flex-start; flex-direction: column; @include vw-mo(padding, 0 0 0 40);
+                .codescan_list{
+                    display: flex; align-items: center; flex-direction: column; @include vw-mo(width, 650);
+                    li {position: relative; display: flex; justify-content: flex-start; align-items: center; @include vw-mo(margin-bottom, 60);}
+                    li:last-child{@include vw-mo(margin-bottom, 0);}
+                    li .code_num{position: absolute; top:0; right:97%; @include vw-mo(font-size, 30); border-bottom: 1px solid #000;}
+                    li .img_box {@include vw-mo(width, 220); margin: 0 auto;}
+                    li .code_box {@include vw-mo(margin-left, 25);  @include vw-mo(padding-top, 0); text-align: left;}
+                    li .code_box .code_title {@include vw-mo(padding-bottom, 18); @include vw-mo(font-size, 34); letter-spacing: -.05rem; }
+                    li .code_box .code_text {display:block; @include vw-mo(padding-bottom, 14); @include vw-mo(font-size, 26); @include vw-mo(line-height, 38); letter-spacing: -.05rem;}
+                    li .code_box .code_sub_text {display:block; @include vw-mo(padding-left, 8); @include vw-mo(font-size, 20); @include vw-mo(line-height, 30); letter-spacing: -.09rem; color:#666; @include vw-mo(text-indent, -8); }
+                    li .code_box .btn_popup02 .btn_code {position: relative; display: inline-block; @include vw-mo(font-size, 20); font-weight:400; border-bottom:1px solid #000;}
+                    li .code_box .btn_popup02 .btn_code::after { content: ''; display: inline-block; @include vw-mo(width, 9); @include vw-mo(height, 6); @include vw-mo(margin-top, 7); @include vw-mo(margin-left, 3); vertical-align: top; background-image: url(../../is/images/rc_befri_ico_down_mo.png); background-repeat: no-repeat; @include vw-mo(background-size, 9 6); border:none; transform: rotate(-90deg);} 
+                }
+                .codescan_img_box{
+                    position: relative; @include vw-mo(width, 294);  margin: 0 auto; @include vw-mo(padding-top, 112);
+                    &::after{content:''; position: absolute; top:0%; right:40%; transform: translateX(-50%); @include vw-mo(width, 31); @include vw-mo(height, 57); background: url(../../is/images/rc_arr_code_mo.png); @include vw-mo(background-size, 31 57);}
+                    .img_qr{@include vw-mo(margin-left, -15);}
+    
+                    
+                }
+            }
+        }
+
+        // .pt_dimm {
+        //     &::after {@include vw-mo(font-size, 32);}
+        // }
+    }
+}

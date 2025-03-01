@@ -1,0 +1,53 @@
+{
+    "title": "<span class='en'>2022</span> 삼성전자 <br class='m_show'>신상 컬렉션",
+    "description": "올해 새롭게 선보이는 삼성 TV부터 BESPOKE 주방가전, 생활가전까지 <br>모든 신제품을 삼성닷컴 특별 혜택으로 가장 먼저 만나보세요",
+    "selecedTab": "",
+    "isRandom": false,
+    "result": [
+      {
+        "id": "haman",
+        "type": "default",
+        "step": "launching",
+        "title": "<span class='en'>2022 JBL<span> & 마크레빈슨<br> 하이엔드오디오 런칭",
+        "date": "22.07.01 <i>~</i> 22.07.31",
+        "linkUrl": "#",
+        "status": "",
+        "statusType": "",
+        "tagType": "",
+        "isHidden": false,
+        "customHtml": "",
+        "order": 0
+      },
+      {
+        "id": "comingsoon",
+        "type": "comingsoon",
+        "step": "launching",
+        "title": "신제품 준비 중",
+        "date": "",
+        "linkUrl": "",
+        "status": "Coming soon",
+        "statusType": "comingsoon_txt en",
+        "tagType": "",
+        "isHidden": false,
+        "customHtml": "",
+        "order": 1
+      },
+      {
+        "id": "comingsoon2",
+        "type": "comingsoon",
+        "step": "launching",
+        "title": "",
+        "date": "",
+        "linkUrl": "",
+        "status": "",
+        "statusType": "comingsoon_txt en",
+        "tagType": "",
+        "isHidden": false,
+        "customHtml": "",
+        "order": 2
+      }
+    ]
+  }
+  
+  
+  

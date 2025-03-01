@@ -1,0 +1,13 @@
+.samsung_tv_launching {
+    .sec_banner_groupbuying {@include vw-pc(margin-bottom,26);@include vw-pc(padding-top,10);
+        .pt_banner{display: inherit; margin:0 auto;@include vw-pc(width,1320);}
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+        .sec_banner_groupbuying {@include vw-mo(margin-bottom,66); @include vw-mo(padding-top,21);
+            .pt_banner{@include vw-mo(width,672);}
+        }
+    }
+}

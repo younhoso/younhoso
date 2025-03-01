@@ -1,0 +1,68 @@
+<!-- @@include('../../../../../s-common/inc/header_sec_220113.html') -->
+@@include('../../../../../s-common/inc/header_sec_local_230921.html')
+
+<!-- split air_conditioner_1.txt -->
+<link rel="stylesheet" href="./css/air_conditioner.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "event";
+	digitalData.page.pathIndicator.depth_3 = "air-conditioners";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap air_conditioner" id="air_conditioner">
+
+    @@include('./split-html/sec_kv_com.html')
+    @@include('./split-html/sec_kv_sys.html')
+	<!--// sec_kv -->
+
+    @@include('./split-html/category_nav.html')
+	<!--// category_nav -->
+
+    @@include('./split-html/sec_nav_com.html')
+    @@include('./split-html/sec_nav_sys.html')
+    <!--// sec_nav -->
+
+    @@include('./split-html/sec_benefit_com.html')
+    @@include('./split-html/sec_benefit_sys.html')
+</main>
+<!-- split stop -->
+
+
+<style type="text/css">.wrap-component .component-contents{min-height:200px}</style>
+@@for (var i = 0; i < 5; i++) {<div class="wrap-component product-card w1440px" data-cptno="${i}"><div class="component-contents">일반 추천모델 컴포넌트${i}</div></div>}
+
+
+<!-- split air_conditioner_2.txt -->
+<div class="sec_project_wrap air_conditioner">
+
+    @@include('./split-html/sec_subscribe_com.html')
+    <!--// sec_subscribe_com -->   
+
+</div>
+
+
+<!-- 번들기능 추가버전 -->
+<script defer src="https://images.samsung.com/kdp/event/sec/assets/js/service_20240307.min.js"></script>
+<script defer src="./js/air_conditioner.min.js" inline></script>
+<script defer src="./js/modelPopup.min.js" inline></script>
+<!-- <script src="./js/isqa.min.js" inline></script> -->
+<script defer type="text/javascript" src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<script defer>
+	$(document).ready(function(){
+		var observer = lozad();
+		observer.observe()
+	});
+</script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- 시스템에어컨/전문상담배너 상담신청하기 cta 사용 시 연결 -->
+<script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script>
+
+<!-- split stop -->

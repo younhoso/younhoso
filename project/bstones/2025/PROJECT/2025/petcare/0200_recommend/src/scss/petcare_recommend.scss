@@ -1,0 +1,52 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'lnb';
+@import 'kv';
+@import 'coupon';
+@import 'component';
+@import 'notice';
+
+.petcare_recommend {
+    .pt__highlight {color: #2189FF;}
+
+    .sec_comp {
+        @include vw-pc(padding, 96 0 36);
+
+        .pt_tit-box {@include vw-pc(margin-bottom, 35);}
+        .pt_title {@include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 36); @include vw-pc(line-height, 48); letter-spacing: -.025em; text-align: center;}
+        .pt_txt {@include vw-pc(font-size, 30); @include vw-pc(line-height, 40); letter-spacing: -.025em; text-align: center;}
+
+        .pt_category_box {
+            .pt_tab {
+                > a {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(gap, 8);
+                    &::before {content: ''; @include vw-pc(width, 38); @include vw-pc(height, 38); @include vw-pc(margin-left, -10); background: no-repeat 0 0 / contain;}
+                }
+                &--bigchew > a::before {background-image: url('../../is/images/pr_comp_bigchew.png');}
+                &--ginipet > a::before {background-image: url('../../is/images/pr_comp_ginipet.png');}
+                &--ziwipeak > a::before {background-image: url('../../is/images/pr_comp_ziwipeak.png');}
+                &--purina > a::before {background-image: url('../../is/images/pr_comp_purina.png');}
+                &--harim > a::before {background-image: url('../../is/images/pr_comp_harim.png');}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .petcare_recommend {
+        .sec_comp {
+            @include vw-mo(padding, 76 0 40);
+
+            .pt_tit-box {@include vw-mo(margin-bottom, 40);}
+            .pt_title {@include vw-mo(margin-bottom, 11); @include vw-mo(font-size, 38); @include vw-mo(line-height, 50); letter-spacing: -.05em;}
+            .pt_txt {@include vw-mo(font-size, 28); @include vw-mo(line-height, 37); letter-spacing: -.05em;}
+
+            .pt_category_box {@include vw-mo(max-width, 480); margin: 0 auto;
+                .pt_tab {
+                    > a {@include vw-mo(gap, 8);
+                        &::before {@include vw-mo(width, 38); @include vw-mo(height, 38); @include vw-mo(margin-left, -10);}
+                    }
+                }
+            }
+        }
+    }
+}

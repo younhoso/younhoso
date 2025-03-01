@@ -1,0 +1,1205 @@
+<!-- start -->
+<style>
+    /* common */
+    br.br-pc {display:block;}
+    br.br-mo {display:none;}
+    .font-sans {font-family:'Samsung Sharp Sans',SamsungOneKorean;}
+    .font-sans * {font-family:inherit;}
+    .pd-tb-60 {padding:60px 0;}
+    .pd-tb-80 {padding:80px 0;}
+
+
+    /** style **/
+    .re-tip {width:1440px; margin:0 auto;}
+    .re-tip__tit {padding:0 24px; font-size:48px; line-height:1.3; text-align:center;}
+    .re-tip__tit span {font-size:inherit;}
+    .re-tip__list {display:flex; margin-top:60px; padding:0 12px; justify-content:center;}
+    .re-tip__list li {width:calc(100% / 4); padding:0 12px; }
+    .re-tip__list__btn {display:block; position:relative; width:100%; height:390px; background-repeat:no-repeat; background-position:left top; background-size:100% 100%; border-radius:20px; /*box-shadow:0 0.06em 0.2em 0.06em rgba(0, 0, 0, 0.2);*/}
+    .re-tip__list__btn.pic01 {background-image:url("//images.samsung.com/kdp/static/pcd/tvs/re/tip01.jpg");}
+    .re-tip__list__btn.pic02 {background-image:url("//images.samsung.com/kdp/static/pcd/tvs/re/tip02.jpg");}
+    .re-tip__list__btn.pic03 {background-image:url("../../../is/images/launching/tips/stv_img_tips01_mo.png");}
+    .re-tip__list__btn.pic04 {background-image:url("//images.samsung.com/kdp/static/pcd/tvs/re/tip04.jpg");}
+    .re-tip__list__btn .txt {display:block; position:absolute; top:312px; left:0; width:100%; color:#555; font-size:22px; font-weight:700; line-height:1.36; text-align:center;}
+
+    /* modal */
+    body.-has-modal {overflow:hidden;}
+    .re-tip .modal-dim {display:none; position:fixed; top:0; right:0; bottom:0; left:0; z-index:200; background:rgba(0, 0, 0, 0.8);}
+    .re-tip .modal-dim.-search {z-index:300; background:transparent;}
+    .re-tip .modal-dim.-active {display:block;}
+    .re-tip .modal-layer {display:none; position:fixed; top:50%; left:50%; width:416px; transform:translate(-50%, -55%); z-index:300;}
+    .re-tip .modal-layer.-active {display:block;}
+    .re-tip .modal-layer .btn-modal-close {position:absolute; bottom:0; left:50%; width:40px; height:40px; background:#fff url(//images.samsung.com/kdp/static/common/icon-close.svg) no-repeat center / 14px 14px; border-radius:50%; transform:translate(-50%, 150%);}
+    .re-tip .modal-cont {overflow:hidden; position:relative; width:100%; height:739px; background:#fff;}
+    .re-tip .modal-cont.-mobile {display:none;}
+    .re-tip .modal-cont:focus-visible {outline:dashed 2px #2189ff !important; outline-offset:-2px;}
+    .re-tip .modal-cont iframe {width:100%; height:100%;}
+
+    /* tv의 역사 */
+    .re-tip__history .obj-m {display: none;}
+    .re-tip__history .obj-pc {display: block;}
+    .re-tip .re-tip__history {width: 1200px; padding: 35px; background: #fff; border-radius: 20px;}
+    .re-tip .re-tip__history .layer-pop-inner {height: 80vh; overflow-x: hidden; overflow-y: scroll;}
+    .re-tip .re-tip__history .layer-pop-inner img {max-width: none; image-rendering: -webkit-optimize-contrast; backface-visibility: hidden; transform: translateZ(0);}
+
+    @media (max-width: 1440px) {
+        .re-tip {width:100%;}
+        .re-tip__tit {padding:0 1.6667vw; font-size:3.3333vw;}
+        .re-tip__list {margin-top:4.1667vw; padding:0 0.8333vw;}
+        .re-tip__list li {padding:0 0.8333vw; }
+        .re-tip__list__btn {height:27.0833vw; border-radius:1.3889vw;}
+        .re-tip__list__btn .txt {top:21.6667vw; font-size:1.5278vw;}
+
+        /* modal */
+        .short-form .modal-layer {width:28.8889vw;}
+        .short-form .modal-layer .btn-modal-close {width:2.7778vw; height:2.7778vw; background-size:0.9722vw 0.9722vw;}
+        .short-form .modal-cont {height:51.3194vw;}
+
+        /* tv의 역사 */
+        .re-tip .re-tip__history {width: 83.3333vw; padding: 2.4306vw; border-radius: 1.3889vw;}
+        .re-tip .re-tip__history .layer-pop-inner {overflow-x: auto;}
+    }
+
+    @media (max-width: 800px) {
+        br.br-pc {display:none;}
+        br.br-mo {display:block;}
+
+        .re-tip__tit {padding:0 6.6667vw; font-size:7.7778vw;}
+        .re-tip__list {margin-top:3.8889vw; padding:0 4.4444vw; justify-content:flex-start; flex-wrap:wrap;}
+        .re-tip__list li {width:calc(100% / 2); padding:4.4444vw 2.2222vw 0; }
+        .re-tip__list__btn {height:48.8889vw; border-radius:5.5556vw;}
+        .re-tip__list__btn .txt {top:38.0556vw; font-size:3.3333vw;}
+
+        /* modal */
+        .short-form .modal-layer {width:71.3889vw;}
+        .short-form .modal-layer .btn-modal-close {width:10.139vw; height:10.139vw; background-size:4.167vw 4.167vw;}
+        .short-form .modal-cont {height:132.7778vw;}
+
+        /* tv의 역사 */
+        .re-tip__history .obj-m {display: block;}
+        .re-tip__history .obj-pc {display: none;}
+        .re-tip .re-tip__history {width: 100vw; padding: 0;}
+        .re-tip .re-tip__history .layer-pop-inner {height: calc(100% - 70px); margin-top: 12.5vw;}
+        .re-tip .re-tip__history .layer-pop-inner img {width: 100%;}
+    }
+
+    /* only tv */
+    .re-tip-tv .re-tip__tit span {display:block;}
+
+    @media screen and (max-width:768px) {
+        .re-tip__list__btn .txt {font-size: 3.8888888889vw;}
+        .re-tip__list__btn.pic03 {height: 72.5vw;}
+        .re-tip__list__btn.pic03 .txt {top: 58.8888888889vw;}
+        .re-tip__list__btn {border-radius: 2.7777777778vw;}
+    }
+</style>
+
+<!-- 설치가이드 -->
+<style>
+    #popupIsGuide {max-width: 1392px; padding: 0;}
+    #popupIsGuide .pc-guide-view {display: block; background: #f7f7f7; border-radius: 20px;}
+    #popupIsGuide .mo-guide-view {display: none;}
+    #popupIsGuide .pc-guide-view .layer-header {display: none;}
+    #popupIsGuide .layer-content {overflow: hidden; border-radius: 20px; max-height: calc(100vh - 300px);}
+    #popupIsGuide .layer-content sup {margin-left: 0; font-family: 'Samsung Sharp Sans', 'SamsungOneKorean';}
+    #popupIsGuide #washingGuideLine0a {display: block;}
+    #popupIsGuide #washing-subtab0 {display: block;}
+
+    #popupIsGuide .nav-cont {float: left; padding: 90px 50px 0; width: 350px; height: calc(100vh - 300px); text-align: center; background-color: #ECECEC;}
+    #popupIsGuide .nav-cont > h3,
+    #popupIsGuide .nav-cont > h4 {padding-bottom: 27px; font-size: 24px; line-height: 1.25; text-align: center;}
+    #popupIsGuide .nav-cont > h4 {padding-top: 47px;}
+    #popupIsGuide .nav-cont .pop-nec-info {display: inline-block; margin-top: 77px; font-size: 14px; font-weight: bold; line-height: 1.428; border-bottom: 1px solid #2188FF; color: #2188FF;}
+    #popupIsGuide .nav-cont .pop-nec-info:before {content: "*";}
+
+    #popupIsGuide .nav-cont .tv-select-tab > a {display: inline-block; width: 194px; font-size: 16px;}
+    #popupIsGuide .nav-cont .tv-select-tab > a.active {background-color: #000; color: #fff; border: none;}
+    #popupIsGuide .nav-cont .tv-select-tab > a + a {margin-top: 17px;}
+
+    #popupIsGuide .nav-cont .tv-subtab > a {display: inline-block; width: 194px; font-size: 16px;}
+    #popupIsGuide .nav-cont .tv-subtab > a.active {background-color: #000; color: #fff; border: none;}
+    #popupIsGuide .nav-cont .tv-subtab > a + a {margin-top: 17px;}
+    #popupIsGuide .nav-cont .tv-subtab > a > sup {font-size: 10px; vertical-align: 4px;}
+    #popupIsGuide .nav-cont .tv-subtab#tv-subtab1 {display: none;}
+
+    #popupIsGuide .set-guide-contents {display: none; overflow-y: auto; float: left; padding: 58px 0 30px; width: calc(100% - 350px); max-height: calc(100vh - 300px); text-align: center;}
+    #popupIsGuide .set-guide-contents {scrollbar-width:thin; scrollbar-color:rgba(0,0,0,.2); scrollbar-base-color:transparent; scrollbar-face-color:#ccc; scrollbar-highlight-color:transparent; scrollbar-track-color:transparent; scrollbar-arrow-color:#fff; scrollbar-shadow-color:#ccc;}
+    #popupIsGuide .set-guide-contents::-webkit-scrollbar {width:4px; background-color:transparent;}
+    #popupIsGuide .set-guide-contents::-webkit-scrollbar-button {display:none;}
+    #popupIsGuide .set-guide-contents::-webkit-scrollbar-thumb {border-radius:2em; background-color:rgba(0,0,0,.2);}
+    #popupIsGuide .set-guide-contents:hover::-webkit-scrollbar-thumb,
+    #popupIsGuide .set-guide-contents::-webkit-scrollbar-thumb:hover {background-color:rgba(0,0,0,.5);}
+    #popupIsGuide .set-guide-contents:hover {scrollbar-color:rgba(0,0,0,.5);}
+    #popupIsGuide .set-guide-contents#tvGuideLine0a {display: block;}
+
+    #popupIsGuide .set-guide-contents > .tit {padding-bottom: 17px; font-size: 48px; line-height: 1.25; font-weight: bold; text-align: center;}
+    #popupIsGuide .set-guide-contents > .tit > sup {font-size: 24px; vertical-align: 18px;}
+    #popupIsGuide .set-guide-contents > .content-desc {box-sizing:border-box; min-height:74px; padding-bottom:10px; font-size:16px; line-height:1.25; color:#000;}
+    #popupIsGuide .set-guide-contents > .guide-img {display: block; margin: 0 auto; width: 940px;}
+    #popupIsGuide .set-guide-contents > .guide-note {margin: 40px auto 0;}
+    #popupIsGuide .set-guide-contents > .guide-note > li {padding-left: 9px; text-indent: -9px; font-size: 14px; line-height: 1.4;}
+    #popupIsGuide .set-guide-contents > .guide-note > li > span,
+    #popupIsGuide .set-guide-contents > .guide-note > li > a {font-weight: bold; color: #2188FF; text-decoration: underline;}
+    #popupIsGuide .set-guide-contents > .guide-note > li > sup {font-size: 10px; vertical-align: 3px;}
+    #popupIsGuide .set-guide-contents > .guide-note > li:before {content: '* ';}
+
+    #popupIsGuide .set-guide-contents .cnt-img {font-size:0;}
+    #popupIsGuide .set-guide-contents .cnt-img > li {display:inline-block; vertical-align:bottom;}
+    #popupIsGuide .set-guide-contents .cnt-img p {display:table; width:100%; min-height:42px; margin-bottom:22px; font-weight:bold; font-size:18px; line-height:1.2222; color:#000; letter-spacing:-0.025em;}
+    #popupIsGuide .set-guide-contents .cnt-img p > span {display:table-cell; vertical-align:middle;}
+    #popupIsGuide .set-guide-contents .cnt-img .note {display:block; font-weight:normal; font-size:16px;}
+    #popupIsGuide .set-guide-contents .cnt-img.culumn2-type > li {width:420px;}
+    #popupIsGuide .set-guide-contents .cnt-img.culumn2-type > li + li {margin-left:17px;}
+    #popupIsGuide .set-guide-contents .cnt-img.culumn3-type {margin-top:40px;}
+    #popupIsGuide .set-guide-contents .cnt-img.culumn3-type > li {width:270px;}
+    #popupIsGuide .set-guide-contents .cnt-img.culumn3-type > li:nth-child(2) {width:265px;}
+    #popupIsGuide .set-guide-contents .cnt-img.culumn3-type > li + li {margin-left:28px;}
+
+    #popupIsGuide .set-guide-contents .cnt-material dl {font-weight:bold; font-size:0; color:#000;}
+    #popupIsGuide .set-guide-contents .cnt-material dl + dl {margin-top:27px;}
+    #popupIsGuide .set-guide-contents .cnt-material dt,
+    #popupIsGuide .set-guide-contents .cnt-material dd {display:inline-block; vertical-align:bottom;}
+    #popupIsGuide .set-guide-contents .cnt-material dt {width:85px; height:100px; text-align:left; font-size:20px; line-height:1.1;}
+    #popupIsGuide .set-guide-contents .cnt-material dt > span {display:inline-block; vertical-align:middle;}
+    #popupIsGuide .set-guide-contents .cnt-material dt:after {display:inline-block; vertical-align:middle; height:100%; content:'';}
+    #popupIsGuide .set-guide-contents .cnt-material dd {width:180px;}
+    #popupIsGuide .set-guide-contents .cnt-material dd + dd {margin-left:30px;}
+    #popupIsGuide .set-guide-contents .cnt-material dd > span {display:block; margin-bottom:7px; font-size:14px;}
+    #popupIsGuide .set-guide-contents .cnt-material dd > img {border:1px solid #bfbfbf;}
+
+    #mask[data-mask-target="popupNecInfoPc"],
+    #mask[data-mask-target="popupNecInfo"] {display: none;}
+    .popup-nec-info {left: 30%; top: calc(53% - 25px); padding: 24px; max-width: 682px; border: 1px solid #707070;}
+    .popup-nec-info .layer-header h2 {font-size: 16px; line-height: 1.25;}
+    .popup-nec-info .layer-content .module {float:left; box-sizing:border-box; width:25%; text-align: center;}
+    .popup-nec-info .layer-content .module-tit {display: block; width: 100%; margin-top:22px; font-weight:bold; font-size:14px; line-height:1.14; color:#000;}
+    .popup-nec-info .layer-content .module-desc {display: block; margin-top:7px; line-height:1.2; color: #666; font-size: 12px;}
+    .popup-nec-info .layer-content .module-desc > span {margin-top:7px;}
+    .popup-nec-info .layer-content .module-code {color: #666; font-size: 12px;}
+    .popup-nec-info .layer-content .caution {float: left; width: 100%; padding-top:12px; border-top:1px solid #e9e9e9; margin:8px 20px 0; text-align:left; color: #666;}
+    .popup-nec-info .layer-content .caution li {font-size: 12px; line-height: 1.4;}
+    .popup-nec-info .layer-content .caution span {margin-left:8px; text-indent:-8px;}
+    .popup-nec-info.layer-pop .pop-close {bottom: auto; left: auto; right: 0; top: 9px; border: none;}
+
+    @media screen and (max-width: 1440px) {
+        #popupIsGuide {max-width: 96.667vw;}
+        #popupIsGuide .layer-content {border-radius: 1.389vw;}
+
+        #popupIsGuide .nav-cont {padding: 8.819vw 3.472vw 0; width: 24.306vw; /* height: calc(100vh - 23.333vw); */} /* a11y: height 주석 */
+        #popupIsGuide .nav-cont > h3,
+        #popupIsGuide .nav-cont > h4 {padding-bottom: 1.875vw; font-size: 1.667vw;}
+        #popupIsGuide .nav-cont > h4 {padding-top: 3.264vw;}
+        #popupIsGuide .nav-cont .pop-nec-info {margin-top: 5.347vw; font-size: 0.972vw; border-bottom-color: #2188FF;}
+
+        #popupIsGuide .nav-cont .tv-select-tab > a {width: 13.472vw; font-size: 1.111vw;}
+        #popupIsGuide .nav-cont .tv-select-tab > a + a {margin-top: 1.181vw;}
+
+        #popupIsGuide .nav-cont .tv-subtab > a {width: 13.472vw; font-size: 1.111vw;}
+        #popupIsGuide .nav-cont .tv-subtab > a + a {margin-top: 1.181vw;}
+        #popupIsGuide .nav-cont .tv-subtab > a > sup {font-size: 0.694vw; vertical-align: 0.278vw;}
+
+        #popupIsGuide .set-guide-contents {padding: 4.028vw 0 2.083vw; width: calc(100% - 24.306vw); max-height: calc(100vh - 23.333vw);}
+        #popupIsGuide .set-guide-contents::-webkit-scrollbar {width:0.278vw;}
+        #popupIsGuide .set-guide-contents::-webkit-scrollbar-thumb {border-radius:2em;}
+
+        #popupIsGuide .set-guide-contents > .tit {padding-bottom: 1.1806vw; font-size: 3.333vw;}
+        #popupIsGuide .set-guide-contents > .tit > sup {font-size: 1.667vw; vertical-align: 1.25vw;}
+        #popupIsGuide .set-guide-contents > .content-desc {min-height:5.1389vw; padding-bottom:0.6944vw; font-size:1.1111vw;}
+        #popupIsGuide .set-guide-contents > .guide-img {width: 65.278vw;}
+        #popupIsGuide .set-guide-contents > .guide-note {margin: 2.778vw auto 0;}
+        #popupIsGuide .set-guide-contents > .guide-note > li {padding-left: 0.625vw; text-indent: -0.625vw; font-size: 0.972vw;}
+        #popupIsGuide .set-guide-contents > .guide-note > li > sup {font-size: 0.694vw; vertical-align: 0.208vw;}
+
+        #popupIsGuide .set-guide-contents .cnt-img p {min-height:2.9167vw; margin-bottom:1.5278vw; font-size:1.2500vw;}
+        #popupIsGuide .set-guide-contents .cnt-img .note {font-size:1.1111vw;}
+        #popupIsGuide .set-guide-contents .cnt-img.culumn2-type > li {width:29.1667vw;}
+        #popupIsGuide .set-guide-contents .cnt-img.culumn2-type > li + li {margin-left:1.1806vw;}
+        #popupIsGuide .set-guide-contents .cnt-img.culumn3-type {margin-top:2.7778vw;}
+        #popupIsGuide .set-guide-contents .cnt-img.culumn3-type > li {width:18.7500vw;}
+        #popupIsGuide .set-guide-contents .cnt-img.culumn3-type > li:nth-child(2) {width:18.4028vw;}
+        #popupIsGuide .set-guide-contents .cnt-img.culumn3-type > li + li {margin-left:1.9444vw;}
+
+        #popupIsGuide .set-guide-contents .cnt-material dl + dl {margin-top:1.8750vw;}
+        #popupIsGuide .set-guide-contents .cnt-material dt {width:5.9027vw; height:6.9444vw; font-size:1.3889vw;}
+        #popupIsGuide .set-guide-contents .cnt-material dd {width:12.5vw;}
+        #popupIsGuide .set-guide-contents .cnt-material dd + dd {margin-left:2.0833vw;}
+        #popupIsGuide .set-guide-contents .cnt-material dd > span {margin-bottom:0.4861vw; font-size:0.9722vw;}
+
+        .popup-nec-info {top: calc(53% - 1.736vw); padding: 1.667vw; max-width: 47.361vw; border: 0.069vw solid #707070;}
+        .popup-nec-info .layer-header h2 {font-size: 1.111vw;}
+        .popup-nec-info .layer-content .module-tit {margin-top:1.53vw; font-size:0.97vw;}
+        .popup-nec-info .layer-content .module-code {font-size: 0.83vw;}
+        .popup-nec-info .layer-content .module-desc {margin-top:0.49vw; font-size: 0.83vw;}
+        .popup-nec-info .layer-content .module-desc > span {margin-top:0.49vw; font-size: 0.83vw;}
+        .popup-nec-info .layer-content .module-code {font-size: 0.83vw;}
+        .popup-nec-info .layer-content .caution {padding-top: 0.833vw; padding-left: 0.694vw; text-indent: -0.694vw;}
+        .popup-nec-info .layer-content .caution li {font-size: 0.972vw;}
+        .popup-nec-info .caution span {margin-left:0.56vw; text-indent:-0.56vw;}
+        .popup-nec-info.layer-pop .pop-close {top: 0.903vw;}
+    }
+    @media screen and (max-width: 1100px) {
+        #popupIsGuide .set-guide-contents > .guide-note > li {font-size: 1.172vw;}
+    }
+    @media screen and (max-width: 800px) {
+        #popupIsGuide .pc-guide-view {display: none;}
+        #popupIsGuide .mo-guide-view {display: block; height: 100vh;}
+
+        /* 240228 */
+        #popupIsGuide.layer-pop {opacity:0; overflow:hidden; display:block; height:0;}
+        #popupIsGuide.layer-pop.active {opacity:1; overflow:visible; height:100%;}
+        #popupNecInfo.active {display:flex; flex-flow:column;}
+        #popupIsGuide .layer-content {overflow:auto; max-height:none;}
+        /* //240228 */
+
+        #popupIsGuide .mo-guide-view .layer-header {display: block; margin-top: 27px; margin-bottom: 33px; padding-left: 16px;  border-bottom: none;}
+        #popupIsGuide .mo-guide-view .layer-header > h2 {padding-bottom: 0; font-size: 20px; line-height: 1.3;}
+
+        #popupIsGuide .mo-guide-view .layer-content {overflow-y: auto; max-height: calc(100% - 68px);}
+        #popupIsGuide .mo-guide-view .layer-content:after {content: ''; display: block; clear: both;}
+        #popupIsGuide .mo-guide-view .nav-cont {float: none; padding: 0 0 20px 16px; width: 100%; height: auto; text-align: left; background-color: transparent;}
+        #popupIsGuide .mo-guide-view .nav-cont .tv-select-tab-mo > a {border: none; font-size: 16px; line-height: 1; font-weight: bold;}
+        #popupIsGuide .mo-guide-view .nav-cont .tv-select-tab-mo > a + a {margin-left: 16px;}
+        #popupIsGuide .mo-guide-view .nav-cont .tv-select-tab-mo > a.active {border-bottom: 2px solid #000;}
+
+        #popupIsGuide .wrap-component {overflow: hidden; visibility: hidden; height: 0; background-color: #f7f7f7;}
+        #popupIsGuide .wrap-component#tvGuideLine0 {display: block; visibility: visible; height: auto;}
+        #popupIsGuide .wrap-component#tvGuideLine1 .slick-slider.ind-out ~ .slider-controls {display: none;}
+        #popupIsGuide .wrap-component .tv-inner {padding: 20px;}
+        #popupIsGuide .wrap-component .tv-inner .tit {padding-bottom: 5.8593vw; font-size: 20px; line-height: 1.3; font-weight: bold; text-align: center;}
+        #popupIsGuide .wrap-component .tv-inner .tit sup {font-size: 12px; vertical-align: 6px;}
+        #popupIsGuide .wrap-component .tv-inner .content-desc {display: none;}
+        #popupIsGuide .wrap-component .tv-inner .guide-img {width: 100%;}
+        #popupIsGuide .wrap-component .tv-inner .guide-note {padding-top: 50px;}
+        #popupIsGuide .wrap-component .tv-inner .guide-note li {font-size: 12px; line-height: 1.5; text-align: center;}
+        #popupIsGuide .wrap-component .tv-inner .guide-note li:before {content: '* ';}
+        #popupIsGuide .wrap-component .tv-inner .guide-note li span,
+        #popupIsGuide .wrap-component .tv-inner .guide-note li a {font-size: 12px; font-weight: bold; color: #2188FF; text-decoration: underline;}
+        #popupIsGuide .wrap-component .tv-inner .guide-note li sup {font-size: 10px; vertical-align: 3px;}
+
+        #popupIsGuide .wrap-component .tv-inner .cnt-img p {display:block; width: 100%; min-height:auto; text-align: center; font-size:2.8646vw;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img p > span {display:block; font-weight: bold;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img .note {display:inline; font-size:inherit;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn2-type {padding:0 10.4167vw;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn2-type > li {display:block; position:relative; width:100%;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn2-type > li + li {margin-top:2.6042vw; margin-left:0;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn2-type p {position:absolute; top:0; left:0; padding-top:3.5156vw; margin-bottom:0; font-weight: bold;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn2-type.stand > li + li {margin-top:3.9062vw;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn3-type {display:inline-block; width:89.5833%; margin-top:0;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn3-type > li {margin-top:6.1198vw;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn3-type > li:nth-child(-n+2) {margin-top:0;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn3-type > li:nth-child(odd) {float:left; clear:left; width:48.2558%;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn3-type > li:nth-child(even) {float:right; width:47.3837%;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn3-type > li + li {margin-left:0;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-img.culumn3-type p {margin-bottom:2.7344vw;}
+
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dl {font-weight:bold; font-size:0; color:#000;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dt,
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dd {display:inline-block; vertical-align:bottom;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dl + dl {margin-top:9.1145vw;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dt {width:9.1146vw; height:18.2291vw; text-align:left; font-size:3.6458vw; line-height:1.1;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dt > span {display:inline-block; vertical-align:middle;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dt:after {display:inline-block; vertical-align:middle; height:100%; content:'';}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dd {width:24.3396vw;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dd + dd {margin-left:2.4042vw;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dd > span {display:block; margin-bottom:1.5625vw; text-align: center; font-size:2.8646vw;}
+        #popupIsGuide .wrap-component .tv-inner .cnt-material dd > img {border:1px solid #bfbfbf;}
+
+        #popupIsGuide .wrap-component .slick-slider.ind-out ~ .slider-controls {position: absolute; margin-top: 0; bottom: auto; top: 98vw; left: 0; width: 100%;}
+        #popupIsGuide .wrap-component .slick-slider.ind-out ~ .slider-controls .slide-btn {display: none;}
+        #popupIsGuide .wrap-component .slick-slider.ind-out ~ .slider-controls.device-mo {bottom: auto; top: 99vw;}
+
+        #popupNecInfo {top: 0; left: 0; padding: 11px 12px 24px; max-width: 100%; border: none;}
+        #popupNecInfo .layer-header {border-bottom: 2px solid #000;}
+        #popupNecInfo .layer-header h2 {font-size: 20px;}
+        #popupNecInfo .layer-content .module {width:50%; padding:0 3.9063vw; margin-top:5.2083vw;}
+        #popupNecInfo .layer-content .module-tit {margin-top:4.5573vw; font-size:3.9063vw;}
+        #popupNecInfo .layer-content .module-desc {margin-top:1.5625vw; font-size:3.125vw; line-height:1.35;}
+        #popupNecInfo .layer-content .module-desc > span {margin-top:1.6927vw; font-size:2.8646vw;}
+        #popupNecInfo .layer-content .module-code {margin-top:2.6042vw; font-size:2.6042vw; line-height:1.45;}
+        #popupNecInfo .layer-content .caution {float: left; padding: 12px 0 0; margin: 0; text-align: center;}
+        #popupNecInfo .layer-content .caution li {line-height: 1.3; font-size: 14px;}
+        #popupNecInfo.layer-pop .pop-close {top: 27px; right: 5px;}
+    }
+
+    .neo-qled-logo-story .neo-qled-logo-img {display: inline-block;}
+    .neo-qled-logo-story .neo-qled-logo-img img {height: 36px;}
+
+    .item-list .dummy div {height: 400px;}
+    .wrap-component.textbox-simple .component-contents .component-text .box-title h2,
+    .wrap-html-content .img-cloumn-section .title{font-family: 'Samsung Sharp Sans', 'SamsungOneKorean';}
+
+    @media (max-width: 1440px) {
+        .neo-qled-logo-story .neo-qled-logo-img img {height: 2.5vw;}
+
+        .item-list .dummy div {height: 10vw;}
+    }
+    @media (max-width: 1100px) {
+        .neo-qled-logo-story .neo-qled-logo-img img {height: 3.3vw;}
+    }
+    @media (max-width: 800px) {
+        .neo-qled-logo-story .neo-qled-logo-img img {height: 5vw;}
+        .item-list .dummy {display: none;}
+    }
+
+    /* 줄바꿈 */
+    .stc-pc-show {display:block !important;}
+    .stc-mo-show {display:none !important;}
+    @media screen and (max-width: 800px) {
+        .stc-pc-show {display:none !important;}
+        .stc-mo-show {display:block !important;}
+    }
+
+    /* 웹접근성 2205 */
+    #mask[data-mask-target="popupIsGuide"] {display:none !important;}
+
+    .-has-modal { overflow:hidden; }
+    .modal-dim {position:fixed; top:0; right:0; bottom:0; left:0; z-index:200; background:rgba(0, 0, 0, 0.8); }
+    .modal-dim.-hidden {display:none;}
+    .modal-in-dim {position:fixed; top:0; right:0; bottom:0; left:0; z-index:100; background:transparent; }
+    .modal-in-dim.-hidden {display:none;}
+
+
+    @media screen and (max-width: 800px) {
+        .a11y-guide .layer-normal { top:0; bottom:0; left:0; max-width:100% !important; width:100%; /* height:100vh; */ padding:11px 12px 24px; border-radius:0; transform:none; } /* a11y: height 삭제 */
+        .a11y-guide .layer-normal .pop-close { top:27px; right:5px; bottom:auto; left:auto; transform:none; border-radius:0; border:none; background-color:transparent; }
+        .a11y-guide .wrap-component .slick-slider.ind-dot .slick-dots {bottom:5.5555vw;}
+        .a11y-guide #popupIsGuide .wrap-component .tv-inner {padding-bottom:8.3333vw;}
+        .a11y-guide #popupIsGuide .wrap-component .tv-inner .guide-note {padding-top:2.7777vw;}
+        .a11y-guide .wrap-component .slick-slider.ind-dot .slick-dots li button {width:5.5555vw; height:5.5555vw;}
+    }
+</style>
+
+<div class="a11y-guide">
+    <section class="re-tip re-tip-tv">
+
+        <button style="display: none" type="button" class="re-tip__list__btn pic03 btn-pop-guide" aria-haspopup="dialog" data-popup-target="popupIsGuide" data-omni-type="microsite_contentinter" data-omni="pcd:tv:tvs:tip:installation_guid_view_more"></button>
+
+        <!-- modal -->
+        <div class="modal-dim" data-modal-dim="dim-guide"></div>
+
+        <!-- 설치가이드 -->
+        <div class="layer-pop layer-normal modal-pop-guide" id="popupIsGuide" tabindex="0" data-popup-layer="popupIsGuide" data-focus="#ptIsGuideOpen"><!-- a11y: modal-pop-guide 클래스 추가 -->
+            <div class="pc-guide-view">
+                <div class="layer-header">
+                    <h2>TV 설치 가이드</h2>
+                </div>
+                <div class="layer-content">
+                    <div class="nav-cont">
+                        <h3>1. 설치 방법을 선택하세요</h3>
+                        <nav class="tv-select-tab">
+                            <a href="#tv-subtab0" class="btn btn-d btn-type1 active" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_tab_wall_mount">벽걸이</a>
+                            <a href="#tvGuideLine0b" class="btn btn-d btn-type1" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_tab_stand">스탠드</a> <!-- a11y: 연결되는 panel 아이디 바로 연결 -->
+                        </nav>
+
+                        <h4>2. 설치 조건을 확인하세요</h4>
+                        <div role="tabpanel" aria-hidden="false"><!-- a11y: <div role="tabpanel" aria-hidden="false"> 추가 -->
+                            <nav class="tv-subtab" id="tv-subtab0">
+                                <a href="#tvGuideLine0a" class="btn btn-d btn-type1 active" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_tab_wall_material">벽면 재질</a>
+                                <a href="#tvGuideLine1a" class="btn btn-d btn-type1" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_tab_wall_thickness">벽면 두께</a>
+                                <a href="#tvGuideLine2a" class="btn btn-d btn-type1" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_tab_environment">주변 환경</a>
+                            </nav>
+                        </div>
+                        <!-- <nav class="tv-subtab" id="tv-subtab1">
+                            <a href="#tvGuideLine0b" class="btn btn-d btn-type1 active" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_tab_conditions">설치 조건</a>
+                        </nav> -->
+                        <a href="#" class="pop-nec-info" data-popup-target="popupNecInfoPc" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_see_all_wall_hanging">벽걸이 자재 알아보기</a>
+                    </div>
+                    <div class="set-guide-contents" id="tvGuideLine0a" role="tabpanel"><!-- a11y: role="tabpanel" 추가 -->
+                        <p class="tit">벽걸이 형 TV 설치 가이드</p>
+                        <p class="content-sub blind">벽면 재질</p>
+                        <p class="content-desc">벽걸이 형 TV를 설치하기 위해서는 벽면이 단단해야 하므로 벽 재질에 따라 설치가 불가능 할 수 있습니다.<br>아래 설치 가능한 벽면 재질을 먼저 확인해주세요.</p>
+                        <div class="content-img cnt-material">
+                            <dl>
+                                <dt><span>설치 가능</span></dt>
+                                <dd>
+                                    <span>일반 콘크리트</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_1.jpg" alt="일반 콘크리트">
+                                </dd>
+                                <dd>
+                                    <span>대리석 / 타일</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_2.jpg" alt="대리석/타일">
+                                </dd>
+                                <dd>
+                                    <span>산호석</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_3.jpg" alt="산호석">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><span>낙하 우려</span></dt>
+                                <dd>
+                                    <span>석고보드/합판</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_4.jpg" alt="석고보드/합판">
+                                </dd>
+                                <dd>
+                                    <span>샌드위치판넬</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_5.jpg" alt="샌드위치판넬">
+                                </dd>
+                                <dd>
+                                    <span>흙벽</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_6.jpg" alt="흙벽">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><span>고정 불가</span></dt>
+                                <dd>
+                                    <span>돌출벽면</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_7.jpg" alt="돌출벽면">
+                                </dd>
+                                <dd>
+                                    <span>인테리어 소품</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_8.jpg" alt="인테리어 소품">
+                                </dd>
+                                <dd>
+                                    <span>스위치 간섭</span>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_9.jpg" alt="스위치 간섭">
+                                </dd>
+                            </dl>
+                        </div>
+                        <ul class="guide-note">
+                            <li>제품 설치 시 삼성에서 제공한 구성품을 사용하세요. 다른 구성품으로 설치하면 제품이 떨어져 고장이 나거나 상해를 입을 수 있습니다.</li>
+                            <li>벽걸이 고정이 가능한 벽체 환경이 아닌 경우 반드시 전문 업체에 문의하여 설치 가능여부를 확인하세요.</li>
+                        </ul>
+                    </div>
+                    <div class="set-guide-contents" id="tvGuideLine1a" role="tabpanel"><!-- a11y: role="tabpanel" 추가 -->
+                        <p class="tit">벽걸이 형 TV 설치 가이드</p>
+                        <p class="content-sub blind">벽면 두께</p>
+                        <p class="content-desc">설치 가능한 벽면 재질을 확인했다면, TV 무게를 지탱하기 충분한 두께인지 확인해주세요.<br>일반 벽인 경우 벽면의 콘센트(전화선/LAN 단자)를 분리하여 벽면 내부를 확인 할 수 있습니다.</p>
+                        <div class="content-img">
+                            <ul class="cnt-img culumn3-type">
+                                <li>
+                                    <p><span>단일 벽면</span></p>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide2_1.jpg" alt="벽 두께 최소 25 mm">
+                                </li>
+                                <li>
+                                    <p><span>단일 벽면 <span class="note">(보강목 있을 시)</span></span></p>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide2_2.jpg" alt="벽 두께 최소 10 mm, 보강목 가로 최소 50 mm, 세로 최소 50 mm">
+                                </li>
+                                <li>
+                                    <p><span>아트 월</span></p>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide2_3.jpg" alt="가벽 아트 월 최소 10 mm, 내벽 최소 30 mm">
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="guide-note">
+                            <li>두께 24 mm 이하 단일 벽면, 내벽 두께 30 mm 이하 아트 월에는 설치가 불가합니다.</li>
+                            <li>제품 별 인박스 된 설치 자재가 상이하며, 별매 자제에 따라 호환되지 않을 수 있으니 구매 시 유의바랍니다.</li>
+                            <li>인테리어 벽인 경우 가벽과 내벽의 재질 및 벽 사이의 거리를 체크하세요.</li>
+                            <li>설치가능한 벽면 재질이라도, 외/내벽간 거리가 20 cm 이상이면 설치가 불가할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div class="set-guide-contents" id="tvGuideLine2a" role="tabpanel"><!-- a11y: role="tabpanel" 추가 -->
+                        <p class="tit">벽걸이 형 TV 설치 가이드</p>
+                        <p class="content-sub blind">주변 환경</p>
+                        <p class="content-desc">벽면의 설치 가능 여부를 확인했다면, TV를 설치할 공간의 주변 환경을 체크하세요.</p>
+                        <div class="content-img">
+                            <ul class="cnt-img culumn2-type">
+                                <li>
+                                    <p><span>제품과 벽 사이 최소 1.5 cm 공간 유지</span></p>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide3_1.jpg" alt="제품 상하좌우 공간 10 cm씩 유지. 벽 사이 간격 최소 1.5 cm">
+                                </li>
+                                <li>
+                                    <p><span>제품 15° 이상 기울여 설치 불가</span></p>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide3_2.jpg" alt="15도">
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="guide-note">
+                            <li>제품 별 인박스 된 설치 자재가 상이하며, 별매 자제에 따라 호환되지 않을 수 있으니 구매 시 유의바랍니다.</li>
+                            <li>삼성에서 제공한 구성품 외 다른 구성품으로 설치하면 통풍이 잘 안 되어 화재나 제품 고장의 원인이 될 수 있습니다.</li>
+                            <li>별매품 구입 및 설치는 삼성전자(1588-3366)에 문의하세요.</li>
+                        </ul>
+                    </div>
+                    <div class="set-guide-contents" id="tvGuideLine0b" role="tabpanel"><!-- a11y: role="tabpanel" 추가 -->
+                        <p class="tit">스탠드 형 TV 설치 가이드</p>
+                        <p class="content-desc">TV를 설치할 공간의 주변 환경을 체크하세요.</p>
+                        <div class="content-img">
+                            <ul class="cnt-img culumn2-type stand">
+                                <li>
+                                    <p>스크린 너비 폭 이상의 하부장 위에 설치</p>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide4_1.jpg" alt="스크린 너비와 하부장 너비가 가로 화살표로 표시되어 있고, 하부장 너비가 스크린 너비보다 넓음">
+                                </li>
+                                <li>
+                                    <p>TV 고정 위해 벽면에 끈으로 연결 가능</p>
+                                    <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide4_1.jpg" alt="벽면과 TV가 끈으로 연결되어 있고, TV와 끈을 나사로 고정하는 모습 확대">
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="guide-note">
+                            <li>제품 별 인박스 된 설치 자재가 상이하며, 별매 자제에 따라 호환되지 않을 수 있으니 구매 시 유의바랍니다.</li>
+                            <li>스탠드 형 TV 고정용 고리와 나사, 끈은 별도 판매하지 않습니다.</li>
+                            <li>스탠드 형태에 따라 설치 가능한 최소 하부장 너비가 상이할 수 있으나, 안정적인 설치를 위해 스크린 가로폭 너비 이상의 하부장을 권장합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="pop-close" data-focus-next="popupIsGuide" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_popup_close">팝업닫기</button>
+            </div>
+
+            <div class="layer-pop layer-normal popup-nec-info" id="popupNecInfoPc" tabindex="0" data-popup-layer="popupNecInfoPc" data-focus="popupNecInfoPc">
+                <div class="layer-header">
+                    <h2>벽걸이 자재 알아보기</h2>
+                </div>
+                <div class="layer-content">
+				<span class="module">
+					<img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide_tooltip1.jpg" alt="">
+					<span class="module-tit">밀착 벽걸이</span>
+					<span class="module-desc">
+						벽체와 TV의 이격 거리를<br>
+						최소화 한 벽걸이<br>
+						<span>&nbsp;</span>
+					</span>
+					<span class="module-code">
+						WMN-R30EB/KR<br>
+						WMN-M25EB/KR<br>
+						WMN-M15EB/KR
+					</span>
+				</span>
+                    <span class="module">
+					<img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide_tooltip2.jpg" alt="">
+					<span class="module-tit">스위블 벽걸이</span>
+					<span class="module-desc">
+						TV를 상하좌우 최대 20˚<br>
+						움직일 수 있는 벽걸이<br>
+						<span>&nbsp;</span>
+					</span>
+					<span class="module-code">
+						WMN4277ST<br>
+						WMN4070SR<br>
+						WMN5870XT
+					</span>
+				</span>
+                    <span class="module">
+					<img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide_tooltip3.jpg" alt="">
+					<span class="module-tit">일반 벽걸이</span>
+					<span class="module-desc">
+						TV를 벽에<br>
+						고정해놓은 벽걸이<br>
+						<span>&nbsp;</span>
+					</span>
+					<span class="module-code">
+						&nbsp;<br>
+						WMN8000SXT<br>
+						&nbsp;
+					</span>
+				</span>
+                    <span class="module">
+					<img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide_tooltip4.jpg" alt="">
+					<span class="module-tit">미니슬림 벽걸이</span>
+					<span class="module-desc">
+						TV를 벽에 고정해놓은<br>
+						작고 슬림한 벽걸이<br>
+						<span>* 65" 까지만 호환 가능</span>
+					</span>
+					<span class="module-code">
+						&nbsp;<br>
+						WMN750M<br>
+						&nbsp;
+					</span>
+				</span>
+                    <ul class="caution">
+                        <li>* TV 모델/사이즈 별 벽걸이 호환 모델이 상이합니다.</li>
+                        <li>자세한 내용은 사용자 매뉴얼 또는 삼성전자 서비스센터(1588-3366)에 문의하세요.</li>
+                    </ul>
+                </div>
+                <button type="button" class="pop-close" data-focus-next="popupNecInfoPc" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:pc_see_all_wall_hanging:popup_close">팝업닫기</button>
+            </div>
+
+            <div class="mo-guide-view">
+                <div class="layer-header">
+                    <h2>TV 설치 가이드</h2>
+                </div>
+                <div class="layer-content">
+                    <div class="nav-cont">
+                        <nav class="tv-select-tab-mo">
+                            <a href="#tvGuideLine0" class="active" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:mo_tab_wall_mount">벽걸이</a>
+                            <a href="#tvGuideLine1" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:mo_tab_stand">스탠드</a>
+                        </nav>
+                    </div>
+                    <div class="wrap-component carousel-container component-feature mode-center pb-none pt-none" id="tvGuideLine0" role="tabpanel"> <!-- a11y: arrow-blk 클래스 추가, role="tabpanel" 추가 -->
+                        <div class="component-contents pb-none pt-none arrow-blk">
+                            <div id="slideQled8k0" class="slider-element ind-out ind-dot arr-line s5000">
+                                <!-- loop -->
+                                <div class="tv-inner" data-ind-title="" data-control="">
+                                    <p class="tit">벽면 재질</p>
+                                    <p class="content-desc">벽걸이 형 TV를 설치하기 위해서는 벽면이 단단해야 하므로 벽 재질에 따라 설치가 불가능 할 수 있습니다.<br>아래 설치 가능한 벽면 재질을 먼저 확인해주세요.</p>
+                                    <div class="content-img cnt-material">
+                                        <dl>
+                                            <dt><span>설치 가능</span></dt>
+                                            <dd>
+                                                <span>일반 콘크리트</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_1_mo.jpg" alt="일반 콘크리트">
+                                            </dd>
+                                            <dd>
+                                                <span>대리석 / 타일</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_2_mo.jpg" alt="대리석/타일">
+                                            </dd>
+                                            <dd>
+                                                <span>산호석</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_3_mo.jpg" alt="산호석">
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>낙하 우려</span></dt>
+                                            <dd>
+                                                <span>석고보드/합판</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_4_mo.jpg" alt="석고보드/합판">
+                                            </dd>
+                                            <dd>
+                                                <span>샌드위치판넬</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_1_mo.jpg" alt="샌드위치판넬">
+                                            </dd>
+                                            <dd>
+                                                <span>흙벽</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_1_mo.jpg" alt="흙벽">
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>고정 불가</span></dt>
+                                            <dd>
+                                                <span>돌출벽면</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_1_mo.jpg" alt="돌출벽면">
+                                            </dd>
+                                            <dd>
+                                                <span>인테리어 소품</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_1_mo.jpg" alt="인테리어 소품">
+                                            </dd>
+                                            <dd>
+                                                <span>스위치 간섭</span>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide1_1_mo.jpg" alt="스위치 간섭">
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <ul class="guide-note">
+                                        <li><a href="#" class="pop-nec-info" data-popup-target="popupNecInfo" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:mo_see_all_wall_hanging">벽걸이 자재 알아보기</a></li>
+                                        <li>제품 설치 시 삼성에서 제공한 구성품을 사용하세요. 다른 구성품으로 설치하면 제품이 떨어져 고장이 나거나 상해를 입을 수 있습니다.</li>
+                                        <li>벽걸이 고정이 가능한 벽체 환경이 아닌 경우 반드시 전문 업체에 문의하여 설치 가능여부를 확인하세요.</li>
+                                    </ul>
+                                </div>
+                                <!-- //loop -->
+                                <!-- loop -->
+                                <div class="tv-inner" data-ind-title="" data-control="">
+                                    <p class="tit">벽면 두께</p>
+                                    <p class="content-desc">설치 가능한 벽면 재질을 확인했다면, TV 무게를 지탱하기 충분한 두께인지 확인해주세요.<br>일반 벽인 경우 벽면의 콘센트(전화선/LAN 단자)를 분리하여 벽면 내부를 확인 할 수 있습니다.</p>
+                                    <div class="content-img">
+                                        <ul class="cnt-img culumn3-type">
+                                            <li>
+                                                <p><span>단일 벽면</span></p>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide2_1_mo.jpg" alt="벽 두께 최소 25 mm">
+                                            </li>
+                                            <li>
+                                                <p><span>단일 벽면 <span class="note">(보강목 있을 시)</span></span></p>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide2_2_mo.jpg" alt="벽 두께 최소 10 mm, 보강목 가로 최소 50 mm, 세로 최소 50 mm">
+                                            </li>
+                                            <li>
+                                                <p><span>아트 월</span></p>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide2_3_mo.jpg" alt="가벽 아트 월 최소 10 mm, 내벽 최소 30 mm">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="guide-note">
+                                        <li><a href="#" class="pop-nec-info" data-popup-target="popupNecInfo" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:mo_see_all_wall_hanging2">벽걸이 자재 알아보기</a></li>
+                                        <li>두께 24 mm 이하 단일 벽면, 내벽 두께 30 mm 이하 아트 월에는 설치가 불가합니다.</li>
+                                        <li>제품 별 인박스 된 설치 자재가 상이하며, 별매 자제에 따라 호환되지 않을 수 있으니 구매 시 유의바랍니다.</li>
+                                        <li>인테리어 벽인 경우 가벽과 내벽의 재질 및 벽 사이의 거리를 체크하세요.</li>
+                                        <li>설치가능한 벽면 재질이라도, 외/내벽간 거리가 20 cm 이상이면 설치가 불가할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                                <!-- //loop -->
+                                <!-- loop -->
+                                <div class="tv-inner" data-ind-title="" data-control="">
+                                    <p class="tit">주변 환경</p>
+                                    <div class="content-img">
+                                        <ul class="cnt-img culumn2-type">
+                                            <li>
+                                                <p><span>제품과 벽 사이 최소 1.5 cm 공간 유지</span></p>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide3_1_mo.jpg" alt="제품 상하좌우 공간 10 cm씩 유지. 벽 사이 간격 최소 1.5 cm">
+                                            </li>
+                                            <li>
+                                                <p><span>제품 15° 이상 기울여 설치 불가</span></p>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide3_2_mo.jpg" alt="15도">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="guide-note">
+                                        <li><a href="#" class="pop-nec-info" data-popup-target="popupNecInfo" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:mo_see_all_wall_hanging3">벽걸이 자재 알아보기</a></li>
+                                        <li>제품 별 인박스 된 설치 자재가 상이하며, 별매 자제에 따라 호환되지 않을 수 있으니 구매 시 유의바랍니다.</li>
+                                        <li>삼성에서 제공한 구성품 외 다른 구성품으로 설치하면 통풍이 잘 안 되어 화재나 제품 고장의 원인이 될 수 있습니다.</li>
+                                        <li>별매품 구입 및 설치는 삼성전자(1588-3366)에 문의하세요.</li>
+                                    </ul>
+                                </div>
+                                <!-- //loop -->
+                            </div>
+                            <!-- <div class="slider-controls">
+                                <div class="wrap-controls type-title"></div>
+                                <button type="button" class="slide-btn slide-play" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:slide_play"><span class="blind">재생</span></button>
+                                <button type="button" class="slide-btn slide-pause" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:slide_stop"><span class="blind">정지</span></button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="wrap-component carousel-container component-feature mode-center pb-none pt-none" id="tvGuideLine1" role="tabpanel"> <!-- a11y: role="tabpanel" 추가 -->
+                        <div class="component-contents pb-none pt-none">
+                            <div id="slideQled8k1" class="slider-element ind-out ind-line arr-line s5000">
+                                <!-- loop -->
+                                <div class="tv-inner" data-ind-title="" data-control="">
+                                    <p class="content-desc">TV를 설치할 공간의 주변 환경을 체크하세요.</p>
+                                    <div class="content-img">
+                                        <ul class="cnt-img culumn2-type stand">
+                                            <li>
+                                                <p>스크린 너비 폭 이상의 하부장 위에 설치</p>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide4_1_mo.jpg" alt="스크린 너비와 하부장 너비가 가로 화살표로 표시되어 있고, 하부장 너비가 스크린 너비보다 넓음">
+                                            </li>
+                                            <li>
+                                                <p>TV 고정 위해 벽면에 끈으로 연결 가능</p>
+                                                <img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide4_1_mo.jpg" alt="벽면과 TV가 끈으로 연결되어 있고, TV와 끈을 나사로 고정하는 모습 확대">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="guide-note">
+                                        <li>제품 별 인박스 된 설치 자재가 상이하며, 별매 자제에 따라 호환되지 않을 수 있으니 구매 시 유의바랍니다.</li>
+                                        <li>스탠드 형 TV 고정용 고리와 나사, 끈은 별도 판매하지 않습니다.</li>
+                                        <li>스탠드 형태에 따라 설치 가능한 최소 하부장 너비가 상이할 수 있으나, 안정적인 설치를 위해 스크린 가로폭 너비 이상의 하부장을 권장합니다.</li>
+                                    </ul>
+                                </div>
+                                <!-- //loop -->
+                            </div>
+                            <!-- <div class="slider-controls">
+                                <div class="wrap-controls type-title"></div>
+                                <button type="button" class="slide-btn slide-play" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:slide_play2"><span class="blind">재생</span></button>
+                                <button type="button" class="slide-btn slide-pause" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:slide_stop2"><span class="blind">정지</span></button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="pop-close" data-focus-next="popupIsGuide" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:mo_popup_close">팝업닫기</button>
+            </div>
+            <div class="layer-pop layer-normal popup-nec-info" id="popupNecInfo" tabindex="0" data-popup-layer="popupNecInfo" data-focus="popupNecInfo" data-inner-slick-link="true">
+                <div class="layer-header">
+                    <h2>벽걸이 자재 알아보기</h2>
+                </div>
+                <div class="layer-content">
+				<span class="module">
+					<img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide_tooltip1.jpg" alt="">
+					<span class="module-tit">밀착 벽걸이</span>
+					<span class="module-desc">
+						벽체와 TV의 이격 거리를<br>최소화 한 벽걸이<br><span>&nbsp;</span>
+					</span>
+					<span class="module-code">
+						WMN-R30EB/KR<br>
+						WMN-M25EB/KR<br>
+						WMN-M15EB/KR
+					</span>
+				</span>
+                    <span class="module">
+					<img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide_tooltip2.jpg" alt="">
+					<span class="module-tit">스위블 벽걸이</span>
+					<span class="module-desc">
+						TV를 상하좌우 최대 20˚<br>움직일 수 있는 벽걸이<br><span>&nbsp;</span>
+					</span>
+					<span class="module-code">
+						WMN4277ST<br>
+						WMN4070SR<br>
+						WMN5870XT
+					</span>
+				</span>
+                    <span class="module">
+					<img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide_tooltip3.jpg" alt="">
+					<span class="module-tit">일반 벽걸이</span>
+					<span class="module-desc">
+						TV를 벽에<br>고정해놓은 벽걸이<br><span>&nbsp;</span>
+					</span>
+					<span class="module-code">
+						&nbsp;<br>WMN8000SXT<br>&nbsp;
+					</span>
+				</span>
+                    <span class="module">
+					<img class="js-img-src" src="//images.samsung.com/kdp/pcd/104473/tv_qled8k_popguide_tooltip4.jpg" alt="">
+					<span class="module-tit">미니슬림 벽걸이</span>
+					<span class="module-desc">
+						TV를 벽에 고정해놓은<br>작고 슬림한 벽걸이<br><span>* 65" 까지만 호환 가능</span>
+					</span>
+					<span class="module-code">
+						&nbsp;<br>WMN750M<br>&nbsp;
+					</span>
+				</span>
+                    <ul class="caution">
+                        <li>* TV 모델/사이즈 별 벽걸이 호환 모델이 상이합니다.</li>
+                        <li>자세한 내용은 사용자 매뉴얼 또는 삼성전자 서비스센터(1588-3366)에 문의하세요.</li>
+                    </ul>
+                </div>
+                <button type="button" class="pop-close" data-focus-next="popupNecInfo" data-omni="pcd:tv:tv:neo-qled-8k:all_about:installation:mo_see_all_wall_hanging:popup_close">팝업닫기</button>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script>
+    ;(function(){
+        $(function(){
+            modalDialog($('.re-tip .btn-open-modal'));
+        })
+        function modalDialog(modalOpen){
+                modalOpen.off('click').on('click', function(){
+                    let btn = $(this),
+                        openModal = $('#' + btn.attr('aria-controls')),
+                        modalDim = openModal.prev('.modal-dim'),
+                        modal = openModal.find('.modal-cont'),
+                        closeModal = openModal.find('.btn-modal-close');
+
+                    $('body').addClass('-has-modal');
+                    modalDim.addClass('-active');
+                    openModal.addClass('-active').attr('aria-hidden', false);
+
+                    // 팝업 닫을 때 유튜브 정지
+                    let youtubeId = openModal.find('.video').children().attr('id');
+                    function youtubeStop() {
+                        modal.find('iframe').removeAttr('src title')
+                    }
+
+                    // 포커스 이동 함수
+                    function modalFocus(modalId) {
+                        let dialog = $(modalId).find('[role=dialog]');
+                        dialog.focus();
+
+                        let focusble = modalId.find('button, a, [tabindex="0"]');
+                        let focusbleFirst = focusble.eq(0);
+                        let focusbleLast = focusble.eq(focusble.length - 1);
+
+                        focusbleFirst.on('keydown', function(e){
+                            let keycode = e.keyCode || e.which;
+                            let tab = (e.key === 'Tab' || e.keycode === 9);
+
+                            if(e.shiftKey && tab){
+                                // console.log(document.activeElement)
+                                if(document.activeElement === focusbleFirst[0]){
+                                    // console.log('쉬프트 탭 눌렀을 때 첫번째 포커서블한 요소에 포커스가 가면')
+                                    e.preventDefault();
+                                    focusbleLast.focus();
+                                }
+                            }
+                        })
+                        focusbleLast.on('keydown', function(e){
+                            let keycode = e.keyCode || e.which;
+                            let tab = (e.key === 'Tab' || e.keycode === 9);
+
+                            if(tab){
+                                // console.log(document.activeElement)
+                                if(document.activeElement === focusbleLast[0]){
+                                    // console.log('탭 눌렀을 때 마지막 포커서블한 요소에 포커스가 가면')
+                                    e.preventDefault();
+                                    focusbleFirst.focus();
+                                }
+                            }
+                        })
+                    }
+                    modalFocus(openModal);
+
+                    // 닫기 버튼 함수
+                    function modlaClose() {
+                        $('body').removeClass('-has-modal');
+                        modalDim.removeClass('-active');
+
+                        openModal.removeClass('-active').attr('aria-hidden', true);
+                        btn.focus(); // 팝업 닫으면 열었던 버튼으로 포커스 이동
+
+
+                        if(openModal.find('iframe').length){
+                            console.log('asdfasdf')
+                            youtubeStop(); // 팝업 닫을 때 유튜브 정지
+                        }
+
+                        if(openModal.find('.dryer-search').hasClass('-active') === false){
+                            $('body').addClass('-has-modal');
+                        }
+
+                        if($('#allaboutSetguide').hasClass('-active') === false){
+                            $(document).off('keyup.closeModal');
+                            $('body').removeClass('-has-modal');
+                        }
+                    }
+
+                    // 닫기 버튼 클릭 시 팝업창 닫기
+                    closeModal.off('click').on('click', modlaClose);
+
+                    // modalDim을 클릭해도 팝업창 닫기
+                    modalDim.off('click').on('click', function(e){
+                        if(e.target === e.currentTarget){
+                            modlaClose();
+                        }
+                    });
+
+                    // 팝업창이 열렸을 때 esc 키를 누르면 닫기
+                    $(document).on('keyup.closeModal', function(e){
+                        let keycode = e.keyCode || e.which;
+                        if(keycode === 27 && openModal.hasClass('-active')){
+                            modlaClose();
+                        }
+                    })
+
+                    // 유튜브
+                    let youtubeLink = btn.attr("data-youtube-id");
+                    let youtubeUrl = 'https://youtube.com/watch?v=' + youtubeLink;
+
+                    $.getJSON('https://noembed.com/embed',
+                        {format: 'json', url: youtubeUrl}, function(data){
+                            modal.find('iframe').attr({'src': 'https://www.youtube.com/embed/' + youtubeLink, 'title': data.title})
+                        }
+                    )
+                });
+            };
+    })();
+</script>
+
+<!-- 설치가이드 -->
+<script>
+    ;(function(){
+        // 2205 웹접근성
+        function initHander(){
+            a11yGuide(); // 팝업 안에 선택
+            slickSlider(); // slick
+        }
+        initHander();
+
+        function slickSlider(){
+            var slider = $('#slideQled8k0');
+            slider.slick({
+                autoplay: false,
+                infinite: true,
+                dots: true,
+                customPaging: function(slider, i) {
+                    // console.log($(slider.$slides[i]).html());
+                    return '<button class="tab">' + '<span class="blind">' + $(slider.$slides[i]).find('.tit').text() + '</span>' + '</button>';
+                },
+            })
+        }
+
+        function a11yGuide(){
+            var body = $('body'),
+                a11y = $('.a11y-guide'),
+                open = a11y.find('.btn-pop-guide'),
+                modalWrap = a11y.find('.modal-pop-guide');
+
+            var dim = '<div class="modal-dim -hidden" data-pop-dim="dim-guide"></div>',
+                focusStart = '<div role="none" data-focus="focusStart" tabindex="0"></div>',
+                focusEnd = '<div role="none" data-focus="focusEnd" tabindex="0"></div>';
+
+            // 접근성 초기 셋팅
+            function a11yAttr(){
+                a11y.append(dim);
+
+                open.each(function(idx, item){
+                    var data = $(item).attr('data-popup-target');
+                    $(item).attr({'role':'button', 'aria-controls': data});
+                });
+
+                modalWrap.each(function(idx, item){
+                    var pc = $(item).find('.pc-guide-view'),
+                        mo = $(item).find('.mo-guide-view');
+
+                    pc.before(focusStart).append(focusEnd);
+                    mo.before(focusStart).append(focusEnd);
+
+                    function modalCont(modalIn){
+                        var label = modalIn.attr('class'),
+                            title = modalIn.find('.layer-header h2');
+
+                        modalIn.attr({'role':'dialog', 'aria-modal':true, 'aria-labelledby':'label-' + label + idx, 'tabindex':0});
+                        title.attr('id', modalIn.attr('aria-labelledby'));
+                        modalIn.find('.nav-cont nav').attr('role', 'tablist');
+
+                        modalIn.find('.nav-cont nav > a').each(function(idx, item){
+                            var id = $(item).attr('href').substring(1);
+                            $(item).attr({'role':'tab', 'id':'id-' + id});
+
+                            if($(item).hasClass('active')){
+                                $(item).attr('aria-selected','true').siblings().attr('aria-selected','false');
+                            }
+                        });
+
+                        var tabpanel = modalIn.find('[role=tabpanel]');
+
+                        tabpanel.each(function(idx, item){
+                            $(item).attr('tabindex', 0);
+                            if($(item).find('nav').length){
+                                var nav = $(item).find('nav');
+                                nav.closest('[role=tabpanel]').attr('aria-labelledby', 'id-' + nav.attr('id'));
+                            }else{
+                                $(item).attr('aria-labelledby', 'id-' + $(item).attr('id'));
+                            }
+                        })
+
+
+                    }
+                    modalCont(pc);
+                    modalCont(mo);
+
+                });
+            }
+            a11yAttr();
+
+            // 팝업 열었을 때
+            open.on('click', function(){
+                var wind = $(window),
+                    $this = $(this),
+                    dim = a11y.find('[data-pop-dim=dim-guide]'),
+                    thisModal = a11y.find('#' + $this.attr('aria-controls')),
+                    pc = thisModal.find('.pc-guide-view'),
+                    mo = thisModal.find('.mo-guide-view'),
+                    close = a11y.find('.pc-guide-view .pop-close, .mo-guide-view .pop-close');
+
+                dim.removeClass('-hidden');
+                body.addClass('-has-modal');
+
+                // 슬릭 리사이즈
+                $('#slideQled8k0').trigger('resize');
+
+                // 포커스
+                if(wind.width() >= 800){
+                    modalFocus(thisModal, pc);
+                }else{
+                    modalFocus(thisModal, mo);
+                }
+                function modalFocus(modalId, modalCont){
+                    // 팝업 버튼 클릭하면 dialog에 포커스
+                    modalId.on('focus', function(){
+                        modalId.find(modalCont).focus();
+                    })
+
+                    // 닫기 버튼에서 tab을 눌렀을 때 role=dialog로 포커스 이동
+                    modalId.find(modalCont).find('[data-focus=focusEnd]').on('focus', function(){
+                        modalId.find(modalCont).focus();
+                    });
+
+                    // role=dialog에서 shift + tab을 눌렀을 때 닫기 버튼으로 포커스 이동
+                    modalId.find(modalCont).prev('[data-focus=focusStart]').on('focus', function(){
+                        modalId.find(modalCont).find('.pop-close').focus();
+                    });
+                }
+
+                // 닫기 버튼 클릭
+                close.on('click', function(){
+                    dim.addClass('-hidden');
+                    body.removeClass('-has-modal');
+                    if($this.attr('data-popup-target') === 'popupIsGuide'){
+                        $('#ptIsGuideOpen').focus();
+                    } else {
+                        $this.focus();
+                    }
+
+                    if(a11y.find('.popup-nec-info.active').length){
+                        a11y.find('.popup-nec-info.active .pop-close').trigger('click');
+                    }
+                });
+
+                // dim 클릭
+                dim.on('click', function(e){
+                    if(e.target === e.currentTarget){
+                        close.trigger('click');
+                    }
+                });
+
+                // esc 키 눌렀을 때
+                $(document).off('keyup').on('keyup.closeModal', function(e){
+                    var keycode = e.keycode || e.which;
+
+                    if(keycode == 27 && modalWrap.hasClass('active') && a11y.find('.popup-nec-info.active').length){
+                        a11y.find('.popup-nec-info.active .pop-close').trigger('click');
+                    }else if(keycode == 27 && modalWrap.hasClass('active') && a11y.find('.popup-nec-info.active').length === 0){
+                        close.trigger('click');
+                    }
+                });
+
+                // 팝업 안의 팝업
+                function modalInModal(){
+                    var modalInDim = '<div class="modal-in-dim"></div>',
+                        inFocusStart = '<div role="none" data-focus="inFocusStart" tabindex="0"></div>',
+                        inFocusEnd = '<div role="none" data-focus="inFocusEnd" tabindex="0"></div>',
+                        open = $('.pop-nec-info[data-popup-target]');
+
+                    open.off('click').on('click', function(){
+                        var open = $(this),
+                            target = $('#' + open.attr('data-popup-target')),
+                            dim = target.prev('.modal-in-dim'),
+                            close = target.find('.pop-close');
+
+                        target.before(inFocusStart, modalInDim).append(inFocusEnd);
+                        target.attr({'role':'dialog', 'aria-modal':true, 'aria-labelledby':'label-' + target.attr('id')});
+
+                        // 닫기 버튼 클릭
+                        close.on('click', function(){
+                            target.siblings().remove('.modal-in-dim, [data-focus=inFocusStart]');
+                            target.children().remove('[data-focus=inFocusEnd]');
+                            open.focus();
+                        });
+
+                        // dim 클릭
+                        $(document).on('click','.modal-in-dim',  function(e){
+                            if(e.target === e.currentTarget){
+                                close.trigger('click');
+                            }
+                        });
+
+                        // 닫기 버튼에서 tab을 눌렀을 때 role=dialog로 포커스 이동
+                        target.find('[data-focus=inFocusEnd]').on('focus', function(){
+                            target.focus();
+                        });
+
+                        // role=dialog에서 shift + tab을 눌렀을 때 닫기 버튼으로 포커스 이동
+                        target.prev().prev('[data-focus=inFocusStart]').on('focus', function(){
+                            close.focus();
+                        });
+                    })
+
+                }
+                modalInModal();
+
+                // 선택함 컨트롤
+                function selectControls(){
+                    var tab = thisModal.find('[role=tab]');
+
+                    tab.on('click', function(){
+                        var tab = $(this),
+                            panel = $(tab.attr('href'));
+
+                        tab.attr('aria-selected','true').siblings().attr('aria-selected','false');
+                        tab.addClass('active').siblings().removeClass('active');
+                        panel.show().siblings('.set-guide-contents').hide();
+
+                        if(panel.find('[role=tab].active').length){
+                            panel.find('[role=tab].active').trigger('click');
+                            panel.attr({'aria-hidden': false, 'tabindex': 0}).siblings('[role=tabpanel]').attr({'aria-hidden': true, 'tabindex': -1});
+                        }
+                    });
+
+                    if(thisModal.find('.pc-guide-view .nav-cont').find('[role=tabpanel]').length){
+                        var thisTab = $('#id-tvGuideLine0b'),
+                            thisPanel = $('#tvGuideLine0b'),
+                            navPanel = thisModal.find('.pc-guide-view .nav-cont').find('[role=tabpanel]');
+
+                        thisTab.on('click', function(){
+                            navPanel.css('visibility', 'hidden').attr({'aria-hidden': true, 'tabindex': -1});
+                            navPanel.siblings('h4, .pop-nec-info').css('visibility', 'hidden').attr('aria-hidden', true);
+                        });
+
+                        thisTab.siblings('[role=tab]').on('click', function(){
+                            navPanel.css('visibility', 'visible').attr({'aria-hidden': false, 'tabindex': 0});
+                            navPanel.siblings('h4, .pop-nec-info').css('visibility', 'visible').attr('aria-hidden', false);
+                        });
+                    }
+                }
+                selectControls();
+
+                // 모바일 컨트롤
+                function mobileTabControls(){
+                    var tab = mo.find('.nav-cont [role=tab]');
+                    tab.on('click', function(){
+                        var tab = $(this);
+                        $(tab.attr('href')).css({'display':'block', 'visibility':'visible', 'height':'auto'})
+                            .siblings('[role=tabpanel]').css({'overflow':'hidden', 'visibility':'hidden', 'height':'0', 'background-color':'#f7f7f7'})
+                    })
+                }
+                mobileTabControls();
+            });
+        }
+    })();
+</script>
+<!-- //end -->

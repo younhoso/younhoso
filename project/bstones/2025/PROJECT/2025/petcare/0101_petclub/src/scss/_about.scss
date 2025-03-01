@@ -1,0 +1,86 @@
+.petclub {
+  .sec_about {
+    @include vw-pc(margin-top, 100);
+
+    .pt_about {
+      @include vw-pc(padding, 76 0 80); background-color: #F7F7F7;
+      &--end {display: flex; align-items: center; justify-content: center; @include vw-pc(height, 527);}
+      &--txt {@include vw-pc(font-size, 42); font-weight: 700; @include vw-pc(line-height, 54); letter-spacing: -.025em; text-align: center;}
+      
+      &__tit {@include vw-pc(margin-bottom, 13); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); letter-spacing: -0.025em; font-weight: 700; text-align: center;}
+      &__desc {@include vw-pc(font-size, 22); @include vw-pc(line-height, 30); letter-spacing: -0.025em; text-align: center;}
+      &__list {
+        display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 24);
+        &--bnf {@include vw-pc(margin-bottom, 39);}
+      }
+      &__item {
+        display: flex; align-items: center; @include vw-pc(width, 620); @include vw-pc(height, 186); @include vw-pc(padding-left, 32); border: 1px solid #DDD; @include vw-pc(border-radius, 15); background-color: #fff; background-size: 100%;
+        &--bnfnew {background-image: url('../../is/images/pc_about_bnf01_bg_pc_v1.png');}
+        &--bnfyear {background-image: url('../../is/images/pc_about_bnf02_bg_pc_v1.png');}
+        &--step1 {background-image: url('../../is/images/pc_about_join01_bg_pc_v1.png');}
+        &--step2 {background-image: url('../../is/images/pc_about_join02_bg_pc_v1.png');}
+        &--join {flex-direction: column; align-items: baseline; justify-content: center;}
+      }
+      &__smtit {
+        display: block; @include vw-pc(margin-bottom, 18); @include vw-pc(font-size, 18); @include vw-pc(line-height, 24); letter-spacing: -0.025em;
+        &--join {@include vw-pc(margin-bottom, 9);}
+      }
+      &__disc {@include vw-pc(padding-left, 10); @include vw-pc(text-indent, -10); @include vw-pc(font-size, 12); @include vw-pc(line-height, 18); color: #757575; letter-spacing: -0.025em;}
+      &__tag {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(height, 20); @include vw-pc(padding, 0 8); @include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 12); color: #fff; background-color: #172C9A; @include vw-pc(border-radius, 10);}
+      &__noti {text-align: center;}
+      &__btn {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(height, 42); @include vw-pc(padding, 0 30); @include vw-pc(font-size, 16); color: #fff; font-weight: 700; letter-spacing: -0.025em; @include vw-pc(border-radius, 100);}
+    }
+
+    .pt_wrap {
+      &--bnf {@include vw-pc(padding, 55 0 50);}
+      &--join {@include vw-pc(padding-top, 46);}
+
+      .pt_about__tit {@include vw-pc(margin-bottom, 39);}
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .petclub {
+    .sec_about {
+      @include vw-mo(margin-top, 76);
+
+      .pt_about {
+        @include vw-mo(padding, 79 0 100);
+        &--end {@include vw-mo(height, 454);}
+        &--txt {@include vw-mo(font-size, 38); @include vw-mo(line-height, 47);}
+        
+        &__tit {@include vw-mo(margin-bottom, 13); @include vw-mo(font-size, 38); @include vw-mo(line-height, 50);}
+        &__desc {@include vw-mo(font-size, 24); @include vw-mo(line-height, 34); letter-spacing: -0.05em;}
+        &__list {
+          flex-direction: column; @include vw-mo(gap, 24);
+          &--bnf {@include vw-mo(margin-bottom, 57);}
+        }
+        &__item {
+          @include vw-mo(width, 656); @include vw-mo(height, 240); @include vw-mo(padding, 0 0 0 39); border: 0; @include vw-mo(border-radius, 16);
+          &--bnfnew {background-image: url('../../is/images/pc_about_bnf01_bg_mo_v1.png');}
+          &--bnfyear {background-image: url('../../is/images/pc_about_bnf02_bg_mo_v1.png');}
+          &--step1 {background-image: url('../../is/images/pc_about_join01_bg_mo_v1.png'); @include vw-mo(height, 280);}
+          &--step2 {background-image: url('../../is/images/pc_about_join02_bg_mo_v1.png'); @include vw-mo(height, 280);}
+          &--join {display: block; @include vw-mo(padding, 46 0 0 39);}
+        }
+        &__smtit {
+          @include vw-mo(margin-bottom, 15); @include vw-mo(font-size, 28); @include vw-mo(line-height, 38); letter-spacing: -0.05em;
+          &--join {@include vw-mo(margin-bottom, 12);}
+        }
+        &__disc {@include vw-mo(padding-left, 13); @include vw-mo(text-indent, -13); @include vw-mo(font-size, 16); @include vw-mo(line-height, 21); letter-spacing: -0.05em;}
+        &__tag {@include vw-mo(height, 25); @include vw-mo(padding, 0 12); @include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 18); @include vw-mo(border-radius, 16);}
+        &__btn {@include vw-mo(height, 60); @include vw-mo(padding, 0 30); @include vw-mo(font-size, 24); @include vw-mo(border-radius, 60);}
+      }
+
+      .pt_wrap {
+        &--bnf {@include vw-mo(padding, 55 0 40);}
+        &--join {@include vw-mo(padding-top, 46);}
+
+        .pt_about__tit {@include vw-mo(margin-bottom, 39);}
+      }
+    }
+  }
+}

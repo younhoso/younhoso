@@ -1,0 +1,64 @@
+{ 
+   "modelSlideCom": {
+      "gallery": [
+         {"imgPc":"wac_model_gallery01_pc", "imgMo":"wac_model_gallery01_mo", "alt":"신제품 무풍갤러리 제품", 
+         "blind":"BESPOKE AI 무풍 갤러리 AF18DX839··· 3D 와이드 무풍 AI 에너지 절약 Bixby Care"},
+         {"imgPc":"wac_model_gallery02_pc", "imgMo":"wac_model_gallery02_mo", "alt":"우측에는 신제품 무풍갤러리의 클로즈업 샷, 좌측에는 무풍홀을 클로즈업한 이미지가 배치됨", 
+         "blind":"직바람/소음 걱정 없는 3D 와이드 무풍"},
+         {"imgPc":"wac_model_gallery03_pc", "imgMo":"wac_model_gallery03_mo", "alt":"배경 좌측에는 신제품 무풍갤러리 스탠드형이 배치되어 있고, 배경 우측에는 식탁과 의자가 배치되어 있으며 그 위호 스마트폰 화면을 통해 에너지 사용량을 확인하는 이미지가 올려져 있음", 
+         "blind":"상황에 맞게 전기료 관리해주는 AI 에너지 절약"},
+         {"imgPc":"wac_model_gallery04_pc", "imgMo":"wac_model_gallery04_mo", "alt":"실내 거실 배경이며 좌측에는 벽걸이 TV와 TV장, 바닥에는 제트봇이 돌아다니고 있으며 TV를 마주보고 소파와 협탁이 배치되어 있고, 협탁위에는 화분이 놓여 있고, 뒤쪽 테라스에는 1인용 소파가 배치되어 있고 우측에는 제품 클로즈업 샷이 배치되어 있음", 
+         "blind":"움직이지 않고 편하게, AI 집사가 알아서 관리하는 Bixby Care"},
+         {"imgPc":"wac_model_gallery05_pc", "imgMo":"wac_model_gallery05_mo", "alt":"실내 인테리어컷으로 좌측애는 무풍갤러리 스탠드 제품이, 우측 하단에는 회색 소파가 배치되어 있으며, 우측에는 냉방운전 시뮬레이터의 On 상태와 Off 상태를 비교하는 실험 이미지가 배치되어 있음", 
+         "blind":"사각지대 걱정 없이 빠르게 하이패스 서큘 냉방"}
+      ],
+      "classic": [
+         {"imgPc":"wac_model_classic01_pc", "imgMo":"wac_model_classic01_mo", "alt":"무풍클래식 제품", 
+         "blind":"무풍에어컨 클래식 AF18B9937···  |  AF17C7932··· 직바람 없는 무풍냉방 하이패스 회오리 냉방 이지케어 5단계"},
+         {"imgPc":"wac_model_classic02_pc", "imgMo":"wac_model_classic02_mo", "alt":"실내 인테리어 컷이며 좌측에는 무풍클래식 제품, 우측에는 연한 청록색의 소파가 놓여 있으며, 중앙 하단에는 화분이 올려져있는 협탁이 배치되어 있고 무풍클래식 제품 좌측으로는 BESPOKE 디자인의 다양한 색상이 예시로 배치되어 있음", 
+         "blind":"직바람 없는 무풍으로 소비전력 최대 90% 절약하는 무풍냉방"},
+         {"imgPc":"wac_model_classic03_pc", "imgMo":"wac_model_classic03_mo", "alt":"실내 인테리어 컷으로 중앙에는 에어컨 제품과 제품에서 바람이 나오는 모습을 일러스트 요소를 더해 형상화 했으며, 중앙 하단에는 회색 소파와 협탁이 배치되어 있고 이미지 좌측에는 하이패스 방식을 소개하는 이미지가 배치되어 있음", 
+         "blind":"하이패스 방식으로 넓은 공간도 빠르게 회오리 냉방"},
+         {"imgPc":"wac_model_classic04_pc", "imgMo":"wac_model_classic04_mo", "alt":"실내 인테리어 컷으로 좌측에는 청색 벽지와 흰색 1인용 소파, 작은 협탁이, 우측에는 흰색 벽지에 무풍클래식 제품이 배치되어 있고 중앙에는 스피드 냉방 대비 최대 85% 소비전력을 절약한다는 안내 문구가 배치 ", 
+         "blind":"99.9% UV LED 팬 살균으로 더 편리해진 이지케어 5단계"}
+      ],
+      "q9000": [
+         {"imgPc":"wac_model_q900001_pc", "imgMo":"wac_model_q900001_mo", "alt":"Q9000 제품", 
+         "blind":"Q9000 AF19B6474···  |  AF17B6474··· 하이패스 회오리 냉방 바람문 컨트롤 절전 이지케어 4단계"},
+         {"imgPc":"wac_model_q900002_pc", "imgMo":"wac_model_q900002_mo", "alt":"실내 인테리어 컷이며 좌측에는 Q9000 제품, 우측에는 회색의 소파가 놓여 있으며, 중앙 하단에는 병이 올려져있는 협탁이 배치되어 있고 Q9000 제품 좌측으로는 BESPOKE 디자인의 다양한 색상이 예시로 배치되어 있음", 
+         "blind":"우리 집에 맞게 디자인하는 BESPOKE 디자인"},
+         {"imgPc":"wac_model_q900003_pc", "imgMo":"wac_model_q900003_mo", "alt":"실내 인테리어 컷으로 중앙에는 에어컨 제품과 제품에서 바람이 나오는 모습을 일러스트 요소를 더해 형상화 했으며, 중앙 하단에는 회색 소파와 협탁이 배치되어 있고 이미지 좌측에는 하이패스 방식을 소개하는 이미지가 배치되어 있음", 
+         "blind":"하이패스 방식으로 넓은 공간도 빠르게 회오리 냉방"},
+         {"imgPc":"wac_model_q900004_pc", "imgMo":"wac_model_q900004_mo", "alt":"중앙에 2대의 Q9000 제품이 배치되어 있으며 좌측 제품은 소비전력 100% 상태, 우측 제품은 바람문 컨트롤 절전으로 최대 60% 에너지가 절감된 모습을 나타냄", 
+         "blind":"최대 60%까지 소비 전력 절약 바람문 컨트롤 절전"},
+         {"imgPc":"wac_model_q900005_pc", "imgMo":"wac_model_q900005_mo", "alt":"실내 인테리어 컷이며 우측에는 흰색 커튼과 Q9000 제품이 배치되어 있고, 좌측 상단에는 자동맞춤, 시간맞춤, 저소음맞춤 기능에 대한 설명, 좌측 하단에는 습도에 따라 내부를 건조하는 자동 건조 기능을 상세히 설명",  
+         "blind":"관리가 더 편해진 이지케어 4단계"}
+      ]
+   },
+   "modelSlideSys": {
+      "system": [
+         {"imgPc":"wac_model_system01_pc", "imgMo":"wac_model_system01_mo", "alt":"시스템에어컨 평면도", 
+         "blind":"BESPOKE 무풍 시스템에어컨 AJ·········SSY 직바람 없는 무풍냉방 최대 61% 절전냉방 무풍청정 살균필터"},
+         {"imgPc":"wac_model_system02_pc", "imgMo":"wac_model_system02_mo", "alt":"천장에 배치된 시스템에어컨과 해당 제품의 마이크로 홀을 통한 미세한 냉기로 무풍냉방이 완성된다는 설명, 우측 하단에는 창문이 보이는 이미지", 
+         "blind":"10,000여개의 마이크로 홀로 직바람 없이 시원한 무풍냉방"},
+         {"imgPc":"wac_model_system03_pc", "imgMo":"wac_model_system03_mo", "alt":"어두운 배경에 시스템 에어컨이 배치되어 있으며 좌측은 일반 시스템에어컨, 우측은 삼성 무풍 시스템에어컨이 배치되어 있고, 일반 시스템에어컨 대비 당사 제품의 에너지 절감을 나타내는 아이콘이 하단에 삽입된", 
+         "blind":"무풍운전 시 일반운전 대비 최대 61%까지 에너지 절감"},
+         {"imgPc":"wac_model_system04_pc", "imgMo":"wac_model_system04_mo", "alt":"통창 구조의 거실 배경, 창밖에는 잔디 밭이 보이며, 우측에는 다인용 소파와 조명, 좌측에는 식탁, 바닥에는 러그가 배치되어 있고 좌측 천장에 배치된 시스템 에어컨에서 냉기가 뿜어져 나오는", 
+         "blind":"냉기를 더 멀리 더 빠르게 균일냉방"},
+         {"imgPc":"wac_model_system05_pc", "imgMo":"wac_model_system05_mo", "alt":"하얀 실내에 세로형 창문이 2개 배치되어 있으며, 우측 천장의 시스템에어컨에서 냉기가 뿜어져 나오고 좌측 하단에는 당사 제품의 프리필터, PM 1.0필터, 탈취필터를 나타내는 이미지로 삼성 무풍 시스템에어컨의 살균필터 기능을 소개하는", 
+         "blind":"살균필터로 사계절 내내 무풍청정 깨끗한 공기"}
+      ],
+      "infinite": [
+         {"imgPc":"wac_model_infinite01_pc", "imgMo":"wac_model_infinite01_mo", "alt":"시스템에어컨 Infinite Line 평면도", 
+         "blind":"BESPOKE 무풍 시스템에어컨 Infinite Line AN·········SSY 인피니트 디자인 엣지 라이팅 와이드 무풍냉방"},
+         {"imgPc":"wac_model_infinite02_pc", "imgMo":"wac_model_infinite02_mo", "alt":"어두운 배경에서 설치되어 있는 시스템 에어컨에서 엣지 라이팅 기능으로 조명이 비추는 이미지", 
+         "blind":"공간의 무드를 만들어내는 엣지 라이팅"},
+         {"imgPc":"wac_model_infinite03_pc", "imgMo":"wac_model_infinite03_mo", "alt":"검정 배경에 우측에는 시스템에어컨 제품이 있는", 
+         "blind":"고효율 에너지 맞춤절전 와이드 무풍"},
+         {"imgPc":"wac_model_infinite04_pc", "imgMo":"wac_model_infinite04_mo", "alt":"좌측 이미지에는 실내 공간에서 시스템 에어컨을 통해 냉방이 되고 있음을 보여주는 인테리어 컷이 있고, 바람과 함께 나뭇잎 흩날리는 모습을 통해 절약 냉방을 나타냄", 
+         "blind":"상황에 맞춰 에너지를 절감하는 AI 절약모드"},
+         {"imgPc":"wac_model_infinite05_pc", "imgMo":"wac_model_infinite05_mo", "alt":"무풍 시스템에어컨 Infinte Line의 필터와 내부 제품을 배치했으며, 우측에는 리모콘이 함께 배치되어 있어 리모콘의 특정 버튼 클릭시 실행되는 청정케어 8단계에 대한 상세한 설명을 나타내는", 
+         "blind":"알아서 a맞춰주는 BESPOKE Infinite AI 맞춤쾌적"}
+      ]
+   }
+}

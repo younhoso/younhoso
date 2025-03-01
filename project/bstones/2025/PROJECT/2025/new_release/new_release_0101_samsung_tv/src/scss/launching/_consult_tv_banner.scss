@@ -1,0 +1,32 @@
+.samsung_tv_launching {
+    .pt_consult {
+        display: flex; align-items: center; justify-content: center; @include vw-pc(height, 100); @include vw-pc(margin-bottom, 20); @include vw-pc(border-radius, 10); background-color: #F2F9FF;        
+        
+        &-img {@include vw-pc(width, 55); @include vw-pc(margin-right, 16);}
+        &-text {
+            @include vw-pc(margin-right, 17);
+
+            &__main {@include vw-pc(margin-bottom, 3); @include vw-pc(font-size, 20); @include vw-pc(letter-spacing, -.5); @include vw-pc(line-height, 28); font-weight: 700;}
+            &__blue {color: #1E81F8;}
+            &__disc {@include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -1); @include vw-pc(line-height, 18); color: #666;}
+        }
+        &-btn {@include vw-pc(width, 102); @include vw-pc(height, 29); @include vw-pc(border-radius, 100); @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -.5);}
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+        .pt_consult {
+            @include vw-mo(height, 136); @include vw-mo(margin-bottom, 56); @include vw-mo(border-radius, 20); 
+            
+            &-img {@include vw-mo(width, 70); @include vw-mo(margin-right, 18);}
+            &-text {
+                @include vw-mo(margin-right, 46);
+
+                &__main {@include vw-mo(margin-bottom, 5); @include vw-mo(font-size, 32); @include vw-mo(letter-spacing, -1); @include vw-mo(line-height, 38);}
+                &__disc {@include vw-mo(font-size, 20); @include vw-mo(letter-spacing, -1); @include vw-mo(line-height, 28);}
+            }
+            &-btn {@include vw-mo(width, 162); @include vw-mo(height, 49); @include vw-mo(border-radius, 100); @include vw-mo(font-size, 22); @include vw-mo(letter-spacing, -1);}
+        }
+    }
+}

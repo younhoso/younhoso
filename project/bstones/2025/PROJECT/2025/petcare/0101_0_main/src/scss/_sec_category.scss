@@ -1,0 +1,32 @@
+
+/* sec_category */
+
+.sec_category {@include vw-pc(padding,60 0 56 0);
+    .pt_cate{ margin: 0 auto; @include vw-pc(width,1154);
+        &__list{display: flex; @include vw-pc(gap,32);}
+        &__img{@include vw-pc(margin-bottom,12); @include vw-pc(width,100);}
+        &__link {display: block;}
+        &__tit{@include vw-pc(font-size,20); @include vw-pc(line-height,26); letter-spacing: -0.05em; text-align: center;}
+    }
+}
+
+// 폴드뷰
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+    .sec_category {
+        .pt_cate{
+            &__tit{@include vw-pc(font-size,22); @include vw-pc(line-height,38);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .sec_category {@include vw-mo(padding,80 40 74);
+        .pt_cate{@include vw-mo(width,495);
+            &__list{justify-content: center; flex-wrap: wrap; @include vw-mo(gap,39 60);}
+            &__img{@include vw-mo(margin-bottom,13); @include vw-mo(width,125);}
+            &__tit{@include vw-mo(font-size,24); @include vw-mo(line-height,24);}
+        }
+    }
+
+}

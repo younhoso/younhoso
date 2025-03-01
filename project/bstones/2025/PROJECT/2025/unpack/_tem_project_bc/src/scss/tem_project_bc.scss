@@ -1,0 +1,15 @@
+@import '../../../../../../scss_global/scss-common2';
+
+.sec_project_wrap {
+    .sec_kv {
+        h1 {}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec_project_wrap {
+        .sec_kv {
+            h1 {}
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'video';
+@import 'notice';
+
+.morgan_test {
+    .sec_kv {
+        h1 {}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .morgan_test {
+        .sec_kv {
+            h1 {}
+        }
+    }
+}

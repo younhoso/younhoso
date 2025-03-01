@@ -1,0 +1,75 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+.galaxy_book4_edge_alarm {
+    .sec_banner {
+        @include vw-mo(padding, 0 0 119);
+
+        .pt_banner {
+            @include vw-mo(width, 672); margin: 0 auto;
+
+            .pt_banner__cont {
+                position: relative; @include vw-mo(margin-bottom, 28); 
+
+                .pt_banner__img {position: relative; top: 0; left: 0; @include vw-mo(width, 672); @include vw-mo(height, 878); margin: 0 auto;}
+                .pt_banner__logo {z-index: 1; position: absolute; @include vw-mo(top, 70); left: 50%; transform: translate(-50%); @include vw-mo(width, 477); @include vw-mo(height, 80); margin: 0 auto;}
+                .pt_banner__txt {
+                    z-index: 1; position: absolute; @include vw-mo(top, 572); left: 50%; transform: translate(-50%); width: 100%; text-align: center;
+
+                    &--title {@include vw-mo(margin-bottom, 19); @include vw-mo(font-size, 28); @include vw-mo(line-height, 28); font-weight: 700;}
+                    &--sub {@include vw-mo(font-size, 28); @include vw-mo(line-height, 40); letter-spacing: -0.025em;}
+                }
+            }
+
+            .pt_banner__desc {color: #666; @include vw-mo(font-size, 22); @include vw-mo(line-height, 32); letter-spacing: -0.025em; text-align: center;}
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width:769px) {
+    .galaxy_book4_edge_alarm {
+        .sec_banner {
+            @include vw-pc(padding, 0 0 100);
+    
+            .pt_banner {
+                @include vw-pc(width, 916); margin: 0 auto;
+    
+                .pt_banner__cont {
+                    position: relative; @include vw-pc(margin-bottom, 19); 
+    
+                    .pt_banner__img {position: relative; top: 0; left: 0; @include vw-pc(width, 916); @include vw-pc(height, 250); margin: 0 auto;}
+                    .pt_banner__logo {z-index: 1; position: absolute; @include vw-pc(top, 22); @include vw-pc(left, 583); transform: none; @include vw-pc(width, 248); @include vw-pc(height, 50); margin: 0;}
+                    .pt_banner__txt {
+                        z-index: 1; position: absolute; @include vw-pc(top, 56); @include vw-pc(left, 80); transform: none; width: auto; text-align: left;
+    
+                        &--title {@include vw-pc(margin-bottom, 19); @include vw-pc(font-size, 20); @include vw-pc(line-height, 20); font-weight: 700;}
+                        &--sub {@include vw-pc(font-size, 18); @include vw-pc(line-height, 26); letter-spacing: -0.025em;}
+                    }
+                }
+    
+                .pt_banner__desc {color: #8D8D8D; @include vw-pc(font-size, 14); @include vw-pc(line-height, 20); letter-spacing: -0.025em; text-align: center;}
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

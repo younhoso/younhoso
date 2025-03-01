@@ -1,0 +1,34 @@
+.benefitzone_card {
+    .sec_kv {
+        .pt_title-box {
+            position: absolute; @include vw-pc(top, 47); @include vw-pc(left, 143); text-align: left;
+    
+            &__title {@include vw-pc(margin-bottom, 14); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); font-weight: 700; letter-spacing: -.05em;}
+            &__sub {@include vw-pc(margin-bottom, 14); @include vw-pc(font-size, 20); @include vw-pc(line-height, 26); letter-spacing: -.05em;}
+            &__date {
+                @include vw-pc(margin-bottom, 19); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 700;
+    
+                .kr {font-weight: 700;}
+            }
+    
+            &__btn {@include vw-pc(font-size, 17); @include vw-pc(line-height, 19); letter-spacing: -.05em;}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone_card {
+        .sec_kv {
+            .pt_title-box {
+                @include vw-mo(top, 57); @include vw-mo(left, 24);
+    
+                &__title {@include vw-mo(margin-bottom, 5); @include vw-mo(font-size, 32); @include vw-mo(line-height, 43);}
+                &__sub {@include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); letter-spacing: -.045em;}
+                &__date {@include vw-mo(margin-bottom, 17); @include vw-mo(font-size, 24); @include vw-mo(line-height, 29);}
+                
+                &__btn {@include vw-mo(font-size, 26); @include vw-mo(line-height, 32);}
+            }
+    
+        }
+    }
+}

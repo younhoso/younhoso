@@ -1,0 +1,52 @@
+.walk_challenge {
+    .sec_benefit {
+        @include vw-pc(padding-top, 76);
+        .pt_title {
+            position: relative; @include vw-pc(margin, 0 auto 74); @include vw-pc(width, 184); @include vw-pc(font-size, 42); @include vw-pc(line-height, 46); letter-spacing: -.055em; font-weight:700; text-align: center;
+            &::after {content:''; position: absolute; @include vw-pc(bottom, -4); @include vw-pc(left, 0); display: flex; width: 100%; @include vw-pc(height, 27); background: #2189FF; z-index: -1; opacity: .4;}
+        }
+
+        .pt_benefit {
+            position: relative; background: #F5F7FE; @include vw-pc(border-radius, 16); @include vw-pc(margin-bottom, 60); @include vw-pc(padding, 76 0); text-align: center;
+            &__title {display: inline-block; @include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 42); @include vw-pc(line-height, 40); font-weight: 700;}
+            &__cont {@include vw-pc(font-size, 24); @include vw-pc(line-height, 34); @include vw-pc(margin-bottom, 56);}
+            &__coupon-box {position: relative; @include vw-pc(margin, 0 auto 54); @include vw-pc(width, 620);}
+            &__coupon-txt {position: absolute; @include vw-pc(top, 26); @include vw-pc(left, 30); @include vw-pc(font-size, 36); @include vw-pc(line-height, 50); letter-spacing: -.025em; font-weight: 700; text-align: left;}
+            &__desc {@include vw-pc(font-size, 22); @include vw-pc(line-height, 34);}
+        }
+
+        .pt_btn-box {
+            text-align: center;
+            .btn_samsung-fitness {display: block; @include vw-pc(width, 172); @include vw-pc(height, 42); @include vw-pc(font-size, 16); @include vw-pc(line-height, 42); @include vw-pc(border-radius, 21); @include vw-pc(margin, 0 auto 61);}
+            .btn_share {display: block; @include vw-pc(width, 120); @include vw-pc(font-size, 14); @include vw-pc(line-height, 19); @include vw-pc(margin, 0 auto 71);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .walk_challenge {
+        .sec_benefit {
+            .pt_title {
+                @include vw-mo(margin, 0 auto 60); @include vw-mo(width, 154); @include vw-mo(font-size, 38); @include vw-mo(line-height, 46);
+                &::after {@include vw-mo(bottom, -4); @include vw-mo(left, 0); @include vw-mo(height, 27);}
+            }
+            
+            .pt_benefit {
+                @include vw-mo(border-radius, 16); @include vw-mo(margin, 0 auto 60); @include vw-mo(padding, 36 0 49); @include vw-mo(width, 580);
+                &__title {@include vw-mo(margin-bottom, 11); @include vw-mo(font-size, 38); @include vw-mo(line-height, 40);}
+                &__cont {@include vw-mo(font-size, 28); @include vw-mo(line-height, 40); @include vw-mo(margin-bottom, 30);}
+                &__coupon-box {@include vw-mo(margin, 0 auto 28); @include vw-mo(width, 500);}
+                &__coupon-txt {@include vw-mo(top, 37); @include vw-mo(left, 32); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35);}
+                &__desc {@include vw-mo(font-size, 22); @include vw-mo(line-height, 34);}
+            }    
+            
+            .pt_btn-box {
+                text-align: center;
+                .btn_samsung-fitness {@include vw-mo(width, 268); @include vw-mo(height, 60); @include vw-mo(font-size, 24); @include vw-mo(line-height, 60); @include vw-mo(border-radius, 30); @include vw-mo(margin-bottom, 37);}
+            }
+        }
+
+        
+        
+    }
+}

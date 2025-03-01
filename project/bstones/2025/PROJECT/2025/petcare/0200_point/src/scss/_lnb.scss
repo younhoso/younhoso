@@ -1,0 +1,48 @@
+.petcare_point {
+    .sec_lnb {overflow: hidden;
+        .lnb_wrapper{display: flex; @include vw-pc(height, 60);}
+        .inner_1440 {display: flex; justify-content: space-between; align-items: center; @include vw-pc(padding, 0 24);}
+        .lnb_wrapper.fixed_start {z-index: 11; position: fixed; top: 0;max-width: 1920px; width: 100%; background-color: #fff; @include vw-pc(border-bottom, 1 solid #ddd);}
+        .pt_lnb-title {@include vw-pc(font-size, 17); font-weight: 700;}
+        .pt_lnb-swiper {margin-right: 0;}
+        .pt_lnb-box {
+            &__list {
+                width: auto; @include vw-pc(padding, 2);
+                a {display: flex; align-items: center; justify-content: center; @include vw-pc(height, 56); @include vw-pc(padding, 0 10); @include vw-pc(font-size, 15); @include vw-pc(letter-spacing, -.5);}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .petcare_point {
+        .sec_lnb {
+            .lnb_wrapper{display: flex; @include vw-mo(height, 102);}
+            .inner_1440 {flex-direction: column; align-items: flex-start; }
+            .lnb_wrapper.fixed_start {width: 100%; @include vw-mo(border-bottom, 1 solid #ddd);}
+            .pt_lnb-title {display: flex; align-items: center; justify-content: flex-start; @include vw-mo(padding-left, 28); @include vw-mo(height, 102); @include vw-mo(font-size, 34);}
+            .pt_lnb-wrap {position: relative; width: 100%;}
+            .pt_lnb-swiper {@include vw-mo(padding, 0 70); @include vw-mo(width,720);}
+            .pt_lnb-box { display: flex; justify-content: space-between;
+                &__list {
+                    width: auto;
+    
+                    &:not(:last-child) {@include vw-mo(margin-right, 50);}
+                    a {display: flex; align-items: center; justify-content: center; @include vw-mo(height, 100); @include vw-mo(padding, 0); @include vw-mo(font-size, 30); @include vw-mo(letter-spacing, -.5);}
+                }
+            }
+
+            // navigation
+            .pt_lnb__navi {position: absolute; top: 0; @include vw-mo(left, -60); @include vw-mo(width, 720);}
+            .swiper-button-next {
+                &::after {display: none;}
+                @include vw-mo(right, -50); top: 0; bottom: 0; @include vw-mo(width, 100); @include vw-mo(height, 100); margin-top: 0; background: url('../../is/images/hc_nav_next_arrow_mo.png') center / contain;
+            }
+            .swiper-button-prev {
+                &::after {display: none;}
+                @include vw-mo(left, 50); top: 0; bottom: 0; @include vw-mo(width, 100); @include vw-mo(height, 100); margin-top: 0; background: url('../../is/images/hc_nav_prev_arrow_mo.png') center / contain;
+            }
+            .swiper-button-disabled {opacity: 0; visibility: hidden;}
+        }
+    }
+}

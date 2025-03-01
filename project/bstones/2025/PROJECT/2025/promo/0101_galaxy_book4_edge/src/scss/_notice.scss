@@ -1,0 +1,72 @@
+
+/* notice */
+
+.sec_notice {
+    @include vw-pc(padding, 45 0); @include vw-pc(font-size, 14); background: #171717;
+
+    .sec_area { @include vw-pc(width, 1320); margin: 0 auto; text-align: left;}
+    .notice_area { position: relative; @include vw-pc(padding, 40 0); border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        &:last-child { border-bottom:none; }
+        .notice_tit { display: block; position: absolute; @include vw-pc(top, 45); left: 0; @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); font-weight: 700; color: #fff; }
+        .notice_sub_tit { @include vw-pc(margin, 20 0); @include vw-pc(padding-left, 180); color: #A3A3A3;}
+        .notice_sub_tit:nth-of-type(2) { @include vw-pc(margin,0 0 20); }
+        .notice_list { @include vw-pc(padding-left, 180); color: #A3A3A3;
+            li {  position:relative; @include vw-pc(padding, 0 0 10 15); @include vw-pc(font-size, 14); @include vw-pc(line-height, 28);
+                &:last-child { padding-bottom: 0; }
+                a {color: #A3A3A3;}
+
+                .btn_detail {@include vw-pc(border-bottom, 1 solid #A3A3A3); @include vw-pc(margin-left,14); @include vw-pc(font-size,14); @include vw-pc(line-height,16); font-weight:700; letter-spacing: -0.05em;}
+                .pt_noti_link {@include vw-pc(border-bottom, 1 solid #A3A3A3); @include vw-pc(margin-left,0); @include vw-pc(font-size,14); @include vw-pc(line-height,16); font-weight:700; letter-spacing: -0.05em;}
+
+            }
+            &.list_1depth + .list_1depth {@include vw-pc(margin-top, 59);}
+            &.list_1depth li:before { content: ''; position: absolute; left: 0; @include vw-pc(top, 12); @include vw-pc(width, 4);  @include vw-pc(height, 4);  border-radius: 50%; background-color:#888; }
+            &.list_1depth li.tit_none {padding-left: 0; @include vw-pc(font-size, 14); @include vw-pc(line-height, 14); font-weight: 700;}
+            &.list_1depth li.tit_none + .tit_none {@include vw-pc(margin-top, 48);}
+            &.list_1depth li.tit_none:before { display: none;}
+            &.list_1depth li.tit_num:before { display: none;}
+            .list_2depth { @include vw-pc(padding-top, 10); @include vw-pc(padding-left, 0);
+                li {
+                    @include vw-pc(padding-left, 8);
+                    @include vw-pc(text-indent, -8);
+                    &:last-child { padding-bottom: 0; }
+                    &:before { display: none; }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .sec_notice { @include vw-mo(padding, 45 0);  @include vw-mo(font-size, 24);
+        .sec_area { @include vw-mo(width, 660);  }
+        .notice_area { @include vw-mo(padding, 45 0);
+            .notice_tit { position: static; @include vw-mo(top, 50); left: 0;  @include vw-mo(padding-bottom, 20); @include vw-mo(font-size, 22); @include vw-mo(line-height, 26); color:#fff; }
+            .notice_sub_tit { @include vw-mo(margin, 20 0); @include vw-mo(padding-left, 0); color: #A3A3A3;}
+            .notice_sub_tit:nth-of-type(2) { @include vw-mo(margin,0 0 20); }
+            .notice_list { @include vw-mo(padding-left, 0);
+                li { @include vw-mo(padding, 0 0 10 10); @include vw-mo(font-size, 22); @include vw-mo(line-height, 34);
+                    ol,
+                    ul { @include vw-mo(padding-top, 10); }
+
+                    .btn_detail {@include vw-mo(border-bottom, 1 solid #A3A3A3); @include vw-mo(margin-left,0); @include vw-mo(font-size, 22); @include vw-mo(line-height, 26); letter-spacing: -0.05em;}
+                    .pt_noti_link {@include vw-mo(border-bottom, 1 solid #A3A3A3); @include vw-mo(margin-left,0); @include vw-mo(font-size, 22); @include vw-mo(line-height, 26); letter-spacing: -0.05em;}
+                }
+                &.list_1depth + .list_1depth {@include vw-mo(margin-top, 40);}
+                &.list_1depth li:before { left: 0; @include vw-mo(top, 12); @include vw-mo(width, 4); @include vw-mo(height, 4); }
+                &.list_1depth li.tit_none {@include vw-mo(padding, 0 0 10 10); @include vw-mo(font-size, 22); @include vw-mo(line-height, 26); font-weight: 700;}
+                &.list_1depth li.tit_none + .tit_none {@include vw-mo(margin-top, 48);}
+                &.list_1depth li.tit_none:before { display: none;}
+                &.list_1depth li.tit_num:before { display: none;}
+                .list_2depth {
+                    @include vw-mo(padding-left, 4); @include vw-mo(padding-top, 10);
+                    li {@include vw-mo(padding-left, 12); @include vw-mo(text-indent, -10)}
+                }
+
+
+            }
+        }
+    }
+
+}

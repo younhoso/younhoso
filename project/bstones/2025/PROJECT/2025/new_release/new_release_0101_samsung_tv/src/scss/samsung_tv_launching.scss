@@ -1,0 +1,262 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'monospace';
+@import './launching/sec_kv';
+@import './launching/sec_nav';
+@import './launching/ai_care_banner';
+@import './launching/sec_sticky';
+@import './launching/sec_buying';
+@import './launching/sec_buying_subscribe';
+@import './launching/consult_tv_banner';
+@import './launching/sec_buying_list';
+@import './launching/sec_tips';
+@import './launching/sec_benefit_1101change';
+@import './launching/sec_event_banner';
+@import './launching/modal';
+@import './launching/sec_notice';
+@import './launching/sec_victory';
+@import './launching/ai_tv_banner';
+
+.pt_page_hide {visibility: hidden !important; height: 0 !important; padding: 0 !important; margin: 0 !important; overflow: hidden !important; opacity: 0 !important;}
+.samsung_tv_launching {
+    img[data-src] {display: none !important;}
+
+    [data-page-content] {
+        // 'pt_page_overlap' 클래스 사용 컴포넌트만 초기 로드시 '모두 표시 + 특정영역 숨김' => '모두 미표시 + 특정영역 표시'로 수정
+        &.pt_page_overlap {
+            display: none;
+            &.pt_page_init {display: block;}
+        }
+    }
+
+    .sec_component {
+        @include vw-pc(padding, 60 0 0);
+
+        .pt_component {
+            &__title-box {
+                text-align: center;
+
+                &--title {@include vw-pc(font-size, 42); @include vw-pc(line-height, 42); font-weight: 700; letter-spacing: -0.025em;}
+            }
+        }
+    }
+
+    .pt_notice_btn {
+        display: flex; justify-content: center; @include vw-pc(margin-top, 60);
+    }
+
+    .sec_category {
+        @include vw-pc(padding, 77 0 0 0);
+
+        .pt_title {
+            text-align: center;
+
+            &__main {
+                display: inline-flex; position: relative; align-items: center; @include vw-pc(gap, 8); @include vw-pc(margin-bottom, 9); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); letter-spacing: -0.025em; font-weight: 700;
+                &::after { content: ""; position: absolute; @include vw-pc(top, -10); @include vw-pc(right, -65); @include vw-pc(width, 73); @include vw-pc(height, 73); background: url('../../is/images/launching/stv_compo_ico_fire_pc_v1.png') center / cover no-repeat;}
+            }
+            &__eyebrow {
+                display: inline-flex; position: relative; @include vw-pc(margin-bottom, -4); @include vw-pc(font-size, 28); font-weight: 700; @include vw-pc(line-height, 37); letter-spacing: -0.025em;
+                &::after { content: ""; position: absolute; @include vw-pc(top, -22); @include vw-pc(right, -59); @include vw-pc(width, 73); @include vw-pc(height, 73); background: url('../../is/images/launching/stv_compo_ico_fire_pc_v1.png') center / cover no-repeat;}
+            }
+            &__sub {
+                position: relative; @include vw-pc(font-size, 28); font-weight: 400; @include vw-pc(line-height, 37); letter-spacing: -0.025em; @include vw-pc(margin-bottom, 10);
+            }
+            &__date { @include vw-pc(font-size, 28); line-height: 1.3; letter-spacing: -0.025em; font-weight: 400;}
+            &__desc { @include vw-pc(font-size, 20); letter-spacing: -0.025em; line-height: 1.3; color: #666666; text-align: center;}
+        }
+    }
+
+    .wrap-component.wrap-component1 {
+        @include vw-max(padding, 35 0 0);
+    }
+
+    .sec_together {
+        @include vw-pc(padding, 70 0 0);
+
+        .pt_title {
+            text-align: center;
+            &__main {
+                position: relative; align-items: center; @include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); letter-spacing: -0.025em; font-weight: 700;
+                // &::after { content: ""; position: absolute; @include vw-pc(top, -1); @include vw-pc(right, -86); @include vw-pc(width, 73); @include vw-pc(height, 73); background: url('../../is/images/rg_ico_luck.png') center / contain no-repeat;}
+            }
+            &__sub {position: relative; @include vw-pc(margin, 40 0 15); @include vw-pc(font-size, 30); font-weight: 400; @include vw-pc(line-height, 29); letter-spacing: -0.015em;}
+            &__disc {position: relative; @include vw-pc(margin-top, 16); @include vw-pc(font-size, 18); font-weight: 400; @include vw-pc(line-height, 23); letter-spacing: -0.015em;}
+        }
+
+        .pt_category_box{
+            position:relative;@include vw-pc(padding,0 0 0); @include vw-pc(height, auto !important);
+                    
+            .pt_slider_category_sticky .pt_slider_category_wrap{position:relative;}
+            .pt_slider_category_sticky.fixed .pt_slider_category_wrap{position:fixed;top:0;left:0;width:100%;background-color:#fff;z-index:15; @include vw-pc(box-shadow, 0 0 10 rgba(0,0,0,0.1)); }
+    
+            .pt_slider_category_wrap .swiper-container{width:100%;@include vw-pc(max-width,1320);margin:0 auto;}
+            .pt_slider_category_wrap .swiper-container .pt_category_title{display:none;}
+            .pt_slider_category_wrap .swiper-container .pt_category_list{justify-content:center;flex-wrap:wrap;}
+            .pt_slider_category_wrap .pt_category_list > li{width:auto !important;height:auto;@include vw-pc(margin,9 8);}
+            .pt_slider_category_wrap .pt_category_list > li > a{display:inline-flex;align-items:center;justify-content:center;@include vw-pc(height,48);@include vw-pc(padding,0 30);@include vw-pc(font-size,18);font-weight:700;color:#000;line-height:normal;white-space:nowrap;border:1px solid #ccc;@include vw-pc(border-radius,30);background-color:transparent;box-sizing:border-box;}
+            .pt_slider_category_wrap .pt_category_list > li.on > a{color:#fff;border-color:#000;background-color:#000;}
+    
+            //pc 카테고리 넓이값 조절
+            &.pt_cate2 .pt_slider_category_wrap .swiper-container{@include vw-pc(max-width,1100);}
+            
+
+            .pt_category_btn {
+                @include vw-pc(padding-left, 101 !important); @include vw-pc(background-size, 57, 34 !important); @include vw-pc(background-position, 30 7 !important);
+
+                &--8k {background: url('../../is/images/launching/stv_compo_ico_qled_8k_pc.png') no-repeat;}
+                &--neo {background: url('../../is/images/launching/stv_compo_ico_neo_qled_pc.png') no-repeat;}
+                &--qled {background: url('../../is/images/launching/stv_compo_ico_qled_pc.png') no-repeat;}
+                &--uhd {background: url('../../is/images/launching/stv_compo_ico_uhd_pc.png') no-repeat;}
+                &--frame {background: url('../../is/images/launching/stv_compo_ico_frame_pc.png') no-repeat;}
+                &--serif {background: url('../../is/images/launching/stv_compo_ico_serif_pc.png') no-repeat;}
+            }
+        }
+    }
+
+    .sec_together--life {padding-top: 0;}
+}
+
+// 컴포넌트 pc
+.wrap-component {
+    padding: 0 !important;
+    .component-contents { @include vw-pc(padding, 25 0); }
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+
+        .m_hidden {display: none;}
+        .sec_component {
+            padding: 0;
+
+            .pt_component {
+                &__title-box {
+                    text-align: center;
+
+                    &--title {@include vw-mo(font-size, 54); @include vw-mo(line-height, 64); font-weight: 700; letter-spacing: -0.05em;}
+                }
+            }
+        }
+
+        .sec_category {
+            @include vw-mo(padding, 78 0 0 0);
+
+            .pt_title {
+                &__main {
+                    @include vw-mo(gap, 12); @include vw-mo(margin-bottom, 12); @include vw-mo(font-size, 52); @include vw-mo(line-height, 55);
+                    &::after {@include vw-mo(top, -15); @include vw-mo(right, -75); @include vw-mo(width, 88); @include vw-mo(height, 88); background-image: url('../../is/images/launching/stv_compo_ico_fire_mo_v1.png');}
+                }
+                &__eyebrow {
+                    @include vw-mo(margin-bottom, -4); @include vw-mo(font-size, 32); @include vw-mo(line-height, 42);
+                    &::after {@include vw-mo(top, -32); @include vw-mo(right, -71); @include vw-mo(width, 88); @include vw-mo(height, 88); background-image: url('../../is/images/launching/stv_compo_ico_fire_mo_v1.png');}
+                }
+                &__sub { 
+                    @include vw-mo(font-size, 32); @include vw-mo(line-height, 42); @include vw-mo(margin-bottom, 10);
+                }
+                &__date { @include vw-mo(font-size, 32);}
+                &__desc { @include vw-mo(font-size, 26); letter-spacing: -0.05em;}
+            }
+        }
+
+        .sec_together {
+            @include vw-mo(padding, 120 0 0 0);
+
+            .pt_title {
+                &__main {
+                    @include vw-mo(margin-bottom, 12); @include vw-mo(font-size, 48); @include vw-mo(line-height, 62);
+                    &::after {@include vw-mo(top, 60); @include vw-mo(right, -71); @include vw-mo(width, 73); @include vw-mo(height, 73);}
+                }
+                &__sub {@include vw-mo(margin, 54 0 20); @include vw-mo(font-size, 38); @include vw-mo(line-height, 38); letter-spacing: -.025em;}
+                &__disc { @include vw-mo(margin-top, 30); @include vw-mo(font-size, 24); @include vw-mo(line-height, 29); letter-spacing: -.025em;}
+            }
+
+            .pt_category_box{
+                @include vw-mo(height, 100 !important);
+    
+                .pt_slider_category_sticky{@include vw-mo(height,100);}
+                .pt_slider_category_sticky .pt_slider_category_wrap{width:100%;@include vw-mo(height,100);padding:0;background-color:#fff;box-shadow:none}
+                .pt_slider_category_sticky.fixed .pt_slider_category_wrap{background-color:#fff; box-shadow:0 0 2.222vw rgba(0,0,0,.1);}
+    
+                .pt_slider_category_wrap .pt_btn_popup_category{position:absolute;@include vw-mo(top,15);right:0;@include vw-mo(width,70);@include vw-mo(height,70);background-color:#fff;z-index:2;}
+                .pt_slider_category_wrap .pt_btn_popup_category::before{content:"";display:block;position:absolute;top:0;bottom:0; @include vw-mo(left, 1); @include vw-mo(width,30);background:linear-gradient(to left,#fff,rgba(255,255,255,0)); transform:translateX(-100%);}
+                .pt_slider_category_wrap .pt_btn_popup_category::after{content:"";position:absolute;right:50%;bottom:55%;transform:translate(50%,50%) rotate(-135deg);@include vw-mo(width,18);@include vw-mo(height,18);border-top:2px solid #000;border-left:2px solid #000;}
+    
+                .pt_slider_category_wrap.popup .pt_btn_popup_category{@include vw-mo(top,27);@include vw-mo(right,10);@include vw-mo(width,56);@include vw-mo(height,56);background-color:transparent;z-index:101;}
+                .pt_slider_category_wrap.popup .pt_btn_popup_category::before,
+                .pt_slider_category_wrap.popup .pt_btn_popup_category::after{top:50%;bottom:auto;right:auto;left:50%;transform:translate(-50%,-50%) rotate(45deg);border:none;background:none;background-color:#000;}
+                .pt_slider_category_wrap.popup .pt_btn_popup_category::before{@include vw-mo(width,35);@include vw-mo(height,3);}
+                .pt_slider_category_wrap.popup .pt_btn_popup_category::after{@include vw-mo(width,3);@include vw-mo(height,35);}
+    
+                .pt_slider_category_wrap .swiper-container{width:100%;max-width:100%;@include vw-mo(padding,19 16 0 16);}
+                .pt_slider_category_wrap .swiper-container .pt_category_title{display:none;}
+                .pt_slider_category_wrap .swiper-container .pt_category_list{justify-content:normal;flex-wrap:nowrap;}
+                .pt_slider_category_wrap .pt_category_list > li{@include vw-mo(margin,0 10);}
+                .pt_slider_category_wrap .pt_category_list > li > a{@include vw-mo(height,74);@include vw-mo(padding,0 20); @include vw-mo(border, 2 solid #ccc); @include vw-mo(font-size,28);font-weight:700;@include vw-mo(border-radius,40);}
+                .pt_slider_category_wrap .pt_category_list > li.on > a{border-color:#000;}
+    
+                .pt_slider_category_wrap.popup .swiper-container{position:absolute;top:0;left:0;width:100%;@include vw-mo(padding,40 0);background-color:#f4f4f4;z-index:100;}
+                .pt_slider_category_sticky.fixed .pt_slider_category_wrap.popup .swiper-container{max-width:100%;@include vw-mo(padding,40 0);}
+                .pt_slider_category_wrap.popup .swiper-container .pt_category_title{display:block;@include vw-mo(padding,0 0 45 60);@include vw-mo(font-size,26);font-weight:700;text-align:left;}
+                .pt_slider_category_wrap.popup .swiper-container .pt_category_list{transform:none !important;justify-content:center;flex-wrap:wrap;@include vw-mo(padding,0 15);text-align:center;}
+                .pt_slider_category_sticky.fixed .pt_slider_category_wrap .pt_category_list {width: 100%;}
+                .pt_slider_category_wrap.popup .pt_category_list > li{display:inline-block;@include vw-mo(margin,0 5 20);}
+                .pt_slider_category_wrap.popup .pt_category_list > li > a{@include vw-mo(height,74);@include vw-mo(padding,0 30); @include vw-mo(border, 2 solid #ccc); @include vw-mo(font-size,28);border-color:#dcdbdb;background-color:#fff;}
+                .pt_slider_category_wrap.popup .pt_category_list > li.on > a{background-color:#000;}
+    
+                // 슬라이드 X
+                &.pt_noSwiper{
+                    .pt_slider_category_sticky .pt_slider_category_wrap{ box-shadow:none; overflow: hidden; height: auto;}
+                    .pt_slider_category_sticky.fixed .pt_slider_category_wrap{box-shadow:0 0 2.222vw rgba(0,0,0,.1);}
+                    .pt_slider_category_wrap .pt_btn_popup_category{display: none !important; }
+                    .pt_slider_category_wrap .swiper-container{@include vw-mo(padding,19 10 9 10); justify-content: center;}
+                    .pt_slider_category_wrap .swiper-container .pt_category_list{justify-content:center; flex-wrap: wrap}
+                    .pt_slider_category_wrap .pt_category_list > li{@include vw-mo(margin,0 10 10);}
+                    .pt_slider_category_wrap .pt_category_list > li > a{@include vw-mo(height,74);@include vw-mo(padding,0 20); @include vw-mo(border, 2 solid #ccc); @include vw-mo(font-size,28);font-weight:700;@include vw-mo(border-radius,40);}
+                    .pt_slider_category_wrap .pt_category_list > li.on > a{border-color:#000;}
+                }
+    
+                //pc 카테고리 넓이값 조절
+                &.pt_cate2 .pt_slider_category_wrap .swiper-container{max-width: 100%;}
+                
+
+                .pt_category_btn {
+                    @include vw-mo(padding-left, 124 !important); @include vw-mo(background-size, 70, 43 !important); @include vw-mo(background-position, 30 15 !important);
+    
+                    &--8k {background: url('../../is/images/launching/stv_compo_ico_qled_8k_mo.png') no-repeat;}
+                    &--neo {background: url('../../is/images/launching/stv_compo_ico_neo_qled_mo.png') no-repeat;}
+                    &--qled {background: url('../../is/images/launching/stv_compo_ico_qled_mo.png') no-repeat;}
+                    &--uhd {background: url('../../is/images/launching/stv_compo_ico_uhd_mo.png') no-repeat;}
+                    &--frame {background: url('../../is/images/launching/stv_compo_ico_frame_mo.png') no-repeat;}
+                    &--serif {background: url('../../is/images/launching/stv_compo_ico_serif_mo.png') no-repeat;}
+                }
+            }
+        }
+
+        .sec_together--life {padding-top: 0;}
+    }
+
+    // 컴포넌트 mo
+    .wrap-component.wrap-component1 {
+        @include vw-mo(padding, 30 0 0);
+    }
+
+    .wrap-component {
+        .pt_hide { display: none; }
+
+        &.product-card {padding: 20px 0 20px !important;}
+        &.product-card .visual-area {margin-top: 0 !important;}
+        // &[data-cptno='1183543'] { padding: 80px 0;}
+        // &[data-cptno='1183543']::after { 
+        //     bottom: 50px; @include vw-mo(font-size, 26); letter-spacing: -0.05em;
+        // }
+    }
+
+    .pt_notice_btn {
+        @include vw-mo(margin-top, 60);
+    }
+
+    
+}
+
+

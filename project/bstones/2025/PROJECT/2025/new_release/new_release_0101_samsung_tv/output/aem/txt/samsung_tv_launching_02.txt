@@ -1,0 +1,28 @@
+<div class="sec_project_wrap samsung_tv_launching" id="pt_buying_compo01">
+
+    <section class="sec_together">
+        <div class="inner_1440">
+            <div class="pt_title">
+                <h3 class="pt_title__main pt_title__main--noicon">삼성닷컴 인기 <span class="en">TV</span> 구매하면 <br class="m_show"/><span class="en">Tving</span> 이용권이 함께!</h3>
+                <!-- <p class="pt_title__sub">냉장고와 김치플러스를 같이 구매하면 <br class="m_show" />최대 23만원의 추가 할인 혜택이!</p> -->
+            </div>
+            
+            <div class="pt_category_box hidden" data-compo-cate="product-card" data-swiper="false" data-sticky="false">
+                <div class="pt_slider_category_sticky">
+                    <div class="pt_slider_category_wrap">
+                        <div class="swiper-container">
+                            <p class="pt_category_title blind">제품 카테고리 선택</p>
+                            <ul class="swiper-wrapper pt_category_list">
+                                <li class="swiper-slide on"><a href="#" title="Neo QLED 8K 선택">
+                                    <img class="pt_category_img" src="" alt="" loading="lazy">Neo QLED 8K<span class="blind">선택됨</span>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</div>

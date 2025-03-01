@@ -1,0 +1,203 @@
+paths:
+    # 제이콥 11/11(월) 연차 공유드립니다.
+    # - 로그인 멤버십 이벤트 : 오웬
+    # - [통합런칭] 삼성 TV 런칭 : 이안
+    # - [통합런칭] 냉장고 : 모건
+    # - [통합런칭] 김치 냉장고 : 모건
+    # - 에버랜드스토어 : 모건
+    # - 폴더블6/S24 CDM : 오웬
+    # - Q6A 전사혜택 : 이안, 소이
+
+    # 2022
+    # - ./PROJECT/00_bs_script_v3/
+    # - ./PROJECT/00_bs_script_v3_categorytest/
+    # - ./PROJECT/_template/buying_list_simul_v2/
+
+    # test
+    # - ./PROJECT/2024/test_project/jacob_test3/
+    # - ./PROJECT/2024/familynet/0805_ai_life/
+    # - ./PROJECT/2024/groupbuying/0716_coolsummer_test/
+    # - ./PROJECT/2024/promo/0719_acc_coupon/
+    # - ./PROJECT/2024/promo/1001_cogi_check/
+    # - ./PROJECT/2024/food/0826_food_25_chuseok/
+    # - ./PROJECT/2024/groupbuying/1001_samsung_11th_festa/
+    # - ./PROJECT/2024/promo/0401_kb_roulette_promotion/
+    # - ./PROJECT/2024/promo/0724_foldable_accessory/
+    # - ./PROJECT/2024/unpack/0103_new_galaxy/
+    # - ./PROJECT/2024/unpack/0626_new_galaxy/
+    # - ./PROJECT/2024/unpack/0710_unpacked_alarm/
+    # - ./PROJECT/2024/unpack/0712_galaxy_z6_promotion/
+
+    # =============================================
+
+    # 담당 프로젝트
+
+    # 식품관
+    - ./PROJECT/2025/food/0101_food_1_home/
+    # - ./PROJECT/2025/food/0101_food_3_special_benefit/
+    # - ./PROJECT/2025/food/0101_food_21_recommend/
+    - ./PROJECT/2025/food/0101_food_27_dishwasher/
+    - ./PROJECT/2025/food/0101_food_28_qooker/
+    - ./PROJECT/2025/food/0101_food_32_fresheasy/
+    # - ./PROJECT/2025/food/0101_food_0_lnb/
+    # - ./PROJECT/2025/food/0115_food_13_gift_set/
+    # - ./PROJECT/2025/food/0101_food_10_category/
+    # - ./PROJECT/2025/food/0101_food_11_brand/
+    # - ./PROJECT/2025/food/0101_food_6_point/
+    # - ./PROJECT/2025/food/0801_food_22_nescafe/
+    # - ./PROJECT/2025/food/0801_food_23_dodram/
+    # - ./PROJECT/2025/food/0826_food_25_chuseok/
+    # - ./PROJECT/2025/food/0826_food_26_chuseok_gift/
+    # - ./PROJECT/2025/food/1025_food_29_hyundaigreen/
+    # - ./PROJECT/2025/food/1101_food_30_refrigerator/
+    # - ./PROJECT/2025/food/1201_food_31_kimchi/
+
+    # 펫케어
+    # - ./PROJECT/2025/petcare/0101_0_main/
+    # - ./PROJECT/2025/petcare/0101_event/
+    # - ./PROJECT/2025/petcare/0101_petclub/
+    # - ./PROJECT/2025/petcare/0200_point/
+    # - ./PROJECT/2025/petcare/0200_recommend
+    - ./PROJECT/2025/petcare/0107_petclub/
+
+    # 홈클래스
+    - ./PROJECT/2025/homeclass/0101_0_main/
+    - ./PROJECT/2025/homeclass/0101_thema/
+    - ./PROJECT/2025/homeclass/0101_homeclass_lotto/
+
+    # new_release
+    # - ./PROJECT/2025/new_release/new_release_tab_best/
+    # - ./PROJECT/2025/new_release/new_release_0101_samsung_tv/
+    # - ./PROJECT/2025/new_release/new_release_0101_refrigerator/
+    # - ./PROJECT/2025/new_release/new_release_0101_kimchi_refrigerator/
+    # - ./PROJECT/2024/new_release/new_release_0401_samsung_tv_special_change/
+    # - ./PROJECT/2024/new_release/new_release_0401_samsung_tv_AB_TEST/
+    # - ./PROJECT/2024/new_release/new_release_0401_samsung_tv_buying_renewal/
+    # - ./PROJECT/2024/new_release/new_release_0812_kitchen_appliance/
+    # - ./PROJECT/2024/new_release/new_release_1201_bespoke_air_test/
+
+    # promo
+    # - ./PROJECT/2024/promo/0201_membership_point/
+    # - ./PROJECT/2024/promo/0401_oh_my_test/
+    # - ./PROJECT/2024/promo/0601_find_the_corgi_family/
+    # - ./PROJECT/2024/promo/0408_allinone/
+    # - ./PROJECT/2024/promo/0701_bao_check/
+    # - ./PROJECT/2024/promo/0901_cogi_check/
+    # - ./PROJECT/2024/promo/0705_everland_store/
+    # - ./PROJECT/2024/promo/0712_galaxy_watch7/
+    # - ./PROJECT/2024/promo/1004_galaxy_tabs10_launching/
+    # - ./PROJECT/2024/promo/1023_q6a_promotion/
+    # - ./PROJECT/2024/promo/1023_Q6A_coupon/
+    # - ./PROJECT/2024/promo/1101_galaxy_s24_fe_coupon/
+    # - ./PROJECT/2024/promo/1111_foldable_s24_coupon/
+    # - ./PROJECT/2025/promo/0101_q6a_promotion/
+
+    # unpack
+    # - ./PROJECT/2024/unpack/0102_galaxy_watch6/
+    # - ./PROJECT/2024/unpack/0712_galaxy_z6_promotion/
+
+    # cdm
+    # - ./PROJECT/2024/cdm/0812_ring_cdm/
+
+    # groupbuying
+    # - ./PROJECT/2024/groupbuying/0801_ai_sale_festa/
+    # - ./PROJECT/2024/groupbuying/1101_samsung_week/
+
+    # food
+    # - ./PROJECT/2024/food/0401_food_16_experience/
+    # - ./PROJECT/2024/food/1101_food_30_refrigerator/
+
+    # =============================================
+
+    # groupbuying
+    # - ./PROJECT/2024/groupbuying/0301_groupbuying/
+    # - ./PROJECT/2024/groupbuying/0316_groupbuying/
+    # - ./PROJECT/2024/groupbuying/0401_groupbuying/
+    # - ./PROJECT/2024/groupbuying/0408_groupbuying/
+    # - ./PROJECT/2024/groupbuying/0801_ai_sale_festa/
+
+    # new_release
+    # - ./PROJECT/2024/new_release/new_release_tab_best/
+    # - ./PROJECT/2024/new_release/new_release_0306_bespoke_jetair/
+    # - ./PROJECT/2024/new_release/new_release_0115_windless_air_conditioner/
+    # - ./PROJECT/2024/new_release/new_release_0101_product_home/
+    # - ./PROJECT/2024/new_release/new_release_0304_grande/
+    # - ./PROJECT/2024/new_release/new_release_0226_windless_air_conditioner/
+    # - ./PROJECT/2024/new_release/new_release_0415_samdot_monitor/
+    # - ./PROJECT/2024/new_release/new_release_0306_bespoke_jetair/
+    # - ./PROJECT/2024/new_release/new_release_0314_refrigerator/
+    # - ./PROJECT/2024/new_release/new_release_0401_samsung_tv/
+    # - ./PROJECT/2024/new_release/new_release_0614_kimchi_refrigerator/
+    - ./PROJECT/2025/new_release/new_release_0101_air_conditioner/
+
+    # promo
+    # - ./PROJECT/2024/promo/0408_allinone/
+    # - ./PROJECT/2024/promo/0201_membership_point/
+    # - ./PROJECT/2024/promo/0408_allinone/
+    # - ./PROJECT/2024/promo/0601_find_the_corgi_family/
+    # - ./PROJECT/2024/promo/0701_bao_check/
+    # - ./PROJECT/2024/promo/0705_everland_store/
+
+    # food
+    # - ./PROJECT/2024/food/0101_food_1_home/
+
+    # cdm
+    # - ./PROJECT/2023/cdm/0203_aircleaner_cdm/
+
+    # galaxycampus
+    # - ./PROJECT/2024/galaxycampus/0102_galaxy_book4/
+    # - ./PROJECT/2024/galaxycampus/0201_s24_reviewer/
+    # - ./PROJECT/2024/galaxycampus/0308_ai_recipe/
+
+    # live
+    # - ./PROJECT/2024/live/0101_live/
+
+    # unpack
+    # - ./PROJECT/2024/unpack/0102_galaxy_watch6/
+    # - ./PROJECT/2024/unpack/0103_new_galaxy/
+
+    #담당운영건
+    # - ./PROJECT/00_bs_script_v3/
+    # - ./PROJECT/2024/groupbuying/0408_groupbuying/
+    # - ./PROJECT/2024/groupbuying/0501_youmake/
+    # - ./PROJECT/2024/groupbuying/0601_youmake_test/
+    # - ./PROJECT/2024/groupbuying/0408_groupbuying_old/
+    # - ./PROJECT/2024/groupbuying/0408_groupbuying_test/
+    # - ./PROJECT/2024/groupbuying/component_test/
+    # - ./PROJECT/2024/cdm/0415_galaxy_s24_cdm/
+    # - ./PROJECT/2024/promo/0201_membership_point/
+    # - ./PROJECT/2024/new_release/new_release_0306_bespoke_jetair/
+    # - ./PROJECT/2024/new_release/new_release_0306_bespoke_jetair_old/
+
+    # new_release
+    # - ./PROJECT/2024/new_release/new_release_tab_best/
+    # - ./PROJECT/2024/new_release/new_release_0115_windless_air_conditioner/
+    # - ./PROJECT/2024/new_release/new_release_0101_product_home/
+    # - ./PROJECT/2024/new_release/new_release_0304_grande/
+    # - ./PROJECT/2024/new_release/new_release_0226_windless_air_conditioner/
+    # - ./PROJECT/2024/new_release/new_release_0415_samdot_monitor/
+    # - ./PROJECT/2024/new_release/new_release_0306_bespoke_jetair/
+
+    # promo
+    # - ./PROJECT/2024/promo/0603_galaxy_book4_edge/
+    # - ./PROJECT/2024/promo/0408_allinone/
+    # - ./PROJECT/2024/promo/0125_eureka_accessory/
+    # - ./PROJECT/2024/promo/0215_samsung_tv/
+    # - ./PROJECT/2024/promo/0401_kb_roulette_promotion/
+    # - ./PROJECT/2024/promo/test_jin/
+    # - ./PROJECT/2024/promo/0215_samsung_tv/
+    # - ./PROJECT/2024/promo/0611_music_frame/
+
+    # 홈클래스 / 펫케어
+    # - ./PROJECT/2024/promo/0712_galaxy_watch7/
+    # - ./PROJECT/2024/promo/0711_galaxy_buds3/preorder/
+    # - ./PROJECT/2024/promo/0712_galaxy_watch7/preorder/
+    # - ./PROJECT/2024/mx_campus/0712_galaxy_watch7/preorder/
+    # - ./PROJECT/2024/promo/0401_pet_care/
+    # - ./PROJECT/2024/promo/0401_petcare_brand/
+    # - ./PROJECT/2024/promo/0401_petcare_event/
+    # - ./PROJECT/2024/promo/0501_petcare_family/
+    # - ./PROJECT/2024/promo/0601_petcare_happiness/
+
+    # - ./PROJECT/00_bs_script_v3/
+    - ./PROJECT/2025/test_project/yunho/

@@ -1,0 +1,118 @@
+.pet_care {
+    .sec_point {
+        padding-bottom: 0 !important;
+
+        .pt_top {
+            &__box {display:flex; justify-content:space-between; align-items: flex-end; @include vw-pc(margin-bottom,24);
+                &--brand {@include vw-pc(margin-bottom, 22);}
+                &--health_care {@include vw-pc(margin-top, 80);}
+            }
+            &__title {position: relative; @include vw-pc(line-height,37); letter-spacing: -0.05em; @include vw-pc(font-size,28); font-weight:700;}
+            &__text {@include vw-pc(margin-top,13); @include vw-pc(font-size,20); @include vw-pc(line-height,26); @include vw-pc(letter-spacing, -.25);}
+            &__link-box {@include vw-pc(margin-top,11);}
+            &__btn {padding-bottom:0; @include vw-pc(font-size,16); font-weight:700 !important; letter-spacing:-.02em;}
+        }
+
+        .pt-swiper-box { position: relative;
+            .pt_point {
+                @include vw-pc(padding, 3);
+    
+                &__list {display: flex; justify-content: flex-start;}
+                &__item {
+                    @include vw-pc(width, 272); @include vw-pc(margin-right, 24); @include vw-pc(padding, 3); 
+                    a {display:block;}
+                    &:last-child {@include vw-pc(margin-right,5); }
+                    &-img { @include vw-pc(height, 272); @include vw-pc(border-radius, 12); overflow: hidden;
+                        img { @include vw-pc(border-radius, 12); overflow: hidden;}
+                    }
+                    &-text {@include vw-pc(margin-top, 15); width: 100%; }
+                    &-name {@include vw-pc(margin-bottom, 37); @include vw-pc(height, 46); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+                    &-price {
+                        &--1 {display: flex; align-items: center; justify-content: space-between;
+                            > * { @include vw-pc(font-size,18); @include vw-pc(line-height,22); letter-spacing: -.02em; color:#707070;}
+                        }
+                        &--2 {display: flex; align-items: center; justify-content: space-between;  @include vw-pc(margin-top,8);
+                            > * { @include vw-pc(font-size,18); @include vw-pc(line-height,30); letter-spacing: -.02em; font-weight: 700; color:#006FF2;}
+                            .pt_point__item-price-num {@include vw-pc(font-size, 25);}
+                        }
+                    }
+                }
+            }
+            .pt__arrow {position: absolute; @include vw-pc(top, 160); display: inline-block; @include vw-pc(width, 44); @include vw-pc(height, 44); z-index: 2;
+                img {@include vw-pc(width, 15); @include vw-pc(margin, 6 auto);}
+                &__prev {@include vw-pc(left, -60);}
+                &__next {@include vw-pc(right, -60);}
+            }
+            .swiper-button-disabled {opacity: 0.3;}
+        }
+
+        .pt_banner__box {@include vw-pc(height, 250); @include vw-pc(margin-bottom, 21);
+            &.pt_add-bg {background: url(../../is/images/banner/se_banner_point_pc.jpg) center / cover no-repeat; @include vw-pc(height, 250);}
+            .pt_txt-box {position: absolute; @include vw-pc(left, 41); top: 50%; transform: translateY(-50%);
+                &--tit {@include vw-pc(font-size, 38); @include vw-pc(line-height, 50); letter-spacing: -0.025em; font-weight: 700;}
+                &--link {@include vw-pc(width, 144); @include vw-pc(height, 41); @include vw-pc(border-radius, 100); @include vw-pc(font-size, 14); letter-spacing: -0.05em; @include vw-pc(margin-top, 16);}
+                .pt_color_orange {color: #EB6C0A;}
+            }
+        }
+
+        // .pt-swiper-box {@include vw-pc(margin-bottom,50);}
+        // .pt_point-banner {@include vw-pc(margin-top, 50); @include vw-pc(height, 200);}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pet_care {
+        .sec_point {
+            .pt_top {
+                &__box {@include vw-mo(margin-bottom,30);}
+                &__title {@include vw-mo(font-size,52); @include vw-mo(line-height,68);}
+                &__text {@include vw-mo(margin-top,20); @include vw-mo(font-size,30); @include vw-mo(line-height,40); letter-spacing: -0.025em}
+                &__link-box {@include vw-mo(margin-top,7);}
+                &__btn {@include vw-mo(margin-bottom,7); @include vw-mo(font-size,30); font-weight:400;}
+            }
+
+            .pt-swiper-box {
+                @include vw-mo(width, 640);
+                .pt_point {
+                    @include vw-mo(padding, 2);
+    
+                    &__item {@include vw-mo(width, 288); @include vw-mo(margin-right, 24); @include vw-mo(padding, 2);
+                    &:last-child { @include vw-mo(margin-right, 40);}
+                    &-img {@include vw-mo(height, 288); @include vw-mo(border-radius, 12);
+                        img {@include vw-mo(border-radius, 12);}
+                    }
+                    &-text {@include vw-mo(margin-top, 17);}
+                    &-name {@include vw-mo(margin-bottom, 37); @include vw-mo(height, 70); @include vw-mo(font-size, 26); @include vw-mo(line-height, 36);}
+                    &-price {
+                        &--1 { @include vw-mo(margin-bottom,5);
+                            > * { @include vw-mo(font-size,26); @include vw-mo(line-height,28);}
+                        }
+                        &--2 {
+                            > * { @include vw-mo(margin-top,6); @include vw-mo(padding-bottom, 1); @include vw-mo(font-size,26); @include vw-mo(line-height,37);}
+                            .pt_point__item-price-num {@include vw-mo(font-size, 28);}
+                        }
+                    }
+                }
+            }
+                
+    
+                .pt__arrow {position: absolute; @include vw-mo(top, 110); @include vw-mo(width, 50); @include vw-mo(height, 50); z-index: 2;
+                    img {margin: 0 auto;}
+                    &__prev {@include vw-mo(left, 10);}
+                    &__next {@include vw-mo(right, 10);}
+                }
+                .pt_review__arrow--prev, .pt_review__arrow--next {@include vw-mo(top, 160);}
+            }
+
+            .pt_banner__box {@include vw-mo(width, 640); @include vw-pc(height, 400); @include vw-mo(margin, 0 auto 30);
+                &.pt_add-bg {background: url(../../is/images/banner/se_banner_point_mo.jpg) center / cover no-repeat; @include vw-mo(height, 400);}
+                .pt_txt-box {@include vw-mo(left, 40);
+                    &--tit {@include vw-mo(font-size, 40); @include vw-mo(line-height, 50);}
+                    &--link {@include vw-mo(width, 252); @include vw-mo(height, 81); @include vw-mo(border-radius, 100); @include vw-mo(font-size, 28); letter-spacing: -0.04em; @include vw-mo(margin-top, 38);}
+                }
+            }
+        }
+
+        // .pt-swiper-box {@include vw-mo(margin-bottom,50);}
+    }
+}

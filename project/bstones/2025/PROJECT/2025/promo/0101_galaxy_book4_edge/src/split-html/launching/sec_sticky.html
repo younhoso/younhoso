@@ -1,0 +1,52 @@
+<section class="sec_sticky pt_bg-image" id="sec_sticky">
+    <!-- 매장픽업:s -->
+    <div id="pt_pickup_chk">
+        <div class="hidden" data-pickup-plazaNo id=""></div>   <!--(매장코드)-->
+        <div class="hidden" data-pickup-storeAddr id=""></div> <!--(매장주소)-->
+        <div class="hidden" data-pickup-capaDate id=""></div>  <!--(매장픽업 날짜)-->
+        <div class="hidden" data-pickup-capaTime id=""></div>  <!--(매장픽업 시간대)-->
+    </div>
+    <!-- // 매장픽업:e -->
+
+    <div class="pt_sticky inner_1920" data-buying-sticky>
+        <div class="pt_sticky__inner">
+            <div class="pt_sticky__top">
+                <div class="pt_title">
+                    <p class="pt_title__name en" data-buying-text="pdNmApi"></p>
+                    <p class="pt_title__sku en" data-buying-text="sku"></p>
+                    <!-- <span class="pt_sku__eyebrow" data-buying-show="tagD==O">삼성닷컴 단독</span> -->
+                </div>
+                <ul class="pt_bnf">
+                    <li class="pt_bnf__item">
+                        <span class="pt_bnf__title">기준가</span>
+                        <span class="pt_bnf__price">
+                            <span class="en" data-buying-text="priceA"></span>원
+                        </span>
+                    </li>
+                    <li class="pt_bnf__item pt_bnf__item--final">
+                        <span class="pt_bnf__title">신용카드 금액대별 결제 혜택가</span>
+                        <span class="pt_bnf__price" data-web-only>
+                            <span class="en" data-buying-text="priceB"></span>원
+                        </span>
+                        <span class="pt_bnf__price" data-app-only>
+                            <span class="en" data-buying-text="priceAppB"></span>원
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pt_sticky__bottom">
+                <!-- <button class="pt_btn--present" data-role="btnPresent" data-omni-type="microsite"><span class="blind">선물하기</span></button> -->
+                <a href="javascript:;" class="btn_common type_arrow pt_btn--pdurl" data-role="btnPdUrl" data-omni-type="microsite" target="_blank">자세히 보기</a>
+                <p class="pt_bubble" data-buying-show="pickup!=O">
+                    <span class="pt_bubble__text">당일 픽업 가능!</span>
+                </p>
+                <a href="javascript:;" class="pt_btn--pickup" title="매장 선택 팝업 열림" data-goodsTpCd="N" data-role="btnPickup" data-omni-type="microsite">매장 픽업 가능</a>
+                <button class="pt_btn--cart" data-role="btnCart" data-omni-type="microsite"><span class="blind">장바구니</span></button>
+                <button class="btn_common type_round black_bg pt_btn--buy" data-role="btnBuy" data-omni-type="microsite">구매하기</button>
+                <!-- <button class="btn_common type_round black_bg pt_btn---disabled" data-omni-type="microsite">이벤트 종료</button> -->
+                <!-- <a href="javascript:;" class="pt_btn--benefit pt_btn--disabled" data-role="btnBenefit" data-role-buying-accordian="buyingBenefitBtn" data-omni-type="microsite" data-omni="sec:event:galaxy-s24:launching:button_sticky_benefit_open"><span class="blind">혜택보기</span></a> -->
+            </div>
+        </div>
+    </div>
+
+</section>

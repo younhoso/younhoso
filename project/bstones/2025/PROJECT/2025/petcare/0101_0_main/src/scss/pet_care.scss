@@ -1,0 +1,41 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'sec_kv';
+@import 'popup';
+@import 'sec_category';
+@import 'sec_brand';
+@import 'sec_event';
+@import 'sec_point';
+@import 'sec_pod';
+@import 'notice';
+@import 'video';
+@import 'lnb';
+@import 'banner';
+
+.pet_care {
+    
+    .pt_comm{ display: flex; justify-content: space-between; @include vw-pc(margin, 0 auto 24); @include vw-pc(width,1320);
+        &__tit{@include vw-pc(font-size,30); @include vw-pc(line-height,36); letter-spacing: -0.05em; font-weight: 700;}
+        &__btn{align-self: end; @include vw-pc(font-size,16); border-bottom: 0 none;}
+    }
+    
+}
+
+// 폴드뷰
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+    .pet_care {
+        .pt_comm{
+            &__tit{@include vw-pc(font-size,34); @include vw-pc(line-height,40);}
+            &__btn{@include vw-pc(font-size,20);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pet_care {
+        .pt_comm{@include vw-mo(margin, 0 auto 23); width: 100%;
+            &__tit{@include vw-mo(font-size,52); @include vw-mo(line-height,66);}
+            &__btn{@include vw-mo(margin-bottom,17); @include vw-mo(font-size,30);}
+        }
+    }
+}

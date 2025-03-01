@@ -1,0 +1,1817 @@
+@charset "utf-8";
+
+/* 한도 정보 */
+.limit-info { margin-bottom:60px; overflow:hidden; }
+.limit-info > h2 { padding-bottom:6px; font-weight:bold; font-size:20px; color:#000; line-height:1.3em; }
+.limit-info-box { background:#fafafa; border-top:2px solid #191919; }
+.limit-info-box:after { display:block; content:""; clear:both; }
+.limit-info-box > dt { float:left; width:160px; padding:23px 20px 25px; line-height:1.25em; font-weight:bold; font-size:16px; color:#000; font-weight:bold; letter-spacing:0; }
+.limit-info-box > dd { float:left; display:flex; width:calc(100% - 160px); padding:23px 20px 25px 0; font-size:0; }
+.limit-info-box > dd span { display:inline-block; line-height:1.25em; font-size:16px; color:#707070; letter-spacing:0; }
+.limit-info-box > dd span ~ span { padding-left:40px; }
+.limit-info-box > dd span em { position:relative; display:inline-block; margin-right:10px; padding-right:10px; vertical-align:baseline; letter-spacing:0; }
+.limit-info-box > dd span em:after { content:""; position:absolute; top:50%; right:0; width:1px; height:12px; transform:translateY(-50%); background:#ddd; }
+.limit-info-box > dd span strong { display:inline-block; color:#2189FF; vertical-align:baseline; letter-spacing:0; }
+.limit-info .info-type-1 { padding:24px 20px; border-bottom:1px solid #ebebeb; }
+.limit-info .info-type-1 > dt { line-height:1.3em; margin-bottom:22px; font-size:14px; color:#000; font-weight:bold; letter-spacing:0; }
+.limit-info .info-type-1 > dd p { font-size:14px; line-height:1.3em; color:#707070; letter-spacing:0; word-break:keep-all; }
+.limit-info .info-type-1 > dd p ~ p { padding-top:6px; }
+.limit-info .info-type-1 > dd p.light { color:#999; }
+.limit-info .info-type-2 { padding:24px 20px; border-bottom:1px solid #ebebeb; }
+.limit-info .info-type-2:after { content:""; display:block; clear:both; }
+.limit-info .info-type-2 .info-type-left { font-size:14px; color:#000; font-weight:bold; letter-spacing:0; }
+.limit-info .info-type-2 .info-type-left > em { margin-left:6px; font-weight:normal; font-size:inherit; color:#999; letter-spacing:0; }
+.limit-info .info-type-2 .info-type-right { float:right; line-height:1.29em; font-size:14px; color:#707070; letter-spacing:0; }
+
+/* 결제정보 */
+.order-content .payment-area { position:absolute; right:24px; top:120px; width:100%; max-width:330px;background:#fff; z-index:10; }
+.order-excv .payment-area { top:127px; } /* 전담자몰 */
+.order-content .payment-area > h2 { padding-bottom:6px; font-size:20px; color:#000; font-weight:bold; border-bottom:2px solid #191919; line-height:1.3em; }
+.order-content .payment-area .payment-listup { padding:24px 0; border-bottom:1px solid #eaeaea; }
+.order-content .payment-area .payment-listup > li { display:flex; }
+.order-content .payment-area .payment-listup > li ~ li { margin-top:12px; }
+.order-content .payment-area .payment-listup > li > span { width:50%; line-height:1.23em; font-size:16px; color:#707070; letter-spacing:0; }
+.order-content .payment-area .payment-listup > li > .text { color:#000; text-align:right; line-height:21px; }
+.order-content .payment-area .payment-listup > li > .text > strong { font-weight:normal; line-height:inherit; vertical-align:bottom; }
+.order-content .payment-area .payment-listup .color-sb { color:#2188FF !important; }
+.order-content .payment-area .payment-listup .color-sb > strong { color:inherit; }
+.order-content .payment-area .cost-listup { padding-top:33px; }
+.order-content .payment-area .cost-listup > li { display:flex; }
+.order-content .payment-area .cost-listup > li ~ li { margin-top:12px; }
+.order-content .payment-area .cost-listup > li > span { width:50%; line-height:1.23em; font-size:16px; color:#000; }
+.order-content .payment-area .cost-listup > li > span .btn-tooltip { position:relative; display:inline-block; right:initial; top:initial; margin-left:3px; /*vertical-align:middle;*/ transform:none; }
+.order-content .payment-area .cost-listup > li > span > strong { font-size:18px; color:inherit; line-height:23px; }
+.order-content .payment-area .cost-listup > li > span > span { color:inherit; }
+.order-content .payment-area .cost-listup > li > span > em { /* font-family:"Samsung Sharp Sans"; */ color:#2188FF; font-weight:normal; }
+.order-content .payment-area .cost-listup > li > span.color-sb { color:#2188FF; }
+.order-content .payment-area .cost-listup > li > .text { text-align:right; }
+.order-content .payment-area .cost-listup > li > .text:not(.color-sb) { font-weight:bold; }
+.order-content .payment-area .cost-listup > li > .text > strong { font-family:"Samsung Sharp Sans"; font-size:24px; font-weight:bold; vertical-align:baseline; }
+.order-content .payment-area .cost-listup > li:first-child > .head { line-height:1.36em; }
+.order-content .payment-area .terms-box { position:relative; margin-top:24px; padding-top:30px; border-top:1px solid #191919; }
+.order-content .payment-area .terms-box > h2 { line-height:1.3em; padding-bottom:24px; font-size:20px; color:#000; font-weight:bold; }
+.order-content .payment-area .terms-box > .btn-terms-view { position:absolute; right:0; top:38px; padding-right:22px; font-size:14px; color:#000; font-weight:bold; background:url("https://www.samsung.com/sec/static/_images/common/icon-drop-down.svg") no-repeat right center; }
+.order-content .payment-area .terms-box > .on { background-image:url("https://www.samsung.com/sec/static/_images/common/icon-drop-up.svg")}
+.order-content .payment-area .terms-box .terms-view { display:none; }
+.order-content .payment-area .terms-box .terms-view .chk-form { position:relative; }
+.order-content .payment-area .terms-box .chk-form ~ .chk-form { margin-top:16px; }
+.order-content .payment-area .terms-box .terms-view .chk-form .btn-underline { position:absolute; bottom:0; right:0; margin:0; }
+.order-content .payment-area .terms-box .chk-form label { padding-left:26px; padding-right:50px; color:#000; line-height:1.3; word-break:keep-all; }
+.order-content .payment-area .terms-box .chk-form label:before { position:absolute; left:0; top:0; margin-top:0; }
+.order-content .payment-area .terms-box .chk-form:checked+label:before { top:0; }
+.order-content .payment-area .terms-box .terms-view { margin-top:16px; padding:20px; background:#F7F7F7; }
+.order-content .payment-area .terms-box .terms-view label.inp-box:not(:nth-last-child(1)) { padding-bottom:24px; }
+.order-content .payment-area .chk-all { display:none; }
+.order-content .payment-area .btn { width:100%; margin:36px 0 0; font-size:18px; font-weight:normal; }
+.order-content .payment-area .btn > strong { display:inline-block; margin-bottom:2px; font-family:"Samsung Sharp Sans"; /* margin-right:6px; */ color:#fff; font-size:inherit; font-weight:bold; line-height:1em; }
+.order-content .payment-area .btn > span { display:inline-block; margin-bottom:3px; font-size:inherit; color:#fff; line-height:1em; }
+
+/* 에러 메시지 */
+.order-info-detail .error-msg, .input-obj .error-msg { padding-top:6px; }
+
+/* 주문 layout */
+.order-content { position:relative; max-width:1440px; padding:50px 410px 0 24px; }
+.order-content.content { min-height:704px; } /* 주문 페이지에만 적용 */ 
+.layer-pop .order-content { min-height:initial; } /* 200821 */
+.order-content > .tit-box { margin-bottom:40px; }
+.order-content .order-area { margin-bottom:56px; }
+.order-content .order-area:nth-last-child(1) { margin-bottom:0; }
+.order-content .order-area > h2 { padding-bottom:6px; line-height:1.3em; font-size:20px; color:#000; font-weight:bold; border-bottom:2px solid #191919; }
+.order-content .order-tbl { display:flex; width:100%; }
+.order-content .order-tbl:not(:nth-last-child(1)) { border-bottom:1px solid #eaeaea; }
+.order-content .order-tbl .order-td { position:relative; padding:40px 0; text-align:left; vertical-align:top; }
+.order-content .order-tbl .order-image { width:21.5%; padding-right:24px; text-align:center; }
+.order-content .order-tbl .order-spec { width:24.8%; padding-right:24px; }
+.order-content .order-tbl .order-select { width:25.2%; }
+.order-content .order-tbl .order-count { width:15%; padding-right:24px; padding-left:24px; text-align:right; line-height:21px; }
+.order-content .order-tbl .order-price { width:13.5%; text-align:right; }
+.coupon-droplist .droplist li {line-height:20px; padding:10px 24px;} /* 201003 개발 수정 */
+.coupon-droplist .droplist li span{font-size:12px;}
+
+/* 품절 */
+.p-soldout > div:not(.cart-sns) { opacity:.3; }
+.p-soldout > .order-count { opacity:1; }
+
+/* 주문 : 사진 */
+.order-content .order-tbl .order-image .photo { display:inline-table; width:180px; height:180px; margin:0 auto; }
+.order-content .order-tbl .order-image .photo a { position:relative; display:inline-block;  width:180px; height:180px; margin:0 auto; overflow:hidden; vertical-align:middle; }
+.order-content .order-tbl .order-image .photo a > img { max-height:100%; width:auto; height:auto; position:absolute; top:0; /*bottom:0;*/ left:0; right:0; margin:auto; }
+.order-content .order-tbl .order-image .photo .img-pc { display:block; margin:auto; }
+.order-content .order-tbl .order-image .photo .img-mo { display:none; }
+
+/* 주문 : 제품 정보 */
+.order-content .order-spec-group .ico-group-t { display:block; margin-bottom:6px; font-size:0; }
+.order-content .order-spec-group .ico-group-t > span { display:inline-block; height:auto; line-height:1.34em; letter-spacing:0; border-radius:0; }
+.order-content .order-spec-group .ico-group-t > span ~ span { margin-left:6px; }
+.order-content .order-spec-group .ico-group-t .ico-b { min-width:auto; padding:0; color:#2188FF; font-weight:700; vertical-align:top; border:0; }
+.order-content .order-spec-group .ico-group-t .ico-t { min-width:auto; padding:0; /* padding-right:20px; */ color:#2188FF; font-weight:700; vertical-align:top; border:0; }
+.order-content .order-spec-group .ico-group-t .ico-t > .btn-tooltip,
+.order-content .order-spec-group .ico-group-t .ico-t > .tooltip { float:right; width:20px; height:15px; font-size:1px; color:transparent; opacity:0.6; background:url("https://www.samsung.com/sec/static/_images/common/icon-tooltip4.svg") no-repeat center center; background-size:auto 100%;}
+.order-content .order-spec-group .o-title { word-break:keep-all; overflow:hidden; }
+.order-content .order-spec-group .o-title a { display:inline-block; font-size:16px; color:#000; font-weight:bold; line-height:1.36em; letter-spacing:0; }
+.order-content .order-spec-group .o-label { margin-top:4px; font-size:12px; color:#707070; line-height:1.34em; letter-spacing:0; }
+.order-content .order-spec-group .ico-group { position:relative; display:block; margin-top:20px; }
+.order-content .order-spec-group .ico-group .o-spec span { display:inline-block; font-size:12px; color:#707070; line-height:1.34em; letter-spacing:0; }
+.order-content .order-spec-group .ico-group .o-spec span:nth-last-child(1):after { display:none; }
+.order-content .order-spec-group .ico-group .o-spec span.end { margin-right:10px; }
+.order-content .order-spec-group .ico-group .o-spec span.end:after { display:none; }
+.order-content .order-spec-group .ico-group .o-spec .btn-option { display:inline-block; min-width:61px; height:20px; line-height:20px; font-size:12px; color:#fff; background:#000; border-radius:10px; vertical-align:middle; }
+.order-content .order-spec-group .o-telecom { margin-top:20px; }
+.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 { line-height:24px; font-size:0; }
+.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li { min-width:inherit; }
+.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li ~ li { margin-left:10px; }
+.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li:first-child { margin-left:0; }
+.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li label { display:inline-block; height:24px; }
+.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li label span { display:inline-block; min-width:50px; height:24px; line-height:23px; padding:0 15px; font-weight:bold; font-size:12px; letter-spacing:0; vertical-align:top; }
+.order-content .order-spec-group .o-telecom + .ico-group { margin-top:10px; }
+
+/* 주문 : 제품 가격 */
+.order-content .order-tbl .order-count span { display:inline-block; line-height:21px; font-size:16px; color:#000; letter-spacing:0; }
+.order-content .order-tbl .order-price .price-small { position:relative; display:inline-block; line-height:21px; font-size:16px; color:#A6A6A6; letter-spacing:0; }
+.order-content .order-tbl .order-price .price-small:before { position:absolute; left:0; right:0; top:40%; width:100%; height:1px; background:#A6A6A6; content:""; }
+.order-content .order-tbl .order-price .price-big { display:block; font-size:16px; color:#000; font-weight:bold; line-height:21px; letter-spacing:0; }
+
+/* 주문 : 사은품/쿠폰 */
+.order-content .order-select .select-noti { width:100%; padding:5px 0 6px; border-bottom:2px solid rgba(178,178,178,0.51); font-size:14px; color:#999; line-height:19px; }
+.order-content .order-select .select-noti.coupone { margin-top:10px; }
+.order-content .order-select .selBaseCoupon { margin:6px 0; } /* 200910 개발에서 생성한 class 적용 */
+.order-content .order-select .gifts-select ~ .gifts-select { margin-top:6px; }
+.order-content .order-select .gifts-select .imgs { position:absolute; top:50%; left:10px; width:24px; height:24px; transform:translateY(-50%); background:#DFDFDF; border-radius:2px; }
+.order-content .order-select .gifts-select .imgs img { width:100%; }
+.order-content .order-select .gifts-select .names { display:block; font-size:14px; color:#000; letter-spacing:0; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+.order-content .order-select .gifts-select .btn-del { position:absolute; right:10px; top:50%; width:16px; height:16px; background:url("https://www.samsung.com/sec/static/_images/common/icon-del-s.svg") no-repeat center center; transform:translateY(-50%); background-size:16px auto; }
+.order-content .order-select .gifts-coupone { padding-left:10px; }
+.order-content .order-select .order-select-menu ~ .order-select-menu { margin-top:10px; }
+.order-content .order-select .order-select-menu .droplist { width:328px; }
+.order-content .order-select .order-select-menu.active .droplist { padding:14px 0; }
+.order-content .order-select .order-select-menu .link-gift { position:relative; display:block; line-height:38px; padding-left:40px; padding-right:102px; text-align:left; }
+.order-content .order-select .order-select-menu .link-gift > span { display:block; font-size:14px; color:#000; }
+.order-content .order-select .order-select-menu .link-gift > .imgs { position:absolute; display:block; left:14px; top:50%; width:20px; height:20px; transform:translateY(-50%); }
+.order-content .order-select .order-select-menu .link-gift > .imgs img { vertical-align:top; }
+.order-content .order-select .order-select-menu .link-gift > .names { text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+.order-content .order-select .order-select-menu .link-gift > .dates { position:absolute; display:block; right:14px; top:50%; line-height:1; transform:translateY(-50%); z-index:2; }
+.order-content .order-select .order-select-menu .link-gift.link-coupon { padding-left:20px; padding-right:20px; }
+.order-content .order-select .order-select-menu .droplist-button .link-gift { padding-left:26px; padding-right:0; }
+.order-content .order-select .order-select-menu .droplist-button .link-gift > .imgs { left:0; }
+.order-content .order-select .order-select-menu .droplist-button .link-gift > .dates { display:none; }
+.order-content .order-select .order-select-menu .droplist li.focused .link-gift > span { font-weight:700; }
+.wrap-droplist.order-select-menu ~ .order-select-menu { margin-top:12px; }
+
+/* 사은품 공통 (장바구니,주문/결제) */
+.order-content .order-select .wrap-droplist ~ .selBaseCoupon { margin:0; }
+.order-select-list { padding:10px; background:#F7F7F7; } /* 공통 */
+.order-select-list .gifts-select { position:relative; display:block; height:40px; line-height:40px; padding:0 36px 0 40px; text-align:left; background:#fff; border-radius:10px; overflow:hidden; }
+.order-select-list.freebie { position:relative; padding:12px 10px 10px; background:transparent; } /* 이전 선택 */
+.order-select-list.freebie .gifts-select { position:relative; display:block; height:40px; padding:0 0 0 40px; line-height:40px; text-align:left; background:#fafafa; border-radius:10px; overflow:hidden; }
+
+/* 사은품 공통 (나의 쇼핑 > 주문상세, 주문취소 등) */
+.conbox-myshopping-list .order-select .gifts-select { position:relative; display:block; height:40px; line-height:40px; padding:0 36px 0 40px; text-align:left; background:#fafafa; border-radius:10px; overflow:hidden; }
+
+/* 옴니쿠폰 공통 (장바구니,주문/결제) */
+.order-select-list.omni-coupon { position:relative; padding:12px 10px 10px; background:transparent; }
+.order-select-list.omni-coupon .gifts-coupone { padding:11px 26px 11px 10px; background:#EFF7FF; border-radius:10px; line-height:18px; }
+.order-select-list.omni-coupon .names .tag { display:inline-block; width:86px; margin-right:10px; font-size:14px; font-weight:bold; color:#000; line-height:18px; }
+
+/* 비스포크 */
+.order-content .order-tbl .order-spec-group ~ .pc-bespoke { margin-top:42px; }
+
+/* 번들 제품 */
+.order-content  .multi-order-tbl { flex-direction:column; }
+.multi-order-tbl .order-multi.order-tr { display:flex; width:100%; }
+
+/* 정기 배송 */
+.input-type-small-2 { width:100%; max-width:354px; }
+
+/* 배송,할인,포인트,결제수단 */
+.order-info-box > li { position:relative; padding:30px 0; padding-left:236px; border-bottom:1px solid #eaeaea; }
+.order-info-box > li.sale-li { margin-bottom:0; padding-right:0; border-bottom:0; }
+.order-info-box > li.deco { padding-bottom:30px !important; border-bottom:1px solid #eaeaea !important; }
+.order-info-box > li.extra-service .info-extra li .inp-form { vertical-align:top; }
+
+.order-info-box > li:nth-last-child(1) { margin-bottom:0; padding-bottom:0; border-bottom:0; }
+.order-info-box .head { position:absolute; left:0; top:30px; width:18%; max-width:118px; padding:8px 0; color:#444; }
+.order-info-box .order-btn { position:absolute; right:0; top:30px; padding:8px 0; }
+.order-info-box > li .inp-inactive { pointer-events:none; }
+.order-info-box > li .opt-primary { margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid #EBEBEB; }
+
+.order-info-box-2 { padding:30px 0; }
+.order-info-box-2 li { position:relative; margin-bottom:14px; padding:0; padding-left:236px; }
+.order-info-box-2 li:nth-last-child(1) { margin-bottom:0; }
+.order-info-box-2 > li.deco { margin-bottom:30px; padding-bottom:30px; border-bottom:1px solid #eaeaea; }
+.order-info-box-2 .head { position:absolute; left:0; top:-2px; width:18%; max-width:118px; padding:8px 0; color:#444; }
+.order-info-box-2 .order-btn { position:absolute; right:0; top:30px; padding:8px 0; }
+.order-info-box-2 .order-btn .btn-s { height:28px; line-height:28px; margin:0; }
+.order-info-box-2 li li { margin-bottom:0; }
+.order-info-box-2 .event-code-li { padding-top:24px; border-top:1px solid #eaeaea; }
+.order-info-box-2 .event-code-li .head,
+.order-info-box-2 .event-code-li .btn-info-sale { top:24px !important; }
+
+.order-info-inner { display:block; width:100%; margin-bottom:12px; padding:11px 0; }
+.order-info-inner:nth-last-child(1) { margin-bottom:0; }
+.order-info-inner-maxwidth-1 { max-width:466px; }
+.order-padding-none { padding-top:0; padding-bottom:0; }
+.order-padding-none-t { padding-top:0; }
+.order-padding-none-b { padding-bottom:0; }
+.order-info-inner span { display:inline-block; vertical-align:middle; }
+.order-info-inner span:after { display:inline-block; width:1px; height:10px; margin:0 20px; vertical-align:middle; background:#d9d9d9; content:""; }
+.order-info-inner span:nth-last-child(1):after { display:none; }
+
+.order-content .order-box { padding:0; border-bottom:1px solid #eaeaea; }
+.order-content .order-box:nth-last-child(1) { border-bottom:0; }
+.order-content .tab-nav { margin-bottom:20px; }
+.order-content .tab-nav ul:after { display:block; content:""; clear:both; }
+.order-content .tab-nav li { display:block; float:left; margin-right:10px; }
+.order-content .tab-nav li:nth-last-child(1) { margin-right:0; }
+.order-content .tab-nav li button { width:120px; height:40px; margin:0; font-size:14px; color:#000; text-align:center; border:1px solid #b2b2b2; border-radius:20px; }
+.order-content .tab-nav li .on { color:#fff; background:#000; border-color:#000; }
+.order-content .tab-view { display:none; }
+
+.order-content .radio-nav .chk-form { padding:6px 0; }
+.order-content .radio-nav + .use-type-1 { margin-top:30px; }
+.order-content .radio-nav + .use-type-2 { margin-top:24px; padding-top:24px; border-top:1px solid #EBEBEB; }
+
+.order-content .sale-option { width:100%; }
+.order-content .sale-option .head { display:inline-block; width:30%; vertical-align:top; }
+.order-content .sale-option .head em { color:#1428a0; font-weight:bold; }
+.order-content .sale-option .result { display:inline-block; width:65%; vertical-align:middle; }
+.order-content .sale-option .result-input { margin-top:-10px; }
+.order-content .sale-option .result .dropdownMenu { display:inline-block; margin-right:10px; margin-bottom:0; vertical-align:middle; }
+
+.order-content .btn-listup:after { display:block; content:""; clear:both; }
+.order-content .btn-listup li { float:left; }
+.order-content .btn-listup .btn:nth-child(1) { margin-left:0; }
+
+.order-content .tip-add { position:relative; display:inline-block; width:100%; padding-right:30px; } 
+.order-content .btn-tooltip { position:absolute; display:inline-block; right:0; top:50%; width:16px; height:16px; font-size:0; /*vertical-align:top;*/ background:#fff url("https://www.samsung.com/sec/static/_images/common/icon-tooltip-2.svg") no-repeat center center; background-size:contain; border-radius:50%; transform:translateY(-50%); }
+.order-content .info-ul, .order-content .fnet-info-ul { position:relative; margin:25px 0 0 236px; }
+.order-content .info-ul > li { position:relative; padding:5px 0; padding-left:14px; font-size:14px; line-height:1.3; color:#707070; word-break:keep-all; }
+.order-content .fnet-info-ul > li {position:relative; margin-bottom:20px; font-size:14px; line-height:1.5; color:#707070; word-break:keep-all; } 
+.order-content .info-ul > li:before { position:absolute; left:0; top:5px; content:"※"; }
+
+.order-content .delivery-box { display:block; width:100%; max-width:566px; margin-bottom:30px; padding:30px; border:1px solid #EBEBEB; border-radius:20px; }
+.order-content .delivery-box > dt .item-tit { position:relative; color:#000; font-size:20px; font-weight:bold; line-height:26px; display:block; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.order-content .delivery-box > dt span:not(.item-tit) { position:relative; display:block; font-size:14px; font-weight:400; line-height:20px; display:block; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.order-content .delivery-type-3 > dd { padding-bottom:0; }
+.order-content .delivery-box > dd > div { width:100%; }
+.order-content .delivery-box > dd > .wrap-droplist:not(.plus-details) { margin-top:20px; }
+.order-content .delivery-box > dd .seg-check-form { width:100%; padding:24px 0; }
+.order-content .delivery-box > dd .seg-dropdownMenu { width:100%; }
+.order-content .delivery-box > dd .seg-input { width:100%; margin-top:20px; }
+.order-content .delivery-box > dd .seg-details { padding:16px; background:#F7F7F7; color:#777; font-size:14px; line-height:21px; }
+.order-content .delivery-box > dd .search-store { position:relative; }
+.order-content .delivery-box > dd .search-store input { width:calc(100% - 100px); }
+.order-content .delivery-box > dd .search-store button { position:absolute; right:0; top:50%; margin:0; transform:translateY(-50%); }
+.order-content .delivery-box .info-extra { margin-top:20px; }
+
+.empty-cart { position:relative; display:none; min-height:200px; text-align:center; background:#f7f7f7; border-top:2px solid #191919; }
+.empty-cart .empty-text { position:absolute; display:inline-block; left:50%; top:50%; font-size:16px; font-weight:bold; vertical-align:middle; transform:translate(-50%, -50%); }
+.empty-cart .empty-text:before { display:inline-block; width:35px; height:26px; margin-right:10px; vertical-align:middle; background:url("https://www.samsung.com/sec/static/_images/common/icon-cart.svg") no-repeat center center; content:""; }
+
+.pick-store .inp-line { width:100%; }
+.pick-store .inp-select-store { width:calc(100% - 110px) !important; margin-bottom:5px; }
+.pick-store .btn { min-width:100px; margin:0; }
+
+.order-info-detail { width:100%; max-width:566px; }
+.order-info-detail > li { position:relative; min-height:32px; margin-bottom:12px; padding:6px 0; }
+.order-info-detail > li:nth-last-child(1) { margin-bottom:0; }
+.order-info-detail li, .order-info-detail li > span { font-size:14px; color:#000; }
+.order-info-detail .cols-2 { float:left; width:50%; }
+.order-info-detail .cols-3 { float:left; width:33%; }
+.order-info-detail .cols-4 { float:left; width:25%; }
+.order-info-detail .cols-5 { float:left; width:20%; }
+.order-info-detail .cols-clear { clear:both; }
+.order-info-detail .cols-another { float:left; width:auto; }
+.order-info-detail .cols-3-another { float:left; width:67%; }
+.order-info-detail .cols-4-another { float:left; width:75%; }
+.order-info-detail .cols-5-another { float:left; width:80%; }
+.order-info-detail .cols-inline { display:inline-block; }
+.order-info-detail .cols-inline2 { position:relative; display:inline-block; }
+.order-info-detail .cols-inline2:after { display:inline-block; width:1px; height:10px; margin:0 20px; vertical-align:middle; background:#d9d9d9; content:""; }
+.order-info-detail .gift-select { width:100%; }
+.order-info-detail .gift-select .dropdownMenu { width:100%; }
+.order-info-detail .anther-service-input { display:inline-block; width:100%; }
+.order-info-detail .coupon-entry { display:inline-block; width:100%; margin-right:12px; }
+.order-info-detail .padding-none { padding-top:0; padding-bottom:0; }
+.order-info-detail .d-padding-add { padding:11px 0; font-size:inherit; }
+.order-info-detail .wrap-droplist + .d-padding-add { margin-top:6px; }
+
+.order-info-detail.use-type-1, .order-info-detail.use-type-2 { max-width:100%; }
+.order-info-detail.use-type-1 > li, .order-info-detail.use-type-2 > li { max-width:566px; }
+
+/* 201003 분리배송 배송희망일만 분리*/
+#delivery-tab-view2 .delivery-box .info-extra .error-msg{padding-left:32%;}
+.order-info-detail .inp-form .inp-calendar {cursor:pointer;}
+
+/* UL : 주문자 정보변경 / 매장선택 */
+.input-type-small { width:100%; max-width:566px; }
+.input-type-ul > li, .input-type-div > div { position:relative; min-height:32px; margin-bottom:20px; padding:0; }
+.input-type-ul > li:nth-last-child(1) { margin-bottom:0; }
+.input-type-ul > li.input-obj, .input-type-div > div.input-obj { padding-left:37%; }
+.input-type-ul > li.h-auto { min-height:auto; }
+.input-type-ul .s-head, .input-type-div .s-head { position:absolute; left:0; width:37%; padding:10px 0; color:#444; }
+.input-type-ul .select-btn { position:relative; padding-right:102px; }
+.input-type-ul .select-btn button { position:absolute; right:0;top:0; }
+.input-type-ul .dropdownMenu { width:100%; }
+.input-type-ul .dropdownMenu li { padding-left:initial; }
+
+/* 할인혜택 */
+.discount-area .order-info-box-2 .head { width:113px; }
+.discount-area .order-info-box-2 .price { color:#2189FF; font-size:16px; text-align:right; }
+
+/* 포인트 사용 */
+.point-area .order-info-box-2 .head { width:113px; }
+.point-area .order-info-box-2 .use-type-1 > li { padding:30px; border:2px solid #EBEBEB; border-radius:20px; }
+.point-area .order-info-box-2 .use-type-1 > li:not(:nth-last-child(1)) { margin-bottom:30px; }
+.point-area .order-info-box-2 .use-type-2 > li:not(:nth-last-child(1)) { margin-bottom:14px; }
+
+.point-area .point-inline-1 { position:relative; display:inline-block; width:calc(38% - 69px); margin-right:66px; padding-right:80px; color:#000; top: 6px; }
+.point-area .point-inline-1 .use-tit { display:inline-block; width:auto; padding-right:3px;  font-size:inherit; }
+.point-area .point-inline-1 .use-point { position:absolute; right:0;  font-size:inherit; }
+
+.point-area .point-inline-2, .point-area .point-inline-3 { display:inline-block; width:62%; max-width:356px; right: 20px; bottom: 1px; }
+.point-area .point-inline-2 .chk-form, .point-area .point-inline-3 .chk-form { display:inline-block; line-height:32px; }
+
+.point-area div.inp-point { position:relative; display:inline-block; width:212px; height:32px; float:right; }
+.point-area div.inp-point::before { content:""; position:absolute; bottom:0; left:0; right:0; display:block; height:1px; background:#B2B2B2; }
+.point-area div.inp-point::after { content:"P"; position:absolute; top:9px; right:5px; display:inline-block; color:#000; font-size:14px; }
+.point-area div.inp-point .inp-line { padding-right:18px; text-align:right; }
+
+.point-area .point-line-1 { display:block; padding:10px; color:#707070; font-size:16px; line-height:20px; background:#F7F7F7; }
+.point-area .point-line-1 em { position:relative; display:inline-block; margin-left:5px; padding-left:10px; font-weight:bold; /*color:#1428A0;*/ }
+.point-area .point-line-1 em::before { content:""; position:absolute; top:5px; left:0; display:inline-block; width:1px; height:12px; background:#ddd; }
+.point-area .point-line-2 { display:-ms-flexbox; display:flex; -ms-flex-direction:row; flex-direction:row; -ms-flex:1 1 auto; flex:1 1 auto; padding-top:24px; }
+.point-area .point-line-2 .pd-info { display:inline-block; width:calc(100% - 160px - 66px); margin-right:39px; color:#000; font-weight:bold; line-height:21px; }
+.point-area .point-line-2 .pd-info .info-name { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.point-area .point-line-2 .pd-info .sub-info { display:block; margin-top:6px; color:#707070; font-size:12px; font-weight:normal; line-height:20px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+.point-area .point-line-2 .inp-point { display:inline-block; /* width:47%; */ width:117px; }
+
+.point-ment { position:relative; width:100%; /* max-width:668px; */ max-width:550px; margin:30px auto 0; padding:10px 0; font-size:16px; color:#707070; font-weight:bold; line-height:21px; overflow:hidden; }
+.point-ment .btn { position:absolute; right:0; top:0; margin:0; }
+
+.order-info-detail .inp-basic { width:100%; }
+
+.order-info-detail.info-extra span { position:relative; display:inline-block; /*width:37%;*/ width:31%; color:#444; }
+.order-info-detail.info-extra span:not(.tooltip-add) { line-height:32px; }
+.deco.extra-service .order-info-detail.info-extra > li > span.tooltip-add { margin-top:10px; }
+.order-info-detail .tooltip-add .btn-tip { position:absolute; display:block; left:94px; top:50%; width:18px; height:18px; font-size:0; background:#fff url("https://www.samsung.com/sec/static/_images/common/icon-tooltip-2.svg") no-repeat center center; background-size:contain; border-radius:50%; transform:translateY(-50%); }
+.order-info-detail .inp-form { display:inline-block; /*width:62%;*/ width:68%; }
+.order-info-detail .inp-form > .chk-form { display:inline-block; width:40%; vertical-align:top; }
+
+.order-info-detail em { font-size:inherit; color:#2188FF; }
+.order-info-detail .clear-both { clear:both; }
+.order-info-detail .inp-block { display:block; }
+.order-info-detail .inp-block > label { position:absolute; display:block; left:0; top:0; margin-bottom:11px; color:#000; }
+.order-info-detail .inp-block input:not([type=checkbox]):not([type=radio]) { width:100%; }
+.order-info-detail .chk-view { display:none; /*width:62%;*/ width:68%; margin:0 0 0 auto; margin-top:10px; }
+.order-info-detail .chk-view .dropdownMenu { width:100%; margin-bottom:10px; }
+
+.order-info-detail .chk-view .wrap-droplist { margin-bottom:10px; }
+
+.info-sale:after { display:block; content:""; clear:both; }
+.info-sale > li .account-types > li { padding-left:0; }
+.info-sale > li:nth-child(1) { float:left; width:37%; }
+.info-sale > li:nth-child(2) { float:right; width:63%; }
+.btn-info-sale { top:0 !important; }
+
+/* 임직원 인증 */
+.inp-button-combo-box { position:relative; padding-right:102px; }
+.inp-button-combo-box > button { position:absolute; /* right:0; */ top:0;max-width:92px; margin:0; padding-left:8px; padding-right:8px; }
+.order-info-box-2 > li:first-child .order-info-detail > li:first-child .inp-button-combo-box > button { right:0; }
+.order-info-box-2 > li:first-child .order-info-detail > li:not(:first-child) .inp-button-combo-box > button { right:10px; }
+.order-info-box-2 > li:not(:first-child) .order-info-detail > li .inp-button-combo-box > button { right:10px; }
+.inp-button-combo-box + .combo-guide { margin-top:14px; font-size:14px; line-height:18px; }
+
+/* 단일배송 */
+.box-single { position:relative; overflow:hidden; }
+
+/* 결제수단 : 결제 형태 */
+.order-content .pay-info { margin-bottom:0; }
+.pay-info .order-info-box > li:not(.card-opt) { border-bottom:none; }
+.pay-info .order-info-box .pay-input-result { padding:6px 0; }
+.pay-info .order-info-box .pay-input-result strong { color:#000; line-height:20px; }
+.pay-info .caution-list { margin-top:30px; }
+.pay-info .caution-list li { padding-left:6px; text-indent:-6px; font-size:14px; line-height:20px; }
+.pay-info .caution-list li:not(:nth-child(1)) { margin-top:14px; }
+.pay-info .caution-list li em { color:#FF4337; font-size:inherit; }
+
+.pay-nav-box { display:block; overflow:hidden; }
+.pay-nav-box > .pay-nav-box-left { float:left; width:250px; max-width:250px; height:100%; overflow:hidden; }
+.pay-nav-box > .pay-nav-box-right { float:right; width:calc(100% - 250px); max-width:510px; height:100%; overflow:hidden; }
+.pay-nav-box:after, .pay-nav-box > .pay-nav-box-left:after, .pay-nav-box > .pay-nav-box-right:after { display:block; content:""; clear:both; }
+
+.pay-nav-box > .pay-nav-bottom { clear:both; padding-top:20px; }
+
+.pay-nav-box .pay-method-pay { width:100%; height:95px; font-size:0; background:url("https://www.samsung.com/sec/static/_images/common/samsung-pay.svg") no-repeat center top; background-size:100%; border-radius:10px; }
+.pay-nav-box .pay-method-pay.on { background-image:url("https://www.samsung.com/sec/static/_images/common/samsung-pay-on.svg"); }
+.pay-nav-box .pay-tab-nav ul:after { display:block; content:""; clear:both; }
+.pay-nav-box .pay-tab-nav ul li { float:left; width:160px; height:40px; margin-left:5px; margin-right:5px; margin-bottom:10px; }
+.pay-nav-box .pay-tab-nav ul li button { width:100%; height:100%; font-size:14px; color:#000; background:#fff; border:1px solid #b2b2b2; border-radius:20px; }
+.pay-nav-box .pay-tab-nav ul li button.on { color:#fff; background:#212425; border:0; }
+
+.pay-input-check { clear:both; display:block; margin-top:24px; }
+.pay-view > .pay-input-check + .pay-input-check { margin-top:12px; }
+
+.pay-input-check .pay-check { padding-top:12px; }
+.pay-input-check .pay-check:first-child { padding-top:0; }
+.pay-input-check-none { margin-top:0; }
+.page-division { width:100%; margin-top:30px; margin-bottom:30px; border-color:#ebebeb; }
+
+.info-pay { margin-top:20px; }
+.info-pay:after { display:block; content:""; clear:both; }
+.info-pay > li .account-types > li { padding-left:0; }
+.btn-info-pay { top:0 !important; }
+
+/* 결제 수단 */
+.pay-view { display:none; margin-top:0; padding-top:0 !important; padding-bottom:0 !important; }
+.pay-view.creditcard, .pay-view.virtual-account, 
+.pay-view.account-transfer { padding-left:0; }
+.pay-view .pd-top { position:relative; padding-top:122px !important; }
+.pay-view .pd-top .card-opt { position:absolute; top:0; left:0; width:100%; height:92px; padding-left:236px; border-top:1px solid #ebebeb; border-bottom:1px solid #ebebeb; }
+.pay-view .pd-top .card-opt .radio-nav { position:absolute; top:50%; margin-top:-16px; }
+.pay-view.creditcard > div:not(.pd-top), .pay-view.creditcard > ul,
+.pay-view.virtual-account > div, .pay-view.account-transfer > div { padding-left:236px; }
+.pay-view.creditcard > .page-division, .pay-view.virtual-account > .page-division:not(.full-width),
+.pay-view.account-transfer > .page-division:not(.full-width) { width:calc(100% - 236px); margin-left:236px; }
+
+/* 신용카드 */
+.credit-card { display:block; overflow:hidden; margin-left:-5px; margin-right:-5px; }
+.credit-card > li { display:block; float:left; width:120px; height:90px; margin-left:5px; margin-right:5px; margin-bottom:10px; }
+.credit-card > li:after { content:''; display:block; clear:both; }
+.credit-card > li > button { width:100%; height:100%; background-size:contain !important; }
+.credit-card > li > button.samsung { background:url("https://www.samsung.com/sec/static/_images/common/credit-samsung.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-samsung-on.svg"); background-size:contain, 0% !important; }
+.credit-card > li > button.kb { background:url("https://www.samsung.com/sec/static/_images/common/credit-kb.svg"); }
+.credit-card > li > button.hyundai { background:url("https://www.samsung.com/sec/static/_images/common/credit-hyundai.svg"); }
+.credit-card > li > button.shinhan { background:url("https://www.samsung.com/sec/static/_images/common/credit-shinhan.svg"); }
+.credit-card > li > button.lotte { background:url("https://www.samsung.com/sec/static/_images/common/credit-lotte.svg"); }
+.credit-card > li > button.nh { background:url("https://www.samsung.com/sec/static/_images/common/credit-nh.svg"); }
+.credit-card > li > button.woori { background:url("https://www.samsung.com/sec/static/_images/common/credit-woori.svg"); }
+.credit-card > li > button.hana { background:url("https://www.samsung.com/sec/static/_images/common/credit-hana.svg"); }
+.credit-card > li > button.citi { background:url("https://www.samsung.com/sec/static/_images/common/credit-citi.svg"); }
+.credit-card > li > button.kakao { background:url("https://www.samsung.com/sec/static/_images/common/credit-kakao.svg"); }
+.credit-card > li > button.bc { background:url("https://www.samsung.com/sec/static/_images/common/credit-bc.svg"); }
+.credit-card > li > button.etc { background:url("https://www.samsung.com/sec/static/_images/common/credit-etc.svg"); }
+
+.credit-card > li.on > button.samsung { background:url("https://www.samsung.com/sec/static/_images/common/credit-samsung-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-samsung.svg"); }
+.credit-card > li.on > button.kb { background:url("https://www.samsung.com/sec/static/_images/common/credit-kb-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-kb.svg"); }
+.credit-card > li.on > button.hyundai { background:url("https://www.samsung.com/sec/static/_images/common/credit-hyundai-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-hyundai.svg"); }
+.credit-card > li.on > button.shinhan { background:url("https://www.samsung.com/sec/static/_images/common/credit-shinhan-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-shinhan.svg"); }
+.credit-card > li.on > button.lotte { background:url("https://www.samsung.com/sec/static/_images/common/credit-lotte-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-lotte.svg"); }
+.credit-card > li.on > button.nh { background:url("https://www.samsung.com/sec/static/_images/common/credit-nh-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-nh.svg"); }
+.credit-card > li.on > button.woori { background:url("https://www.samsung.com/sec/static/_images/common/credit-woori-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-woori.svg"); }
+.credit-card > li.on > button.hana { background:url("https://www.samsung.com/sec/static/_images/common/credit-hana-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-hana.svg"); }
+.credit-card > li.on > button.citi { background:url("https://www.samsung.com/sec/static/_images/common/credit-citi-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-citi.svg"); }
+.credit-card > li.on > button.kakao { background:url("https://www.samsung.com/sec/static/_images/common/credit-kakao-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-kakao.svg"); }
+.credit-card > li.on > button.bc { background:url("https://www.samsung.com/sec/static/_images/common/credit-bc-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-bc.svg"); }
+.credit-card > li.on > button.etc { background:url("https://www.samsung.com/sec/static/_images/common/credit-etc-on.svg"), url("https://www.samsung.com/sec/static/_images/common/credit-etc.svg"); }
+
+.credit-add .info-pay { width:428px; }
+
+.installment { margin-top:17px; max-width:450px; }
+.installment:after { content:''; display:block; clear:both; }
+.installment .dropdownMenu { float:left; margin-right:10px; width:320px; }
+.installment .dropdownMenu + a { float:right; margin:0; }
+
+/* u-POINT & 신용카드 */
+
+/* 간편결제 */
+.easy-pay { display:block; overflow:hidden; margin-top:10px; margin-left:-5px; margin-right:-5px; }
+.easy-pay > li { display:block; float:left; width:120px; height:90px; margin-left:5px; margin-right:5px; margin-bottom:10px; }
+.easy-pay > li:after { content:''; display:block; clear:both; }
+.easy-pay > li > button { width:100%; height:100%; background-size:contain !important; }
+.easy-pay > li > button.sspay { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-ssg.svg"); }
+.easy-pay > li > button.payco { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-payco.svg"); }
+.easy-pay > li > button.kakaopay { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-kakao.svg"); }
+.easy-pay > li > button.toss { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-toss.svg"); }
+.easy-pay > li > button.lpay { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-lpay.svg"); }
+
+.easy-pay > li.on > button.sspay { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-ssg-on.svg"); }
+.easy-pay > li.on > button.payco { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-payco-on.svg"); }
+.easy-pay > li.on > button.kakaopay { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-kakao-on.svg"); }
+.easy-pay > li.on > button.toss { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-toss-on.svg"); }
+.easy-pay > li.on > button.lpay { background-image:url("https://www.samsung.com/sec/static/_images/common/easy-lpay-on.svg"); }
+
+.pay-input-box-1 { position:relative; display:block; margin-top:20px; }
+.pay-input-box-1 .pay-input, .info-pay > li:nth-child(2) { display:inline-block; width:100%; max-width:428px; margin-right:10px; vertical-align:middle; }
+.pay-input-box-1 .pay-input .dropdownMenu { width:100%; }
+.pay-input-box-1 .btn-underline { position:absolute; right:0; top:7px; margin:0; }
+
+.pay-input-box-3 { clear:both; position:relative; display:block; width:100%; margin-bottom:14px; padding:0; padding-right:100px; }
+.pay-input-box-3 > .head-1 { position:relative; display:inline-block; left:initial; top:initial; width:37%; max-width:209px; vertical-align:top; }
+.pay-input-box-3 > .p-cont { display:inline-block; width:62%; max-width:356px; vertical-align:top; }
+.pay-input-box-3 > .p-cont .inp-box { width:100%; max-width:450px; }
+.pay-input-box-3 > .p-cont .inp-box input { width:100%; }
+.pay-input-box-3 > .p-cont .dropdownMenu { width:100%; max-width:450px; }
+.pay-input-box-3 > .p-cont .guide { margin-top:10px; font-size:12px; }
+.pay-input-box-3 > .p-cont .btn-underline { position:absolute; right:0; top:10px; }
+.pay-input-box-3 > .p-cont:not(.receipt) .chk-form { margin-top:10px; }
+.pay-input-box-3.first-block { margin-bottom:30px; padding-bottom:30px; border-bottom:1px solid #ebebeb; }
+
+.pay-input-box-3 .receipt .chk-form { padding:6px 0; }
+.pay-input-box-3 .receipt .radio-nav { margin-top:6px; }
+.pay-input-box-3 .receipt .wrap-droplist { margin-top:14px; }
+ 
+/* 주빈등록번호 */
+.resident-num, .card-num, .phone-num, .biz-num { margin-top:14px; }
+.resident-num .inp-box.front { position:relative; float:left; width:48%; padding-right:26px; }
+.resident-num .inp-box.front::after { content:""; position:absolute; top:50%; right:10px; display:block; width:6px; height:1px; background:#999; }
+.resident-num .inp-box.back { float:right; width:52%; }
+.resident-num .inp-box.back .inp-line { padding-right:30px; text-align:center; }
+.resident-num .inp-box.back .inp-lock, .card-num.inp-lock { background:url("https://www.samsung.com/sec/static/_images/common/icon-lock-black.svg") no-repeat calc(100% - 6px) 5px; background-size:18px 22px; }
+.resident-num .inp-line { text-align:center; border-bottom:none; }
+
+/* 카드번호 */
+.card-num { position:relative; padding-right:30px; border-bottom:1px solid #B2B2B2; }
+.card-num .inp-box { display:inline-block; }
+.card-num .inp-box:not(:nth-last-child(1)) { width:25.6% !important; }
+.card-num .inp-box:nth-last-child(1) { width:18% !important; }
+.card-num .inp-box:not(:nth-last-child(1)) { position:relative; padding-right:26px; }
+.card-num .inp-box:not(:nth-last-child(1))::after { content:""; position:absolute; top:50%; right:10px; display:block; width:6px; height:1px; background:#999; }
+.card-num .inp-line { text-align:center; border-bottom:none; }
+.card-num input:not([type=checkbox]):not([type=radio]).inp-line { border-bottom:none; letter-spacing:-1px; margin-top:-1px; }
+
+/* 200917 툴팁 추가 */
+.buy-target-goods .order-price .btn-downtool { /*position:absolute; right:0; bottom:0;*/ width:14px; height:14px; margin:1px 0 0 ; background:transparent url(https://www.samsung.com/sec/static/_images/common/icon-tooltip-down.svg) no-repeat center; background-size:14px auto; }
+.buy-target-goods .order-price .btn-downtool.opened { background:transparent url(https://www.samsung.com/sec/static/_images/common/icon-tooltip-up.svg) no-repeat center; background-size:14px auto; }
+.buy-target-goods .order-price .box-tip li ~ li:not(.total) { margin-top:6px; }
+.buy-target-goods .order-price .box-tip { display:none; /* position:absolute; right:-12px; top:85px; */ min-width:224px; margin-left:-77px; margin-top:-7px; padding:16px; border:1px solid #000; border-radius:10px; background:#fff; z-index:1; }
+.buy-target-goods.p-bespoke .order-price .btn-downtool { top: 106px; }
+.buy-target-goods.p-bespoke .order-price .box-tip { top: 127px; }
+.buy-target-goods.multi-order-tbl .order-multi:not(.top-item) .order-price .btn-downtool { top: 20px; }
+.buy-target-goods.multi-order-tbl .order-multi:not(.top-item) .order-price .box-tip { top: 41px; }
+.buy-target-goods .order-price .box-tip .tit, 
+.buy-target-goods .order-price .box-tip .price { display:inline-block; width:50%; color:#707070; font-size:14px; line-height:18px; }
+.buy-target-goods .order-price .box-tip .tit { text-align:left; }
+.buy-target-goods .order-price .box-tip .price { text-align:right; }
+.buy-target-goods .order-price .box-tip .total { padding-top:12px; margin-top:12px; border-top:1px solid #ddd; }
+.buy-target-goods .order-price .box-tip .total * { color:#000; font-weight:bold; }
+
+.buy-target-goods .cart-error-message { margin-bottom:10px; font-size:13px; color:#FF4337; text-align:left; }
+
+/** 포인트 적용 버튼 */
+.ul-area-membership-point .btn-type2 { min-width: 50px; margin-top: 5px; }
+.area-membership-point {position: absolute; right: 15%; font-size: inherit; /* top: 2px; */ bottom: 3px; }
+    
+.order-info-detail .btn-s { height: 24px; line-height: 24px; font-weight: normal; }
+.order-info-detail .btn-type2 { min-width: 50px; }
+.order-info-detail .btn-point { margin-left: 10px; margin-top: 5px; }
+
+#pointUseType2 .btn-cart-point-apply { margin-right: 19.7%; }
+
+@media screen and (max-width:1440px) and (min-width:1101px) {
+
+	/** 포인트 적용 버튼 */
+	#pointUseType2 .btn-cart-point-apply { margin-right: 17%; }
+	
+	.area-membership-point {position: absolute; right: 13%; font-size: inherit; top: 2px; }
+	.ul-area-membership-point .btn-type2 { min-width: 50px; margin-top: 0px !important; }
+	.order-info-detail .btn-type2 { min-width: 50px; line-height: 23px; }
+
+	/* 200917 툴팁 추가 */	
+	.buy-target-goods .order-price .btn-downtool {  right:0; top:5.8333vw; width:0.9722vw; height:0.9722vw; margin:0.0694vw 0 0; background:transparent url(https://www.samsung.com/sec/static/_images/common/icon-tooltip-down.svg) no-repeat center; background-size:0.9722vw auto; }
+	
+	.buy-target-goods .order-price .box-tip li ~ li:not(.total) { margin-top:0.4167vw; }
+	.buy-target-goods .order-price .box-tip {   right:-0.8333vw; top:7.2917vw; min-width:15.5556vw; padding:1.1111vw; border-radius:0.6944vw; background:#fff;  }
+	.buy-target-goods.p-bespoke .order-price .btn-downtool { top: 7.3vw; }
+	.buy-target-goods.p-bespoke .order-price .box-tip { top: 8.8194vw; }
+	.buy-target-goods.multi-order-tbl .order-multi:not(.top-item) .order-price .btn-downtool { top: 1.3889vw; }
+	.buy-target-goods.multi-order-tbl .order-multi:not(.top-item) .order-price .box-tip { top: 2.8472vw; }
+
+	.buy-target-goods .order-price .box-tip .tit, 
+	.buy-target-goods .order-price .box-tip .price {  width:50%;  font-size:0.9722vw; line-height:1.2500vw; }
+	.buy-target-goods .order-price .box-tip .total { padding-top:0.8333vw; margin-top:0.8333vw; }
+	.buy-target-goods .cart-error-message { margin-bottom:0.6944vw; font-size:0.9028vw; }
+	
+	
+    /* 한도 정보 */
+    .limit-info { margin-bottom:4.1667vw; }
+    .limit-info > h2 { padding-bottom:0.4167vw; font-size:1.3889vw; }
+    .limit-info-box { background:#fafafa; }
+    .limit-info-box:after { clear:both; }
+    .limit-info-box > dt { width:11.1111vw; padding:1.5972vw 1.3889vw 1.7361vw; line-height:1.25em; font-size:1.1111vw; letter-spacing:0; }
+    .limit-info-box > dd { width:calc(100% - 11.1111vw); padding:1.5972vw 1.3889vw 1.7361vw 0; font-size:0; }
+    .limit-info-box > dd span { line-height:1.25em; font-size:1.1111vw; letter-spacing:0; }
+    .limit-info-box > dd span ~ span { padding-left:2.7778vw; }
+    .limit-info-box > dd span em { margin-right:0.6944vw; padding-right:0.6944vw; letter-spacing:0; }
+    .limit-info-box > dd span em:after { top:50%; right:0; width:0.0694vw; height:0.8333vw; transform:translateY(-50%); background:#ddd; }
+    .limit-info-box > dd span strong { letter-spacing:0; }
+    .limit-info .info-type-1 { padding:1.6667vw 1.3889vw; }
+    .limit-info .info-type-1 > dt { line-height:1.3em; margin-bottom:1.5278vw; font-size:0.9722vw; letter-spacing:0; }
+    .limit-info .info-type-1 > dd p { font-size:0.9722vw; line-height:1.3em; letter-spacing:0; word-break:keep-all; }
+    .limit-info .info-type-1 > dd p ~ p { padding-top:0.4167vw; }
+    .limit-info .info-type-2 { padding:1.6667vw 1.3889vw; }
+    .limit-info .info-type-2:after { clear:both; }
+    .limit-info .info-type-2 .info-type-left { font-size:0.9722vw; letter-spacing:0; }
+    .limit-info .info-type-2 .info-type-left > em { margin-left:0.4167vw; font-size:inherit; letter-spacing:0; }
+    .limit-info .info-type-2 .info-type-right { line-height:1.29em; font-size:0.9722vw; letter-spacing:0; }
+
+    /* 결제정보 */
+    .order-content .payment-area { right:1.6667vw; top:8.3333vw; width:100%; max-width:22.9167vw; background:#fff; }
+    .order-excv .payment-area { top:8.8194vw; } /* 전담자몰 */
+    .order-content .payment-area > h2 { padding-bottom:0.4167vw; font-size:1.3889vw; }
+    .order-content .payment-area .payment-listup { padding:1.6667vw 0; }
+    .order-content .payment-area .payment-listup > li ~ li { margin-top:0.8333vw; }
+    .order-content .payment-area .payment-listup > li > span { width:50%; line-height:1.23em; font-size:1.1111vw; letter-spacing:0; }
+    .order-content .payment-area .cost-listup { padding-top:1.6667vw; }
+    .order-content .payment-area .cost-listup > li ~ li { margin-top:0.8333vw; }
+    .order-content .payment-area .cost-listup > li > span { width:50%; line-height:1.23em; font-size:1.1111vw; }
+    .order-content .payment-area .cost-listup > li > span .btn-tooltip { right:initial; top:initial; margin-left:0.2083vw; transform:none; }
+    .order-content .payment-area .cost-listup > li > span > strong { font-size:1.2500vw; }
+    .order-content .payment-area .cost-listup > li > .text > strong { font-size:1.6667vw; }
+    .order-content .payment-area .cost-listup > li:first-child { padding-top:0.4861vw; }
+    .order-content .payment-area .cost-listup > li:first-child > .head { line-height:1.36em; }
+    .order-content .payment-area .terms-box { margin-top:1.6667vw; padding-top:2.3611vw; }
+    .order-content .payment-area .terms-box > h2 { line-height:1.3em; padding-bottom:1.6667vw; font-size:1.3889vw; }
+    .order-content .payment-area .terms-box > .btn-terms-view { right:0; top:2.6389vw; padding-right:1.5278vw; font-size:0.9722vw; background:url("https://www.samsung.com/sec/static/_images/common/icon-drop-down.svg") no-repeat right center; }
+    .order-content .payment-area .terms-box > .on { background-image:url("https://www.samsung.com/sec/static/_images/common/icon-drop-up.svg")}
+    .order-content .payment-area .terms-box .chk-form ~ .chk-form { margin-top:1.1111vw; }
+    .order-content .payment-area .terms-box .terms-view .chk-form .btn-underline { bottom:0; right:0; margin:0; }
+    .order-content .payment-area .terms-box .chk-form label { padding-left:1.8056vw; padding-right:3.4722vw; line-height:1.3; word-break:keep-all; }
+    .order-content .payment-area .terms-box .chk-form label:before { left:0; top:0; margin-top:0; }
+    .order-content .payment-area .terms-box .chk-form:checked+label:before { top:0; }
+    .order-content .payment-area .terms-box .terms-view { margin-top:1.1111vw; padding:1.3889vw; background:#F7F7F7; }
+    .order-content .payment-area .terms-box .terms-view label.inp-box:not(:nth-last-child(1)) { padding-bottom:1.6667vw; }
+    .order-content .payment-area .btn { width:100%; margin:2.5000vw 0 0; font-size:1.2500vw; }
+    .order-content .payment-area .btn > strong {  margin-bottom:0.1389vw;  margin-right:0.4167vw;  font-size:inherit;  line-height:1em; }
+    .order-content .payment-area .btn > span {  margin-bottom:0.2083vw; font-size:inherit;  line-height:1em; }
+
+    /* 주문 layout */
+    .order-content { max-width:100.0000vw; padding:3.4722vw 28.4722vw 0 1.6667vw; }
+    .order-content > .tit-box { margin-bottom:2.7778vw; }
+    .order-content .order-area { margin-bottom:3.8889vw; }
+    .order-content .order-area:nth-last-child(1) { margin-bottom:0; }
+    .order-content .order-area > h2 { padding-bottom:0.4167vw; line-height:1.3em; font-size:1.3889vw; }
+    .order-content .order-tbl { width:100%; /* border-bottom:0.0694vw solid #eaeaea; */ }
+    .order-content .order-tbl .order-td { padding:2.7778vw 0; }
+    .order-content .order-tbl .order-image { width:21.5%; padding-right:1.6667vw; }
+    .order-content .order-tbl .order-spec { width:24.8%; padding-right:1.6667vw; }
+    .order-content .order-tbl .order-select { width:25.2%; }
+    .order-content .order-tbl .order-count { width:15%; padding-right:1.6667vw; padding-left:1.6667vw;  line-height:1.4583vw; }
+    .order-content .order-tbl .order-price { width:13.5%; }
+
+    /* 주문 : 사진 */
+    .order-content .order-tbl .order-image .photo { width:100%; height:100%; margin:0 auto; }
+    .order-content .order-tbl .order-image .photo a { width:100%; height:100%; margin:0 auto; vertical-align:top; }
+    .order-content .order-tbl .order-image .photo .img-pc { margin:auto; }
+
+    /* 주문 : 제품 정보 */
+    .order-content .order-spec-group .ico-group-t {  margin-bottom:0.4167vw; font-size:0; }
+    .order-content .order-spec-group .ico-group-t > span { height:auto; line-height:1.34em; letter-spacing:0; border-radius:0; }
+    .order-content .order-spec-group .ico-group-t > span ~ span { margin-left:0.4167vw; }
+    .order-content .order-spec-group .ico-group-t .ico-b { min-width:auto; padding:0; border:0; }
+    .order-content .order-spec-group .ico-group-t .ico-t { min-width:auto; padding:0; border:0; }
+    .order-content .order-spec-group .ico-group-t .ico-t > .btn-tooltip { width:1.3889vw; height:100%; font-size:0.0694vw; opacity:0.6; background:url("https://www.samsung.com/sec/static/_images/common/icon-tooltip4.svg") no-repeat center center; }
+    .order-content .order-spec-group .o-title { word-break:keep-all; }
+    .order-content .order-spec-group .o-title a { font-size:1.1111vw; line-height:1.36em; letter-spacing:0; }
+    .order-content .order-spec-group .o-label { margin-top:0.2778vw; font-size:0.8333vw; line-height:1.34em; letter-spacing:0; }
+    .order-content .order-spec-group .ico-group { margin-top:1.3889vw; }
+    .order-content .order-spec-group .ico-group .o-spec span { font-size:0.8333vw; line-height:1.34em; letter-spacing:0; }
+    .order-content .order-spec-group .ico-group .o-spec span.end { margin-right:0.6944vw; }
+    .order-content .order-spec-group .ico-group .o-spec .btn-option { min-width:4.2361vw; height:1.3889vw; line-height:1.3889vw; font-size:0.8333vw; background:#000; border-radius:0.6944vw; }
+    .order-content .order-spec-group .o-telecom { margin-top:1.3889vw; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 { line-height:1.6667vw; font-size:0; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li ~ li { margin-left:0.6944vw; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li label { height:1.6667vw; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li label span { min-width:3.4722vw; height:1.6667vw; line-height:1.5972vw; padding:0 1.0417vw; font-size:0.8333vw; }
+	.order-content .order-spec-group .o-telecom + .ico-group { margin-top:0.6944vw; }
+
+    /* 주문 : 제품 가격 */
+    .order-content .order-tbl .order-count span { line-height:1.5em; font-size:1.1111vw; letter-spacing:0; }
+    .order-content .order-tbl .order-price .price-small { line-height:1.33em; margin-bottom:0.1389vw; font-size:1.1111vw; letter-spacing:0; }
+    .order-content .order-tbl .order-price .price-small:after { left:0; right:0; top:40%; width:100%; height:0.0694vw; background:#A6A6A6; }
+    .order-content .order-tbl .order-price .price-big { line-height:1.32em; font-size:1.1111vw; letter-spacing:0; }
+
+    /* 주문 : 사은품/쿠폰 */
+    .order-content .order-select .select-noti { width:100%; padding:0.3472vw 0 0.4167vw; font-size:0.9722vw; line-height:1.3194vw; }
+    .order-content .order-select .select-noti.coupone { margin-top:0.6944vw; }
+
+    .order-content .order-select .gifts-select { height:2.7778vw; line-height:2.7778vw; padding:0 2.5000vw 0 2.7778vw; border-radius:0.6944vw; }
+    .order-content .order-select .gifts-select ~ .gifts-select { margin-top:0.4167vw; }
+    .order-content .order-select .gifts-select .imgs { top:50%; left:0.6944vw; width:1.6667vw; height:1.6667vw; transform:translateY(-50%); background:#DFDFDF; border-radius:0.1389vw; }
+    .order-content .order-select .gifts-select .imgs img { width:100%; }
+    .order-content .order-select .gifts-select .names { font-size:0.9722vw; letter-spacing:0; white-space:nowrap; }
+    .order-content .order-select .gifts-select .btn-del { right:0.6944vw; top:50%; width:1.1111vw; height:1.1111vw; background:url("https://www.samsung.com/sec/static/_images/common/icon-del-s.svg") no-repeat center center; transform:translateY(-50%); background-size:1.1111vw auto; }
+    .order-content .order-select .gifts-coupone { padding-left:0.6944vw; }
+    .order-content .order-select .order-select-menu ~ .order-select-menu { margin-top:0.6944vw; }
+    .order-content .order-select .order-select-menu .droplist { width:22.7778vw; }
+    .order-content .order-select .order-select-menu.active .droplist { padding:0.9722vw 0; }
+    .order-content .order-select .order-select-menu .link-gift { line-height:2.6389vw; padding-left:2.7778vw; padding-right:7.0833vw; }
+    .order-content .order-select .order-select-menu .link-gift > span { font-size:0.9722vw; }
+    .order-content .order-select .order-select-menu .link-gift > .imgs { left:0.9722vw; top:50%; width:1.3889vw; height:1.3889vw; transform:translateY(-50%); }
+    .order-content .order-select .order-select-menu .link-gift > .names { white-space:nowrap; }
+    .order-content .order-select .order-select-menu .link-gift > .dates { right:0.9722vw; top:50%; line-height:1; transform:translateY(-50%); }
+    .order-content .order-select .order-select-menu .link-gift.link-coupon { padding-left:1.3889vw; padding-right:1.3889vw; }
+    .order-content .order-select .order-select-menu .droplist-button .link-gift { padding-left:1.8056vw; padding-right:0; }
+    .order-content .order-select .order-select-menu .droplist-button .link-gift > .imgs { left:0; }
+
+    .order-content .order-select-list.omni-coupon {  padding:0.8333vw 0.6944vw 0.6944vw; background:transparent; }
+    .order-content .order-select-list.omni-coupon .gifts-coupone { padding:0.7639vw 1.8056vw 0.7639vw 0.6944vw; background:#EFF7FF; border-radius:0.6944vw; line-height:1.2500vw; }
+    .order-content .order-select-list.omni-coupon .names .tag {  width:5.9722vw; margin-right:0.6944vw; font-size:0.9722vw;   line-height:1.2500vw; }
+
+    /* 비스포크 */
+    .order-content .order-tbl .order-spec-group ~ .pc-bespoke { margin-top:2.9167vw; }
+
+    /* 정기 배송 */
+    .input-type-small-2 { width:100%; max-width:24.5833vw; }
+
+    /* 배송,할인,포인트,결제수단 */
+    .order-info-box > li { padding:2.0833vw 0; padding-left:16.3889vw; }
+    .order-info-box > li.sale-li { margin-bottom:0; padding-right:0; border-bottom:0; }
+    .order-info-box > li.deco { padding-bottom:2.0833vw !important; }
+
+    .order-info-box > li:nth-last-child(1) { margin-bottom:0; padding-bottom:0; border-bottom:0; }
+    .order-info-box .head { left:0; top:2.0833vw; width:18%; max-width:8.1944vw; padding:0.5556vw 0; }
+    .order-info-box .order-btn { right:0; top:2.0833vw; padding:0.5556vw 0; }
+    .order-info-box > li .inp-inactive { pointer-events:none; }
+    .order-info-box > li .opt-primary { margin-bottom:1.6667vw; padding-bottom:1.6667vw; }
+
+    .order-info-box-2 { padding:2.0833vw 0; }
+    .order-info-box-2 > li { margin-bottom:0.9722vw; padding:0; padding-left:16.3889vw; }
+    .order-info-box-2 li:nth-last-child(1) { margin-bottom:0; }
+    .order-info-box-2 > li.deco { margin-bottom:2.0833vw; /* padding-bottom:2.0833vw; */ }
+    .order-info-box-2 .head { left:0; top:-0.1389vw; width:18%; max-width:8.1944vw; padding:0.5556vw 0; }
+    .order-info-box-2 .order-btn { right:0; top:2.0833vw; padding:0.5556vw 0; }
+    .order-info-box-2 .order-btn .btn-s { height:1.9444vw; line-height:1.9444vw; margin:0; }
+    .order-info-box-2 li li { margin-bottom:0; }
+    .order-info-box-2 .event-code-li { padding-top:1.6667vw; }
+    .order-info-box-2 .event-code-li .head, .order-info-box-2 .event-code-li .btn-info-sale { top:1.6667vw !important; }
+
+    .order-info-inner { width:100%; margin-bottom:0.8333vw; padding:0.7639vw 0; }
+    .order-info-inner:nth-last-child(1) { margin-bottom:0; }
+    .order-info-inner-maxwidth-1 { max-width:32.3611vw; }
+    .order-padding-none { padding-top:0; padding-bottom:0; }
+    .order-padding-none-t { padding-top:0; }
+    .order-padding-none-b { padding-bottom:0; }
+    .order-info-inner span:after { width:0.0694vw; height:0.6944vw; margin:0 1.3889vw; background:#d9d9d9; }
+
+    .order-content .order-box { padding:0; }
+    .order-content .order-box:nth-last-child(1) { border-bottom:0; }
+    .order-content .tab-nav { margin-bottom:1.3889vw; }
+    .order-content .tab-nav ul:after { clear:both; }
+    .order-content .tab-nav li { margin-right:0.6944vw; }
+    .order-content .tab-nav li:nth-last-child(1) { margin-right:0; }
+    .order-content .tab-nav li button { width:8.3333vw; height:2.7778vw; margin:0; font-size:0.9722vw; border-radius:1.3889vw; }
+    .order-content .tab-nav li .on { background:#000; }
+
+    .order-content .radio-nav .chk-form { padding:0.4167vw 0; }
+    .order-content .radio-nav + .use-type-1 { margin-top:2.0833vw; }
+    .order-content .radio-nav + .use-type-2 { margin-top:1.6667vw; padding-top:1.6667vw; }
+
+    .order-content .sale-option { width:100%; }
+    .order-content .sale-option .head { width:30%; }
+    .order-content .sale-option .result { width:65%; }
+    .order-content .sale-option .result-input { margin-top:-0.6944vw; }
+    .order-content .sale-option .result .dropdownMenu { margin-right:0.6944vw; margin-bottom:0; }
+
+    .order-content .btn-listup:after { clear:both; }
+    .order-content .btn-listup .btn:nth-child(1) { margin-left:0; }
+
+    .order-content .tip-add { width:100%; padding-right:2.0833vw; } 
+    .order-content .btn-tooltip { right:0; top:50%; width:1.2500vw; height:1.2500vw; font-size:0; background:#fff url("https://www.samsung.com/sec/static/_images/common/icon-tooltip-2.svg") no-repeat center center; background-size:1.2500vw auto; border-radius:50%; transform:translateY(-50%); }
+    .order-content .info-ul, .order-content .fnet-info-ul { margin:1.7361vw 0 0 16.3889vw; }
+    .order-content .info-ul > li { padding:0.3472vw 0; padding-left:0.9722vw; font-size:0.9722vw; line-height:1.3; word-break:keep-all; }
+    .order-content .fnet-info-ul > li {margin-bottom:0.9999vw; font-size:0.9722vw;}
+    .order-content .info-ul > li:before { left:0; top:0.3472vw; content:"※"; }
+
+    .order-content .delivery-box { width:100%; max-width:39.3056vw; margin-bottom:2.0833vw; padding:2.0833vw; border-radius:1.3889vw; }
+    .order-content .delivery-box > dt { font-size:1.3889vw; line-height:1.8056vw; }
+    .order-content .delivery-box > dt > span { font-size:0.9722vw; line-height:1.3889vw; }
+    .order-content .delivery-type-3 > dd { padding-bottom:0; }
+    .order-content .delivery-box > dd > div { width:100%; }
+    .order-content .delivery-box > dd > .wrap-droplist:not(.plus-details) { margin-top:1.3889vw; }
+    .order-content .delivery-box > dd .seg-check-form { width:100%; padding:1.6667vw 0; }
+    .order-content .delivery-box > dd .seg-dropdownMenu { width:100%; }
+    .order-content .delivery-box > dd .seg-input { width:100%; margin-top:1.3889vw; }
+    .order-content .delivery-box > dd .seg-details { padding:1.1111vw; background:#F7F7F7; font-size:0.9722vw; line-height:1.4583vw; }
+    .order-content .delivery-box > dd .search-store input { width:calc(100% - 6.9444vw); }
+    .order-content .delivery-box > dd .search-store button { right:0; top:50%; margin:0; transform:translateY(-50%); }
+    .order-content .delivery-box .info-extra { margin-top:1.3889vw; }
+
+    .empty-cart { min-height:13.8889vw; background:#f7f7f7; }
+    .empty-cart .empty-text { left:50%; top:50%; font-size:1.1111vw; transform:translate(-50%, -50%); }
+    .empty-cart .empty-text:before { width:2.4306vw; height:1.8056vw; margin-right:0.6944vw; background:url("https://www.samsung.com/sec/static/_images/common/icon-cart.svg") no-repeat center center; }
+
+    .pick-store .inp-line { width:100%; }
+    .pick-store .inp-select-store { width:calc(100% - 7.6389vw) !important; margin-bottom:0.3472vw; }
+    .pick-store .btn { min-width:6.9444vw; margin:0; }
+
+    .order-info-detail { width:100%; max-width:39.3056vw; }
+    .order-info-detail > li { min-height:2.2222vw; margin-bottom:0.8333vw; padding:0.4167vw 0; }
+    .order-info-detail > li:nth-last-child(1) { margin-bottom:0; }
+    .order-info-detail li, .order-info-detail li > span { font-size:0.9722vw; }
+    .order-info-detail .cols-2 { width:50%; }
+    .order-info-detail .cols-3 { width:33%; }
+    .order-info-detail .cols-4 { width:25%; }
+    .order-info-detail .cols-5 { width:20%; }
+    .order-info-detail .cols-clear { clear:both; }
+    .order-info-detail .cols-another { width:auto; }
+    .order-info-detail .cols-3-another { width:67%; }
+    .order-info-detail .cols-4-another { width:75%; }
+    .order-info-detail .cols-5-another { width:80%; }
+    .order-info-detail .cols-inline2:after { width:0.0694vw; height:0.6944vw; margin:0 1.3889vw; background:#d9d9d9; }
+    .order-info-detail .gift-select { width:100%; }
+    .order-info-detail .gift-select .dropdownMenu { width:100%; }
+    .order-info-detail .anther-service-input { width:100%; }
+    .order-info-detail .coupon-entry { width:100%; margin-right:0.8333vw; }
+    .order-info-detail .padding-none { padding-top:0; padding-bottom:0; }
+    .order-info-detail .d-padding-add { margin-top:0.4167vw; padding:0.7639vw 0; font-size:inherit; }
+
+    .order-info-detail.use-type-1, .order-info-detail.use-type-2 { max-width:100%; }
+    /* .order-info-detail.use-type-1 > li { max-width:43.4722vw; } */
+    .order-info-detail.use-type-1 > li, .order-info-detail.use-type-2 > li { max-width:39.3056vw; }
+
+    /* UL : 주문자 정보변경 / 매장선택 */
+    .input-type-small { width:100%; max-width:39.3056vw; } 
+    .input-type-ul > li, .input-type-div > div { min-height:2.2222vw; margin-bottom:1.3889vw; padding:0; }
+    .input-type-ul > li:nth-last-child(1) { margin-bottom:0; }
+    .input-type-ul > li.input-obj, .input-type-div > div.input-obj { padding-left:37%; }
+    .input-type-ul > li.h-auto { min-height:auto; }
+    .input-type-ul .s-head, .input-type-div .s-head { left:0; width:37%; padding:0.6944vw 0; }
+    .input-type-ul .select-btn { padding-right:7.0833vw; }
+    .input-type-ul .select-btn button { right:0;top:0; }
+    .input-type-ul .dropdownMenu { width:100%; }
+    .input-type-ul .dropdownMenu li { padding-left:initial; }
+
+    /* 할인혜택 */
+    .discount-area .order-info-box-2 .head { width:7.8472vw; }
+    .discount-area .order-info-box-2 .price { font-size:1.1111vw; }
+
+    /* 포인트 사용 */
+    .point-area .order-info-box-2 .head { width:7.8472vw; }
+    .point-area .order-info-box-2 .use-type-1 > li { padding:2.0833vw; border-radius:1.3889vw; }
+    .point-area .order-info-box-2 .use-type-1 > li:not(:nth-last-child(1)) { margin-bottom:2.0833vw; }
+    .point-area .order-info-box-2 .use-type-2 > li:not(:nth-last-child(1)) { margin-bottom:0.9722vw; }
+
+    /* .point-area .point-inline-1 { width:37%; } */
+    .point-area .point-inline-1 {   width:calc(38% - 3.7917vw); margin-right:3.5833vw; padding-right:5.5556vw; top: 12px; }
+    .point-area .point-inline-1 .use-tit { width:auto; padding-right:0.2083vw; }
+    .point-area .point-inline-2, .point-area .point-inline-3 { width:62%; }
+
+    .point-area div.inp-point { width:calc(100% - 7.7083vw); height:2.2222vw; padding-right:1.2500vw; }
+    .point-area div.inp-point::before { bottom:0; left:0; right:0; height:0.0694vw; background:#B2B2B2; }
+    .point-area div.inp-point::after { top:0.6250vw; right:0.3472vw; font-size:0.9722vw; }
+    .point-area div.inp-point .inp-line { border-bottom:none; }
+
+    .point-area .point-line-1 { padding:0.6944vw; font-size:1.1111vw; line-height:1.3889vw; background:#F7F7F7; }
+    .point-area .point-line-1 em { margin-left:0.3472vw; padding-left:0.6944vw; }
+    .point-area .point-line-1 em::before { top:0.3472vw; left:0; width:0.0694vw; height:0.8333vw; background:#ddd; }
+    .point-area .point-line-2 { -ms-flex-direction:row; flex-direction:row; -ms-flex:1 1 auto; flex:1 1 auto; padding-top:1.6667vw; }
+    .point-area .point-line-2 .pd-info {  width:calc(100% - 11.1111vw - 4.5833vw); margin-right:2.554vw;   line-height:1.4583vw; }
+    .point-area .point-line-2 .pd-info .sub-info { margin-top:0.4167vw; font-size:0.8333vw; line-height:1.3889vw; }
+
+    .point-area .point-line-2 .inp-point { /*width:47%;*/ width:7.8232vw; }
+
+    .point-ment { width:100%; max-width:38.1944vw; margin:2.0833vw auto 0; padding:0.6944vw 0; font-size:1.1111vw; line-height:1.4583vw; }
+    .point-ment .btn { right:0; top:0; margin:0; }
+
+    .order-info-detail .inp-basic { width:100%; }
+
+    .deco.extra-service .order-info-detail.info-extra > li > span.tooltip-add { margin-top:0.6944vw; }
+    .order-info-detail .tooltip-add { width:37%; }
+    .order-info-detail .tooltip-add .btn-tip { left:6.5278vw; top:50%; width:1.2500vw; height:1.2500vw; font-size:0; background:#fff url("https://www.samsung.com/sec/static/_images/common/icon-tooltip-2.svg") no-repeat center center; background-size:1vw 1vw; border-radius:50%; transform:translateY(-50%); }
+    /* .order-info-detail .inp-form { width:62%; } */
+    .order-info-detail .inp-form > .chk-form { width:40%; }
+
+    .order-info-detail em { font-size:inherit; }
+    .order-info-detail .clear-both { clear:both; }
+    .order-info-detail .inp-block > label { left:0; top:0; margin-bottom:0.7639vw; }
+    .order-info-detail .inp-block input:not([type=checkbox]):not([type=radio]) { width:100%; }
+    .order-info-detail .chk-view { /*width:62%;*/ margin:0 0 0 auto; margin-top:0.6944vw; }
+    .order-info-detail .chk-view .dropdownMenu { width:100%; margin-bottom:0.6944vw; }
+
+    .order-info-detail .chk-view .wrap-droplist { margin-bottom:0.6944vw; }
+
+    .info-sale:after { clear:both; }
+    .info-sale > li .account-types > li { padding-left:0; }
+    .info-sale > li:nth-child(1) { width:37%; }
+    .info-sale > li:nth-child(2) { width:63%; }
+    .btn-info-sale { top:0 !important; }
+
+    /* 임직원 인증 */
+    .inp-button-combo-box { padding-right:7.0833vw; }
+    .inp-button-combo-box > button { right:0;top:0;max-width:6.3889vw; margin:0; padding-left:0.5556vw; padding-right:0.5556vw; }
+    .inp-button-combo-box + .combo-guide { margin-top:0.9722vw; font-size:0.9722vw; line-height:1.2500vw; }
+
+    /* 결제수단 : 결제 형태 */
+    .order-content .pay-info { margin-bottom:0; }
+    .pay-info .order-info-box > li:not(.card-opt) { border-bottom:none; }
+    .pay-info .order-info-box .pay-input-result { padding:0.4167vw 0; }
+    .pay-info .order-info-box .pay-input-result strong { line-height:1.3889vw; }
+    .pay-info .caution-list { margin-top:2.0833vw; }
+    .pay-info .caution-list li { padding-left:0.4167vw; text-indent:-0.4167vw; font-size:0.9722vw; line-height:1.3889vw; }
+    .pay-info .caution-list li:not(:nth-child(1)) { margin-top:0.9722vw; }
+    .pay-info .caution-list li em { font-size:inherit; }
+
+    .pay-nav-box > .pay-nav-box-left { width:17.3611vw; max-width:17.3611vw; height:100%; }
+    .pay-nav-box > .pay-nav-box-right { width:calc(100% - 17.3611vw); max-width:35.4167vw; height:100%; }
+    .pay-nav-box:after, .pay-nav-box > .pay-nav-box-left:after, .pay-nav-box > .pay-nav-box-right:after { clear:both; }
+
+    .pay-nav-box > .pay-nav-bottom { clear:both; padding-top:1.3889vw; }
+
+    .pay-nav-box .pay-method-pay { width:100%; height:6.5972vw; font-size:0; background:url("https://www.samsung.com/sec/static/_images/common/samsung-pay.svg") no-repeat center top; background-size:100%; }
+    .pay-nav-box .pay-method-pay.on { background-image:url("https://www.samsung.com/sec/static/_images/common/samsung-pay-on.svg"); }
+    .pay-nav-box .pay-tab-nav ul:after { clear:both; }
+    .pay-nav-box .pay-tab-nav ul li { width:11.1111vw; height:2.7778vw; margin-left:0.3472vw; margin-right:0.3472vw; margin-bottom:0.6944vw; }
+    .pay-nav-box .pay-tab-nav ul li button { width:100%; height:100%; font-size:0.9722vw; background:#fff; border-radius:1.3889vw; }
+    .pay-nav-box .pay-tab-nav ul li button.on { background:#212425; border:0; }
+
+    .pay-input-check { clear:both; margin-top:1.6667vw; }
+    .pay-view > .pay-input-check + .pay-input-check { margin-top:0.8333vw; }
+
+    .pay-input-check .pay-check { padding-top:0.8333vw; }
+    .pay-input-check .pay-check:first-child { padding-top:0; }
+    .pay-input-check-none { margin-top:0; }
+    .page-division { width:100%; margin-top:2.0833vw; margin-bottom:2.0833vw; }
+
+    .info-pay { margin-top:1.3889vw; }
+    .info-pay:after { clear:both; }
+    .info-pay > li .account-types > li { padding-left:0; }
+    .info-pay > li:nth-child(1) { width:37%; }
+    .info-pay > li:nth-child(2) { width:63%; }
+    .btn-info-pay { top:0 !important; }
+
+    /* 결제 수단 */
+    .pay-view { margin-top:0; padding-top:0 !important; padding-bottom:0 !important; }
+    /* .pay-view.basic .pay-input-box-1 { padding-bottom:2.0833vw; } */
+    /* .pay-view.basic > .pay-input-check { margin-top:0.6944vw; } */
+    .pay-view.creditcard, .pay-view.virtual-account, 
+    .pay-view.account-transfer { padding-left:0; }
+    .pay-view .pd-top { padding-top:8.4722vw !important; }
+    .pay-view .pd-top .card-opt { top:0; left:0; width:100%; height:6.3889vw; padding-left:16.3889vw; border-bottom:0.0694vw solid #ebebeb; }
+    .pay-view .pd-top .card-opt .radio-nav { top:50%; margin-top:-1.1111vw; }
+    .pay-view.creditcard > div:not(.pd-top), .pay-view.creditcard > ul, .pay-view.virtual-account > div, .pay-view.account-transfer > div { padding-left:16.3889vw; }
+    .pay-view.creditcard > .page-division, .pay-view.virtual-account > .page-division:not(.full-width),
+    .pay-view.account-transfer > .page-division:not(.full-width) { width:calc(100% - 16.3889vw); margin-left:16.3889vw; }
+
+    /* 신용카드 */
+    .credit-card { margin-left:-0.3472vw; margin-right:-0.3472vw; }
+    .credit-card > li { width:8.3333vw; height:6.2500vw; margin-left:0.3472vw; margin-right:0.3472vw; margin-bottom:0.6944vw; }
+
+    .installment { margin-top:1.1806vw; max-width:31.2500vw; }
+    .installment:after { clear:both; }
+    .installment .dropdownMenu { margin-right:0.6944vw; width:22.2222vw; }
+    .installment .dropdownMenu + a { margin:0; }
+
+    /* 간편결제 */
+    .easy-pay { margin-top:0.6944vw; margin-left:-0.3472vw; margin-right:-0.3472vw; }
+    .easy-pay > li { width:8.3333vw; height:6.2500vw; margin-left:0.3472vw; margin-right:0.3472vw; margin-bottom:0.6944vw; }
+
+    .pay-input-box-1 { margin-top:1.3889vw; }
+    .pay-input-box-1 .pay-input, .info-pay > li:nth-child(2) { width:21.6667vw; margin-right:0.6944vw; }
+    .pay-input-box-1 .pay-input .dropdownMenu { width:100%; }
+    .pay-input-box-1 .btn-underline { right:0; top:0.4861vw; margin:0; }
+
+    .pay-input-box-3 { clear:both; width:100%; margin-bottom:0.9722vw; padding:0; padding-right:6.9444vw; }
+    .pay-input-box-3 > .head-1 { left:initial; top:initial; width:37%; max-width:14.5139vw; }
+    .pay-input-box-3 > .p-cont { width:62%; max-width:24.7222vw; }
+    .pay-input-box-3 > .p-cont .inp-box { width:100%; max-width:31.2500vw; }
+    .pay-input-box-3 > .p-cont .inp-box input { width:100%; }
+    .pay-input-box-3 > .p-cont .dropdownMenu { width:100%; max-width:31.2500vw; }
+    .pay-input-box-3 > .p-cont .guide { margin-top:0.6944vw; font-size:0.8333vw; }
+    .pay-input-box-3 > .p-cont .btn-underline { right:0; top:0.6944vw; }
+    .pay-input-box-3 > .p-cont:not(.receipt) .chk-form { margin-top:0.6944vw; }
+    .pay-input-box-3.first-block { margin-bottom:2.0833vw; padding-bottom:2.0833vw; }
+
+    .pay-input-box-3 .receipt .chk-form { padding:0.4167vw 0; }
+    .pay-input-box-3 .receipt .radio-nav { margin-top:0.4167vw; }
+    .pay-input-box-3 .receipt .wrap-droplist { margin-top:0.9722vw; }
+    
+    /* 주빈등록번호 */
+    .resident-num, .card-num, .phone-num, .biz-num { margin-top:0.9722vw; }
+    .resident-num .inp-box.front { width:48%; padding-right:1.8056vw; }
+    .resident-num .inp-box.front::after { top:50%; right:0.6944vw; width:0.4167vw; height:0.0694vw; background:#999; }
+    .resident-num .inp-box.back { width:52%; }
+    .resident-num .inp-box.back .inp-line { padding-right:2.0833vw; }
+    .resident-num .inp-box.back .inp-lock, .card-num.inp-lock { background:url("https://www.samsung.com/sec/static/_images/common/icon-lock-black.svg") no-repeat calc(100% - 0.4167vw) 0.3472vw; background-size:1.2500vw 1.5278vw; }
+    .resident-num .inp-line { border-bottom:none; }
+
+    /* 카드번호 */
+    .card-num { padding-right:2.0833vw; }
+    .card-num .inp-box:not(:nth-last-child(1)) { width:25.6% !important; }
+    .card-num .inp-box:nth-last-child(1) { width:18% !important; }
+    .card-num .inp-box:not(:nth-last-child(1)) { padding-right:1.8056vw; }
+    .card-num .inp-box:not(:nth-last-child(1))::after { top:50%; right:0.6944vw; width:0.4167vw; height:0.0694vw; background:#999; }
+    .card-num .inp-line { border-bottom:none; }
+    .card-num input:not([type=checkbox]):not([type=radio]).inp-line { border-bottom:none; letter-spacing:-0.0694vw; margin-top:-0.0694vw; }
+
+}
+
+@media screen and (max-width:1100px) and (min-width:801px) {
+	/** 포인트 적용 버튼 */
+	#pointUseType2 .btn-cart-point-apply { margin-right: 0px; }
+	
+	.ul-area-membership-point { float: right; margin-top: 5px; }
+    .area-membership-point { position: initial; top: initial; }
+    .order-info-detail .btn-s { height: 22px !important; line-height: 21px !important; }
+    .ul-area-membership-point .btn-type2 { margin-top: 0px; }
+    
+	/* 200917 툴팁 추가 */
+	.buy-target-goods .order-price .btn-downtool {  right:0; top:7.6364vw; width:1.2727vw; height:1.2727vw; margin:0.0909vw 0 0; background:transparent url(https://www.samsung.com/sec/static/_images/common/icon-tooltip-down.svg) no-repeat center; background-size:1.2727vw auto; }
+	.buy-target-goods .order-price .box-tip li ~ li:not(.total) { margin-top:0.5455vw; }
+	.buy-target-goods .order-price .box-tip {   right:-1.0909vw; top:9.5455vw; min-width:20.3636vw; padding:1.4545vw; border-radius:0.9091vw; background:#fff;  }
+	.buy-target-goods.p-bespoke .order-price .btn-downtool { top: 10.9364vw; }
+	.buy-target-goods.p-bespoke .order-price .box-tip { top: 12.8455vw; }
+	.buy-target-goods.multi-order-tbl .order-multi:not(.top-item) .order-price .btn-downtool { top: 1.8182vw; }
+	.buy-target-goods.multi-order-tbl .order-multi:not(.top-item) .order-price .box-tip { top: 3.7273vw; }
+
+	.buy-target-goods .order-price .box-tip .tit, 
+	.buy-target-goods .order-price .box-tip .price {  width:50%;  font-size:1.2727vw; line-height:1.6364vw; }
+	.buy-target-goods .order-price .box-tip .total { padding-top:1.0909vw; margin-top:1.0909vw; }
+	.buy-target-goods .cart-error-message { margin-bottom:0.9091vw; font-size:1.1818vw; }
+	
+    /* 한도 정보 */
+    .limit-info { margin-bottom:5.4545vw; }
+    .limit-info > h2 { padding-bottom:0.5455vw; font-size:1.8182vw; }
+    .limit-info-box { background:#fafafa; }
+    .limit-info-box:after { clear:both; }
+    .limit-info-box > dt { width:11.5455vw; padding:2.0909vw 1.8182vw 2.2727vw; line-height:1.25em; font-size:1.4545vw; letter-spacing:0; }
+    .limit-info-box > dd { width:calc(100% - 11.5455vw); padding:2.0909vw 1.8182vw 2.2727vw 0; font-size:0; }
+    .limit-info-box > dd span { line-height:1.25em; font-size:1.4545vw; letter-spacing:0; }
+    .limit-info-box > dd span ~ span { padding-left:3.6364vw; }
+    .limit-info-box > dd span em { margin-right:0.9091vw; padding-right:0.9091vw; letter-spacing:0; }
+    .limit-info-box > dd span em:after { background:transparent; }
+    .limit-info-box > dd span strong { letter-spacing:0; }
+    .limit-info .info-type-1 { padding:2.1818vw 1.8182vw; }
+    .limit-info .info-type-1 > dt { line-height:1.3em; margin-bottom:2.0000vw; font-size:1.2727vw; letter-spacing:0; }
+    .limit-info .info-type-1 > dd p { font-size:1.2727vw; line-height:1.3em; letter-spacing:0; word-break:keep-all; }
+    .limit-info .info-type-1 > dd p ~ p { padding-top:0.5455vw; }
+    .limit-info .info-type-2 { padding:2.1818vw 1.8182vw; }
+    .limit-info .info-type-2 .info-type-left { font-size:1.2727vw; letter-spacing:0; }
+    .limit-info .info-type-2 .info-type-left > em { margin-left:0.5455vw; font-size:inherit; letter-spacing:0; }
+    .limit-info .info-type-2 .info-type-right { line-height:1.29em; font-size:1.2727vw; letter-spacing:0; }
+
+    /* 결제정보 */
+    .order-content .payment-area { right:2.1818vw; top:10.9091vw; width:100%; max-width:30.0000vw;background:#fff; }
+    .order-excv .payment-area { top:11.5455vw; } /* 전담자몰 */
+    .order-content .payment-area > h2 { padding-bottom:0.5455vw; font-size:1.8182vw; }
+    .order-content .payment-area .payment-listup { padding:2.1818vw 0; }
+    .order-content .payment-area .payment-listup > li ~ li { margin-top:1.0909vw; }
+    .order-content .payment-area .payment-listup > li > span { width:50%; line-height:1.23em; font-size:1.4545vw; letter-spacing:0; }
+    .order-content .payment-area .cost-listup { padding-top:2.1818vw; }
+    .order-content .payment-area .cost-listup > li ~ li { margin-top:1.0909vw; }
+    .order-content .payment-area .cost-listup > li > span { width:50%; line-height:1.23em; font-size:1.4545vw; }
+    .order-content .payment-area .cost-listup > li > span .btn-tooltip { right:initial; top:initial; margin-left:0.2727vw; transform:none; }
+    .order-content .payment-area .cost-listup > li > span > strong { font-size:1.6364vw; }
+    .order-content .payment-area .cost-listup > li > .text > strong { font-size:2.1818vw; }
+    .order-content .payment-area .cost-listup > li:first-child { padding-top:0.6364vw; }
+    .order-content .payment-area .cost-listup > li:first-child > .head { line-height:1.36em; }
+    .order-content .payment-area .terms-box { margin-top:2.1818vw; padding-top:3.0909vw; }
+    .order-content .payment-area .terms-box > h2 { line-height:1.3em; padding-bottom:2.1818vw; font-size:1.8182vw; }
+    .order-content .payment-area .terms-box > .btn-terms-view { right:0; top:3.4545vw; padding-right:2.0000vw; font-size:1.2727vw; background:url("https://www.samsung.com/sec/static/_images/common/icon-drop-down.svg") no-repeat right center; }
+    .order-content .payment-area .terms-box > .on { background-image:url("https://www.samsung.com/sec/static/_images/common/icon-drop-up.svg")}
+    .order-content .payment-area .terms-box .chk-form ~ .chk-form { margin-top:1.4545vw; }
+    .order-content .payment-area .terms-box .terms-view .chk-form .btn-underline { bottom:0; right:0; margin:0; }
+    .order-content .payment-area .terms-box .chk-form label { padding-left:2.3636vw; padding-right:3.4722vw; line-height:1.3; word-break:keep-all; }
+    .order-content .payment-area .terms-box .chk-form label:before { left:0; top:0; margin-top:0; }
+    .order-content .payment-area .terms-box .chk-form:checked+label:before { top:0; }
+    .order-content .payment-area .terms-box .terms-view { margin-top:1.4545vw; padding:1.8182vw; background:#F7F7F7; }
+    .order-content .payment-area .terms-box .terms-view label.inp-box:not(:nth-last-child(1)) { padding-bottom:2.1818vw; }
+    .order-content .payment-area .btn { width:100%; margin:3.2727vw 0 0; font-size:1.6364vw; }
+    .order-content .payment-area .btn > strong {  margin-bottom:0.1818vw;  margin-right:0.5455vw;  font-size:inherit;  line-height:1em; }
+    .order-content .payment-area .btn > span {  margin-bottom:0.2727vw; font-size:inherit;  line-height:1em; }
+
+    /* 주문 layout */
+    .order-content { max-width:130.9091vw; padding:4.5455vw 37.2727vw 0 2.1818vw; }
+    .order-content > .tit-box { margin-bottom:3.6364vw; }
+    .order-content .order-area { margin-bottom:5.0909vw; }
+    .order-content .order-area:nth-last-child(1) { margin-bottom:0; }
+    .order-content .order-area > h2 { padding-bottom:0.5455vw; line-height:1.3em; font-size:1.8182vw; }
+    .order-content .order-tbl { width:100%; }
+    .order-content .order-tbl .order-td { padding:3.6364vw 0; }
+    .order-content .order-tbl .order-image { width:18.5%; padding-right:1.3636vw; }
+    .order-content .order-tbl .order-spec { width:24.8%; padding-right:1.1818vw; }
+    .order-content .order-tbl .order-select { width:28.2%; padding-right:1.1818vw; }
+    .order-content .order-tbl .order-count { width:12.1%; padding-right:1.1818vw; }
+    .order-content .order-tbl .order-price { width:17.5%; }
+
+    /* 주문 : 사진 */
+    .order-content .order-tbl .order-image .photo { width:100%; height:100%; max-width:7.3636vw; max-height:7.3636vw; margin:0 auto; }
+    .order-content .order-tbl .order-image .photo a { width:100%; height:100%; margin:0 auto; vertical-align:top; }
+    .order-content .order-tbl .order-image .photo .img-pc { margin:auto; }
+
+    /* 주문 : 제품 정보 */
+    .order-content .order-spec-group .ico-group-t {  margin-bottom:0.5455vw; font-size:0; }
+    .order-content .order-spec-group .ico-group-t > span { height:auto; line-height:1.34em; letter-spacing:0; border-radius:0; }
+    .order-content .order-spec-group .ico-group-t > span ~ span { margin-left:0.5455vw; }
+    .order-content .order-spec-group .ico-group-t .ico-b { min-width:auto; padding:0; border:0; }
+    .order-content .order-spec-group .ico-group-t .ico-t { min-width:auto; padding:0; /* padding-right:1.8182vw; */ border:0; }
+    .order-content .order-spec-group .ico-group-t .ico-t > .btn-tooltip { width:1.8182vw; height:100%; font-size:0.0909vw; opacity:0.6; background:url("https://www.samsung.com/sec/static/_images/common/icon-tooltip4.svg") no-repeat center center; }
+    .order-content .order-spec-group .o-title { word-break:keep-all; }
+    .order-content .order-spec-group .o-title a { font-size:1.4545vw; line-height:1.36em; letter-spacing:0; }
+    .order-content .order-spec-group .o-label { margin-top:0.3636vw; font-size:1.0909vw; line-height:1.34em; letter-spacing:0; }
+    .order-content .order-spec-group .ico-group { margin-top:1.8182vw; }
+    .order-content .order-spec-group .ico-group .o-spec span { font-size:1.0909vw; line-height:1.34em; letter-spacing:0; }
+    .order-content .order-spec-group .ico-group .o-spec .btn-option { min-width:5.5455vw; height:1.8182vw; line-height:1.8182vw; font-size:1.0909vw; background:#000; border-radius:0.9091vw; }
+    .order-content .order-spec-group .o-telecom { margin-top:1.8182vw; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 { line-height:2.1818vw; font-size:0; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li { display:block; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li ~ li { margin-left:0; margin-top:0.2727vw; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li label { height:2.1818vw; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li label span { min-width:4.5455vw; height:2.1818vw; line-height:2.0909vw; padding:0 1.3636vw; font-size:1.0909vw; }
+	.order-content .order-spec-group .o-telecom + .ico-group { margin-top:0.9091vw; }
+
+    /* 주문 : 제품 가격 */
+    .order-content .order-tbl .order-count { line-height:1.9091vw; }
+    .order-content .order-tbl .order-count span { line-height:1.5em; font-size:1.4545vw; letter-spacing:0; }
+    .order-content .order-tbl .order-price .price-small { line-height:1.33em; margin-bottom:0.1818vw; font-size:1.4545vw; letter-spacing:0; }
+    .order-content .order-tbl .order-price .price-small:after { left:0; right:0; top:45%; width:100%; height:0.0909vw; background:#A6A6A6; }
+    .order-content .order-tbl .order-price .price-big { line-height:1.32em; font-size:1.4545vw; letter-spacing:0; }
+
+    /* 주문 : 사은품/쿠폰 */
+    .order-content .order-select .select-noti { width:100%; padding:0.4545vw 0 0.5455vw; font-size:1.2727vw; line-height:1.7273vw; }
+    .order-content .order-select .select-noti.coupone { margin-top:0.9091vw; }
+
+    .order-content .order-select .gifts-select { height:3.6364vw; line-height:3.6364vw; padding:0 3.2727vw 0 3.6364vw; border-radius:0.9091vw; }
+    .order-content .order-select .gifts-select ~ .gifts-select { margin-top:0.5455vw; }
+    .order-content .order-select .gifts-select .imgs { top:50%; left:0.9091vw; width:2.1818vw; height:2.1818vw; transform:translateY(-50%); background:#DFDFDF; border-radius:0.1818vw; }
+    .order-content .order-select .gifts-select .imgs img { width:100%; }
+    .order-content .order-select .gifts-select .names { font-size:1.2727vw; letter-spacing:0; white-space:nowrap; }
+    .order-content .order-select .gifts-select .btn-del { right:0.9091vw; top:50%; width:1.4545vw; height:1.4545vw; background:url("https://www.samsung.com/sec/static/_images/common/icon-del-s.svg") no-repeat center center; transform:translateY(-50%); background-size:1.4545vw auto; }
+    .order-content .order-select .gifts-coupone { padding-left:0.9091vw; }
+    .order-content .order-select .order-select-menu ~ .order-select-menu { margin-top:0.9091vw; }
+    .order-content .order-select .order-select-menu .droplist { width:29.8182vw; }
+    .order-content .order-select .order-select-menu.active .droplist { padding:1.2727vw 0; }
+    .order-content .order-select .order-select-menu .link-gift { line-height:3.4545vw; padding-left:3.6364vw; padding-right:9.2727vw; }
+    .order-content .order-select .order-select-menu .link-gift > span { font-size:1.2727vw; }
+    .order-content .order-select .order-select-menu .link-gift > .imgs { left:1.2727vw; top:50%; width:1.8182vw; height:1.8182vw; transform:translateY(-50%); }
+    .order-content .order-select .order-select-menu .link-gift > .names { white-space:nowrap; }
+    .order-content .order-select .order-select-menu .link-gift > .dates { right:1.2727vw; top:50%; line-height:1; transform:translateY(-50%); }
+    .order-content .order-select .order-select-menu .link-gift.link-coupon { padding-left:1.8182vw; padding-right:1.8182vw; }
+    .order-content .order-select .order-select-menu .droplist-button .link-gift { padding-left:2.3636vw; padding-right:0; }
+    .order-content .order-select .order-select-menu .droplist-button .link-gift > .imgs { left:0; }
+
+    .order-content .order-select-list.omni-coupon {  padding:1.0909vw 0.9091vw 0.9091vw; background:transparent; }
+    .order-content .order-select-list.omni-coupon .gifts-coupone { padding:1.0000vw 2.3636vw 1.0000vw 0.9091vw; background:#EFF7FF; border-radius:0.9091vw; line-height:1.6364vw; }
+    .order-content .order-select-list.omni-coupon .names .tag {  width:7.8182vw; margin-right:0.9091vw; font-size:1.2727vw;   line-height:1.6364vw; }
+
+    /* 비스포크 */
+    .order-content .order-tbl .order-spec-group ~ .pc-bespoke { margin-top:3.8182vw; }
+
+    /* 정기 배송 */
+    .input-type-small-2 { width:100%; max-width:32.1818vw; }
+
+    /* 배송 정보 */
+    .order-content .m-right-space { padding-right:10.9091vw; }
+
+    /* 200715 */
+	.multi-order-tbl .order-multi.order-tr { width:100%; }
+	/* .multi-order-tbl .order-multi.order-tr:not(.top-item) .order-td { padding-top:0; } */
+	.multi-order-tbl .order-multi.order-tr .order-select { max-width:15.8182vw }
+
+    /* .order-content .info-extra .tooltip-add { display:block; float:left; width:31%; padding:8px 0; font-size:14px; color:#707070; } */
+    .order-content .info-extra .tooltip-add {  width:31%; padding:0.9vw 0; font-size:1.2727vw;  }
+    .order-content .info-extra .tooltip-add .btn-tip { left:66px; }
+    .order-content .info-extra .inp-form { display:inline-block; width:68%; }
+    .order-content .info-extra .chk-view { display:inline-block; width:100%; }
+    .order-content .info-extra li { position:relative; }
+    .order-content .info-extra li:nth-child(3) { min-height:11.9444vw; } /* 사은품배송 */
+    .order-content .info-extra li:nth-child(4) { min-height:8.5455vw; } /* 사전방문 */
+    .order-content .info-extra li.m-full-width .chk-view { position:absolute; left:0; width:100%; }
+
+    .order-content .info-extra .inp-form .chk-form { width:49%; /*padding:6px 0;*/ }
+    .order-content .info-extra .inp-form .chk-form label { padding-right:0; }
+
+    .deco.extra-service .order-info-detail.info-extra > li > span.tooltip-add { margin-top:0; }
+
+    /* 툴팁 있는 레이블 */
+    .order-info-detail .tooltip-add .btn-tip { left:8.5455vw; width:1.6364vw; height:1.6364vw; }
+    .order-content .btn-tooltip { width:1.6364vw; height:1.6364vw; background-size:1.6364vw auto; }
+
+    /* 배송,할인,포인트,결제수단 */
+    .order-info-box > li { padding:2.7273vw 0; padding-left:21.4545vw; }
+    .order-info-box > li.sale-li { margin-bottom:0; padding-right:0; border-bottom:0; }
+    .order-info-box > li.deco { padding-bottom:2.7273vw !important; }
+
+    .order-info-box > li:nth-last-child(1) { margin-bottom:0; padding-bottom:0; border-bottom:0; }
+    .order-info-box .head { left:0; top:2.7273vw; width:18%; max-width:10.7273vw; padding:0.7273vw 0; }
+    .order-info-box .order-btn { right:0; top:2.7273vw; padding:0.7273vw 0; }
+    .order-info-box > li .inp-inactive { pointer-events:none; }
+    .order-info-box > li .opt-primary { margin-bottom:2.1818vw; padding-bottom:2.1818vw; }
+
+    .order-info-box-2 { padding:2.7273vw 0; }
+    .order-info-box-2 > li { margin-bottom:1.2727vw; padding:0; padding-left:21.4545vw; }
+    .order-info-box-2 li:nth-last-child(1) { margin-bottom:0; }
+    .order-info-box-2 > li.deco { margin-bottom:2.7273vw; /* padding-bottom:2.7273vw; */ }
+    .order-info-box-2 .head { left:0; top:-0.1818vw; width:18%; max-width:10.7273vw; padding:0.7273vw 0; }
+    .order-info-box-2 .order-btn { right:0; top:2.7273vw; padding:0.7273vw 0; }
+    .order-info-box-2 .order-btn .btn-s { height:2.5455vw; line-height:2.5455vw; margin:0; }
+    .order-info-box-2 li li { margin-bottom:0; }
+    .order-info-box-2 .event-code-li { padding-top:2.1818vw; }
+    .order-info-box-2 .event-code-li .head, .order-info-box-2 .event-code-li .btn-info-sale { top:2.1818vw !important; }
+
+    .order-info-inner { width:100%; margin-bottom:1.0909vw; padding:1.0000vw 0; }
+    .order-info-inner:nth-last-child(1) { margin-bottom:0; }
+    .order-info-inner-maxwidth-1 { max-width:42.3636vw; }
+    .order-padding-none { padding-top:0; padding-bottom:0; }
+    .order-padding-none-t { padding-top:0; }
+    .order-padding-none-b { padding-bottom:0; }
+    .order-info-inner span:after { width:0.0909vw; height:0.9091vw; margin:0 1.8182vw; background:#d9d9d9; }
+
+    .order-content .order-box { padding:0; }
+    .order-content .order-box:nth-last-child(1) { border-bottom:0; }
+    .order-content .tab-nav { margin-bottom:1.8182vw; }
+    .order-content .tab-nav ul:after { clear:both; }
+    .order-content .tab-nav li { margin-right:0.9091vw; }
+    .order-content .tab-nav li:nth-last-child(1) { margin-right:0; }
+    .order-content .tab-nav li button { width:10.9091vw; height:3.6364vw; margin:0; font-size:1.2727vw; border-radius:1.8182vw; }
+    .order-content .tab-nav li .on { background:#000; }
+
+    .order-content .radio-nav .chk-form { padding:0.5455vw 0; }
+    .order-content .radio-nav + .use-type-1 { margin-top:2.7273vw; }
+    .order-content .radio-nav + .use-type-2 { margin-top:2.1818vw; padding-top:2.1818vw; }
+
+    .order-content .sale-option { width:100%; }
+    .order-content .sale-option .head { width:30%; }
+    .order-content .sale-option .result { width:65%; }
+    .order-content .sale-option .result-input { margin-top:-0.9091vw; }
+    .order-content .sale-option .result .dropdownMenu { margin-right:0.9091vw; margin-bottom:0; }
+
+    .order-content .btn-listup:after { clear:both; }
+    .order-content .btn-listup .btn:nth-child(1) { margin-left:0; }
+
+    .order-content .tip-add { width:100%; padding-right:2.7273vw; } 
+    .order-content .btn-tooltip { right:0; top:50%; width:1.6364vw; height:1.6364vw; font-size:0; background:#fff url("https://www.samsung.com/sec/static/_images/common/icon-tooltip-2.svg") no-repeat center center; background-size:1.6364vw auto; border-radius:50%; transform:translateY(-50%); }
+    .order-content .info-ul , .order-content .fnet-info-ul { margin:2.2727vw 0 0 21.4545vw; }
+    .order-content .info-ul > li { padding:0.4545vw 0; padding-left:1.2727vw; font-size:1.2727vw; line-height:1.3; word-break:keep-all; }
+    .order-content .fnet-info-ul > li { font-size:1.2727vw;}
+    .order-content .info-ul > li:before { left:0; top:0.4545vw; content:"※"; }
+
+    .order-content .delivery-box { width:100%; max-width:56.9091vw; margin-bottom:2.7273vw; padding:2.7273vw; border-radius:1.8182vw; }
+    .order-content .delivery-box > dt { font-size:1.8182vw; line-height:2.3636vw; }
+    .order-content .delivery-box > dt > span { font-size:1.2727vw; line-height:1.8182vw; }
+    .order-content .delivery-type-3 > dd { padding-bottom:0; }
+    .order-content .delivery-box > dd > div { width:100%; }
+    .order-content .delivery-box > dd > .wrap-droplist:not(.plus-details) { margin-top:1.8182vw; }
+    .order-content .delivery-box > dd .seg-check-form { width:100%; padding:2.1818vw 0; }
+    .order-content .delivery-box > dd .seg-dropdownMenu { width:100%; }
+    .order-content .delivery-box > dd .seg-input { width:100%; margin-top:1.8182vw; }
+    .order-content .delivery-box > dd .seg-details { padding:1.4545vw; background:#F7F7F7; font-size:1.2727vw; line-height:1.9091vw; }
+    .order-content .delivery-box > dd .search-store input { width:calc(100% - 9.0909vw); }
+    .order-content .delivery-box > dd .search-store button { right:0; top:50%; margin:0; transform:translateY(-50%); }
+    .order-content .delivery-box .info-extra { margin-top:1.8182vw; }
+
+    .empty-cart { min-height:18.1818vw; background:#f7f7f7; }
+    .empty-cart .empty-text { left:50%; top:50%; font-size:1.4545vw; transform:translate(-50%, -50%); }
+    .empty-cart .empty-text:before { width:3.1818vw; height:2.3636vw; margin-right:0.9091vw; background:url("https://www.samsung.com/sec/static/_images/common/icon-cart.svg") no-repeat center center; }
+
+    .pick-store .inp-line { width:100%; }
+    .pick-store .inp-select-store { width:calc(100% - 10.0000vw) !important; margin-bottom:0.4545vw; }
+    .pick-store .btn { min-width:9.0909vw; margin:0; }
+
+    .order-info-detail { width:100%; max-width:51.4545vw; }
+    .order-info-detail > li { min-height:2.9091vw; margin-bottom:1.0909vw; padding:0.5455vw 0; }
+    .order-info-detail > li:nth-last-child(1) { margin-bottom:0; }
+    .order-info-detail li, .order-info-detail li > span { font-size:1.2727vw; }
+    .order-info-detail .cols-2 { width:50%; }
+    .order-info-detail .cols-3 { width:33%; }
+    .order-info-detail .cols-4 { width:25%; }
+    .order-info-detail .cols-5 { width:20%; }
+    .order-info-detail .cols-clear { clear:both; }
+    .order-info-detail .cols-another { width:auto; }
+    .order-info-detail .cols-3-another { width:67%; }
+    .order-info-detail .cols-4-another { width:75%; }
+    .order-info-detail .cols-5-another { width:80%; }
+    .order-info-detail .cols-inline2:after { width:0.0909vw; height:0.9091vw; margin:0 1.8182vw; background:#d9d9d9; }
+    .order-info-detail .gift-select { width:100%; }
+    .order-info-detail .gift-select .dropdownMenu { width:100%; }
+    .order-info-detail .anther-service-input { width:100%; }
+    .order-info-detail .coupon-entry { width:100%; margin-right:1.0909vw; }
+    .order-info-detail .padding-none { padding-top:0; padding-bottom:0; }
+    .order-info-detail .d-padding-add { margin-top:0.5455vw; padding:1.0000vw 0; font-size:inherit; }
+
+    .order-info-detail.use-type-1, .order-info-detail.use-type-2 { max-width:100%; }
+    .order-info-detail.use-type-1 > li, .order-info-detail.use-type-2 > li { max-width:51.4545vw; }
+
+    .order-info-detail.info-extra > li > span {  }
+
+    /* UL : 주문자 정보변경 / 매장선택 */
+    .input-type-small { width:100%; max-width:51.4545vw; }
+    .input-type-ul > li, .input-type-div > div { min-height:2.9091vw; margin-bottom:1.8182vw; padding:0; }
+    .input-type-ul > li:nth-last-child(1) { margin-bottom:0; }
+    .input-type-ul > li.input-obj, .input-type-div > div.input-obj { padding-left:37%; }
+    .input-type-ul > li.h-auto { min-height:auto; }
+    .input-type-ul .s-head, .input-type-div .s-head { left:0; width:37%; padding:0.9091vw 0; }
+    .input-type-ul .select-btn { padding-right:9.2727vw; }
+    .input-type-ul .select-btn button { right:0;top:0; }
+    .input-type-ul .dropdownMenu { width:100%; }
+    .input-type-ul .dropdownMenu li { padding-left:initial; }
+
+    /* 할인혜택 */
+    .discount-area .order-info-box-2 .head { width:10.2727vw; }
+    .discount-area .order-info-box-2 .price { font-size:1.4545vw; }
+
+    /* 포인트 사용 */
+    .point-area .order-info-box-2 .head { width:10.2727vw; }
+    .point-area .order-info-box-2 .use-type-1 > li { padding:2.7273vw; border-radius:1.8182vw; }
+    .point-area .order-info-box-2 .use-type-1 > li:not(:nth-last-child(1)) { margin-bottom:2.7273vw; }
+    .point-area .order-info-box-2 .use-type-2 > li:not(:nth-last-child(1)) { margin-bottom:1.2727vw; }
+
+    .point-area .point-inline-1 { width:calc(42% - 2.2727vw); margin-right:2.0000vw; padding-right:7.2727vw }
+    .point-area .point-inline-1 .use-tit { width:auto; padding-right:0.2727vw; font-size:inherit; }
+    .point-area .point-inline-2, .point-area .point-inline-3 { width:58%; }
+
+    .point-area div.inp-point { width:calc(100% - 10.0909vw); height:2.9091vw; padding-right:1.6364vw; }
+    .point-area div.inp-point::before { bottom:0; left:0; right:0; height:0.0909vw; background:#B2B2B2; }
+    .point-area div.inp-point::after { top:0.8182vw; right:0.4545vw; font-size:1.2727vw; }
+    .point-area div.inp-point .inp-line { border-bottom:none; }
+
+    .point-area .point-line-1 { padding:0.9091vw; font-size:1.4545vw; line-height:1.8182vw; background:#F7F7F7; }
+    .point-area .point-line-1 em { margin-left:0.4545vw; padding-left:0.9091vw; }
+    .point-area .point-line-1 em::before { top:0.4545vw; left:0; width:0.0909vw; height:1.0909vw; background:#ddd; }
+    .point-area .point-line-2 { -ms-flex-direction:row; flex-direction:row; -ms-flex:1 1 auto; flex:1 1 auto; padding-top:2.1818vw; }
+    .point-area .point-line-2 .pd-info {  width:calc(100% - 14.5455vw - 6.0000vw); margin-right:5.9363vw;   line-height:1.9091vw; }
+    .point-area .point-line-2 .pd-info .sub-info { margin-top:0.5455vw; font-size:1.0909vw; line-height:1.8182vw; }
+
+    .point-area .point-line-2 .inp-point { width:8.2411vw; }
+
+    .point-ment { width:100%; max-width:50.0000vw; margin:2.7273vw auto 0; padding:0.9091vw 0; font-size:1.4545vw; line-height:1.9091vw; }
+    .point-ment .btn { right:0; top:0; margin:0; }
+
+    .order-info-detail .inp-basic { width:100%; }
+
+    .order-info-detail .tooltip-add { width:37%; }
+    .order-info-detail .tooltip-add .btn-tip { left:8.5455vw; top:50%; width:1.6364vw; height:1.6364vw; font-size:0; background:#fff url("https://www.samsung.com/sec/static/_images/common/icon-tooltip-2.svg") no-repeat center center; border-radius:50%; transform:translateY(-50%); }
+    .order-info-detail .inp-form { width:62%; }
+    .order-info-detail .inp-form > .chk-form { width:40%; }
+
+    .order-info-detail em { font-size:inherit; }
+    .order-info-detail .clear-both { clear:both; }
+    .order-info-detail .inp-block > label { left:0; top:0; margin-bottom:1.0000vw; }
+    .order-info-detail .inp-block input:not([type=checkbox]):not([type=radio]) { width:100%; }
+    .order-info-detail .chk-view { width:62%; margin:0 0 0 auto; margin-top:0.9091vw; }
+    .order-info-detail .chk-view .dropdownMenu { width:100%; margin-bottom:0.9091vw; }
+
+    .order-info-detail .chk-view .wrap-droplist { margin-bottom:0.9091vw; }
+
+    .info-sale:after { clear:both; }
+    .info-sale > li .account-types > li { padding-left:0; }
+    .info-sale > li:nth-child(1) { width:37%; }
+    .info-sale > li:nth-child(2) { width:63%; }
+    .btn-info-sale { top:0 !important; }
+
+    /* 임직원 인증 */
+    .inp-button-combo-box { padding-right:9.2727vw; }
+    .inp-button-combo-box > button { right:0;top:0;max-width:8.3636vw; margin:0; padding-left:0.7273vw; padding-right:0.7273vw; }
+    .inp-button-combo-box + .combo-guide { margin-top:1.2727vw; font-size:1.2727vw; line-height:1.6364vw; }
+
+    /* 결제수단 : 결제 형태 */
+    .order-content .pay-info { margin-bottom:0; }
+    .pay-info .order-info-box > li:not(.card-opt) { border-bottom:none; }
+    .pay-info .order-info-box .pay-input-result { padding:0.5455vw 0; }
+    .pay-info .order-info-box .pay-input-result strong { line-height:1.8182vw; }
+    .pay-info .caution-list { margin-top:2.7273vw; }
+    .pay-info .caution-list li { padding-left:0.5455vw; text-indent:-0.5455vw; font-size:1.2727vw; line-height:1.8182vw; }
+    .pay-info .caution-list li:not(:nth-child(1)) { margin-top:1.2727vw; }
+    .pay-info .caution-list li em { font-size:inherit; }
+
+    .pay-nav-box > .pay-nav-box-left { width:17.7273vw; max-width:22.7273vw; height:100%; }
+    .pay-nav-box > .pay-nav-box-right { width:calc(100% - 18vw); max-width:46.3636vw; height:100%; }
+    .pay-nav-box:after, .pay-nav-box > .pay-nav-box-left:after, .pay-nav-box > .pay-nav-box-right:after { clear:both; }
+
+    .pay-nav-box > .pay-nav-bottom { clear:both; padding-top:1.8182vw; }
+
+    .pay-nav-box .pay-method-pay { width:100%; height:6.7273vw; font-size:0; background:url("https://www.samsung.com/sec/static/_images/common/samsung-pay.svg") no-repeat center top; background-size:100%; }
+    .pay-nav-box .pay-method-pay.on { background-image:url("https://www.samsung.com/sec/static/_images/common/samsung-pay-on.svg"); }
+    .pay-nav-box .pay-tab-nav ul:after { clear:both; }
+    .pay-nav-box .pay-tab-nav ul li { width:calc(20% + 20px); height:3vw; margin-left:0.4545vw; margin-right:0.4545vw; margin-bottom:0.9091vw; }
+    .pay-nav-box .pay-tab-nav ul li button { width:100%; height:100%; font-size:1.2727vw; background:#fff; border-radius:1.8182vw; }
+    .pay-nav-box .pay-tab-nav ul li button.on { background:#212425; border:0; }
+
+    .pay-input-check { clear:both; margin-top:2.1818vw; }
+    .pay-view > .pay-input-check + .pay-input-check { margin-top:1.0909vw; }
+
+    .pay-input-check .pay-check { padding-top:1.0909vw; }
+    .pay-input-check .pay-check:first-child { padding-top:0; }
+    .pay-input-check-none { margin-top:0; }
+    .page-division { width:100%; margin-top:2.7273vw; margin-bottom:2.7273vw; }
+
+    .info-pay { margin-top:1.8182vw; }
+    .info-pay:after { clear:both; }
+    .info-pay > li .account-types > li { padding-left:0; }
+    .info-pay > li:nth-child(1) { width:37%; }
+    .info-pay > li:nth-child(2) { width:63%; }
+    .btn-info-pay { top:0 !important; }
+
+    /* 결제 수단 */
+    .pay-view { margin-top:0; padding-top:0 !important; padding-bottom:0 !important; }
+    /* .pay-view.basic .pay-input-box-1 { padding-bottom:2.7273vw; } */
+    /* .pay-view.basic > .pay-input-check { margin-top:0.9091vw; } */
+    .pay-view.creditcard, .pay-view.virtual-account, 
+    .pay-view.account-transfer { padding-left:0; }
+    .pay-view .pd-top { padding-top:11.0909vw !important; }
+    .pay-view .pd-top .card-opt { top:0; left:0; width:100%; height:8.3636vw; padding-left:21.4545vw; }
+    .pay-view .pd-top .card-opt .radio-nav { top:50%; margin-top:-1.4545vw; }
+    .pay-view.creditcard > div:not(.pd-top), .pay-view.creditcard > ul,
+    .pay-view.virtual-account > div, .pay-view.account-transfer > div { padding-left:21.4545vw; }
+    .pay-view.creditcard > .page-division, .pay-view.virtual-account > .page-division:not(.full-width),
+    .pay-view.account-transfer > .page-division:not(.full-width) { width:calc(100% - 21.4545vw); margin-left:21.4545vw; }
+
+    /* 신용카드 */
+    .credit-card { margin-left:-0.4545vw; margin-right:-0.4545vw; }
+    .credit-card > li { width:10.9091vw; height:8.1818vw; margin-left:0.4545vw; margin-right:0.4545vw; margin-bottom:0.9091vw; }
+    .credit-card > li:after { clear:both; }
+
+    .installment { margin-top:1.5455vw; max-width:40.9091vw; }
+    .installment:after { clear:both; }
+    .installment .dropdownMenu { margin-right:0.9091vw; width:29.0909vw; }
+    .installment .dropdownMenu + a { margin:0; }
+
+    /* 간편결제 */
+    .easy-pay { margin-top:0.9091vw; margin-left:-0.4545vw; margin-right:-0.4545vw; }
+    .easy-pay > li { width:10.9091vw; height:8.1818vw; margin-left:0.4545vw; margin-right:0.4545vw; margin-bottom:0.9091vw; }
+    .easy-pay > li:after { clear:both; }
+
+    .pay-input-box-1 { margin-top:1.8182vw; }
+    .pay-input-box-1 .pay-input, .info-pay > li:nth-child(2) { width:28.3636vw; margin-right:0.9091vw; }
+    .pay-input-box-1 .pay-input .dropdownMenu { width:100%; }
+    .pay-input-box-1 .btn-underline { right:0; top:0.6364vw; margin:0; }
+
+    .pay-input-box-3 { clear:both; width:100%; margin-bottom:1.2727vw; padding:0; padding-right:9.0909vw; }
+    .pay-input-box-3 > .head-1 { left:initial; top:initial; width:37%; max-width:19.0000vw; }
+    .pay-input-box-3 > .p-cont { width:62%; max-width:32.3636vw; }
+    .pay-input-box-3 > .p-cont .inp-box { width:100%; max-width:40.9091vw; }
+    .pay-input-box-3 > .p-cont .inp-box input { width:100%; }
+    .pay-input-box-3 > .p-cont .dropdownMenu { width:100%; max-width:40.9091vw; }
+    .pay-input-box-3 > .p-cont .guide { margin-top:0.9091vw; font-size:1.0909vw; }
+    .pay-input-box-3 > .p-cont .btn-underline { right:0; top:0.9091vw; }
+    .pay-input-box-3 > .p-cont:not(.receipt) .chk-form { margin-top:0.9091vw; }
+    .pay-input-box-3.first-block { margin-bottom:2.7273vw; padding-bottom:2.7273vw; }
+
+    .pay-input-box-3 .receipt .chk-form { padding:0.5455vw 0; }
+    .pay-input-box-3 .receipt .radio-nav { margin-top:0.5455vw; }
+    .pay-input-box-3 .receipt .wrap-droplist { margin-top:1.2727vw; }
+    
+    /* 주빈등록번호 */
+    .resident-num, .card-num, .phone-num, .biz-num { margin-top:1.2727vw; }
+    .resident-num .inp-box.front { width:48%; padding-right:2.3636vw; }
+    .resident-num .inp-box.front::after { top:50%; right:0.9091vw; width:0.5455vw; height:0.0909vw; background:#999; }
+    .resident-num .inp-box.back { width:52%; }
+    .resident-num .inp-box.back .inp-line { padding-right:2.7273vw; }
+    .resident-num .inp-box.back .inp-lock, .card-num.inp-lock { background:url("https://www.samsung.com/sec/static/_images/common/icon-lock-black.svg") no-repeat calc(100% - 0.5455vw) 0.4545vw; background-size:1.6364vw 2.0000vw; }
+    .resident-num .inp-line { border-bottom:none; }
+
+    /* 카드번호 */
+    .card-num { padding-right:2.7273vw; }
+    .card-num .inp-box:not(:nth-last-child(1)) { width:25.6% !important; }
+    .card-num .inp-box:nth-last-child(1) { width:18% !important; }
+    .card-num .inp-box:not(:nth-last-child(1)) { padding-right:2.3636vw; }
+    .card-num .inp-box:not(:nth-last-child(1))::after { top:50%; right:0.9091vw; width:0.5455vw; height:0.0909vw; background:#999; }
+    .card-num .inp-line { border-bottom:none; }
+    .card-num input:not([type=checkbox]):not([type=radio]).inp-line { border-bottom:none; letter-spacing:-0.0909vw; margin-top:-0.0909vw; }
+
+}
+
+@media all and (max-width:800px){
+	/** 포인트 적용 버튼 */
+	#pointUseType2 .btn-cart-point-apply { margin-right: 0px; }
+	.order-info-detail .btn-type2 {color: #fff; background: #212425;  float: right; border-color: #212425; font-size: 14px; }
+	.area-membership-point { position: initial; top: 2px; }
+
+	.ul-area-membership-point .btn-type2 { float: right; }
+	
+	/* 200917 툴팁 추가 */
+	.buy-target-goods .order-price .btn-downtool { position:absolute; right:0; width:14px; height:14px; margin:1px 0 0; background:transparent url(https://www.samsung.com/sec/static/_images/common/icon-tooltip-down.svg) no-repeat center; background-size:14px auto; }
+	.buy-target-goods .order-price .btn-downtool.opened { background:transparent url(https://www.samsung.com/sec/static/_images/common/icon-tooltip-up.svg) no-repeat center; background-size:14px auto; }
+	.buy-target-goods .order-price .box-tip li ~ li:not(.total) { margin-top:6px; }
+	.buy-target-goods .order-price .box-tip { display:none; position:absolute; right:0; top:41px; z-index:2; min-width:224px; padding:16px; border:1px solid #000; border-radius:10px; background:#fff; z-index:1; }
+	.buy-target-goods.p-bespoke .order-price .btn-downtool { top: 42px; }
+	.buy-target-goods.p-bespoke .order-price .box-tip { top: 64px; }
+	.buy-target-goods.multi-order-tbl .order-multi:not(.top-item) .order-price .btn-downtool { top: 20px; }
+	.buy-target-goods.multi-order-tbl .order-multi:not(.top-item) .order-price .box-tip { top: 41px; }
+
+	.buy-target-goods .order-price .box-tip .tit, 
+	.buy-target-goods .order-price .box-tip .price { display:inline-block; width:50%; color:#707070; font-size:14px; line-height:18px; }
+	.buy-target-goods .order-price .box-tip .tit { text-align:left; }
+	.buy-target-goods .order-price .box-tip .price { text-align:right; }
+	.buy-target-goods .order-price .box-tip .total { padding-top:12px; margin-top:12px; border-top:1px solid #ddd; }
+	.buy-target-goods .order-price .box-tip .total * { color:#000; font-weight:bold; }
+	
+	.buy-target-goods.p-bespoke .pc-bespoke { width:100%; padding:20px; margin-top:0; margin-bottom:30px; background:#f7f7f7; }
+	.buy-target-goods.p-bespoke .bespoke-color-set:nth-last-child(1),
+	.buy-target-goods.p-bespoke .bespoke-color-set:nth-last-child(2) { margin-bottom:0; }
+
+	.bespoke-selected-opt-list { margin-bottom:30px; }
+
+	.empty-cart { margin-bottom:initial; }
+	
+    .btn-underline { margin:0; }
+
+	/* 한도 정보 */
+	.order-content .limit-info > h2 { padding-bottom:6px; font-size:20px; color:#000; font-weight:bold; }
+	.order-content .limit-info > .limit-info-box > dt { padding:20px 20px 10px; width:16%; }
+	.order-content .limit-info > .limit-info-box > dd { padding:10px 20px 0; }
+    .order-content .limit-info > .limit-info-box > dd > span { margin-bottom:10px; margin-right:10px; }
+	.order-content .limit-info > .limit-info-box > dd > span > em { display:inline-block; width:80px; margin-right:10px; }
+	.order-content .limit-info > .limit-info-box > dd > span > em:after { background:transparent; }
+	.order-content .limit-info .info-type-2 .info-type-left { display:block; float:none; margin-bottom:10px; }
+    .order-content .limit-info .info-type-2 .info-type-right { display:block; float:none; }
+
+	.input-type-small{max-width:100%; }
+    .input-type-ul > li.input-obj, .input-type-div > div.input-obj {padding-left:30%; }
+    .input-type-ul > li.input-obj > label { width:30%; color:#444; }
+    .info-point.order-info-detail{max-width:100%; }
+    .input-type-div .s-head { width:30%; letter-spacing:-1.5px; }    
+    
+    /* 주문 상품 */
+    .order-content { max-width:100%; padding-top:28px; padding-left:12px; padding-right:12px; }
+    .order-content .order-m-area { padding-bottom:36px; }
+    .order-content .order-m-area:after { height:10px; background:#F7F7F7; }
+    .order-content .order-tbl { position:relative; display:block; padding-top:initial; padding-bottom:18px; border-top:2px solid #191919; border-bottom-width:0; }
+    .order-content .order-tbl .order-td { position:relative; height:auto; padding-top:24px; padding-bottom:30px; text-align:center; }
+    .order-content .order-tbl .order-image { display:inline-block; width:138px; height:150px; padding-right:18px; }
+    .order-content .order-tbl .order-image .photo { width:100%; height:100%; text-align:center; overflow:hidden; }
+    .order-content .order-tbl .order-image .photo > a { width:100%; height:100%; }
+    .order-content .order-tbl .order-image .photo img { max-width:100%; margin:0 auto; }
+    .order-content .order-tbl .order-spec  { display:inline-block; width:calc(100% - 142px); max-width:initial; padding-left:0; padding-right:0; padding-bottom:30px; text-align:left; }
+    .order-content .order-tbl .order-spec-group { margin-bottom:0; }
+    .order-content .order-tbl .order-select { width:100%; max-width:initial; padding:0; }
+    .order-content .order-tbl .order-count { display:inline-block; width:49%; height:64px; padding-left:0; text-align:left; }
+    .order-content .order-tbl .order-price { display:inline-block; width:49%; padding-bottom:0; text-align:right; }
+
+    .order-content .order-area { margin-bottom:40px; }
+    .order-content .order-area h2 { padding-bottom:6px; border-bottom:0; }
+	.order-content .order-area h2.m-secon-tit { margin-bottom:24px; border-bottom:2px solid #191919; }
+    
+    .order-content .p-bespoke .order-image { padding-bottom:20px; }
+    .order-content .p-bespoke .order-spec { padding-bottom:20px; }
+    
+    .order-content .order-tbl .order-select .account-types { width:100%; }
+    .order-content .order-select-menu+.gifts-select { margin-top:-10px; }
+    .order-content .gifts-select+.order-select-menu { margin-top:14px; }
+    .order-content .order-select .order-select-menu.active .droplist > li { font-size:14px; }
+    .order-content .order-m-area { margin-bottom:40px; }
+    .order-content .order-m-area:after { content:""; position:absolute; bottom:0; left:-12px; display:block; width:calc(100% + 24px); height:10px; background:#F7F7F7; }
+    .order-content .photo .img-pc { display:none; }
+    .order-content .photo .img-mo { display:block; }
+    .order-content .order-spec-group { margin-bottom:20px; }
+    .order-content .order-spec-group .ico-group { margin-top:16px; }
+    .order-content .p-soldout > .order-image, .order-content .p-soldout > .order-spec { padding-bottom:0; }
+
+    .order-content .order-spec-group .o-telecom { margin-top:20px; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 { line-height:24px; font-size:0; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li ~ li { margin-left:10px; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li label { height:24px; }
+	.order-content .order-spec-group .o-telecom .itm-radiobtn-list2 li label span { min-width:50px; height:24px; line-height:23px; padding:0 15px; font-size:12px; }
+	.order-content .order-spec-group .o-telecom + .ico-group { margin-top:10px; }
+
+    .order-tbl.p-bespoke .pc-bespoke { width:100%; padding:20px; margin-top:0; margin-bottom:30px; background:#f7f7f7; }
+	.order-tbl.p-bespoke .bespoke-color-set:nth-last-child(1),
+	.order-tbl.p-bespoke .bespoke-color-set:nth-last-child(2) { margin-bottom:0; }
+
+    /* 200417 */
+    .order-content .wrap-droplist.order-select-menu .droplist { width:100%; }
+    .order-info-detail .d-padding-add { margin-top:0; padding:12px 0; }
+
+    /* 배송지 정보 */
+    .order-content .delivery-box { max-width:initial; padding:24px 20px 30px 20px; }
+    .order-content .delivery-box > dt { font-size:16px; line-height:21px; }
+    .order-content .delivery-box > dt > span { margin-top:6px; }
+    .order-content .delivery-box > dd { width:100%; }
+
+	/* 200715 */
+	.multi-order-tbl .order-multi.order-tr { display:flex; flex-wrap:wrap; width:100%; }
+	.multi-order-tbl .order-multi.order-tr:not(.top-item) { padding-top:36px; }
+    .multi-order-tbl .order-multi.order-tr .order-td.order-image, 
+    .multi-order-tbl .order-multi.order-tr .order-td.order-spec { padding-bottom:0; }
+
+    .deco.extra-service .order-info-detail.info-extra > li > span.tooltip-add { margin-top:0; }
+    .deco.extra-service .order-info-detail.info-extra > li > span:not(.tooltip-add) { margin-top:7px; margin-right:24px; }
+
+    .order-content .order-info-box > li { padding:0; margin-bottom:24px; padding-bottom:36px !important; font-size:14px; border-bottom:1px solid #D9D9D9; }
+    .order-content .order-info-box .head { position:relative; display:block; top:inherit; width:50%; margin-bottom:20px; font-size:16px; color:#000; font-weight:bold; }
+    .order-content .order-info-box .order-btn { top:0; }
+
+    .order-content .order-info-box > li.deco { margin-bottom:0; padding-bottom:36px !important; border:0 !important; }
+    .order-content .order-info-box > li.deco:after { display:none; }
+    
+    .order-info-box > li.sale-li, .order-info-box > li.sale-li .info-sale { padding:0 0 70px 0; }
+    .order-info-box > li.sale-li .info-sale .btn-underline { border:none; }
+
+    .order-content .info-ul, .order-content .fnet-info-ul { margin:0; padding-bottom:40px; }
+    .order-content .info-ul > li { padding:0 0 0 14px; font-size:12px; line-height:18px; }
+    .order-content .fnet-info-ul > li{font-size:12px; line-height:18px;}
+    .order-content .info-ul > li:before { top:-2px; }
+    .order-content .info-ul:after { position:absolute; left:-12px; right:-12px; bottom:0; height:1px; background:#d9d9d9; content:""; }
+
+    .order-content .tab-nav { margin-top:-8px; }
+
+    .order-content .tab-nav > ul > li { width:calc(100% / 2 - 4px); margin-right:8px; margin-bottom:6px; }
+    .order-content .tab-nav > ul > li:nth-child(even) { margin-right:0; }
+    .order-content .tab-nav > ul > li > button { width:100%; }
+
+    .order-content .info-extra .tooltip-add { display:block; float:left; width:31%; margin-right:24px; padding:16px 0; font-size:14px; color:#707070; }
+    .order-content .info-extra .tooltip-add .btn-tip { left:66px; }
+    .order-content .info-extra .inp-form { display:inline-block; width:calc(68% - 24px); }
+    .order-content .info-extra .chk-view { display:inline-block; width:100%; }
+    .order-content .info-extra li.m-full-width { position:relative; min-height:85px; }
+    .order-content .info-extra li:nth-child(3) { min-height:120px; }    
+    .order-content .info-extra li.m-full-width .chk-view { position:absolute; left:0; width:100%; }
+
+    .order-content .info-extra .inp-form .chk-form { width:49%; padding:6px 0; }
+    .order-content .info-extra .inp-form .chk-form label { padding-right:0; }
+
+    .order-content .order-info-box-2 { position:relative; padding:0; }
+    .order-content .order-info-box-2:after { display:block; content:""; clear:both; }
+    .order-content .order-info-box-2 > li { clear:both; min-height:32px; margin-bottom:20px; padding:0 0 0 30%; font-size:14px; }
+    .order-content .order-info-box-2 .head { width:30%; font-size:14px; font-weight:normal; color:#707070; line-height:16px; }
+    .order-content .order-info-box-2 .head .tip-add { width:100%; padding:0; font-size:inherit; color:inherit; }
+    
+    .order-content .info-sale { display:inline-block; width:100%; padding-left:40px; }
+    .order-content .info-sale > li { width:35%; }
+    .order-content .info-sale > li:nth-last-child(1) { width:65%; }
+    .order-content .info-sale > li > .m-coupon-btn { font-size:14px; text-align:right; }
+    .order-content .info-sale > li .dropdownMenu { width:100%; max-width:100%; text-align:left; }
+
+    .order-content .m-coupon { width:100%;max-width:100%; padding-bottom:104px; }
+    .order-content .m-coupon > li { display:block; width:100%; }
+    .order-content .m-coupon > li.m-full-width { position:absolute; top:42px; left:0; margin-top:0; }
+    .order-content .m-coupon > li.m-full-width .price { margin-top:12px; }
+    .order-content .m-coupon > li:first-child { font-size:14px; text-align:right; }
+    .order-content .m-coupon > li:nth-last-child(1) { width:100%; margin-top:14px; }
+    .order-content .btn-info-sale { left:0; right:initial; top:initial !important; bottom:-85px; }
+
+    .order-content .order-info-box-2 .event-code-li { padding-top:62px; margin-bottom:0; }
+    .order-content .order-info-box-2 .event-code-li .head { top:58px !important; }
+    .order-content .discount-area .event-code-li .btn-info-sale { left:auto; right:0; bottom:auto; }
+    .order-content .discount-area .sub-btn { margin-bottom:62px; }
+    .order-content .discount-area .sub-btn .btn-info-sale { bottom:-32px; }
+    .order-content .discount-area .sub-btn .btn-info-sale .btn-underline { margin:0; }
+    
+    .order-content .order-info-box-2 .point-inline-1 { display:block; width:100%; margin-bottom:14px; padding:8px 0; }
+    .order-content .order-info-box-2 .point-inline-2 { clear:both; display:block; width:100%; padding-left:0; }
+    .order-content .order-info-box-2 .point-inline-2 .chk-form { position:absolute; left:0; bottom:0; }
+    .order-content .order-info-box-2 .point-inline-2 .chk-form label { padding-right:0; }
+    .order-content .order-info-box-2 .point-inline-2 div.inp-point { position:absolute; left:auto; right:0; top:0; bottom:auto; width:38%; }
+    .order-content .order-info-box-2 .point-inline-2 .inp-line { float:right; max-width:initial; }
+    .order-content .order-info-box-2 .point-inline-3 { clear:both; display:block; width:100%; padding-left:0; padding-bottom:30px; text-align:right; }
+    .order-content .order-info-box-2 .point-inline-3 .chk-form { position:absolute; left:0; bottom:0; }
+    .order-content .order-info-box-2 .point-inline-3 .chk-form label { padding-right:0; }
+    .order-content .order-info-box-2 .point-inline-3 .inp-line { float:right; max-width:initial; }
+
+    .order-info-detail { max-width:100%; }
+    .order-info-detail > li { margin-bottom:20px; font-size:14px; }
+    .order-info-detail .block-form > span { display:block; margin-bottom:14px; padding:6px 0; }
+    .order-info-detail .block-form > span:after { display:none; }
+    .order-info-detail .block-form > span:nth-last-child(1) { margin-bottom:0; }
+
+    .info-delivery-single .block-form > span { padding:8px 0; }
+    .info-delivery-single li:nth-last-child(1) { margin-top:14px; }
+    
+    .discount-area { position:relative; display:inline-block; width:100%; margin-bottom:40px; padding-bottom:40px; }
+    .discount-area:after { position:absolute; left:-12px; right:-12px; bottom:0; height:1px; background:#d9d9d9; content:""; }
+    .discount-area .sale-li .btn-info-sale { top:102px !important; bottom:initial; }
+    
+    .point-area { position:relative; margin-bottom:40px; padding-bottom:20px; }
+    .point-area:after { position:absolute; left:-12px; right:-12px; bottom:0; height:1px; background:#d9d9d9; content:""; }
+    .point-area .order-info-box-2 > li { padding:0 0 36px 0; }
+    .point-area .order-info-box-2 .head { position:relative; display:block; width:100%; max-width:100%; padding:6px 0; margin-bottom:12px; color:#000; font-size:16px; font-weight:bold; line-height:20px; }
+    .point-area .order-info-box-2 .use-type-1 { margin-bottom:30px; }
+    .point-area .order-info-box-2 .use-type-1 > li { padding:24px 20px 30px 20px; }
+    .point-area .order-info-box-2 .use-type-1 .point-line-2 { flex-direction:column; }
+    .point-area .order-info-box-2 .use-type-1 .point-line-2 .pd-info { width:100%; margin-right:0; }
+    .point-area .order-info-box-2 .use-type-1 .point-line-2 .pd-info .info-name { color:#000; }
+    .point-area .order-info-box-2 .use-type-1 .point-line-2 .pd-info .sub-info { margin-top:0; }
+    .point-area .order-info-box-2 .use-type-1 .point-line-2 .inp-point { width:69%; }
+
+    .point-area .order-info-box-2 .use-type-2 > li { max-width:100%; }
+    .point-area .order-info-box-2 .use-type-2 > li:not(:nth-last-child(1)) { margin-bottom:20px; }    
+    .point-area .order-info-box-2 .use-type-2 .point-inline-1 { width:100%; }
+    .point-area .order-info-box-2 .use-type-2 .point-inline-1 span,
+    .point-area .order-info-box-2 .use-type-2 .point-inline-1 strong,
+    .point-area .order-info-box-2 .use-type-3 .point-inline-1 span,
+    .point-area .order-info-box-2 .use-type-3 .point-inline-1 strong { color:#000; font-size:14px; }
+    .point-area .order-info-box-2 .use-type-2 .point-inline-2 .chk-form { position:relative; }
+    .point-area .point-inline-1 .use-point { position:relative;right:auto; }
+    
+    .point-area .order-info-box-2 .use-type-3 .point-inline-1 { text-align:right; }
+    .point-area .order-info-box-2 .use-type-3 .point-inline-2 { display:flex; justify-content:space-between; align-items:center; max-width:100%; margin-right:0; }
+
+    .point-area .order-info-box-2 .use-type-3 .point-inline-2 .chk-form, 
+    .point-area .order-info-box-2 .use-type-3 .point-inline-2 .inp-point { position:relative; }
+    .point-area .order-info-box-2 .use-type-3 > li:not(:nth-last-child(1)) { margin-bottom:20px; }
+    .point-area .order-info-box-2 > li:not(.deco) .head { position:absolute; width:96px; font-size:14px; font-weight:normal; color:#707070; line-height:16px; }
+
+    .order-content .pay-info > h2 { padding-bottom:6px; border-bottom:2px solid #191919; }
+    .order-content .pay-info .order-info-box > li { padding-top:30px; margin-bottom:0; }
+    .order-content .pay-info .order-info-box > li > .head { display:none; }
+    .order-content .pay-info .pay-check label { padding-right:0; }
+
+    .pay-view .pd-top .card-opt, .pay-view.creditcard > div:not(.pd-top), .pay-view.creditcard > ul, 
+    .pay-view.virtual-account > div, .pay-view.account-transfer > div { padding-left:0; }
+    .pay-view .pd-top .card-opt > .head { display:none; }
+
+    .point-ment { text-align:center; }
+    .point-ment .txt {display:inline-block; width:100%;}
+    .point-ment .btn { position:relative; right:auto; top:auto; margin-top:24px;}
+
+    /* 결제 수단 (설명) */
+    .order-content .pay-info .pay-input-result { padding:0; }
+    .order-content .pay-info .caution-list { margin-top:20px; }
+    .order-content .pay-info .caution-list li:not(:nth-child(1)) { margin-top:24px; }
+
+    .order-content .payment-area { position:relative; right:0; top:0; max-width:100%; z-index:0; }
+    .order-excv .payment-area { top:initial; }
+    .payment-area > h2 { display:none; }
+    .payment-area .terms-box { margin-bottom:34px; }
+    .payment-area .cost-listup { border-bottom-width:2px; }
+    .payment-area .terms-box { margin-top:24px; }
+    .payment-area .payment-listup { padding:0 0 24px; }
+    
+    .pay-nav-box .pay-method-pay { width:100%; height:0; padding-bottom:38%; }
+    .pay-nav-box .pay-tab-nav ul li { width:calc(100% / 2 - 10px); margin-left:6px !important; margin-right:6px; }
+    .pay-nav-box .pay-tab-nav ul li:nth-child(even) { margin-right:0; }
+    .pay-nav-box .pay-tab-nav ul li:nth-child(2n+1) { margin-left:0; clear:both; }
+
+    .pay-input-box-3 { margin-bottom:20px; padding:0; }
+    .pay-input-box-3 > .head-1 { width:36%; max-width:initial; padding:8px 0; }
+    .pay-input-box-3 > .p-cont { width:62%; max-width:initial; }
+    .pay-input-box-3 > .p-cont .inp-box { width:100%; max-width:initial; }
+    .pay-input-box-3 > .p-cont .inp-box input { width:100%; }
+    .pay-input-box-3 > .p-cont .dropdownMenu { width:100%; max-width:450px; }
+    .pay-input-box-3 > .p-cont .guide { margin-top:10px; font-size:12px; }
+    .pay-input-box-3 > .p-cont .btn-underline { position:absolute; right:0; top:initial; margin-top:10px; }
+    .pay-input-box-3.first-block { border-bottom:1px solid #ebebeb; }
+
+    .order-content .pay-info { margin-bottom:0; }
+
+    .tooltip-box { width:80% !important; }
+    .tooltip-box h2 { margin-bottom:20px; font-size:16px; }
+    .tooltip-box p { font-size:13px; }
+
+    /* 신용카드 */
+    .credit-card { display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; margin-left:0; margin-right:0; }
+    .easy-pay { display:flex; flex-direction:row; flex-wrap:wrap; margin-left:0; margin-right:0; }
+    .credit-card > li, .easy-pay > li { width:calc(25% - 12px); height:75%; float:none; }
+    .credit-card > li > button, .easy-pay > li > button { height:0; padding-bottom:75%; }
+
+    .pay-input-box-1 { padding-bottom:20px; }
+
+    .info-pay{max-width:100%; }
+
+    .m-buy-btn-box { position:fixed; display:block; left:0; right:0; bottom:0; max-width:100vw; padding:20px 12px; background:#fff; border-top:1px solid #d9d9d9; box-shadow:0 -8px 10px rgba(0,0,0,.1); z-index:100; }
+    .m-buy-btn-box .btn-show { display:block; width:25px; height:3px; margin:-9px auto 10px; font-size:0; background:#c2c2c2; border-radius:1px; }
+    .m-buy-btn-box .btn { width:100%; margin:0; margin-top:10px; }
+    .m-buy-btn-box .btn-l { width:100%; color:#fff; }
+    .m-buy-btn-box .btn-l > strong { font-family:"Samsung Sharp Sans"; margin-right:5px; font-size:18px; color:#fff; font-weight:bold; }
+    .m-buy-btn-box .btn-l > span { font-size:18px; color:#fff; font-weight:bold; }
+
+    .m-buy-pay { position:relative; margin-top:16px; margin-bottom:12px; }
+    .m-buy-pay:after { display:block; content:""; clear:both; }
+    .m-buy-pay > span { display:inline-block; font-size:14px; }
+    .m-buy-pay .m-buy-total { float:left; }
+    .m-buy-pay .m-buy-total > em { font-style:normal; font-family:"Samsung Sharp Sans"; color:#000; }
+    .m-buy-pay .m-buy-sale { float:right; }
+    .m-buy-pay .m-buy-sale > em { font-style:normal; font-family:"Samsung Sharp Sans"; color:#1428A0; }
+
+    .resident-num { display:flex; }
+
+    .order-info-detail.use-type-1 > li { max-width:100%; }
+}
+
+@media all and (max-width:674px){
+    /* 한도 정보 */
+    .order-content > .tit-box { margin-bottom:24px !important; }
+
+    /* 한도 정보 */
+    .order-content .limit-info > h2 { display:none; }
+    .order-content .limit-info > .limit-info-box > dt::after, .limit-info > .limit-info-box > dd::after { display:block; content:""; clear:both; }
+    .order-content .limit-info > .limit-info-box > dt { width:100%; padding:12px 0; text-align:center; }
+    .order-content .limit-info > .limit-info-box > dd { display:block; width:100%; padding:24px 12px; border-bottom:1px solid #EBEBEB; background:#fff; }
+    .order-content .limit-info > .limit-info-box > dd > span { display:block; width:100%; padding-left:0; }
+    .order-content .limit-info > .limit-info-box > dd > span:not(:nth-last-child(1)) { margin-bottom:9px; }
+    .order-content .limit-info > .limit-info-box > dd > span > em { display:inline-block; width:50%; }
+    .order-content .limit-info > .limit-info-box > dd > span > em:after { background:none; }
+    .order-content .limit-info > .limit-info-box > dd > span > strong { float:right; }
+
+    .order-content .limit-info .info-type-1, .limit-info .info-type-2 { padding:24px 12px; }
+    .order-content .limit-info .info-type-1 > dt { margin-bottom:18px; }    
+    .order-content .limit-info .info-type-1 > dd p { font-size:12px; line-height:18px; }
+    .order-content .limit-info .info-type-1 > dd p.light { margin-top:6px; }
+    .order-content .limit-info .info-type-2 .info-type-left { display:block; float:none; margin-bottom:10px; }
+    .order-content .limit-info .info-type-2 .info-type-right { display:block; float:none; }
+    
+    .point-ment .btn{display:inline-block;position:relative;margin-top:18px; }
+}
+
+@media all and (max-width:587px) and (min-width:415px){}
+
+@media all and (max-width:414px){
+    
+    /* 주문 상품 */
+	.pay-nav-box .pay-tab-nav ul li { width:calc(100% / 2 - 10px); }
+	.pay-nav-box > .pay-nav-box-left { float:none; display:block; width:100%; max-width:initial; }
+    .pay-nav-box > .pay-nav-box-right { float:none; display:block; width:100% !important; max-width:initial; margin-top:20px; }
+
+    .input-type-ul > li.input-obj {padding-left:30%; }
+    .input-type-ul > li.input-obj.message-wide { padding-left:0; }
+
+    .point-area .order-info-box-2 > li:not(.deco) .head { width:35%; z-index:1; }
+    .credit-card > li { width:calc(50% - 10px); height:75%; float:none; }
+    .pay-input-box-1 .pay-input { width:calc(100% - 100px); margin-right:0; }
+    .easy-pay > li { width:calc(50% - 10px); }
+}
+
+@media all and (max-width:320px){
+    .m-buy-pay .m-buy-total, .m-buy-pay .m-buy-sale { display:block; float:none; line-height:21px; }
+    .pay-input-box-1 .pay-input, .info-pay > li:nth-child(2) { width:100%; }
+}

@@ -1,0 +1,65 @@
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+
+<!-- split mx_academy_1.txt -->
+<link rel="stylesheet" href="./css/mx_academy.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "2025_galaxy_academy_festa";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap mx_academy" id="mx_academy">
+
+	@@include('./split-html/sec_kv.html')
+	<!--// sec_kv -->
+
+    @@include('./split-html/sec_nav.html')
+	<!--// sec_nav -->
+
+    @@include('./split-html/sec_benefit.html')
+	<!--// sec_benefit -->
+
+    @@include('./split-html/sec_buying.html')
+	<!--// sec_buying -->
+
+    @@include('./split-html/sec_comp_all.html')
+	<!--// sec_comp_all -->
+
+</main>
+<!-- split stop -->
+
+<style type="text/css">.component-contents { height: 200px; }</style>
+@@for (var i = 1; i <= 4; i++) {<div class="wrap-component product-card w1440px" data-cptno="${i}"><div class="component-contents">컴포넌트${i}</div></div>}
+
+<!-- split mx_academy_2.txt -->
+<div class="sec_project_wrap mx_academy">
+
+    @@include('./split-html/sec_notice.html')
+    <!--// sec_notice -->
+
+</div>
+
+<script defer src="https://images.samsung.com/kdp/event/sec/assets/js/service_20240307.min.js"></script>
+<script defer src="./js/buying_script.min.js" inline></script>
+<script defer src="./js/mx_academy.min.js" inline></script>
+<!-- <script src="./js/isqa.min.js" inline></script> -->
+<script defer type="text/javascript" src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<script defer>
+	$(document).ready(function(){
+		var observer = lozad();
+		observer.observe();
+	});
+</script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

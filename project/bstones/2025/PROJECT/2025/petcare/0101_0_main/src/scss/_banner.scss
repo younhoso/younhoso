@@ -1,0 +1,31 @@
+.pet_care {
+    .sec_banner {@include vw-pc(padding, 100 0); background-color: #F4F4F4; 
+        .pt_title{@include vw-pc(margin-bottom,32); @include vw-pc(font-size,28); @include vw-pc(line-height,35); font-weight: 700;}
+
+        .pt_banner{@include vw-pc(max-width,1324); margin: 0 auto;
+            &__list{display: flex; justify-content: center; @include vw-pc(gap,24); }
+            &__item{position: relative;}
+            &__link {display: block;}
+            &__img{@include vw-pc(width,316);}
+            &__txt-box{position: absolute; @include vw-pc(top,37); @include vw-pc(left,20);}
+            &__tit{@include vw-pc(margin-bottom,7); @include vw-pc(font-size,28); @include vw-pc(line-height,37); font-weight:700; letter-spacing:-0.05em;}
+            &__desc{@include vw-pc(font-size,20); @include vw-pc(line-height,26); letter-spacing:-0.05em;}
+        }
+    }
+}
+	
+@media screen and (max-width:768px) {
+    .pet_care {
+        .sec_banner {@include vw-mo(padding, 100 0);
+            .pt_title{@include vw-mo(margin-bottom,30); @include vw-mo(font-size,52); @include vw-mo(line-height,64);}
+    
+            .pt_banner{ @include vw-mo(max-width,640); 
+                &__list{flex-direction: column; align-items: center; @include vw-mo(gap,24);}
+                &__img{@include vw-mo(width,640);}
+                &__txt-box{@include vw-mo(top,26); @include vw-mo(left,40);}
+                &__tit{@include vw-mo(margin-bottom,16); @include vw-mo(font-size,40); @include vw-mo(line-height,53);}
+                &__desc{@include vw-mo(font-size,28); @include vw-mo(line-height,37); letter-spacing:-0.05em;}
+            }
+        }
+    }
+}

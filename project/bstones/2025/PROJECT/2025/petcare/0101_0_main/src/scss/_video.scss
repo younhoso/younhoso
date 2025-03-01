@@ -1,0 +1,23 @@
+
+.pt_video_wrap {
+    position: relative; margin: 0 auto; @include vw-pc(max-width,1320); @include vw-pc(height,220);
+
+    .pt_video_box {
+        position: absolute; top:0; left: 0; display: block; @include vw-pc(width, 390); @include vw-pc(height, 220); z-index: 1;
+
+        video {width: 100%;}
+    }
+}
+.layer-pop .btn-box .cogi_btn {color: #fff !important;}
+
+@media screen and (max-width: 768px) {
+    .pt_video_wrap {
+        max-width: 100%; @include vw-mo(height, 320);
+
+        .pt_video_box {
+            left: 50%; transform: translateX(-50%); display: block; @include vw-mo(width, 560); @include vw-mo(height, 320);
+
+            video {width: 100%;}
+        }
+    }
+}

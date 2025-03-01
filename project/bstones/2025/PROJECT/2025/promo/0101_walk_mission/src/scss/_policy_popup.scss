@@ -1,0 +1,21 @@
+
+/* policy_popup */
+.dimm{z-index: 1;}
+.walk_mission{
+    .policy_popup {
+       display: none; position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); @include vw-pc(width,864); height: calc(100vh - 96px); background-color: #fff; @include vw-pc(border-radius,20);
+       overflow: hidden;
+       &.pt_modal_on{display: block;}
+       &__inner{width: 100%; height: 100%; overflow-y: auto; }
+       &__btn-close{position: absolute; @include vw-pc(inset, 20 20 auto auto); display: inline-block; @include vw-pc(width,76); @include vw-pc(height,76); background: url('../../is/images/popup/wc_mis_btn_close.png') no-repeat center / cover;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+        .walk_mission{
+            .policy_popup {
+                    @include vw-mo(width,672); height: calc(100vh - 130px); transform: translate(-50% -15%); @include vw-mo(border-radius,20);
+                    &__btn-close{@include vw-mo(inset, 20 20 auto auto); @include vw-mo(width,90); @include vw-mo(height,90);}
+            }
+        }
+    }

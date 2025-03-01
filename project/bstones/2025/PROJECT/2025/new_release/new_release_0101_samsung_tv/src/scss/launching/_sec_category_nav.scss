@@ -1,0 +1,31 @@
+.samsung_tv_launching {
+    .sec_category_nav {
+        // display: none;
+        position: relative; width: 100%; @include vw-max(margin-top, -56);
+
+        &::after { content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 100%; @include vw-max(height, 1); background-color: #fff; }
+        .pt_category_nav {
+            display: flex; justify-content: center; align-items: center; background-color: transparent;
+
+            &__btn {
+                position: relative; z-index: 1; display: inline-flex; justify-content: center; align-items: center; @include vw-max(width, 500); @include vw-max(height, 56); @include vw-max(font-size, 18); font-weight: 700; color: #fff; letter-spacing: -0.025em; background-color: #696969; @include vw-max(border-top-left-radius, 20); @include vw-max(border-top-right-radius, 20);
+
+                &.on { color: #000; background-color: #fff; border: 1px solid #fff; border-bottom: 1px solid #fff; @include vw-max(border-width, 1); }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .samsung_tv_launching {
+        .sec_category_nav {
+            @include vw-mo(margin-top, -66);
+
+            .pt_category_nav {
+                &__btn {
+                    @include vw-mo(width, 360); @include vw-mo(height, 66); @include vw-mo(line-height, 66); @include vw-mo(font-size, 24); @include vw-mo(border-top-left-radius, 20); @include vw-mo(border-top-right-radius, 20);
+
+                    &.on { color: #000; background-color: #fff; border: 1px solid #d9d9d9; border-bottom: 1px solid #fff; @include vw-mo(border-width, 1); }}
+            }
+        }
+    }
+}

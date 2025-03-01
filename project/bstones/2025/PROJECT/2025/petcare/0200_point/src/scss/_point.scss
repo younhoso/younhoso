@@ -1,0 +1,60 @@
+.petcare_point {
+    .sec_point {@include vw-pc(padding,100 0 96);
+        // .inner_1440 {@include vw-pc(max-width,1409);}
+        .pt_infor {
+            &__cont-box {width:100%; @include vw-pc(padding,56 0 60); text-align:center; background-color: #F7F7F7;
+                &.pt_bg-image.pt_add-bg {background:#F7F7F7 url('../../is/images/pp_info_bg_pc.png') no-repeat center 0 / contain;}
+            }
+            &__text-box {@include vw-pc(margin-bottom,12);}
+            &__title {display: flex; align-items: flex-start; justify-content: center; @include vw-pc(gap, 3); @include vw-pc(margin-bottom,13); @include vw-pc(font-size,42); font-weight:700; @include vw-pc(line-height,55); letter-spacing:-.025em;
+                &::before {content: '*'; @include vw-pc(width, 12); @include vw-pc(font-size, 22); font-weight: 700; @include vw-pc(line-height, 40); text-align: center;}
+            }
+            &__title strong {vertical-align:baseline;}
+            &__chk-box {display:flex; justify-content:center; align-items:center; @include vw-pc(gap,20); @include vw-pc(margin-bottom,14);}
+            &__chk-text {@include vw-pc(font-size,22); @include vw-pc(line-height,28); letter-spacing:-.05em;
+                &::before {content:''; display:inline-block; @include vw-pc(width,24); @include vw-pc(height,19); @include vw-pc(margin-right,10); vertical-align:baseline;}
+                &.pt_bg-image.pt_add-bg::before {background:url('../../is/images/pp_ico_chk.png') no-repeat 0 0 / contain;}
+            }
+            &__noti-text {@include vw-pc(padding-left,8); @include vw-pc(font-size,16); @include vw-pc(line-height,21); color:#777; letter-spacing:-.025em; @include vw-pc(text-indent,-8);
+                & + .pt_infor__noti-text {@include vw-pc(margin-top, 6);}
+            }
+            &__point {
+                &-text {display:flex; justify-content:center; align-items:flex-end; @include vw-pc(margin-bottom, 26); @include vw-pc(font-size, 28); @include vw-pc(line-height, 35);
+                    #count {display: inline-block; @include vw-pc(width, 240); @include vw-pc(height,64); @include vw-pc(border-bottom, 2 solid #000); @include vw-pc(font-size,52); @include vw-pc(line-height, 64); color:#FFAA4E;}
+                }
+                &-btn {padding-bottom:0; border-bottom:0 none; @include vw-pc(width,160); @include vw-pc(height,40); @include vw-pc(font-size,16); color:#fff; letter-spacing:0; background-color:#000; @include vw-pc(border-radius,20);}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .petcare_point {
+        .sec_point {@include vw-mo(padding,80 0 76);
+            .inner_1440 {min-width: 100%;}
+            .pt_infor {
+                &__cont-box {@include vw-mo(padding,64 0);
+                    &.pt_bg-image.pt_add-bg {background-image:url('../../is/images/pp_info_bg_mo.png');}
+                }
+                &__text-box {@include vw-mo(margin-bottom,45);}
+                &__title {@include vw-mo(margin-bottom,22); @include vw-mo(font-size,42); font-weight:700; @include vw-mo(line-height,52);
+                    &::before {@include vw-mo(width, 11); @include vw-mo(font-size,20); @include vw-mo(line-height, 42); text-align: center;}
+                }
+                &__title strong {color:#D14000;}
+                &__chk-box {flex-direction:column; @include vw-mo(gap,0 5); @include vw-mo(margin-bottom,19);}
+                &__chk-text {@include vw-mo(font-size,24); @include vw-mo(line-height,38);
+                    &::before {@include vw-mo(width,24); @include vw-mo(height,19); @include vw-mo(margin-right,5);}
+                }
+                &__noti-text {@include vw-mo(padding-left,8); @include vw-mo(font-size,20); @include vw-mo(line-height,30); @include vw-mo(text-indent,-8);
+                    & + .pt_infor__noti-text {margin-top: 0;}
+                }
+                &__point {
+                    &-text {@include vw-mo(margin-bottom, 40); @include vw-mo(font-size, 32); @include vw-mo(line-height, 39);
+                        #count {@include vw-mo(width, 300); @include vw-mo(height,74); @include vw-mo(border-bottom, 4 solid #000); @include vw-mo(font-size, 60); @include vw-mo(line-height, 74);}
+                    }
+                    &-btn {@include vw-mo(width,268); @include vw-mo(height,60); @include vw-mo(font-size,24); @include vw-mo(border-radius,30);}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+
+<!-- split petcare_event.txt -->
+<link rel="stylesheet" href="./css/petcare_event.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "petcarestore";
+	digitalData.page.pathIndicator.depth_3 = "petcarestore_event";
+	digitalData.page.pathIndicator.depth_4 = "launching";
+
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap petcare_event" id="petcare_event">
+
+    <!-- @@include('./split-html/lnb.html') -->
+    <!-- LNB -->
+
+	@@include('./split-html/kv.html')
+	<!--// sec_kv -->
+
+    <!-- s: 코기찾기 이벤트 --> 
+    <!-- <div class="pt_video_wrap">
+        <a href="javascript:;" class="pt_video_box" title="이스터 에그 테스트" data-omni-type="microsite" data-omni="sec:petcarestore:petcarestore_findcorgi:launching:goto_petfindcorgi5" onclick="fnCallEasterEgg(32867, 7, 32859)" data-popup-target="popupExhibitionEnter">
+            <video id="corgi_video" class="m_hide" autoplay loop muted playsinline>
+                <source src="//images.samsung.com/kdp/event/sec/2024/0401_pet_care/video/pet_video_corgi_05_pc.mp4" type="video/mp4" />
+            </video>
+            <video id="corgi_video" class="m_show" autoplay loop muted playsinline>
+                <source src="//images.samsung.com/kdp/event/sec/2024/0401_pet_care/video/pet_video_corgi_05_mo.mp4" type="video/mp4" />
+            </video>
+        </a>
+    </div>
+    
+    <div class="layer-pop layer-default daily-event alert" id="easterEggCommonBannerAlert" tabindex="0" data-popup-layer="easterEggCommonBannerAlert" data-focus="easterEggCommonBannerAlert">
+        <div class="layer-header blind"><h2>easterEggCommonBannerAlert</h2></div>
+        <div class="layer-content">
+            <p style="word-break:keep-all;"></p>
+            <div id="atndCpltPopImgPath" class="evt-rslt-img" style="display: none;">
+                <img src="" alt="출석체크 완료" />
+            </div>
+            <div id="atndCpltPopItdcWds" class="evt-rslt-img" style="display: none;">
+                <p style="word-break:keep-all;"></p>
+            </div>
+            <div class="btn-box">
+                <a href="javascript:void(0)" onclick="" class="btn btn-d btn-type2 cogi_btn">확인</a>
+            </div>
+        </div>
+        <button type="button" class="pop-close accessibility-pop-close" id="easterEggCloseCommonConfirmBtn" name="easterEggCloseCommonConfirmBtn" data-focus-next="easterEggCommonBannerAlert">팝업닫기</button>
+    </div>
+    
+    <script defer src="/sec/static/_script/event/event-easteregg.js"></script> -->
+
+    <!-- e: 코기찾기 이벤트 -->
+
+    @@include('./split-html/event.html')
+    <!-- sec_event -->
+
+    <!-- @@include('./split-html/notice.html') -->
+    <!-- //sec_notice -->
+
+</main>
+
+<script src="./js/petcare_event.min.js" inline></script>
+<script src="./js/isqa.min.js" inline></script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

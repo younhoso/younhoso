@@ -1,0 +1,90 @@
+<!-- air test -->
+
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+<!-- @@include('../../../../../s-common/inc/header_sec_local_230921.html') -->
+
+<!-- split samdot_monitor_01.txt -->
+<link rel="stylesheet" href="./css/samdot_monitor.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "event";
+	digitalData.page.pathIndicator.depth_3 = "samsung-monitor";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+<input id="addHtmlPopupCounsel" name="addHtmlPopupCounsel" type="hidden"/>
+
+<main class="sec_project_wrap samdot_monitor" id="samdot_monitor">
+    @@include('./split-html/sec_kv.html')
+    
+    @@include('./split-html/sec_nav.html')
+
+    @@include('./split-html/sec_benefit.html')
+
+    @@include('./split-html/sec_buying_subscribe.html')
+
+</main>
+
+
+<div class="sec_project_wrap samdot_monitor" >
+
+    <section class="sec_together">
+        <div class="inner_1440">
+            <div class="pt_title">
+                <h3 class="pt_title__main pt_title__main--noicon">더 많은 모니터 추천 제품을 만나보세요</h3>
+            </div>
+            
+            <div class="pt_category_box" data-compo-cate="product-card" data-swiper="true" data-sticky="false">
+                <div class="pt_slider_category_sticky">
+                    <div class="pt_slider_category_wrap">
+                        <div class="swiper-container">
+                            <p class="pt_category_title blind">제품 카테고리 선택</p>
+                            <ul class="swiper-wrapper pt_category_list">
+                                <li class="swiper-slide on"><a href="#" title="게이밍 모니터 선택" class="pt_category_btn pt_category_btn--gaming" data-omni-type="microsite" data-omni="sec:event:samsung-monitor:goto_tap_gaming">게이밍 모니터<span class="blind">선택됨</span></a></li>
+                                <li class="swiper-slide"><a href="#" title="고해상도 모니터 선택" class="pt_category_btn pt_category_btn--high" data-omni-type="microsite" data-omni="sec:event:samsung-monitor:goto_tap_view">고해상도 모니터</a></li>
+                                <li class="swiper-slide"><a href="#" title="스마트 모니터 선택" class="pt_category_btn pt_category_btn--smart" data-omni-type="microsite" data-omni="sec:event:samsung-monitor:goto_tap_smart">스마트 모니터</a></li>
+                                <li class="swiper-slide"><a href="#" title="일반 모니터 선택" class="pt_category_btn pt_category_btn--general" data-omni-type="microsite" data-omni="sec:event:samsung-monitor:goto_tap_general">일반 모니터</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</div>
+<!-- split stop -->
+
+<style type="text/css">.wrap-component .component-contents{height:400px}</style>
+@@for (var i = 0; i < 4; i++) {<div class="wrap-component product-card" data-cptno="${i}"><div class="component-contents">컴포넌트${i}</div></div>}
+
+<!-- split samdot_monitor_02.txt -->
+<div class="sec_project_wrap samdot_monitor">
+
+    @@include('./split-html/sec_notice.html')
+    <!-- //sec_notice -->
+</div>
+
+<script defer src="https://images.samsung.com/kdp/event/sec/assets/js/service_20240215.js"></script>
+<script defer src="./js/samdot_monitor.min.js" inline></script>
+<!-- <script defer src="./js/buying_list.min.js" inline></script> -->
+<script defer src="./js/buying_subscribe.min.js" inline></script>
+<!-- <script defer src="./js/buying_script_launching.min.js" inline></script> -->
+<!-- <script defer src="./js/isqa.min.js" inline></script> -->
+<script defer src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<!-- <jsp:include page="/WEB-INF/view/specialCounsel/incSpecialCounselApplyPopup.jsp" /> -->
+<script defer>
+	$(document).ready(function(){
+		var observer = lozad();
+		observer.observe()
+	});
+</script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<script src="/sec/static/_script/jquery.form.min.js"></script>
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

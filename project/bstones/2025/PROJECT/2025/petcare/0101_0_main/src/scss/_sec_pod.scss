@@ -1,0 +1,177 @@
+.pet_care {
+  .sec_pod {    
+    @include vw-pc(padding,37 0 100);
+
+    .pt_title {
+      &__box {display:flex; justify-content:space-between; align-items:flex-end; @include vw-pc(margin-bottom,23);}
+      &__main {@include vw-pc(margin-bottom,13); @include vw-pc(font-size,28); font-weight:700; @include vw-pc(line-height,37); @include vw-pc(letter-spacing,-.5);}
+      &__desc {@include vw-pc(font-size,20); @include vw-pc(line-height,20); @include vw-pc(letter-spacing,-.25);}
+    }
+    .pt_btn {
+      &__all {@include vw-pc(font-size,16); font-weight:700; border-bottom: 0 none;}
+    }
+    .pt_pod {
+      @include vw-pc(width,1320); @include vw-pc(margin,0 auto 97);
+
+      &:last-child {margin-bottom:0;}
+
+      &__swiper {
+        position:relative; @include vw-pc(margin, -2 0);
+
+        .pt_arrow {
+          z-index:1; position:absolute; top:50%; transform:translateY(-50%);
+
+          &__next {@include vw-pc(right,-44);}
+          &__prev {@include vw-pc(left,-44);}
+          &.swiper-button-disabled {opacity:.3;}
+        }
+      }
+      &__container {@include vw-pc(padding, 2);}
+      &__item {
+        @include vw-pc(width,272); @include vw-pc(margin-right,20);
+        > a {display: block;}
+
+        &:last-child {margin-right:0;}
+        &-img {position:relative; width:100%; @include vw-pc(height,272); @include vw-pc(margin-bottom,15); }
+        &-name {@include vw-pc(height,46); @include vw-pc(margin-bottom,15); @include vw-pc(font-size,18); @include vw-pc(line-height,23); @include vw-pc(letter-spacing,-.4); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
+        &-price {
+          &--wrap {
+            display:flex; justify-content:space-between; align-items:center; @include vw-pc(font-size,18); @include vw-pc(line-height,22); color:#ACACAC;
+
+            & + div {@include vw-pc(margin-top,8);}
+          }
+          &--blue {
+            @include vw-pc(line-height,30); font-weight:700; color:#006FF2;
+
+            .pt_pod__item-price--num {@include vw-pc(font-size,25);}
+          }
+          &--black {
+            @include vw-pc(line-height,30); font-weight:700; color:#000;
+
+            .pt_pod__item-price--num {@include vw-pc(font-size,25);}
+          }
+        }
+      }
+      &__tag {
+        display:flex; align-items:center; @include vw-pc(gap,4); @include vw-pc(height,26); @include vw-pc(padding,0 13); @include vw-pc(font-size,15); font-weight:700; @include vw-pc(border-radius,13); background-color:#fff; color:#000;
+
+        &::before {content:""; background-repeat:no-repeat; background-size:cover; background-position:center;}
+        &-best::before {@include vw-pc(width,15); @include vw-pc(height,16); background-image:url("../../is/images/pod/tag/pet_ico_best.svg");}
+        &-dog::before {@include vw-pc(width,19); @include vw-pc(height,19); background-image:url("../../is/images/pod/tag/pet_ico_dog.svg");}
+        &-hot::before {@include vw-pc(width,13); @include vw-pc(height,16); background-image:url("../../is/images/pod/tag/pet_ico_hot.svg");}
+        &-cat::before {@include vw-pc(width,13); @include vw-pc(height,16); background-image:url("../../is/images/pod/tag/pet_ico_cat.svg");}
+        &-sale::before {@include vw-pc(width,13); @include vw-pc(height,16); background-image:url("../../is/images/pod/tag/pet_ico_sale.svg");}
+        &-num::before {display:none;}
+
+        &-text {@include vw-pc(line-height,18);}
+        &-box {position:absolute; @include vw-pc(left,14); @include vw-pc(top,14); display:flex; @include vw-pc(gap,5); align-items:center; }
+        &-num  {display:flex; justify-content:center; align-items:center; @include vw-pc(width,34); @include vw-pc(height,34); padding:0; @include vw-pc(font-size,14); font-weight:700; border-radius:50%;  background-color:#000; color:#fff;}
+      }
+    }
+  }
+}
+
+// 폴드뷰
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  .pet_care {
+    .sec_pod {    
+  
+      .pt_title {
+        &__main {@include vw-pc(font-size,30); @include vw-pc(line-height,39);}
+        &__desc {@include vw-pc(font-size,22); @include vw-pc(line-height,22);}
+      }
+      .pt_btn {
+        &__all {@include vw-pc(font-size,18);}
+      }
+      .pt_pod {
+        &__item {
+          &-name {@include vw-pc(font-size,20); @include vw-pc(line-height,25);}
+          &-price {
+            &--wrap {
+              @include vw-pc(font-size,20); @include vw-pc(line-height,24);
+            }
+            &--blue {
+              @include vw-pc(line-height,33);
+  
+              .pt_pod__item-price--num {@include vw-pc(font-size,27);}
+            }
+            &--black {
+              @include vw-pc(line-height,33);
+  
+              .pt_pod__item-price--num {@include vw-pc(font-size,27);}
+            }
+          }
+        }
+        &__tag {
+          @include vw-pc(border-radius,13);
+  
+          &-text {@include vw-pc(line-height,16);}
+          &-num  { @include vw-pc(font-size,16);}
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pet_care {
+    .sec_pod {    
+      @include vw-mo(padding,1 0 75);
+
+      .pt_title {
+        &__box {position:relative; width: 100%; @include vw-mo(margin,0 auto 24);}
+        &__main {@include vw-mo(margin-bottom,14); @include vw-mo(font-size,52); @include vw-mo(line-height,64); letter-spacing: -0.05em;}
+        &__desc {@include vw-mo(font-size,28); @include vw-mo(line-height,40); @include vw-mo(letter-spacing,-.4);}
+      }
+      .pt_btn {
+        &__all {position:absolute; right:0; bottom:0; @include vw-mo(font-size,30); @include vw-mo(right, 40);}
+      }
+      .pt_pod {
+        width:100%; @include vw-mo(margin,0 0 75); @include vw-mo(padding-left,40);
+
+        &__swiper {margin: 0;}
+        &__container {padding: 0;}
+        &__item {
+          @include vw-mo(width,288); @include vw-mo(margin-right,24);
+
+          &:last-child {@include vw-mo(margin-right,40);}
+          &-img {@include vw-mo(height,288); @include vw-mo(margin-bottom,17);}
+          &-name {@include vw-mo(height,70); @include vw-mo(margin-bottom, 30); @include vw-mo(font-size,26); @include vw-mo(line-height,36); @include vw-mo(letter-spacing,-1);}
+          &-price {
+            &--wrap {
+              @include vw-mo(font-size,28); @include vw-mo(line-height,28);
+
+              & + div {@include vw-mo(margin-top,6);}
+            }
+            &--smalltit{@include vw-mo(font-size,20);}
+            &--base {
+              .pt_pod__item-price--num {@include vw-mo(font-size,28);}
+            }
+            &--blue {
+              @include vw-mo(line-height,37);
+
+              .pt_pod__item-price--num {@include vw-mo(font-size,30);}
+            }
+            &--black {
+              @include vw-mo(line-height,37);
+
+              .pt_pod__item-price--num {@include vw-mo(font-size,30);}
+            }
+          }      }
+        &__tag {
+          @include vw-mo(gap,6); @include vw-mo(height,26); @include vw-mo(padding,0 12); @include vw-mo(font-size,18); @include vw-mo(border-radius,13);
+
+          &-best::before {@include vw-mo(width,15); @include vw-mo(height,16);}
+          &-dog::before {@include vw-mo(width,19); @include vw-mo(height,19);}
+          &-hot::before {@include vw-mo(width,13); @include vw-mo(height,16);}
+          &-cat::before {@include vw-mo(width,13); @include vw-mo(height,16);}
+          &-sale::before {@include vw-mo(width,13); @include vw-mo(height,16);}
+
+          &-text {@include vw-mo(line-height,23);}
+          &-box {@include vw-mo(left,15); @include vw-mo(top,15);@include vw-mo(gap,5);}
+          &-num  {@include vw-mo(width,36); @include vw-mo(height,36); @include vw-mo(font-size,19); border-radius:50%;}
+        }
+      }
+    }
+  }
+}

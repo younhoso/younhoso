@@ -1,0 +1,50 @@
+@@include('../../../../../s-common/inc/header_sec_bc_240710.html')
+
+<!-- split tem_project.txt -->
+<!-- promo.css는 혜택 영역에만 추가 필요, bc 등록 항목 중 1곳만 등록 -->
+<link rel="stylesheet" href="https://images.samsung.com/kdp/event/sec/assets/css/promo_20240709.min.css"/>
+<link rel="stylesheet" href="./css/tem_project.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap tem_project" id="tem_project">
+
+	<section class="sec_kv" id="sec_kv">
+		<div class="inner_1920">
+			<h2>템플릿</h2>
+            <p style="color:red; font-weight: bold;">현재 프로젝트 명으로 tem_project 라고 적힌 모든 파일명/소스를 수정해서 사용하세요! (필) </p>
+		</div>
+	</section>
+	<!--// sec_kv -->
+
+    <section class="sec_benefit" id="sec_benefit">
+        <div class="inner_1440">
+            <div class="img_box">
+                <img src="../is/images/ltv_banner_pc_v1.png" alt="" class="m_hide">
+                <img src="../is/images/ltv_banner_mo_v1.png" alt="" class="m_show">
+            </div>
+        </div>
+    </section>
+    <!--// sec_benefit -->
+
+    @@include('./split-html/notice.html')
+    <!-- //sec_notice -->
+
+</main>
+
+<!-- lozad, modules은 혜택 영역에만 추가 필요, bc 등록 항목 중 1곳만 등록 -->
+<script defer src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<script defer src="https://images.samsung.com/kdp/event/sec/assets/js/modules_20240705.min.js"></script>
+
+<script src="./js/tem_project.min.js" inline></script>
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

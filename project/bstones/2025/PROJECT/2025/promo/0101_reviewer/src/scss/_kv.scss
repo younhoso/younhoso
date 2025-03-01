@@ -1,0 +1,24 @@
+.reviewer {
+    .sec_kv {
+        position: relative; overflow: hidden;
+        
+        .img_box img {height: 100%;}
+        .title_box {position: absolute; @include vw-pc(width, 1320); left: 50%; @include vw-max(top, 135); transform: translateX(-50%);}
+        .title_box h2 {@include vw-max(font-size, 56); @include vw-max(letter-spacing, -2.8); @include vw-max(line-height, 70); @include vw-max(margin-bottom, 25);}
+        .title_box p.desc_txt {@include vw-max(font-size, 20); @include vw-max(letter-spacing, -0.9); @include vw-max(line-height, 30); @include vw-max(margin-bottom, 15);}
+        .title_box p.date_txt {@include vw-max(font-size, 20); @include vw-max(line-height, 25); @include vw-max(margin-bottom, 10);}
+        .title_box p.noti_txt {@include vw-max(font-size, 14); @include vw-max(line-height, 30); letter-spacing: -0.025em;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reviewer {
+        .sec_kv {
+            .title_box {@include vw-mo(width, 720); @include vw-mo(top, 50); text-align: center;}
+            .title_box h2 {@include vw-mo(font-size, 66); @include vw-mo(letter-spacing, -3.2); @include vw-mo(line-height, 76); @include vw-mo(margin-bottom, 20);}
+            .title_box p.desc_txt {@include vw-mo(font-size, 24); letter-spacing: -0.025em; @include vw-mo(line-height, 34); @include vw-mo(margin-bottom, 10);}
+            .title_box p.date_txt {/*@include vw-mo(font-size, 22);*/@include vw-mo(font-size, 32); @include vw-mo(line-height, 32);  @include vw-mo(margin-bottom, 5);}
+            .title_box p.noti_txt {@include vw-mo(font-size, 18); @include vw-mo(line-height, 32);}
+        }
+    }
+}

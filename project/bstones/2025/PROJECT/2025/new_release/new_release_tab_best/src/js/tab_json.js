@@ -1,0 +1,657 @@
+;(function(){
+    'use strict';
+
+    // 수정 범위 s
+    var tabUrl = {
+        "isRandom": false,
+<<<<<<< .mine
+        "selecedTab": "kimchi",
+||||||| .r6477
+        "selecedTab": "tv",
+=======
+        "selecedTab": "air",
+>>>>>>> .r6900
+        "title": "<span class='en'>2023</span> 삼성전자 <br class='m_show'>신상 컬렉션",
+        "description": "올해 새롭게 선보이는 삼성 BESPOKE 주방가전, 생활가전까지 <br>모든 신제품을 삼성닷컴 특별 혜택으로 가장 먼저 만나보세요",
+        "result": [
+            // {
+            //     "id": "home",
+            //     "type": "default",
+            //     "step": "launching",
+            //     "title": "가전 구매 혜택",
+            //     "icon":"icon_home",
+            //     "date": "",
+            //     "linkUrl": "https://www.samsung.com/sec/event/best_items/",
+            //     "status": "",
+            //     "statusType": "",
+            //     "tagType": "",
+            //     "isHidden": false,
+            //     "customHtml": "",
+            //     "order": 0,
+            //     // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+            //     "omniList": {
+            //         "home":"sec:event:best_items:goto_ce_home",
+            //         "tv": "sec:event:best_items:goto_ce_tv",
+            //         "monitor": "sec:event:best_items:goto_ce_monitor",
+            //         "refrigerator": "sec:event:best_items:goto_ce_refrigerator",
+            //         "kimchi": "sec:event:best_items:goto_ce_kimchi",
+            //         "grande": "sec:event:best_items:goto_ce_grandeai",
+            //         "jet":"sec:event:best_items:goto_tab_vacuum-cleaner",
+            //         "air":"sec:event:best_items:goto_tab_air-cleaner",
+            //         "system-air":"sec:event:best_items:goto_ce_airconditioner",
+            //         "dishwasher":"sec:event:best_items:goto_ce_kitchen"
+            //     }
+            // },
+            {
+                "id": "tv",
+                "type": "default",
+                "step": "launching",
+                "title": "TV",
+                "icon":"icon_tv",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/samsung-tv/",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:samsung-tv:goto_tab_home",
+                    "tv": "sec:event:samsung-tv:tab_tv",
+                    "monitor": "sec:event:samsung-tv:goto_tab_monitor",
+                    "refrigerator": "sec:event:samsung-tv:goto_tab_refrigerator",
+                    "kimchi": "sec:event:samsung-tv:goto_tab_kimchi",
+                    "grande": "sec:event:samsung-tv:goto_tab_grandeai",
+                    "jet":"sec:event:samsung-tv:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:samsung-tv:goto_tab_air-cleaner",
+                    "system-air":"sec:event:samsung-tv:goto_tab_system_ac",
+                    "dishwasher":"sec:event:samsung-tv:goto_tab_kitchen_appliances"
+                }
+            },
+            {
+                "id": "monitor",
+                "type": "default",
+                "step": "launching",
+                "title": "모니터",
+                "icon":"icon_mnt",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/samsung-monitor/",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:samsung-monitor:goto_tab_home:goto_tab_home",
+                    "tv": "sec:event:samsung-monitor:goto_tab_home:goto_tab_tv",
+                    "monitor": "sec:event:samsung-monitor:goto_tab_home:goto_tab_samsung-monitor",
+                    "refrigerator": "sec:event:samsung-monitor:goto_tab_home:goto_tab_refrigerator",
+                    "kimchi": "sec:event:samsung-monitor:goto_tab_home:goto_tab_kimchi-refrigerator",
+                    "grande": "sec:event:samsung-monitor:goto_tab_home:goto_tab_grandeai",
+                    "jet":"sec:event:samsung-monitor:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:samsung-monitor:goto_tab_air-cleaner",
+                    "system-air":"sec:event:samsung-monitor:goto_tab_home:goto_tab_system_ac",
+                    "dishwasher":"sec:event:samsung-monitor:goto_tab_home:goto_tab_kitchen-appliance"
+                }
+            },
+            {
+                "id": "refrigerator",
+                "type": "default",
+                "step": "launching",
+                "title": "냉장고",
+                "icon":"icon_ref",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/bespoke-refrigerator/",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:bespoke-refrigerator:goto_tab_home",
+                    "tv": "sec:event:bespoke-refrigerator:goto_tab_2024_tv",
+                    "monitor": "sec:event:bespoke-refrigerator:goto_tab_monitor",
+                    "refrigerator": "sec:event:bespoke-refrigerator:goto_tab_refrigerator",
+                    "kimchi": "sec:event:bespoke-refrigerator:goto_tab_kimchi-refrigerator",
+                    "grande": "sec:event:bespoke-refrigerator:goto_tab_grandeai",
+                    "jet":"sec:event:bespoke-refrigerator:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:bespoke-refrigerator:goto_tab_air-cleaner",
+                    "system-air":"sec:event:bespoke-refrigerator:goto_tab_aircondition",
+                    "dishwasher":"sec:event:bespoke-refrigerator:goto_tab_kitchenappliance"
+                }
+            },
+            {
+                "id": "kimchi",
+                "type": "default",
+                "step": "launching",
+                "title": "김치플러스",
+                "icon":"icon_kimchi",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/kimchi-refrigerator/",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:kimchi-refrigerator:goto_tab_home",
+                    "tv": "sec:event:kimchi-refrigerator:goto_tab_2024_tv",
+                    "monitor": "sec:event:kimchi-refrigerator:goto_tab_monitor",
+                    "refrigerator": "sec:event:kimchi-refrigerator:goto_tab_refrigerator",
+                    "kimchi": "sec:event:kimchi-refrigerator:goto_tab_kimchi",
+                    "grande": "sec:event:kimchi-refrigerator:goto_tab_grandeai",
+                    "jet":"sec:event:kimchi-refrigerator:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:kimchi-refrigerator:goto_tab_air-cleaner",
+                    "system-air":"sec:event:kimchi-refrigerator:goto_tab_aircondition",
+                    "dishwasher":"sec:event:kimchi-refrigerator:goto_tab_kitchenappliance"
+                }
+            },
+            {
+                "id": "grande",
+                "type": "default",
+                "step": "launching",
+                "title": "세탁기 <span>|</span> 건조기",
+                "icon":"icon_grande",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/bespoke-grande-ai/",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:bespoke-grandeai:goto_tab_home",
+                    "tv": "sec:event:bespoke-grandeai:goto_tab_tv",
+                    "monitor": "sec:event:bespoke-grandeai:goto_tab_monitor",
+                    "refrigerator": "sec:event:bespoke-grandeai:goto_tab_refrigerator",
+                    "kimchi": "sec:event:bespoke-grandeai:goto_tab_kimchi_refrigerator",
+                    "grande": "sec:event:bespoke-grandeai:goto_tab_grandeAI",
+                    "jet":"sec:event:bespoke-grandeai:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:bespoke-grandeai:goto_tab_air-cleaner",
+                    "system-air":"sec:event:bespoke-grandeai:goto_tab_system_ac",
+                    "dishwasher":"sec:event:bespoke-grandeai:goto_tab_kitchen_appliance"
+                }
+            },
+            {
+                "id": "jet",
+                "type": "default",
+                "step": "launching",
+                "title": "청소기",
+                "icon":"icon_jet",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/vacuum-cleaner/",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:vacuum-cleaner:goto_tab_home",
+                    "tv": "sec:event:vacuum-cleaner:goto_tab_tv",
+                    "monitor": "sec:event:vacuum-cleaner:goto_tab_monitor",
+                    "refrigerator": "sec:event:vacuum-cleaner:goto_tab_refrigerator",
+                    "kimchi": "sec:event:vacuum-cleaner:goto_tab_kimchi-refrigerator",
+                    "grande": "sec:event:vacuum-cleaner:goto_tab_grandeai",
+                    "jet":"sec:event:vacuum-cleaner:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:vacuum-cleaner:goto_tab_air-cleaner",
+                    "system-air":"sec:event:vacuum-cleaner:goto_tab_system_ac",
+                    "dishwasher":"sec:event:vacuum-cleaner:goto_tab_kitchen-appliance"
+                    
+                }
+            },
+            {
+                "id": "air",
+                "type": "default",
+                "step": "launching",
+                "title": "공기청정기",
+                "icon":"icon_air",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/air-cleaner/",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:air-cleaner:goto_tab_home",
+                    "tv": "sec:event:air-cleaner:goto_tab_tv",
+                    "monitor": "sec:event:air-cleaner:goto_tab_monitor",
+                    "refrigerator": "sec:event:air-cleaner:goto_tab_refrigerator",
+                    "kimchi": "sec:event:air-cleaner:goto_tab_kimchi-refrigerator",
+                    "grande": "sec:event:air-cleaner:goto_tab_grandeai",
+                    "jet":"sec:event:air-cleaner:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:air-cleaner:goto_tab_air-cleaner",
+                    "system-air":"sec:event:air-cleaner:goto_tab_system_ac",
+                    "dishwasher":"sec:event:air-cleaner:goto_tab_kitchen-appliance"
+                    
+                }
+            },
+            {
+                "id": "system-air",
+                "type": "default",
+                "step": "launching",
+                "title": "에어컨 <span>|</span> 시스템에어컨",
+                "icon":"icon_system_air",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/air-conditioners-inhome/",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:air-conditioners:goto_home",
+                    "tv": "sec:event:air-conditioners:goto_tv",
+                    "monitor": "sec:event:air-conditioners:goto_monitor",
+                    "refrigerator": "sec:event:air-conditioners:goto_refrigerator",
+                    "kimchi": "sec:event:air-conditioners:goto_kimchi",
+                    "grande": "sec:event:air-conditioners:goto_grandeai",
+                    "jet":"sec:event:air-conditioners:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:air-conditioners:goto_tab_air-cleaner",
+                    "system-air":"sec:event:air-conditioners:goto_aircondition",
+                    "dishwasher":"sec:event:air-conditioners:goto_kitchenappliance"
+                }
+            },
+            {
+                "id": "dishwasher",
+                "type": "default",
+                "step": "launching",
+                "title": "조리기기 <span>|</span> 식기세척기",
+                "icon":"icon_dishwasher",
+                "date": "",
+                "linkUrl": "https://www.samsung.com/sec/event/kitchen-appliance",
+                "status": "",
+                "statusType": "",
+                "tagType": "",
+                "isHidden": false,
+                "customHtml": "",
+                "order": 0,
+                // "omni": "sec:new-release:bespoke-grandeai-2023:button_grandeai",
+                "omniList": {
+                    "home":"sec:event:kitchen-appliance:goto_home_event",
+                    "tv": "sec:event:kitchen-appliance:goto_monthly_tv",
+                    "monitor": "sec:event:kitchen-appliance:goto_monitor",
+                    "refrigerator": "sec:event:kitchen-appliance:goto_refrigerator",
+                    "kimchi": "sec:event:kitchen-appliance:goto_kimchi",
+                    "grande": "sec:event:kitchen-appliance:goto_laundry",
+                    "jet":"sec:event:kitchen-appliance:goto_tab_vacuum-cleaner",
+                    "air":"sec:event:kitchen-appliance:goto_tab_air-cleaner",
+                    "system-air":"sec:event:kitchen-appliance:goto_tab_system_ac",
+                    "dishwasher":"sec:event:kitchen-appliance:goto_kitchen_appliance"
+                }
+            },
+
+            // {
+            //     "id": "comingsoon",
+            //     "type": "comingsoon",
+            //     "step": "comingsoon",
+            //     "title": "Coming Soon",
+            //     "date": "",
+            //     "linkUrl": "#",
+            //     "status": "",
+            //     "statusType": "comingsoon_txt en",
+            //     "tagType": "",
+            //     "isHidden": false,
+            //     "customHtml": "",
+            //     "order": 0,
+            //     "omni": ""
+            // },
+        ]
+    }
+    // 수정 범위 e
+
+    var secTabState = {
+        listShow: [],
+        listType: [],
+        step: '',
+        text: {
+            title: '',
+            desc: '',
+        },
+    }
+
+    // temp
+    window.secTabState = secTabState;
+
+    var clearSwiper = null;
+    var $wrap = $('.sec_project_wrap');
+    var _ = {
+        isMobile : function() {
+            return $(window).width() <= 768;
+        },
+        groupBy : function (data, key) {
+            return data.reduce(function (carry, el) {
+                var group = el[key];
+                if (carry[group] === undefined) {
+                    carry[group] = []
+                }
+                carry[group].push(el)
+                return carry
+            }, {})
+        },
+        shuffle(array) {
+            var currentIndex = array.length,  randomIndex;
+            while (currentIndex != 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        },
+        order(array) {
+            return array.sort(function(a, b){
+                return a.order - b.order;
+            })
+        },
+        getParameterByName(name) {
+            var names = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + names + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+    }
+
+    var common = {
+        tabJson: function() {
+            var jsonUrl = '';
+            var _t = new Date().getTime();
+
+            //if (window.location.href.indexOf("preview") > -1) {
+            //    jsonUrl = `https://images.samsung.com/kdp/event/sec/PM_new_release/tab/staging.json?ver=${_t}`;
+            //    $.getJSON(jsonUrl, (data) => common.initialize(data,'staging'));
+            //} else if (document.domain.indexOf("samsung.com") > -1){
+            //    jsonUrl = `https://images.samsung.com/kdp/event/sec/PM_new_release/tab/live.json?ver=${_t}`;
+            //    $.getJSON(jsonUrl, (data) => common.initialize(data, 'live'));
+            //} else {
+                common.initialize(tabUrl,'local');
+            //}
+        },
+        initialize(data, division){
+            common.setData(data);
+            if(typeof sec_release_random != 'undefined' && !!sec_release_random){
+                location.href = secTabState.listType.default[0].linkUrl + '?anc=main';
+            } else {
+                common.setHtml();
+                common.setSwiper();
+            }
+            // if(division !== 'live'){
+            //     console.info('접속유형-'+ division,secTabState);
+            // }
+        },
+        setData(data){
+            secTabState.selected = data.selecedTab;
+            secTabState.isRandom = data.isRandom;
+            secTabState.text.title = data.title;
+            secTabState.text.desc = data.description;
+            secTabState.listShow = data.result.filter(function(item){ return !item.isHidden; })
+            secTabState.selectedItem = secTabState.listShow.filter(function(item){ return item.id == secTabState.selected });
+            $.each(_.groupBy(secTabState.listShow, 'type'), function(key,item){
+                if(!!data.isRandom){
+                    secTabState.listType[key] = _.shuffle(item);
+                } else {
+                    secTabState.listType[key] = _.order(item);
+                }
+            });
+            if(!secTabState.selected) {
+                secTabState.selected = !!common.getSelectedTab() ? common.getSelectedTab() : secTabState.listType.default[0].id;
+            }
+        },
+        setHtml: function(){
+            var html = '';
+            function tabList(item,active){
+                var selectedItem = secTabState.selectedItem[0];
+                var resultHtml = "";
+                if(!!item.customHtml){
+                    resultHtml = item.customHtml;
+                } else {
+                    if (item.type.toLowerCase() == 'comingsoon') {
+                        resultHtml += "<div class='swiper-slide comingsoon' data-sec-tabid='"+item.id+"'>";
+                    } else if (item.tagType.toLowerCase() == 'soldout') {
+                        resultHtml += "<div class='swiper-slide tag_soldout' data-sec-tabid='"+item.id+"'>";
+                    } else if (item.tagType.toLowerCase() == 'soldout_type2') {
+                        resultHtml += "<div class='swiper-slide tag_soldout_type2' data-sec-tabid='"+item.id+"'>";
+                    } else if (item.tagType.toLowerCase() == 'end') {
+                        resultHtml += "<div class='swiper-slide tag_end' data-sec-tabid='"+item.id+"'>";
+                    } else if (item.tagType.toLowerCase() == 'new') {
+                        resultHtml += "<div class='swiper-slide tag_new' data-sec-tabid='"+item.id+"'>";
+                    } else {
+                        resultHtml += "<div class='swiper-slide "+item.id+"' data-sec-tabid='"+item.id+"'>";
+                    }
+                    resultHtml += "<div class='tab_box'>";
+                    if (!active && item.linkUrl) {
+                        // resultHtml += "<a href='" + item.linkUrl + "' data-omni-type='microsite' data-omni='" + common.getOmni(item) + "'>";
+                        resultHtml += "<a href='" + item.linkUrl + "' data-omni-type='microsite' data-omni='" + selectedItem.omniList[item.id] + "' title='"+ item.title.replace(/<[^>]*>?/g, '')
+                        + " 페이지로 이동'>";
+                    }
+                    if (!!item.icon) {
+                        resultHtml += `<div class="tab_icon ${item.icon}">`;
+                        resultHtml += `</div>`;
+                    }
+                    if (!!item.title) {
+                        resultHtml += "<p class='tab_title'>" + item.title + "</p>";
+                    }
+                    if (!!item.date) {
+                        resultHtml += "<p class='en date_txt'>" + item.date + "</p>";
+                    }
+                    if (!!item.status && !!item.statusType) {
+                        resultHtml += "<p class='" + item.statusType + "'>" + item.status + "</p>";
+                    }
+                    if (!active && item.linkUrl) {
+                        resultHtml += "</a>";
+                    }
+                    resultHtml += "</div></div>";
+                }
+                return resultHtml;
+            }
+
+            if(!!secTabState.isRandom){
+                // selected
+                if(!!secTabState.listShow){
+                    secTabState.listShow.forEach(function(item){
+                        if(item.id.toLowerCase() == secTabState.selected.toLowerCase()){
+                            html += tabList(item,true);
+                            secTabState.step = item.step;
+                        }
+                    });
+                }
+
+                // default 우선 노출
+                if(!!secTabState.listType.default){
+                    secTabState.listType.default.forEach(function(item){
+                        if(item.id.toLowerCase() != secTabState.selected.toLowerCase()){
+                            html += tabList(item);
+                        }
+                    });
+                }
+
+                // comingsoon 후순위 노출
+                if(!!secTabState.listType.comingsoon){
+                    secTabState.listType.comingsoon.forEach(function(item){
+                        if(item.id.toLowerCase() != secTabState.selected.toLowerCase()){
+                            html += tabList(item);
+                        }
+                    });
+                }
+
+            } else {
+                // selected
+                if (!!secTabState.listShow) {
+                    secTabState.listShow.forEach(function (item) {
+                        if (item.id.toLowerCase() == secTabState.selected.toLowerCase()) {
+                            secTabState.step = item.step;
+                        }
+                    });
+                }
+
+                // default 우선 노출
+                if (!!secTabState.listType.default) {
+                    secTabState.listType.default.forEach(function (item) {
+                        html += tabList(item);
+                    });
+                }
+
+                // comingsoon 후순위 노출
+                if (!!secTabState.listType.comingsoon) {
+                    secTabState.listType.comingsoon.forEach(function(item){
+                        html += tabList(item);
+                    });
+                }
+            }
+
+            $wrap.find('[data-sec-title]').html(secTabState.text.title);
+            $wrap.find('[data-sec-desc]').html(secTabState.text.desc);
+            $wrap.find('[data-sec-tablist]').html(html);
+            $wrap.find('[data-sec-tabid]').each(function(idx,item){
+                if($(item).attr('data-sec-tabid').toLowerCase() == secTabState.selected.toLowerCase()){
+                    $(item).addClass('on').siblings().removeClass('on');
+                }
+            });
+        },
+        setSwiper: function(){
+            let selectedTab = secTabState.selected;
+            let tabData = tabUrl.result.filter(item => item.id == selectedTab);
+
+            var $slideWrap = $wrap.find('.kv_tab_swiper');
+            if(!$slideWrap.length) return;
+            var listCnt = $slideWrap.find('.swiper-slide').length;
+            var kvTabSwiper = new Swiper($slideWrap, {
+                // freeMode: true,
+                allowTouchMove: true,
+                slidesPerView: 'auto',
+                slidesPerGroup: 3,
+                // 활성화된 슬라이드 화면 가운데 정렬  (가운데 정렬 시 주석풀기)
+                // centeredSlides :true,
+                // 활성화된 슬라이드 화면 가운데 정렬 / 처음 슬라이드 , 마지막 슬라이드는 끝에 붙도록 설정 (가운데 정렬 시 주석풀기)
+                // centeredSlidesBounds: true,
+                breakpoints: {
+                    769: {
+                        centeredSlides :false,
+                        allowTouchMove: false,
+                    }
+                },
+                on: {
+                    breakpoint: function() {
+                        var _self = this;
+                        var $el = $(this.$el);
+                        // clearTimeout(clearSwiper);
+                        try{
+                            var realIndex = 0;
+                            $('.kv_tab_swiper .swiper-slide').each(function(idx,item){
+                                if($(item).hasClass('on')) realIndex = idx-1;
+                            });
+                            _self.slideTo(realIndex);
+                            // console.info(realIndex);
+                            // clearSwiper = setTimeout(function() {
+                            //     //활성화된 슬라이드로 이동처리 (가운데 정렬 시 주석처리하기 )
+                            //     var realIndex = 0;
+                            //     $('.kv_tab_swiper .swiper-slide').each(function(idx,item){
+                            //         if($(item).hasClass('on')) realIndex = idx-1;
+                            //     });
+                            //     _self.slideTo(realIndex);
+                            //     //(가운데 정렬 시 주석처리 여기 까지 주석 처리 하기)
+
+                            //     /**
+                            //      * 23.3.14
+                            //      * PC 슬라이드 기능 빠질 시에 주석 해제
+                            //      * Mckenzi
+                            //      */
+                            //     // 좌우 화살표 유무
+                            //     // if((!!_.isMobile() && listCnt > 2) || (!_.isMobile() && listCnt > 5)){
+                            //     //     _self.allowTouchMove = true;
+                            //     //     $el.siblings('.tab_arrow_box').show();
+                            //     // } else {
+                            //     //     _self.allowTouchMove = false;
+                            //     //     $el.siblings('.tab_arrow_box').hide();
+                            //     // }
+
+                            //     /**
+                            //      * 23.3.14
+                            //      * PC 슬라이드 기능 빠질 시에 주석
+                            //      * Mckenzi
+                            //      */
+                            //     // _self.allowTouchMove = true;
+                            //     $el.siblings('.tab_arrow_box').show();
+                            // }, 0);
+                        } catch (e){}
+                    },
+                    init: function() {
+                        var $this = this;
+                        var $el = $($this.$el);
+                        $this.params.navigation.prevEl = $el.siblings('.tab_arrow_box').find('.btn_prev');
+                        $this.params.navigation.nextEl = $el.siblings('.tab_arrow_box').find('.btn_next');
+
+                        /**
+                         * 23.3.14
+                         * pc에서 stopPcSlide 값 있을 경우에 pc 슬라이드 해제
+                         * PC 슬라이드 해제 기능 빠질 시에 주석
+                         * Mckenzi
+                         */
+                        var selectedSlideIdx = $el.find('.swiper-slide.on').index();
+                        console.info(selectedSlideIdx);
+
+                        if (!!tabData[0].stopPcSlide) {
+                            if(!!_.isMobile()) {
+                                $this.slideTo(selectedSlideIdx);
+                            }
+                        } else {
+                            if (3 < selectedSlideIdx) $this.slideTo(selectedSlideIdx);
+                        }
+
+                    }
+                }
+            });
+        },
+        getOmni: function(item){
+            var omni = 'sec:new-release';
+            var from = secTabState.selected;
+            var step =  secTabState.step;
+            return omni + ':' + from + ":" + step + ":tab_" + item.id;
+        },
+        getSelectedTab: function() {
+            var result = null;
+
+            if (!!$('#hdn_sec_common_tab').val()){
+                result = $('#hdn_sec_common_tab').val();
+
+            } else if(!!$('[data-sec-tab]').data('sec-tab')){
+                result = $('[data-sec-tab]').data('sec-tab');
+
+            } else if (!!$('[data-sec-tab]').attr('data-sec-tab')){
+                result = $('[data-sec-tab]').attr('data-sec-tab');
+
+            } else if (!!$('.sec_common_tab').attr('id')){
+                result = $('.sec_common_tab').attr('id');
+
+            } else {
+                var arrSearch = window.location.href.split('/');
+                arrSearch.forEach(function (item, idx) {
+                    if (item == 'new-release') result = arrSearch[idx + 1];
+                });
+            }
+
+            return result;
+        }
+    }
+
+    $(document).ready(function() {
+        common.tabJson();
+    });
+
+})();

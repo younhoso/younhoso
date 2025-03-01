@@ -1,0 +1,65 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'kv';
+@import 'howto';
+@import 'benefit';
+@import 'component_tab';
+@import 'share';
+@import 'lnb';
+@import 'notice';
+
+.pt_page_hide {width: 0 !important; visibility: hidden !important; height: 0 !important; padding: 0 !important; margin: 0 !important; overflow: hidden !important; opacity: 0 !important;}
+.walk_challenge {
+    .pt_tab{display: flex; justify-content: center; align-items: center; @include vw-pc(height,70); @include vw-pc(border,1 solid #D9D9D9); @include vw-pc(box-shadow,0 1 3 #EDEDED);
+        &__wrap.fixed_start {position:fixed; @include vw-pc(top, 60); left:50%; z-index:11; width: 100%; @include vw-pc(max-width,1920); transform:translateX(-50%); background-color: #fff; }
+        &__btn{position: relative; @include vw-pc(margin,0 50); @include vw-pc(min-width,140); @include vw-pc(font-size,22); @include vw-pc(line-height,70); letter-spacing:-0.025em; font-weight:700; color: #888888; @include vw-pc(outline-offset,-2); text-align: center;
+            &.active{@include vw-pc(border-bottom,2 solid #000); color: #000000;}
+            &:not(:last-child)::after{content: ""; position: absolute; @include vw-pc(right,-50); top: 50%; transform: translateY(-50%); @include vw-pc(width,1); @include vw-pc(height,20); background: #DEDEDE;}
+        }
+    }
+    .sec_term{
+        @include vw-pc(padding,80 0);
+
+        .pt_title {
+            position: relative; @include vw-pc(margin, 0 auto 74); @include vw-pc(width, 184); @include vw-pc(font-size, 42); @include vw-pc(line-height, 46); letter-spacing: -.055em; font-weight:700; text-align: center;
+            &::after {content:''; position: absolute; @include vw-pc(bottom, 3); @include vw-pc(left, 0); display: flex; width: 100%; @include vw-pc(height, 27); background: #2189FF; z-index: -1; opacity: .2;}
+        }
+        .pt_term{position: relative;}
+        .pt_text-box{position: absolute; @include vw-pc(top,58); width: 100%; text-align: center;
+            &__eyebrow{@include vw-pc(margin-bottom,5); @include vw-pc(font-size,22); @include vw-pc(line-height,30); letter-spacing:-0.025em;}
+            &__tit{@include vw-pc(font-size,42); @include vw-pc(line-height,55); letter-spacing:-0.025em; font-weight:700; }
+            &__highlight{position: relative;
+                &::after {content:''; position: absolute; @include vw-pc(bottom, 10); @include vw-pc(left, 0); display: flex; width: 100%; @include vw-pc(height, 27); background: #2189FF; z-index: -1; opacity: .2;}
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .walk_challenge {
+        .pt_tab{display: flex; justify-content: center; align-items: center; @include vw-mo(height,96); @include vw-mo(border,1 solid #D9D9D9); @include vw-mo(box-shadow,0 1 3 #EDEDED);
+            &__wrap.fixed_start {@include vw-mo(top, 202); @include vw-mo(height, auto); max-width:100%;}
+            &__btn{position: relative; @include vw-mo(margin,0 32); @include vw-mo(min-width,84); @include vw-mo(font-size,24); @include vw-mo(line-height,96); letter-spacing:-0.025em; font-weight:700; color: #888888; @include vw-mo(outline-offset,-2); text-align: center;
+                &.active{@include vw-mo(border-bottom,2 solid #000); color: #000000;}
+                &:not(:last-child)::after{content: ""; position: absolute; @include vw-mo(right,-32); top: 50%; transform: translateY(-50%); @include vw-mo(width,1); @include vw-mo(height,20); background: #DEDEDE;}
+            }
+        }
+        .sec_term{
+            @include vw-mo(padding,80 0);
+    
+            .pt_title {
+                position: relative; @include vw-mo(margin, 0 auto 60); @include vw-mo(width, 184); @include vw-mo(font-size, 38); @include vw-mo(line-height, 50); letter-spacing: -.025em; font-weight:700; text-align: center;
+                &::after {content:''; position: absolute; @include vw-mo(bottom, 0); @include vw-mo(left, 0); display: flex; width: 100%; @include vw-mo(height, 27);}
+            }
+            .pt_term{margin: 0 auto; @include vw-mo(width,579);}
+            .pt_text-box{position: absolute; @include vw-mo(top,67); text-align: center;
+                &__eyebrow{@include vw-mo(margin-bottom,13); @include vw-mo(font-size,26); @include vw-mo(line-height,35); letter-spacing:-0.025em;}
+                &__tit{@include vw-mo(font-size,38); @include vw-mo(line-height,38); letter-spacing:-0.025em; font-weight:700; }
+                &__highlight{position: relative; z-index: 1;
+                    &::after {content:''; position: absolute; @include vw-mo(bottom, 0); @include vw-mo(left, 0); display: flex; width: 100%; @include vw-mo(height, 27);}
+                }
+            }
+        }
+    }
+}

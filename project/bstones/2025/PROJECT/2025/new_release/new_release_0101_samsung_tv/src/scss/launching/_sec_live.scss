@@ -1,0 +1,45 @@
+.samsung_tv_launching {
+    .sec_live {
+        width: 100%; @include vw-pc(height, 40); 
+        .inner_1440 {background-color: #036FF2;}
+        .pt_live {
+            display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 36); @include vw-pc(height, 40); margin: 0 auto; @include vw-pc(padding, 0 0);
+
+            &__text {
+                position: relative; display: flex; align-items: center; color: #fff; @include vw-pc(font-size, 18); @include vw-pc(line-height, 38); font-weight: 700; letter-spacing: -0.04em;
+
+                // &::before {position: relative; @include vw-pc(top, -1); display: block; content: ''; @include vw-pc(width, 75); @include vw-pc(height, 37); @include vw-pc(margin-right, 8); background: url('../../../is/images/launching/live/stv_logo_live_pc.png') no-repeat; background-size: contain;}
+            }
+
+            &__btn {
+                position: relative; @include vw-pc(top, 0); @include vw-pc(padding-right, 15); border-bottom: 1px solid #fff; color: #fff; @include vw-pc(font-size, 14); @include vw-pc(line-height, 17); font-weight: 700; letter-spacing: -0.025em;
+
+                &::after {position: absolute; @include vw-pc(top, 4); @include vw-pc(right, 0); display: block; content: ''; @include vw-pc(width, 7); @include vw-pc(height, 11); background: url('../../../is/images/launching/live/stv_icon_arrow_pc.png') no-repeat; background-size: contain;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+        .sec_live {
+            width: 100%; @include vw-mo(height, 78);
+
+            .pt_live {
+                display: flex; justify-content: center; align-items: center; @include vw-mo(gap, 30); width: 100%; @include vw-mo(height, 78); @include vw-mo(padding, 22 30);
+
+                &__text {
+                    color: #fff; @include vw-mo(font-size, 24); @include vw-mo(line-height, 34); font-weight: 700; letter-spacing: -0.03em;
+
+                    // &::before {position: relative; @include vw-mo(top, 0); display: block; content: ''; @include vw-mo(width, 96); @include vw-mo(height, 46); @include vw-mo(margin-right, 10); background: url('../../../is/images/launching/live/stv_logo_live_mo.png') no-repeat; background-size: contain;}
+                }
+
+                &__btn {
+                    position: relative; @include vw-mo(top, 0); @include vw-mo(padding-right, 14); border-bottom: 1px solid #fff; @include vw-mo(border-width, 2); color: #fff; @include vw-mo(font-size, 20); @include vw-mo(line-height, 22); font-weight: 700; letter-spacing: -0.05em;
+
+                    &::after {position: absolute; @include vw-mo(top, 4); @include vw-mo(right, 0); display: block; content: ''; @include vw-mo(width, 7); @include vw-mo(height, 11); background: url('../../../is/images/launching/live/stv_icon_arrow_mo.png') no-repeat; background-size: contain;}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+
+<!-- split galaxy_book4_edge_alarm.txt -->
+<link rel="stylesheet" href="./css/galaxy_book4_edge_alarm.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "event";
+	digitalData.page.pathIndicator.depth_3 = "galaxy-book4-edge";
+	digitalData.page.pathIndicator.depth_4 = "alarm";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap galaxy_book4_edge_alarm" id="galaxy_book4_edge_alarm">
+    @@include('./split-html/alarm/sec_kv.html')
+    <!-- //sec_kv -->
+
+    @@include('./split-html/alarm/sec_nav.html')
+    <!-- //sec_nav -->
+	
+    @@include('./split-html/alarm/sec_benefit.html')
+    <!-- //sec_benefit -->
+
+    @@include('./split-html/alarm/sec_spec.html')
+    <!-- //sec_spec -->
+
+    @@include('./split-html/alarm/sec_feature.html')
+    <!-- //sec_feature -->
+
+    @@include('./split-html/alarm/sec_banner.html')
+    <!-- //sec_banner -->
+
+    @@include('./split-html/alarm/sec_modal.html')
+    <!-- //sec_modal -->
+
+    @@include('./split-html/alarm/sec_notice.html')
+    <!-- //sec_notice -->
+
+</main>
+
+<script src="./js/galaxy_book4_edge_alarm.min.js" inline></script>
+<!-- <script src="./js/isqa.min.js" inline></script> -->
+<script defer src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<script defer>
+	$(document).ready(function(){
+		var observer = lozad();
+		observer.observe()
+	});
+</script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

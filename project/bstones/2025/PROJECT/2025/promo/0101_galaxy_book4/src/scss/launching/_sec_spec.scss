@@ -1,0 +1,124 @@
+.galaxy_book4_ultra {
+	.sec_spec {@include vw-pc(margin-bottom, 131);
+        .pt_banner_text_box {
+            position: absolute; @include vw-max(top, 72); @include vw-max(left, 647); color: #fff; text-align: center;
+            .pt_banner_title {@include vw-max(margin-bottom, 25); @include vw-max(font-size, 38); letter-spacing: -0.05em; @include vw-max(line-height, 50); }
+            .pt_banner_btn {display:inline-block; @include vw-max(width, 255); @include vw-max(height, 54); background-color: #fff; @include vw-max(border-radius, 50); @include vw-max(font-size, 20); color: #000; font-weight: 700; letter-spacing: -0.05em; @include vw-max(line-height, 54);}
+        }
+        .pt_banner_btn_box {display: flex; justify-content: center;@include vw-pc(gap, 20);}
+        .btn_common.pt_btn_banner {@include vw-pc(height, 57); @include vw-pc(padding, 0 23); @include vw-pc(font-size, 20); @include vw-pc(border-radius, 100);@include vw-mo(border, 1 solid #E2E2E2); background-color:#fff; color:#000; letter-spacing: -0.025em;
+            &.active {background-color:#000; color:#fff; border-color:#000;}
+            &.active::after {border-color:#fff;}
+            // &:hover {border-color: #000;}
+            // &:focus {color: #000;}
+        }
+
+        .pt_title { @include vw-pc(margin-bottom, 58); @include vw-pc(font-size, 46); text-align: center;}
+        .pt_spec {
+            &_content {@include vw-pc(padding, 96 0 0); text-align:center;}
+            &_list {
+                @include vw-pc(width,912); margin: 0 auto; text-align:left;
+
+                &-item {display:flex; flex-wrap:wrap; justify-content:space-between;
+                    &:not(:last-child) {@include vw-pc(margin-bottom,36);}
+                }
+                &-top {@include vw-pc(margin-bottom,57);
+                    .pt_spec_item-text {position: absolute; @include vw-pc(top,181); left: 50%; transform: translateX(-50%); padding:0; text-align:center; white-space: nowrap;}
+                    .pt_text {
+                        &-pname {@include vw-pc(margin-bottom,2); @include vw-pc(font-size,26); color:#000;}
+                        &-sku {@include vw-pc(font-size,18); color: #939496;}
+                    }
+                }
+            }
+
+            &_item {position: relative; @include vw-pc(width,444);
+                .pt_spec_tag-new {position: absolute; @include vw-pc(left,21); @include vw-pc(top,20); @include vw-pc(padding,5 10); @include vw-pc(font-size,14); font-weight: 700; @include vw-pc(border-radius, 18); background-color: #1E81F8; color: #fff;}
+                &-img { position: relative; @include vw-pc(height,263);
+                }
+                &-text { @include vw-pc(font-size,22); @include vw-pc(line-height,34); color:#666666; letter-spacing:-.025em;}
+                &-title {position:relative; width:100%; @include vw-pc(margin-bottom,27);
+                    span {position:relative; @include vw-pc(padding-right,20); @include vw-pc(font-size,26); font-weight:700; @include vw-pc(line-height,34); background-color:#fff;}
+                    &::before {content:''; position:absolute; top:50%; left:0; @include vw-pc(width,444); @include vw-pc(height,1); background-color:#999999;}
+                    &::after {content:''; position:absolute; top:50%; right:0; @include vw-pc(width,444); @include vw-pc(height,1); background-color:#999999;}
+                }
+            }
+            &_tab {display: flex; justify-content: center; @include vw-pc(gap,20);@include vw-pc(margin-bottom, 60);
+                .btn_common.type_round { @include vw-pc(height,58); @include vw-pc(padding,0 31); @include vw-pc(font-size,20); @include vw-pc(border-radius,100); 
+                    &.active {background-color: #000;color: #fff;}
+                }
+            }
+            &_close {display:inline-flex; @include vw-pc(margin-top,79); @include vw-pc(font-size,14); font-weight:700; @include vw-pc(line-height,20); @include vw-pc(border-bottom,1 solid #000);
+                &::after {@include vw-pc(margin,0 2 -3 6); transform:rotate(-135deg);}
+            }
+        }
+        .pt_highlight {font-weight: 700; color:#4480F0; }
+        .pt_upgrade {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(margin-left, 6); @include vw-pc(width,102); @include vw-pc(height,30); @include vw-pc(font-size,18); color:#4480F0; border: 1px solid #4480F0; @include vw-pc(border-width, 1); @include vw-pc(border-radius, 6); vertical-align: text-bottom;
+        }
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.galaxy_book4_ultra {
+		.sec_spec { @include vw-mo(margin-bottom, 120);
+            .pt_banner_text_box {
+                @include vw-mo(top, 56); left: 50%; transform: translateX(-50%); width: 100%;
+                .pt_banner_title {@include vw-mo(margin-bottom, 20); @include vw-mo(font-size, 36); @include vw-mo(line-height, 50);}
+                .pt_banner_btn {@include vw-mo(width, 314); @include vw-mo(height, 60); @include vw-mo(border-radius, 44); @include vw-mo(font-size, 24); @include vw-mo(line-height, 60);}
+            }
+            .pt_banner_btn_box {@include vw-mo(gap, 11);}
+            .btn_common.pt_btn_banner {@include vw-mo(height, 60); @include vw-mo(padding, 0 23); @include vw-mo(font-size, 24); @include vw-mo(border-radius, 100); @include vw-mo(border-width, 3);
+                &.active {background-color:#000; color:#fff;}
+            }
+
+            
+            .inner_1320 {@include vw-mo(padding, 0 24);}
+            .pt_title { @include vw-mo(margin-bottom, 40); @include vw-mo(font-size, 46); text-align: center;}
+            .pt_spec {
+                &_content {@include vw-mo(padding, 115 0 0);}
+                &_list {
+                    @include vw-mo(width,672);
+    
+                    &-item {
+                        &:not(:last-child) {@include vw-mo(margin-bottom,46);}
+                    }
+                    &-top {@include vw-mo(margin-bottom,57);
+                        .pt_spec_item-text { top: auto; @include vw-mo(bottom,25);}
+                        .pt_text {
+                            &-pname {@include vw-mo(margin-bottom,2); @include vw-mo(font-size,26); @include vw-mo(line-height,32);
+                                &.pt_spec_ultra {@include vw-mo(margin-bottom,20);}
+                            }
+                            &-sku {@include vw-mo(font-size,20);}
+                        }
+                    }
+                }
+    
+                &_item {@include vw-mo(width,324);
+                    .pt_spec_tag-new { @include vw-mo(left,10); @include vw-mo(top,10); @include vw-mo(padding,7.5 19.2); @include vw-mo(font-size,20); @include vw-mo(border-radius, 80); }
+                    &-img { @include vw-mo(height,324);
+                        &.pt_spec_ultra {@include vw-mo(height,355);}
+                    }
+                    &-text { @include vw-mo(font-size,22); @include vw-mo(line-height,34); letter-spacing:-.025em;}
+                    // &-left { @include vw-mo(padding-left, 64);}
+                    &-title {width:100%; @include vw-mo(margin-bottom,24);
+                        span {@include vw-mo(padding-right,20); @include vw-mo(font-size,26); font-weight:700; @include vw-mo(line-height,34);}
+                        &::before {@include vw-mo(width,324); @include vw-mo(height,1);}
+                        &::after {@include vw-mo(width,324); @include vw-mo(height,1);}
+                    }
+                }
+                &_tab {@include vw-mo(gap,20); @include vw-mo(margin-bottom, 60);
+                    .btn_common.type_round { @include vw-mo(height,58); @include vw-mo(padding,0 31); @include vw-mo(font-size,20); @include vw-mo(border-radius,100);
+                    }
+                }
+                &_close {@include vw-mo(margin-top,77); @include vw-mo(font-size,24); @include vw-mo(line-height,32); @include vw-mo(border-bottom,1 solid #000);
+                    &::after {@include vw-mo(margin,0 2 -3 6); transform:rotate(-135deg);}
+                }
+            }
+            .pt_upgrade {@include vw-mo(margin-left, 6); @include vw-mo(width,104); @include vw-mo(height,34); @include vw-mo(font-size,20); border: 2px solid #4480F0; @include vw-mo(border-width, 2); @include vw-mo(border-radius, 6); vertical-align: bottom;
+                &.pt_nomargin {margin: 0;}
+            }
+		}
+	}
+
+}
+

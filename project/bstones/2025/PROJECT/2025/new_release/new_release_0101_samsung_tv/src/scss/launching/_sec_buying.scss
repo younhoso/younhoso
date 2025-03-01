@@ -1,0 +1,1720 @@
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// MOBILE
+.samsung_tv_launching {
+    
+    .pt_common {@include vw-mo(margin-bottom, 40); text-align: center;
+        &__tit {@include vw-mo(font-size, 54); font-weight: 700; @include vw-mo(line-height, 72); letter-spacing: -.025em;}
+    }
+
+    // 바잉툴
+    .sec_buying {
+        &__tv {@include vw-mo(padding, 80 0 80);}
+        &__music {@include vw-mo(padding, 0 0 100);}
+
+        .pt_hide {display: none !important;}
+
+        // image lazy loading
+        &.pt_bg-image.pt_add-bg {
+            .pt_ico {
+                display: inline-block; background-repeat: no-repeat; background-size: contain;
+
+                &--tradein {background-image: url("../../../is/images/launching/buying/stv_ico_tradein_mo.png");}
+                &--gclub {background-image: url("../../../is/images/launching/buying/stv_ico_gclub_mo.png");}
+                &--delivery {background-image: url("../../../is/images/launching/buying/stv_ico_delivery.svg");}
+                &--deliveryblk {background-image: url("../../../is/images/launching/buying/stv_ico_delivery_black.svg");}
+                &--pickup {background-image: url("../../../is/images/launching/buying/stv_ico_pickup.svg");}
+                &--pickupblk {background-image: url("../../../is/images/launching/buying/stv_ico_pickup_black.svg");}
+                &--arrowright {background-image: url("../../../is/images/launching/buying/stv_ico_banner_arrow_right.svg");}
+            }
+
+            .pt_btn {
+                &__play { // swiper 재생/일시정지
+                    background-image: url("../../../is/images/launching/buying/stv_btn_play_black.svg");
+                    &.pt_paused {background-image: url("../../../is/images/launching/buying/stv_btn_pause_black.svg");}
+                }
+                &--toggle {background-image: url("../../../is/images/launching/buying/stv_btn_toggle.svg");}
+                &--plus::before {background-image: url("../../../is/images/launching/buying/stv_btn_plus_mo_v1.png");}
+                // &--present {
+                //     background-image: url(../../../is/images/launching/buying/stv_btn_present.svg);
+                //     &.pt_btn--disabled {background-image: url("../../../is/images/launching/buying/stv_btn_present_disabled.svg");}
+                // }
+                &--close {background-image: url("../../../is/images/launching/buying/stv_btn_pickup_close.svg");}
+                &--cart {
+                    background: center no-repeat transparent url('../../../is/images/launching/buying/stv_btn_cart.svg');
+
+                    &.pt_btn--disabled {background: center no-repeat transparent url('../../../is/images/launching/buying/stv_btn_cart_disabled.svg');}
+                }
+            }
+            .pt_buying  {
+                .pt_slide {
+                    .swiper-button-prev {background-image: url("../../../is/images/launching/buying/stv_btn_swiper_prev.svg");}
+                    .swiper-button-next {background-image: url("../../../is/images/launching/buying/stv_btn_swiper_next.svg");}
+
+                    // 슬라이드 다크모드
+                    .swiper-container.pt_dark {
+                        // 240228 티비사전판매에선 블릿이 밖에 빠져있음. 필요없어서 주석처리함.
+                        // .pt_btn__play {
+                        //     background-image: url("../../../is/images/launching/buying/stv_btn_play_white.svg");
+                        //     &.pt_paused {background-image: url("../../../is/images/launching/buying/stv_btn_pause_white.svg");}
+                        // }
+                        .swiper-button-prev {background-image: url("../../../is/images/launching/buying/stv_btn_swiper_prev_white.svg");}
+                        .swiper-button-next {background-image: url("../../../is/images/launching/buying/stv_btn_swiper_next_white.svg");}
+                    }
+                    // .swiper-slide.pt_dark {}
+                }
+                .pt_opt {
+
+                }
+                .btnPrice { display: inline-block; @include vw-mo(margin-left, 10); @include vw-mo(font-size, 24); color: #A3A3A3; font-weight: 700; }
+            }
+        }
+
+        // [공통] 바잉툴 옵션
+        input[type=radio] {position: absolute!important; width: 1px!important; height: 1px!important; padding: 0!important; margin: -1px!important; overflow: hidden!important; clip: rect(0,0,0,0)!important; white-space: nowrap!important; border: 0!important;}
+        input[type=radio] + label {
+            position: relative; border-color: rgba(0,0,0,0);
+
+            &::before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; @include vw-mo(width, calc(100% + 0.28em)); @include vw-mo(height, calc(100% + 0.28em)); @include vw-mo(border-radius, 20); box-sizing: border-box; z-index: 2;}
+        }
+        input[type=radio]:checked + label {
+            font-weight: 700;
+            &::before {@include vw-mo(border, 4 solid #1E81F8);}
+        }
+        label {cursor: pointer;}
+        input:focus + label {outline:#2189ff dashed 2px!important;}
+        input[disabled] + label{
+            color: #aaa !important; pointer-events: none;
+
+            // 색상
+            .pt_color-chip {background: #E2E2E2 !important;}
+            & + .pt_opt__desc {color: #aaa;}
+
+            // 트레이드인
+            .pt_font--blue {color: #aaa !important;}
+        }
+
+        // [공통] 버튼
+        .btn_common.type_round {
+            &.pt_btn--disabled {color: #aaa; background: #ddd; border-color: #ddd; pointer-events: none;}
+        }
+
+        // [공통] 아이콘
+        .pt_ico {
+            text-indent: -9999px;
+
+            &--tradein {@include vw-mo(width,26); @include vw-mo(height,28);}
+            &--gclub {@include vw-mo(width,26); @include vw-mo(height,26);}
+            &--delivery {@include vw-mo(width,48); @include vw-mo(height,36);}
+            &--deliveryblk {@include vw-mo(width,46); @include vw-mo(height,36);}
+            &--pickup {@include vw-mo(width,38); @include vw-mo(height,39);}
+            &--pickupblk {@include vw-mo(width,40); @include vw-mo(height,40);}
+            &--sk {@include vw-mo(width,115); @include vw-mo(height,20);}
+            &--kt {@include vw-mo(width,29); @include vw-mo(height,24);}
+            &--lg {@include vw-mo(width,96); @include vw-mo(height,27);}
+            &--arrowright {@include vw-mo(width,13); @include vw-mo(height,20);}
+        }
+
+        // [공통] 스와이퍼 페이지네이션, 재생/일시정지 버튼, 화살표 버튼
+        .pt_slide {
+            &__controls {
+                position: absolute; @include vw-mo(bottom, 20); left: 50%; z-index: 1; display: flex; align-items: center; @include vw-mo(gap, 12); transform: translateX(-50%);
+            }
+            &__pagination {
+                display: flex; @include vw-mo(gap, 12);
+
+                .swiper-pagination-bullet {@include vw-mo(width, 14); @include vw-mo(height, 14); border: 1px solid #000; @include vw-mo(border-width,2); background-color: transparent; opacity: 1;}
+                .swiper-pagination-bullet-active {background-color: #000;}
+            }
+            .pt_btn__play {
+                @include vw-mo(width, 14); @include vw-mo(height, 16); background-repeat: no-repeat; background-size: contain; @include vw-mo(background-size, 14 16);
+                &.pt_paused {@include vw-mo(background-size, 10 14);}
+            }
+            .swiper-button-prev, .swiper-button-next {margin: 0; @include vw-mo(width,20); @include vw-mo(height,32); background-repeat: no-repeat; background-size: contain; transform: translateY(-50%);}
+            .swiper-button-prev:after, .swiper-button-next:after {display: none;}
+
+            // 슬라이드 다크모드
+            // 240228 티비사전판매에선 블릿이 밖에 빠져있음. 필요없어서 주석처리함.
+            // .swiper-container.pt_dark  {
+            //     .pt_slide__pagination .swiper-pagination-bullet {border-color: #fff;}
+            //     .pt_slide__pagination .swiper-pagination-bullet-active {background-color: #fff;}
+            // }
+                
+            &__link {display: block; width: 100%; overflow: hidden;
+                &::after {content: ''; position: absolute; @include vw-mo(top, 170); left: 50%; @include vw-mo(width, 112); @include vw-mo(height, 112); transform: translateX(-50%); background: url('../../../is/images/launching/buying/slide/stv_thm_btn_play.png') no-repeat center / contain;}
+            }
+        }
+
+        // [공통] 말풍선
+        .pt_bubble {
+            position: relative; z-index: 2; display: inline-block; @include vw-mo(padding,9 14); @include vw-mo(font-size,20); font-weight: 700; line-height: 1; letter-spacing: -0.05em; white-space: nowrap; @include vw-mo(border-radius,22);
+            &::before {content: ""; position: absolute; @include vw-mo(bottom,-9); left: 50%; width: 0; height: 0; @include vw-mo(border-top,11 solid #000); @include vw-mo(border-left,11 solid transparent); @include vw-mo(border-right,11 solid transparent); transform: translateX(-50%);}
+
+            &--blue {
+                color: #fff; background: #1E81F8;
+                &::before {border-top-color: #1E81F8;}
+            }
+            &--gray {
+                color: #fff; background: #2C2C2C;
+                &::before {border-top-color: #2C2C2C;}
+            }
+        }
+
+        .pt_buying {
+
+            &__slide {position: relative;}
+            &__prd {@include vw-mo(padding, 80 24 0);}
+
+             // 스와이프 첫번째 이미지 영역 임의줄임
+            .swiper-slide .img_box {
+                display: flex; align-items: center; justify-content: center; @include vw-mo(height, 452);
+                img[data-api-img]{ width: 100%; }
+            }
+
+            .pc_slide_desc {
+                width: 100%; @include vw-mo(margin-top, 78);
+
+                &-item {
+                    display: flex; width: 100%; height: auto; flex-wrap: nowrap; justify-content: center; align-items: center;
+
+                    &_txt { @include vw-mo(font-size, 20); font-weight: 400; line-height: 1.2; letter-spacing: -0.05em; color: #666666;}
+                    &_btn { @include vw-mo(font-size, 20); @include vw-mo(margin-left, 4); font-weight: 700; line-height: 1.2; letter-spacing: -0.05em; color: #666666; text-decoration: underline;}
+                }
+            }
+
+
+            // 바잉툴 스티키 영역
+            .pt_buying__sticky {position: sticky; left: 0;}
+
+            // 뮤직 바잉툴만 조금 줄임. 당구장 문구 1줄이어서 ..
+            &.music .pt_slide--buying { @include vw-mo(height, 540); }
+            // 바잉툴 슬라이드 (pc/mo)
+            .pt_slide--buying {
+                position: relative; @include vw-mo(height, 520); /*440*/
+                .pt_slide__subtxt {
+                    position: absolute; @include vw-mo(bottom, 40); @include vw-mo(left, 20); @include vw-mo(font-size, 20); @include vw-mo(letter-spacing, -0.025); @include vw-mo(line-height, 24); z-index: 10; color: #666; font-weight: 700;
+                    .pt_slide__subtxt--txt + .pt_slide__subtxt--txt  { @include vw-mo(margin-top, 5); }
+                    &.hide-txt { display: none; }
+                    .pt_normal_link { @include vw-mo(font-size, 20); font-weight: 700; @include vw-mo(margin-left, 5); @include vw-mo(line-height, 14); }
+                }
+                .swiper-container {height: 100%;}
+                .pt_slide__controls {@include vw-mo(bottom, 0);}
+                .swiper-button-prev, .swiper-button-next {display: block; top: 40%;}
+            }
+
+            // 색상 슬라이드 (자급제 mo)
+            .pt_slide--device {
+                position: relative; @include vw-mo(left,-24); @include vw-mo(width,720); @include vw-mo(height,460);
+
+                .swiper-container {@include vw-mo(padding,0 24); height: 100%; overflow: visible;}
+                .swiper-slide {
+                    @include vw-mo(margin-right,25); @include vw-mo(width,652);
+                    &:last-child {margin-right: 0;}
+                }
+                .pt_slide__controls {@include vw-mo(bottom, 30);}
+                .swiper-button-prev, .swiper-button-next {@include vw-mo(top,-62); left: auto; transform: none;}
+                .swiper-button-prev {@include vw-mo(right,84);}
+                .swiper-button-next {@include vw-mo(right,24);}
+            }
+
+            // 토글박스
+            .pt_toggle {
+                position: relative; @include vw-mo(padding,27 24 39); @include vw-mo(height,130); background: #fff; transition: 0.3s; overflow: hidden;
+
+                &__header {@include vw-mo(margin-bottom,39);}
+                &__title {@include vw-mo(font-size,24); font-weight: 700; @include vw-mo(line-height,32); letter-spacing: -0.02em;}
+                &__img {
+                    position: absolute; @include vw-mo(top,20); @include vw-mo(right,24); display: inline-flex; @include vw-mo(gap,25);
+
+                    .img_box {
+                        &--double {@include vw-mo(width,72);}
+                        &--tradein {@include vw-mo(width,71);}
+                    }
+                }
+                &__body {
+                    @include vw-mo(font-size,20); @include vw-mo(line-height,30); letter-spacing: -0.02em;
+                    * {letter-spacing: inherit;}
+                }
+                .pt_countdown {
+                    position: relative; display: flex; align-items:center; @include vw-mo(margin-top,34);
+
+                    .pt_count_box { display: flex;}
+                    .pt_count_slot {position: relative; @include vw-mo(margin-right,30); text-align: center;}
+                    .pt_count_slot:last-child {margin-right: 0;}
+                    .pt_count_slot::after, .pt_count_slot::before {content: ""; display: block; position: absolute; @include vw-mo(right, -20); @include vw-mo(width, 8); @include vw-mo(height, 8); border-radius: 50%; background: #000;}
+                    .pt_count_slot:last-child::after, .pt_count_slot:last-child::before {display: none;}
+                    .pt_count_slot::after {top: 0;}
+                    .pt_count_slot::before {@include vw-mo(top,16);}
+
+                    .pt_card { position: relative;}
+                    .pt_count_num{@include vw-mo(font-size, 42); font-weight: 700; letter-spacing: -0.05em; color: #000; }
+                    .pt_count_txt {@include vw-mo(margin-top,4); width: auto; @include vw-mo(font-size, 20); font-weight: 700; }
+                }
+                .pt_btn--toggle {
+                    position: absolute; @include vw-mo(bottom,10); left: 50%; z-index: 1; @include vw-mo(width,25); @include vw-mo(height,14); text-indent: -9999px; background-repeat: no-repeat; background-size: contain; transform: translateX(-50%); transition: 0.3s ease-in-out;
+                }
+
+                // 아코디언 on
+                &.pt_on {
+                    // @include vw-mo(height,246);
+                    @include vw-mo(height,344); // 카운트다운 포함
+
+                    .pt_btn--toggle {transform: translateX(-50%) rotate(180deg);}
+                }
+            }
+
+            // 기능별 유의문구
+            .pt_buying__func {
+                @include vw-mo(margin-top,36); @include vw-mo(padding,0 24); text-align: center;
+
+                .pt_func__content {@include vw-mo(margin-bottom,34);  @include vw-mo(font-size,22); @include vw-mo(line-height,38); letter-spacing: -0.05em; text-align: left;}
+                .pt_func__top {@include vw-mo(margin-bottom,34);}
+                .pt_func__title {@include vw-mo(margin-bottom,19); @include vw-mo(font-size,26); font-weight: 700;}
+                li {@include vw-mo(padding-left,12); @include vw-mo(text-indent,-12);}
+                .pt_func__bottom {
+                    dt {
+                        @include vw-mo(margin-top,34); @include vw-mo(margin-bottom,19); @include vw-mo(font-size,24); @include vw-mo(line-height,32); font-weight: 700;
+                        &:first-child {margin-top: 0;}
+                    }
+                }
+                .btn_common.type_anchor {
+                    @include vw-mo(height,30); color: #000; @include vw-mo(font-size,24); letter-spacing: -0.025em;
+                    &::after {transition: 0.3s ease-in-out;}
+
+                    &.active {
+                        &::after {transform: rotate(225deg);}
+                    }
+                }
+            }
+
+            .pt_title{
+                position: relative; @include vw-mo(margin-bottom, 50);
+                &__name_wrap {position: relative;}
+                &__name{@include vw-mo(font-size,36); @include vw-mo(line-height,40); font-weight: 700; }
+                &__sku{@include vw-mo(margin-top, 10); @include vw-mo(font-size,24); @include vw-mo(line-height,34); color: #999999; }
+                &__star{position: absolute; @include vw-mo(right, 0); @include vw-mo(top, 3); @include vw-mo(padding-left, 28); width: auto; @include vw-mo(height, 30); @include vw-mo(font-size,23); @include vw-mo(line-height,30); font-weight: 700; background-image: url("../../../is/images/launching/buying/stv_ico_star.svg"); @include vw-mo(background-size, 22 20); background-repeat: no-repeat; background-position: left center; text-decoration: underline;}
+
+                &__subtxt {
+                    @include vw-mo(font-size, 24); @include vw-mo(padding-left, 33); @include vw-mo(margin-bottom, 10); position: relative;  color: #1E81F8; font-weight: 700;
+                    &::before { content: ''; display: block; @include vw-mo(width, 28); @include vw-mo(height, 28); background: url('../../../is/images/launching/buying/stv_opt_starico_mo.png') no-repeat center/100%; position: absolute; top: 50%; left: 0; transform: translateY(-50%); }
+                    & > span { font-weight: 700; }
+                }
+                &__subtxt.ml { margin: 0; @include vw-mo(margin-left, 10);}
+            }
+
+            // 롤링배너
+            .pt_rolling {
+                &__item--01{background: url('../../../is/images/launching/buying/rolling/stv_rolling_hana_mo_v1.png') 0 0 / contain no-repeat;}
+                &__item--02{
+                    background: url('../../../is/images/launching/buying/rolling/stv_rolling_card_mo_v4.png') 0 0 / contain no-repeat;
+
+                    @include vw-mo(background-position, 0 0);
+                }
+                &__item--03{
+                    background: url('../../../is/images/launching/buying/rolling/stv_rolling_npay_mo_v3.png') 0 0 / contain no-repeat;
+
+                    @include vw-mo(background-position, 0 0);
+                }
+                &__item--04{
+                    background: url('../../../is/images/launching/buying/rolling/stv_rolling_QNDX1_mo_v2.png') 0 0 / contain no-repeat;
+
+                    // @include vw-mo(background-position, 20 0);
+                }
+                &__item--05{
+                    background: url('../../../is/images/launching/buying/rolling/stv_rolling_uhd_mo.png') 0 0 / contain no-repeat;
+
+                    @include vw-mo(background-position, -3 0);
+                }
+                &__item--06{
+                    background: url('../../../is/images/launching/buying/rolling/stv_rolling_care_mo.png') 0 0 / contain no-repeat;
+
+                    @include vw-mo(background-position, -3 0);
+                }
+                &__item--07{
+                    background: url('../../../is/images/launching/buying/rolling/stv_rolling_6_month_01_mo.png') 0 0 / contain no-repeat;
+
+                    @include vw-mo(background-position, -22 0);
+                }
+                &__item--08{
+                    background: url('../../../is/images/launching/buying/rolling/stv_rolling_8_month_01_mo.png') 0 0 / contain no-repeat;
+
+                    @include vw-mo(background-position, -13 0);
+                }
+            }
+
+            .pt_rolling {
+                @include vw-mo(margin-bottom, 100); @include vw-mo(height,166); background-color: #EFEFEF; @include vw-mo(border-radius, 20); overflow: hidden;
+
+                &__control { display: flex; align-items: center; justify-content: center; z-index: 1; position:absolute; @include vw-mo(right, 32); @include vw-mo(top, 11); @include vw-mo(width,100); @include vw-mo(height, 36); @include vw-mo(border-radius, 18); background-color: #fff;}
+                &__header { @include vw-mo(padding, 0 24); @include vw-mo(margin, 0 0 30 0); display:flex; align-items: center; justify-content: space-between; }
+                &__btn { @include vw-mo(width, 12); @include vw-mo(height, 12); @include vw-mo(margin-left, 10); background: no-repeat center / cover; background-image: url('../../is/images/launching/buying/stv_btn_rolling_info.svg') }
+
+                &__link { width:100%; @include vw-mo(height, 130); @include vw-mo(border-radius, 6); position:relative; background: #f5f5f5; display: flex; align-items: center; justify-content: start; }
+
+                &__btn-box {display: flex; justify-content: center; align-items: center; @include vw-mo(height, 32); @include vw-mo(padding, 0 10); @include vw-mo(border-radius, 16); background-color: #fff;}
+                &__page {position: static; display: flex; justify-content: center; align-items: center; @include vw-mo(gap, 2); width: auto; color: #626262; @include vw-mo(font-size, 20); font-weight: 700;
+                    .swiper-pagination-current, .swiper-pagination-total {font-weight: inherit;}
+                    // .swiper-pagination-current {}
+                }
+                &__fraction { @include vw-mo(width, 76); @include vw-mo(height, 30); @include vw-mo(top,8); @include vw-mo(right, 8); @include vw-mo(border-radius, 16); @include vw-mo(font-size, 20); @include vw-mo(letter-spacing, 3); position: absolute; display: flex; align-items: center; justify-content: center; background:#fff; color: #7F7F7F;
+                    em { @include vw-mo(margin-right, 4); color:#000; }
+                }
+                &__icon { @include vw-mo(width, 50); @include vw-mo(height, 50); @include vw-mo(margin, 0 30 0 40); }
+
+                &__eyebrow { display: block; @include vw-mo(font-size, 20); @include vw-mo(margin-bottom, 6); @include vw-mo(line-height, 26); letter-spacing: -.03em; font-weight: 700;}
+                &__text {
+                    @include vw-mo(font-size, 26); line-height: 1.3; font-weight: 700; letter-spacing: -.025em;
+
+                    .blue { color: #1E81F8;}
+
+                    .date { @include vw-mo(font-size, 22);}
+                }
+                &__desc { @include vw-mo(margin-top, 8); @include vw-mo(font-size, 20); line-height: 1.2; font-weight: 400; letter-spacing: -.025em; color: #666666;}
+
+                &__item {display: flex; flex-direction: column; justify-content: center; height: 100%; @include vw-mo(padding-left, 186);}
+
+                &__next, &__prev {display:block; color: #626262; @include vw-mo(font-size, 20); font-weight: 700;}
+                &__next {@include vw-mo(padding-left, 3);}
+                &__prev {@include vw-mo(padding-right, 3);}
+                &__linkbtn { display: inline-block; @include vw-mo(margin-top, 8); @include vw-mo(font-size, 24); width: max-content; line-height: 1.3; font-weight: 400; letter-spacing: -0.025em; @include vw-mo(padding-right, 3); @include vw-mo(border-bottom, 2 solid #000);}
+
+                .swiper-control {position: absolute; @include vw-mo(top,11); @include vw-mo(right,10); z-index: 1; @include vw-mo(width, 14); @include vw-mo(height, 36); @include vw-mo(margin-left, 8); background-size: 100%; filter: invert(1); background: no-repeat center center / contain; text-indent: -9999px;
+                    &.pt_pause { background-image: url('../../is/images/launching/buying/pt_pause.svg'); @include vw-mo(background-size, 16 13);}
+                    &.pt_play { background-image: url('../../is/images/launching/buying/pt_play.svg'); @include vw-mo(background-size, 16 14);}
+                }
+
+            }
+
+            // 가격
+            .pt_price-box{ display: none;}
+
+            // 옵션
+            .pt_opt {
+                &__type {
+                    @include vw-mo(margin-bottom, 55);
+
+                    // &:last-child {margin-bottom: 0;}
+                    // &.pt_hide {opacity: .4; pointer-events: none;}
+                }
+                &__title {
+                    @include vw-mo(margin-bottom, 20); display: flex; align-items: center; @include vw-mo(font-size, 32); font-weight: 700; @include vw-mo(line-height, 42); letter-spacing: -0.05em;
+
+                    .pt_ico {@include vw-mo(margin-top,10); vertical-align: top;}
+                    .pt_tiptext {
+                        position: relative; @include vw-mo(margin-left,20); @include vw-mo(padding-top,3); color: #1E81F8; @include vw-mo(font-size, 26); font-weight: 700; @include vw-mo(line-height, 32); letter-spacing: -0.03em;
+
+                        &--delivery {
+                            @include vw-mo(padding-left,56);
+                            &::before {content: ""; position: absolute; bottom: 0; left: 0; display: block; @include vw-mo(width,48); @include vw-mo(height,36); background-repeat: no-repeat; background-size: contain;}
+                        }
+                        &--double {
+                            @include vw-mo(padding-left,52);
+                            &::before {content: ""; position: absolute; @include vw-mo(bottom,4); left: 0; display: block; @include vw-mo(width,47); @include vw-mo(height,44); background-repeat: no-repeat; background-size: contain;}
+                        }
+                    }
+                    .pt_btn--plus {@include vw-mo(gap, 8); @include vw-mo(margin-left, 20); padding-bottom: 0; border-bottom: 0 none;
+                        > span { @include vw-mo(font-size, 32);}
+                        &::before {content: ''; @include vw-mo(width, 26); @include vw-mo(height, 26); @include vw-mo(margin-right, 4); background-repeat: no-repeat; background-position: center center; background-size: contain;}
+                    }
+                }
+                &__text {@include vw-mo(font-size, 28); @include vw-mo(line-height, 34); letter-spacing: -0.025em; font-weight: 700;}
+                &__price {@include vw-mo(font-size, 24); @include vw-mo(line-height, 28); letter-spacing: -0.025em; font-weight: 700; color: #A3A3A3;}
+                &__desc {
+                    @include vw-mo(font-size, 28); @include vw-mo(line-height, 32); letter-spacing: -0.025em;
+
+                    &--type01 { @include vw-mo(margin-top, 24); @include vw-mo(font-size, 24); line-height: 1.2; font-weight: 400; letter-spacing: -0.05em; color: #666666;}
+                    &--hide {display: none;}
+                }
+                &__list {
+                    display: flex; flex-wrap: wrap; @include vw-mo(gap, 24);
+
+                    &--grid01 {
+                        flex-direction: column;
+                        .pt_opt__item {width: 100%}
+                    }
+                    &--grid02 {
+                        .pt_opt__item {@include vw-mo(width, 324);}
+                    }
+                    &--grid03 {
+                        .pt_opt__item {@include vw-mo(width, 208);}
+                    }
+                    &--grid04 {
+                        .pt_opt__item {@include vw-mo(width, 208);}
+                    }
+                    &--grid05 {
+                        .pt_opt__item {@include vw-mo(width, 208); @include vw-mo(height, 124);}
+                    }
+                    &--grid06 { //tv 모델
+                        .pt_opt__item {@include vw-mo(width, 208);}
+                    }
+                    &--grid07 { //설치타입 - mo 긴막대 / pc 반반
+                        .pt_opt__item { width: 100%; }
+                    }
+                    &--grid08 { //배젤색상 - 반반
+                        .pt_opt__item { @include vw-mo(width, 324); }
+                    }
+                    &--grid09 { //하나일땐 100% 두개일때 50%
+                        // .pt_opt__item:first-child:nth-last-child(1) { width: 100% }
+                        // .pt_opt__item:first-child:nth-last-child(2),
+                        // .pt_opt__item:first-child:nth-last-child(2) ~ .pt_opt__itemli { @include vw-mo(width, 324); }
+                        .pt_opt__item { flex: 1 1 auto; @include vw-mo(min-width, 324); }
+                    }
+                    &--grid10 {
+                        flex-direction: column;
+
+                        .pt_opt__label { @include vw-mo(gap, 10);}
+                        .pt_opt__item { flex: 1 1 auto; @include vw-mo(min-width, 324); }
+                    }
+                    &--grid11 {
+                        flex-direction: column;
+
+                        .pt_opt__label { @include vw-mo(gap, 10);}
+                        .pt_opt__item {  }
+                    }
+                    &--gridcolor {
+                        @include vw-mo(padding-left,0); @include vw-mo(gap, 0); align-items: flex-start;
+                        .pt_opt__item {@include vw-mo(width, 52); @include vw-mo(height, 52); @include vw-mo(margin-right, 24);}
+                        .pt_opt__label {width: 100%; white-space: nowrap; @include vw-mo(outline-offset,3); border-radius: 50%;}
+                        .pt_opt__desc {white-space: nowrap;}
+                    }
+                }
+                &__item {
+                    position: relative; @include vw-mo(height, 90);
+                    // &.pt_hide {opacity: .4; pointer-events: none;}
+
+                    .pt_label { // 도착 보장 태그
+                        display: inline-flex; justify-content: center; align-items: center; @include vw-mo(margin-top,10); @include vw-mo(padding,0 14); @include vw-mo(height,36); color: #fff; @include vw-mo(font-size,22); font-weight: 700; letter-spacing: -0.05em; vertical-align: top; white-space: nowrap; @include vw-mo(border-radius,18);
+
+                        &--blue {color: #fff; background: #1E81F8;}
+                    }
+                }
+                &__label {
+                    position: relative; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; @include vw-mo(font-size, 28); @include vw-mo(line-height,32); font-weight: 700; text-align: center; background-color: #fff; @include vw-mo(border, 4 solid #E2E2E2); @include vw-mo(border-radius, 20); box-sizing: border-box;
+
+                    &.pt_opt__disabled {color: #aaa !important; pointer-events: none; font-weight: 700;}
+                    &.pt_opt__closed {color: #aaa !important; font-weight: 700; background: #ddd; border-color: #ddd; pointer-events: none;}
+                    .en {line-height: inherit;}
+                }
+                &__discbox {
+                    @include vw-mo(margin-top,17);
+                    .pt_opt__disc {
+                        @include vw-mo(padding-left,20); color: #666; @include vw-mo(font-size,24); @include vw-mo(line-height,40); letter-spacing: -0.05em; @include vw-mo(text-indent,-20);
+
+                        &.pt_shorten {letter-spacing: -0.065em;}
+                    }
+                }
+
+                .pt_linethorugh.ml { @include vw-mo(margin-left, 10);}
+
+                // 카테고리: 내가 찾는 TV
+                .pt_opt__type--category {
+                    .pt_opt__item {
+                        position: relative; @include vw-mo(height, 252);
+
+                        .pt_tag-new{
+                            position: absolute; z-index: 2; left: 0; top: 0; display: flex; justify-content: center; align-items: center; 
+                            width: auto; /*@include vw-mo(width, 78);*/ @include vw-mo(height, 30); @include vw-mo(padding, 0 16); @include vw-mo(border-radius, 20 0 20 0); 
+                            background-color: #2189FF; @include vw-mo(font-size, 22); font-weight: 700; color:#fff; letter-spacing: -.05em;
+                            &.t1 { @include vw-mo(width, 130);}
+                            &.t2 { @include vw-mo(width, 78);}
+                        }
+                    }
+                    .pt_opt__label{ flex-direction: column; @include vw-mo(padding, 100 0 8 0);}
+                    .pt_opt__img {
+                        position: absolute; left: 50%; @include vw-mo(top, 44); @include vw-mo(width, 104); transform: translateX(-50%);
+
+                        // &.pt_opt__img--qled {@include vw-mo(top, 36); @include vw-mo(width, 108);}
+                        // &.pt_opt__img--serif {@include vw-mo(top, 36); @include vw-mo(width, 104);}
+                    }
+                    .pt_opt__text {@include vw-mo(font-size, 28); font-weight: 700; @include vw-mo(margin-top, 28);}
+                    // .pt_opt__price {@include vw-mo(font-size, 24); @include vw-mo(margin-top, 2);}
+                }
+
+                // 카테고리: 모델
+                .pt_opt__type--model.isValt_t {
+                    .pt_opt__item {
+                        position: relative; @include vw-mo(height, 90);
+
+                        .pt_tag-new{
+                            position: absolute; z-index: 2; left: 0; top: 0; display: flex; justify-content: center; align-items: center; 
+                            width: auto; /*@include vw-mo(width, 78);*/ @include vw-mo(height, 30); @include vw-mo(padding, 0 16); @include vw-mo(border-radius, 20 0 20 0); 
+                            background-color: #2189FF; @include vw-mo(font-size, 22); font-weight: 700; color:#fff; letter-spacing: -.05em;
+                            &.t1 { @include vw-mo(width, 130);}
+                            &.t2 { @include vw-mo(width, 78);}
+                        }
+                    }
+                    .pt_opt__label{ 
+                        flex-wrap: nowrap; justify-content: flex-start; align-items: center; @include vw-mo(gap, 24); @include vw-mo(padding, 0 0 0 30);
+                    }
+                    .pt_opt__img {
+                        position: absolute; left: 50%; @include vw-mo(top, 26); @include vw-mo(width, 122); transform: translateX(-50%);
+
+                        &.pt_opt__img--qled {@include vw-mo(top, 36); @include vw-mo(width, 108);}
+                        &.pt_opt__img--serif {@include vw-mo(top, 36); @include vw-mo(width, 104);}
+                    }
+                    .pt_opt__text {@include vw-mo(font-size, 24); font-weight: 700; text-align: left; letter-spacing: 0; @include vw-mo(min-width, 128);}
+                    .pt_opt__desc {
+                        text-align: left;
+
+                        &-title { @include vw-mo(font-size, 24); font-weight: 400; line-height: 1.5;}
+                        &-txt { @include vw-mo(font-size, 20); font-weight: 400; line-height: 1.5;}
+                    }
+                }
+
+                .pt_opt__type--model.isValt_f {
+                    .pt_opt__item {
+                        position: relative; @include vw-mo(height, auto);
+
+                        .pt_tag-new{
+                            position: absolute; z-index: 2; left: 0; top: 0; display: flex; justify-content: center; align-items: center;  width: auto; /*@include vw-mo(width, 78);*/ @include vw-mo(height, 30); @include vw-mo(padding, 0 16); @include vw-mo(border-radius, 20 0 20 0); background-color: #2189FF; @include vw-mo(font-size, 22); font-weight: 700; color:#fff; letter-spacing: -.05em;
+                            &.t1 { @include vw-mo(width, 130);}
+                            &.t2 { @include vw-mo(width, 78);}
+                        }
+                    }
+                    .pt_opt__label{ flex-direction: column; @include vw-mo(padding, 100 0 8 0);}
+                    .pt_opt__img {
+                        position: absolute; left: 50%; @include vw-mo(top, 26); @include vw-mo(width, 122); transform: translateX(-50%);
+
+                        &.pt_opt__img--qled {@include vw-mo(top, 36); @include vw-mo(width, 108);}
+                        &.pt_opt__img--serif {@include vw-mo(top, 36); @include vw-mo(width, 104);}
+                    }
+                    .pt_opt__text {@include vw-mo(font-size, 28); font-weight: 700; @include vw-mo(margin-top, 15);}
+                    .pt_opt__price {@include vw-mo(font-size, 24); @include vw-mo(margin-top, 2);}
+                }
+
+
+                // 사이즈
+                .pt_opt__type--size {
+                    .pt_opt__item {
+                        position: relative;
+                        .pt_tag-new{position: absolute; z-index: 2; left: 0; top: 0; display: flex; justify-content: center; align-items: center; width: auto; /*@include vw-mo(width, 78);*/ @include vw-mo(height, 30); @include vw-mo(padding, 0 16); @include vw-mo(border-radius, 20 0 20 0); background-color: #2189FF; @include vw-mo(font-size, 22); font-weight: 700; letter-spacing: -.05em; color:#fff;}
+                    }
+                    .pt_opt__title .subtxt{
+                        @include vw-mo(font-size, 24); @include vw-mo(padding-left, 33); @include vw-mo(margin-left, 10); position: relative; font-weight: 700; color: #1E81F8;
+                        &::before { content: ''; display: block; @include vw-mo(width, 28); @include vw-mo(height, 28); background: url('../../../is/images/launching/buying/stv_opt_starico_mo.png') no-repeat center/100%; position: absolute; top: 50%; left: 0; transform: translateY(-50%); }
+                        & > span { font-weight: 700; }
+                    }
+                    .pt_opt__title .options {
+                        @include vw-mo(width, 36); @include vw-mo(height, 27);
+                        .pt_inch-img { display: inline-block; @include vw-mo(width, 36); @include vw-mo(height, 27); background: url(../../is/images/launching/buying/stv_inch_cm_mo.png) no-repeat; background-size: contain; @include vw-mo(margin-left, 10);}
+                    }
+                    .pt_opt__label {font-weight: 700;}
+                }
+
+                // 설치타입
+                .pt_opt__type.pt_opt__type--instype {
+                    @include vw-mo(margin-bottom, 55);
+
+                    .pt_opt__price {@include vw-mo(margin-left, 10);}
+
+                    .pt_opt__title { @include vw-mo(gap, 10);}
+                }
+
+                // 사운드바
+                .pt_opt__type.pt_opt__type--soundbar {
+                    .soundbar_img_wrap {
+                        text-align: center; @include vw-mo(margin-bottom, 15);
+                        & > img { @include vw-mo(width, 640); margin: 0 auto;}
+                    }
+                }
+
+                // 배젤색상
+                .pt_opt__type.pt_opt__type--bezel {
+                    .pt_opt__item {@include vw-mo(height, auto); @include vw-mo(width, 324);}
+                    .pt_opt__label{ flex-direction: column; @include vw-mo(padding, 108 0 8 0);}
+                    .pt_opt__img {position: absolute; left: 50%; @include vw-mo(top, 8); @include vw-mo(width, 124); transform: translateX(-50%);}
+                    .pt_opt__text {@include vw-mo(font-size, 24); font-weight: 700; @include vw-mo(margin-top, 15);}
+                }
+
+                // 배젤색상
+                .pt_opt__type.pt_opt__type--color {
+                    .pt_opt__item {@include vw-mo(height, auto); @include vw-mo(width, 324);}
+                    .pt_opt__label{ flex-direction: column; @include vw-mo(padding, 108 0 8 0);}
+                    .pt_opt__img {
+                        position: absolute; left: 50%; @include vw-mo(top, 8); @include vw-mo(width, 124); transform: translateX(-50%);
+
+                        &.pt_opt__img--serif {@include vw-mo(top, 36); @include vw-mo(width, 104);}
+                    }
+                    .pt_opt__text {@include vw-mo(font-size, 24); font-weight: 700; @include vw-mo(margin-top, 15);}
+                }
+
+                // 후면디자인
+                .pt_opt__type.pt_opt__type--backdesign {
+                    .pt_opt__item {@include vw-mo(height, auto); @include vw-mo(width, 324);}
+                    .pt_opt__label{ flex-direction: column; @include vw-mo(padding, 216 0 10 0);}
+                    .pt_opt__item.infi .pt_opt__img {position: absolute; left: 50%; @include vw-mo(top, 8); @include vw-mo(width, 56); transform: translateX(-50%);}
+                    .pt_opt__item.razer .pt_opt__img {position: absolute; left: 50%; @include vw-mo(top, 8); @include vw-mo(width, 280); transform: translateX(-50%);}
+                    .pt_opt__text {@include vw-mo(font-size, 24); font-weight: 700; @include vw-mo(margin-top, 10);}
+                }
+
+                 // 헤드셋
+                .pt_opt__type.pt_opt__type--headset {
+                    .headset_img_wrap {
+                        text-align: center; @include vw-mo(margin-bottom, 15);
+                        & > img { @include vw-mo(width, 640); margin: 0 auto;}
+                    }
+                }
+
+                 // 뮤직프레임
+                .pt_opt__type.pt_opt__type--musicframe {
+                    .musicframe_img_wrap {
+                        text-align: center; @include vw-mo(margin-bottom, 15);
+                        & > img { @include vw-mo(width, 640); margin: 0 auto;}
+                    }
+                }
+
+                .pt_opt__type.pt_opt__type--mutagong {
+                    .pt_opt__title {justify-content: space-between;}
+                }
+
+                .pt_opt__item--subtxt { margin-left: auto; @include vw-mo(width, 324); @include vw-mo(font-size, 20); @include vw-mo(letter-spacing, -0.025); @include vw-mo(line-height, 22); color: #2189FF;}
+
+                // 컬러
+                // .pt_opt__type--color {
+                //     @include vw-mo(margin-top,-10); @include vw-mo(margin-bottom,56);
+
+                //     .pt_opt__item {display: flex; align-items: center; justify-content: center; flex-direction: column; height: auto;}
+                //     .pt_opt__label {@include vw-mo(margin-bottom,13); height: auto; border: none;}
+                //     .pt_color-chip {position: relative; display: block; @include vw-mo(margin, 0 auto); @include vw-mo(width, 36); @include vw-mo(height, 36); border-radius: 50%;}
+                //     .pt_opt__desc {display: none; margin-top: 0; @include vw-mo(font-size, 24); letter-spacing: -0.025em;}
+
+                //     input[type=radio]:checked + label {
+                //         &::before{border: none;}
+                //         .pt_color-chip {
+                //             &::before {content: ""; position: absolute; @include vw-mo(top,-8); @include vw-mo(left,-8); display: block; @include vw-mo(width,52); @include vw-mo(height,52); @include vw-mo(border,3 solid #1E81F8); border-radius: 50%; box-sizing: border-box;}
+                //         }
+                //         & + .pt_opt__desc {font-weight: 700;}
+                //     }
+                // }
+            }
+
+            // 혜택
+            .pt_benefit {
+                // @include vw-mo(padding-top, 30);
+                .pt_benefit__title {@include vw-mo(margin-bottom, 26); @include vw-mo(font-size, 32); @include vw-mo(line-height, 40); font-weight: 700; letter-spacing: -0.05em;}
+                #buying_benefit_music {@include vw-mo(margin-bottom, 26); padding-bottom: 0;}
+                .buying_benefit_swiper {
+                    @include vw-mo(padding-bottom, 70);
+                    .buying_benefit--item {
+                        @include vw-mo(width, 140); @include vw-mo(margin-right, 15);
+                        &:first-child { margin-left: 0; }
+                        // &:last-child { margin-right: 0; }
+
+                        &.active{
+                            .buying_benefit--imgwrap{
+                                position: relative;
+                                &::before{content: ''; position: absolute; left: 0; top: 0; @include vw-mo(width, 132); @include vw-mo(height, 132); @include vw-mo(border, 4 solid #2189FF); @include vw-mo(border-radius, 32);}
+                            }
+                        }
+                    }
+                    .buying_benefit--imgwrap {@include vw-mo(width, 140); @include vw-mo(height, 140); @include vw-mo(border-radius, 32); @include vw-mo(margin-bottom, 9);  background-color: #F7F7F7; }
+                    .buying_benefit--imgwrap > img { @include vw-mo(width, 140); }
+                    .buying_benefit--txtwrap {text-align: center; @include vw-mo(font-size, 24); font-weight: 700; @include vw-mo(letter-spacing, -0.025); @include vw-mo(line-height, 28); width: max-content; position: relative; left: 50%; transform: translateX(-50%);}
+
+                    .swiper-pagination {bottom: 0; }
+                    .swiper-pagination-bullet {@include vw-mo(width, 16); @include vw-mo(height, 16); @include vw-mo(margin, 0 10); background-color: transparent; border: 1px solid black; opacity: 1; }
+                    .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color: black;}
+                }
+
+                .buying_conts_swiper {
+                    width: 100%; @include vw-mo(margin, 0); @include vw-mo(padding-left, 10); @include vw-mo(padding-bottom, 20);
+
+                    .pt_conts__wrapper {
+                        @include vw-mo(width, 696); @include vw-mo(margin-bottom, 0);
+
+                        .pt_conts__item {
+                            display: flex; flex-direction: column; @include vw-mo(width, 440); @include vw-mo(height, 702); @include vw-mo(margin-right, 24); @include vw-mo(border-radius, 30 30 20 20); @include vw-mo(box-shadow, 0 2 10 rgba(0, 0 ,0 , 0.1)); cursor: pointer;
+
+                            &--ty1 {@include vw-mo(width, 638);}
+
+                            // &.active {z-index: 1; @include vw-mo(width, 440); @include vw-mo(height, auto); @include vw-mo(border, 6 solid #2189FF); @include vw-mo(border-radius, 30 30 20 20);}
+
+
+                            .pt_conts__head {
+                                display: flex; justify-content: flex-end; align-items: center; width: 100%; @include vw-mo(height, 80); @include vw-mo(padding, 26 40 22); background-color: #2189FF; @include vw-mo(border-radius, 20 20 0 0);
+
+                                &--txt {color: #fff; @include vw-mo(font-size, 24); font-weight: 700; letter-spacing: -0.025em;}
+                            }
+
+                            .pt_conts__info {
+                                position: relative; @include vw-mo(padding, 40 0 0 30); background-color: #fff; @include vw-mo(border-radius, 0 0 20 20);
+
+                                &--list {display: flex; @include vw-mo(gap, 20); @include vw-mo(padding, 25 20 0);
+                                    & > div {position: relative; align-self: baseline; @include vw-mo(min-width, 290); @include vw-mo(min-height, 308);}
+                                    & > div:not(:last-child) {@include vw-mo(border-right, 1 solid #DBDBDB);}
+                                    .pt_conts__info--txt {position: relative; @include vw-mo(padding-top, 15); letter-spacing: -0.05em;}
+                                    .pt_conts__info--desc-txt {letter-spacing: -0.05em;}
+                                    .pt_conts__info--img.pt_conts__info--img-price {@include vw-mo(top, -25); @include vw-mo(right, -3); @include vw-mo(width, 115); @include vw-mo(height, 115); pointer-events: none;}
+                                    .pt_conts__info--img.pt_conts__info--img-npay {@include vw-mo(top, 8); @include vw-mo(right, 12); @include vw-mo(width, 77); @include vw-mo(height, 43); pointer-events: none;}
+                                    .pt_conts__btn {bottom: 0; left: 0;}
+                                }
+
+                                &--img {
+                                    position: absolute; @include vw-mo(top, 10); @include vw-mo(right, 10); @include vw-mo(width, 140); @include vw-mo(height, 140);
+
+                                    &.pt_conts__info--img-coupon { @include vw-mo(top, 0); @include vw-mo(right, 4); @include vw-mo(width, 142); @include vw-mo(height, 142);}
+                                    &.pt_conts__info--img-quality { @include vw-mo(top, 4); @include vw-mo(right, 4); @include vw-mo(width, 142); @include vw-mo(height, 142);}
+                                    &.pt_conts__info--img-repair { @include vw-mo(top, 11); @include vw-mo(right, 12); @include vw-mo(width, 132); @include vw-mo(height, 132);}
+                                    &.pt_conts__info--img-mutagong { @include vw-mo(top, 12); @include vw-mo(right, 10); @include vw-mo(width, 132); @include vw-mo(height, 132);}
+                                    &.pt_conts__info--img-price { @include vw-mo(top, 10); @include vw-mo(right, 10); @include vw-mo(width, 140); @include vw-mo(height, 140);}
+                                    &.pt_conts__info--img-reviewer { @include vw-mo(top, 10); @include vw-mo(right, 10); @include vw-mo(width, 132); @include vw-mo(height, 132);}
+                                    &.pt_conts__info--img-npay { @include vw-mo(top, 34); @include vw-mo(right, 8); @include vw-mo(width, 116); @include vw-mo(height, 82);}
+                                    &.pt_conts__info--img-lotte { @include vw-mo(top, 38); @include vw-mo(right, 20); @include vw-mo(width, 106); @include vw-mo(height, 58);}
+                                    &.pt_conts__info--img-tving { @include vw-mo(top, 6); @include vw-mo(right, 4); @include vw-mo(width, 144); @include vw-mo(height, 144);}
+                                    &.pt_conts__info--img-starbucks { @include vw-mo(top, 26); @include vw-mo(right, 8); @include vw-mo(width, 116); @include vw-mo(height, 110);}
+                                    &.pt_conts__info--img-hana { @include vw-mo(top, 0); @include vw-mo(right, 0); @include vw-mo(width, 142); @include vw-mo(height, 142);}
+                                    &.pt_conts__info--img-npaypoint { @include vw-mo(top, 0); @include vw-mo(right, 0); @include vw-mo(width, 142); @include vw-mo(height, 142);}
+                                }
+                                &--txt {@include vw-mo(min-height, 142); @include vw-mo(margin-bottom, 40); @include vw-mo(font-size, 36); @include vw-mo(line-height, 48); font-weight: 700; letter-spacing: -0.025em;}
+
+                                &--desc {
+                                    &-txt {
+                                    position: relative; @include vw-mo(padding-left, 22); color: #666; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -0.025em;
+
+                                    &::before {position: absolute; @include vw-mo(top, 12); @include vw-mo(left, 0); display: inline-block; content: ''; @include vw-mo(width, 16); @include vw-mo(height, 12); background: url('../../../is/images/launching/benefit/stv_icon_check_mo.png') no-repeat; background-size: contain;}
+                                    }
+                                }
+                            }
+
+                            .pt_conts__desc {
+                                // position: absolute; @include vw-mo(top, 302); @include vw-mo(left, 30);
+                                @include vw-mo(padding-left, 30);
+
+                                &--desc03 {@include vw-mo(top, 522);}
+
+                                &--txt {
+                                    position: relative; @include vw-mo(padding-left, 22); color: #666; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -0.025em;
+
+                                    &::before {position: absolute; @include vw-mo(top, 12); @include vw-mo(left, 0); display: inline-block; content: ''; @include vw-mo(width, 16); @include vw-mo(height, 12); background: url('../../../is/images/launching/benefit/stv_icon_check_mo.png') no-repeat; background-size: contain;}
+                                }
+                            }
+
+                            .pt_conts__btn {
+                                position: absolute;
+                                display: flex; flex-direction: column; @include vw-mo(gap, 16); @include vw-mo(bottom, 64); @include vw-mo(left, 30);
+
+                                // &.btn03 {
+                                //     @include vw-mo(top, 610); @include vw-mo(left, 30);
+
+                                //     &.type01 { @include vw-mo(top, 370);}
+                                // }
+                                // &.btn04 {@include vw-mo(top, 582); @include vw-mo(left, 30);}
+                                // &.btn06 {@include vw-mo(top, 582); @include vw-mo(left, 30);}
+                                // &.btn07 {@include vw-mo(top, 544); @include vw-mo(left, 30); display: flex; flex-direction: column; @include vw-mo(gap, 16);}
+                                // &.btn08 {@include vw-mo(top, 544); @include vw-mo(left, 30);}
+                                // &.btn09 {@include vw-mo(top, 544); @include vw-mo(left, 30);}
+
+                                &--detail {
+                                    position: relative; @include vw-mo(padding-right, 16); @include vw-mo(font-size, 24); font-weight: 400; letter-spacing: -0.025em;
+
+                                    &::after {position: absolute; @include vw-mo(top, 6); @include vw-mo(right, 0); display: inline-block; content: ''; @include vw-mo(width, 9); @include vw-mo(height, 14); background: url('../../../is/images/launching/benefit/stv_ico_arrow_black_mo.png') no-repeat; background-size: contain;}
+                                }
+
+                                &--verify {display: inline-flex; justify-content: center; align-items: center; @include vw-mo(width, 172); @include vw-mo(height, 56); @include vw-mo(font-size, 24); font-weight: 400; letter-spacing: -0.025em;}
+                                &--challange {display: inline-flex; justify-content: center; align-items: center; @include vw-mo(width, 172); @include vw-mo(height, 56); @include vw-mo(font-size, 24); font-weight: 400; letter-spacing: -0.025em;}
+
+                                &--solution {
+                                    position: relative; @include vw-mo(width, 290); @include vw-mo(padding-right, 16); @include vw-mo(font-size, 24); font-weight: 400; letter-spacing: -0.05em;
+
+                                    &::after {position: absolute; @include vw-mo(top, 6); @include vw-mo(right, 0); display: inline-block; content: ''; @include vw-mo(width, 9); @include vw-mo(height, 14); background: url('../../../is/images/launching/benefit/stv_ico_arrow_black_mo.png') no-repeat; background-size: contain;}
+                                }
+
+                                &--faq {
+                                    position: relative; @include vw-mo(width, 164); @include vw-mo(padding-right, 16); @include vw-mo(font-size, 24); font-weight: 400; letter-spacing: -0.05em;
+
+                                    &::after {position: absolute; @include vw-mo(top, 6); @include vw-mo(right, 0); display: inline-block; content: ''; @include vw-mo(width, 9); @include vw-mo(height, 14); background: url('../../../is/images/launching/benefit/stv_ico_arrow_black_mo.png') no-repeat; background-size: contain;}
+                                }
+
+                                 // &--challange {
+                                //     position: relative; @include vw-mo(padding-right, 16); @include vw-mo(font-size, 24); font-weight: 400; letter-spacing: -0.025em;
+
+                                //     &::after {position: absolute; @include vw-mo(top, 6); @include vw-mo(right, 0); display: inline-block; content: ''; @include vw-mo(width, 9); @include vw-mo(height, 14); background: url('../../../is/images/launching/benefit/stv_ico_arrow_black_mo.png') no-repeat; background-size: contain;}
+                                // }
+                            }
+
+                            // s: scroll 가로 스크롤 영역
+                            .pt_bnf_table_wrap {
+                                // position: absolute; @include vw-mo(top, 376); left: 50%; transform: translateX(-50%);
+                                display: flex; @include vw-mo(width, 600); @include vw-mo(height, 218); @include vw-mo(margin,33 auto 0); background-color: #fff; @include vw-mo(border-radius, 8); @include vw-mo(border, 1 solid #F2F2F2);
+
+                                &.type01 { @include vw-mo(top, 440);}
+
+                                .pt_table_header {
+                                    display: flex; flex-direction: column; @include vw-mo(width, 144); @include vw-mo(height, 216); @include vw-mo(font-size, 28); letter-spacing: -.025em; font-weight: 700; text-align: center; @include vw-mo(border-right, 1 solid #E0E0E0);
+
+                                    li {
+                                        display: flex; align-items: center; justify-content: center; @include vw-mo(height, 72); color: #000;
+                                        &:not(:last-child) {@include vw-mo(border-bottom, 1 solid#E0E0E0);}
+                                        &:nth-child(even) {background-color: #FCFCFC;}
+
+                                        // &:nth-child(1) { display: flex; justify-content: center; align-items: center; @include vw-mo(width, 189); @include vw-mo(height, 60); @include vw-mo(border-bottom, 1 solid #E0E0E0); @include vw-mo(border-right, 1 solid #F5F5F5); @include vw-mo(border-top-left-radius, 8); font-weight: 700;}
+                                        // &:nth-child(2) { display: flex; justify-content: center; align-items: center; @include vw-mo(width, 190); @include vw-mo(height, 60); @include vw-mo(border-bottom, 1 solid #E0E0E0); @include vw-mo(border-top-right-radius, 8); font-weight: 700;}
+                                    }
+                                }
+                            } // pt_bnf_table_wrap
+
+                            .pt_scroll_container {
+                                position: relative; @include vw-mo(width, 454); @include vw-mo(height, 216); overflow: hidden;
+
+                                .pt_bnt_scrollbar {
+                                    z-index: 1; position: absolute; @include vw-mo(bottom, 6); @include vw-mo(right, 20); left: auto; @include vw-mo(width, 412); @include vw-mo(height, 6); background: #E9EAEE;
+
+                                    .swiper-scrollbar-drag { @include vw-mo(width, 256); @include vw-mo(height, 6 !important); @include vw-mo(border-radius, 3); background-color: #2189FF; }
+                                }
+                                .pt_scroll_swiper {@include vw-mo(height, 216);}
+                                .pt_scroll_swiper_wrap {
+                                    position: absolute; top: 0; @include vw-mo(left, 0); display: flex; @include vw-mo(height, 216);
+
+                                    .swiper-slide { @include vw-mo(width, 144); @include vw-mo(height, 216); }
+                                }
+                                .pt_table_body {
+                                    display: flex; flex-direction: column; text-align: center;
+
+                                    li {
+                                        display: flex; justify-content: center; align-items: center; @include vw-mo(height, 72); color: #000; @include vw-mo(font-size, 28); letter-spacing: -0.025em;
+                                        &:not(:last-child) {@include vw-mo(border-bottom, 1 solid#E0E0E0);}
+                                        &:nth-child(odd) {background-color: #FCFCFC;}
+
+                                        &:nth-child(1) {background-color: #F2F8FF; }
+                                        // &:nth-child(2) { display: flex; justify-content: center; align-items: center; @include vw-mo(width, 190); background-color: #fff; @include vw-mo(border-right, 1 solid #F5F5F5); @include vw-mo(border-bottom, 1 solid #E0E0E0); }
+                                    }
+                                } // pt_table_body
+                            } // pt_scroll_container
+                        }
+                    }
+
+                    .pt_conts__pagination--tv {
+                        position: relative; display: flex; align-items: center; justify-content: center; @include vw-mo(height, 24); @include vw-mo(margin-top, 40); @include vw-mo(gap, 14);
+
+                        .swiper-pagination-bullet {@include vw-mo(width, 16); @include vw-mo(height, 16); background-color: transparent; border: 1px solid #000; border-radius: 50%; opacity: 1;}
+                        .swiper-pagination-bullet-active {@include vw-mo(width, 16); @include vw-mo(height, 16); background-color: #000; border: 0; border-radius: 50%;}
+                    }
+                }
+            }
+
+            .pt_btn-box{
+                display: none;
+                .pt_btn{
+                    &--link {@include vw-mo(width, 144); @include vw-mo(height, 60); @include vw-mo(font-size, 26); border: 1px solid #000; @include vw-mo(border-radius, 30); font-weight: 700;}
+                    // &--buy {@include vw-mo(width, 144); @include vw-mo(height, 60); @include vw-mo(font-size, 26); @include vw-mo(border-radius, 30); font-weight: 700; color: #fff; background-color: #000;}
+                    &--buy {@include vw-mo(width, 230); @include vw-mo(height, 64); @include vw-mo(font-size, 28); @include vw-mo(border-radius, 30); font-weight: 700; color: #fff; background-color: #000;}
+
+                    &--disabled {opacity: 0.3 !important; pointer-events: none !important;}
+                }
+
+                .pt_price__desc {@include vw-mo(margin-top, 19); color: #2189FF; @include vw-mo(font-size, 20); @include vw-mo(line-height, 28); letter-spacing: -0.05em;}
+            }
+        }
+    }
+
+
+
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+// PC ( 769px ~ 1440px )
+@media screen and (min-width: 769px) {
+
+    .samsung_tv_launching {
+    
+        .pt_common {@include vw-pc(margin-bottom, 40);
+            &__tit {@include vw-pc(font-size, 42); @include vw-pc(line-height, 55);}
+        }
+
+        // 바잉툴
+        .sec_buying {
+            @include vw-pc(padding,60 0 100);
+
+            // image lazy loading
+            &.pt_bg-image.pt_add-bg {
+                .pt_ico {
+                    &--tradein {background-image: url("../../../is/images/launching/buying/stv_ico_tradein_pc.png");}
+                    &--gclub {background-image: url("../../../is/images/launching/buying/stv_ico_gclub_pc.png");}
+                }
+                .pt_btn {
+                    &--plus::before {background-image: url("../../../is/images/launching/buying/stv_btn_plus_pc.png");}
+                }
+                .pt_buying  {
+
+                    .btnPrice { display: inline-block; @include vw-pc(margin-left, 10); @include vw-pc(font-size, 12); color: #A3A3A3; font-weight: 700; }
+                    .pt_opt {
+
+                    }
+                }
+            }
+
+            // [공통] 바잉툴 옵션
+            input[type=radio] + label::before {width: calc(100% + 4px); height: calc(100% + 4px); @include vw-pc(border-radius, 10);}
+            input[type=radio]:checked + label::before {border-width: 2px;}
+
+            // [공통] 아이콘
+            .pt_ico {
+                &--tradein {@include vw-pc(width,16); @include vw-pc(height,14);}
+                &--gclub {@include vw-pc(width,16); @include vw-pc(height,16);}
+                &--delivery {@include vw-pc(width,27); @include vw-pc(height,22);}
+                &--deliveryblk {@include vw-pc(width,27); @include vw-pc(height,22);}
+                &--pickup {@include vw-pc(width,25); @include vw-pc(height,25);}
+                &--pickupblk  {@include vw-pc(width,27); @include vw-pc(height,27);}
+                &--sk {@include vw-pc(width,67); @include vw-pc(height,12);}
+                &--kt {@include vw-pc(width,18); @include vw-pc(height,15);}
+                &--lg {@include vw-pc(width,56); @include vw-pc(height,15);}
+                &--arrowright {@include vw-pc(width,11); @include vw-pc(height,16);}
+            }
+
+            // [공통] 스와이퍼 페이지네이션, 재생/일시정지 버튼, 화살표 버튼
+            .pt_slide {
+                &__controls {@include vw-pc(bottom, 24); @include vw-pc(gap, 10);}
+                &__pagination {
+                    @include vw-pc(gap, 10);
+
+                    .swiper-pagination-bullet {@include vw-pc(width, 11); @include vw-pc(height, 11); @include vw-pc(border-width,2);}
+                }
+                .pt_btn__play {
+                    @include vw-pc(width, 10); @include vw-pc(height, 12); @include vw-pc(background-size, 10 12);
+                    &.pt_paused {@include vw-pc(background-size, 8 12);}
+                }
+                .swiper-button-prev, .swiper-button-next {margin: 0; @include vw-pc(width,15); @include vw-pc(height,30);}
+                .swiper-button-prev:after, .swiper-button-next:after {display: none;}
+                
+                &__link {@include vw-pc(border-radius, 20);
+                    &::after {@include vw-pc(top, 223); @include vw-pc(width, 66); @include vw-pc(height, 66);}
+                }
+            }
+
+            // [공통] 말풍선
+            .pt_bubble {
+                @include vw-pc(padding,6 13); @include vw-pc(font-size,12); @include vw-pc(border-radius,12);
+                &::before {@include vw-pc(bottom,-3); @include vw-pc(border-top-width,5); @include vw-pc(border-left-width,5); @include vw-pc(border-right-width,5);}
+            }
+
+            .pt_buying {
+
+                &__inner {display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 auto; @include vw-pc(padding-bottom,0); @include vw-pc(width,1320);}
+                &__slide {@include vw-pc(width,784);}
+                &__prd {padding: 0; @include vw-pc(width,474);}
+
+                // 스와이프 첫번째 이미지 영역 임의줄임
+                .swiper-slide .img_box {
+                    display: flex; align-items: center; justify-content: center; height: auto;
+                    img[data-api-img]{ @include vw-pc(width, 767); }
+                }
+
+                .pc_slide_desc {
+                    @include vw-pc(margin-top, 39);
+
+                    &-item {
+                        &_txt { @include vw-pc(font-size, 16);}
+                        &_btn { @include vw-pc(font-size, 16); @include vw-pc(margin-left, 7);}
+                    }
+                }
+
+                // 바잉툴 스티키 영역
+                .pt_buying__sticky {
+                    @include vw-pc(padding-top,44); @include vw-pc(top, 100); margin-top: 0;
+
+                    &.pt_buying__sticky--end { // 라이브바 삭제 버전
+                        padding-top: 0;
+                        .pt_live {display: none;}
+                    }
+                }
+
+                &.music .pt_slide--buying { @include vw-pc(height, 600); }
+                // 바잉툴 슬라이드 (pc/mo)
+                .pt_slide--buying {
+                    @include vw-pc(height, 560); /*580*/ @include vw-pc(border-radius,10); overflow: hidden;
+                    .pt_slide__controls {@include vw-pc(bottom, 0);}
+                    .swiper-button-prev, .swiper-button-next {display: block; }
+                    .swiper-button-prev {@include vw-pc(left,20);}
+                    .swiper-button-next {@include vw-pc(right,20);}
+                    .pt_slide__subtxt {
+                        position: absolute; @include vw-pc(bottom, 40); left: 0; @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -0.025); @include vw-pc(line-height, 14); @include vw-pc(min-width, 460); z-index: 10;
+                        // .pt_slide__subtxt--txt + .pt_slide__subtxt--txt  { @include vw-pc(margin-top, 2); }
+                        &.hide-txt { display: none; }
+                        .pt_normal_link { @include vw-pc(font-size, 12); font-weight: 700; @include vw-pc(margin-left, 10); @include vw-pc(line-height, 14); }
+                    }
+                }
+
+
+                // 토글박스
+                .pt_toggle {
+                    @include vw-pc(margin-bottom,57); @include vw-pc(padding,23 30 32); @include vw-pc(height,100); background: #F4F4F4; @include vw-pc(border-radius,10);
+
+                    &__header {@include vw-pc(margin-bottom,28);}
+                    &__title {@include vw-pc(font-size,16); @include vw-pc(line-height,24); letter-spacing: -0.03em;}
+                    &__img {
+                        @include vw-pc(top,24); @include vw-pc(right,30); @include vw-pc(gap,16);
+
+                        .img_box {
+                            &--double {@include vw-pc(width,41);}
+                            &--tradein {@include vw-pc(width,41);}
+                        }
+                    }
+                    &__body {@include vw-pc(font-size,16); @include vw-pc(line-height,24); letter-spacing: -0.04em;}
+                    .pt_countdown {
+                        @include vw-pc(margin-top,40);
+
+                        .pt_count_slot {@include vw-pc(margin-right,30);}
+                        .pt_count_slot::after, .pt_count_slot::before {@include vw-pc(right, -20); @include vw-pc(width, 8); @include vw-pc(height, 8);}
+                        .pt_count_slot::after {@include vw-pc(top,-4);}
+                        .pt_count_slot::before {@include vw-pc(top,12);}
+
+                        .pt_count_num{@include vw-pc(font-size, 50);}
+                        .pt_count_txt {@include vw-pc(margin-top,10); @include vw-pc(font-size, 16);}
+                    }
+                    .pt_btn--toggle {
+                        @include vw-pc(bottom,10); @include vw-pc(width,14); @include vw-pc(height,8);
+                    }
+
+                    // 아코디언 on
+                    // &.pt_on {@include vw-pc(height,186);}
+                    &.pt_on {@include vw-pc(height,282);} // 카운트다운 포함
+                }
+
+                // 기능별 유의문구
+                .pt_buying__func {
+                    @include vw-pc(margin-top,40); padding: 0;
+
+                    .pt_func__content {@include vw-pc(margin-bottom,33); @include vw-pc(font-size,14); @include vw-pc(line-height,20); letter-spacing: -0.06em;}
+                    .pt_func__top {@include vw-pc(margin-bottom,28);}
+                    .pt_func__title {@include vw-pc(margin-bottom,10); @include vw-pc(font-size,18); @include vw-pc(line-height,24); font-weight: 700; letter-spacing: -0.025em;}
+                    li {@include vw-pc(padding-left,12); @include vw-pc(text-indent,-12);}
+                    .pt_func__bottom {
+                        dt {
+                            @include vw-pc(margin-top,19); @include vw-pc(margin-bottom,9); @include vw-pc(font-size,16); @include vw-pc(line-height,24);
+                        }
+                    }
+                    .btn_common.type_anchor {
+                        @include vw-pc(height,21); @include vw-pc(font-size,16);
+                    }
+                }
+
+                // 롤링배너
+                .pt_rolling {
+                    &__item--01{background: url('../../../is/images/launching/buying/rolling/stv_rolling_hana_pc_v1.png') 0 0 / contain no-repeat;}
+                    &__item--02{
+                        background: url('../../../is/images/launching/buying/rolling/stv_rolling_card_pc_v4.png') 0 0 / contain no-repeat;
+                        @include vw-pc(background-position, 0 0);
+                    }
+                    &__item--03{
+                        background: url('../../../is/images/launching/buying/rolling/stv_rolling_npay_pc_v3.png') 0 0 / contain no-repeat;
+                        @include vw-pc(background-position, -0 0);
+                    }
+                    &__item--04{
+                        background: url('../../../is/images/launching/buying/rolling/stv_rolling_QNDX1_pc_v2.png') 0 0 / contain no-repeat;
+                        // @include vw-pc(background-position, 30 0);
+                    }
+                    &__item--05{
+                        background: url('../../../is/images/launching/buying/rolling/stv_rolling_uhd_pc.png') 0 0 / contain no-repeat;
+    
+                        @include vw-pc(background-position, -15 0);
+                    }
+                    &__item--06{
+                        background: url('../../../is/images/launching/buying/rolling/stv_rolling_care_pc.png') 0 0 / contain no-repeat;
+    
+                        @include vw-pc(background-position, -15 0);
+                    }
+                    &__item--07{
+                        background: url('../../../is/images/launching/buying/rolling/stv_rolling_6_month_01_pc.png') 0 0 / contain no-repeat;
+    
+                        @include vw-pc(background-position, -35 0);
+                    }
+                    &__item--08{
+                        background: url('../../../is/images/launching/buying/rolling/stv_rolling_8_month_01_pc.png') 0 0 / contain no-repeat;
+    
+                        @include vw-pc(background-position, -25 0);
+                    }
+                }
+
+                .pt_rolling {
+                    position:relative; @include vw-pc(margin-bottom, 56);  @include vw-pc(height,89); @include vw-pc(border-radius, 10);
+
+                    &__control { @include vw-pc(top, 10); @include vw-pc(right, 24); @include vw-pc(width,66); @include vw-pc(height, 22); @include vw-pc(border-radius, 11);}
+                    &__header { @include vw-pc(padding, 0 24); @include vw-pc(margin, 0 0 30 0); display:flex; align-items: center; justify-content: space-between; }
+                    &__btn { @include vw-pc(width, 8); @include vw-pc(height, 8); @include vw-pc(margin-left, 6);}
+
+                    &__link { width:100%; @include vw-pc(height, 85); @include vw-pc(border-radius, 10); position:relative; background: #f5f5f5; display: flex; align-items: center; justify-content: start; }
+                    &__page {@include vw-pc(gap, 2); @include vw-pc(font-size, 12);
+                        // .swiper-pagination-current, .swiper-pagination-total {}
+                    }
+                    &__fraction { @include vw-pc(width, 76); @include vw-pc(height, 30); @include vw-pc(top,8); @include vw-pc(right, 8); @include vw-pc(border-radius, 16); @include vw-pc(font-size, 18); @include vw-pc(letter-spacing, 3); position: absolute; display: flex; align-items: center; justify-content: center; background:#fff; color: #7F7F7F;
+                        em { @include vw-pc(margin-right, 4); color:#000; }
+                    }
+                    &__icon { @include vw-pc(width, 50); @include vw-pc(height, 50); @include vw-pc(margin, 0 30 0 40); }
+
+                    &__eyebrow {@include vw-pc(margin-bottom,3); @include vw-pc(font-size, 13); line-height: 1.2; letter-spacing: -.03em;}
+                    &__text { 
+                        @include vw-pc(font-size, 15);
+
+                        .date { @include vw-pc(font-size, 13);}
+                    }
+                    &__desc { @include vw-pc(margin-top, 4); @include vw-pc(font-size, 12);}
+
+                    &__item {@include vw-pc(padding-left, 153);}
+
+                    &__next, &__prev {@include vw-pc(font-size, 12);}
+                    &__next {@include vw-pc(padding-left, 2);}
+                    &__prev {@include vw-pc(padding-right, 2);}
+
+                    &__linkbtn { display: inline-block; @include vw-pc(margin-top, 6); @include vw-pc(font-size, 12); @include vw-pc(padding-right, 3); @include vw-pc(border-bottom, 1 solid #000);}
+
+                    .swiper-control { @include vw-pc(top,17); @include vw-pc(right,10);  @include vw-pc(width, 10); @include vw-pc(height, 10); @include vw-pc(margin-left, 5);
+                        &.pt_pause { background-image: url('../../is/images/launching/buying/pt_pause.svg'); @include vw-pc(background-size, 10 7);}
+                        &.pt_play { background-image: url('../../is/images/launching/buying/pt_play.svg'); @include vw-pc(background-size, 10 8);}
+                    }
+                }
+
+                .pt_title{
+                    @include vw-pc(margin-bottom, 30);
+                    &__name{@include vw-pc(font-size,36); @include vw-pc(line-height,40);}
+                    &__sku{@include vw-pc(margin-top, 10); @include vw-pc(font-size, 20); @include vw-pc(line-height, 25);}
+                    &__star{@include vw-pc(right, 0); @include vw-pc(top, 3); @include vw-pc(padding-left, 28); @include vw-pc(height, 30); @include vw-pc(font-size,23); @include vw-pc(line-height,30); @include vw-pc(background-size, 22 20); }
+                    &__subtxt {
+                        @include vw-pc(font-size, 16); @include vw-pc(padding-left, 22); @include vw-pc(margin-bottom, 10); position: relative; font-weight: 700; color: #1E81F8;
+                        &::before { content: ''; display: block; @include vw-pc(width, 19); @include vw-pc(height, 19); background: url('../../../is/images/launching/buying/stv_opt_starico_pc.png') no-repeat center/100%; position: absolute; top: 56%; left: 0; transform: translateY(-60%); }
+                        & > span { font-weight: 700; }
+                    }
+                    &__subtxt.ml { margin: 0; @include vw-pc(margin-left, 10); }
+                }
+
+                //가격
+                .pt_price-box{@include vw-pc(margin-bottom, 25);}
+                .pt_price_wrap {@include vw-pc(margin, 30 0 30 0); @include vw-pc(padding, 20); background-color: #F8F8F8; @include vw-pc(border-radius, 10);}
+                .pt_price{
+                    &__name{@include vw-pc(font-size,22); @include vw-pc(line-height,33); font-weight: 700; color: #2189FF; display:flex; justify-content: flex-start;}
+                    &__cont{@include vw-pc(font-size,22); @include vw-pc(line-height,33); font-weight: 700; color: #2189FF; display:flex; align-items: baseline;}
+                    &__item{
+                        display: flex; justify-content: space-between;
+
+                        &--cpn{
+
+                            .pt_btn--cpn{
+                                position: relative; @include vw-pc(margin-left, 7); @include vw-pc(width, 97); @include vw-pc(height, 33); @include vw-pc(padding-right, 28); @include vw-pc(border, 2 solid #2189FF); @include vw-pc(border-radius, 6); background-color: #fff; overflow: hidden;
+
+                                &::before{content: ''; position: absolute; @include vw-pc(right, -1); @include vw-pc(top, -2); @include vw-pc(width, 28); @include vw-pc(height, 33); background-color: #2189FF; background-image: url('../../../is/images/launching/buying/stv_icon_coupondown_pc.png'); background-repeat: no-repeat; background-position: center;}
+                                *{pointer-events: none !important;} // 옴니태깅 오류 수정
+                                .pt_btn__txt{ display: flex; justify-content: center; align-items: center; width: 100%; @include vw-pc(height, 29); @include vw-pc(border-radius, 4 0 0 4); @include vw-pc(font-size,14); color: #000; background-color: #fff;}
+                            }
+                        }
+
+                    }
+                    &--small{
+                        .pt_price__item{
+                            &--bnf{ border: 0; @include vw-pc(padding, 0 0 10);
+                                .pt_price__name{@include vw-pc(font-size,20); @include vw-pc(line-height,30); color: #666; }
+                                .pt_price__cont{@include vw-pc(font-size,18); @include vw-pc(line-height,30); color: #666; text-decoration:line-through;}
+                            }
+                        }
+                    }
+                    &--big{
+                        @include vw-pc(padding, 18 20); border: 1px solid #ddd; border-bottom: 0; @include vw-pc(border-radius, 8 8 0 0);
+                    }
+                    &--bottom{
+                        @include vw-pc(margin-bottom, 22); /*  @include vw-pc(padding, 30 0); border-bottom: 1px solid #ddd; */
+                        .pt_price__item{
+                            &--def{ @include vw-pc(margin-bottom, 5);
+                                .pt_price__name{@include vw-pc(font-size,18); @include vw-pc(line-height,30); color: #666666; }
+                                .pt_price__cont{@include vw-pc(font-size,18); @include vw-pc(line-height,30); color: #666666; text-decoration:line-through;}
+                            }
+                        }
+                    }
+                }
+                .pt_bnf{
+                    @include vw-pc(margin, 22 0 22 0); @include vw-pc(padding, 21 22); border: 1px solid #D6D6D6; @include vw-pc(border-radius, 10); background-color: #fff;
+                    &__title{@include vw-pc(margin-bottom,3); @include vw-pc(font-size,18); @include vw-pc(line-height,28); font-weight: 700;}
+                    // &__list{}
+                    &__item{display: flex; justify-content: space-between;}
+                    &__name{
+                        position: relative; @include vw-pc(padding-left, 8); @include vw-pc(font-size,16); @include vw-pc(line-height,26); color: #333;
+                        &::before {content: ''; display: block; position: absolute; top: 50%; left: 0; transform: translateY(-50%); @include vw-pc(width, 3); @include vw-pc(height, 3); border-radius: 50%; background-color: #333;}
+                    }
+                    &__cont{@include vw-pc(font-size,16); @include vw-pc(line-height,26); color: #333;}
+                }
+
+                // 옵션
+                .pt_opt {
+                    &__type {@include vw-pc(margin-bottom, 30);}
+                    &__title {
+                        @include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 18); @include vw-pc(line-height, 28); letter-spacing: -0.025em;
+
+                        .pt_ico {@include vw-pc(margin-top,7);}
+                        .pt_tiptext {
+                            @include vw-pc(margin-left,10); @include vw-pc(padding-top,7); @include vw-pc(font-size, 16); @include vw-pc(line-height, 21);
+
+                            &--delivery {
+                                @include vw-pc(padding-left,31);
+                                &::before {@include vw-pc(width,27); @include vw-pc(height,20);}
+                            }
+                            &--double {
+                                @include vw-pc(padding-left,31);
+                                &::before {@include vw-pc(bottom,3); @include vw-pc(width,30); @include vw-pc(height,29);}
+                            }
+                        }
+                        .pt_btn--plus {@include vw-pc(gap, 4); @include vw-pc(margin-left, 10); 
+                            > span { @include vw-pc(font-size, 18); line-height: 1.25; border: 0;}
+                            &::before {@include vw-pc(width, 16); @include vw-pc(height, 16); @include vw-pc(margin-right, 2);}
+                        }
+                    }
+                    &__text {@include vw-pc(font-size, 20); @include vw-pc(line-height, 24); letter-spacing: -0.02em;}
+                    &__price {@include vw-pc(font-size, 18); @include vw-pc(line-height, 22); letter-spacing: -0.02em;}
+                    &__desc {
+                        @include vw-pc(font-size, 18); @include vw-pc(line-height, 24); letter-spacing: -0.02em;
+
+                        &--type01 { @include vw-pc(margin-top, 11); line-height: 1.2; @include vw-pc(font-size, 16); letter-spacing: -0.05em;}
+                        &--hide {display: inline;}
+                    }
+                    &__list {
+                        @include vw-pc(gap, 14);
+
+                        &--grid02 {
+                            .pt_opt__item {@include vw-pc(width, 230);}
+                        }
+                        &--grid03 {
+                            .pt_opt__item {@include vw-pc(width, 148);}
+                        }
+                        &--grid04 {
+                            .pt_opt__item {@include vw-pc(width, 108);}
+                        }
+                        &--grid05 {
+                            .pt_opt__item {@include vw-pc(width, 148); @include vw-pc(height, 82);}
+                        }
+                        &--grid06 { //tv 모델
+                            .pt_opt__item {@include vw-pc(width, 108);}
+                        }
+                        &--grid07 { //설치타입 - mo 긴막대 / pc 반반
+                            .pt_opt__item { @include vw-pc(width, 230); }
+                        }
+                        &--grid08 { //배젤색상 - 반반
+                            .pt_opt__item { @include vw-pc(width, 230); }
+                        }
+                        &--grid09 { //하나일땐 100% 두개일때 50%
+                            // .pt_opt__item:first-child:nth-last-child(1) { width: 100% }
+                            // .pt_opt__item:first-child:nth-last-child(3),
+                            // .pt_opt__item:first-child:nth-last-child(3) ~ .pt_opt__itemli { @include vw-pc(width, 230); }
+                            .pt_opt__item { flex: 1 1 auto; @include vw-pc(min-width, 230); }
+                        }
+                        &--grid10 {
+                            flex-direction: inherit;
+                            .pt_opt__label { @include vw-pc(gap, 10);}
+                            .pt_opt__item { flex: 1 1 auto; @include vw-pc(min-width, 230); }
+                        }
+                        &--grid11 {
+                            flex-direction: column;
+                            .pt_opt__label { @include vw-pc(gap, 10);}
+                            // .pt_opt__item {}
+                        }
+                        &--gridcolor {
+                            padding-left: 0; gap: 0;
+                            .pt_opt__item {@include vw-pc(width, 25); @include vw-pc(margin-right, 23);}
+                            .pt_opt__label {@include vw-pc(width,19); @include vw-pc(outline-offset,3);}
+                        }
+                    }
+                    &__item {
+                        @include vw-pc(height, 60);
+
+                        .pt_label { // 도착 보장 태그
+                            @include vw-pc(margin-top,8); @include vw-pc(padding,0 10); @include vw-pc(height,24); @include vw-pc(font-size,14); @include vw-pc(border-radius,12);
+                        }
+                    }
+                    &__label {@include vw-pc(font-size, 18); @include vw-pc(line-height,24); border-width: 2px; @include vw-pc(border-radius, 10); letter-spacing: -0.03em; font-weight: 700;}
+                    &__discbox {
+                        @include vw-pc(margin-top,9);
+
+                        .pt_opt__disc {@include vw-pc(padding-left,12); @include vw-pc(font-size,14); @include vw-pc(line-height,24); letter-spacing: -0.05em; @include vw-pc(text-indent,-12);}
+                    }
+
+                    .pt_linethorugh.ml { @include vw-pc(margin-left, 10);}
+
+                    // 카테고리: 내가 찾는 TV
+                    .pt_opt__type--category {
+                        .pt_opt__item {
+                            @include vw-pc(height, 156);
+
+                            .pt_tag-new{
+                                position: absolute; z-index: 2; left: 0; top: 0; display: flex; justify-content: center; align-items: center; /*@include vw-pc(width, 50);*/ @include vw-pc(height, 20); @include vw-pc(padding, 0 9); @include vw-pc(border-radius, 6 0 6 0); background-color: #2189FF; @include vw-pc(font-size, 12);
+                                &.t1 { @include vw-pc(width, 72);}
+                                &.t2 { @include vw-pc(width, 50);}
+                            }
+                        }
+                        .pt_opt__label{ flex-direction: column; @include vw-pc(padding, 70 0 0 0); @include vw-pc(line-height, 10);}
+                        .pt_opt__img {
+                            position: absolute; left: 50%; @include vw-pc(top, 28); @include vw-pc(width, 70); @include vw-pc(height, 54); transform: translateX(-50%);
+
+                            // &.pt_opt__img--qled {@include vw-pc(top, 20); @include vw-pc(width, 84); @include vw-pc(height, 50);}
+                            // &.pt_opt__img--serif {@include vw-pc(top, 20); @include vw-pc(width, 52); @include vw-pc(height, 51);}
+                        }
+                        .pt_opt__text {@include vw-pc(font-size, 16); @include vw-pc(margin-top, 20); font-weight: 700; letter-spacing: -0.05em; line-height: 1.3;}
+                        // .pt_opt__price {@include vw-pc(font-size, 12); @include vw-pc(margin-top, 2);}
+                    }
+
+                    // 카테고리: 모델
+                    .pt_opt__type--model.isValt_t {
+                        .pt_opt__item {
+                            @include vw-pc(height, 60);
+
+                            .pt_tag-new{
+                                position: absolute; z-index: 2; left: 0; top: 0; display: flex; justify-content: center; align-items: center; /*@include vw-pc(width, 50);*/ @include vw-pc(height, 20); @include vw-pc(padding, 0 9); @include vw-pc(border-radius, 6 0 6 0); background-color: #2189FF; @include vw-pc(font-size, 12);
+                                &.t1 { @include vw-pc(width, 72);}
+                                &.t2 { @include vw-pc(width, 50);}
+                            }
+                        }
+                        .pt_opt__label{ @include vw-pc(padding, 0 0 0 34); @include vw-pc(gap, 27);}
+                        .pt_opt__img {
+                            position: absolute; left: 50%; @include vw-pc(top, 20); @include vw-pc(width, 84); @include vw-pc(height, 50); transform: translateX(-50%);
+
+                            &.pt_opt__img--qled {@include vw-pc(top, 20); @include vw-pc(width, 84); @include vw-pc(height, 50);}
+                            &.pt_opt__img--serif {@include vw-pc(top, 20); @include vw-pc(width, 52); @include vw-pc(height, 51);}
+                        }
+                        .pt_opt__text {@include vw-pc(font-size, 18); @include vw-pc(min-width, 110);}
+                        .pt_opt__desc {
+                            &-title { @include vw-pc(font-size, 16); line-height: 1.3;}
+                            &-txt { @include vw-pc(font-size, 12); line-height: 1.3;}
+                        }
+                    }
+
+                    .pt_opt__type--model.isValt_f {
+                        .pt_opt__item {
+                            @include vw-pc(height, auto);
+
+                            .pt_tag-new{
+                                position: absolute; z-index: 2; left: 0; top: 0; display: flex; justify-content: center; align-items: center; /*@include vw-pc(width, 50);*/ @include vw-pc(height, 20); @include vw-pc(padding, 0 9); @include vw-pc(border-radius, 6 0 6 0); background-color: #2189FF; @include vw-pc(font-size, 12);
+                                &.t1 { @include vw-pc(width, 72);}
+                                &.t2 { @include vw-pc(width, 50);}
+                            }
+                        }
+                        .pt_opt__label{ flex-direction: column; @include vw-pc(padding, 70 0 0 0); @include vw-pc(line-height, 10);}
+                        .pt_opt__img {
+                            position: absolute; left: 50%; @include vw-pc(top, 20); @include vw-pc(width, 84); @include vw-pc(height, 50); transform: translateX(-50%);
+
+                            &.pt_opt__img--qled {@include vw-pc(top, 20); @include vw-pc(width, 84); @include vw-pc(height, 50);}
+                            &.pt_opt__img--serif {@include vw-pc(top, 20); @include vw-pc(width, 52); @include vw-pc(height, 51);}
+                        }
+                        .pt_opt__text {@include vw-pc(font-size, 12); @include vw-pc(margin-top, 10); font-weight: 700;}
+                        .pt_opt__price {@include vw-pc(font-size, 12); @include vw-pc(margin-top, 2);}
+                    }
+
+                    // 사이즈
+                    .pt_opt__type--size {
+                        .pt_opt__item {
+                            position: relative;
+                            .pt_tag-new{position: absolute; z-index: 2; left: 0; top: 0; display: flex; justify-content: center; align-items: center; /*@include vw-pc(width, 50);*/ @include vw-pc(height, 20); @include vw-pc(padding, 0 9); @include vw-pc(border-radius, 6 0 6 0); background-color: #2189FF; @include vw-pc(font-size, 12);}
+                        }
+                        .pt_opt__title .subtxt{
+                            @include vw-pc(font-size, 16); @include vw-pc(padding-left, 22); @include vw-pc(margin-left, 9); position: relative; color: #1E81F8;
+                            &::before { content: ''; display: block; @include vw-pc(width, 19); @include vw-pc(height, 19);  position: absolute; top: 50%; left: 0; transform: translateY(-58%); }
+                            & > span { font-weight: 700; }
+                        }
+                        .pt_opt__title .options {
+                            @include vw-pc(width, 36); @include vw-pc(height, 27);
+                            .pt_inch-img { @include vw-pc(width, 36); @include vw-pc(height, 27); background: url(../../is/images/launching/buying/stv_inch_cm_pc.png)  no-repeat; @include vw-pc(margin-left, 10);}
+                        }
+                        .pt_opt__label {font-weight: 700;}
+                    }
+                    // 설치타입
+                    .pt_opt__type.pt_opt__type--instype {
+                        @include vw-pc(margin-bottom, 30);
+                        .pt_bubble {
+                            position: absolute; @include vw-pc(top,-12); @include vw-pc(right,30);
+                            &::before {@include vw-pc(bottom,-3);}
+                        }
+                        .pt_opt__price {@include vw-pc(margin-left, 10);}
+
+                        .pt_opt__title { @include vw-pc(gap, 10);}
+
+                    }
+
+                    // 사운드바
+                    .pt_opt__type.pt_opt__type--soundbar {
+                        .soundbar_img_wrap {
+                            text-align: center; @include vw-pc(margin-bottom, 15);
+                            & > img { @include vw-pc(width, 434); margin: 0 auto;}
+                        }
+                    }
+
+                    // 배젤색상
+                    .pt_opt__type.pt_opt__type--bezel {
+                        .pt_opt__item {@include vw-pc(height, auto); @include vw-pc(width, 108);}
+                        .pt_opt__label{ flex-direction: column; @include vw-pc(padding, 62 0 8 0);}
+                        .pt_opt__img {position: absolute; left: 50%; @include vw-pc(top, 8); @include vw-pc(width, 84); transform: translateX(-50%);}
+                        .pt_opt__text {@include vw-pc(font-size, 12); font-weight: 700; @include vw-pc(margin-top, 5);}
+                    }
+
+                    // 색상
+                    .pt_opt__type.pt_opt__type--color {
+                        .pt_opt__item {@include vw-pc(height, auto); @include vw-pc(width, 108);}
+                        .pt_opt__label{ flex-direction: column; @include vw-pc(padding, 62 0 8 0);}
+                        .pt_opt__img {
+                            position: absolute; left: 50%; @include vw-pc(top, 20); @include vw-pc(width, 52); transform: translateX(-50%);
+
+                            &.pt_opt__img--serif {@include vw-pc(top, 20); @include vw-pc(width, 52); @include vw-pc(height, 51);}
+                        }
+                        .pt_opt__text {@include vw-pc(font-size, 12); font-weight: 700; @include vw-pc(margin-top, 5);}
+                    }
+
+                    // 후면디자인
+                    .pt_opt__type.pt_opt__type--backdesign {
+                        .pt_opt__item {@include vw-pc(height, auto); @include vw-pc(width, 230);}
+                        .pt_opt__label{ flex-direction: column; @include vw-pc(padding, 125 0 10 0);}
+                        .pt_opt__item.infi .pt_opt__img {position: absolute; left: 50%; @include vw-pc(top, 8); @include vw-pc(width, 31); transform: translateX(-50%);}
+                        .pt_opt__item.razer .pt_opt__img {position: absolute; left: 50%; @include vw-pc(top, 8); @include vw-pc(width, 151); transform: translateX(-50%);}
+                        .pt_opt__text {@include vw-pc(font-size, 18); font-weight: 700; @include vw-pc(margin-top, 3);}
+                    }
+
+                    // 헤드셋
+                    .pt_opt__type.pt_opt__type--headset {
+                        .headset_img_wrap {
+                            text-align: center; @include vw-pc(margin-bottom, 15);
+                            & > img { @include vw-pc(width, 434); margin: 0 auto; }
+                        }
+                    }
+
+                    // 뮤직프레임
+                    .pt_opt__type.pt_opt__type--musicframe {
+                        .musicframe_img_wrap {
+                            text-align: center; @include vw-pc(margin-bottom, 15);
+                            & > img { @include vw-pc(width, 434); margin: 0 auto; }
+                        }
+                    }
+
+                    .pt_opt__item--subtxt {@include vw-pc(width, 230); @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -0.025); @include vw-pc(line-height, 22); }
+
+                    // 컬러
+                    // .pt_opt__type--color {
+                    //     margin-top: 0; @include vw-pc(margin-bottom,36);
+
+                    //     .pt_opt__label {@include vw-pc(margin-bottom,14);}
+                    //     .pt_color-chip {@include vw-pc(width, 19); @include vw-pc(height, 19);}
+                    //     .pt_opt__desc {display: none; @include vw-pc(font-size, 16); @include vw-pc(line-height,21);}
+
+                    //     input[type=radio]:checked + label {
+                    //         .pt_color-chip {
+                    //             &::before {@include vw-pc(top,-3); @include vw-pc(left,-3); @include vw-pc(width,25); @include vw-pc(height,25); border-width: 1px;}
+                    //         }
+                    //         & + .pt_opt__desc {font-weight: 700;}
+                    //     }
+                    // }
+
+                }
+
+                // 혜택
+                .pt_benefit {
+                    // @include vw-pc(padding-top, 30);
+                    .pt_benefit__title {@include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 700; letter-spacing: -0.025em;}
+                    #buying_benefit_music {margin-bottom: 0; @include vw-pc(padding-bottom, 10);}
+                    .buying_benefit_swiper {
+                        @include vw-pc(width, 474); @include vw-pc(padding-bottom, 19);
+
+                        // .buying_benefit--wrap { flex-wrap: wrap; transform: translate3d(0px, 0px, 0px) !important;}
+                        .buying_benefit--item {
+                            @include vw-pc(width, 80); @include vw-pc(margin-right, 6); @include vw-pc(margin-left, 6); @include vw-pc(margin-bottom, 20); cursor: pointer;
+
+                            &.active{
+                                .buying_benefit--imgwrap{
+                                    &::before{@include vw-pc(width, 66); @include vw-pc(height, 66); @include vw-pc(border, 2 solid #2189FF); @include vw-pc(border-radius, 16);}
+                                }
+                            }
+                        }
+                        .buying_benefit--imgwrap {display: flex; align-items: center; justify-content: center; @include vw-pc(width, 70); @include vw-pc(height, 70); @include vw-pc(border-radius, 16);   background-color: #F7F7F7; margin: 0 auto; @include vw-pc(margin-bottom, 9);}
+                        .buying_benefit--imgwrap > img { @include vw-pc(width, 58); }
+                        .buying_benefit--imgwrap.type_01 > img { @include vw-pc(width, 45); }
+                        .buying_benefit--txtwrap {text-align: center; @include vw-pc(font-size, 16); font-weight: 700; @include vw-pc(letter-spacing, -0.025); @include vw-pc(line-height, 20); white-space: nowrap;}
+
+                        .swiper-pagination {bottom: 0; }
+                        .swiper-pagination-bullet {@include vw-pc(width, 16); @include vw-pc(height, 16); background-color: transparent; border: 1px solid black; opacity: 1; }
+                        .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color: black;}
+                    }
+
+                    .buying_conts_swiper {
+                        @include vw-pc(width, 474); @include vw-pc(margin, 0 auto); @include vw-pc(padding-left, 5); @include vw-pc(padding-bottom, 0);
+
+                        .pt_conts__wrapper {
+                            @include vw-pc(width, 474); @include vw-pc(margin-bottom, 30);
+
+                            .pt_conts__item {
+                                display: flex; flex-direction: column; @include vw-pc(width, 290); @include vw-pc(height, 415); @include vw-pc(margin-right, 14); @include vw-pc(border-radius, 14 14 10 10); @include vw-pc(box-shadow, 0 1 5 rgba(0, 0 ,0 , 0.1));
+
+                                &--ty1 {@include vw-pc(width, 442);}
+
+                                // &.active {z-index: 1; display: block; @include vw-pc(width, 220); @include vw-pc(height, auto); @include vw-pc(border, 2 solid #2189FF); @include vw-pc(border-radius, 14 14 10 10);}
+
+                                .pt_conts__head {
+                                    display: flex; justify-content: flex-end; align-items: center; width: 100%; @include vw-pc(height, 50); @include vw-pc(padding, 13 20 11); background-color: #2189FF; @include vw-pc(border-radius, 10 10 0 0);
+
+                                    &--txt {color: #fff; @include vw-pc(font-size, 16); font-weight: 700; letter-spacing: -0.025em;}
+                                }
+
+                                .pt_conts__info {
+                                    position: relative; @include vw-pc(padding, 27 0 0 15); background-color: #fff; @include vw-pc(border-radius, 0 0 10 10);
+
+                                    &--list {@include vw-pc(gap, 17); @include vw-pc(padding, 20 15 0);
+                                        & > div {@include vw-pc(min-width, 195); @include vw-pc(min-height, 200);}
+                                        & > div:not(:last-child) {@include vw-pc(border-right, 1 solid #DBDBDB);}
+                                        .pt_conts__info--txt {@include vw-pc(padding-top, 7);}
+                                        .pt_conts__info--img.pt_conts__info--img-price {@include vw-pc(top, 2); @include vw-pc(right, 15); @include vw-pc(width, 56); @include vw-pc(height, 36);}
+                                        .pt_conts__info--img.pt_conts__info--img-npay {@include vw-pc(top, -4); right: 0; @include vw-pc(width, 60); @include vw-pc(height, 39);}
+                                    }
+
+                                    &--img {
+                                        position: absolute; @include vw-pc(top, 3); @include vw-pc(right, 0); @include vw-pc(width, 76); @include vw-pc(height, 76);
+
+                                        &.pt_conts__info--img-coupon { @include vw-pc(top, 7); @include vw-pc(right, 0); @include vw-pc(width, 89); @include vw-pc(height, 89);}
+                                        &.pt_conts__info--img-quality { @include vw-pc(top, 24); @include vw-pc(right, 10); @include vw-pc(width, 65); @include vw-pc(height, 65);}
+                                        &.pt_conts__info--img-repair { @include vw-pc(top, 30); @include vw-pc(right, 16); @include vw-pc(width, 54); @include vw-pc(height, 53);}
+                                        &.pt_conts__info--img-mutagong { @include vw-pc(top, 29); @include vw-pc(right, 21); @include vw-pc(width, 59); @include vw-pc(height, 53);}
+                                        &.pt_conts__info--img-price { @include vw-pc(top, 30); @include vw-pc(right, 10); @include vw-pc(width, 65); @include vw-pc(height, 46);}
+                                        &.pt_conts__info--img-reviewer { @include vw-pc(top, 31); @include vw-pc(right, 20); @include vw-pc(width, 71); @include vw-pc(height, 42);}
+                                        &.pt_conts__info--img-npay { @include vw-pc(top, 24); @include vw-pc(right, 4); @include vw-pc(width, 73); @include vw-pc(height, 52);}
+                                        &.pt_conts__info--img-lotte { @include vw-pc(top, 27); @include vw-pc(right, 6); @include vw-pc(width, 77); @include vw-pc(height, 42);}
+                                        &.pt_conts__info--img-tving { @include vw-pc(top, 14); @include vw-pc(right, 13); @include vw-pc(width, 75); @include vw-pc(height, 75);}
+                                        &.pt_conts__info--img-starbucks { @include vw-pc(top, 15); @include vw-pc(right, 7); @include vw-pc(width, 73); @include vw-pc(height, 74);}
+                                        &.pt_conts__info--img-hana { @include vw-pc(top, 0); @include vw-pc(right, 3); @include vw-pc(width, 106); @include vw-pc(height, 106);}
+                                        &.pt_conts__info--img-npaypoint { @include vw-pc(top, 0); @include vw-pc(right, 3); @include vw-pc(width, 106); @include vw-pc(height, 106);}
+                                    }
+                                    &--txt {@include vw-pc(min-height, 100); @include vw-pc(margin-bottom, 19); @include vw-pc(font-size, 24); @include vw-pc(line-height, 34); font-weight: 700; letter-spacing: -0.05em;}
+
+                                    &--desc {
+                                        &-txt {
+                                        position: relative; @include vw-pc(padding-left, 12); color: #666; @include vw-pc(font-size, 16); @include vw-pc(line-height, 21); letter-spacing: -0.05em;
+
+                                        &::before {position: absolute; @include vw-pc(top, 10); @include vw-pc(left, 0); display: inline-block; content: ''; @include vw-pc(width, 8); @include vw-pc(height, 6); background: url('../../../is/images/launching/benefit/stv_icon_check_pc.png') no-repeat; background-size: contain;}
+                                        }
+                                    }
+                                }
+
+                                .pt_conts__desc {
+                                    // position: absolute; @include vw-pc(top, 196); @include vw-pc(left, 15);
+                                    @include vw-pc(padding-left, 15);
+
+                                    &--desc03 {@include vw-pc(top, 308);}
+
+                                    &--txt {
+                                        position: relative; @include vw-pc(padding-left, 12); color: #666; @include vw-pc(font-size, 16); @include vw-pc(line-height, 26); letter-spacing: -0.05em;
+
+                                        &::before {position: absolute; @include vw-pc(top, 10); @include vw-pc(left, 0); display: inline-block; content: ''; @include vw-pc(width, 8); @include vw-pc(height, 6); background: url('../../../is/images/launching/benefit/stv_icon_check_pc.png') no-repeat; background-size: contain;}
+                                    }
+                                }
+
+                                .pt_conts__btn {
+                                    z-index: 2; position: absolute; @include vw-pc(gap, 5); @include vw-pc(bottom, 30); @include vw-pc(left, 15);
+
+                                    // &.btn03 {
+                                    //     @include vw-pc(top, 374); @include vw-pc(left, 15);
+
+                                    //     &.type01 { @include vw-pc(top, 250);}
+                                    // }
+                                    // &.btn04 {@include vw-pc(top, 353); @include vw-pc(left, 15);}
+                                    // &.btn06 {@include vw-pc(top, 353); @include vw-pc(left, 15);}
+                                    // &.btn07 {@include vw-pc(top, 337); @include vw-pc(left, 15); display: flex; flex-direction: column; @include vw-pc(gap, 8);}
+                                    // &.btn08 {@include vw-pc(top, 353); @include vw-pc(left, 15);}
+                                    // &.btn09 {@include vw-pc(top, 364); @include vw-pc(left, 15);}
+
+                                    &--detail {
+                                        position: relative; @include vw-pc(padding-right, 10); @include vw-pc(font-size, 16); font-weight: 400; letter-spacing: -0.025em;
+
+                                        &::after {position: absolute; @include vw-pc(top, 4); @include vw-pc(right, 0); display: inline-block; content: ''; @include vw-pc(width, 5); @include vw-pc(height, 7); background: url('../../../is/images/launching/benefit/stv_ico_arrow_black_pc.png') no-repeat; background-size: contain;}
+                                    }
+
+                                    &--verify {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(width, 103); @include vw-pc(height, 33); @include vw-pc(font-size, 16); font-weight: 400; letter-spacing: -0.025em;}
+                                    &--challange {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(width, 103); @include vw-pc(height, 33); @include vw-pc(font-size, 16); font-weight: 400; letter-spacing: -0.025em;}
+
+                                    &--solution {
+                                        position: relative; @include vw-pc(width, 190); @include vw-pc(padding-right, 10); @include vw-pc(font-size, 16); font-weight: 400; letter-spacing: -0.05em;
+
+                                        &::after {position: absolute; @include vw-pc(top, 4); @include vw-pc(right, 0); display: inline-block; content: ''; @include vw-pc(width, 5); @include vw-pc(height, 7); background: url('../../../is/images/launching/benefit/stv_ico_arrow_black_pc.png') no-repeat; background-size: contain;}
+                                    }
+
+                                    &--faq {
+                                        position: relative; @include vw-pc(width, 107); @include vw-pc(padding-right, 10); @include vw-pc(font-size, 16); font-weight: 400; letter-spacing: -0.05em;
+
+                                        &::after {position: absolute; @include vw-pc(top, 4); @include vw-pc(right, 0); display: inline-block; content: ''; @include vw-pc(width, 5); @include vw-pc(height, 7); background: url('../../../is/images/launching/benefit/stv_ico_arrow_black_pc.png') no-repeat; background-size: contain;}
+                                    }
+
+                                    // &--challange {
+                                    //     position: relative; @include vw-pc(padding-right, 10); @include vw-pc(font-size, 16); font-weight: 400; letter-spacing: -0.025em;
+
+                                    //     &::after {position: absolute; @include vw-pc(top, 4); @include vw-pc(right, 0); display: inline-block; content: ''; @include vw-pc(width, 5); @include vw-pc(height, 7); background: url('../../../is/images/launching/benefit/stv_ico_arrow_black_pc.png') no-repeat; background-size: contain;}
+                                    // }
+                                }
+
+                                // horizontal
+                                // s: scroll 가로 스크롤 영역
+                                .pt_bnf_table_wrap {
+                                    // position: absolute; @include vw-pc(top, 250);
+                                    @include vw-pc(width, 413); @include vw-pc(height, 110); @include vw-pc(margin, 16 auto 0); @include vw-pc(border-radius, 8); @include vw-pc(border, 1 solid #F2F2F2);
+
+                                    &.type01 { @include vw-pc(top, 290);}
+
+                                    .pt_table_header {
+                                        @include vw-pc(width, 72); @include vw-pc(height, 108); @include vw-pc(font-size, 16); @include vw-pc(border-right, 1 solid #E0E0E0);
+
+                                        li {
+                                            @include vw-pc(height, 36);
+                                            &:not(:last-child) {@include vw-pc(border-bottom, 1 solid#E0E0E0);}
+
+                                            // &:nth-child(1) { @include vw-pc(height, 26); background-color: #F2F8FF; @include vw-pc(border-bottom, 1 solid #E0E0E0); @include vw-pc(border-right, 1 solid #F5F5F5); @include vw-pc(border-top-left-radius, 8); font-weight: 700;}
+                                            // &:nth-child(2) { @include vw-pc(height, 26); background-color: #fff; @include vw-pc(border-bottom, 1 solid #E0E0E0); @include vw-pc(border-right, 1 solid #F5F5F5); @include vw-pc(border-top-right-radius, 8); font-weight: 700;}
+                                        }
+                                    }
+                                } // pt_bnf_table_wrap
+
+                                .pt_scroll_container {
+                                    @include vw-pc(width, 338); @include vw-pc(height, 108);
+
+                                    .pt_bnt_scrollbar {
+                                        @include vw-pc(bottom, 4); @include vw-pc(right, 10); @include vw-pc(width, 318); @include vw-pc(height, 3);
+
+                                        .swiper-scrollbar-drag { @include vw-pc(width, 128); @include vw-pc(height, 3 !important); @include vw-pc(border-radius, 2);}
+                                    }
+                                    .pt_scroll_swiper {@include vw-pc(height, 108);}
+                                    .pt_scroll_swiper_wrap {
+                                        position: absolute; top: 0; @include vw-pc(left, 0); display: flex; @include vw-pc(height, 108);
+
+                                        .swiper-slide {@include vw-pc(width, 81); @include vw-pc(height, 108); }
+                                    }
+                                    .pt_table_body {
+                                        display: flex; text-align: center; @include vw-pc(width, 81);
+
+                                        li {
+                                            @include vw-pc(height, 36); @include vw-pc(font-size, 16);
+                                            &:not(:last-child) {@include vw-pc(border-bottom, 1 solid#E0E0E0);}
+
+                                            // &:nth-child(1) { background-color: #F2F8FF; @include vw-pc(border-bottom, 1 solid #E0E0E0); font-weight: 700; }
+                                            // &:nth-child(2) { background-color: #fff; @include vw-pc(border-bottom, 1 solid #E0E0E0); }
+
+                                        }
+                                    } // pt_table_body
+                                } // pt_scroll_container
+                            }
+                        }
+
+                        .pt_conts__pagination--tv {
+                            display: block; position: relative; @include vw-pc(height, 24); @include vw-pc(margin-top, 20); @include vw-pc(gap, 10);
+
+                            .swiper-pagination-bullet {@include vw-pc(width, 10); @include vw-pc(height, 10); @include vw-pc(margin, 0 5); background-color: transparent; border: 1px solid #000; border-radius: 50%; opacity: 1;}
+                            .swiper-pagination-bullet-active {@include vw-pc(width, 10); @include vw-pc(height, 10); background-color: #000; border: 0; border-radius: 50%;}
+                        }
+                    }
+                }
+
+                .pt_btn-box{
+                    display: flex; justify-content: space-between; @include vw-pc(gap, 14);
+                    .pt_btn{
+                        &--link {width: 100%; @include vw-pc(height, 56); border: 1px solid #000; @include vw-pc(border-radius, 28); @include vw-pc(font-size, 20); }
+                        // &--buy {@include vw-pc(width, 235); @include vw-pc(height, 56); @include vw-pc(border-radius, 28); @include vw-pc(font-size, 20); }
+                        &--buy {width: 100%; @include vw-pc(height, 56); @include vw-pc(border-radius, 28); @include vw-pc(font-size, 20); }
+                    }
+                }
+
+                .pt_price__desc {@include vw-pc(margin-top, 14); color: #2189FF; @include vw-pc(font-size, 14); @include vw-pc(line-height, 22); letter-spacing: -0.025em; text-align: center;}
+            }
+        }
+
+    }
+
+}
+// 모바일 퍼스트로 제작된 프로젝트입니다.

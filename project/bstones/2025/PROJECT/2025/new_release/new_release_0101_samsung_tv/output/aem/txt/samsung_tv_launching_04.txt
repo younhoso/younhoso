@@ -1,0 +1,27 @@
+<div class="sec_project_wrap samsung_tv_launching" id="pt_buying_compo03">
+
+    <section class="sec_together">
+        <div class="inner_1440">
+            <div class="pt_title">
+                <p class="pt_title__sub en">Lifestyle TV</p>
+            </div>
+            
+            <div class="pt_category_box" data-compo-cate="product-card" data-swiper="false" data-sticky="false">
+                <div class="pt_slider_category_sticky">
+                    <div class="pt_slider_category_wrap">
+                        <div class="swiper-container">
+                            <p class="pt_category_title blind">제품 카테고리 선택</p>
+                            <ul class="swiper-wrapper pt_category_list">
+                                <li class="swiper-slide on"><a href="#" title="The Frame 선택" class="pt_category_btn pt_category_btn--frame en">The Frame<span class="blind">선택됨</span>
+                                </a></li>
+                                <li class="swiper-slide"><a href="#" title="The Serif 선택" class="pt_category_btn pt_category_btn--serif en">The Serif</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</div>

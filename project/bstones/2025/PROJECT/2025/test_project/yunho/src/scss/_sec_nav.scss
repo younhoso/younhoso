@@ -1,0 +1,92 @@
+.sec_nav {
+  :focus {
+    outline-offset: -2px !important;
+  }
+  .pt_nav {
+    &_inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include vw-pc(height, 68);
+      @include vw-pc(font-size, 18);
+      @include vw-pc(line-height, 68);
+      letter-spacing: -0.05em;
+      background-color: #000;
+      color: #fff;
+    }
+    &_item {
+      .pt_nav_btn {
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          right: -1px;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          width: 1px;
+          height: 14px;
+          background: #dedede;
+        }
+      }
+      &:last-child {
+        .pt_nav_btn {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    &_btn {
+      font-weight: 700;
+      color: #888;
+      position: relative;
+      @include vw-pc(padding, 23 50 23 50);
+      &.on {
+        .pt_nav_txt {
+          position: relative;
+          color: #fff;
+          display: inline-block;
+          &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 0;
+            @include vw-pc(padding, 10);
+            @include vw-pc(border-bottom, 2 solid #fff);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec_nav {
+    .pt_nav {
+      &_inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include vw-mo(height, 96);
+        @include vw-mo(font-size, 24);
+        @include vw-mo(line-height, 96);
+        letter-spacing: -0.05em;
+        background-color: #000;
+        color: #fff;
+        .pt_nav_item {
+          flex-shrink: 0;
+        }
+      }
+      &_btn {
+        font-weight: 700;
+        color: #888;
+        @include vw-mo(padding, 0 35);
+      }
+    }
+  }
+}

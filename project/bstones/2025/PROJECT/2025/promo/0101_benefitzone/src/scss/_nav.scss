@@ -1,0 +1,71 @@
+.benefitzone {
+    .sec_nav {
+        @include vw-pc(max-width, 1440); @include vw-pc(height, 70); background-color:#fff; color: #ddd;
+    
+        .pt_sticky {background-color: #fff;}
+        .pt_sticky.pt_fixed {position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 100%; z-index: 10;}
+    
+        .pt_nav {
+            margin: 0 auto; border-bottom: 1px solid #d9d9d9; border-left: 1px solid #d9d9d9; border-right: 1px solid #d9d9d9;
+            .pt_nav_title {@include vw-pc(font-size, 22);}
+            .pt_mo_swiper { @include vw-pc(width, 1320); overflow: visible;}
+            .pt_nav_list {
+                display: flex; justify-content: center; align-items: center; 
+    
+                .pt_nav_item {height: 100%; width:auto;
+                    &:not(:last-child)::after {content: ''; position: absolute; top: 50%; right: -1px; transform: translateY(-50%); width: 1px; @include vw-pc(height, 14); background: rgba($color: #dedede, $alpha: 1);}
+                }
+                .pt_nav_btn {
+                    position: relative; display: flex; align-items: center; gap: 0.2em; @include vw-pc(padding, 0 50); @include vw-pc(font-size, 18); @include vw-pc(line-height, 69); font-weight: 700; letter-spacing: -0.05em; color: #888;
+                    .pt_nav_txt {
+                        display: block;
+                    }
+                    &.on {
+                        .pt_nav_txt{
+                            position: relative; color: #000; 
+                            &::before {content: ''; position: absolute; z-index: 1; left: 0; bottom: -1px; width: 100%; height: 0; @include vw-pc(border-bottom, 2 solid #000);}
+                        }
+                    }
+                    
+                }
+                // .pt_nav_item:last-child {
+                //     .pt_nav_btn {
+                //         &::after {display: none;}
+                //     }
+                // }
+            }
+    
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_nav {
+            @include vw-mo(height, 96);
+            .pt_nav {
+                width: 100%; @include vw-mo(box-shadow, 0 0 6 rgba(0, 0, 0, .1)); 
+                .pt_nav_title {display: none;}
+                .pt_mo_swiper {width: 100%; @include vw-mo(height, 95);}
+                .pt_nav_list {
+                    justify-content: center; width: 100%;
+                    .pt_nav_item {position: relative;
+                        &:not(:last-child)::after {@include vw-mo(height, 20);}
+                    }
+                    .pt_nav_btn {
+                        width: 100%; height: 100%; @include vw-mo(font-size, 24); @include vw-mo(line-height, 95); @include vw-mo(padding, 0 24); letter-spacing: -0.05em; color: #888; text-align: center;
+                        &--com {@include vw-mo(padding, 0 70);}
+                        &.on {
+                            .pt_nav_txt{
+                                &::before {@include vw-mo(border-bottom, 5 solid #000);}
+                            }
+    
+                        }
+                        &::after {@include vw-mo(height, 20);}
+                    }
+                    // .pt_nav_item:first-child .pt_nav_btn {@include vw-mo(padding-left, 25);}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.galaxy_book4_ultra {
+	.sec_nav { 
+		@include vw-pc(height, 62);
+		.pt_sticky.active { 
+			position: fixed; z-index: 99; top: 0; width: 100%; @include vw-pc(max-width, 1920); 
+			.nav_tit_wrap .pt_tooltip {display: none; }
+		}
+		.nav_wrapper { 
+			@include vw-pc(max-width, 1920); background-color: #000;
+			.inner_1440 { display: flex; max-width: 1320px; width: 100%;}
+			.nav_tit_wrap {
+				display: flex; position: relative; @include vw-pc(width, 376); @include vw-pc(height, 62);
+				> p { display: flex; align-items: center; height: 100%; @include vw-pc(margin-left, 54); }
+				span { position: relative; color: #fff; @include vw-pc(font-size, 18); font-weight: 700; letter-spacing: -0.05em;}
+				// span.pt_icon_live::after { content: ''; display: block; position: absolute; @include vw-pc(top, -7); @include vw-pc(right, -52); @include vw-pc(width, 42); @include vw-pc(height, 31); background: url('../../is/images/gb3_nav_logo_live_pc.png') 0 0/contain no-repeat; }
+			}
+			.nav_sec_wrap {
+				display: flex; justify-content: center; flex: 1; @include vw-pc(height, 62); background-color: #000;
+				.nav_box {
+					height: 100%; 
+					.swiper-wrapper { align-items: center; } 
+					.swiper-slide {
+						width: auto;
+						a { display: flex; justify-content: center; align-items: center; height: 100%; @include vw-pc(padding, 0 60); color: #fff; @include vw-pc(font-size, 18); font-weight: 700; letter-spacing: -0.025em; }
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.galaxy_book4_ultra {
+		.sec_nav {
+			@include vw-mo(height, 100);
+			.pt_sticky.active { max-width: 100%; }
+			.nav_wrapper { 
+				max-width: 100%;
+				.inner_1440 { max-width: 100%;}
+				.nav_tit_wrap {
+					@include vw-mo(width, 259); @include vw-mo(height, 100);
+					> p { justify-content: center; align-items: flex-start; flex-direction: column; @include vw-mo(margin-left, 40); }
+					span { @include vw-mo(font-size, 20); }
+				}
+				.nav_sec_wrap {
+					@include vw-mo(height, 100);
+					.nav_box {
+						width: 100%;
+						.swiper-wrapper { @include vw-pc(padding-left, 9); justify-content: center; } 
+						.swiper-slide {
+							a { @include vw-mo(padding, 0 25); @include vw-mo(font-size, 24); }
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}

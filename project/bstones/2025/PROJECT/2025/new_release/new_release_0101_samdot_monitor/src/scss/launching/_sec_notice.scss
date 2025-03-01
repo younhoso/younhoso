@@ -1,0 +1,227 @@
+.samdot_monitor {
+    .pt_text--bold {font-weight: 700; color:#fff;}
+    .pt_text--word {word-break: break-all;}
+    .sec_notice {
+        background: #000; @include vw-mo(padding, 17 0); @include vw-mo(font-size, 22);
+        .sec_area { width: 100%;  @include vw-mo(padding, 0 24); margin: 0 auto; text-align: left; }
+
+    }
+    .pt_notice {
+        @include vw-mo(padding, 0 0 35);
+
+        &__cont {
+            position: relative; @include vw-mo(padding, 60 0); border-bottom: 1px solid rgba(#2F2F2F, 1);
+
+            &--last {border-bottom: 0;}
+        }
+            
+        &__tit { display: block; @include vw-mo(top, 50); left: 0; @include vw-mo(padding-bottom, 23); color: #fff; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; }
+        &__subtit {
+            @include vw-mo(margin, 37 0 13); @include vw-mo(padding-left, 0); color: #fff; @include vw-mo(line-height, 36); font-weight: 700;
+
+            & + & { @include vw-mo(margin, 0 0 20); }
+            .pt_notice__tit  + & {margin-top: 0;}
+        }
+        &__list { 
+            position: relative; color: #A3A3A3;
+
+            li { position:relative; @include vw-mo(padding-left, 8); @include vw-mo(font-size, 22); @include vw-mo(line-height, 38); letter-spacing: -0.05em;
+                &:last-child { padding-bottom: 0;}
+                a { color: #707070;}
+                ol, 
+                ul { @include vw-mo(padding-top, 0); }
+            }
+            &--1depth {
+                & > li {
+                    &::before { content: ''; position: absolute; left: 0; @include vw-mo(top, 18); @include vw-mo(width, 3); @include vw-mo(height, 3); border-radius: 50%; background-color:#A3A3A3;}
+                    &:last-child { padding-bottom: 0; }
+                }
+                & > li.nodot {
+                    padding-left: 0;
+                    &::before { display: none;}
+                }
+
+                & + .pt_notice__list--1depth {@include vw-mo(margin-top, 50);}
+
+                & > li.pt_notice__title {padding-left: 0; color: #fff; font-weight: 700;
+                    &:not(:nth-of-type(1)) {@include vw-mo(margin-top, 20);}
+                    .pt_notice__title--tagend { color: #fff; background-color: #8D8D8D; @include vw-mo(font-size, 22); @include vw-mo(padding, 3 8); @include vw-mo(border-radius, 5); @include vw-mo(margin-left, 10); font-weight: 700;}
+                }
+                & > li.pt_notice__title::before {display: none;}
+                & > li.pt_notice__number {@include vw-mo(padding-left, 24); @include vw-mo(text-indent, -24);}
+                & > li.pt_notice__number::before {display: none;}
+
+                & > li.pt_notice__sub-title {padding-left: 0; color: #fff; font-weight: 400;}
+                & > li.pt_notice__sub-title::before {display: none;}
+
+                & > li > strong {color: #fff;}
+
+                .btn_detail {@include vw-mo(border-bottom, 1 solid #707070); @include vw-mo(margin-left,14); color: #fff; @include vw-mo(font-size,24); @include vw-mo(line-height,26); letter-spacing: -0.05em;}
+            }
+            &--2depth {
+                @include vw-mo(padding-left, 0); @include vw-mo(padding-top, 0);
+
+                & > li { 
+                    @include vw-mo(padding-left, 12); @include vw-mo(text-indent, -10);
+
+                    &:last-child { padding-bottom: 0; }
+                    &::before { display: none; }
+                }
+                &.pt_notice__indent{padding-left: 0;
+                    li {padding-left: 0;}
+                }
+            }
+            &--3depth { @include vw-mo(padding, 10 0 0 4);
+                &:before { display: none; }
+                &:last-child { padding-bottom: 0; }
+                li { @include vw-mo(padding-left, 12); @include vw-mo(text-indent, -10); }
+            }
+            &--end {position: relative;
+                &::before {content: '혜택 종료'; z-index: 2; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; @include vw-mo(font-size, 40); font-weight: 700; color: #fff; letter-spacing: -.05em; background-color: rgba(#000, 0.7);}
+            }
+            &--all {@include vw-mo(margin, 50 0);}
+
+            .pt_notice__indent {
+                .pt_notice__indent--text {display: flex; align-items: flex-start; text-indent: initial;}
+                .pt_notice__indent--first {white-space: nowrap; @include vw-mo(margin-right, 8);}
+            }
+
+            // &.pt_dimm_notice {position: relative; @include vw-pc(margin-bottom, 10); @include vw-pc(padding-bottom, 10);}
+            &.pt_dimm_notice::after {
+                display: flex; justify-content: center; align-items: center; 
+                width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(17, 17, 17, 0.8);
+                @include vw-mo(font-size, 48); color: #fff; font-weight: 700; 
+            }
+            &.pt_dimm_notice--event {
+                &::after {content: '이벤트 기간 종료';}
+            }
+            &.pt_dimm_notice--bnf {
+                &::after {content: '혜택 종료';}
+            }
+        }
+        
+        &__item {
+            &--table { @include vw-mo(margin-bottom, -60); }
+        }
+        &__table { position: relative; left: 0; top: 0; width: 200%; table-layout: fixed; @include vw-mo(margin, 5 0 5 -16); border-collapse: collapse; transform: scale(.5) translate(-50%, -45%); }
+        &__th,
+        &__td { @include vw-mo(padding, 15 0); @include vw-mo(border, 1 solid rgba(#fff, 0.4)); text-align: center; vertical-align: middle; @include vw-mo(font-size, 28); font-weight: 400; letter-spacing: -.02em; word-break: keep-all; }
+        &__td { background-color: rgba(#fff, 0.1); }
+        
+        // &:last-child .pt_notice__cont { border: 0 }
+
+        &__desc {
+            &--last {@include vw-mo(margin-bottom, 60); @include vw-mo(padding-bottom, 60); border-bottom: 1px solid #2F2F2F;}
+            &--dt {color: #fff; @include vw-mo(font-size, 22); @include vw-mo(line-height, 38); letter-spacing: -0.05em;}
+            &--dd {
+                position: relative; @include vw-mo(padding-left, 8); color: #A3A3A3; @include vw-mo(font-size, 22); @include vw-mo(line-height, 38); letter-spacing: -0.05em;
+
+                &::before { content: ''; position: absolute; left: 0; @include vw-mo(top, 18); @include vw-mo(width, 3); @include vw-mo(height, 3); border-radius: 50%; background-color:#707070;}
+            }
+        }
+
+        .pt_end_tag{display: inline-flex; align-items: center; justify-content: center; @include vw-mo(width, 165); @include vw-mo(height, 40); @include vw-mo(margin-left, 10); @include vw-mo(border-radius, 8);background-color: #767676; @include vw-mo(font-size, 24); color: #fff;text-align: center; font-weight: 700;}
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    .samdot_monitor {
+        .sec_notice { background: #ffffff; @include vw-pc(padding, 0 0);
+            @include vw-pc(font-size, 14); 
+
+            .sec_area {@include vw-pc(padding, 49 60); background: #000;}
+        }    
+        .pt_notice { 
+            @include vw-pc(padding, 0 0);
+
+            &__cont { @include vw-pc(padding, 50 0); }
+            &__tit { position: absolute; @include vw-pc(top, 50); padding-bottom: 0; color: #fff; @include vw-pc(font-size, 14); @include vw-pc(line-height, 16); }
+            &__subtit { @include vw-pc(margin, 30 0 10); @include vw-pc(padding-left, 180); @include vw-pc(line-height, 24);
+                & + & { @include vw-pc(margin, 0 0 20); }
+            }
+            &__list {
+                li { @include vw-pc(padding, 0 0 0 10); @include vw-pc(font-size, 14); @include vw-pc(line-height, 28); letter-spacing: -0.025em;
+                    ol,
+                    ul { @include vw-pc(padding-top, 0); }
+                    &:last-child { padding-bottom: 0; }
+                }
+                &--1depth { 
+                    @include vw-pc(margin-left, 195); @include vw-pc(margin-top, -6);
+
+                    & + .pt_notice__list--1depth {@include vw-pc(margin-top, 35);}
+
+                    & > li::before { @include vw-pc(top, 13); @include vw-pc(width, 2);  @include vw-pc(height, 2); }
+                    & > li.pt_notice__title {
+                        padding-left: 0; color: #fff; font-weight: 400;
+                        &:not(:nth-of-type(1)) {@include vw-pc(margin-top, 20);}
+                        .pt_notice__title--tagend { @include vw-pc(font-size, 14); @include vw-pc(padding, 3 8); @include vw-pc(border-radius, 5); @include vw-pc(margin-left, 10);}
+                    }
+                    & > li.pt_notice__title::before {display: none;}
+                    
+                    & > li.pt_notice__number {@include vw-pc(padding-left, 16); @include vw-pc(text-indent, -16);}
+                    & > li.pt_notice__number::before {display: none;}
+
+                    & > li.pt_notice__sub-title {@include vw-pc(margin-top, 30); padding-left: 0; font-weight: 400;}
+                    & > li.pt_notice__sub-title::before {display: none;}
+
+                    .btn_detail {@include vw-pc(border-bottom, 1 solid #A3A3A3); @include vw-pc(margin-left,14); color: #fff; @include vw-pc(font-size,14); @include vw-pc(line-height,16); font-weight:700; letter-spacing: -0.05em;}
+                }
+                &--2depth { 
+                    @include vw-pc(padding-top, 10); padding-left: 0;
+
+                    & > li { @include vw-pc(padding-left, 14); @include vw-pc(text-indent, -14); 
+                        &:last-child { padding-bottom: 0; }
+                        &.pt_notice__indent{padding-left: 0;
+                            // li {padding-left: 0;}
+                        }
+                    }
+                }
+                &--3depth { 
+                    @include vw-pc(padding, 10 0 0 0);
+
+                    li { @include vw-pc(padding-left, 0);
+                        &:last-child { padding-bottom: 0; }
+                    }
+                }
+                &--end {
+                    &::before {@include vw-pc(font-size, 50); letter-spacing: -.04em;}
+                }
+                &--all {@include vw-pc(margin, 35 0);}
+                .pt_notice__indent {padding-top: 0;@include vw-pc(padding-bottom, 10);
+                    .pt_notice__indent--text {display: flex; align-items: flex-start;@include vw-pc(padding-left, 23);  text-indent: initial;}
+                    .pt_notice__indent--first {white-space: nowrap; @include vw-pc(margin-right, 8);}
+                }
+
+                // &.pt_dimm_notice {@include vw-mo(margin-bottom, 15); @include vw-mo(padding-bottom, 15);}
+                &.pt_dimm_notice::after {
+                    @include vw-pc(font-size, 40);
+                }
+            }
+
+            &__item { margin-bottom: 0; }
+            &__table { position: static; width: 100%; @include vw-pc(margin, 5 0); transform: scale(1) translate(0, 0); }
+            &__th,
+            &__td { @include vw-pc(padding, 5 0); @include vw-pc(border-width, 1); @include vw-pc(font-size, 17); }
+
+            &__desc {
+                @include vw-pc(margin-top, 30); @include vw-pc(padding-left, 195);
+
+                &--last {@include vw-pc(margin-bottom, 0); @include vw-pc(padding-bottom, 0); border-bottom: 0;}
+
+                & + .pt_notice__list--1depth {@include vw-pc(margin-top, 60);}
+
+                &--dt {color: #fff; @include vw-pc(font-size, 14); @include vw-pc(line-height, 28); letter-spacing: -0.05em;}
+                &--dd {
+                    position: relative; @include vw-pc(padding, 0 0 0 10); color: #707070; @include vw-pc(font-size, 14); @include vw-pc(line-height, 28); letter-spacing: -0.05em;
+    
+                    &::before { content: ''; position: absolute; left: 0; @include vw-pc(top, 14); @include vw-pc(width, 2); @include vw-pc(height, 2); border-radius: 50%; background-color:#707070;}
+                }
+            }
+
+            .pt_end_tag{@include vw-pc(width, 105); @include vw-pc(height, 22); @include vw-pc(margin-left, 7); @include vw-pc(border-radius, 4); @include vw-pc(font-size, 14);}
+            
+        }
+        
+    }
+}

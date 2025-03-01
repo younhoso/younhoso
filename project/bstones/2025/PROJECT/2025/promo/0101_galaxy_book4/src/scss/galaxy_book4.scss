@@ -1,0 +1,255 @@
+@import '../../../../../../scss_global/scss-common2';
+@import './bs_reset';
+@import './monospace';
+@import './launching/sec_hub';
+@import './launching/sec_kv';
+@import './launching/sec_sticky';
+@import './launching/sec_buying';
+@import './launching/sec_banner_top';
+@import './launching/sec_tradein_popup';
+@import './launching/sec_nav';
+@import './launching/sec_benefit';
+@import './launching/sec_spec';
+@import './launching/sec_pod';
+@import './launching/sec_banner';
+@import './launching/sec_campus';
+@import './launching/modal';
+@import './sec_notice';
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+// 스크롤 제어 (스크롤 hide)
+body.pt_no_scroll {position:fixed; overflow-y: scroll !important; width: 100%;}
+
+// mo 플로팅 버튼 숨김 처리
+.floating-sticky .menu-list {display: none;}
+// mo 슬라이드 네비 숨김 처리
+#bottom__navi {display: none;}
+
+.galaxy_book4_ultra {
+    
+    // 폰트
+    .pt_font {
+        // 기본 컬러
+        &--black {color:#000 !important;}
+        &--white {color:#fff !important;}
+        &--gray {color:#666 !important;}
+        &--blue {color:#1E81F8 !important;}
+
+        // 갤럭시북4 울트라 사전알림
+        &--lightgray {color:#d9d9d9 !important;}
+
+
+        &--normal {font-weight: 400;}
+        &--bold {font-weight: 700;}
+
+    }
+    .pt_text {
+        &--underline {text-decoration: underline !important;}
+        &--ls0 {letter-spacing: 0 !important;}
+        &--nowrap {text-wrap: nowrap !important;}
+        &--break {word-break: break-all !important;}
+    }
+    .pt_ta {
+        &--left {text-align: left;}
+        &--right {text-align: right;}
+        &--center {text-align: center;}
+    }
+    .pt_va {
+        &--top {vertical-align: top;}
+        &--bottom {vertical-align: bottom;}
+        &--middle {vertical-align: middle;}
+    }
+
+    // 딤드 : pt_dimmed_wrap > pt_dimmed > pt_dimmed__text
+    .pt_dimmed {
+        position: absolute; top: 0; left: 0; z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; background: rgba(0,0,0,0.7);
+
+        &_wrap {position: relative;}
+        &__text {display: inline-flex; align-items: center; justify-content: center; @include vw-mo(width,180); @include vw-mo(height,180); color: #fff; @include vw-mo(font-size,30); font-weight: 700; letter-spacing: -0.05em; text-align: center; border: 1px solid #fff; @include vw-mo(border-width,4); border-radius: 50%;}
+    }
+
+    // 라이브바
+    .pt_live {
+        position: relative; display: flex; align-items: center; @include vw-mo(padding,0 24); @include vw-mo(height, 60); background: linear-gradient(-45deg,#7fd8f5 0,#2052f5 100%);
+
+        &__text {color: #fff; @include vw-mo(font-size, 24); font-weight: 700; letter-spacing: -0.02em;}
+        .btn_common.type_arrow {
+            position: absolute; top: 50%; @include vw-mo(right,24); @include vw-mo(height,34); color: #fff; @include vw-mo(font-size,22); border-color: #fff; @include vw-mo(border-width,2); transform: translateY(-50%);
+            &::after {display: none;}
+            // &::after {@include vw-mo(margin-left,4); border-color: #fff;}
+        }
+        .pt_ico_arrow_right {display: inline-block;background-image: url('../../is/images/gb4_banner_arrow_right_pc.png');@include vw-mo(width, 14);@include vw-mo(height, 14);@include vw-mo(background-size, 14 14);}
+    }
+
+    // 롤링 배너
+    .pt_rolling { @include vw-mo(margin, 0 auto 20); @include vw-mo(width, 672); @include vw-mo(border-radius, 10); overflow: hidden;
+        &__control { display: flex; align-items: center; justify-content: center; z-index: 1; position:absolute; @include vw-mo(right, 14); @include vw-mo(top, 10); @include vw-mo(height, 30); @include vw-mo(padding, 0 10); @include vw-mo(border-radius, 16); background-color: #fff;}
+        &__header { @include vw-mo(padding, 0 24); @include vw-mo(margin, 0 0 30 0); display:flex; align-items: center; justify-content: space-between; }
+        &__title { @include vw-mo(font-size, 32); @include vw-mo(letter-spacing, -1.6); font-weight: 700 }
+        // &__btn { @include vw-mo(width, 24); @include vw-mo(height, 24); @include vw-mo(margin-left, 10); background: no-repeat center / cover; background-image: url('../../is/images/buying/gbu_icon_plus_mo.png') }
+
+        &__link { width:100%; @include vw-mo(height, 130); @include vw-mo(border-radius, 10); position:relative; background: #f5f5f5; display: flex; align-items: center; justify-content: start; }
+
+        &__btn-box {display: flex; justify-content: center; align-items: center; @include vw-mo(height, 32); @include vw-mo(padding, 0 10); @include vw-mo(border-radius, 16); background-color: #fff;}
+        &__page {position: static; display: flex; justify-content: center; align-items: center; @include vw-mo(gap, 2); width: auto; @include vw-mo(font-size, 24); color: #000;
+            .swiper-pagination-current,
+            .swiper-pagination-total {@include vw-mo(width, 12); @include vw-mo(font-size, 20);}
+            .swiper-pagination-current {color: #000;}
+        }
+        &__fraction { @include vw-mo(width, 76); @include vw-mo(height, 30); @include vw-mo(top,8); @include vw-mo(right, 8); @include vw-mo(border-radius, 16); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, 3); position: absolute; display: flex; align-items: center; justify-content: center; background:#fff; color: #7F7F7F;
+            em { @include vw-mo(margin-right, 4); color:#000; }
+        }
+        &__icon { @include vw-mo(width, 50); @include vw-mo(height, 50); @include vw-mo(margin, 0 30 0 40); }
+        // &__text { @include vw-mo(font-size, 28); @include vw-mo(line-height, 38); font-weight: 700; letter-spacing: -.05em; }
+        .pt_text_blue { color: #2081F4; }
+        &__eyebrow {display: block; @include vw-mo(margin-bottom,6); @include vw-mo(font-size,20); @include vw-mo(line-height,26); letter-spacing: -0.03em;}
+        &__title {@include vw-mo(font-size,24); font-weight: 700; @include vw-mo(line-height,35); letter-spacing: -0.03em;}
+        &__discbox {position: absolute; @include vw-mo(right,28); @include vw-mo(bottom,10);}
+        &__disc {color: #666; @include vw-mo(font-size,20); @include vw-mo(line-height,26); letter-spacing: -0.03em;}
+
+        &__item {display: flex; align-items: center; @include vw-mo(height, 120); @include vw-mo(padding-left, 188); background-color: #F4F4F4; background: #EFEFEF no-repeat 0 0 / contain;}
+
+        &__next {display:block; @include vw-mo(padding-left, 10); @include vw-mo(margin-top, 1); @include vw-mo(font-size, 24); @include vw-mo(line-height, 29);}
+        &__prev {display:block; @include vw-mo(padding-right, 10); @include vw-mo(margin-top, 1); @include vw-mo(font-size, 24); @include vw-mo(line-height, 29);}
+
+        &.pt_add-bg {
+            .pt_rolling__item--01{background-image: url('../../is/images/buying/gbu_rolling_bnf1_mo.png');}
+            .pt_rolling__item--02{background-image: url('../../is/images/buying/gbu_rolling_bnf2_mo.png');}
+            .pt_rolling__item--03{background-image: url('../../is/images/buying/gbu_rolling_bnf3_mo.png');}
+            .pt_rolling__item--04{background-image: url('../../is/images/buying/gbu_rolling_bnf4_mo.png');}
+            .pt_rolling__item--05{background-image: url('../../is/images/buying/gbu_rolling_bnf5_mo.png');}
+            .pt_rolling__item--06{background-image: url('../../is/images/buying/gbu_rolling_bnf6_mo.png');}
+            .pt_rolling__item--07{background-image: url('../../is/images/buying/gbu_rolling_bnf7_mo_v2.png');}
+            .pt_rolling__item--08{background-image: url('../../is/images/buying/gbu_rolling_bnf8_mo.png');}
+            .pt_rolling__item--09{background-image: url('../../is/images/buying/gbu_rolling_bnf9_mo.png');}
+        }
+
+        .pt_rolling__item--06 {
+            .pt_small_txt {display: block; @include vw-mo(font-size, 20); @include vw-mo(line-height, 32); letter-spacing: -0.03em;}
+        }
+        .pt_rolling__item--04 {
+            .pt_small_txt {@include vw-mo(font-size, 18);}
+        }
+        
+        .swiper-control { @include vw-mo(width, 14); @include vw-mo(height, 30); @include vw-mo(margin-left, 8); background-size: 100%; background: no-repeat center center / contain; text-indent: -9999px;
+            &.pt_pause { background-image: url('../../is/images/buying/gbu_btn_pause_black.svg'); @include vw-mo(background-size, 12 16);}
+            &.pt_play { background-image: url('../../is/images/buying/gbu_btn_play_black.svg'); @include vw-mo(background-size, 13 16);}
+        }
+
+        // 배너 커스텀
+        .pt_rolling__item--02 {
+            .pt_rolling__discbox {position: absolute; @include vw-mo(top,65); @include vw-mo(left,394); margin-top: 0;}
+        }
+
+    }
+
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width: 769px) {
+
+    // 스크롤 제어 (스크롤 show)
+    // body.pt_no_scroll {position: fixed; overflow-y: scroll !important;}
+
+    .galaxy_book4_ultra {
+        
+        // 딤드 : pt_dimmed_wrap > pt_dimmed > pt_dimmed__text
+        .pt_dimmed {
+            &__text {@include vw-pc(width,140); @include vw-pc(height,140); @include vw-pc(font-size,22); @include vw-pc(border-width,4); }
+        }
+
+        // 라이브바
+        .pt_live {
+            margin: 0 auto; padding: 0; @include vw-pc(max-width,1920); @include vw-pc(height, 46); justify-content: center;
+            .pt_inner {@include vw-pc(width,1095);justify-content: space-between;align-items: center;display: flex;}
+            &__text {@include vw-pc(font-size, 16); letter-spacing: -0.025em;}
+            .btn_common.type_arrow {
+                position: static; @include vw-pc(margin-left,30); @include vw-pc(height,20); @include vw-pc(font-size,14); border-width: 1px; transform: none;
+                // &::after {@include vw-pc(margin-left,4);}
+            }
+            .pt_ico_arrow_right {display: inline-block;background-image: url('../../is/images/gb4_banner_arrow_right_mo.png');@include vw-pc(width, 9);@include vw-pc(height, 9);@include vw-pc(background-size, 9 9);}
+        }
+
+        // 롤링 배너
+        .pt_rolling { position:relative; @include vw-pc(margin, 0 auto 20); @include vw-pc(width, 448); @include vw-pc(border-radius, 10); 
+            &__control { @include vw-pc(top, 8); @include vw-pc(right, 12); @include vw-pc(height, 20); @include vw-pc(padding, 0 6); @include vw-pc(border-radius, 16);}
+            &__header { @include vw-pc(padding, 0 24); @include vw-pc(margin, 0 0 30 0); display:flex; align-items: center; justify-content: space-between; }
+            // &__title { @include vw-pc(font-size, 32); @include vw-pc(letter-spacing, -1.6); font-weight: 700 }
+            &__btn { @include vw-pc(width, 24); @include vw-pc(height, 24); @include vw-pc(margin-left, 10);}
+    
+            &__link { width:100%; @include vw-pc(height, 85); @include vw-pc(border-radius, 10); position:relative; background: #f5f5f5; display: flex; align-items: center; justify-content: start; }
+            &__page {@include vw-pc(gap, 3); @include vw-pc(height, 20); @include vw-pc(font-size, 14); @include vw-pc(border-radius, 10);
+                .swiper-pagination-current,
+                .swiper-pagination-total {@include vw-pc(width, 8); @include vw-pc(font-size, 14);}
+            }
+            &__fraction { @include vw-pc(width, 76); @include vw-pc(height, 30); @include vw-pc(top,8); @include vw-pc(right, 8); @include vw-pc(border-radius, 16); @include vw-pc(font-size, 18); @include vw-pc(letter-spacing, 3); position: absolute; display: flex; align-items: center; justify-content: center; background:#fff; color: #7F7F7F;
+                em { @include vw-pc(margin-right, 4); color:#000; }
+            }
+            &__icon { @include vw-pc(width, 50); @include vw-pc(height, 50); @include vw-pc(margin, 0 30 0 40); }
+            // &__text { @include vw-pc(font-size, 18); @include vw-pc(line-height, 24);}
+            .pt_text_blue { color: #2081F4; }
+            &__eyebrow {@include vw-pc(margin-bottom,3); @include vw-pc(font-size,14); @include vw-pc(line-height,18);}
+            &__title {@include vw-pc(font-size,16); @include vw-pc(line-height,22);}
+            &__discbox {@include vw-pc(right,10); @include vw-pc(bottom,10);}
+            &__disc {@include vw-pc(font-size,14); @include vw-pc(line-height,18); letter-spacing: -0.025em;}
+
+            &__item {@include vw-pc(height, 89); @include vw-pc(padding-left, 136);}
+
+            &__next {@include vw-pc(padding-left, 5); margin-top: 0; @include vw-pc(font-size, 14); @include vw-pc(line-height, 20);}
+            &__prev {@include vw-pc(padding-right, 5); margin-top: 0; @include vw-pc(font-size, 14); @include vw-pc(line-height, 20);}
+    
+            &.pt_add-bg {
+                .pt_rolling__item--01{background-image: url('../../is/images/buying/gbu_rolling_bnf1_pc.png');}
+                .pt_rolling__item--02{background-image: url('../../is/images/buying/gbu_rolling_bnf2_pc.png');}
+                .pt_rolling__item--03{background-image: url('../../is/images/buying/gbu_rolling_bnf3_pc.png');}
+                .pt_rolling__item--04{background-image: url('../../is/images/buying/gbu_rolling_bnf4_pc.png');}
+                .pt_rolling__item--05{background-image: url('../../is/images/buying/gbu_rolling_bnf5_pc.png');}
+                .pt_rolling__item--06{background-image: url('../../is/images/buying/gbu_rolling_bnf6_pc.png');}
+                .pt_rolling__item--07{background-image: url('../../is/images/buying/gbu_rolling_bnf7_pc_v2.png');}
+                .pt_rolling__item--08{background-image: url('../../is/images/buying/gbu_rolling_bnf8_pc.png');}
+                .pt_rolling__item--09{background-image: url('../../is/images/buying/gbu_rolling_bnf9_pc.png');}
+            }
+            .pt_rolling__item--06 {
+                .pt_small_txt {@include vw-pc(font-size, 14); @include vw-pc(line-height, 21); letter-spacing: -0.03em;}
+            }
+            .pt_rolling__item--04 {
+                .pt_small_txt {@include vw-pc(font-size, 12);}
+            }
+            .swiper-control {@include vw-pc(margin-bottom,1); @include vw-pc(width, 10); @include vw-pc(height, 10); @include vw-pc(margin-left, 5);
+                &.pt_pause { background-image: url('../../is/images/buying/gbu_btn_pause_black.svg'); @include vw-pc(background-size, auto 10);}
+                &.pt_play { background-image: url('../../is/images/buying/gbu_btn_play_black.svg'); @include vw-pc(background-size, auto 10);}
+            }
+
+            // 배너 커스텀
+            .pt_rolling__item--02 {
+                .pt_rolling__discbox {@include vw-pc(top,47); @include vw-pc(left,266); margin-top: 0;}
+            }
+        }
+
+    
+
+    }
+
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

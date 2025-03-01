@@ -1,0 +1,1051 @@
+{
+   "buyingSlideTop": {
+      "config": {
+         "src": "../../is/images/buying/slide_v7/",
+         "slideKey": {
+            "pc": "sku",
+            "mobile": "sku"
+         },
+         "alt": {
+            "**txt0**":"Galaxy AI is here, 문스톤그레이 좌측을 바라보고있는 갤럭시 북4 울트라 제품 그뒤에 플래티넘 실버 우측으로 세워진 갤럭시 북 Pro 360 제품 그뒤에 플래티넘 실버 접힌 갤럭시 북 pro 제품",
+
+            "**ultra_pod_1**":"문스톤그레이 정면으로 바라보고 있는 갤럭시 북 4 Ultra 포토샵안에 초록한 풀숲과 파란하늘사이에 물방울",
+            "**ultra_pod_2**":"확대된 갤럭시 북4 Ultra 좌측 무지개색 아이콘 포토샵안에 핑크색으로 된 건물과 풀숲 남색 밤하늘 이미지, 우측 갤럭시 폰에 핑크색으로 된 건물과 풀숲 남색 밤하늘",
+            "**pro360_pod_1**":"문스톤그레이 정면으로 바라보고 있는 갤럭시 북 4 Pro 360 포토샵안에 초록한 풀숲과 파란하늘사이에 물방울",
+            "**pro360_pod_2**":"확대된 갤럭시 북4 Pro 좌측 무지개색 아이콘 과 화면속 강아지이미지와 우측 갤럭시 폰에 강아지",
+            "**pro_pod_1**":"문스톤그레이 정면으로 바라보고있는 갤럭시 북 4 Pro 화면 속에 녹색 엑셀 열린 창과 다크모드로 된 포토샵안에 무지개색 그래픽 이미지 그밑에 intel evo 로고",
+            "**pro_pod_2**":"확대된 갤럭시 북4 Pro 좌측 무지개색 아이콘 과 우측 갤럭시 폰에 초록색 전화 아이콘 파란색 문자메세지 아이콘",
+            "**book4_pod_1**":"그레이 갤럭시 북4 포토샵안에 실버 스포츠카와 회색 구름으로 뒤덮혀진 하늘사이에 태양 이미지, 우측 상단 Ps 그려진 남색 이미지 하단 인텔 파란색 로고와 NVIDIA 초록색",
+            "**book4_pod_2**":"확대된 갤럭시 북4 Pro 좌측 무지개색 아이콘 과 우측 갤럭시 폰에 초록색 전화 아이콘 파란색 문자메세지 아이콘",
+
+            "**ultra_16_gray_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 Ultra 16인치 문스톤 그레이",
+            "**ultra_16_gray_2**":"닫혀 있는 갤럭시 북 4 Ultra 16인치 문스톤 그래이",
+            "**ultra_16_gray_3**":"좌측으로 45도 접힌갤럭시 북 4 Ultra 16인치 문스톤 그래이",
+            "**ultra_16_gray_4**":"좌측에는 갤럭시 북 4 Ultra 16인치 문스톤 그래이 양쪽 옆면,우측에는 펼쳐져 있는 갤럭시 북 4 Ultra 16인치 문스톤 그래이 후면",
+            "**ultra_16_gray_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 Ultra 16인치 문스톤 그래이",
+
+            "**pro360_16_gray_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 Pro 360 16인치 문스톤 그레이",
+            "**pro360_16_gray_2**":"닫혀 있는 갤럭시 북 4 Pro 360 16인치 문스톤 그레이",
+            "**pro360_16_gray_3**":"좌측으로 45도 접힌 갤럭시 북 4 Pro 360 16인치 문스톤 그레이와 S펜",
+            "**pro360_16_gray_4**":"좌측에는 갤럭시 북 4 Pro 360 16인치 문스톤 그레이 양쪽 옆면,우측에는 펼쳐져 있는 갤럭시 북 4 Pro 360 16인치 문스톤 그레이 후면",
+            "**pro360_16_gray_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 Pro 16인치 문스톤 그레이",
+
+            "**pro360_16_silver_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 Pro 360 16인치 플래티넘 실버",
+            "**pro360_16_silver_2**":"닫혀 있는 갤럭시 북 4 Pro 360 16인치 플래티넘 실버",
+            "**pro360_16_silver_3**":"좌측으로 45도 접힌 갤럭시 북 4 Pro 360 16인치 플래티넘 실버와 S펜",
+            "**pro360_16_silver_4**":"좌측에는 갤럭시 북 4 Pro 360 16인치 플래티넘 실버 양쪽 옆면,우측에는 펼쳐져 있는 갤럭시 북 4 Pro 360 16인치 플래티넘 실버 후면",
+            "**pro360_16_silver_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 Pro 16인치 플래티넘 실버",
+
+            "**pro_16_gray_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 Pro 16인치 문스톤 그레이",
+            "**pro_16_gray_2**":"닫혀 있는 갤럭시 북 4 Pro 16인치 문스톤 그레이",
+            "**pro_16_gray_3**":"우측 대각선으로 펼친 갤럭시 북 4 Pro 16인치 문스톤 그레이",
+            "**pro_16_gray_4**":"좌측에는 갤럭시 북4 Pro 16인치 문스톤 그레이 양쪽 옆면, 우측에는 펼쳐져 있는 갤럭시 북4 Pro 16인치 문스톤 그레이 후면",
+            "**pro_16_gray_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 Pro 16인치 문스톤 그레이",
+
+            "**pro_16_silver_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 Pro 16인치 플래티넘 실버",
+            "**pro_16_silver_2**":"닫혀 있는 갤럭시 북 4 Pro 16인치 플래티넘 실버",
+            "**pro_16_silver_3**":"우측 대각선으로 펼친 갤럭시 북 4 Pro 16인치 플래티넘 실버",
+            "**pro_16_silver_4**":"좌측에는 갤럭시 북4 Pro 16인치 플래티넘 실버 양쪽 옆면, 우측에는 펼쳐져 있는 갤럭시 북4 Pro 16인치 플래티넘 실버 후면",
+            "**pro_16_silver_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 Pro 16인치 플래티넘 실버",
+
+            "**pro_14_gray_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 Pro 14인치 문스톤 그레이",
+            "**pro_14_gray_2**":"닫혀 있는 갤럭시 북 4 Pro 14인치 문스톤 그레이",
+            "**pro_14_gray_3**":"우측 대각선으로 펼친 갤럭시 북 4 Pro 14인치 문스톤 그레이",
+            "**pro_14_gray_4**":"좌측에는 갤럭시 북4 Pro 14인치 문스톤 그레이 양쪽 옆면, 우측에는 펼쳐져 있는 갤럭시 북4 Pro 14인치 문스톤 그레이 후면",
+            "**pro_14_gray_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 Pro 14인치 문스톤 그레이",
+
+            "**pro_14_silver_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 Pro 14인치 플래티넘 실버",
+            "**pro_14_silver_2**":"닫혀 있는 갤럭시 북 4 Pro 14인치 플래티넘 실버",
+            "**pro_14_silver_3**":"우측 대각선으로 펼친 갤럭시 북 4 Pro 14인치 플래티넘 실버",
+            "**pro_14_silver_4**":"좌측에는 갤럭시 북4 Pro 14인치 플래티넘 실버 양쪽 옆면, 우측에는 펼쳐져 있는 갤럭시 북4 Pro 14인치 플래티넘 실버 후면",
+            "**pro_14_silver_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 Pro 14인치 플래티넘 실버",
+
+            "**book4_15_gray_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 15인치 그레이",
+            "**book4_15_gray_2**":"닫혀 있는 갤럭시 북 4 15인치 그레이",
+            "**book4_15_gray_3**":"우측 대각선으로 펼친 갤럭시 북 4 15인치 그레이",
+            "**book4_15_gray_4**":"좌측에는 갤럭시 북4 15인치 그레이 양쪽 옆면, 우측에는 펼쳐져 있는 갤럭시 북 4 15인치 그레이 후면",
+            "**book4_15_gray_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 15인치 그레이",
+
+            "**book4_15_silver_1**":"정면으로 펼쳐져 있는 갤럭시 북 4 15인치 실버",
+            "**book4_15_silver_2**":"닫혀 있는 갤럭시 북 4 15인치 실버",
+            "**book4_15_silver_3**":"우측 대각선으로 펼친 갤럭시 북 4 15인치 실버",
+            "**book4_15_silver_4**":"좌측에는 갤럭시 북4 15인치 실버 양쪽 옆면, 우측에는 펼쳐져 있는 갤럭시 북4 15인치 실버 후면",
+            "**book4_15_silver_5**":"위에서 내려다 본 펼쳐진 갤럭시 북 4 15인치 실버"
+         },
+         "blind": {
+            "**blind_ultra_pod_1**":"Galaxy AI is here, 최신 CPU와 GPU의 조화 극강의 AI 퍼포먼스",
+            "**blind_ultra_pod_2**":"Galaxy AI is here, PC와 스마트폰을 넘나드는 나만의 AI 비서 -  Microsoft Copilot",
+            "**blind_pro360_pod_1**":"Galaxy AI is here, 최신 기술과 강력한 AI 퍼포먼스 Intel® Core™ Ultra Processor",
+            "**blind_pro360_pod_2**":"Galaxy AI is here, PC와 스마트폰을 넘나드는 나만의 AI 비서 -  Microsoft Copilot",
+            "**blind_pro_pod_1**":"Galaxy AI is here, 최신 기술과 강력한 AI 퍼포먼스 Intel® Core™ Ultra Processor",
+            "**blind_pro_pod_2**":"Galaxy AI is here, PC와 스마트폰을 넘나드는 나만의 AI 비서 -  Microsoft Copilot",
+            "**blind_book4_pod_1**":"Galaxy AI is here, 신뢰할 수 있는 퍼포먼스 Intel® Core™ 프로세서",
+            "**blind_book4_pod_2**":"Galaxy AI is here, PC와 스마트폰을 넘나드는 나만의 AI 비서 -  Microsoft Copilot"
+         }
+      },
+      "pc": {
+         "NT960XGL-XC72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_ultra_16_gray01_pc.jpg", "alt":"**ultra_16_gray_1**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray02_pc.jpg", "alt":"**ultra_16_gray_2**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray03_pc.jpg", "alt":"**ultra_16_gray_3**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray04_pc.jpg", "alt":"**ultra_16_gray_4**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray05_pc.jpg", "alt":"**ultra_16_gray_5**", "tag": "O"},
+               {"image":"gbu_ultra_pod01_pc.jpg", "alt":"**ultra_pod_1**", "blind":"**blind_ultra_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_ultra_pod02_pc.jpg", "alt":"**ultra_pod_2**", "blind":"**blind_ultra_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGL-XD94G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_ultra_16_gray01_pc.jpg", "alt":"**ultra_16_gray_1**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray02_pc.jpg", "alt":"**ultra_16_gray_2**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray03_pc.jpg", "alt":"**ultra_16_gray_3**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray04_pc.jpg", "alt":"**ultra_16_gray_4**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray05_pc.jpg", "alt":"**ultra_16_gray_5**", "tag": "O"},
+               {"image":"gbu_ultra_pod01_pc.jpg", "alt":"**ultra_pod_1**", "blind":"**blind_ultra_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_ultra_pod02_pc.jpg", "alt":"**ultra_pod_2**", "blind":"**blind_ultra_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGL-XC92G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_ultra_16_gray01_pc.jpg", "alt":"**ultra_16_gray_1**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray02_pc.jpg", "alt":"**ultra_16_gray_2**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray03_pc.jpg", "alt":"**ultra_16_gray_3**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray04_pc.jpg", "alt":"**ultra_16_gray_4**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray05_pc.jpg", "alt":"**ultra_16_gray_5**", "tag": "O"},
+               {"image":"gbu_ultra_pod01_pc.jpg", "alt":"**ultra_pod_1**", "blind":"**blind_ultra_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_ultra_pod02_pc.jpg", "alt":"**ultra_pod_2**", "blind":"**blind_ultra_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT960QGK-KD72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_gray01_pc.jpg", "alt":"**pro360_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray02_pc.jpg", "alt":"**pro360_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray03_pc.jpg", "alt":"**pro360_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray04_pc.jpg", "alt":"**pro360_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray05_pc.jpg", "alt":"**pro360_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_pc.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_pc.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KD72S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_silver01_pc.jpg", "alt":"**pro360_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver02_pc.jpg", "alt":"**pro360_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver03_pc.jpg", "alt":"**pro360_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver04_pc.jpg", "alt":"**pro360_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver05_pc.jpg", "alt":"**pro360_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_pc.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_pc.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KC71G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_gray01_pc.jpg", "alt":"**pro360_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray02_pc.jpg", "alt":"**pro360_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray03_pc.jpg", "alt":"**pro360_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray04_pc.jpg", "alt":"**pro360_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray05_pc.jpg", "alt":"**pro360_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_pc.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_pc.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KC71S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_silver01_pc.jpg", "alt":"**pro360_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver02_pc.jpg", "alt":"**pro360_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver03_pc.jpg", "alt":"**pro360_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver04_pc.jpg", "alt":"**pro360_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver05_pc.jpg", "alt":"**pro360_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_pc.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_pc.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KC51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_gray01_pc.jpg", "alt":"**pro360_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray02_pc.jpg", "alt":"**pro360_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray03_pc.jpg", "alt":"**pro360_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray04_pc.jpg", "alt":"**pro360_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray05_pc.jpg", "alt":"**pro360_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_pc.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_pc.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_silver01_pc.jpg", "alt":"**pro360_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver02_pc.jpg", "alt":"**pro360_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver03_pc.jpg", "alt":"**pro360_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver04_pc.jpg", "alt":"**pro360_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver05_pc.jpg", "alt":"**pro360_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_pc.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_pc.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT960XGK-KD72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_pc.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_pc.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_pc.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_pc.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_pc.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KD72S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_silver01_pc.jpg", "alt":"**pro_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_16_silver02_pc.jpg", "alt":"**pro_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_16_silver03_pc.jpg", "alt":"**pro_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_16_silver04_pc.jpg", "alt":"**pro_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_16_silver05_pc.jpg", "alt":"**pro_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT960XGK-KC71G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_pc.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_pc.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_pc.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_pc.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_pc.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KC71S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_silver01_pc.jpg", "alt":"**pro_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_16_silver02_pc.jpg", "alt":"**pro_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_16_silver03_pc.jpg", "alt":"**pro_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_16_silver04_pc.jpg", "alt":"**pro_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_16_silver05_pc.jpg", "alt":"**pro_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT960XGK-KP71G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_pc.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_pc.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_pc.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_pc.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_pc.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KC51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_pc.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_pc.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_pc.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_pc.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_pc.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_silver01_pc.jpg", "alt":"**pro_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_16_silver02_pc.jpg", "alt":"**pro_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_16_silver03_pc.jpg", "alt":"**pro_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_16_silver04_pc.jpg", "alt":"**pro_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_16_silver05_pc.jpg", "alt":"**pro_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KC50G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_pc.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_pc.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_pc.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_pc.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_pc.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT940XGK-KD72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_gray01_pc.jpg", "alt":"**pro_14_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_14_gray02_pc.jpg", "alt":"**pro_14_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_14_gray03_pc.jpg", "alt":"**pro_14_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_14_gray04_pc.jpg", "alt":"**pro_14_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_14_gray05_pc.jpg", "alt":"**pro_14_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KD72S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_silver01_pc.jpg", "alt":"**pro_14_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_14_silver02_pc.jpg", "alt":"**pro_14_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_14_silver03_pc.jpg", "alt":"**pro_14_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_14_silver04_pc.jpg", "alt":"**pro_14_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_14_silver05_pc.jpg", "alt":"**pro_14_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KP71S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_silver01_pc.jpg", "alt":"**pro_14_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_14_silver02_pc.jpg", "alt":"**pro_14_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_14_silver03_pc.jpg", "alt":"**pro_14_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_14_silver04_pc.jpg", "alt":"**pro_14_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_14_silver05_pc.jpg", "alt":"**pro_14_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KC51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_gray01_pc.jpg", "alt":"**pro_14_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_14_gray02_pc.jpg", "alt":"**pro_14_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_14_gray03_pc.jpg", "alt":"**pro_14_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_14_gray04_pc.jpg", "alt":"**pro_14_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_14_gray05_pc.jpg", "alt":"**pro_14_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_silver01_pc.jpg", "alt":"**pro_14_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_14_silver02_pc.jpg", "alt":"**pro_14_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_14_silver03_pc.jpg", "alt":"**pro_14_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_14_silver04_pc.jpg", "alt":"**pro_14_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_14_silver05_pc.jpg", "alt":"**pro_14_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KC50G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_gray01_pc.jpg", "alt":"**pro_14_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_14_gray02_pc.jpg", "alt":"**pro_14_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_14_gray03_pc.jpg", "alt":"**pro_14_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_14_gray04_pc.jpg", "alt":"**pro_14_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_14_gray05_pc.jpg", "alt":"**pro_14_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_pc.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_pc.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT750XGL-XD72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_pc.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_pc.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_pc.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_pc.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_pc.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGL-XC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_silver01_pc.jpg", "alt":"**book4_15_silver_1**", "tag": "O"},
+               {"image":"gbu_book4_15_silver02_pc.jpg", "alt":"**book4_15_silver_2**", "tag": "O"},
+               {"image":"gbu_book4_15_silver03_pc.jpg", "alt":"**book4_15_silver_3**", "tag": "O"},
+               {"image":"gbu_book4_15_silver04_pc.jpg", "alt":"**book4_15_silver_4**", "tag": "O"},
+               {"image":"gbu_book4_15_silver05_pc.jpg", "alt":"**book4_15_silver_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGL-XD72S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_silver01_pc.jpg", "alt":"**book4_15_silver_1**", "tag": "O"},
+               {"image":"gbu_book4_15_silver02_pc.jpg", "alt":"**book4_15_silver_2**", "tag": "O"},
+               {"image":"gbu_book4_15_silver03_pc.jpg", "alt":"**book4_15_silver_3**", "tag": "O"},
+               {"image":"gbu_book4_15_silver04_pc.jpg", "alt":"**book4_15_silver_4**", "tag": "O"},
+               {"image":"gbu_book4_15_silver05_pc.jpg", "alt":"**book4_15_silver_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGL-XL51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_pc.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_pc.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_pc.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_pc.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_pc.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGL-XP71G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_pc.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_pc.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_pc.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_pc.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_pc.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KC51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_pc.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_pc.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_pc.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_pc.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_pc.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_silver01_pc.jpg", "alt":"**book4_15_silver_1**", "tag": "O"},
+               {"image":"gbu_book4_15_silver02_pc.jpg", "alt":"**book4_15_silver_2**", "tag": "O"},
+               {"image":"gbu_book4_15_silver03_pc.jpg", "alt":"**book4_15_silver_3**", "tag": "O"},
+               {"image":"gbu_book4_15_silver04_pc.jpg", "alt":"**book4_15_silver_4**", "tag": "O"},
+               {"image":"gbu_book4_15_silver05_pc.jpg", "alt":"**book4_15_silver_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KD51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_pc.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_pc.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_pc.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_pc.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_pc.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KC38S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_silver01_pc.jpg", "alt":"**book4_15_silver_1**", "tag": "O"},
+               {"image":"gbu_book4_15_silver02_pc.jpg", "alt":"**book4_15_silver_2**", "tag": "O"},
+               {"image":"gbu_book4_15_silver03_pc.jpg", "alt":"**book4_15_silver_3**", "tag": "O"},
+               {"image":"gbu_book4_15_silver04_pc.jpg", "alt":"**book4_15_silver_4**", "tag": "O"},
+               {"image":"gbu_book4_15_silver05_pc.jpg", "alt":"**book4_15_silver_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KC38G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_pc.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_pc.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_pc.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_pc.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_pc.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_pc.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_pc.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_pc.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "LS32DG504EKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_G5_01_pc.png", "alt":"정면 블랙 오디세이 G5(G50D) (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_G5_02_pc.png", "alt":"우측 블랙 오디세이 G5(G50D) (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_G5_03_pc.png", "alt":"후면 블랙 오디세이 G5(G50D) (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_G5_04_pc.png", "alt":"옆면 블랙 오디세이 G5(G50D) (80.1 cm) 모니터", "tag": ""}
+            ]
+         },
+         "LS32DM703UKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_M70D_01_pc_v2.png", "alt":"정면 화이트 M7 M70D 화이트 (80.0 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_02_pc_v2.png", "alt":"우측 화이트 M7 M70D 화이트 (80.0 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_03_pc_v2.png", "alt":"후면 화이트 M7 M70D 화이트 (80.0 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_04_pc_v2.png", "alt":"옆면 화이트 M7 M70D 화이트 (80.0 cm) 모니터", "tag": ""}
+            ]
+         },
+         "LS32DM503EKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_M5_01_pc.jpg", "alt":"정면 화이트 M5 M50D 화이트 (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M5_02_pc.jpg", "alt":"우측 화이트 M5 M50D 화이트 (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M5_03_pc.jpg", "alt":"후면 화이트 M5 M50D 화이트 (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M5_04_pc.jpg", "alt":"옆면 화이트 M5 M50D 화이트 (80.1 cm) 모니터", "tag": ""}
+            ]
+         },
+         "LS43DM703UKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_M70D_01_pc.png", "alt":"정면 화이트 M7 M70D 화이트 (107.9 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_02_pc.png", "alt":"우측 화이트 M7 M70D 화이트 (107.9 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_03_pc.png", "alt":"후면 화이트 M7 M70D 화이트 (107.9 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_04_pc.png", "alt":"옆면 화이트 M7 M70D 화이트 (107.9 cm) 모니터", "tag": ""}
+            ]
+         },
+         "LS27C330GAKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_S33GC_01_pc.png", "alt":"정면 에센셜모니터 (S33GC) (68.6 cm)", "tag": ""},
+               {"image":"gbu_buywith_S33GC_02_pc.png", "alt":"우측 에센셜모니터 (S33GC) (68.6 cm)", "tag": ""},
+               {"image":"gbu_buywith_S33GC_03_pc.png", "alt":"후면 에센셜모니터 (S33GC) (68.6 cm)", "tag": ""},
+               {"image":"gbu_buywith_S33GC_04_pc.png", "alt":"후측면 에센셜모니터 (S33GC) (68.6 cm)", "tag": ""}
+            ]
+         }
+      },
+      "mobile": {
+         "NT960XGL-XC72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_ultra_16_gray01_mo.jpg", "alt":"**ultra_16_gray_1**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray02_mo.jpg", "alt":"**ultra_16_gray_2**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray03_mo.jpg", "alt":"**ultra_16_gray_3**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray04_mo.jpg", "alt":"**ultra_16_gray_4**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray05_mo.jpg", "alt":"**ultra_16_gray_5**", "tag": "O"},
+               {"image":"gbu_ultra_pod01_mo.jpg", "alt":"**ultra_pod_1**", "blind":"**blind_ultra_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_ultra_pod02_mo.jpg", "alt":"**ultra_pod_2**", "blind":"**blind_ultra_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGL-XD94G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_ultra_16_gray01_mo.jpg", "alt":"**ultra_16_gray_1**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray02_mo.jpg", "alt":"**ultra_16_gray_2**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray03_mo.jpg", "alt":"**ultra_16_gray_3**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray04_mo.jpg", "alt":"**ultra_16_gray_4**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray05_mo.jpg", "alt":"**ultra_16_gray_5**", "tag": "O"},
+               {"image":"gbu_ultra_pod01_mo.jpg", "alt":"**ultra_pod_1**", "blind":"**blind_ultra_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_ultra_pod02_mo.jpg", "alt":"**ultra_pod_2**", "blind":"**blind_ultra_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGL-XC92G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_ultra_16_gray01_mo.jpg", "alt":"**ultra_16_gray_1**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray02_mo.jpg", "alt":"**ultra_16_gray_2**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray03_mo.jpg", "alt":"**ultra_16_gray_3**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray04_mo.jpg", "alt":"**ultra_16_gray_4**", "tag": "O"},
+               {"image":"gbu_ultra_16_gray05_mo.jpg", "alt":"**ultra_16_gray_5**", "tag": "O"},
+               {"image":"gbu_ultra_pod01_mo.jpg", "alt":"**ultra_pod_1**", "blind":"**blind_ultra_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_ultra_pod02_mo.jpg", "alt":"**ultra_pod_2**", "blind":"**blind_ultra_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT960QGK-KD72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_gray01_mo.jpg", "alt":"**pro360_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray02_mo.jpg", "alt":"**pro360_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray03_mo.jpg", "alt":"**pro360_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray04_mo.jpg", "alt":"**pro360_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray05_mo.jpg", "alt":"**pro360_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_mo.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_mo.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KD72S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_silver01_mo.jpg", "alt":"**pro360_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver02_mo.jpg", "alt":"**pro360_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver03_mo.jpg", "alt":"**pro360_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver04_mo.jpg", "alt":"**pro360_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver05_mo.jpg", "alt":"**pro360_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_mo.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_mo.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KC71G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_gray01_mo.jpg", "alt":"**pro360_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray02_mo.jpg", "alt":"**pro360_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray03_mo.jpg", "alt":"**pro360_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray04_mo.jpg", "alt":"**pro360_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray05_mo.jpg", "alt":"**pro360_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_mo.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_mo.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KC71S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_silver01_mo.jpg", "alt":"**pro360_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver02_mo.jpg", "alt":"**pro360_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver03_mo.jpg", "alt":"**pro360_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver04_mo.jpg", "alt":"**pro360_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver05_mo.jpg", "alt":"**pro360_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_mo.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_mo.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KC51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_gray01_mo.jpg", "alt":"**pro360_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray02_mo.jpg", "alt":"**pro360_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray03_mo.jpg", "alt":"**pro360_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray04_mo.jpg", "alt":"**pro360_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_gray05_mo.jpg", "alt":"**pro360_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_mo.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_mo.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960QGK-KC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro360_16_silver01_mo.jpg", "alt":"**pro360_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver02_mo.jpg", "alt":"**pro360_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver03_mo.jpg", "alt":"**pro360_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver04_mo.jpg", "alt":"**pro360_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro360_16_silver05_mo.jpg", "alt":"**pro360_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro360_pod01_mo.jpg", "alt":"**pro360_pod_1**", "blind":"**blind_pro360_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro360_pod02_mo.jpg", "alt":"**pro360_pod_2**", "blind":"**blind_pro360_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT960XGK-KD72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_mo.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_mo.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_mo.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_mo.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_mo.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KD72S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_silver01_mo.jpg", "alt":"**pro_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_16_silver02_mo.jpg", "alt":"**pro_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_16_silver03_mo.jpg", "alt":"**pro_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_16_silver04_mo.jpg", "alt":"**pro_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_16_silver05_mo.jpg", "alt":"**pro_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT960XGK-KC71G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_mo.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_mo.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_mo.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_mo.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_mo.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KC71S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_silver01_mo.jpg", "alt":"**pro_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_16_silver02_mo.jpg", "alt":"**pro_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_16_silver03_mo.jpg", "alt":"**pro_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_16_silver04_mo.jpg", "alt":"**pro_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_16_silver05_mo.jpg", "alt":"**pro_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT960XGK-KP71G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_mo.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_mo.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_mo.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_mo.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_mo.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KC51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_mo.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_mo.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_mo.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_mo.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_mo.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_silver01_mo.jpg", "alt":"**pro_16_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_16_silver02_mo.jpg", "alt":"**pro_16_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_16_silver03_mo.jpg", "alt":"**pro_16_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_16_silver04_mo.jpg", "alt":"**pro_16_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_16_silver05_mo.jpg", "alt":"**pro_16_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT960XGK-KC50G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_16_gray01_mo.jpg", "alt":"**pro_16_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_16_gray02_mo.jpg", "alt":"**pro_16_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_16_gray03_mo.jpg", "alt":"**pro_16_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_16_gray04_mo.jpg", "alt":"**pro_16_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_16_gray05_mo.jpg", "alt":"**pro_16_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT940XGK-KD72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_gray01_mo.jpg", "alt":"**pro_14_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_14_gray02_mo.jpg", "alt":"**pro_14_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_14_gray03_mo.jpg", "alt":"**pro_14_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_14_gray04_mo.jpg", "alt":"**pro_14_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_14_gray05_mo.jpg", "alt":"**pro_14_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KD72S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_silver01_mo.jpg", "alt":"**pro_14_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_14_silver02_mo.jpg", "alt":"**pro_14_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_14_silver03_mo.jpg", "alt":"**pro_14_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_14_silver04_mo.jpg", "alt":"**pro_14_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_14_silver05_mo.jpg", "alt":"**pro_14_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KP71S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_silver01_mo.jpg", "alt":"**pro_14_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_14_silver02_mo.jpg", "alt":"**pro_14_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_14_silver03_mo.jpg", "alt":"**pro_14_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_14_silver04_mo.jpg", "alt":"**pro_14_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_14_silver05_mo.jpg", "alt":"**pro_14_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KC51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_gray01_mo.jpg", "alt":"**pro_14_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_14_gray02_mo.jpg", "alt":"**pro_14_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_14_gray03_mo.jpg", "alt":"**pro_14_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_14_gray04_mo.jpg", "alt":"**pro_14_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_14_gray05_mo.jpg", "alt":"**pro_14_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_silver01_mo.jpg", "alt":"**pro_14_silver_1**", "tag": "O"},
+               {"image":"gbu_pro_14_silver02_mo.jpg", "alt":"**pro_14_silver_2**", "tag": "O"},
+               {"image":"gbu_pro_14_silver03_mo.jpg", "alt":"**pro_14_silver_3**", "tag": "O"},
+               {"image":"gbu_pro_14_silver04_mo.jpg", "alt":"**pro_14_silver_4**", "tag": "O"},
+               {"image":"gbu_pro_14_silver05_mo.jpg", "alt":"**pro_14_silver_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT940XGK-KC50G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_pro_14_gray01_mo.jpg", "alt":"**pro_14_gray_1**", "tag": "O"},
+               {"image":"gbu_pro_14_gray02_mo.jpg", "alt":"**pro_14_gray_2**", "tag": "O"},
+               {"image":"gbu_pro_14_gray03_mo.jpg", "alt":"**pro_14_gray_3**", "tag": "O"},
+               {"image":"gbu_pro_14_gray04_mo.jpg", "alt":"**pro_14_gray_4**", "tag": "O"},
+               {"image":"gbu_pro_14_gray05_mo.jpg", "alt":"**pro_14_gray_5**", "tag": "O"},
+               {"image":"gbu_pro_pod01_mo.jpg", "alt":"**pro_pod_1**", "blind":"**blind_pro_pod_1**", "dark": "O", "tag": ""},
+               {"image":"gbu_pro_pod02_mo.jpg", "alt":"**pro_pod_2**", "blind":"**blind_pro_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+
+         "NT750XGL-XD72G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_mo.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_mo.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_mo.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_mo.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_mo.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGL-XC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_silver01_mo.jpg", "alt":"**book4_15_silver_1**", "tag": "O"},
+               {"image":"gbu_book4_15_silver02_mo.jpg", "alt":"**book4_15_silver_2**", "tag": "O"},
+               {"image":"gbu_book4_15_silver03_mo.jpg", "alt":"**book4_15_silver_3**", "tag": "O"},
+               {"image":"gbu_book4_15_silver04_mo.jpg", "alt":"**book4_15_silver_4**", "tag": "O"},
+               {"image":"gbu_book4_15_silver05_mo.jpg", "alt":"**book4_15_silver_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGL-XD72S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_silver01_mo.jpg", "alt":"**book4_15_silver_1**", "tag": "O"},
+               {"image":"gbu_book4_15_silver02_mo.jpg", "alt":"**book4_15_silver_2**", "tag": "O"},
+               {"image":"gbu_book4_15_silver03_mo.jpg", "alt":"**book4_15_silver_3**", "tag": "O"},
+               {"image":"gbu_book4_15_silver04_mo.jpg", "alt":"**book4_15_silver_4**", "tag": "O"},
+               {"image":"gbu_book4_15_silver05_mo.jpg", "alt":"**book4_15_silver_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGL-XL51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_mo.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_mo.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_mo.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_mo.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_mo.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGL-XP71G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_mo.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_mo.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_mo.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_mo.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_mo.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KC51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_mo.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_mo.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_mo.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_mo.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_mo.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KC51S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_silver01_mo.jpg", "alt":"**book4_15_silver_1**", "tag": "O"},
+               {"image":"gbu_book4_15_silver02_mo.jpg", "alt":"**book4_15_silver_2**", "tag": "O"},
+               {"image":"gbu_book4_15_silver03_mo.jpg", "alt":"**book4_15_silver_3**", "tag": "O"},
+               {"image":"gbu_book4_15_silver04_mo.jpg", "alt":"**book4_15_silver_4**", "tag": "O"},
+               {"image":"gbu_book4_15_silver05_mo.jpg", "alt":"**book4_15_silver_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KD51G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_mo.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_mo.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_mo.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_mo.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_mo.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KC38S":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_silver01_mo.jpg", "alt":"**book4_15_silver_1**", "tag": "O"},
+               {"image":"gbu_book4_15_silver02_mo.jpg", "alt":"**book4_15_silver_2**", "tag": "O"},
+               {"image":"gbu_book4_15_silver03_mo.jpg", "alt":"**book4_15_silver_3**", "tag": "O"},
+               {"image":"gbu_book4_15_silver04_mo.jpg", "alt":"**book4_15_silver_4**", "tag": "O"},
+               {"image":"gbu_book4_15_silver05_mo.jpg", "alt":"**book4_15_silver_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "NT750XGK-KC38G":{
+            "startIdx": 0,
+            "slide": [
+               {"image":"gbu_buying_defalut_mo.jpg", "alt":"**txt0**", "tag": ""},
+               {"image":"gbu_book4_15_gray01_mo.jpg", "alt":"**book4_15_gray_1**", "tag": "O"},
+               {"image":"gbu_book4_15_gray02_mo.jpg", "alt":"**book4_15_gray_2**", "tag": "O"},
+               {"image":"gbu_book4_15_gray03_mo.jpg", "alt":"**book4_15_gray_3**", "tag": "O"},
+               {"image":"gbu_book4_15_gray04_mo.jpg", "alt":"**book4_15_gray_4**", "tag": "O"},
+               {"image":"gbu_book4_15_gray05_mo.jpg", "alt":"**book4_15_gray_5**", "tag": "O"},
+               {"image":"gbu_book4_pod01_mo.jpg", "alt":"**book4_pod_1**", "blind":"**blind_book4_pod_1**", "dark": "", "tag": ""},
+               {"image":"gbu_book4_pod02_mo.jpg", "alt":"**book4_pod_2**", "blind":"**blind_book4_pod_2**", "dark": "O", "tag": ""}
+            ]
+         },
+         "LS32DG504EKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_G5_01_mo.png", "alt":"정면 블랙 오디세이 G5(G50D) (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_G5_02_mo.png", "alt":"우측 블랙 오디세이 G5(G50D) (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_G5_03_mo.png", "alt":"후면 블랙 오디세이 G5(G50D) (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_G5_04_mo.png", "alt":"옆면 블랙 오디세이 G5(G50D) (80.1 cm) 모니터", "tag": ""}
+            ]
+         },
+         "LS32DM503EKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_M5_01_mo.jpg", "alt":"후면 화이트 M5 M50D 화이트 (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M5_02_mo.jpg", "alt":"후면 화이트 M5 M50D 화이트 (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M5_03_mo.jpg", "alt":"후면 화이트 M5 M50D 화이트 (80.1 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M5_04_mo.jpg", "alt":"후면 화이트 M5 M50D 화이트 (80.1 cm) 모니터", "tag": ""}
+            ]
+         },
+         "LS32DM703UKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_M70D_01_mo_v2.png", "alt":"정면 화이트 M7 M70D 화이트 (80.0 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_02_mo_v2.png", "alt":"우측 화이트 M7 M70D 화이트 (80.0 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_03_mo_v2.png", "alt":"후면 화이트 M7 M70D 화이트 (80.0 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_04_mo_v2.png", "alt":"옆면 화이트 M7 M70D 화이트 (80.0 cm) 모니터", "tag": ""}
+            ]
+         },
+         "LS43DM703UKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_M70D_01_mo.png", "alt":"정면 화이트 M7 M70D 화이트 (107.9 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_02_mo.png", "alt":"우측 화이트 M7 M70D 화이트 (107.9 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_03_mo.png", "alt":"후면 화이트 M7 M70D 화이트 (107.9 cm) 모니터", "tag": ""},
+               {"image":"gbu_buywith_M70D_04_mo.png", "alt":"옆면 화이트 M7 M70D 화이트 (107.9 cm) 모니터", "tag": ""}
+            ]
+         },
+         "LS27C330GAKXKR":{
+            "startIdx": 7,
+            "slide": [
+               {"image":"gbu_buywith_S33GC_01_mo.png", "alt":"정면 에센셜모니터 (S33GC) (68.6 cm)", "tag": ""},
+               {"image":"gbu_buywith_S33GC_02_mo.png", "alt":"우측 에센셜모니터 (S33GC) (68.6 cm)", "tag": ""},
+               {"image":"gbu_buywith_S33GC_03_mo.png", "alt":"후면 에센셜모니터 (S33GC) (68.6 cm)", "tag": ""},
+               {"image":"gbu_buywith_S33GC_04_mo.png", "alt":"후측면 에센셜모니터 (S33GC) (68.6 cm)", "tag": ""}
+            ]
+         }
+      }
+   }
+}

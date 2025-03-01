@@ -1,0 +1,176 @@
+<section class="sec_check" id="sec_check">
+    <div class="inner_1440">
+        <div class="pt_title-box">
+            <h2 class="pt_title-box__title">내 카드 혜택 확인</h2>
+            <p class="pt_title-box__sub">결제할 카드로 받을 수 있는 혜택을 쉽게 확인해보세요</p>
+        </div>
+
+        <!-- pt_benefit -->
+        <div class="pt_benefit pt_add-bg">
+            <div class="pt_benefit__wrap pt_add-bg">
+                <div class="pt_benefit__write pt_benefit__write--top pt_add-bg">
+                    <span class="pt_benefit__point">삼성닷컴에서 <em class="en">1</em>월에</span>
+                    <label for="cardSelect" class="pt_benefit__label">카드사 선택하기</label>
+                    <div class="pt_benefit__select-box">
+                        <select class="pt_benefit__select" data-benefit-select></select>
+                        <div class="pt_benefit__arrow"><div class="blind">선택 화살표</div></div>
+                    </div>
+                로
+                </div>
+                <div class="pt_benefit__write">
+                    <!-- <input type="text" placeholder="결제 예정 금액을 입력해보세요" class="pt_benefit__price" data-buying-text="purchaseAmount"/> -->
+                    <input type="type" class="pt_benefit__price pt_payment__amount" data-payment-amount placeholder="결제 예정 금액을 입력해보세요." maxlength="21">
+                    원 결제 시 받을 수 있는 혜택은?
+                </div>
+                <div class="pt_btn">
+                    <button data-omni-type="microsite" data-role="btnReset" data-omni="sec:eventList:creditcard_benefit:button_reset" title="카드 혜택 옵션 초기화" class="pt_btn__reset btn_common type_round">초기화</button>
+                    <button data-omni-type="microsite" data-role="btnConfirm" data-omni="sec:eventList:creditcard_benefit:button_ok" title="카드 혜택 확인" class="pt_btn__confirm btn_common type_round">확인</button>
+                    <!-- <button class="pt_btn__test">TEST</button> -->
+                </div>
+                <!-- pt_bnf -->
+                <div class="pt_bnf__cont pt_bnf__cont--none" data-benefit-cont>
+                    <div class="pt_empty">
+                        <p>
+                            지금 내가 받을 수 있는<br />
+                            카드 혜택을 확인하세요.
+                        </p>
+                    </div>
+                    <div class="pt_ac">
+                        <li class="pt_bnf--tit" data-benefit-custom="chkDiscountAmount">
+                            <p>추가 혜택</p>
+                        </li>
+                        <ul class="pt_bnf">
+                            <li class="pt_bnf__item" data-benefit-custom="chkDiscountAmount">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt" data-benefit-custom="discountText">금액대별 결제할인</p>
+                                </div>
+                                <span class="pt_bnf__item--price">
+                                    <em class="pt_bnf__item--blue en discountAmount" data-benefit-custom="discountAmount">-</em><span class="pt_bnf__item--per">원</span>
+                                </span>
+                            </li>
+                            <li class="pt_bnf__item" data-benefit-custom="chkSpecialBenefit">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt">삼성전자 AI 세일 페스타 특별 추가 혜택</p>
+                                </div>
+                                <span class="pt_bnf__item--price">
+                                    <em class="pt_bnf__item--blue en specialBenefit" data-benefit-custom="specialBenefit">-</em><span class="pt_bnf__item--per">원</span>
+                                </span>
+                            </li>
+                            <li class="pt_bnf__item" data-benefit-custom="chkNaverPayPoints">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt">네이버페이로 결제 시</p>
+                                </div>
+                                <span class="pt_bnf__item--price">
+                                    <span class="pt_bnf__item--small">네이버페이 포인트</span>
+                                    <em class="pt_bnf__item--blue en naverPayPoints" data-benefit-custom="naverPayPoints">-</em><span class="pb_bnf__item--per">P</span>
+                                </span>
+                            </li>
+                            <li class="pt_bnf__item" data-benefit-custom="chkPrice100">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt">무이자 할부</p>
+                                </div>
+                                <div class="pt_bnf__item--right">
+                                    <div class="pt_bnf__item--price benefitAEle">
+                                        <div class="pt_two" data-benefit-text="benefitA"></div>
+                                        <p class="pt_bnf__item--noti">*100만원 이상 결제 시</p>
+                                    </div>
+                                    <p class="pt_bnf__item--price benefitBEle" data-benefit-show="benefitB!=-">
+                                        <em class="en" data-benefit-text="benefitB">-</em>개월
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="pt_bnf__item" data-benefit-custom="chkPrice200">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt">무이자 할부</p>
+                                </div>
+                                <div class="pt_bnf__item--right">
+                                    <div class="pt_bnf__item--price benefitAEle">
+                                        <div class="pt_two" data-benefit-text="benefitA_A"></div>
+                                        <p class="pt_bnf__item--noti">*200만원 이상 결제 시</p>
+                                    </div>
+                                    <p class="pt_bnf__item--price benefitBEle" data-benefit-show="benefitB!=-">
+                                        <em class="en" data-benefit-text="benefitB">-</em>개월
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="pt_bnf__item" data-benefit-custom="chkPrice100Else">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt">무이자 할부</p>
+                                </div>
+                                <div class="pt_bnf__item--right">
+                                    <p class="pt_bnf__item--price benefitBEle">
+                                        <em class="en" data-benefit-text="benefitB">-</em>개월
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="pt_bnf__item" data-benefit-show="benefitC!=-">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt">부분 무이자 할부</p>
+                                </div>
+                                <div class="pt_bnf__item--right">
+                                    <p class="pt_bnf__item--price benefitCEle" data-benefit-text="benefitC">-</p>
+                                    <p class="pt_bnf__item--noti pt_bnf__item--bc" data-benefit-show="cardCd==card_3">*ARS 사전 신청 (1899-5772)</p>
+                                    <p class="pt_bnf__item--noti pt_bnf__item--nh" data-benefit-show="cardCd==card_7">*ARS 사전 신청 (1644-2009)</p>
+                                </div>
+                            </li>
+                            <!-- <li class="pt_bnf__item" data-benefit-show="benefitD_rate">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt benefitDTextEle" data-benefit-text="benefitD_text"> -->
+                                        <!-- 삼성스토어 BENEFIT카드 결제 시 -->
+                                    <!-- </p>
+                                </div>
+                                <div class="pt_bnf__item--right">
+                                    <p class="pt_bnf__item--price benefitDRateEle" data-benefit-text="benefitD_rate"> -->
+                                        <!--<em class="pt_bnf__item--blue en">-</em>-->
+                                    <!-- </p>
+                                    <p class="pt_bnf__item--noti">*신규고객/100만원이상 결제 시</p> -->
+                                    <!-- <p> 결제일할인</p> -->
+                                    <!-- <p class="pt_bnf__item--price"><em class="pt_bnf__item--blue en">3%</em> 결제일할인</p> -->
+                                <!-- </div>
+                            </li> -->
+
+                            <!-- s:KB Pay 생애 첫 결제 시 -->
+                            <!-- <li class="pt_bnf__item" data-benefit-show="benefitE_rate">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt benefitETextEle" data-benefit-text="benefitE_text"> -->
+                                        <!-- 삼성스토어 BENEFIT카드 결제 시 -->
+                                    <!-- </p>
+                                </div>
+                                <div class="pt_bnf__item--right">
+                                    <p class="pt_bnf__item--price benefitERateEle" data-benefit-text="benefitE_rate"> -->
+                                        <!--<em class="pt_bnf__item&#45;&#45;blue en" data-benefit-text="benefitE_rate">-</em>-->
+                                    <!-- </p>
+                                    <p class="pt_bnf__item--noti">*KB Pay로 1만원 이상 첫 결제시</p> -->
+                                    <!-- <p> 결제일할인</p> -->
+                                    <!-- <p class="pt_bnf__item--price"><em class="pt_bnf__item--blue en">3%</em> 결제일할인</p> -->
+                                <!-- </div>
+                            </li> -->
+                            <!-- e:KB Pay 생애 첫 결제 시 -->
+
+                            <li class="pt_bnf__item" data-benefit-show="benefitF_rate">
+                                <div class="pt_bnf__txt-box">
+                                    <p class="pt_bnf__item--txt benefitFTextEle" data-benefit-text="benefitF_text">
+                                        <!-- 삼성스토어 BENEFIT카드 결제 시 -->
+                                    </p>
+                                </div>
+                                <div class="pt_bnf__item--right">
+                                    <p class="pt_bnf__item--price benefitFRateEle" data-benefit-text="benefitF_rate">
+                                        <!--<em class="pt_bnf__item&#45;&#45;blue en" data-benefit-text="benefitE_rate">-</em>-->
+                                    </p>
+                                    <p class="pt_bnf__item--noti" data-benefit-text="benefitF_sale"></p>
+                                    <!-- <span> 결제일할인</span> -->
+                                    <!-- <p class="pt_bnf__item--price"><em class="pt_bnf__item--blue en">3%</em> 결제일할인</p> -->
+                                </div>
+                            </li>
+                            <li class="pt_bnf__item pt_bnf__item--right" data-benefit-show="benefitF_desc!=-">
+                                <p class="pt_bnf__item--noti benefitETextEle" data-benefit-text="benefitF_desc">
+                                    <!-- 삼성카드 클릭시 디스클라이머 추가 -->
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,103 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+.galaxy_book4_edge_alarm {
+    .sec_kv {
+        .pt_kv {
+            position: relative;
+
+            &__title {
+                z-index: 1; position: absolute; @include vw-mo(top, 84); left: 50%; transform: translateX(-50%); width: 100%; text-align: center;
+
+                &--eyebrow {@include vw-mo(width, 489); @include vw-mo(height, 38); @include vw-mo(margin, 0 auto 15);}
+                &--main {@include vw-mo(margin-bottom, 13); @include vw-mo(font-size, 45); @include vw-mo(line-height, 58); font-weight: 700; letter-spacing: -0.03em;}
+                &--date {@include vw-mo(margin-bottom, 13); @include vw-mo(font-size, 28); @include vw-mo(line-height, 42); font-weight: 700; letter-spacing: -0.03em;}
+            }
+
+            &__btn {
+                z-index: 1; position: absolute; @include vw-mo(top, 369); left: 50%; transform: translateX(-50%); width: 100%; text-align: center;
+
+                &--alarm {
+                    display: inline-flex; justify-content: center; align-items: center; @include vw-mo(width, 262); @include vw-mo(height, 82); margin: 0 auto; color: #fff; @include vw-mo(font-size, 30); font-weight: 700; letter-spacing: -0.03em;
+
+                    &::before {display: inline-block; content: ''; @include vw-mo(width, 30); @include vw-mo(height, 31); @include vw-mo(margin-right, 10); background: url('../../../is/images/alarm/common/gbe_icon_alarm_mo.png') no-repeat; @include vw-mo(background-size, 30 31);}
+                }
+
+                &--alarm:hover {
+                    display: inline-flex; justify-content: center; align-items: center; @include vw-mo(width, 262); @include vw-mo(height, 82); margin: 0 auto; background-color: #000; color: #fff; @include vw-mo(font-size, 30); font-weight: 700; letter-spacing: -0.03em;
+
+                    &::before {display: inline-block; content: ''; @include vw-mo(width, 30); @include vw-mo(height, 31); @include vw-mo(margin-right, 10); background: url('../../../is/images/alarm/common/gbe_icon_alarm_mo.png') no-repeat; @include vw-mo(background-size, 30 31);}
+                }
+
+                &--disabled {
+                    display: inline-flex; justify-content: center; align-items: center; @include vw-mo(width, 262); @include vw-mo(height, 82); margin: 0 auto; background-color: #b2b2b2; border-color: #b2b2b2; color: #fff; @include vw-mo(font-size, 30); font-weight: 700; letter-spacing: -0.03em; pointer-events: none;
+
+                    &::before {display: inline-block; content: ''; @include vw-mo(width, 30); @include vw-mo(height, 31); @include vw-mo(margin-right, 10); background: url('../../../is/images/alarm/common/gbe_icon_alarm_mo.png') no-repeat; @include vw-mo(background-size, 30 31);}
+                }
+
+                &--disabled:hover {background-color: #b2b2b2; border-color: #b2b2b2; color: #fff; pointer-events: none;}
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width:769px) {
+    .galaxy_book4_edge_alarm {
+        .sec_kv {
+            .pt_kv {
+                position: relative;
+    
+                &__title {
+                    z-index: 1; position: absolute; @include vw-max(top, 163); @include vw-max(left, 1145); transform: none; width: auto; text-align: left;
+    
+                    &--eyebrow {@include vw-max(width, 542); @include vw-max(height, 42); @include vw-max(margin, 0 0 15);}
+                    &--main {@include vw-max(margin-bottom, 7); @include vw-max(font-size, 48); @include vw-max(line-height, 62); font-weight: 700; letter-spacing: -0.025em;}
+                    &--date {@include vw-max(margin-bottom, 7); @include vw-max(font-size, 24); @include vw-max(line-height, 30); font-weight: 700; letter-spacing: 0;}
+                }
+    
+                &__btn {
+                    z-index: 1; position: absolute; @include vw-max(top, 430); @include vw-max(left, 1145); transform: none; width: auto; text-align: left;
+    
+                    &--alarm {
+                        display: inline-flex; justify-content: center; align-items: center; @include vw-max(width, 150); @include vw-max(height, 40); margin: 0 auto; color: #fff; @include vw-max(font-size, 14); font-weight: 700; letter-spacing: -0.05em;
+    
+                        &::before {display: inline-block; content: ''; @include vw-max(width, 16); @include vw-max(height, 16); @include vw-max(margin-right, 5); background: url('../../../is/images/alarm/common/gbe_icon_alarm_pc.png') no-repeat; @include vw-max(background-size, 16 16);}
+                    }
+
+                    &--alarm:hover {
+                        display: inline-flex; justify-content: center; align-items: center; @include vw-max(width, 150); @include vw-max(height, 40); margin: 0 auto; background-color: #000; color: #fff; @include vw-max(font-size, 14); font-weight: 700; letter-spacing: -0.05em;
+    
+                        &::before {display: inline-block; content: ''; @include vw-max(width, 16); @include vw-max(height, 16); @include vw-max(margin-right, 5); background: url('../../../is/images/alarm/common/gbe_icon_alarm_pc.png') no-repeat; @include vw-max(background-size, 16 16);}
+                    }
+
+                    &--disabled {
+                        display: inline-flex; justify-content: center; align-items: center; @include vw-max(width, 150); @include vw-max(height, 40); margin: 0 auto; background-color: #b2b2b2; border-color: #b2b2b2; color: #fff; @include vw-max(font-size, 14); font-weight: 700; letter-spacing: -0.05em;
+    
+                        &::before {display: inline-block; content: ''; @include vw-max(width, 16); @include vw-max(height, 16); @include vw-max(margin-right, 5); background: url('../../../is/images/alarm/common/gbe_icon_alarm_pc.png') no-repeat; @include vw-max(background-size, 16 16);}
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

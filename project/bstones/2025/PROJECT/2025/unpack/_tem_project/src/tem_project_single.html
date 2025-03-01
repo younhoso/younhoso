@@ -1,0 +1,50 @@
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+
+<!-- split tem_project.txt -->
+<link rel="stylesheet" href="./css/tem_project.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap tem_project" id="tem_project">
+
+	<section class="sec_kv" id="sec_kv">
+		<div class="inner_1920">
+			<h2>템플릿</h2>
+            <p style="color:red; font-weight: bold;">현재 프로젝트 명으로 tem_project 라고 적힌 모든 파일명/소스를 수정해서 사용하세요! (필) </p>
+		</div>
+	</section>
+	<!--// sec_kv -->
+
+    <section class="sec_benefit" id="sec_benefit">
+        <div class="inner_1440">
+            <div class="img_box">
+                <img src="../is/images/ltv_banner_pc_v1.png" alt="" class="m_hide">
+                <img src="../is/images/ltv_banner_mo_v1.png" alt="" class="m_show">
+            </div>
+        </div>
+    </section>
+    <!--// sec_benefit -->
+
+    @@include('./split-html/notice.html')
+    <!-- //sec_notice -->
+
+</main>
+
+<script src="./js/tem_project.min.js" inline></script>
+<script src="./js/isqa.min.js" inline></script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

@@ -1,0 +1,48 @@
+.benefitzone {
+    .sec_model_popup {display: none; position: relative;
+        .pt_popup_wrap {position: fixed; top: 48%; left: 50%; transform: translate(-50%, -50%); z-index: 12; @include vw-pc(width, 650); height: 85%; @include vw-pc(padding, 60 12 0); background: #fff; text-align: center;
+            .pt_title {@include vw-pc(margin-bottom, 30); @include vw-pc(font-size, 28); @include vw-pc(line-height, 28); font-weight: 700;}   
+            .pt_popup_con {overflow-y: scroll; height: 88%;}
+            .pt_popup_con .pt_popup_table {width: 100%;}
+            .pt_popup_con .pt_popup_table th,
+            .pt_popup_con .pt_popup_table td {border: 1px solid #D5D9DD; vertical-align: middle;}
+            .pt_popup_con .pt_popup_table th:nth-child(1),
+            .pt_popup_con .pt_popup_table td:nth-child(1) {@include vw-pc(width, 77);}
+            .pt_popup_con .pt_popup_table th:nth-child(2),
+            .pt_popup_con .pt_popup_table td:nth-child(2) {@include vw-pc(width, 127);}
+            .pt_popup_con .pt_popup_table th:nth-child(3),
+            .pt_popup_con .pt_popup_table td:nth-child(3) {@include vw-pc(width, 157);}
+            .pt_popup_con .pt_popup_table th:nth-child(4),
+            .pt_popup_con .pt_popup_table td:nth-child(4) {@include vw-pc(width, 118);}
+            .pt_popup_con .pt_popup_table th:nth-child(5),
+            .pt_popup_con .pt_popup_table td:nth-child(5) {@include vw-pc(width, 113);}
+            .pt_popup_con .pt_popup_table th {@include vw-pc(padding, 10 0); background: #E4F0F2; @include vw-pc(font-size, 22); @include vw-pc(line-height, 28); font-weight: 700; @include vw-pc(letter-spacing, -0.55);}
+            .pt_popup_con .pt_popup_table td {@include vw-pc(padding, 8 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 22);}
+            .pt_popup_close {position: absolute; left: 50%; transform: translateX(-50%); @include vw-pc(bottom, -70); display: inline-block; @include vw-pc(width, 61); @include vw-pc(height, 61); font-size: 0; background: url('https://images.samsung.com/is/image/samsung/p5/sec/event/weddingshop/pop_close_pc.png?$ORIGIN_PNG$') no-repeat center / 100%;}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_model_popup {
+            .pt_popup_wrap {@include vw-mo(width, 720); @include vw-mo(height, 700); @include vw-mo(padding, 30 20 0); top: 45%;
+                .pt_title {@include vw-mo(margin-bottom, 30); @include vw-mo(font-size, 50); @include vw-mo(line-height, 60);}
+                .pt_popup_con {@include vw-mo(height, 520);} 
+                .pt_popup_con .pt_popup_table th:nth-child(1),
+                .pt_popup_con .pt_popup_table td:nth-child(1) {@include vw-mo(width, 98);}
+                .pt_popup_con .pt_popup_table th:nth-child(2),
+                .pt_popup_con .pt_popup_table td:nth-child(2) {@include vw-mo(width, 116);}
+                .pt_popup_con .pt_popup_table th:nth-child(3),
+                .pt_popup_con .pt_popup_table td:nth-child(3) {@include vw-mo(width, 192);}
+                .pt_popup_con .pt_popup_table th:nth-child(4),
+                .pt_popup_con .pt_popup_table td:nth-child(4) {@include vw-mo(width, 115);}
+                .pt_popup_con .pt_popup_table th:nth-child(5),
+                .pt_popup_con .pt_popup_table td:nth-child(5) {@include vw-mo(width, 125);}
+                .pt_popup_con .pt_popup_table th {@include vw-mo(padding, 19 5); @include vw-mo(font-size, 20); @include vw-mo(line-height, 35); letter-spacing: 0;}
+                .pt_popup_con .pt_popup_table td {@include vw-mo(padding, 16 5); @include vw-mo(font-size, 16); @include vw-mo(line-height, 28);}
+                .pt_popup_close {@include vw-mo(bottom, -90); display: inline-block; @include vw-mo(width, 70); @include vw-mo(height, 70);}
+            }
+        }
+    }
+}

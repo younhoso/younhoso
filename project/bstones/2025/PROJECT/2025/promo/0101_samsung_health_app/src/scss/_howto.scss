@@ -1,0 +1,99 @@
+.walk_challenge {
+    .sec_howto {
+        @include vw-pc(padding-top, 76);
+        .pt_title {
+            position: relative; @include vw-pc(margin, 0 auto 74); @include vw-pc(width, 184); @include vw-pc(font-size, 42); @include vw-pc(line-height, 46); letter-spacing: -.055em; font-weight:700; text-align: center;
+            &::after {content:''; position: absolute; @include vw-pc(bottom, -4); @include vw-pc(left, 0); display: flex; width: 100%; @include vw-pc(height, 27); background: #2189FF; z-index: -1; opacity: .4;}
+        }
+
+        .pt_howto {
+            position: relative; background: #F5F7FE; @include vw-pc(border-radius, 16); @include vw-pc(margin-bottom, 60); @include vw-pc(padding, 80 0); text-align: center;
+            &__title {
+                display: inline-block; @include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 42); @include vw-pc(line-height, 40); font-weight: 700;
+                &--tag {
+                    @include vw-pc(margin-bottom, 46); @include vw-pc(width, 162); @include vw-pc(height, 64); @include vw-pc(border-radius, 8); @include vw-pc(font-size, 34); @include vw-pc(line-height, 64); background: #2189FF; color: #fff;
+                    &::after {content: ''; position: absolute; left: 50%; transform: translateX(-50%);  display: block; width: 0; height: 0; @include vw-pc(border-left, 8 solid transparent); @include vw-pc(border-right, 8 solid transparent); @include vw-pc(border-top, 14 solid #2189FF);}
+                }
+            }
+            &__cont {@include vw-pc(font-size, 24); @include vw-pc(line-height, 35); @include vw-pc(margin-bottom, 43);}
+            &__img {@include vw-pc(margin, 0 auto 20); @include vw-pc(width, 620);}
+            &__desc {@include vw-pc(font-size, 22); @include vw-pc(line-height, 32);}
+            &::after {content: ''; position: absolute; z-index: 10;}
+            &--step1 {
+                &::after {@include vw-pc(left, -80); @include vw-pc(bottom, -110); background: url(../../is/images/howto/wc_howto_obj01_pc.png) no-repeat center/contain; ; @include vw-pc(width, 279); @include vw-pc(height, 249);} 
+            }
+            &--step2 {
+                &::after {@include vw-pc(right, -80); @include vw-pc(bottom, -230); background: url(../../is/images/howto/wc_howto_obj02_pc.png) no-repeat center/contain; ; @include vw-pc(width, 314); @include vw-pc(height, 374);} 
+            }
+            &--step3 {
+                &::after {@include vw-pc(left, -106); @include vw-pc(bottom, -10); background: url(../../is/images/howto/wc_howto_obj03_pc.png) no-repeat center/contain; ; @include vw-pc(width, 236); @include vw-pc(height, 429);} 
+            }
+        }
+
+        .pt_benefit {
+            position: relative; background: #F5F7FE; @include vw-pc(border-radius, 16); @include vw-pc(margin-bottom, 60); @include vw-pc(padding, 76 0); text-align: center;
+            &__title {display: inline-block; @include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 42); @include vw-pc(line-height, 40); font-weight: 700;}
+            &__cont {@include vw-pc(font-size, 24); @include vw-pc(line-height, 34); @include vw-pc(margin-bottom, 56);}
+            &__coupon-box {position: relative; @include vw-pc(margin, 0 auto 54); @include vw-pc(width, 620);}
+            &__coupon-txt {position: absolute; @include vw-pc(top, 26); @include vw-pc(left, 30); @include vw-pc(font-size, 36); @include vw-pc(line-height, 50); letter-spacing: -.025em; font-weight: 700; text-align: left;}
+            &__desc {@include vw-pc(font-size, 22); @include vw-pc(line-height, 34);}
+        }
+
+        .pt_btn-box {
+            text-align: center;
+            .btn_samsung-fitness {display: block; @include vw-pc(width, 172); @include vw-pc(height, 42); @include vw-pc(font-size, 16); @include vw-pc(line-height, 42); @include vw-pc(border-radius, 21); @include vw-pc(margin, 0 auto 61);}
+            .btn_share {display: block; @include vw-pc(width, 120); @include vw-pc(font-size, 14); @include vw-pc(line-height, 19); @include vw-pc(margin, 0 auto 71);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .walk_challenge {
+        .sec_howto {
+            .pt_title {
+                @include vw-mo(margin, 0 auto 60); @include vw-mo(width, 154); @include vw-mo(font-size, 38); @include vw-mo(line-height, 46);
+                &::after {@include vw-mo(bottom, -4); @include vw-mo(left, 0); @include vw-mo(height, 27);}
+            }
+    
+            .pt_howto {
+                @include vw-mo(width, 584); @include vw-mo(border-radius, 16); @include vw-mo(margin, 0 auto 60); @include vw-mo(padding, 60 0);
+                &__title {
+                    @include vw-mo(margin-bottom, 27); @include vw-mo(width, 162); @include vw-mo(height, 64); @include vw-mo(border-radius, 8); @include vw-mo(font-size, 34); @include vw-mo(line-height, 64);
+                    &--tag {
+                        @include vw-mo(margin-bottom, 27); @include vw-mo(width, 162); @include vw-mo(height, 64); @include vw-mo(border-radius, 8); @include vw-mo(font-size, 34); @include vw-mo(line-height, 64);
+                        &::after {@include vw-mo(border-left, 8 solid transparent); @include vw-mo(border-right, 8 solid transparent); @include vw-mo(border-top, 14 solid #2189FF);}
+                    }
+                }
+                &__cont {@include vw-mo(font-size, 26); @include vw-mo(line-height, 35); @include vw-mo(margin-bottom, 41);}
+                &__img {@include vw-mo(margin, 0 auto 15); @include vw-mo(width, 402);}
+                &__desc {@include vw-mo(font-size, 22); @include vw-mo(line-height, 32);}
+                &--step1 {
+                    &::after {@include vw-mo(left, -34); @include vw-mo(bottom, -122); background: url(../../is/images/howto/wc_howto_obj01_mo.png) no-repeat center/contain; ; @include vw-mo(width, 169); @include vw-mo(height, 151);} 
+                }
+                &--step2 {
+                    &::after {@include vw-mo(right, -30); @include vw-mo(bottom, -158); background: url(../../is/images/howto/wc_howto_obj02_mo.png) no-repeat center/contain; ; @include vw-mo(width, 176); @include vw-mo(height, 209);} 
+                }
+                &--step3 {
+                    &::after {@include vw-mo(left, -39); @include vw-mo(bottom, -10); background: url(../../is/images/howto/wc_howto_obj03_mo.png) no-repeat center/contain; ; @include vw-mo(width, 109); @include vw-mo(height, 198);} 
+                }
+            }
+
+            .pt_benefit {
+                @include vw-mo(border-radius, 16); @include vw-mo(margin, 0 auto 60); @include vw-mo(padding, 36 0 49); @include vw-mo(width, 580);
+                &__title {@include vw-mo(margin-bottom, 11); @include vw-mo(font-size, 38); @include vw-mo(line-height, 40);}
+                &__cont {@include vw-mo(font-size, 28); @include vw-mo(line-height, 40); @include vw-mo(margin-bottom, 30);}
+                &__coupon-box {@include vw-mo(margin, 0 auto 28); @include vw-mo(width, 500);}
+                &__coupon-txt {@include vw-mo(top, 37); @include vw-mo(left, 32); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35);}
+                &__desc {@include vw-mo(font-size, 22); @include vw-mo(line-height, 34);}
+            }    
+            
+            .pt_btn-box {
+                text-align: center;
+                .btn_samsung-fitness {@include vw-mo(width, 268); @include vw-mo(height, 60); @include vw-mo(font-size, 24); @include vw-mo(line-height, 60); @include vw-mo(border-radius, 30); @include vw-mo(margin-bottom, 37);}
+            }
+        }
+
+        
+        
+    }
+}

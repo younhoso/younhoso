@@ -1,0 +1,8 @@
+@mixin font-one {
+	font-family: 'SamsungOneKorean', 'Dotum', '돋움', 'Apple SD Gothic Neo', arial;
+}
+
+@mixin font-sharpsans {
+	font-family: 'SamsungSharpSans', 'SamsungOneKorean', 'Dotum', '돋움', 'Apple SD Gothic Neo', arial;
+	font-weight: bold;
+}

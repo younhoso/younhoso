@@ -1,0 +1,25 @@
+.galaxy_book4_ultra {
+    .sec_campus {position: relative; text-align: center;@include vw-pc(margin-bottom, 210);
+        .pt_campus {
+            &__title {@include vw-pc(margin-bottom, -7);@include vw-pc(font-size, 50);}
+            &__text {position: absolute; left: 50%; @include vw-pc(bottom, 60); transform: translateX(-50%); color: #fff;}
+            &__desc {@include vw-pc(margin-bottom, 30);@include vw-pc(font-size, 18);@include vw-pc(line-height, 26);}
+        }
+        .btn_common.type_round {@include vw-pc(width, 114);@include vw-pc(height, 40); @include vw-pc(font-size, 16); @include vw-pc(border-radius, 20); border-color: #fff;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galaxy_book4_ultra {
+        .sec_campus {position: relative; text-align: center;@include vw-mo(margin-bottom, 210);
+            .inner_1320 {@include vw-mo(width, 672); margin: 0 auto;}
+            .pt_campus {
+                &__title {@include vw-mo(margin-bottom, 58);@include vw-mo(font-size, 50);@include vw-mo(line-height, 70); letter-spacing: -0.05em;}
+                &__text {position: absolute; left: 50%; @include vw-mo(bottom, 70); transform: translateX(-50%); color: #000;}
+                &__sub-title {@include vw-mo(margin-bottom, 21);@include vw-mo(font-size, 36);@include vw-mo(line-height, 46); letter-spacing: -0.05em; font-weight: 700;}
+                &__desc {@include vw-mo(margin-bottom, 33);@include vw-mo(font-size, 22);@include vw-mo(line-height, 38); letter-spacing: -0.025em;}
+            }
+            .btn_common.type_round {@include vw-mo(width, 220);@include vw-mo(height, 58); @include vw-mo(font-size, 24); @include vw-mo(border-radius, 29); border-color: #000; background-color: #000; color: #fff;}
+        }
+    }
+}

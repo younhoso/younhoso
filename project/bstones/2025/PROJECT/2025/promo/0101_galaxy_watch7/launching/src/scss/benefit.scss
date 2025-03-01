@@ -1,0 +1,728 @@
+@import '../../../../../../../scss_global/scss-common2';
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+.pt_blue{color: #2189FF;}
+.pt_bold{font-weight: 700;}
+.pt_normal{font-weight: 400;}
+
+// BC 혜택 초기화
+.flagship_benefits { padding: 0 !important; }
+
+.galaxy_watch7 {
+    .sec_benefit {
+        @include vw-mo(padding,138 0 144);
+
+        .fold_show {display: none !important;}
+
+        &.pt_bg-image.pt_add-bg {
+            .pt_ai {background-image: url('../../is/images/benefit/gw_banner_smart_caddie_mo.png'); @include vw-mo(background-size, 624 246);}
+        }
+
+        .pt_ai {
+            // cta있는버전
+            // @include vw-mo(width, 624); @include vw-mo(height, 246); @include vw-mo(margin, 50 auto 140); @include vw-mo(padding-top, 45); @include vw-mo(padding-left, 32);
+
+            // cta없는버전
+            @include vw-mo(width, 624); @include vw-mo(height, 246); @include vw-mo(margin, 50 auto 140); @include vw-mo(padding-top, 50); @include vw-mo(padding-left, 32);
+
+            .pt_ai__txt {
+                .pt_ai__title {@include vw-mo(margin-bottom, 13); @include vw-mo(font-size, 30); @include vw-mo(line-height, 40); font-weight: 700; letter-spacing: -0.05em;}
+                .pt_ai__btn {display: inline-flex; align-items: center; justify-content: center; @include vw-mo(width, 170); @include vw-mo(height, 58); @include vw-mo(font-size, 22); font-weight: 700;}
+            }
+        }
+        
+        .pt_title{ @include vw-mo(margin-bottom,32); text-align: center;
+            &__main{@include vw-mo(margin-bottom,16); @include vw-mo(font-size,40); @include vw-mo(line-height,53); letter-spacing: -0.05em; }
+            &__date{@include vw-mo(font-size,24); @include vw-mo(line-height,32); letter-spacing: -0.05em; }
+        }
+
+        .pt_tab{
+            display: flex; justify-content: center; @include vw-mo(gap,48); @include vw-mo(margin-bottom,46);
+            &__btn{ @include vw-mo(font-size,28); @include vw-mo(line-height,37); font-weight: 700; letter-spacing: -0.05em;
+                &.active{@include vw-mo(border-bottom, 4 solid #000);}
+            }
+        }
+        .pt_bnf {
+       
+
+            &__list{display: flex; flex-direction: column; @include vw-mo(gap, 24); @include vw-mo(width, 624); margin: 0 auto; @include vw-mo(padding-bottom, 35);}
+            &__item{position: relative; display: flex; justify-content: space-between; align-items: center; @include vw-mo(padding,40 32); @include vw-mo(min-height,176); width: 100%; @include vw-mo(border-radius,40); @include vw-mo(border,2 solid #DDDDDD);
+                &--review {display: block; padding: 0; border: 0; @include vw-mo(height, 709); background: url('../../is/images/benefit/gw_reviewer_mo_v5.png') no-repeat; @include vw-mo(background-size, 624 709);}
+                // &:not(:last-child){@include vw-mo(margin-bottom,24);}
+                &.swiper-container{padding: 0;}
+                &.pt_dimmed{
+                    position: relative; z-index: 1; overflow: hidden; cursor: default;
+                    &::before { content: "선착순 혜택\a종료"; position:absolute; top:50%; left:50%; z-index:11; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center;-ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items:center; @include vw-mo(width, 176); @include vw-mo(height, 176); color: #fff; @include vw-mo(font-size, 30); font-weight: 700; @include vw-mo(line-height, 38); letter-spacing: -.05em; @include vw-mo(border, 4 solid #fff); border-radius: 50%; -webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%); text-align: center;}
+                    &::after{ content:""; position: absolute; top: 0; left: 0; z-index: 10; display: block; width: 100%; height: 100%; background: rgba(0,0,0,.7)}
+                }
+
+            }
+            &__dimm {
+                position: absolute; top: 0; left: 0; background: rgba(0,0,0,.7); width: 100%; height: 100%; @include vw-mo(border-radius, 38); display: flex; justify-content: center; align-items: center; flex-direction: column; @include vw-mo(font-size, 50); font-weight: 700; color: #fff; z-index: 1;
+                .pt_bnf__btn--dimm {@include vw-mo(font-size, 22); border-bottom: 1px solid #fff;}
+            }
+            &__txt p:first-of-type{margin-top: 0;}
+            &__eyebrow{@include vw-mo(font-size,22); @include vw-mo(line-height,27); letter-spacing: -0.05em; font-weight: 700; color: #2189FF;} 
+            &__badge{
+                display: inline-flex; justify-content: center; align-items: center; @include vw-mo(margin-right, 8); @include vw-mo(width, 90); @include vw-mo(height, 34); @include vw-mo(border-radius, 20); @include vw-mo(font-size,18); letter-spacing: -0.05em; font-weight: 700; background: #2189FF; color: #fff; @include vw-mo(line-height, 35);
+                &--holiday {@include vw-mo(font-size, 16); @include vw-mo(width, 153);}
+            } 
+            &__title{
+                @include vw-mo(margin-top,13); @include vw-mo(font-size,28); @include vw-mo(line-height,37); letter-spacing: -0.05em; font-weight: 700;
+                &--holiday {
+                    position: relative;
+                    &::after {content: ''; position: absolute; @include vw-mo(top, 4); @include vw-mo(right, -38); display: block; @include vw-mo(width, 38); @include vw-mo(height, 29); background: url('../../is/images/benefit/gw_icon_holiday_mo.png') no-repeat; @include vw-mo(background-size, 38 29);}
+                }
+                
+                .pt_logo{
+                    display: inline-flex; vertical-align: baseline; @include vw-mo(width, 275); @include vw-mo(margin-bottom, 10);
+                    &--careplus {display: inline-flex; vertical-align: middle; @include vw-mo(width, 219);}
+                    &--ring {display: inline-flex; vertical-align: middle; @include vw-mo(width, 169); @include vw-mo(height, 31); background: url('../../is/images/benefit/gw_logo_ring_mo_v4.png') no-repeat; @include vw-mo(background-size, 169 31); @include vw-mo(margin-right, 8);}
+                    &--foldflip6 {display: inline-flex; vertical-align: middle; @include vw-mo(width, 166); @include vw-mo(height, 31); background: url('../../is/images/benefit/gw_logo_foldflip6_mo.png') no-repeat; @include vw-mo(background-size, 166 31); @include vw-mo(margin-right, 8);}
+                    &--watchultra {display: inline-flex; vertical-align: middle; @include vw-mo(width, 166); @include vw-mo(height, 31); background: url('../../is/images/benefit/gw_logo_watchultra_mo.png') no-repeat; @include vw-mo(background-size, 166 31); @include vw-mo(margin-right, 8);}
+                    &::after {content: '바꿔보상'; position: absolute; @include vw-mo(bottom, -5); @include vw-mo(right, -108); @include vw-mo(width, 103); @include vw-mo(height, 38); display: block; color: #000; @include vw-mo(font-size, 28); font-weight: 700;}
+                } 
+            } 
+            &__cont{
+                @include vw-mo(margin-top,17); @include vw-mo(font-size,22); @include vw-mo(line-height,34); letter-spacing: -0.05em;
+
+                .pt_logo{
+                    display: inline-flex; vertical-align: sub; @include vw-mo(width, 274); @include vw-mo(margin-bottom, 10);
+                    &--careplus {display: inline-flex; vertical-align: middle; @include vw-mo(width, 219);}
+                    &--ring {display: inline-flex; vertical-align: middle; @include vw-mo(width, 166); @include vw-mo(height, 31); background: url('../../is/images/benefit/gw_logo_ring_mo.png') no-repeat; @include vw-mo(background-size, 166 31); @include vw-mo(margin-right, 8);}
+                    &--foldflip6 {display: inline-flex; vertical-align: text-top; @include vw-mo(width, 222); @include vw-mo(height, 27); background: url('../../is/images/benefit/gw_logo_foldflip6_mo_v4.png') no-repeat; @include vw-mo(background-size, 222 27); @include vw-mo(margin-right, 3);}
+                    &--watchultra {display: inline-flex; vertical-align: -webkit-baseline-middle; @include vw-mo(width, 203); @include vw-mo(height, 25); background: url('../../is/images/benefit/gw_logo_watchultra_mo_v4.png') no-repeat; @include vw-mo(background-size, 203 25); @include vw-mo(margin-right, 4);}
+                } 
+                
+            } 
+            &__desc{@include vw-mo(margin-top,17); @include vw-mo(font-size,24); @include vw-mo(line-height,35); letter-spacing: -0.05em;} 
+            &__disc-box{@include vw-mo(margin-top,24);} 
+            &__disc{position: relative; @include vw-mo(padding-left,16); @include vw-mo(font-size,20); @include vw-mo(line-height,26); letter-spacing: -0.07em; color: #666666; font-weight: 400;
+                &::before{content: "※"; position: absolute; left: 0; @include vw-mo(font-size,20); @include vw-mo(line-height,26); color: #666666;}
+            } 
+            &__blue-txt{color: #2189FF;}
+            &__btn{
+                display: inline-block; @include vw-mo(margin-top,12); @include vw-mo(font-size,22); @include vw-mo(line-height,26); letter-spacing: -0.025em; font-weight: 700; @include vw-mo(border-bottom,1 solid #000);
+                &--coupon {
+                    position: relative; @include vw-mo(width, 135);
+                    &::after {content: ''; position: absolute; @include vw-mo(top, 4); right: 0; display: block; @include vw-mo(width, 15); @include vw-mo(height, 17); background: url('../../is/images/benefit/gw_icon_download_mo.png') no-repeat; @include vw-mo(background-size, 15 17);}
+                }
+            } 
+            &__img{position: absolute; @include vw-mo(right,30); @include vw-mo(width,140);}
+            &__bullets{
+                &.swiper-pagination-bullets {@include vw-mo(bottom, 110);}
+                .swiper-pagination-bullet{@include vw-mo(margin,0 12); @include vw-mo(width,16); @include vw-mo(height,16); background: #000;}
+            }
+            
+        }
+        //롤링배너
+        .pt_rolling{ @include vw-mo(width,624); align-items: center;
+            &__item{@include vw-mo(padding,40 32); display: flex; justify-content: space-between; align-items: center; }
+        }
+
+        //롤링배너 컨트롤러
+        .pt_controls{
+            z-index: 9; display: flex; align-items: center; position: absolute; @include vw-mo(top,21); @include vw-mo(right,24); display: flex;
+        
+            &__wrapper{display: flex; align-items: center; @include vw-mo(padding,0 16); @include vw-mo(margin-right,8); @include vw-mo(height,40); @include vw-mo(border-radius,20); @include vw-mo(border, 2 solid #ddd); background-color: #fff; }
+            &__nav{position: unset; margin-top: 0; @include vw-mo(width,24); @include vw-mo(height,24); 
+                &--prev{background: url("../../is/images/benefit/bnf_slide_prev_ico_mo.png") no-repeat center / contain;}
+                &--next{background: url("../../is/images/benefit/bnf_slide_next_ico_mo.png") no-repeat center / contain;}
+                &:after{display: none;}
+            }
+            &__page{position: unset; @include vw-mo(margin,0 8); @include vw-mo(width,50); @include vw-mo(font-size,22); @include vw-mo(line-height,29); letter-spacing: 0em; font-weight: 700; color:#757575; text-align: center;
+                .swiper-pagination-current{color: #000;}
+            }
+            &__page-current{color: #000;}
+            &__more{@include vw-mo(width,24); @include vw-mo(height,24); background: url("../../is/images/benefit/bnf_slide_plus_ico_mo.png") no-repeat center / contain;}
+            &__play{@include vw-mo(width,24); @include vw-mo(height,24); background: url("../../is/images/benefit/bnf_slide_play_ico_mo.png") no-repeat center / contain;}
+            &__paused{@include vw-mo(width,24); @include vw-mo(height,24); background: url("../../is/images/benefit/bnf_slide_paused_ico_mo.png") no-repeat center / contain;}
+        }
+        .pt_bnf-noti{ display: flex; justify-content: center; align-items: center; @include vw-mo(gap,24); @include vw-mo(height, 80);
+            &__btn{ @include vw-mo(font-size,24); @include vw-mo(line-height,32);
+                &--more{@include vw-mo(padding, 0 32); @include vw-mo(height,64 !important); @include vw-mo(border-radius,100);}
+                &--anchor{@include vw-mo(border-bottom, 4 solid #000);}
+            }
+        }
+        .pt_modal{z-index:102; position:fixed; bottom:0; left: 0; display:none; width: 100%; background-color:#F7F7F7;
+            height: auto;
+                
+            &__close-btn{position: absolute; z-index: 1; left: auto; bottom: auto; @include vw-mo(top,20); @include vw-mo(right,20); @include vw-mo(width,38); @include vw-mo(height,38); background: url('../../is/images/modal/bnf_modal_btn_close_mo.png') no-repeat center / contain;}
+            &__area {position: relative; @include vw-mo(padding,70 0);}
+            .pt_bnf__list {padding-bottom: 0;}
+
+            .pt_bnf__item{@include vw-mo(min-height,236); background-color: #fff;}
+            .pt_controls__wrapper{margin: 0;}
+            .pt_controls__page{margin: 0;}
+    
+        }
+        .pt_reviewer {
+            @include vw-mo(padding-top, 50); height: 100%; text-align: center;
+            &__tit {@include vw-mo(font-size, 46); @include vw-mo(margin-bottom, 56); @include vw-mo(line-height, 61); letter-spacing: -0.05em;}
+            &__cont {
+                @include vw-mo(font-size, 25); @include vw-mo(margin-bottom, 13); @include vw-mo(line-height, 35);
+            
+                .pt_reveiwer_logo {display: inline-block; @include vw-mo(width, 350); vertical-align: middle}
+            }
+            &__txt-blue{@include vw-mo(font-size,28); @include vw-mo(line-height,38); letter-spacing: -0.025em;  font-weight: 700; text-align: left; @include vw-mo(padding-left, 210);}
+            &__sub-tit{@include vw-mo(margin-bottom,50); @include vw-mo(font-size,28); @include vw-mo(line-height,38); letter-spacing: -0.025em;  font-weight: 700; text-align: left; @include vw-mo(padding-left, 210);}
+            &__desc {@include vw-mo(font-size, 20); @include vw-mo(margin-bottom, 22); @include vw-mo(line-height, 28); color: #666;}
+        
+
+        }
+    }
+
+}
+
+
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width:769px) {
+    .galaxy_watch7 {
+            .sec_benefit {
+                @include vw-pc(padding, 80 0 0);
+
+                &.pt_bg-image.pt_add-bg {
+                    .pt_ai {background-image: url('../../is/images/benefit/gw_banner_smart_caddie_pc.png'); @include vw-pc(background-size, 800 150);}
+                }
+        
+                .pt_ai {
+                    // cta 있는버전
+                    // @include vw-pc(width, 800); @include vw-pc(height, 150); @include vw-pc(margin, 0 auto 77); @include vw-pc(padding-top, 23); @include vw-pc(padding-left, 60);
+
+                    // cta 없는버전
+                    @include vw-pc(width, 800); @include vw-pc(height, 150); @include vw-pc(margin, 0 auto 77); @include vw-pc(padding-top, 25); @include vw-pc(padding-left, 60);
+        
+                    .pt_ai__txt {
+                        .pt_ai__title {@include vw-pc(margin-bottom,9); @include vw-pc(font-size,22); @include vw-pc(line-height,28); letter-spacing: -0.025em;}
+                        .pt_ai__btn {display: inline-flex; align-items: center; justify-content: center; @include vw-pc(width, 120); @include vw-pc(height, 39); @include vw-pc(font-size, 16);}
+                    }
+                }
+                
+                .pt_title{ @include vw-pc(margin-bottom,40); text-align: center;
+                    &__main{@include vw-pc(margin-bottom,6); @include vw-pc(font-size,24); @include vw-pc(line-height,32); letter-spacing: -0.025em; }
+                    &__date{@include vw-pc(font-size,18); @include vw-pc(line-height,23); letter-spacing: -0.05em; }
+                }
+    
+                .pt_tab{
+                    display: flex; justify-content: center; @include vw-pc(gap,48); @include vw-pc(margin-bottom, 48);
+                    &__btn{@include vw-pc(font-size,18); @include vw-pc(line-height,23); font-weight: 700;
+                        &.active{@include vw-pc(border-bottom, 2 solid #000);}
+                    }
+                }
+
+                .pt_bnf {
+                  
+                    &__list{@include vw-pc(width, 1264); margin: 0 auto; @include vw-pc(padding-bottom, 12); flex-direction: row; flex-wrap: wrap; @include vw-pc(gap, 24);}
+                    &__item{display: flex; justify-content: space-between; align-items: center; @include vw-pc(padding,40 32); min-height: unset; @include vw-pc(height,186); @include vw-pc(width,620); @include vw-pc(border-radius,20); @include vw-pc(border,1 solid #DDDDDD);
+                        &--review {display: block; padding: 0; border: 0; width: 100%; overflow: hidden; @include vw-pc(height, 264); background: url('../../is/images/benefit/gw_reviewer_pc_v7.png') no-repeat; @include vw-pc(background-size, 1264 264);}
+                        // &:not(:last-child){@include vw-pc(margin-bottom,24);}
+                        &--mg0 {@include vw-pc(margin-bottom, 0);}
+                        &.swiper-container{margin: 0; padding: 0;}
+                        &.pt_dimmed{
+                            &::before{content:"선착순 혜택\a종료"; @include vw-pc(width, 108); @include vw-pc(height, 108); @include vw-pc(font-size, 20); @include vw-pc(line-height, 26); @include vw-pc(border-width, 4); white-space:pre;}
+                            &::after{content:""; position:absolute; top:0; left:0; z-index:10; display:block; width:100%; height:100%; background:rgba(0,0,0,.7)}
+                        }
+
+                    }
+                    &__dimm {
+                        @include vw-pc(border-radius, 16); @include vw-pc(font-size, 32);
+                        .pt_bnf__btn--dimm {@include vw-pc(font-size, 16);}
+                    }        
+                    &__eyebrow{@include vw-pc(font-size,12); @include vw-pc(line-height,14); letter-spacing: -0.025em;} 
+                    &__badge{
+                        @include vw-pc(margin-right, 8); @include vw-pc(width, 66); @include vw-pc(height, 22); @include vw-pc(border-radius, 15); @include vw-pc(font-size,13); @include vw-pc(line-height, 23);
+                        &--holiday {@include vw-pc(font-size, 12); @include vw-pc(width, 118);}
+                    } 
+                    &__title{
+                        @include vw-pc(margin-top,8); @include vw-pc(font-size,18); @include vw-pc(line-height,24); letter-spacing: -0.025em;
+                        &--olive{@include vw-pc(margin-top, 3);}
+                        &--holiday {
+                            &::after {content: ''; @include vw-pc(top, -1); @include vw-pc(right, -8); @include vw-pc(width, 25); @include vw-pc(height, 25); background: url('../../is/images/benefit/gw_icon_holiday_pc.png') no-repeat; @include vw-pc(background-size, 25 25);}
+                        }        
+                        .pt_logo{
+                            display: inline-flex; vertical-align: middle; @include vw-pc(width, 260); @include vw-pc(margin-bottom, 3);
+                            &--careplus {display: inline-flex; vertical-align: text-bottom; @include vw-pc(width, 141);}
+                            &--ring {display: inline-flex; vertical-align: middle; @include vw-pc(width, 109); @include vw-pc(height, 24); background: url('../../is/images/benefit/gw_logo_ring_pc_v3.png') no-repeat; @include vw-pc(background-size, 109 24); @include vw-pc(margin-right, 4);}
+                            &::after {content: '바꿔보상'; position: absolute; bottom: 0; @include vw-pc(right, -72); @include vw-pc(width, 67); @include vw-pc(height, 24); display: block; color: #000; @include vw-pc(font-size, 18); font-weight: 700;}
+                        } 
+                    } 
+                    &__cont{
+                        @include vw-pc(margin-top,11); @include vw-pc(font-size,14); @include vw-pc(line-height,10); letter-spacing: -0.05em;
+        
+                        .pt_logo{
+                            display: inline-flex; vertical-align: sub; @include vw-pc(width, 274); @include vw-pc(margin-bottom, 10);
+                            &--careplus {display: inline-flex; vertical-align: middle; @include vw-pc(width, 219);}
+                            &--foldflip6 {display: inline-flex; vertical-align: -webkit-baseline-middle; @include vw-pc(width, 142); @include vw-pc(height, 16); background: url('../../is/images/benefit/gw_logo_foldflip6_pc_v5.png') no-repeat; @include vw-pc(background-size, 142 16); @include vw-pc(margin-right, 2);}
+                            &--watchultra {display: inline-flex; vertical-align: -webkit-baseline-middle; @include vw-pc(width, 123); @include vw-pc(height, 13); background: url('../../is/images/benefit/gw_logo_watchultra_pc_v5.png') no-repeat; @include vw-pc(background-size, 123 13); @include vw-mo(margin-right, 2);}
+                        } 
+                        
+                    } 
+                    &__desc{@include vw-pc(margin-top,4); @include vw-pc(font-size,14); @include vw-pc(line-height,20); letter-spacing: -0.025em;} 
+                    &__disc-box{
+                        @include vw-pc(margin-top,19);
+                        &--olive{@include vw-pc(margin-top, 5);}
+                    } 
+                    &__disc{@include vw-pc(padding-left,10); @include vw-pc(font-size,12); @include vw-pc(line-height,17); color: #757575;
+                        &--olive{letter-spacing: -.095em;}
+                        &::before{content: "※"; position: absolute; left: 0; @include vw-pc(font-size,12); @include vw-pc(line-height,17); color: #757575;}
+                    } 
+                    &__blue-txt{color: #2189FF;}
+                    &__btn{
+                        display: inline-block; @include vw-pc(margin-top,10); @include vw-pc(font-size,14); @include vw-pc(line-height,18); @include vw-pc(border-bottom,2 solid #000);
+                        &--coupon {
+                            position: relative; @include vw-pc(width, 90);
+                            &::after {content: ''; position: absolute; @include vw-pc(top, 1); right: 0; display: block; @include vw-pc(width, 12.5); @include vw-pc(height, 14); background: url('../../is/images/benefit/gw_icon_download_pc.png') no-repeat; @include vw-pc(background-size, 12.5 14);}
+                        }        
+                    } 
+                    &__img{@include vw-pc(width,120); @include vw-pc(right, 32);}
+                    &__bullets{
+                        &.swiper-pagination-bullets {@include vw-pc(bottom, 73);}
+                        .swiper-pagination-bullet{@include vw-pc(margin,0 8); @include vw-pc(width,8); @include vw-pc(height,8); background: #000; }
+                    }
+                    
+                }
+
+                //롤링배너
+                .pt_rolling{ @include vw-pc(width,620);
+                    &__item{@include vw-pc(padding,40 32); display: flex; justify-content: space-between; align-items: center; }
+                }
+                
+                //롤링배너 컨트롤러
+                .pt_controls{
+                    z-index: 9; display: flex; align-items: center; position: absolute; @include vw-pc(top,9); @include vw-pc(right,10); display: flex;
+                
+                    &__wrapper{display: flex; align-items: center; @include vw-pc(padding,0 12); @include vw-pc(margin-right,4); @include vw-pc(height,26); @include vw-pc(border-radius,20); @include vw-pc(border, 1 solid #ddd); background-color: #fff; }
+                    &__nav{position: unset; margin-top: 0; @include vw-pc(width,16); @include vw-pc(height,16); 
+                        &--prev{background: url("../../is/images/benefit/bnf_slide_prev_ico_mo.png") no-repeat center / contain;}
+                        &--next{background: url("../../is/images/benefit/bnf_slide_next_ico_mo.png") no-repeat center / contain;}
+                        &:after{display: none;}
+                    }
+                    &__page{position: unset; margin: 0; @include vw-pc(width,30); @include vw-pc(font-size,14); @include vw-pc(line-height,18); letter-spacing: 0em; font-weight: 700; color:#757575;
+                        .swiper-pagination-current{color: #000;}
+                    }
+                    &__more{@include vw-pc(width,16); @include vw-pc(height,16); background: url("../../is/images/benefit/bnf_slide_plus_ico_mo.png") no-repeat center / contain;}
+                    &__play{@include vw-pc(width,16); @include vw-pc(height,16); background: url("../../is/images/benefit/bnf_slide_play_ico_mo.png") no-repeat center / contain;}
+                    &__paused{@include vw-pc(width,16); @include vw-pc(height,16); background: url("../../is/images/benefit/bnf_slide_paused_ico_mo.png") no-repeat center / contain;}
+                }
+                .pt_bnf-noti{ display: flex; justify-content: center; align-items: center; @include vw-pc(gap,24); margin-top: 0; @include vw-pc(margin-bottom, 70); @include vw-pc(height, 46);
+                    &__btn{ @include vw-pc(font-size,14); @include vw-pc(line-height,24);
+                        &--more{@include vw-pc(padding, 0 24); @include vw-pc(height,41 !important); @include vw-pc(border-radius,100); @include vw-pc(font-size, 14);}
+                        &--pcre{@include vw-pc(width,191); @include vw-pc(height,64); @include vw-pc(border-radius,100);}
+                        &--anchor{@include vw-pc(border-bottom, 2 solid #000);}
+                    }
+                }
+                .pt_modal{z-index:102; position:fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); bottom: auto; display:none; @include vw-pc(width,668); background-color:#F7F7F7;
+                    height: auto; overflow-y: auto; @include vw-pc(border-radius,20);
+                        
+                    &__close-btn{position: absolute; z-index: 1; left: auto; bottom: auto; @include vw-pc(top,20); @include vw-pc(right,20); @include vw-pc(width,24); @include vw-pc(height,24); background: url('../../is/images/modal/bnf_modal_btn_close_pc.png') no-repeat center / contain;}
+                    &__area {position: relative; @include vw-pc(padding,72 0 24 0);}
+        
+                    .pt_bnf__list{@include vw-pc(padding,0 24); width: 100%;}
+                    .pt_bnf__item{@include vw-pc(min-height,174); background-color: #fff;}
+                    .pt_controls__wrapper{margin: 0;}
+                    .pt_controls__page{margin: 0;}
+            
+                }
+                .pt_reviewer {
+                    @include vw-pc(padding, 46 0 43 61); height: 100%; text-align: left;
+                    &__tit {@include vw-pc(font-size, 32); @include vw-pc(margin-bottom, 10); @include vw-pc(line-height, 30); letter-spacing: 0;}
+                    &__cont {
+                        @include vw-pc(font-size, 15); @include vw-pc(margin-bottom, 0); @include vw-pc(line-height, 24);
+                    
+                        .pt_reveiwer_logo {display: inline-block; @include vw-pc(width, 196); vertical-align: middle;}
+                    }
+                    &__txt-blue{@include vw-pc(padding-left,125); @include vw-pc(margin-bottom,4); @include vw-pc(font-size,18); @include vw-pc(line-height,24); letter-spacing: 0; font-weight: 400; padding-left: 0;}
+                    &__sub-tit{@include vw-pc(padding-left,125); @include vw-pc(margin-bottom,6); @include vw-pc(font-size,18); @include vw-pc(line-height,24); letter-spacing: 0; font-weight: 700; padding-left: 0;}
+                    &__desc {@include vw-pc(font-size, 12); @include vw-pc(margin, 5 0 21); @include vw-pc(line-height, 18); color: #666;}
+                
+                }
+            }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width: 769px) and (max-width: 802px) {
+    .galaxy_watch7 {
+        .sec_benefit {
+            @include vw-fold-view(padding, 40 0);
+            .fold_show {display: block !important;}
+            .fold_hide {display: none !important;}
+
+            // image lazy loading
+            &.pt_bg-image.pt_add-bg {
+                .pt_ai {background-image: url('../../is/images/benefit/gw_banner_smart_caddie_pc.png'); background-repeat: no-repeat; background-size: contain;}
+            }
+    
+            .pt_ai {
+                // cta 있는 버전
+                // @include vw-fold-view(width, 754); @include vw-fold-view(height, 163); @include vw-fold-view(margin, 0 auto 33); @include vw-fold-view(padding-top, 17); @include vw-fold-view(padding-left, 30);
+                
+                //cta 없는버전
+                @include vw-fold-view(width, 754); @include vw-fold-view(height, 163); @include vw-fold-view(margin, 0 auto 33); @include vw-fold-view(padding-top, 16); @include vw-fold-view(padding-left, 30);
+
+                .pt_ai__txt {
+                    .pt_ai__title {@include vw-fold-view(margin-bottom,9); @include vw-fold-view(font-size,24); @include vw-fold-view(line-height,30); letter-spacing: -0.025em;}
+                    .pt_ai__btn {display: inline-flex; align-items: center; justify-content: center; @include vw-fold-view(width, 110); @include vw-fold-view(height, 40); @include vw-fold-view(border-radius, 20);  @include vw-fold-view(font-size, 14);}
+                }
+            }
+
+            .pt_title{ @include vw-fold-view(margin-bottom,16);
+                &__main{@include vw-fold-view(font-size,20); @include vw-fold-view(line-height,30);}
+                &__date{@include vw-fold-view(font-size,13);@include vw-fold-view(line-height,30);@include vw-fold-view(margin-top,4);}
+            }
+
+            .pt_tab{
+                @include vw-fold-view(gap,12);@include vw-fold-view(margin-bottom, 16);
+                &__btn{@include vw-fold-view(font-size,14); @include vw-fold-view(line-height,24);
+                    &.active{@include vw-fold-view(border-bottom, 2 solid #000);}
+                }
+            }
+
+            .pt_tag_store{@include vw-fold-view(font-size,10);@include vw-fold-view(margin-right,8);@include vw-fold-view(border-radius,20);@include vw-fold-view(padding,5 6);@include vw-fold-view(vertical-align,0);@include vw-fold-view(height,18);@include vw-fold-view(line-height,10);}
+
+            .pt_bnf-slide{@include vw-fold-view(margin-bottom,40);}
+            .pt_bnf {
+                @include vw-fold-view(margin-bottom, 0);
+
+                &__txt {@include vw-fold-view(width, 262);}
+
+                &__list{@include vw-fold-view(width, 753); flex-direction: row; flex-wrap: wrap; @include vw-fold-view(gap,16); @include vw-fold-view(padding-bottom, 20);}
+                &__item{display: flex; justify-content: space-between; align-items: center; @include vw-fold-view(width,368); @include vw-fold-view(padding,20 16); min-height: unset; @include vw-fold-view(min-height,153); @include vw-fold-view(border-radius,15); @include vw-fold-view(border,1 solid #DDDDDD);
+                    &.swiper-container{margin: 0; padding: 0;}
+                    &--small{@include vw-fold-view(padding,20 16);}
+                    &.type2 {
+                        @include vw-fold-view(padding,15 20);
+                        .pt_bnf__title .img_box {@include vw-fold-view(width,172); vertical-align: middle; display: inline-block;@include vw-fold-view(width,172);}
+                        .pt_bnf__cont .img_box {@include vw-fold-view(margin-top,3); @include vw-fold-view(padding-right,3); @include vw-fold-view(width,132);vertical-align: middle; display: inline-block;@include vw-fold-view(width,132);}
+                    }
+                    &.pt_dimmed{
+                        &::before{@include vw-fold-view(width, 108); @include vw-fold-view(height, 108); @include vw-fold-view(font-size, 20); @include vw-fold-view(line-height, 26); @include vw-fold-view(border-width, 4);}
+                    }
+                }
+                &__dimm {
+                    @include vw-fold-view(border-radius, 16); @include vw-fold-view(font-size, 24);
+                    .pt_bnf__btn--dimm {@include vw-fold-view(font-size, 14);}
+                }        
+                &__cont{
+                    @include vw-fold-view(margin, 8 0 10);
+                    @include vw-fold-view(font-size, 12);
+                    @include vw-fold-view(line-height, 19);
+                }
+                &__eyebrow{display: flex; align-items: center; @include vw-fold-view(font-size,13); @include vw-fold-view(line-height,16);}
+                &__badge{
+                    @include vw-fold-view(margin-right, 8); @include vw-fold-view(width, 50); @include vw-fold-view(height, 20); @include vw-fold-view(border-radius, 10); @include vw-fold-view(font-size,10); @include vw-fold-view(line-height, 35);
+                    &--holiday {@include vw-fold-view(font-size, 12); @include vw-fold-view(width, 118);}
+                } 
+                &__title{
+                    @include vw-fold-view(margin-top,4); letter-spacing: -.025em; @include vw-fold-view(font-size,16); @include vw-fold-view(line-height,22);
+                    .pt_logo{
+                        display: inline-flex; vertical-align: middle; @include vw-fold-view(width, 190); @include vw-fold-view(margin-bottom, 3);
+                        &--careplus {display: inline-flex; vertical-align: text-bottom; @include vw-fold-view(width, 127)}
+                        &--ring {display: inline-flex; vertical-align: middle; @include vw-fold-view(width, 105); @include vw-fold-view(height, 20); background: url('../../is/images/benefit/gw_logo_ring_pc.png') no-repeat; @include vw-fold-view(background-size, 105 20); @include vw-fold-view(margin-right, 8);}
+                        &::after {content: '바꿔보상'; position: absolute; @include vw-fold-view(bottom, -1); @include vw-fold-view(right, -72); @include vw-fold-view(width, 67); @include vw-fold-view(height, 21); display: block; color: #000; @include vw-fold-view(font-size, 16); font-weight: 700;}
+                    }
+                    &--olive {@include vw-fold-view(margin-top, 0);} 
+                    &--holiday {
+                        &::after {content: ''; @include vw-fold-view(top, -3); @include vw-fold-view(left, 97); right: auto; @include vw-fold-view(width, 25); @include vw-fold-view(height, 25); background: url('../../is/images/benefit/gw_icon_holiday_pc.png') no-repeat; @include vw-fold-view(background-size, 25 25);}
+                    }        
+                }
+                &__title-wrap{
+                    @include vw-fold-view(margin-top,11);@include vw-fold-view(font-size,14);@include vw-fold-view(line-height,22);
+                    .pt_bnf__title_sub{ width: auto;}
+                }
+                &__cont{
+                    @include vw-fold-view(margin-top,11); @include vw-fold-view(font-size,15); @include vw-fold-view(line-height,10); letter-spacing: -0.05em;
+    
+                    .pt_logo{
+                        display: inline-flex; vertical-align: sub; @include vw-fold-view(width, 274); @include vw-fold-view(margin-bottom, 10);
+                        &--careplus {display: inline-flex; vertical-align: middle; @include vw-fold-view(width, 219);}
+                        &--foldflip6 {display: inline-flex; vertical-align: -webkit-baseline-middle; @include vw-fold-view(width, 139); @include vw-fold-view(height, 15); background: url('../../is/images/benefit/gw_logo_foldflip6_pc.svg') no-repeat; @include vw-fold-view(background-size, 139 15); @include vw-fold-view(margin-right, 2);}
+                        &--watchultra {display: inline-flex; vertical-align: -webkit-baseline-middle; @include vw-fold-view(width, 121); @include vw-fold-view(height, 13); background: url('../../is/images/benefit/gw_logo_watchultra_pc.svg') no-repeat; @include vw-fold-view(background-size, 121 13); @include vw-mo(margin-right, 2);}
+                    } 
+                    
+                } 
+                &__desc{@include vw-fold-view(margin-top,10); @include vw-fold-view(font-size,16); @include vw-fold-view(line-height,22); letter-spacing: -0.05em;}
+                &__disc-box{
+                    @include vw-fold-view(margin-top,9);
+                    &--olive {@include vw-fold-view(margin-top,1);}
+                }
+                .pt_list--dot + .pt_bnf__disc-box {@include vw-fold-view(margin-top,8);}
+                &__disc{@include vw-fold-view(padding-left,10); @include vw-fold-view(font-size,10); @include vw-fold-view(line-height,16); letter-spacing: -0.025em; color: #757575;
+                    &::before{content: "※"; position: absolute; left: 0; @include vw-fold-view(font-size,12); @include vw-fold-view(line-height,17); color: #757575;}
+                    &--olive {@include vw-fold-view(line-height, 13);}
+                }
+                &__blue-txt{color: #2189FF;}
+                .pt_list {
+                    &--dot {
+                        @include vw-fold-view(margin-top,6);
+                        .pt_list__item {
+                            @include vw-fold-view(padding-left,8); @include vw-fold-view(font-size,12); @include vw-fold-view(line-height,19); letter-spacing: -0.025em; @include vw-fold-view(text-indent,-8);
+                        }
+                    }
+                }
+                &__btn{
+                    display: inline-block; @include vw-fold-view(margin-top,9); @include vw-fold-view(font-size,12); @include vw-fold-view(line-height,19); @include vw-fold-view(border-bottom,2 solid #000);
+                    &--coupon {
+                        position: relative; @include vw-fold-view(width, 80);
+                        &::after {content: ''; position: absolute; @include vw-fold-view(top, 1); right: 0; display: block; @include vw-fold-view(width, 12.5); @include vw-fold-view(height, 14); background: url('../../is/images/benefit/gw_icon_download_pc.png') no-repeat; @include vw-fold-view(background-size, 12.5 14);}
+                    }        
+                }
+                .pt_btn {
+                    &--link { // 외부 링크 버튼
+                        @include vw-fold-view(padding-right,16);
+                        &::after { @include vw-fold-view(width,11); @include vw-fold-view(height,11); background-image: url(../../is/images/benefit/gf6_btn_link_pc.png);}
+                    }
+                    &--link2 { // 외부 링크 버튼
+                        position: relative; @include vw-fold-view(padding-right,12); @include vw-fold-view(font-size,12); @include vw-fold-view(line-height,19); letter-spacing: -0.025em; font-weight: 700; @include vw-fold-view(border-bottom,1 solid #000);
+                        &::after {content: ""; position: absolute; top: 50%; right: 0; display: inline-block; @include vw-fold-view(width,10); @include vw-fold-view(height,10); background-repeat: no-repeat; background-size: contain; background-image: url(../../is/images/benefit/gf6_btn_link2_mo.png); transform: translateY(-50%);}
+                    }
+                }
+                
+                &__img{
+                    @include vw-fold-view(right,16); @include vw-fold-view(width,80);
+                    &-top {@include vw-fold-view(margin-bottom,20);}
+                    &-big {@include vw-fold-view(width,120);top:50%;@include vw-fold-view(right,10);left: auto;transform: translateY(-50%);}
+                }
+                &__bullets{
+                    @include vw-fold-view(gap,12);
+                    .swiper-pagination-bullet{@include vw-fold-view(width,8); @include vw-fold-view(height,8); background: #000; }
+                }
+
+                .pt_bnf__box {
+
+                    // 자급제
+                    &--device {}
+
+                    // 통신사
+                    &--telecom {
+                        .pt_reviewer {
+                            @include vw-fold-view(height,329);
+                            .pt_bnf {
+                                &__list {gap: 0; flex-wrap: nowrap; @include vw-fold-view(margin,20 0 0); @include vw-fold-view(padding,14 0); @include vw-fold-view(width,536); @include vw-fold-view(height,75); background: #E2F0FF; @include vw-fold-view(border-radius,15); overflow: hidden;}
+                                &__item {
+                                    @include vw-fold-view(padding,18 20 20); height: 100%; min-height: auto; border-left: 1px solid #ccc; border-radius: 0;
+                                    &:first-child {border-left: 0;}
+
+                                    // 해피머니
+                                    &--happy {
+                                        @include vw-fold-view(padding-left,87);
+                                        .pt_bnf__img {@include vw-fold-view(left,15);}
+                                    }
+
+                                    // 에버랜드
+                                    &--everland {
+                                        @include vw-fold-view(padding-left,67);
+                                        .pt_bnf__img {left: 0;}
+                                    }
+                                }
+                                &__img {position: absolute; top: 50%; @include vw-fold-view(width,63); transform: translateY(-50%);}
+                                &__eyebrow {@include vw-fold-view(font-size,12); @include vw-fold-view(line-height,16); letter-spacing: -0.025em;}
+                                &__title {@include vw-fold-view(margin-top,4); @include vw-fold-view(font-size,13); @include vw-fold-view(line-height,17); letter-spacing: -0.025em; white-space: nowrap;}
+                            }
+                        }
+                    }
+
+                    // 공통
+                    &--common {
+                        &__desc {@include vw-fold-view(font-size,12);@include vw-fold-view(line-height,18);@include vw-fold-view(margin-bottom,24);}
+                    }
+                }
+
+                .pt_tradein {
+                    @include vw-fold-view(margin, 20 auto 23);@include vw-fold-view(border-radius,15);@include vw-fold-view(width,754);
+
+                    &__tag {
+                        position: absolute;@include vw-fold-view(top,-10);right: initial;@include vw-fold-view(left,24);@include vw-fold-view(font-size,14);@include vw-fold-view(line-height,22);@include vw-fold-view(width,174);@include vw-fold-view(height,66);@include vw-fold-view(padding,8 0);@include vw-fold-view(border-bottom-left-radius,8);@include vw-fold-view(border-bottom-right-radius,8);
+                        &--dday {@include vw-fold-view(font-size,24);@include vw-fold-view(line-height,32);@include vw-fold-view(padding-top,0);}
+                        &:before {content: '';position: absolute;top: 0;right:auto;@include vw-fold-view(left,-8);@include vw-fold-view(width,8);@include vw-fold-view(height,10);}
+                    }
+
+                    &__top {
+                        @include vw-fold-view(padding, 105 68 105 24);
+                        .pt_tradein--tit {@include vw-fold-view(font-size, 24);@include vw-fold-view(line-height, 32);}
+                        .pt_tradein--cont {@include vw-fold-view(font-size, 16);@include vw-fold-view(line-height, 28);@include vw-fold-view(margin-top, 20);}
+                        .pt_tradein--desc {@include vw-fold-view(font-size, 14);@include vw-fold-view(line-height, 22);@include vw-fold-view(margin-top, 20);}
+                    }
+
+                    &__btm {
+                        @include vw-fold-view(padding, 108 0 27);@include vw-fold-view(width, 346);
+                        .pt_tradein__inner {
+                            @include vw-fold-view(padding, 52 0 86);@include vw-fold-view(border-radius, 13);@include vw-fold-view(min-height, 216);
+                            .pt_tradein__img {position: absolute;@include vw-fold-view(top, 20);left: initial;@include vw-fold-view(right, 135);@include vw-fold-view(width, 128);transform: translateX(0);}
+
+                            &-box {
+                                @include vw-fold-view(width, 338);
+                                .pt_tradein__tit-box {
+                                    display: flex;justify-content: space-between;@include vw-fold-view(padding, 19 0 10);@include vw-fold-view(margin, 0 20);border-bottom: solid 1px #DDDDDD;
+                                    dt {@include vw-fold-view(font-size, 16); @include vw-fold-view(line-height, 16);}
+                                    dd {align-content: center;@include vw-fold-view(font-size, 14); @include vw-fold-view(line-height, 14);}
+                                }
+                                .pt_tradein__price-box {
+                                    @include vw-fold-view(padding, 13 0);@include vw-fold-view(margin, 0 20);border-bottom: solid 1px #DDDDDD;
+                                    dl {display: flex;justify-content: space-between;@include vw-fold-view(font-size, 14);@include vw-fold-view(line-height, 14); @include vw-fold-view(padding-bottom, 10);}
+                                    dd {
+                                        @include vw-fold-view(font-size, 12);@include vw-fold-view(line-height, 12);
+                                        .en{@include vw-fold-view(vertical-align, 0);@include vw-fold-view(font-size, 14);@include vw-fold-view(line-height, 14);}
+                                    }
+                                    .pt_tradein__desc {
+                                        @include vw-fold-view(font-size, 10);@include vw-fold-view(line-height, 10);@include vw-fold-view(margin-top, -5);
+                                    }
+                                }
+                                .pt_tradein__result-box {
+                                    display: flex;justify-content: space-between;@include vw-fold-view(padding, 10 0 10);@include vw-fold-view(margin, 0 20);
+                                    dt {align-items: center;@include vw-fold-view(font-size, 16); @include vw-fold-view(line-height, 16);}
+                                    dd {
+                                        @include vw-fold-view(font-size, 14);@include vw-fold-view(line-height, 14);
+                                        .en{@include vw-fold-view(vertical-align, 0);@include vw-fold-view(font-size, 18);@include vw-fold-view(line-height, 18);}
+                                    }
+                                    &--desc {
+                                        @include vw-fold-view(font-size, 10); @include vw-fold-view(line-height, 10); @include vw-fold-view(margin-top, 7);
+                                    }
+                                }
+                            }
+                        }
+                        .pt_tradein__desc-box {
+                            position: absolute;@include vw-fold-view(top, 360);@include vw-fold-view(right, 95);@include vw-fold-view(padding-bottom, 11);
+                            .pt_tradein__desc {@include vw-fold-view(font-size, 14);@include vw-fold-view(line-height, 18);@include vw-fold-view(margin-top, 3);}
+                            .pt_tradein__sub {
+                                @include vw-fold-view(font-size, 18);@include vw-fold-view(line-height, 18);@include vw-fold-view(margin-top, 9);@include vw-fold-view(margin-bottom, 0);
+                            }
+                        }
+                        .pt_tradein__desc-txt {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            text-align: left;
+                            @include vw-fold-view(width, 400);
+                            @include vw-fold-view(padding, 24);
+                            @include vw-fold-view(font-size, 12);@include vw-fold-view(line-height, 18);
+                            li {
+                                position: relative; @include vw-fold-view(padding-left, 10);
+                                &:before {position: absolute;top:0;@include vw-fold-view(left, 0);content: '※';@include vw-fold-view(font-size, 12);@include vw-fold-view(line-height, 18);@include vw-fold-view(padding-right, 2);}
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 딤드
+            // .pt_dimmed {
+            //     &:before {content: "혜택\A종료"; @include vw-fold-view(width,108); @include vw-fold-view(height,108); @include vw-fold-view(font-size,24); @include vw-fold-view(line-height,30); white-space: pre; @include vw-fold-view(border-width,4);}
+            // }
+
+            // 모델 이미지
+            .pt_img--model {display: inline-block; @include vw-fold-view(margin-right,7); @include vw-fold-view(width,194); @include vw-fold-view(height,21 ); vertical-align: sub; background-image: url(../../is/images/benefit/gf_txt_model_black_pc.svg);}
+
+            //롤링배너
+            .pt_rolling{ @include vw-fold-view(width,620);
+                &__item{@include vw-fold-view(padding,16 20); display: flex; justify-content: space-between; align-items: center; }
+            }
+
+            //롤링배너 컨트롤러
+            .pt_controls{
+                z-index: 9; display: flex; align-items: center; position: absolute; @include vw-fold-view(top,9); @include vw-fold-view(right,10); display: flex;
+
+                &__wrapper{display: flex; align-items: center; @include vw-fold-view(padding,0 9); @include vw-fold-view(margin-right,2); @include vw-fold-view(height,22); @include vw-fold-view(border-radius,20); @include vw-fold-view(border, 1 solid #ddd); background-color: #fff; }
+                &__nav{position: unset; margin-top: 0; @include vw-fold-view(width,12); @include vw-fold-view(height,12);
+                    &--prev{background: url("../../../is/images/benefit/bnf_slide_prev_ico_mo.png") no-repeat center / contain;}
+                    &--next{background: url("../../../is/images/benefit/bnf_slide_next_ico_mo.png") no-repeat center / contain;}
+                    &:after{display: none;}
+                }
+                &__page{position: unset; margin: 0; @include vw-fold-view(width,30); @include vw-fold-view(font-size,12); @include vw-fold-view(line-height,12); letter-spacing: 0em; font-weight: 700; color:#757575;
+                    .swiper-pagination-current{color: #000;}
+                }
+                &__more{@include vw-fold-view(width,12); @include vw-fold-view(height,12); background: url("../../is/images/benefit/bnf_slide_plus_ico_mo.png") no-repeat center / contain;}
+                &__play{@include vw-fold-view(width,12); @include vw-fold-view(height,12); background: url("../../../is/images/benefit/bnf_slide_play_ico_mo.png") no-repeat center / contain;}
+                &__paused{@include vw-fold-view(width,12); @include vw-fold-view(height,12); background: url("../../../is/images/benefit/bnf_slide_paused_ico_mo.png") no-repeat center / contain;}
+            }
+            .pt_bnf-noti{ display: flex; justify-content: center; align-items: center; @include vw-fold-view(gap,20);
+                &__btn{ @include vw-fold-view(font-size,14);
+                    &--more{@include vw-fold-view(padding,0 23); @include vw-fold-view(height,40); @include vw-fold-view(border-radius,100);}
+                    &--anchor{@include vw-fold-view(border-bottom, 2 solid #000); @include vw-fold-view(line-height,18);}
+                }
+            }
+
+            .pt_modal{z-index:211; position:fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); bottom: auto; display:none; @include vw-fold-view(width,668); background-color:#F7F7F7;
+                height: auto; overflow-y: auto; @include vw-fold-view(width,401);@include vw-fold-view(border-radius,20);
+
+                &__close-btn{position: absolute; z-index: 1; left: auto; bottom: auto; @include vw-fold-view(top,20); @include vw-fold-view(right,20); @include vw-fold-view(width,24); @include vw-fold-view(height,24); background: url('../../is/images/modal/bnf_modal_btn_close_pc.png') no-repeat center / contain;}
+                &__area {position: relative; @include vw-fold-view(padding,72 0 24 0);}
+                &__contents {overflow-y: auto;max-height: 720px;max-height: 80vh;}
+                &__contents::-webkit-scrollbar {@include vw-fold-view(width,6);}
+                &__contents::-webkit-scrollbar-thumb {@include vw-fold-view(padding,10); @include vw-fold-view(border-radius,10); background: #c9c9c9;}
+
+                .pt_bnf__list{width: auto; @include vw-fold-view(padding,0 24);}
+                .pt_bnf__item{@include vw-fold-view(min-height,133); background-color: #fff;}
+                .pt_controls__wrapper{margin: 0;}
+                .pt_controls__page{margin: 0;}
+            }
+
+            .pt_reviewer {
+                @include vw-fold-view(margin-bottom, 24); @include vw-fold-view(padding-top, 33); @include vw-fold-view(padding-left, 33); @include vw-fold-view(width, 754); @include vw-fold-view(height, 295); text-align: left; @include vw-fold-view(border-radius,15);
+                &__tit {@include vw-fold-view(font-size, 24); @include vw-fold-view(margin-bottom, 7); @include vw-fold-view(line-height, 30);}
+                &__cont {@include vw-fold-view(width, 490); @include vw-fold-view(font-size, 14); @include vw-fold-view(margin-bottom, 15); @include vw-fold-view(line-height, 21);}
+                &__desc { // ✔ 아이콘 사용 리스트
+                    @include vw-fold-view(width, 400); @include vw-fold-view(font-size, 12); @include vw-fold-view(margin-bottom, 14); @include vw-fold-view(line-height, 18);
+                    li:before {
+                        content: '';
+                        background: url('../../is/images/benefit/gf_check_pc.png') no-repeat;
+                        @include vw-fold-view(background-size, 16 12);
+                        @include vw-fold-view(width, 16);
+                        @include vw-fold-view(height, 12);
+                        @include vw-fold-view(padding-right, 5);
+                        display: inline-block;
+                    }
+                }
+                &__disc {
+                    @include vw-fold-view(width, 400);@include vw-fold-view(margin-bottom,18);
+                    li {@include vw-fold-view(font-size,14); @include vw-fold-view(line-height,22);}
+                    &.pt_type2 {@include vw-fold-view(margin-bottom,13);}
+                    .pt_text--indent {@include vw-fold-view(padding-left,46); @include vw-fold-view(text-indent,-46);}
+                }
+                &__disc_sub {
+                    @include vw-fold-view(width, 490);@include vw-fold-view(font-size,10); @include vw-fold-view(line-height,16); @include vw-fold-view(margin-bottom,15);
+                    &.pt_type2 {margin-bottom: 0;}
+                    &.pt_custom {position: static; @include vw-fold-view(width, 370); @include vw-fold-view(margin-left,10);}
+                }
+                .pt_text_deco {
+                    @include vw-fold-view(margin-left,-10);
+                }
+            }
+
+            .pt_banner {
+                text-align: left;margin: 0 auto;@include vw-fold-view(padding, 26 57);@include vw-fold-view(margin-top, 48);@include vw-fold-view(width, 754);@include vw-fold-view(height, 184);@include vw-fold-view(background-size,  754 184);
+                &__tit {
+                    @include vw-fold-view(font-size, 24);@include vw-fold-view(line-height, 32);letter-spacing:-.05em;@include vw-fold-view(margin-bottom, 5);
+                    & + a {@include vw-fold-view(margin-top, 18);}
+                }
+                &__txt {@include vw-fold-view(font-size, 16);@include vw-fold-view(line-height, 24);letter-spacing:-.025em;@include vw-fold-view(margin-bottom, 15);}
+                &__btn--more {@include vw-fold-view(border-radius, 20);@include vw-fold-view(width, 110);@include vw-fold-view(height, 40);@include vw-fold-view(font-size, 14);}
+
+                &.pt_type1.pt_bg-image.pt_add-bg {background-image: url('../../is/images/benefit/gf_banner_type1_pc.jpg');}
+                &.pt_type2.pt_bg-image.pt_add-bg {background-image: url('../../is/images/benefit/gf_banner_type2_pc.jpg');}
+                &.pt_type3.pt_bg-image.pt_add-bg {background-image: url('../../is/images/benefit/gf_banner_type3_pc_v2.jpg');}
+            }
+        }
+    }
+}

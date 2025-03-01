@@ -1,0 +1,116 @@
+.samsung_tv_launching {
+    .sec_review {
+
+        .pt_review {@include vw-pc(padding, 30 0 50); background-color: #fff;}
+        // background: linear-gradient(180deg, #F8F8F8,  #ffffff);
+
+        .pt_title {
+            @include vw-pc(margin-bottom, 40); text-align: center;
+            
+            &__main {@include vw-pc(margin-bottom, 9); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); letter-spacing: -0.025em; font-weight: 700;}
+            &__sub {@include vw-pc(font-size, 28); font-weight: 400; @include vw-pc(line-height, 37); letter-spacing: -0.025em;}
+        }
+
+        //s: 유튜버 영역
+        .pt_youtube {
+            @include vw-pc(margin-bottom, 30); display: flex; flex-direction: column; align-items: center;
+            
+            &__iframe {@include vw-pc(width, 746); @include vw-pc(height, 452);}
+
+            &__pd-link {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 93); @include vw-pc(width, 746); @include vw-pc(height, 90); background-color: #ffffff; @include vw-pc(box-shadow, 0 3 15 rgba(0, 0, 0, 0.1));}
+            &__pd-wrap {display: flex; align-items: center; @include vw-pc(gap, 27);}
+            &__pd-img {@include vw-pc(width, 112); @include vw-pc(height, 68);}
+            &__pd-name {@include vw-pc(font-size, 26);}
+            &__pd-price {@include vw-pc(font-size, 26); letter-spacing: -.025em; font-weight: 700; color: #1E81F8;}
+        }
+        //e: 유튜버 영역
+
+        //s: 블로거 영역
+        .pt_blog {
+            position: relative; @include vw-pc(width, 1218); margin: 0 auto;
+
+            &__swiper {@include vw-pc(width, 1014); @include vw-pc(padding, 33 0 44); margin: 0 auto;}
+            &__item {position: relative; @include vw-pc(margin-right, 24); @include vw-pc(padding, 46 0 0 30); @include vw-pc(width, 495); @include vw-pc(height, 248); background-color: #EBF6FD; @include vw-pc(border-radius, 10);
+                &:last-child {margin-right: 0;}
+            }
+            &__tag {position: absolute; @include vw-pc(top, -33); @include vw-pc(right, 24); @include vw-pc(width, 67); @include vw-pc(height, 67);}
+            &__wrap {display: flex; align-items: center; @include vw-pc(gap, 20);}
+            &__img {@include vw-pc(width, 140); @include vw-pc(height, 99);}
+            &__title {display: inline-block; @include vw-pc(margin-bottom, 3); @include vw-pc(font-size, 20); @include vw-pc(line-height, 26); letter-spacing: -.025em;}
+            &__desc {@include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); letter-spacing: -.025em; color: #666666;}
+            &__btn {@include vw-pc(font-size, 16); @include vw-pc(line-height, 19); letter-spacing: -.025em; @include vw-pc(border-bottom, 1 solid #000000);}
+        
+            &__pd-link {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 69); position: absolute; @include vw-pc(left, 30); @include vw-pc(bottom, 20); @include vw-pc(width, 435); @include vw-pc(height, 68); background-color: #ffffff; @include vw-pc(border-radius, 5); @include vw-pc(box-shadow, 0 3 13 rgba(0, 0, 0, 0.1));}
+            &__pd-wrap {display: flex; align-items: center; @include vw-pc(gap, 24);}
+            &__pd-img {@include vw-pc(width, 72); @include vw-pc(height, 43);}
+            &__pd-name {@include vw-pc(font-size, 16);}
+            &__pd-price {@include vw-pc(font-size, 16); letter-spacing: -.05em; font-weight: 700; color: #1E81F8;}
+        
+            &__prev {@include vw-pc(width, 20); @include vw-pc(height, 41); background: url("../../../is/images/launching/review/stv_blog_swiper_prev_pc.png") no-repeat center / contain;}
+            &__next {@include vw-pc(width, 20); @include vw-pc(height, 41); background: url("../../../is/images/launching/review/stv_blog_swiper_next_pc.png") no-repeat center / contain;}
+            &__pagination {
+                display: flex; justify-content: center; @include vw-pc(gap, 14); bottom: 0; width: 100%;
+                .swiper-pagination-bullet {
+                    @include vw-pc(width, 10); @include vw-pc(height, 10); background-color: #ffffff; @include vw-pc(border, 1 solid #000000); opacity: 1;
+                    &-active {background-color: #000000;}
+                }
+            }
+        }
+        //e: 블로거 영역
+    }
+}
+
+@media screen and (max-width:768px) {
+    .samsung_tv_launching {
+        .sec_review {
+            .pt_review {@include vw-mo(padding, 30 24 60);}
+        
+            .pt_title { 
+                @include vw-mo(margin-bottom, 52);
+
+                &__main {@include vw-mo(margin-bottom, 12); @include vw-mo(font-size, 52); @include vw-mo(line-height, 55);}
+                &__sub { @include vw-mo(font-size, 32); @include vw-mo(line-height, 42);}
+            }
+
+            //s: 유튜버 영역
+            .pt_youtube {
+                @include vw-mo(margin-bottom, 20);
+
+                &__iframe {@include vw-mo(width, 672); @include vw-mo(height, 406);}
+
+                &__pd-link {@include vw-mo(gap, 43); @include vw-mo(width, 672); @include vw-mo(height, 104); @include vw-mo(box-shadow, 0 6 26 rgba(0, 0, 0, 0.1));}
+                &__pd-wrap {@include vw-mo(gap, 20);}
+                &__pd-img {@include vw-mo(width, 102); @include vw-mo(height, 60);}
+                &__pd-name {@include vw-mo(font-size, 28);}
+                &__pd-price {@include vw-mo(font-size, 28);}
+            }
+            //e: 유튜버 영역
+
+            //s: 블로거 영역
+            .pt_blog {
+                width: 100%;
+
+                &__swiper {width: 100%; @include vw-mo(padding, 56 0 44);}
+                &__item {@include vw-mo(margin-right, 24); @include vw-mo(padding, 64 0 0 20); @include vw-mo(width, 620); @include vw-mo(height, 386); @include vw-mo(border-radius, 20);}
+                &__tag {@include vw-mo(top, -54); @include vw-mo(right, 32); @include vw-mo(width, 108); @include vw-mo(height, 108);}
+                &__wrap {@include vw-mo(gap, 21);}
+                &__img {@include vw-mo(width, 160); @include vw-mo(height, 148);}
+                &__title {@include vw-mo(margin-bottom, 6); @include vw-mo(font-size, 28); @include vw-mo(line-height, 36);}
+                &__desc {@include vw-mo(margin-bottom, 12); @include vw-mo(font-size, 24); letter-spacing: -.05em; @include vw-mo(line-height, 32);}
+                &__btn {@include vw-mo(font-size, 24); @include vw-mo(line-height, 28); @include vw-mo(border-bottom, 1 solid #000000);}
+
+                &__pd-link {@include vw-mo(gap, 81); @include vw-mo(left, 20); @include vw-mo(bottom, 40); @include vw-mo(width, 579); @include vw-mo(height, 94); @include vw-mo(border-radius, 12); @include vw-mo(box-shadow, 0 2 14 rgba(0, 0, 0, 0.1));}
+                &__pd-wrap {@include vw-mo(gap, 18);}
+                &__pd-img {@include vw-mo(width, 85); @include vw-mo(height, 51);}
+                &__pd-name {@include vw-mo(font-size, 24);}
+                &__pd-price {@include vw-mo(font-size, 24);}
+            
+                &__pagination {
+                    @include vw-mo(gap, 16);
+                    .swiper-pagination-bullet {@include vw-mo(width, 16); @include vw-mo(height, 16); @include vw-mo(border, 2 solid #000000);}
+                }
+            }
+            //e: 블로거 영역
+        }
+    }
+}

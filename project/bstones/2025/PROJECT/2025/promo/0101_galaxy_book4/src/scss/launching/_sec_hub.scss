@@ -1,0 +1,53 @@
+// MOBILE
+.galaxy_book4_ultra {
+    .sec_hub {@include vw-mo(height, 75); background-color: #000;
+
+        .pt_hub {
+            &.pt_fixed {position: fixed; top: 0 !important; left: 50%; z-index: 50; width: 100%; transform: translateX(-50%); background-color: #000;}
+
+            .pt_swiper {@include vw-mo(height, 75);
+                
+                &__list {display: flex; align-items: center;}
+                
+                &__item {flex: 1; position: relative; color: rgba(255, 255, 255, 0.5);
+                    
+                    &--active {background-color: #F4F4F4; color: #000; border-bottom: 1px solid #ddd;
+                        .pt_swiper__link {pointer-events: none;}
+                    }
+
+                    &--coming {pointer-events: none;}
+
+                    &:not(:last-child){border-right: 1px solid rgba(255, 255, 255, 0.5);}
+                    
+                }
+                
+                &__link {display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center; @include vw-mo(padding, 0 54);}
+                &__txt {@include vw-mo(font-size, 26); @include vw-mo(line-height,31); @include vw-mo(letter-spacing, -.65); font-weight: 700; white-space: nowrap;}
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .galaxy_book4_ultra {
+        .sec_hub {@include vw-pc(height, 59);
+
+            .pt_hub { 
+                &.pt_fixed {max-width: 1920px;}
+
+                .pt_swiper {@include vw-pc(height, 59);
+
+                    &__list {justify-content: center; padding: 0;}
+                    
+                    &__item {
+                        &--active {border-bottom: 1px solid #ddd;}
+                        &:not(:last-child){border-right: 1px solid rgba(255, 255, 255, 0.5);}
+                    }
+                    &__link {padding: 0;}
+                    &__txt{@include vw-pc(font-size, 18); @include vw-pc(line-height, 22); @include vw-pc(letter-spacing, -.45);}
+                }                
+            }
+        }
+    }
+}

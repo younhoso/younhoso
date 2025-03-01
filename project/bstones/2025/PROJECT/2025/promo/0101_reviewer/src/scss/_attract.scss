@@ -1,0 +1,22 @@
+.reviewer {
+    .sec_attract {
+        @include vw-pc(padding, 100 0);
+        .attract_box {
+            @include vw-pc(width, 1320); margin: 0 auto; border: 1px solid #000; @include vw-pc(padding, 59 72); @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 4 0 12 rgba(0,0,0,.1));
+            .pt_title {@include vw-pc(font-size, 32); font-weight: 700; text-align: center; @include vw-pc(padding-bottom, 45); @include vw-pc(line-height, 32);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reviewer {
+        .sec_attract {
+            @include vw-mo(padding, 80 0);
+            .attract_box {
+                @include vw-mo(width, 640); margin: 0 auto; border: 1px solid #c9c9c9; @include vw-mo(border-radius, 8); @include vw-mo(padding, 60 15);
+                .pt_title {@include vw-mo(font-size, 32); @include vw-mo(padding-bottom, 30); @include vw-mo(line-height, 32);}
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,280 @@
+// vw conversion PC 1920
+@mixin vw-max($property, $pixel...) {
+	$px: ();
+	$vw: ();
+	@for $i from 0 to length($pixel) {
+		@if type-of(nth($pixel, $i + 1)) == number {
+			$px: append($px, nth($pixel, $i + 1) * 1px, $separator: comma);
+			$vw: append($vw, calc(nth($pixel, $i + 1) * 100 / $maxpc-max-wid) * 1vw, $separator: comma);
+		}
+		@else if type-of(nth($pixel, $i + 1)) == list {
+			$px1: ();
+			$vw1: ();
+			@each $value in nth($pixel, $i + 1) {
+				@if type-of($value) == number {
+					$px1: append($px1, $value * 1px, $separator: space);
+					$vw1: append($vw1, calc($value * 100 / $maxpc-max-wid) * 1vw, $separator: space);
+				}
+				@else {
+					$px1: append($px1, $value, $separator: space);
+					$vw1: append($vw1, $value, $separator: space);
+				}
+			}
+			$px: append($px, $px1, $separator: comma);
+			$vw: append($vw, $vw1, $separator: comma);
+		}
+		@else {
+			$px: append($px, nth($pixel, $i + 1), $separator: comma);
+			$vw: append($vw, nth($pixel, $i + 1), $separator: comma);
+		}
+	}
+	#{$property}: $px;
+	@media screen and (max-width: $maxpc-max-wid * 1px) {
+		#{$property}: $vw;
+	}
+}
+
+@function vw-max($pixel) {
+	$result: calc($pixel * 100 / $maxpc-max-wid) * 1vw;
+	@return $result;
+}
+
+// vw conversion PC 1600 (fold) - 전사혜택용
+@mixin vw-fold($property, $pixel...) {
+	$px: ();
+	$vw: ();
+	@for $i from 0 to length($pixel) {
+		@if type-of(nth($pixel, $i + 1)) == number {
+			$px: append($px, nth($pixel, $i + 1) * 1px, $separator: comma);
+			$vw: append($vw, calc(nth($pixel, $i + 1) * 100 / $fold-max-wid) * 1vw, $separator: comma);
+		}
+		@else if type-of(nth($pixel, $i + 1)) == list {
+			$px1: ();
+			$vw1: ();
+			@each $value in nth($pixel, $i + 1) {
+				@if type-of($value) == number {
+					$px1: append($px1, $value * 1px, $separator: space);
+					$vw1: append($vw1, calc($value * 100 / $fold-max-wid) * 1vw, $separator: space);
+				}
+				@else {
+					$px1: append($px1, $value, $separator: space);
+					$vw1: append($vw1, $value, $separator: space);
+				}
+			}
+			$px: append($px, $px1, $separator: comma);
+			$vw: append($vw, $vw1, $separator: comma);
+		}
+		@else {
+			$px: append($px, nth($pixel, $i + 1), $separator: comma);
+			$vw: append($vw, nth($pixel, $i + 1), $separator: comma);
+		}
+	}
+	#{$property}: $px;
+	@media screen and (max-width: $fold-max-wid * 1px) {
+		#{$property}: $vw;
+	}
+}
+
+@function vw-fold($pixel) {
+	$result: calc($pixel * 100 / $fold-max-wid) * 1vw;
+	@return $result;
+}
+
+// vw conversion PC 802 (fold)
+@mixin vw-fold-view($property, $pixel...) {
+	$px: ();
+	$vw: ();
+	@for $i from 0 to length($pixel) {
+		@if type-of(nth($pixel, $i + 1)) == number {
+			$px: append($px, nth($pixel, $i + 1) * 1px, $separator: comma);
+			$vw: append($vw, calc(nth($pixel, $i + 1) * 100 / $fold-fit-wid) * 1vw, $separator: comma);
+		}
+		@else if type-of(nth($pixel, $i + 1)) == list {
+			$px1: ();
+			$vw1: ();
+			@each $value in nth($pixel, $i + 1) {
+				@if type-of($value) == number {
+					$px1: append($px1, $value * 1px, $separator: space);
+					$vw1: append($vw1, calc($value * 100 / $fold-fit-wid) * 1vw, $separator: space);
+				}
+				@else {
+					$px1: append($px1, $value, $separator: space);
+					$vw1: append($vw1, $value, $separator: space);
+				}
+			}
+			$px: append($px, $px1, $separator: comma);
+			$vw: append($vw, $vw1, $separator: comma);
+		}
+		@else {
+			$px: append($px, nth($pixel, $i + 1), $separator: comma);
+			$vw: append($vw, nth($pixel, $i + 1), $separator: comma);
+		}
+	}
+	#{$property}: $px;
+	@media screen and (max-width: $fold-fit-wid * 1px) {
+		#{$property}: $vw;
+	}
+}
+
+@function vw-fold-view($pixel) {
+	$result: calc($pixel * 100 / $fold-fit-wid) * 1vw;
+	@return $result;
+}
+
+// vw conversion PC 1440
+@mixin vw-pc($property, $pixel...) {
+	$px: ();
+	$vw: ();
+	@for $i from 0 to length($pixel) {
+		@if type-of(nth($pixel, $i + 1)) == number {
+			$px: append($px, nth($pixel, $i + 1) * 1px, $separator: comma);
+			$vw: append($vw, calc(nth($pixel, $i + 1) * 100 / $pc-max-wid) * 1vw, $separator: comma);
+		}
+		@else if type-of(nth($pixel, $i + 1)) == list {
+			$px1: ();
+			$vw1: ();
+			@each $value in nth($pixel, $i + 1) {
+				@if type-of($value) == number {
+					$px1: append($px1, $value * 1px, $separator: space);
+					$vw1: append($vw1, calc($value * 100 / $pc-max-wid) * 1vw, $separator: space);
+				}
+				@else {
+					$px1: append($px1, $value, $separator: space);
+					$vw1: append($vw1, $value, $separator: space);
+				}
+			}
+			$px: append($px, $px1, $separator: comma);
+			$vw: append($vw, $vw1, $separator: comma);
+		}
+		@else {
+			$px: append($px, nth($pixel, $i + 1), $separator: comma);
+			$vw: append($vw, nth($pixel, $i + 1), $separator: comma);
+		}
+	}
+	#{$property}: $px;
+	@media screen and (max-width: $pc-max-wid * 1px) {
+		#{$property}: $vw;
+	}
+}
+
+@function vw-pc($pixel) {
+	$result: calc($pixel * 100 / $pc-max-wid) * 1vw;
+	@return $result;
+}
+
+// vw conversion Mobile 768
+@mixin vw-mo-max($property, $pixel...) {
+	$px: ();
+	$vw: ();
+	@for $i from 0 to length($pixel) {
+		@if type-of(nth($pixel, $i + 1)) == number {
+			$px: append($px, nth($pixel, $i + 1) * 1px, $separator: comma);
+			$vw: append($vw, calc(nth($pixel, $i + 1) * 100 / $maxmo-max-wid) * 1vw, $separator: comma);
+		}
+		@else if type-of(nth($pixel, $i + 1)) == list {
+			$px1: ();
+			$vw1: ();
+			@each $value in nth($pixel, $i + 1) {
+				@if type-of($value) == number {
+					$px1: append($px1, $value * 1px, $separator: space);
+					$vw1: append($vw1, calc($value * 100 / $maxmo-max-wid) * 1vw, $separator: space);
+				}
+				@else {
+					$px1: append($px1, $value, $separator: space);
+					$vw1: append($vw1, $value, $separator: space);
+				}
+			}
+			$px: append($px, $px1, $separator: comma);
+			$vw: append($vw, $vw1, $separator: comma);
+		}
+		@else {
+			$px: append($px, nth($pixel, $i + 1), $separator: comma);
+			$vw: append($vw, nth($pixel, $i + 1), $separator: comma);
+		}
+	}
+	#{$property}: $px;
+	#{$property}: $vw;
+}
+
+@function vw-mo-max($pixel) {
+	$result: calc($pixel * 100 / $maxmo-max-wid) * 1vw;
+	@return $result;
+}
+
+// vw conversion Mobile
+@mixin vw-mo($property, $pixel...){
+	$px: ();
+	$vw: ();
+	@for $i from 0 to length($pixel) {
+		@if type-of(nth($pixel, $i + 1)) == number {
+			$px: append($px, nth($pixel, $i + 1) * 1px, $separator: comma);
+			$vw: append($vw, calc(nth($pixel, $i + 1) * 100 / $mo-max-wid) * 1vw, $separator: comma);
+		}
+		@else if type-of(nth($pixel, $i + 1)) == list {
+			$px1: ();
+			$vw1: ();
+			@each $value in nth($pixel, $i + 1) {
+				@if type-of($value) == number {
+					$px1: append($px1, $value * 1px, $separator: space);
+					$vw1: append($vw1, calc($value * 100 / $mo-max-wid) * 1vw, $separator: space);
+				}
+				@else {
+					$px1: append($px1, $value, $separator: space);
+					$vw1: append($vw1, $value, $separator: space);
+				}
+			}
+			$px: append($px, $px1, $separator: comma);
+			$vw: append($vw, $vw1, $separator: comma);
+		}
+		@else {
+			$px: append($px, nth($pixel, $i + 1), $separator: comma);
+			$vw: append($vw, nth($pixel, $i + 1), $separator: comma);
+		}
+	}
+	#{$property}: $px;
+	#{$property}: $vw;
+}
+
+@function vw-mo($pixel) {
+	$result: calc($pixel * 100 / $mo-max-wid) * 1vw;
+	@return $result;
+}
+
+// vw conversion Mobile - 360px
+@mixin vw-min-mo($property, $pixel...){
+	$px: ();
+	$vw: ();
+	@for $i from 0 to length($pixel) {
+		@if type-of(nth($pixel, $i + 1)) == number {
+			$px: append($px, nth($pixel, $i + 1) * 1px, $separator: comma);
+			$vw: append($vw, calc(nth($pixel, $i + 1) * 100 / $mo-min-wid) * 1vw, $separator: comma);
+		}
+		@else if type-of(nth($pixel, $i + 1)) == list {
+			$px1: ();
+			$vw1: ();
+			@each $value in nth($pixel, $i + 1) {
+				@if type-of($value) == number {
+					$px1: append($px1, $value * 1px, $separator: space);
+					$vw1: append($vw1, calc($value * 100 / $mo-min-wid) * 1vw, $separator: space);
+				}
+				@else {
+					$px1: append($px1, $value, $separator: space);
+					$vw1: append($vw1, $value, $separator: space);
+				}
+			}
+			$px: append($px, $px1, $separator: comma);
+			$vw: append($vw, $vw1, $separator: comma);
+		}
+		@else {
+			$px: append($px, nth($pixel, $i + 1), $separator: comma);
+			$vw: append($vw, nth($pixel, $i + 1), $separator: comma);
+		}
+	}
+	#{$property}: $px;
+	#{$property}: $vw;
+}
+
+@function vw-min-mo($pixel) {
+	$result: calc($pixel * 100 / $mo-min-wid) * 1vw;
+	@return $result;
+}

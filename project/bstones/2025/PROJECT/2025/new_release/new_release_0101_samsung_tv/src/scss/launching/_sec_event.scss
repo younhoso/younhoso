@@ -1,0 +1,127 @@
+.samsung_tv_launching {
+    .sec_event {
+        .pt_event {
+            @include vw-pc(padding, 104 0 73);
+            &.pt_bg-image {background-image: url('../../is/images/launching/event/stv_event_bg_pc_v1.jpg'); background-position: left bottom; background-size: 100%; background-repeat: no-repeat; background-color: #F0F9FF;}
+            &__wrap {position: relative; display: flex; justify-content: center; @include vw-pc(gap, 40); @include vw-pc(width, 1120); @include vw-pc(margin, 0 auto 45);}
+            &__trophy {position: absolute; @include vw-pc(top, -108); left: 0; @include vw-pc(width, 50);}
+            &__anchor {left: 50%; transform: translateX(-50%); @include vw-pc(font-size, 16); letter-spacing: -0.025em; font-weight: 700;}
+        }
+
+        .pt_common {
+            position: relative; margin-bottom: 0; text-align: left;
+
+            &__eyebrow {@include vw-pc(margin-bottom, 1); @include vw-pc(font-size, 22); @include vw-pc(line-height, 29); letter-spacing: -0.025em; font-weight: 700;}
+            &__tit {@include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 42); @include vw-pc(line-height, 46); letter-spacing: -0.025em;}
+            &__desc {@include vw-pc(margin-bottom, 24); @include vw-pc(font-size, 18); @include vw-pc(line-height, 26); letter-spacing: -0.04em;}
+            &__gift {position: absolute; @include vw-pc(top, -46); @include vw-pc(right, 25); @include vw-pc(width, 170);}
+            &__blue {color: #2289FF; letter-spacing: inherit;}
+        }
+
+        .pt_info {
+            display: flex; flex-wrap: wrap; @include vw-pc(width, 380);
+
+            &__tit,
+            &__desc {
+                @include vw-pc(font-size, 18); @include vw-pc(line-height, 30); letter-spacing: -0.025em;
+                &--end {color: #AFAFAF;}
+            }
+            &__desc {
+                &--end {
+                    position: relative;
+                    &::after {content: "마감"; display: inline-flex; align-items: center; justify-content: center; position: absolute; top: 50%; @include vw-pc(right, -48); @include vw-pc(height, 20); @include vw-pc(padding, 0 11); @include vw-pc(font-size, 14); font-weight: 700; color: #ffffff; background-color: #8D8D8D; @include vw-pc(border-radius, 3); transform: translateY(-50%);}
+                }
+            }
+            &__tit {@include vw-pc(width, 125); font-weight: 700;}
+        }
+
+        .pt_howto {
+            &__tit {
+                width: 100%; position: relative; @include vw-pc(height, 23); @include vw-pc(margin-bottom, 12);
+                &:after {z-index: 1; content: ''; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background-color: #C4C4C4;}                               
+            }
+            &__pt {z-index: 2; position: relative; height: 100%; @include vw-pc(padding-right, 9); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); letter-spacing: -0.025em; font-weight: 700; background-color: #f0f9ff;} 
+            &__wrap {display: flex; justify-content: center; @include vw-pc(gap, 8); @include vw-pc(margin-bottom, 14);}
+            &__step {@include vw-pc(width, 210); @include vw-pc(height, 252); @include vw-pc(padding-top, 26); text-align: center; border: 1px solid #C4C4C4; @include vw-pc(border-radius, 5); background-color: #fff;}
+            &__stepimg {@include vw-pc(width, 82); @include vw-pc(margin, 0 auto 9);}
+            &__desc {@include vw-pc(font-size, 16); @include vw-pc(line-height, 21); letter-spacing: -0.05em;}
+            &__disc {@include vw-pc(margin-top, 8); @include vw-pc(font-size, 12); @include vw-pc(line-height, 16); letter-spacing: -0.05em; color: #666;}
+            &__apply {
+                @include vw-pc(margin-top, 13); @include vw-pc(height, 33); @include vw-pc(padding, 0 25); @include vw-pc(font-size, 16); font-weight: 700;
+                &--end {background-color: #AFAFAF; border-color: #AFAFAF; cursor:default;
+                    &:hover {color: #ffffff; background-color: #AFAFAF; border-color: #AFAFAF;}
+                }
+            }
+        }
+
+        .pt_hashtag {
+            display: flex; @include vw-pc(width, 646);
+            
+            &__tit,
+            &__list {display: flex; justify-content: center; align-items: center; @include vw-pc(height, 48); @include vw-pc(font-size, 16); font-weight: 700; letter-spacing: -0.05em;}
+            &__tit {@include vw-pc(width, 170); @include vw-pc(border-radius, 5 0 0 5); text-decoration: underline; color: #fff; background-color: #2189FF;}
+            &__list {@include vw-pc(width, 476); @include vw-pc(gap, 9); @include vw-pc(border-radius, 0 5 5 0); background-color: #fff;}
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .samsung_tv_launching {
+        .sec_event {
+            
+            @include vw-mo(padding, 176 40 160);
+            &.pt_bg-image {background-image: url('../../is/images/launching/event/stv_event_bg_mo.png'); background-position: left bottom; background-size: 100%; background-repeat: no-repeat; background-color: #F0F9FF;}
+
+            .pt_event {
+                @include vw-mo(padding, 0 0 0);
+                &.pt_bg-image {background: none;}
+                &__wrap {flex-direction: column; @include vw-mo(gap, 40); @include vw-mo(width, 640); @include vw-mo(margin, 0 auto 58);}
+                &__trophy {@include vw-mo(top, -183); @include vw-mo(width, 80);}
+                &__anchor {@include vw-mo(font-size, 20);}
+            }
+
+            .pt_common {
+                &__eyebrow {margin-bottom: 0; @include vw-mo(font-size, 36); @include vw-mo(line-height, 46); letter-spacing: -0.05em;}
+                &__tit {@include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 54); @include vw-mo(line-height, 72);}
+                &__desc {@include vw-mo(margin-bottom, 25); @include vw-mo(font-size, 28); @include vw-mo(line-height, 44); letter-spacing: -0.061em;}
+                &__gift {@include vw-mo(top, -151); @include vw-mo(right, -5); @include vw-mo(width, 218);}
+            }
+
+            .pt_info {
+                width: 100%;
+    
+                &__tit,
+                &__desc {@include vw-mo(font-size, 28); @include vw-mo(line-height, 52);}
+                &__tit {@include vw-mo(width, 175);}
+                &__desc {
+                    &--end {
+                        &::after {@include vw-mo(right, -78); @include vw-mo(height, 36); @include vw-mo(padding, 0 16); @include vw-mo(font-size, 24); @include vw-mo(border-radius, 6);}
+                    }
+                }
+            }
+
+            .pt_howto {
+                &__tit {
+                    @include vw-mo(height, 36); @include vw-mo(margin-bottom, 18);
+                    &:after {display: none;}                               
+                }
+                &__pt {@include vw-mo(padding-right, 18); @include vw-mo(font-size, 28); @include vw-mo(line-height, 36);} 
+                &__wrap {flex-direction: column; width: 100%; @include vw-mo(gap, 40); @include vw-mo(padding, 40 0 42 52); @include vw-mo(margin-bottom, 28); border: 1px solid #C4C4C4; @include vw-mo(border-radius, 10); background-color: #fff;}
+                &__step {display: flex; align-items: center; width: auto; height: auto; padding-top: 0; text-align: left; border: 0; border-radius: 0; background-color: transparent;}
+                &__stepimg {@include vw-mo(width, 120); @include vw-mo(margin, 0 26 0 0);}
+                &__desc {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                &__disc {@include vw-mo(margin-top, 6); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                &__apply {@include vw-mo(margin-top, 6); @include vw-mo(height, 56); @include vw-mo(padding, 0 32); @include vw-mo(font-size, 24);}
+            }
+
+            .pt_hashtag {
+                flex-direction: column; width: 100%;
+                
+                &__tit,
+                &__list {display: flex; justify-content: center; align-items: center; width: 100%; @include vw-mo(height, 76); @include vw-mo(font-size, 24);}
+                &__tit {@include vw-mo(border-radius, 10 10 0 0);}
+                &__list {@include vw-mo(gap, 14); @include vw-mo(border-radius, 0 0 10 10);}
+            }
+        }
+    }
+}

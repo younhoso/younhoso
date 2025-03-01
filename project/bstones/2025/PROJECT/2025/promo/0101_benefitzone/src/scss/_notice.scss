@@ -1,0 +1,129 @@
+/* notice */
+
+.sec_notice {
+    @include vw-pc(padding, 45 0); @include vw-pc(font-size, 14); background: #000;
+
+    .sec_area { @include vw-pc(width, 1390); margin: 0 auto; text-align: left;}
+    .notice_area { position: relative; @include vw-pc(padding, 40 0);
+        &:last-child { border-bottom:none; }
+        &--nopt {@include vw-pc(padding, 0 0 40 0);}
+        &--nopb {@include vw-pc(padding, 40 0 10 0);}
+        .notice_tit {display: block; position: absolute; @include vw-pc(top, 40);  left: 0;line-height: 1.5; font-weight: 700; color: #ffffff; @include vw-pc(font-size, 16);}
+        .notice_sub_tit:nth-of-type(2) { @include vw-pc(margin,0 0 20); }
+        .notice_list { @include vw-pc(padding-left, 295); color: #a3a3a3;
+            li {  position:relative; @include vw-pc(padding, 0 0 10 15); line-height: 1.5; @include vw-pc(word-spacing, -0.2); @include vw-pc(font-size, 16);
+                &:last-child { padding-bottom: 0; }
+                &.pt_bold {font-weight: 700; color: #fff;}
+                &.pt_underline {text-decoration: underline;}
+                a { @include vw-pc(padding-bottom, 3); @include vw-pc(border-bottom, 1 solid #a3a3a3); font-weight: 700;}
+                > em {font-weight: 700;}
+
+                &::before {
+                    content: ''; position: absolute; left: 0; @include vw-pc(top, 9); @include vw-pc(width, 4);  @include vw-pc(height, 4); border-radius: 50%; background-color:#888;
+                }
+            }
+            
+
+            &.list_1depth li.pt_style_none::before {content: '※'; width: auto; height: auto; @include vw-pc(top, -1); @include vw-pc(left, -3); @include vw-pc(font-size, 16); color: #a3a3a3; background-color:transparent;}
+            .list_2depth { @include vw-pc(padding-top, 10);
+                li {
+                    @include vw-pc(padding-left, 15);
+                    &.pt_sub-2depth-title {
+                        padding-left: 0;
+                        &::before {display: none;}
+                    }
+                    &:last-child { padding-bottom: 0; }
+                    &::before { content: ''; position: absolute; left: 0; @include vw-pc(top, 9); @include vw-pc(width, 5);  @include vw-pc(height, 1); background-color:#888; }
+                }
+            }
+            .list_3depth{ @include vw-pc(padding-top, 10);
+                li{
+                    @include vw-pc(padding-left, 30);
+                    &::before { content: ''; position: absolute; @include vw-pc(left, 15); @include vw-pc(top, 9); @include vw-pc(width, 5);  @include vw-pc(height, 1); background-color:#888; }
+                }
+            }
+            &--top {@include vw-pc(margin-bottom, 8);}
+            .pt_sub-tit{@include vw-pc(margin-top,28); @include vw-pc(font-size, 16); font-weight: 700;
+                &:before{display: none;}
+            }
+
+            .pt_sub-2depth {
+                &::before {display: none;}
+                .pt_sub-2depth-title {
+                    padding-left: 0;
+                    &::before {display: none;}
+                }
+                ul li {
+                    @include vw-pc(padding-left, 12);
+                    &::before {content: ''; left: 0; @include vw-pc(top, 12); @include vw-pc(width, 5); @include vw-pc(height, 1);}
+                }
+            }
+        }
+        // .pt_table_wrap{position: relative; @include vw-pc(width, 608); @include vw-pc(height, 80);}
+        // .pt_table_wrap1{position: relative; @include vw-pc(width, 608); @include vw-pc(height, 50);}
+        // .pt_table{position: relative; left: 0; top: 0; width: 200%; transform: scale(0.5) translate(-50%, -45%); display: flex; flex-wrap: nowrap; align-content: stretch;  border: 2px solid #fff;}
+        // .pt_table dl.pt_table_tr{border-right: 2px solid #fff; flex: auto; @include vw-pc(font-size, 28); @include vw-pc(line-height, 40); text-align: center;}
+        // .pt_table dl.pt_table_tr:last-child{border-right: 0;}
+        // .pt_table dl.pt_table_tr .pt_table_td{border-top: 2px solid #fff; @include vw-pc(font-size, 28); @include vw-pc(line-height, 40); font-weight: 700; text-align: center;}  
+        .pt_table {
+            @include vw-pc(width, 675); @include vw-pc(font-size, 14);
+            &__inner {width: 100%; border: 1px solid #a3a3a3;}
+            &__tr {border-bottom: 1px solid #a3a3a3;}
+            th, td {border-right: 1px solid #a3a3a3; text-align: center;}
+        }
+    }
+    .sec_samsungcard_notice{padding-bottom:0;}
+    .sec_samsungbenefit_notice{@include vw-pc(margin-top,-30);}
+}
+
+@media screen and (max-width: 768px) {
+
+    .sec_notice { @include vw-mo(padding, 45 0);  @include vw-mo(font-size, 24);
+        .sec_area { @include vw-mo(width, 610); }
+        .notice_area { @include vw-mo(padding, 45 0);
+            &--nopt {@include vw-mo(padding, 0 0 45 0);}
+            &--nopb {@include vw-mo(padding, 45 0 20 0);}
+            .notice_tit { position: static; @include vw-mo(top, 50); left: 0;  @include vw-mo(padding-bottom, 20); @include vw-mo(font-size, 24); }
+            .notice_sub_tit { @include vw-mo(margin, 20 0); @include vw-mo(padding-left, 0); color: rgba(255, 255, 255, 0.4);}
+            .notice_sub_tit:nth-of-type(2) { @include vw-mo(margin,0 0 20); }
+            .notice_list { @include vw-mo(padding-left, 0);
+                li { @include vw-mo(padding, 0 0 12 10); @include vw-mo(font-size, 24);
+                    ol,
+                    ul { @include vw-mo(padding-top, 10); }
+                }
+                &.list_1depth li:before { left: 0; @include vw-mo(top, 14); @include vw-mo(width, 5); @include vw-mo(height, 5); }
+                &.list_1depth li.pt_style_none::before {@include vw-mo(top, 4); @include vw-mo(left, -3); @include vw-mo(font-size, 16);}
+
+                .list_2depth { @include vw-mo(padding-top, 10);
+                    li {
+                        @include vw-mo(padding-left, 15);
+                        
+                        &::before { @include vw-mo(top, 16); @include vw-mo(width, 5);  @include vw-mo(height, 1); }
+                    }
+                }
+                .list_3depth{ @include vw-mo(padding-top, 10);
+                    li{
+                        @include vw-mo(padding-left, 30);
+                        &::before { @include vw-mo(left, 15); @include vw-mo(top, 16); @include vw-mo(width, 5);  @include vw-mo(height, 1); }
+                    }
+                }
+
+                .pt_sub-tit{@include vw-mo(margin-top,38); @include vw-mo(font-size, 24);}
+            }
+            // .pt_table_wrap{width: 100%; @include vw-mo(height, 120);}
+            // .pt_table_wrap1{width: 100%; @include vw-mo(height, 78);}
+            // .pt_table dl.pt_table_tr{@include vw-mo(font-size, 32); @include vw-mo(line-height, 70);}
+            // .pt_table dl.pt_table_tr .pt_table_td{@include vw-mo(font-size, 32); @include vw-mo(line-height, 70);}
+
+            .pt_table {
+                @include vw-mo(width, 600); @include vw-mo(padding-top, 8); @include vw-mo(font-size, 16);
+
+                &__inner {width: 100%;}
+                &_th {display: none;}
+            }
+        }
+
+        .sec_samsungbenefit_notice{@include vw-mo(margin-top,-60);}
+    }
+
+}

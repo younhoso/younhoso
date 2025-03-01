@@ -1,0 +1,174 @@
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+.samsung_tv_launching {
+
+    .sec_sticky {
+        position: relative; height: auto; background-color: #fff;
+
+        // image lazy loading
+        // &.pt_bg-image {
+        // }
+
+        .pt_blue {color: #2680EB;}
+        .pt_sticky {
+            display: none; z-index: 115; transition: transform 0.3s ease-in;
+
+            &.pt_fixed {position: fixed; bottom: 0; left: 50%; display: block; width: 100%; background-color: #fff; transform: translateX(-50%);}
+
+            &__inner {z-index: 2; position: relative; @include vw-mo(padding,36 24);}
+            &__top {display: flex; justify-content: space-between; align-items: flex-end; @include vw-mo(margin-bottom, 15);}
+            &__right {display: flex; align-items: center; flex-shrink: 0; @include vw-mo(gap, 20); @include vw-mo(padding-bottom, 22);}
+            &__bottom {display: flex; align-items: center; justify-content: space-between;}
+            &__btns {
+                display: flex; align-items: center; @include vw-mo(gap, 6);
+
+                &.type01 {
+                    .pt_btn { @include vw-mo(width, 268);}
+                }
+            }
+            &__benefit {
+                position: absolute; bottom: 100%; left: 0; right: 0; @include vw-mo(padding, 0 24); background-color: #fff;
+
+                &::before {content: ''; display: block; position: absolute; bottom: 100%; left: 0; width: 100%; @include vw-mo(height, 110); background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(128, 128, 128, 0.25));}
+            }
+
+            .pt_title {
+                &__name {@include vw-mo(margin-bottom,7); @include vw-mo(font-size,40); @include vw-mo(line-height,46); font-weight: 700; letter-spacing: -0.03em;}
+                &__sku {color: #999; @include vw-mo(font-size,20); @include vw-mo(line-height,25);}
+            }
+            .pt_price {
+                @include vw-mo(width, 360);
+
+                &__item {display: flex; justify-content: space-between; align-items: center; @include vw-mo(font-size, 28); font-weight: 700;}
+                &__title {
+                    color: #1E81F8;
+
+                    .sam_txt { letter-spacing: -0.05em;}
+                }
+                &__num {
+                    color: #1E81F8;
+
+                    .sam_txt { letter-spacing: -0.02em;}
+                }
+                &__item--def {
+                    display: flex !important; justify-content: space-between; @include vw-mo(margin-bottom, 10);
+                    .pt_price__title { @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -0.03); @include vw-mo(line-height, 28); font-weight: 700; color: #666666;}
+                    .pt_price__num { @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, 0); @include vw-mo(line-height, 28); font-weight: 700; color: #666666; text-decoration: line-through; }
+                }
+                &__item--cpn {
+                    .pt_price__num { display: flex; align-items: baseline;}
+                }
+            }
+
+            .pt_bnf {
+                display: none; @include vw-mo(padding, 27 30 33); @include vw-mo(margin-top, 32); @include vw-mo(border-radius, 16); background-color: #F7F7F7;
+
+                &__title {@include vw-mo(margin-bottom, 19); @include vw-mo(font-size, 28); @include vw-mo(line-height, 37); font-weight: 700;}
+                &__item {
+                    display: flex; justify-content: space-between; align-items: center; position: relative; @include vw-mo(padding-left, 10); @include vw-mo(font-size, 24); @include vw-mo(line-height, 34);
+
+                    &::before {content: ''; display: block; position: absolute; top: 50%; left: 0; transform: translateY(-50%); @include vw-mo(width, 2); @include vw-mo(height, 2); border-radius: 50%; background-color: #000;}
+
+                    + .pt_bnf__item {@include vw-mo(margin-top, 12);}
+                }
+                &__won {font-weight: 700;}
+            }
+
+            .pt_btn {
+                @include vw-mo(width, 144); @include vw-mo(height, 60); @include vw-mo(font-size, 26);
+
+                &--disabled {opacity: 0.3 !important; pointer-events: none !important;}
+
+                &--link {
+                    @include vw-mo(border-radius,30);
+                    &:hover {color: #000; background: #fff;}
+                }
+                &--buy {
+                    @include vw-mo(border-radius,30);
+                    &:hover {color: #fff; background: #000;}
+                }
+                &--star {
+                    position: relative; width: auto; height: auto; border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700;
+
+                    &::before {content: ''; display: block; position: absolute; top: 50%; @include vw-mo(left, -25); transform: translateY(-50%); @include vw-mo(width, 20); @include vw-mo(height, 19); background: center / contain no-repeat; background-image: url('../../is/images/launching/buying/stv_sticky_icon_star.png');}
+                }
+                &--coupon {
+                    @include vw-mo(width, 180); @include vw-mo(height, 56); @include vw-mo(padding-right, 54); @include vw-mo(border, 2 solid #278DFB); @include vw-mo(border-radius, 10); @include vw-mo(font-size, 24); font-weight: 700; overflow: hidden;
+
+                    &::after {content: ''; display: block; position: absolute; top: 0; right: 0; @include vw-mo(width, 54); height: 100%; background: #2680EB center /contain no-repeat; background-image: url('../../is/images/launching/buying/stv_sticky_icon_down.png');}
+                }
+                &--open {
+                    display: block; position: absolute; top: 1px; left: 50%; transform: translate(-50%, -100%); @include vw-mo(width, 96); @include vw-mo(height, 56); @include vw-mo(border-radius, 6 6 0 0); background-color: #fff;
+
+                    &::before {content: ''; display: block; width: 100%; height: 100%; background: center / contain no-repeat url('../../is/images/launching/buying/stv_sticky_icon_open.png'); transform: rotate(180deg);}
+
+                    &.active {
+                        &::before {transform: rotate(0deg);}
+                    }
+                }
+            }
+
+            .pt_price__desc {@include vw-mo(margin-top, 19); color: #2189FF; @include vw-mo(font-size, 20); @include vw-mo(line-height, 28); letter-spacing: -0.05em;}
+
+        }
+        .pt_sticky__dimm {content: ''; display: block; width: 100%; height: 100vh; position: absolute; top: 100%; left: 0; background-color: rgba($color: #000000, $alpha: 0.3); z-index: 10;}
+
+    }
+
+}
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+@media screen and (min-width: 769px) {
+    .samsung_tv_launching {
+
+        .sec_sticky {
+
+            // image lazy loading
+            // &.pt_bg-image {}
+
+            .pt_sticky {
+                border-bottom: 1px solid #d5d5d5; @include vw-pc(box-shadow, 0 10 20 rgba(0,0,0,0.15));
+
+                &.pt_fixed {display: flex; top: 0; bottom: auto; align-items: center; @include vw-pc(height,73); background-color: #fff;}
+
+                &__inner {display: flex; justify-content: space-between; align-items: center; @include vw-pc(width, 1320); padding: 0; margin: 0 auto; box-shadow: none;}
+                &__top {margin-bottom: 0;}
+                &__right {display: none;}
+                &__bottom {padding: 0; @include vw-pc(gap, 85);}
+                &__benefit {display: none;}
+                &__btns {
+                    &.type01 {
+                        .pt_btn { @include vw-pc(width, 200);}
+                    }
+                }
+
+                .pt_title {
+                    &__name {
+                        @include vw-pc(margin-bottom, 0); @include vw-pc(font-size, 20); @include vw-pc(line-height,26);
+
+                        br {display: none;}
+                    }
+                    &__sku {@include vw-pc(font-size, 16); @include vw-pc(line-height, 20);}
+                }
+                .pt_price {
+                    width: auto;
+                    &__title {@include vw-pc(font-size, 18); color: #000;}
+                    &__item { display: flex; flex-wrap: nowrap; align-items: center; @include vw-pc(gap, 30); @include vw-pc(font-size,16); line-height: 1;}
+                    &__num {
+                        @include vw-pc(font-size, 22);
+                        display: flex; flex-wrap: nowrap; align-items: baseline;
+                    }
+                    &__item--def { display: none !important; }
+                }
+
+                .pt_btn {
+                    @include vw-pc(width, 200); @include vw-pc(height, 40); @include vw-pc(font-size, 18);
+
+                    // &--link {display: none;}
+                    &--buy {@include vw-pc(border-radius,20);}
+                    &--open {display: none;}
+                }
+
+                .pt_price__desc {@include vw-pc(margin-top, 14); color: #2189FF; @include vw-pc(font-size, 14); @include vw-pc(line-height, 22); letter-spacing: -0.025em;}
+            }
+        }
+    }
+}

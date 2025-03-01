@@ -1,0 +1,42 @@
+
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+
+
+// MOBILE
+.samsung_tv_launching {
+    .pt_benefit {
+        &__title {@include vw-mo(font-size, 32); @include vw-mo(line-height, 43); font-weight: 700;}
+        &__list {@include vw-mo(margin-top, 27);}
+        &__item {display: flex; align-items: center; @include vw-mo(padding, 42 0 43 40); @include vw-mo(margin-top, 20); @include vw-mo(height, 210); @include vw-mo(gap, 40); background-color: #f2f8ff; @include vw-mo(border-radius, 10);}
+        &__img {@include vw-mo(width, 100);}
+        &__sub {@include vw-mo(font-size, 24); @include vw-mo(line-height, 44); font-weight: 400; letter-spacing: -0.05em;}
+        &__text {
+            @include vw-mo(font-size, 32); @include vw-mo(line-height, 44); letter-spacing: -0.05em;
+            .pt_num, .pt_em {color: #2189ff;}
+        }
+        &__detail {@include vw-mo(margin, 14 12 0 0); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 400; letter-spacing: -0.05em; border-bottom: 1px solid #000;}
+        &__caption {display: inline-block; @include vw-mo(margin-top, 8); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); color: #666; font-weight: 400; letter-spacing: -0.05em;}
+    }
+}
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+
+
+// PC ( 769px ~ 1440px )
+@media screen and (min-width: 769px) {
+
+    .samsung_tv_launching {
+        .pt_benefit {
+            &__title {@include vw-pc(font-size, 18); @include vw-pc(line-height, 22); letter-spacing: -0.025em}
+            &__list {@include vw-pc(margin-top, 15);}
+            &__item {display: flex; align-items: center; @include vw-pc(padding, 20); @include vw-pc(margin-top, 10); @include vw-pc(height, 104); @include vw-pc(gap, 20); @include vw-pc(border-radius, 10);}
+            &__img {@include vw-pc(width, 50);}
+            &__sub {@include vw-pc(font-size, 14); @include vw-pc(line-height, 22); letter-spacing: -0.025em;}
+            &__text {@include vw-pc(font-size, 18); @include vw-pc(line-height, 22); letter-spacing: -0.025em;}
+            &__detail {@include vw-pc(margin, 7 16 0 0); @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); letter-spacing: -0.025em;}
+            &__caption {display: inline-block; margin-top: 0; @include vw-pc(font-size, 14); @include vw-pc(line-height, 22); letter-spacing: -0.025em;}
+        }
+    }
+
+}
+
+// 모바일 퍼스트로 제작된 프로젝트입니다.

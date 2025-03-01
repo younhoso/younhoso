@@ -1,0 +1,117 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'monospace';
+@import 'kv';
+@import 'category_nav';
+@import 'nav';
+@import 'month_benefit';
+@import 'together_buy';
+@import 'card_benefit';
+@import 'banner';
+@import 'special_benefit';
+@import 'point';
+@import 'model_popup';
+@import 'notice';
+
+.pt_page_hide {width: 0 !important; visibility: hidden !important; height: 0 !important; padding: 0 !important; margin: 0 !important; overflow: hidden !important; opacity: 0 !important;}
+
+.benefitzone {
+    // s: section common
+    section {
+        .pt_common_txt_box {
+            text-align: center;
+            .pt_subject {display: flex; justify-content: center; align-items: center; position: relative; @include vw-pc(width, 182); @include vw-pc(height, 49); @include vw-pc(margin, 0 auto 50); background: #000; color: #fff; @include vw-pc(font-size, 30); font-weight: 700; letter-spacing: -0.025em; @include vw-pc(border-radius, 6);}
+            .pt_subject::after {display: block; content: ""; position: absolute; @include vw-pc(bottom, -10); left: 50%; transform: translateX(-50%) rotate(135deg); background-color: #000; @include vw-pc(width, 20); @include vw-pc(height, 20); @include vw-pc(border-bottom-left-radius, 10);}
+            .pt_title {@include vw-pc(font-size, 42); @include vw-pc(line-height, 52); font-weight: 700; letter-spacing: -0.025em;}
+            .pt_sub_title {display: block; @include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 24); @include vw-pc(line-height, 24); font-weight: 700; letter-spacing: -0.025em;}
+            .pt_desc {@include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 24); @include vw-pc(line-height, 34); letter-spacing: -.05em;}
+            .pt_date {@include vw-pc(margin-top, 8); @include vw-pc(font-size, 18); @include vw-pc(line-height, 22); font-weight: 700;}
+        }
+        .pt_common_notice {
+            text-align: center;
+            .pt_notice_btn {@include vw-pc(font-size, 18); font-weight: 700; letter-spacing: -0.025em;}
+            .pt_notice_txt {@include vw-pc(padding-bottom, 30); @include vw-pc(font-size, 18); @include vw-pc(margin-top, 22);}
+        }
+
+        .pt_control {
+            z-index: 1; display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 14); position: absolute; left: 50%; transform: translateX(-50%);
+            .swiper-pagination-bullet {@include vw-pc(width, 12); @include vw-pc(height, 12); border: 1px solid #000; background-color: transparent; opacity: 1;}
+            .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color: #000;}
+            .swiper-control {@include vw-pc(width, 14); @include vw-pc(height, 14); font-size: 1px; color: transparent;
+                &.pt_pause {background: url('../../../is/images/benefit/banslide/bfz_banner_slide_stop.svg') no-repeat center / contain;}
+                &.pt_play {background: url('../../../is/images/benefit/banslide/bfz_banner_slide_play.svg') no-repeat center / contain;}
+            }
+            
+            .pt_page {display: flex; @include vw-pc(gap, 14); position: unset;}
+        }
+        .pt_nav-btn{
+                display: block; @include vw-pc(width,19); @include vw-pc(height,40); background: url("../../../is/images/benefit/bfz_slide_nav_btn_pc.png") no-repeat center / contain; 
+                position: absolute; @include vw-pc(top,460);
+                &::after{display: none;}
+
+                &--prev{left: 0}
+                &--next{right: 0; transform: rotateZ(180deg);}
+        }
+    }
+    // e: section common
+
+    .sec_banner {
+        display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;
+
+        .pt_txt_box { 
+            .pt_txt {@include vw-pc(margin-bottom, 35); @include vw-pc(font-size, 42); @include vw-pc(line-height, 52); letter-spacing: -0.05em;
+                strong {vertical-align: baseline;}
+                .pt_join_btn {@include vw-pc(width, 180); @include vw-pc(height, 48); @include vw-pc(font-size, 18); @include vw-pc(line-height, 32); letter-spacing: -0.05em; @include vw-pc(border-radius, 24);}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone { overflow: hidden;
+        // s: section common
+        section {
+            .pt_common_txt_box {
+                .pt_subject {@include vw-mo(width, 170); @include vw-mo(height, 46); @include vw-mo(margin, 0 auto 36); @include vw-mo(font-size, 28); @include vw-mo(line-height, 31); letter-spacing: -0.025em; @include vw-mo(border-radius, 6);}
+                .pt_subject::after {@include vw-mo(bottom, -10); @include vw-mo(width, 20); @include vw-mo(height, 20); @include vw-mo(border-bottom-left-radius, 10);}
+                .pt_title {@include vw-mo(font-size, 50); @include vw-mo(line-height, 60); letter-spacing: -0.025em;}
+                .pt_sub_title {@include vw-mo(margin-bottom, 9); @include vw-mo(font-size, 28); @include vw-mo(line-height, 38); letter-spacing: -0.025em;}
+                .pt_desc {@include vw-mo(margin-bottom, 30); @include vw-mo(font-size, 26); @include vw-mo(line-height, 36);}
+                .pt_date {@include vw-mo(margin-top, 5); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35);}
+            }
+            .pt_common_notice {
+                @include vw-mo(padding-top, 0); 
+                .pt_notice_btn {@include vw-mo(font-size, 26); @include vw-mo(line-height, 35); letter-spacing: -0.05em;}
+                .pt_notice_txt {margin-top: 0; @include vw-mo(padding-bottom, 40); @include vw-mo(font-size, 24); @include vw-mo(line-height, 40); }
+            }
+
+            .pt_control {
+                z-index: 1; display: flex; justify-content: center; align-items: center; @include vw-mo(gap, 14); position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+                .swiper-pagination-bullet {@include vw-mo(width, 12); @include vw-mo(height, 12); border: 1px solid #000; background-color: transparent; opacity: 1;}
+                .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color: #000;}
+                .swiper-control {@include vw-mo(width, 14); @include vw-mo(height, 14); font-size: 1px; color: transparent;}
+                .pt_page {display: flex; @include vw-mo(gap, 14); position: unset;}
+            }
+            .pt_nav-btn{
+                display: block; @include vw-mo(width,12); @include vw-mo(height,24); background: url("../../../is/images/benefit/bfz_slide_nav_btn_mo.png") no-repeat center / contain; 
+                position: absolute; @include vw-mo(top,605);
+
+                &--prev{@include vw-mo(left,24);}
+                &--next{@include vw-mo(right,24);}
+            }
+        }
+        // e: section common
+        
+
+        .sec_kv, .sec_banner{
+            .pt_join_btn {@include vw-mo(width, 280); @include vw-mo(height, 70); @include vw-mo(font-size, 30); @include vw-mo(line-height, 70); letter-spacing: -0.05em; @include vw-mo(border-radius, 40);}
+        }
+
+        .sec_banner {//@include vw-mo(height, 615);
+            .pt_txt_box { 
+                .pt_txt {@include vw-mo(margin-bottom, 50); @include vw-mo(font-size, 52); @include vw-mo(line-height, 65); letter-spacing: -0.05em;
+                }
+            }
+        }
+    }
+}

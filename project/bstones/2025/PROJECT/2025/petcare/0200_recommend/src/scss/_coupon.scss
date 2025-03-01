@@ -1,0 +1,92 @@
+.petcare_recommend {
+    .sec_coupon {
+        @include vw-pc(padding, 60 0 158); 
+        .pt_coupon {
+            margin: 0 auto; @include vw-pc(padding, 74 0 101); @include vw-pc(width, 1280); @include vw-pc(border-radius, 30); background-color: #F3F9FF;
+
+            &__txt {
+                @include vw-pc(margin-bottom, 19); text-align: center;
+                &--eyebrow {@include vw-pc(margin-bottom, 20); @include vw-pc(font-size, 30); @include vw-pc(line-height, 38); letter-spacing: -.075em;}
+                &--title {@include vw-pc(margin-bottom, 36); @include vw-pc(font-size, 58); @include vw-pc(line-height, 71); letter-spacing: -.029em;}
+                &--term {
+                    display: inline-block; @include vw-pc(width, 532); @include vw-pc(height, 47); background-color: #D8EAFF;
+                    @include vw-pc(font-size, 26); @include vw-pc(line-height, 47); letter-spacing: -.065em;
+                }
+            }
+            &__img {@include vw-pc(margin-bottom, 28); @include vw-pc(width, 1280);}
+
+            &__down {
+                text-align: center;
+                &--noti {
+                    // @include vw-pc(margin-bottom, 60);
+                    li {
+                        @include vw-pc(font-size, 18); @include vw-pc(line-height, 28); letter-spacing: -.05em; color: #666;
+
+                        &::before {content: '*';}
+                    }
+                }
+
+                &--detail_btn {font-weight: 700; color: #000; border-bottom: 1px solid #000;}
+
+                &--btn {
+                    display: inline-block; position: relative; margin: 0 auto; @include vw-pc(margin-bottom, 60); @include vw-pc(width, 438); @include vw-pc(height, 100); @include vw-pc(border-radius, 10); background-color: #2189FF;
+                    @include vw-pc(font-size, 36); @include vw-pc(line-height, 100); letter-spacing: -.016em; color: #fff; font-weight: 700; text-align: center;
+                    &::before {display: block; position: absolute; content: ''; top: 50%; transform: translateY(-50%); @include vw-pc(left, -10); @include vw-pc(width, 20); @include vw-pc(height, 20); border-radius: 50%; background-color: #F0F8F1;}
+                    &::after {display: block; position: absolute; content: ''; top: 50%; transform: translateY(-50%); @include vw-pc(right, -10); @include vw-pc(width, 20); @include vw-pc(height, 20); border-radius: 50%; background-color: #F0F8F1;}
+                }
+
+                &--ico {display: inline-block; @include vw-pc(margin-left, 11); @include vw-pc(width, 27);}
+            }
+        }
+
+        .pt_coupon__notice {
+            margin: 0 auto; @include vw-pc(width, 1100); text-align: center;
+            &--btn {display: inline-block; @include vw-pc(margin-bottom, 30); @include vw-pc(border-bottom, 1 solid #000); @include vw-pc(font-size, 24); @include vw-pc(line-height, 32); font-weight: 700;}
+        
+            &__desc ul li {
+                position: relative; @include vw-pc(padding-left, 10); @include vw-pc(font-size, 20); @include vw-pc(line-height, 40); letter-spacing: -.05em; color: #767676; text-align: left;
+                &::before {position: absolute; display: block; content: ''; left: 0; top: 50%; transform: translateY(-50%); @include vw-pc(width, 2); @include vw-pc(height, 2); border-radius: 50%; background-color: #9f9f9f;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .petcare_recommend {
+        .sec_coupon {
+            @include vw-mo(padding, 80 0 80); 
+            .pt_coupon {@include vw-mo(padding, 43 0 39); @include vw-mo(width, 660); @include vw-mo(border-radius, 30);
+    
+                &__txt {@include vw-mo(margin-bottom, 23); 
+                    &--eyebrow {@include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 28); @include vw-mo(line-height, 37);}
+                    &--title {@include vw-mo(margin-bottom, 34); @include vw-mo(font-size, 50); @include vw-mo(line-height, 63);}
+                    &--term {
+                        @include vw-mo(width, 488); @include vw-mo(height, 44);
+                        @include vw-mo(font-size, 24); @include vw-mo(line-height, 44);
+                    }
+                }
+                &__img {@include vw-mo(margin, 0 auto 31); @include vw-mo(width, 596);}
+    
+                &__down {
+                    &--noti {
+                        li {
+                            @include vw-mo(margin-bottom, 1); @include vw-mo(padding-left, 15); 
+                            @include vw-mo(font-size, 18); @include vw-mo(line-height, 23);
+    
+                            &::before {@include vw-mo(top, 3);}
+                        }
+                    }
+
+                    &--btn {
+                        @include vw-mo(width, 438); @include vw-mo(height, 100); @include vw-mo(border-radius, 10); margin-bottom: 0;
+                        @include vw-mo(font-size, 36); @include vw-mo(line-height, 100);
+                        &::before {@include vw-mo(left, -10); @include vw-mo(width, 20); @include vw-mo(height, 20);}
+                        &::after {@include vw-mo(right, -10); @include vw-mo(width, 20); @include vw-mo(height, 20);}
+                    }
+    
+                    &--ico {@include vw-mo(margin-left, 11); @include vw-mo(width, 27);}
+                }
+            }
+        }
+    }
+}

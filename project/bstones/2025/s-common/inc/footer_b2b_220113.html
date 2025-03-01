@@ -1,0 +1,274 @@
+<!-- s : 공통 팝업(alert)  -->
+<div class="layer-pop layer-default alert" id="commonAlert" tabindex="0" data-popup-layer="commonAlert" data-focus="commonAlert">
+    <div class="layer-header blind"><h2></h2></div>
+    <div class="layer-content">
+        <p style="word-break:keep-all;"></p>
+        <div class="btn-box">
+            <a href="javascript:void(0)" onclick="" class="btn btn-d btn-type2">확인</a>
+        </div>
+    </div>
+</div>
+<!-- e : 공통 팝업(alert)  -->
+<!-- s : 공통 팝업(confirm)  -->
+<div class="layer-pop layer-default" id="commonConfirm" tabindex="0" data-popup-layer="commonConfirm" data-focus="commonConfirm">
+    <div class="layer-header blind">
+        <h2></h2>
+    </div>
+    <div class="layer-content">
+        <p></p>
+        <div class="btn-box double">
+            <!-- 버튼 두개시 클래스 double 추가 -->
+            <a href="javascript:void(0)" class="btn btn-d btn-type1" id="commonConfirmCancelBtn" onclick="closeLayer('commonConfirm');">취소</a>
+            <a href="javascript:void(0)" class="btn btn-d btn-type2" id="commonConfirmOkBtn">확인</a>
+        </div>
+    </div>
+    <button type="button" class="pop-close" id="closeCommonConfirmBtn" name="closeCommonConfirmBtn" data-focus-next="commonConfirm">팝업닫기</button>
+</div>
+<!-- e : 공통 팝업(confirm)  --></div>
+		<!-- e : 본문 영역 -->
+
+		<!-- 플로팅 메뉴 -->
+		<div id="floatingSticky" class="floating-sticky">
+		<div class="menu-list">
+			<div class="inner">
+				<ul>
+				</ul>
+			</div>
+		</div>
+		<button type="button" class="btn-gotop">
+			<span>위로</span>
+		</button>
+	</div>
+	<script>
+		floatSticky();
+
+		function firstRecentGoods(){
+			$.ajax({
+				 url : "/sec/business/xhr/goods/getFirstRecentGoods"
+				,type : "POST"
+				,success : function(result) {
+					var recentGoodsData = JSON.parse(result);
+
+					if(recentGoodsData.recentYn === "Y"){
+						$("floatingSticky").find(".menu04").remove();
+						var html = "";
+						html += '<li class="menu04">'
+						html += '<a href="#" id = "btn-rcntgoods-floating" type="button" onclick="showLatestItem(self,\'latestItemLayer\'); getRecentGoods(); return false" data-st-path ="'+recentGoodsData.stContextPath+'" data-popup-target="latestItemLayer">'
+						html += '<span> <img src="'+recentGoodsData.recentImgPath+'?$128_128_PNG$" alt="'+ recentGoodsData.recentGoodsNm +'"> 최근 본 제품 ('+recentGoodsData.recentGoodsLength+')</span>'
+						html += '</a>'
+						html += '</li>'
+
+						$("#floatingSticky").find("ul").append(html);
+					}
+				}
+			});
+		}
+		// firstRecentGoods();
+	</script>
+	<!-- //플로팅 메뉴 -->
+		<!-- s : 바닥글 영역 - b2b -->
+		<footer id="footer" class="footer-business">
+		<div class="footer-content">
+			<div class="footer-inner">
+				<div class="cs-btn">
+					<ul>
+						<li><a href="https://www.samsung.com/sec/aboutsamsung/home/" target="_blank" class="link-outlink" data-omni="footer:aboutsamsung" title="새창열림">회사소개</a></li>
+						<li><a href="https://www.samsung.com/sec/ir/" target="_blank" class="link-outlink" data-omni="footer:ir" title="새창열림">투자자정보</a></li>
+						<li><a href="https://news.samsung.com/kr/" target="_blank" class="link-outlink" data-omni="footer:news" title="새창열림">뉴스</a></li>
+						<li><a href="/sec/business/notice/" data-omni="footer:notice">공지사항</a></li>
+						<li><a href="/sec/business/support/partnerlocator/" data-omni="footer:partner">비즈니스 우수파트너 찾기</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-content">
+			<nav class="footer-inner sitemap-links">
+				<h2 class="blind">페이지 링크</h2>
+				<ul>
+					<!-- s : 210708 순서 변경 -->
+					<li>
+                        <h3><a href="javascript:;">제품</a></h3>
+                        <ul>
+                            <li><a href="/sec/business/system-air-conditioners/">시스템에어컨</a></li>
+                            <li><a href="/sec/business/built-in-appliances/">빌트인가전</a></li>
+                            <li><a href="/sec/business/bespoke/">주방가전</a></li>
+                            <li><a href="/sec/business/washing-machines/all-washing-machines/">생활가전</a></li>
+                            <li><a href="/sec/business/smart-signage/">사이니지</a></li>
+                            <li><a href="/sec/business/hotel-tvs/all-hotel-tvs/">TV/음향</a></li>
+                            <li><a href="/sec/business/mobile/">모바일</a></li>
+							<li><a href="/sec/business/digital-multifunction-printers/all-digital-multifunction-printers/">IT/프린터</a></li>
+							<li><a href="https://www.samsung.com/sec/business/network/home/" class="link-outlink" title="새창으로 열림" target="_blank">엔터프라이즈</a></li>
+							<li><a href="https://www.samsung.com/global/business/networks/" class="link-outlink" title="새창으로 열림" target="_blank">네트워크</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="javascript:;">업종</a></h3>
+                        <ul>
+                        	<!-- s : 210712 공공기관 + 군기관 = 공공 -->
+                            <li><a href="/sec/business/government/">공공</a></li>
+                            <!-- e : 210712 공공기관 + 군기관 = 공공 -->
+                            <li><a href="/sec/business/manufacture/">제조</a></li>
+                            <li><a href="/sec/business/finance/">금융</a></li>
+                            <!-- s : 210712 학교 + 학원 = 교육 -->
+                            <li><a href="/sec/business/education/">교육</a></li>
+                            <!-- e : 210712 학교 + 학원 = 교육 -->
+                            <li><a href="/sec/business/construction/">건설</a></li>
+                            <li><a href="/sec/business/transportation/">유통/운송</a></li>
+                            <li><a href="/sec/business/health/">의료</a></li>
+                            <li><a href="/sec/business/hospitality/">호텔</a></li>
+							<li><a href="/sec/business/insights/case-study/">고객도입사례</a></li>
+							<li><a href="/sec/business/insights/interview/">블로거 리뷰</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="javascript:;">솔루션</a></h3>
+                        <ul>
+                            <li><a href="/sec/business/b-iot-solutions/smart-home-solution-iot/">스마트싱스 홈 솔루션</a></li>
+                            <li><a href="/sec/business/b-iot-solutions/b-iot-solution/">빌딩 IoT 솔루션</a></li>
+							<li><a href="/sec/business/system-air-conditioner-solutions/multi-witi-kit/">멀티 Wi-Fi KIT</a></li>
+							<li><a href="/sec/business/system-air-conditioner-solutions/dms2-5/">시스템에어컨 제어 솔루션 DMS 2.5</a></li>
+                            <li><a href="/sec/business/display-solutions/lynk-reach/">링크리치</a></li>
+							<li><a href="/sec/business/display-solutions/magicinfo/">사이니지 콘텐츠관리 Magic INFO</a></li>
+							<li><a href="/sec/business/display-solutions/lynk-cloud-solution/">링크 클라우드 솔루션</a></li>
+							<li><a href="/sec/business/mobile-solutions/knox-solutions/">Knox 솔루션</a></li>
+							<li><a href="/sec/business/mobile-solutions/samsung-mobile-care/">삼성 모바일 케어</a></li>
+							<li><a href="/sec/business/mobile-solutions/smart-contact-center/">스마트 컨택센터</a></li>
+							<li><a href="/sec/business/printing-solutions/counthru/">통합출력관리 CounThru</a></li>
+							<li><a href="/sec/business/printing-solutions/secuthru/">인증, 출력보안 SecuThru</a></li>
+                        </ul>
+					</li>
+					<li>
+                        <h3><a href="javascript:;">서비스상품</a></h3>
+                        <ul>
+                            <li><a href="/sec/business/ac-clean/all-ac-clean/">에어컨 세척서비스</a></li>
+                            <li><a href="/sec/business/aircleaner-care/all-aircleaner-care/">공기청정기 케어서비스</a></li>
+                            <li><a href="/sec/business/cloud/all-cloud/">b.IoT 클라우드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="javascript:;">고객서비스</a></h3>
+                        <ul>
+                            <li><a href="/sec/business/aboutus/">비즈니스 스토리</a></li>
+                            <li><a href="/sec/business/support/contactus/sales-enquiries/">견적문의</a></li>
+                            <li><a href="/sec/business/support/contactus/innovation-enquiries/">비즈니스 제휴문의</a></li>
+							<li><a href="/sec/business/partner/applyPartner/">파트너 신청</a></li>
+							<li><a href="/sec/business/support/contactus/newsletter-apply/">비즈니스 정보열람/구독신청</a></li>
+							<li><a href="/sec/business/partner/partnerSummary/">파트너사 모집안내</a></li>
+							<li><a href="/sec/business/program/finance/installment/">할부금융 프로그램</a></li>
+							<li><a href="/sec/business/program/finance/rental/">금융형 렌탈</a></li>
+							<li><a href="/sec/business/program/finance/repair-rental/">유지보수형 렌탈</a></li>
+							<li><a href="/sec/business/insights/brochure/">e-제안서</a></li>
+							<li><a href="/sec/business/insights/technical-document/">기술자료/리포트</a></li>
+							<li><a href="/sec/business/insights/catalog-download/">카달로그</a></li>
+							<li><a href="/sec/business/insights/demo/">제품 영상</a></li>
+							<li><a href="/sec/business/insights/news/">제품 뉴스</a></li>
+                        </ul>
+                    </li>
+					<!-- e : 210708 순서 변경 -->
+				</ul>
+			</nav>
+		</div>
+		<div class="footer-content type-multiple">
+			<div class="footer-inner">
+				<div class="site-info">
+					<div class="info-links">
+						<ul>
+							<li><a href="/sec/business/terms/" data-omni="footer:bottom_membership">이용약관</a></li>
+							<li><a href="/sec/business/info/privacy/01/" class="link-privacy" data-omni="footer:bottom_privacy">개인정보처리방침</a></li>
+							<li><a href="/sec/business/info/sitemap/" data-omni="footer:bottom_sitemap">사이트맵</a></li>
+						</ul>
+					</div>
+					<div class="info-detail">
+	                    <p>
+	                        <span>삼성전자 주식회사 대표이사 : 김기남</span>
+	                        <span class="mo-inline">사업자등록번호 : 124-81-00998</span>
+	                        <span class="comp-wrap"><a href="//www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2000374001130200515&pageUnit=10&searchCnd=wrkr_no&searchKrwd=1248100998&pageIndex=1" class="comp" title="새창 열림" target="_blank">사업자 정보확인</a></span>
+	                        <span>통신판매업 신고 : 2000-경기수원-0515</span>
+	                    </p>
+	                    <p class="gap">
+	                        <span>사업장주소 : 경기도 수원시 영통구 삼성로 129(매탄동)</span>
+							<span>호스팅서비스사업자 : 한국아이비엠(주)</span>
+							<span>대표번호 : 02-2255-0114</span>
+							<span>견적문의 : 1588-3536</span>
+							<span>제품/서비스문의: 1588-3366</span>
+							<span>소상공인몰 구매문의 : 1833-3394</span>
+	                    </p>
+	                    <p>본사이트의 컨텐츠는 저작권법의 보호를 받는바  무단 전재, 복사, 배포 등을 금합니다.</p>
+	                    <p class="copyright">Copyright &copy; 1995-2022 Samsung. All Rights Reserved.</p>
+	                </div>
+				</div>
+				<div class="link-box">
+					<div class="mark-box">
+						<a href="javascript;" class="btn-mark btn-wa" title="인증서 보기" data-popup-target="popupWA" data-omni="footer:bottom_wa">웹접근성 우수사이트</a>
+					</div>
+					<div class="sns-btn"><div class="wrap-sns">
+						<span class="tit">SNS</span>
+						<ul>
+							<li><a href="//www.facebook.com/SamsungKorea" class="btn-fb" title="팝업 열기" target="_blank" data-omni="follow:facebook"><span class="blind">facebook</span></a></li>
+							<li><a href="//www.youtube.com/c/samsungkorea" class="btn-yt" title="팝업 열기" target="_blank" data-omni="follow:youtube"><span class="blind">youtube</span></a></li>
+							<li><a href="//www.instagram.com/samsungkorea" class="btn-ig" title="팝업 열기" target="_blank" data-omni="follow:instagram"><span class="blind">instagram</span></a></li>
+							<li><a href="//blog.naver.com/samsung_korea" class="btn-bl" title="팝업 열기" target="_blank"><span class="blind" data-omni="follow:blog">삼성전자 코리아 블로그</span></a></li>
+							<li><a href="//pf.kakao.com/_eUMpj" class="btn-ka" target="_blank" title="팝업 열기" data-omni="follow:kakao"><span class="blind">카카오톡</span></a></li>
+						</ul>
+					</div></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- s : 웹접근성 우수사이트 인증서  -->
+<div class="layer-pop layer-default active" id="popupWA" tabindex="0" data-popup-layer="popupWA" data-focus="popupWA" aria-hidden="false" data-zindex="300" style="z-index: 300; display:none;">
+    <div class="layer-content">
+        <img src="https://www.samsung.com/sec/static/_images/temp/WA-2021.jpg" alt="웹접근성 우수사이트 인증서">
+    </div>
+    <button type="button" class="pop-close" data-focus-next="popupWA">팝업닫기</button>
+</div>
+<!-- e : 웹접근성 우수사이트 인증서  -->
+
+
+	<!-- s : 비즈니스 정보 본인 확인 -->
+	<input type="hidden" id="checkCmsFileBtn" data-lett-no="" data-usr-dfn2-val="" data-popup-target="popupIdentificationCms" />
+	<div class="layer-pop layer-normal layer-bizniIdent" id="popupIdentificationCms" tabindex="0" data-popup-layer="popupIdentificationCms" data-focus="popupIdentificationCms">
+		<div class="layer-header">
+			<h2>비즈니스 정보 본인 확인</h2>
+		</div>
+		<div class="layer-content">
+			<div class="cont">
+				<ul>
+					<li>본 콘텐츠는 비즈니스 정보 열람/구독 신청에 동의하신 고객에게 제공하고 있습니다.</li>
+					<li>비즈니스 정보 열람/구독 신청하신 분은 이메일 주소로 인증 후 열람 가능합니다.</li>
+				</ul>
+			</div>
+			<div class="cont ad">
+				<img src="" alt="" style="width:150px; height:100px;">
+				<p></p>
+			</div>
+			<div class="cont">
+				<dl>
+					<dt><label for="email-identification-cms">이메일</label></dt>
+					<dd>
+						<input type="text" id="email-identification-cms" value="" class="inp-line" placeholder="이메일을 입력해 주세요.">
+						<!-- 에러 시 input에 error 클래스 추가 -->
+						<div class="error-msg">
+							<p>이메일을 입력해 주세요.</p>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="btn-box">
+				<button type="button" class="btn btn-d btn-type2" onclick="javascript:checkEmailCms();">인증</button>
+			</div>
+			<ul class="bottom-esse">
+				<li><span>비즈니스 정보 열람/구독신청이 되어 있는 회원의 경우 로그인을 하시면 정보 열람이 가능합니다.</span>
+					<a href="#" class="btn-underline login" data-omni="login">로그인하기</a>
+				</li>
+				<li><span>비회원이거나 비즈니스 정보 열람/구독 신청을 하지 않으신 분은 아래 링크를 통해 신청해 주세요.</span>
+					<a href="/sec/business/support/contactus/newsletter-apply/" target="_blank" class="btn-underline" data-omni="subscribe:write">비즈니스 정보 열람/구독 신청하기</a></li>
+			</ul>
+		</div>
+		<button type="button" class="pop-close" data-focus-next="popupIdentificationCms">팝업닫기</button>
+	</div>
+	<!-- e : 비즈니스 정보 본인 확인  --><!-- e : 바닥글 영역 - b2b -->
+	</div>
+
+	</body>
+</html>

@@ -1,0 +1,75 @@
+.benefitzone {overflow: hidden;
+    .sec_special_benefit {@include vw-max(padding, 80 0); z-index: 2;
+        .pt_special_benefit_wrap { display: flex;
+            .pt_title_box {@include vw-max(width, 562); @include vw-max(height, 654); @include vw-max(padding, 100 0 0 240); @include vw-max(margin-top, 70); background: url("../../../is/images/benefit/bfz_special_title_bg_pc.png") no-repeat center / contain; z-index: 2;
+                .pt_sub_title {@include vw-max(margin-bottom, 138); @include vw-max(font-size, 24); letter-spacing: .2em; color: #ac855c; }
+                > h3 {@include vw-max(margin-bottom, 38); @include vw-max(font-size, 38); letter-spacing: -.05em; line-height: 1.4;}
+                .pt_slide_btn {
+                    > * {position: relative; @include vw-max(width, 48); @include vw-max(height, 48); border-radius: 50%; background-color: #000;}
+                    > *::after {display: block; content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-75%,-50%) rotate(-45deg); @include vw-max(width, 15); @include vw-max(height, 15); @include vw-max(border-right, 2 solid #fff); @include vw-max(border-bottom, 2 solid #fff);}
+                    > .pt_prev_btn::after {transform: translate(-25%,-50%) rotate(135deg); }
+                    > a + a {@include vw-max(margin-left, 10);}
+                    > a.swiper-button-disabled {opacity: .3;}
+                }
+            }
+            .pt_special_container {@include vw-max(width, 936); margin-left: 0; overflow: visible;
+                .pt_special_slide {@include vw-max(width, 392); @include vw-max(margin-left, 50);
+                    &:nth-child(1) {@include vw-max(margin-top, 155);}
+                    .pt_special_item + .pt_special_item {@include vw-max(margin-top, 47);}
+                    .pt_slide_img {@include vw-max(margin-bottom, 30);}
+                    .pt_slide_img1 {@include vw-max(min-height, 404);}
+                    .pt_slide_img2 {@include vw-max(min-height, 270);}
+                    .pt_slide_img3 {@include vw-max(min-height, 343);}
+                    .pt_slide_img4 {@include vw-max(min-height, 217);}
+                    .pt_slide_img5 {@include vw-max(min-height, 270);}
+                    .pt_text_box {@include vw-max(padding-left, 18);}
+                    .pt_text_box > h4 {@include vw-max(margin-bottom, 10); @include vw-max(font-size, 28);}
+                    .pt_text_box .pt_disc {@include vw-max(margin-bottom, 12); @include vw-max(font-size, 20); line-height: 1.5;}
+                    .pt_text_box .pt_disc em {font-weight: 700;}
+                    .pt_text_box .pt_noti {@include vw-max(font-size, 16); line-height: 1.4; color: #8d8d8d;}
+                    .pt_text_box .pt_noti li {position: relative; @include vw-max(padding-left, 15);}
+                    .pt_text_box .pt_noti li::before {content: '*'; position: absolute; left: 0;}
+                    .pt_text_box .pt_btn_underline {@include vw-max(font-size, 18); @include vw-max(padding-bottom, 5); @include vw-max(border-bottom, 1 solid #000);}
+                    .pt_text_box .pt_btn_underline::after {@include vw-max(top, 5); transform: rotate(315deg);}
+                    &:nth-child(3) {@include vw-max(margin-top, 254);}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_special_benefit {@include vw-mo(padding, 220 0 100); @include vw-mo(margin-top, -120); overflow: hidden;
+            .pt_special_benefit_wrap {
+                .pt_slide_box {@include vw-mo(width, 320);}
+                .pt_title_box {@include vw-mo(width, 320); @include vw-mo(height, 553); @include vw-mo(padding, 100 0 0 40); margin-top: 0; background: url("../../../is/images/benefit/bfz_special_title_bg_mo.png") no-repeat center / contain; @include vw-mo(background-size, 320 553);
+                    .pt_sub_title {@include vw-mo(margin-bottom, 140); @include vw-mo(font-size, 26); letter-spacing: .1em;}
+                    > h3 {margin-bottom: 0; @include vw-mo(font-size, 36);}
+                    .pt_slide_btn {display: none;}
+                }
+                .pt_special_container {width: 100%;
+                    .pt_special_slide {@include vw-mo(width, 260); @include vw-mo(margin-left, 20);
+                        &:nth-child(1) {margin-top: 0;}
+                        &:nth-child(5) {@include vw-mo(margin-top, -45);}
+                        // &:nth-child(6) {@include vw-mo(margin-top, -45);}
+                        &:nth-child(6) {@include vw-mo(margin-top, 0);}
+                        .pt_slide_img {@include vw-mo(margin-bottom, 35);}
+                        .pt_slide_img1 {@include vw-mo(min-height, 310);}
+                        .pt_slide_img2 {@include vw-mo(min-height, 310);}
+                        .pt_slide_img3 {@include vw-mo(min-height, 355);}
+                        .pt_slide_img4 {@include vw-mo(min-height, 310);}
+                        .pt_slide_img5 {@include vw-mo(min-height, 310);}
+                        .pt_text_box {padding-left: 0;}
+                        .pt_text_box > h4 {@include vw-mo(margin-bottom, 30); @include vw-mo(font-size, 34);}
+                        .pt_text_box .pt_disc {@include vw-mo(margin-bottom, 20); @include vw-mo(font-size, 24); line-height: 1.5;}
+                        .pt_text_box .pt_noti {@include vw-mo(font-size, 20);}
+                        .pt_text_box .pt_noti li {@include vw-mo(padding-left, 15);}
+                        .pt_text_box .pt_btn_underline {@include vw-mo(font-size, 22); @include vw-mo(padding-bottom, 5); @include vw-mo(border-bottom, 1 solid #000);}
+                        .pt_text_box .pt_btn_underline::after {@include vw-mo(top, 5); transform: rotate(315deg);}
+                    }
+                }
+            }
+        }
+    }
+}

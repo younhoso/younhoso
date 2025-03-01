@@ -1,0 +1,39 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'component_tab';
+@import 'sec_notice';
+
+@media screen and (max-width: 768px) {
+    // 컴포 타이틀
+    .walk_coupon {
+       .pt_coupon{position: relative;}
+       .pt_txt{position: absolute; @include vw-mo(top,90); width: 100%; text-align: center;
+        .pt_text-box__eyebrow{@include vw-mo(padding-bottom, 11); @include vw-mo(width,458); margin: 0 auto;}
+            // &__sub-tit{@include vw-mo(margin-bottom,16); @include vw-mo(font-size,28); @include vw-mo(line-height,37); letter-spacing:-0.025em;}
+            &__tit{@include vw-mo(margin-bottom,20); @include vw-mo(font-size,50); @include vw-mo(line-height,60); letter-spacing:-0.025em; color: #fff;}
+            &__desc{@include vw-mo(font-size,22); @include vw-mo(line-height,30); letter-spacing:-0.025em;}
+        }
+        .product-card .box-btns{
+            @include vw-mo(padding-bottom, 40 !important);
+        }
+        .pt_btn{position: absolute; @include vw-mo(bottom,39); display: flex; justify-content: center; width: 100%;
+            &--bottom{@include vw-mo(bottom,103);}
+            &__join{@include vw-mo(width,180); @include vw-mo(height,80); @include vw-mo(font-size,24); @include vw-mo(line-height,32); letter-spacing:-0.025em;}
+            &__notice{@include vw-mo(font-size,24);}
+        }
+        .pt_info{width: 100%; @include vw-mo(height,937); background: url("../../is/images/wc_cou_bg.jpg") no-repeat center / cover; @include vw-mo(padding-top, 53);
+            &__main-tit{@include vw-mo(margin-bottom,47); @include vw-mo(font-size,32); @include vw-mo(line-height,43); letter-spacing:-0.025em; font-weight:700; color: #2189FF; text-align: center;}
+            &__deco{display: inline-block; @include vw-mo(margin,0 10); @include vw-mo(width,24); @include vw-mo(height,24); background: url("../../is/images/wc_cou_snow_ico.png") no-repeat center / contain;}
+            &__box{margin: 0 auto; @include vw-mo(padding,57 0 0 59); @include vw-mo(width,580); @include vw-mo(height,602); @include vw-mo(border-radius,30); background-color: #fff;}
+            &__list{display: flex; @include vw-mo(margin-bottom,37);
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &--noti{flex-direction: column; @include vw-mo(gap,25);}
+            }
+            &__tit{@include vw-mo(width,184); @include vw-mo(font-size,28); @include vw-mo(line-height,37); letter-spacing:-0.025em; font-weight:700; color: #2189FF;}
+            &__desc{@include vw-mo(font-size,28); @include vw-mo(line-height,37); font-weight:700;}
+            &__noti{@include vw-mo(font-size,26); @include vw-mo(line-height,30); letter-spacing: -0.025em;  }
+        }
+    }
+}

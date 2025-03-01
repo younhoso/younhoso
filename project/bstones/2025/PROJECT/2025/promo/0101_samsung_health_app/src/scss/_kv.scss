@@ -1,0 +1,23 @@
+.walk_challenge {
+    .sec_kv {
+        .pt_kv{position: relative;}
+        .pt_text-box{position: absolute; @include vw-pc(top,218); left: 50%; transform: translateX(-50%); text-align: center;
+            &__date{@include vw-pc(margin-bottom,10); @include vw-pc(font-size,20); @include vw-pc(line-height,25); font-weight: 700;}
+            &__desc{@include vw-pc(font-size,22); @include vw-pc(line-height,30); letter-spacing:-0.025em;}
+        }
+
+        .pt_info{@include vw-pc(padding,94 0 99 0); text-align: center;
+            &__blue-txt{color: #006BEA;}
+            &__txt-box{@include vw-pc(margin-bottom,76);}
+            &__tit{@include vw-pc(margin-bottom,20); @include vw-pc(font-size,42); @include vw-pc(line-height,55); letter-spacing:-0.025em; font-weight:700; }
+            &__desc{@include vw-pc(font-size,22); @include vw-pc(line-height,34); letter-spacing:-0.025em;}
+            &__btn{@include vw-pc(width,268); @include vw-pc(height,64); @include vw-pc(font-size,24); @include vw-pc(border-radius,50);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .walk_challenge {
+        
+    }
+}

@@ -1,0 +1,261 @@
+<!-- 일반/시스템 추천모델 팝업 슬라이드 -->
+@@include('./popup_model.html')
+
+<!-- 면접 쉽게 알아보기 클릭 시 사이즈 팝업 -->
+<div class="pt_size_modal" id="modal01" tabindex="0">
+    <div class="pt_modal_inner">
+        <div class="pt_modal_content">
+            <p class="pt_title">일러두기 : 면적 쉽게 알이보기</p>
+            <ul class="pt_size_list">
+                <li class="pt_list_item pt_list_title">
+                    <p class="en">㎡</p>
+                    <p>평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">65 ㎡</p>
+                    <p class="en">19.7평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">70.7 ㎡</p>
+                    <p class="en">21.4평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">74.8 ㎡</p>
+                    <p class="en">22.6평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">74.9 ㎡</p>
+                    <p class="en">22.7평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">89.4 ㎡</p>
+                    <p class="en">27.0평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">95.9 ㎡</p>
+                    <p class="en">29.0평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">97.7 ㎡</p>
+                    <p class="en">29.6평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">113.9 ㎡</p>
+                    <p class="en">34.5평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">114.6 ㎡</p>
+                    <p class="en">34.7평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">116.4 ㎡</p>
+                    <p class="en">35.2평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">147.1 ㎡</p>
+                    <p class="en">44.5평</p>
+                </li>
+                <li class="pt_list_item">
+                    <p class="en">147.9 ㎡</p>
+                    <p class="en">44.7평</p>
+                </li>
+            </ul>
+        </div>
+        <a href="javascript:;" title="팝업 닫기" class="btn_close" data-role="closeModal" data-target="#modal01" style="color:#fff;"><span class="blind">닫기</span></a> 
+    </div>
+</div>
+
+<!-- 배관 ? 클릭 시 팝업 -->
+<div class="pt_tooltip" id="modal02" tabindex="0">
+    <div class="pt_modal">
+        <div class="pt_modal__content">
+            <div class="img_box pt_modal__img">
+                <div class="img_box">
+                    <img src="../../is/images/popup/wac_img_popup_pipe_pc_v1.png" alt="[다배관 방식 (이미지 예시)], [단배관 방식 (이미지 예시)]" class="m_hide" loading="lazy" /> 
+                    <img src="../../is/images/popup/wac_img_popup_pipe_mo_v1.png" alt="[다배관 방식 (이미지 예시)], [단배관 방식 (이미지 예시)]" class="m_show" loading="lazy" /> 
+                </div>
+            </div>
+            <div class="pt_modal__txtbox">
+                <dl class="pt_modal__list">
+                    <dt class="pt_modal__list--title">다배관/단배관 차이</dt>
+                    <dd class="pt_modal__list--txt"><strong>다배관</strong>: 실내기 - 실외기 연결 시, 실내기마다 배관이 연결되는 방식으로 천장 타공이 적은 편</dd>
+                    <dd class="pt_modal__list--txt"><strong>단배관</strong>: 실내기 - 실외기 연결 시, 각 실내기를 하나의 배관으로 연결하는 방식으로 실외기 설치가 깔끔함</dd>
+                </dl>
+            </div>
+        </div>
+        <a href="javascript:;" title="팝업 닫기" class="btn_close" data-role="closeModal" data-target="#modal02" style="color:#fff;"><span class="blind">닫기</span></a> 
+    </div>
+</div>
+
+<!-- 시스템에어컨 설치 가능 여부 확인하기 팝업 -->
+<div class="pt_installation" id="modal04" tabindex="0">
+    <div class="pt_modal">
+        <div class="pt_modal__content">
+            <div class="pt_judgment__title-box">
+                <h3 class="pt_judgment__title-box--title">시스템에어컨<br class="m_show" /> 설치 가능 여부 확인하기</h3>
+            </div>
+
+            <div class="pt_judgment__info">
+                <ul class="pt_judgment__list">
+                    <li class="pt_judgment__item pdt_0">
+                        <div class="pt_judgment__item--min">
+                            <div class="img_box pt_judgment__item--img img01">
+                                <img src="../../is/images/popup/wac_icon_judgment01_pc.png" alt="실외기 아이콘" class="m_hide" loading="lazy" />
+                                <img src="../../is/images/popup/wac_icon_judgment01_mo_v1.png" alt="실외기 아이콘" class="m_show" loading="lazy" />
+                            </div>
+                        </div>
+
+                        <dl class="pt_judgment__item--dl">
+                            <dt class="pt_judgment__item--dt">별도 실외기실이 있는지 확인해주세요.</dt>
+                            <dd class="pt_judgment__item--dd">
+                                시스템에어컨 실외기는 일반에어컨 실외기보다 무겁습니다. <br>
+                                안전을 위해 별도 실외기실이 있는 경우에만 설치할 수 있습니다.
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <li class="pt_judgment__item">
+                        <div class="pt_judgment__item--min">
+                            <div class="img_box pt_judgment__item--img img02">
+                                <img src="../../is/images/popup/wac_icon_judgment02_pc.png" alt="천장, 외벽 아이콘" class="m_hide" loading="lazy" />
+                                <img src="../../is/images/popup/wac_icon_judgment02_mo_v1.png" alt="천장, 외벽 아이콘" class="m_show" loading="lazy" />
+                            </div>
+                        </div>
+
+                        <dl class="pt_judgment__item--dl">
+                            <dt class="pt_judgment__item--dt">
+                                <span>천장 내벽~외벽 간격이 18cm</span>가 되는지 확인해주세요.
+                            </dt>
+                            <dd class="pt_judgment__item--dd">시스템에어컨은 천장 빌트인 제품이므로<br class="m_show" /> 천장 내벽~외벽 간격이 18cm이상 확보되어야 합니다.</dd>
+                        </dl>
+                    </li>
+                </ul>
+
+                <div class="pt_judgment__howto">
+                    <strong class="pt_judgment__howto--title">
+                        천장 내~외벽 간격 <br class="m_hide" />
+                        18cm 확보여부 <br class="m_hide" />
+                        확인 방법
+                    </strong>
+
+                    <ul class="pt_judgment__howto--list">
+                        <li class="pt_judgment__howto--item">
+                            <div class="img_box pt_judgment__howto--img img01">
+                                <img src="../../is/images/popup/wac_icon_howto01_pc.png" alt="스프링쿨러 아이콘" class="m_hide" loading="lazy" />
+                                <img src="../../is/images/popup/wac_icon_howto01_mo_v1.png" alt="스프링쿨러 아이콘" class="m_show" loading="lazy" />
+                            </div>
+
+                            <dl class="pt_judgment__howto-dl">
+                                <dt class="pt_judgment__howto-dl--dt">방법 1. 스프링클러 또는 환기구가 설치되어있나요?</dt>
+                                <dd class="pt_judgment__howto-dl--dd">
+                                    스프링클러와 환기구는 천장 내~외벽의 일정 간격이<br class="m_show" /> 확보되어야 설치 가능한 제품이므로, <br class="m_hide" />
+                                    둘 중 하나라도<br class="m_show" /> 설치되어있으면 천장 내~외벽 18cm 확보되어있을<br class="m_show" /> 가능성 높음.
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li class="pt_judgment__howto--item">
+                            <div class="img_box pt_judgment__howto--img img02">
+                                <img src="../../is/images/popup/wac_icon_howto02_pc.png" alt="커튼 아이콘" class="m_hide" loading="lazy" />
+                                <img src="../../is/images/popup/wac_icon_howto02_mo_v1.png" alt="커튼 아이콘" class="m_show" loading="lazy" />
+                            </div>
+
+                            <dl class="pt_judgment__howto-dl">
+                                <dt class="pt_judgment__howto-dl--dt">방법 2. 커튼박스~거실바닥,<br class="m_show"> 천장~거실바닥 길이 차이를 확인해보세요.</dt>
+                                <dd class="pt_judgment__howto-dl--dd">
+                                    천장에 비해 더 높게 움푹 들어간 커튼박스부터<br class="m_show">  거실바닥까지, <br class="m_hide" />
+                                    천장부터 거실바닥까지 길이를 측정하여<br class="m_show">  차이가 <br class="m_hide"> 18cm 이상일 경우 설치 가능성 높음.
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li class="pt_judgment__howto--item">
+                            <div class="img_box pt_judgment__howto--img img03">
+                                <img src="../../is/images/popup/wac_icon_howto03_pc.png" alt="조명 아이콘" class="m_hide" loading="lazy" />
+                                <img src="../../is/images/popup/wac_icon_howto03_mo_v1.png" alt="조명 아이콘" class="m_show" loading="lazy" />
+                            </div>
+
+                            <dl class="pt_judgment__howto-dl">
+                                <dt class="pt_judgment__howto-dl--dt">방법 3. 할로겐등 내부 깊이를 확인해보세요.</dt>
+                                <dd class="pt_judgment__howto-dl--dd">할로겐등을 열어 내부 깊이를 측정하였을 때<br class="m_show">  18cm 이상이면<br class="m_hide" /> 설치 가능성 높음.</dd>
+                                <dd class="pt_judgment__howto-dl--desc">※ 깊이 측정 전, 전력 차단 필수</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="pt_judgment__list pdb_0">
+                    <li class="pt_judgment__item pdb_0 align_mod">
+                        <div class="pt_judgment__item--min">
+                            <div class="img_box pt_judgment__item--img img03">
+                                <img src="../../is/images/popup/wac_icon_judgment03_pc.png" alt="실외기 아이콘" class="m_hide" loading="lazy" />
+                                <img src="../../is/images/popup/wac_icon_judgment03_mo.png" alt="실외기 아이콘" class="m_show" loading="lazy" />
+                            </div>
+                        </div>
+
+                        <dl class="pt_judgment__item--dl">
+                            <dt class="pt_judgment__item--dt">설치팀의 사전방문 일자를 확인해주세요.</dt>
+                            <dd class="pt_judgment__item--dd">
+                                삼성 시스템에어컨은 설치 전 반드시 사전방문하여 설치 가능 여부를<br class="m_show" /> 확인해 드리며<br class="m_hide" />설치불가 현장일 경우 전액 환불해드리니<br class="m_show" /> 안심하고 구매하세요!
+                            </dd>
+                            <dd class="pt_judgment__item--dd pt_judgment__item--dd02">
+                                주문 후 3일 이내 설치팀이 사전방문 관련 해피콜을 드리며,<br class="m_show" /> 일주일 이내 사전 방문을 진행합니다.<br />※ 해피콜 3일은 공휴일 및 주말 제외 기준
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+         </div>   
+        <a href="javascript:;" title="팝업 닫기" class="btn_close" data-role="closeModal" data-target="#modal04" style="color:#fff;"><span class="blind">닫기</span></a> 
+        
+    </div>
+</div>
+
+<!-- faq 모달 비디오 -->
+<div class="pt_video_modal pt_video_modal--list pt_common_modal" tabindex="0">
+    <div class="pt_common_modal__inner">
+        <video class="pt_common_modal__video" controls autoplay>
+            <source src="" type="video/mp4">
+        </video>
+        <div class="pt_common_modal__subtitle" tabindex="0">
+            [시스템에어컨 설치 체크리스트 3!]<br />
+            삼성 시스템 에어컨 설치하실 때 이 세 가지만 체크해 보시면 됩니다! (손가락 3개를 펼치며)<br />
+            먼저, 첫 번째 [실내기 대수 선택]을 해주시면 되는데요, 예를 들어 거실, 주방, 방 2개 설치 원하신다면 4실을 선택해 주시면 됩니다.<br />
+            두 번째 원하시는 [공간 면적에 따라 실내기 냉방 용량을 선택]해 주시면 됩니다.<br />
+            세 번째 [거주상태에 따른 배관 선택] 거주 중이시거나 입주한 후라면 설치가 간단한 다배관을! 그리고 아직 입주 전이시거나 공간이 넓은 대형 평수라면 공간제약 없이 설치하실 수 있는 단배관을 추천해 드리겠습니다. 어렵지 않죠?
+        </div>
+        <a href="javascript:;" class="pt_common_modal__btn-close" data-role="closeModal" data-target=".pt_video_modal--list" title="레이어팝업 닫기"></a>
+    </div>
+</div>
+
+<div class="pt_video_modal pt_video_modal--special pt_common_modal" tabindex="0">
+    <div class="pt_common_modal__inner">
+        <video class="pt_common_modal__video" controls autoplay>
+            <source src="" type="video/mp4">
+        </video>
+        <div class="pt_common_modal__subtitle" tabindex="0">
+            [삼성 시스템에어컨의 특별함 3!]<br />
+            삼성 시스템에어컨의 특별함 세 가지 말씀드리도록 하겠습니다!<br />
+            첫 번째, [①원데이 설치] 입니다. 오전에 설치를 받으시면 저녁엔 시원한 에어컨 바람을 쐬실 수가 있고요~<br />
+            두번째, [②안심 설치] 입니다. 시스템 에어컨은 천장을 뚫고 설치하기 때문에 설치의 품질과 A/S가 굉장히 중요한데요.<br />
+            삼성 시스템 에어컨은 [삼성전자가 지정한 전문 설치 파트너사가 설치해 주기 때문에 설치의 품질도 안심! 하실 수 있고요. A/S도 안심하실 수 있습니다.<br />
+            현재 거주 중인 집에 시스템 에어컨 설치하고 싶으신가요? [③보양 작업을 통하여 손상을 최소화]하여 설치해 드리겠습니다!
+        </div>
+        <a href="javascript:;" class="pt_common_modal__btn-close" data-role="closeModal" data-target=".pt_video_modal--special" title="레이어팝업 닫기"></a>
+    </div>
+</div>
+
+<div class="pt_video_modal pt_video_modal--set pt_common_modal" tabindex="0">
+    <div class="pt_common_modal__inner">
+        <video class="pt_common_modal__video" controls autoplay>
+            <source src="" type="video/mp4">
+        </video>
+        <div class="pt_common_modal__subtitle" tabindex="0">
+            [우리집에도 시스템에어컨 설치 가능할까?]<br />
+            [설치전 무료 사전 방문] 삼성 시스템에어컨은 설치 전 반드시 무료로 사전 방문을 통해서 설치 가능 여부를 확인해 드립니다.<br />
+            [설치 불가 시 전액 환불] 설치 불가할 경우 전액을 환불해 드리고 있으니깐요! 안심하시고 구매하세요!<br />
+            [구매 전 설치 가능 여부 셀프 확인법] 설치 전 설치 가능 여부를 셀프로 확인하고 싶으시면 (손가락 2개를 펼치며) 이 두 가지 조건을 확인해 보시면 되겠습니다.<br />
+            첫 번째! [①집에 별도의 실외기실이 있으신가요?] 두 번째! [②집 천장 내벽~외벽 간격이 18cm 이상이신가요?] 꼭 확인해 보세요!
+        </div>
+        <a href="javascript:;" class="pt_common_modal__btn-close" data-role="closeModal" data-target=".pt_video_modal--set" title="레이어팝업 닫기"></a>
+    </div>
+</div>

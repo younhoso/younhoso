@@ -1,0 +1,26 @@
+@media screen and (max-width: 768px) {
+    .walk_mission {
+        .pt_text-box{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include vw-mo(top, 96);
+            width: 100%;
+            text-align: center;
+            &__eyebrow{@include vw-mo(padding-bottom, 11); @include vw-mo(width,458); margin: 0 auto;}
+            &__text{
+                @include vw-mo(margin-bottom, 20);
+                @include vw-mo(font-size, 50);
+                letter-spacing:-0.025em;
+                color: #fff;
+                font-weight: 700;
+                @include vw-mo(text-shadow, 0 0 30 rgba(88, 127, 255, 0.3));
+            }
+            &__des{
+                @include vw-mo(font-size, 22);
+                @include vw-mo(line-height,30);
+                letter-spacing:-0.025em;
+            }
+           }
+    }
+}

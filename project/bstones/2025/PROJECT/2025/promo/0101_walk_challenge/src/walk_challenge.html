@@ -1,0 +1,104 @@
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+
+<!-- split 0101_walk_challenge_1.txt -->
+<link rel="stylesheet" href="./css/walk_challenge.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "samsungexperience";
+	digitalData.page.pathIndicator.depth_3 = "walkingchallenge";
+	digitalData.page.pathIndicator.depth_4 = "launching";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap walk_challenge" id="walk_challenge">
+
+	@@include('./split-html/lnb.html')
+	<!--// lnb -->
+
+	@@include('./split-html/sec_kv.html')
+	<!--// sec_kv -->
+
+	<section class="sec_tab">
+		<div class="inner_1920">
+			<div class="pt_tab__wrap">
+				<div data-role-tab="sec_tabmenu" class="pt_tab">
+					<a href="javascript:;" class="pt_tab__btn" data-page-tab="none1" data-tab-idx="0" data-omni-type="microsite" data-omni="sec:samsungexperience:walkingchallenge:launching:tab_howto">참여 방법</a>
+					<a href="javascript:;" class="pt_tab__btn" data-page-tab="none2" data-tab-idx="1" data-omni-type="microsite" data-omni="sec:samsungexperience:walkingchallenge:launching:tab_benefit">참여 혜택</a>
+					<a href="javascript:;" class="pt_tab__btn" data-page-tab="comp" data-tab-idx="2" data-omni-type="microsite" data-omni="sec:samsungexperience:walkingchallenge:launching:tab_period">추천 상품</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--// tab -->
+
+	<div id="tab">
+
+		<div class="howto" data-page-content="none1">
+			@@include('./split-html/sec_howto.html')
+		</div>
+		<!--// tab01 -->
+		<div class="benefit" data-page-content="none2">
+			@@include('./split-html/sec_benefit.html')
+			@@include('./split-html/sec_share.html')
+		</div>
+		<!--// tab02 -->
+	</div>
+
+	<div data-page-content="comp" class="comp">
+		<div class="inner_1440">
+			<div class="sec_comp">
+				<div class="pt_title_box">
+					<p class="pt_title">추천 상품</p>
+					<p class="pt_desc">쿠폰 사용이 가능한 상품을 만나보세요</p>
+				</div>
+				<div class="pt_component_tab" data-compo-cate="product-card" data-sticky="true" data-swiper="true">
+					<div class="pt_slider_category_sticky">
+						<div class="pt_slider_category_wrap">
+							<button type="button" class="pt_btn_popup_category blind" title="카테고리 탭 메뉴 열기" tabindex="-1"><span class="blind">카테고리 탭 메뉴 열기</span></button>
+							<div class="swiper-container">
+								<p class="pt_category_title">제품 카테고리 선택</p>
+								<ul class="swiper-wrapper pt_category_list">
+									<li class="swiper-slide on"><a href="javascript:;" title="e식품관 탭 선택" data-omni-type="microsite" data-omni="sec:samsungexperience:walkingchallenge:launching:tab_efood">e식품관</a></li>
+									<li class="swiper-slide"><a href="javascript:;" title="펫 케어 스토어 탭 선택" data-omni-type="microsite" data-omni="sec:samsungexperience:walkingchallenge:launching:tab_petproducts">펫 케어 스토어</a></li>
+									<li class="swiper-slide"><a href="javascript:;" title="홈클래스 탭 선택" data-omni-type="microsite" data-omni="sec:samsungexperience:walkingchallenge:launching:tab_class">홈클래스</a></li>
+									<li class="swiper-slide"><a href="javascript:;" title="에버랜드 스토어 탭 선택" data-omni-type="microsite" data-omni="sec:samsungexperience:walkingchallenge:launching:tab_everlandgoods">에버랜드 스토어</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--// tab03 -->
+</main>
+<!-- split stop -->
+		
+<style type="text/css">.wrap-component .component-contents{height:400px}</style>
+@@for (var i = 0; i < 4; i++) {<div class="wrap-component product-card" data-cptno="${i}" data-page-content="com"><div class="component-contents">컴포넌트${i}</div></div>}
+		
+
+<!-- split 0101_walk_challenge_2.txt -->
+
+
+<div class="sec_project_wrap walk_challenge">
+	@@include('./split-html/notice.html')
+	<!--// sec_notice -->
+</div>
+
+
+<script src="./js/walk_challenge.min.js" inline></script>
+<script src="./js/isqa.min.js" inline></script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

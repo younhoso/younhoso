@@ -1,0 +1,41 @@
+
+.walk_challenge {
+    .popup_content{display:none; z-index:101; position:absolute; left:50%;  background-color:#fff; background-size:100%; transform:translateX(-50%); @include vw-pc(border-radius, 16);
+        .alert_msg{display: none;position: fixed;top: 0;left: 0;z-index: 1001;width: 100%;background: #8a51d3;color: #fff;text-align: center;height: 30px;line-height: 30px;}
+        .pt_share {@include vw-pc(width, 580); @include vw-pc(height, 268); @include vw-pc(padding, 13 33);
+            &__btn {display: flex; align-items: center; flex-direction: column; @include vw-pc(width, 82);}
+            .pt_title {@include vw-pc(margin-bottom, 38); @include vw-pc(padding-bottom, 12); @include vw-pc(border-bottom, 2 solid #707070); @include vw-pc(font-size, 28); @include vw-pc(line-height, 33); font-weight: 700;}
+            .pt_link {
+                display: flex; justify-content: center; @include vw-pc(gap, 70);
+                &__icon {@include vw-pc(width, 82); @include vw-pc(height, 82); @include vw-pc(margin-bottom, 8);}
+                &__txt {@include vw-pc(font-size, 24); @include vw-pc(line-height, 40); @include vw-pc(letter-spacing, -.56); white-space: nowrap;}
+            }
+        }
+        .pop_btn {position: fixed; @include vw-pc(top, 20); @include vw-pc(right, 30); @include vw-pc(width, 20); @include vw-pc(height, 20); border: 0; color: #000; font-size: 0; border-radius: 0;
+            &::before, &::after{content:''; position: absolute; @include vw-pc(top, 13); right: 0; width: 100%; @include vw-pc(height, 2); background-color: #000;}
+            &::before{transform: rotate(45deg);}
+            &::after{transform: rotate(-45deg);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .walk_challenge {
+        .popup_content { @include vw-mo(border-radius, 16);
+            @include vw-mo (margin-top, 0);
+            .alert_msg{display: none;position: fixed;top: 0;left: 0;z-index: 1001;width: 100%;background: #8a51d3;color: #fff;text-align: center;height: 30px;line-height: 30px;}
+            .pt_share {@include vw-mo(width, 580); @include vw-mo(height, 268); @include vw-mo(padding, 13 33);
+                &__btn {@include vw-mo(width, 82);}
+                .pt_title {@include vw-mo(margin-bottom, 38); @include vw-mo(padding-bottom, 12); @include vw-mo(border-bottom, 2 solid #707070); @include vw-mo(font-size, 28); @include vw-mo(line-height, 33); @include vw-mo(letter-spacing, -.85);}
+                .pt_link {
+                    @include vw-mo(gap, 70);
+                    &__icon {@include vw-mo(width, 82); @include vw-mo(height, 82); @include vw-mo(margin-bottom, 8);}
+                    &__txt {@include vw-mo(font-size, 24);@include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -.91);}
+                }
+            }
+            .pop_btn {@include vw-mo(top, 20); @include vw-mo(right, 30); @include vw-mo(width, 20); @include vw-mo(height, 20);
+                &::before, &::after{@include vw-mo(top, 13); @include vw-mo(height, 2);}
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.samsung_tv_launching {
+    .sec_ai-tv_banner {
+        @include vw-pc(padding-top, 80);
+
+        .pt_ai-area {position: relative; @include vw-pc(width, 1140); @include vw-pc(margin, 0 auto 40);}
+        .pt_consult-area {position: relative; @include vw-pc(width, 1180); margin: 0 auto;}
+
+        .pt_text-box {
+            position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 70);
+
+            &__title {@include vw-pc(font-size, 30); @include vw-pc(line-height, 36); @include vw-pc(letter-spacing, -.5); font-weight: 700; color: #fff;}
+            &__title strong {color: #CEF7FF;}
+            &__sub {@include vw-pc(margin-bottom, 6); @include vw-pc(font-size, 24); @include vw-pc(letter-spacing, -1); @include vw-pc(line-height, 32);}
+            &__sub strong {@include vw-pc(letter-spacing, -1);}
+            &__disc {@include vw-pc(font-size, 16); @include vw-pc(line-height, 22); color: #666;}
+            &__detail {@include vw-pc(width, 122); @include vw-pc(height, 40); @include vw-pc(margin-top, 14); @include vw-pc(border-radius, 28); @include vw-pc(font-size, 16); @include vw-pc(letter-spacing, -.5);}
+        }
+
+        // TV 전문상담 서비스 배너
+        .pt_consult-area {
+            .pt_text-box {
+                @include vw-pc(left, 90);
+                &__title {color: #000;}
+            }
+        }
+	} 
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+        .sec_ai-tv_banner {
+            @include vw-mo(padding-top, 80);
+            .pt_ai-area {@include vw-mo(width, 672); @include vw-pc(margin, 0 auto 50);}
+            .pt_consult-area {position: relative; width: 100%;}
+     
+            .pt_text-box {
+                @include vw-mo(left, 30);
+    
+                &__title {@include vw-mo(font-size, 36); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -.5);}
+                &__sub {@include vw-mo(margin-top, 4); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1.3); @include vw-mo(line-height, 32);}
+                &__sub strong {@include vw-mo(letter-spacing, -1.3);}
+                &__disc {@include vw-mo(font-size, 18); @include vw-mo(line-height, 22); @include vw-mo(letter-spacing, -.5);}
+                &__detail {@include vw-mo(width, 172); @include vw-mo(height, 60); @include vw-mo(margin-top, 17); @include vw-mo(border-radius, 100); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -.5);}
+            }
+            
+            // TV 전문상담 서비스 배너
+            .pt_consult-area {
+                .pt_text-box {
+                    @include vw-mo(left, 50);
+
+                    &__title {@include vw-mo(font-size, 29);}
+                    &__detail {margin-top: 0; @include vw-mo(margin-right, 8);}
+                    &__align {display: flex; flex-direction: row-reverse; align-items: flex-end; @include vw-mo(margin-top, 17);}
+                }
+            }
+         }
+    }
+}

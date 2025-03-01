@@ -1,0 +1,500 @@
+@charset "utf-8"; 
+
+/* SWIPER CSS */ 
+/* :root{ --swiper-theme-color:#007aff}.swiper-container{ margin-left:auto; margin-right:auto; position:relative; overflow:hidden; list-style:none; padding:0; z-index:1}.swiper-container-vertical>.swiper-wrapper{ -webkit-box-orient:vertical; -webkit-box-direction:normal; -webkit-flex-direction:column; -ms-flex-direction:column; flex-direction:column}.swiper-wrapper{ position:relative; width:100%; height:100%; z-index:1; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; -js-display:flex; display:flex; -webkit-transition-property:-webkit-transform; transition-property:-webkit-transform; transition-property:transform; transition-property:transform, -webkit-transform; -webkit-box-sizing:content-box; box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{ -webkit-transform:translate3d(0px, 0, 0); transform:translate3d(0px, 0, 0)}.swiper-container-multirow>.swiper-wrapper{ -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap}.swiper-container-multirow-column>.swiper-wrapper{ -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; -webkit-box-orient:vertical; -webkit-box-direction:normal; -webkit-flex-direction:column; -ms-flex-direction:column; flex-direction:column}.swiper-container-free-mode>.swiper-wrapper{ -webkit-transition-timing-function:ease-out; transition-timing-function:ease-out; margin:0 auto}.swiper-slide{ -webkit-flex-shrink:0; -ms-flex-negative:0; flex-shrink:0; width:100%; height:100%; position:relative; -webkit-transition-property:-webkit-transform; transition-property:-webkit-transform; transition-property:transform; transition-property:transform, -webkit-transform}.swiper-slide-invisible-blank{ visibility:hidden}.swiper-container-autoheight,.swiper-container-autoheight .swiper-slide{ height:auto}.swiper-container-autoheight .swiper-wrapper{ -webkit-box-align:start; -webkit-align-items:flex-start; -ms-flex-align:start; -ms-grid-row-align:flex-start; align-items:flex-start; -webkit-transition-property:height, -webkit-transform; transition-property:height, -webkit-transform; transition-property:transform, height; transition-property:transform, height, -webkit-transform}.swiper-container-3d{ -webkit-perspective:1200px; perspective:1200px}.swiper-container-3d .swiper-wrapper,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-cube-shadow{ -webkit-transform-style:preserve-3d; transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-slide-shadow-bottom{ position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none; z-index:10}.swiper-container-3d .swiper-slide-shadow-left{ background-image:-webkit-gradient(linear, right top, left top, from(rgba(0,0,0,0.5)), to(transparent)); background-image:linear-gradient(to left, rgba(0,0,0,0.5), transparent)}.swiper-container-3d .swiper-slide-shadow-right{ background-image:-webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0.5)), to(transparent)); background-image:linear-gradient(to right, rgba(0,0,0,0.5), transparent)}.swiper-container-3d .swiper-slide-shadow-top{ background-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.5)), to(transparent)); background-image:linear-gradient(to top, rgba(0,0,0,0.5), transparent)}.swiper-container-3d .swiper-slide-shadow-bottom{ background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(transparent)); background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), transparent)}.swiper-container-css-mode>.swiper-wrapper{ overflow:auto; scrollbar-width:none; -ms-overflow-style:none}.swiper-container-css-mode>.swiper-wrapper::-webkit-scrollbar{ display:none}.swiper-container-css-mode>.swiper-wrapper>.swiper-slide{ scroll-snap-align:start start}.swiper-container-horizontal.swiper-container-css-mode>.swiper-wrapper{ -webkit-scroll-snap-type:x mandatory; -ms-scroll-snap-type:x mandatory; scroll-snap-type:x mandatory}.swiper-container-vertical.swiper-container-css-mode>.swiper-wrapper{ -webkit-scroll-snap-type:y mandatory; -ms-scroll-snap-type:y mandatory; scroll-snap-type:y mandatory}:root{ --swiper-navigation-size:44px}.swiper-button-prev,.swiper-button-next{ position:absolute; top:50%; width:-webkit-calc(var(--swiper-navigation-size) / 44 * 27); width:calc(var(--swiper-navigation-size) / 44 * 27); height:var(--swiper-navigation-size); margin-top:-webkit-calc(-1 * var(--swiper-navigation-size) / 2); margin-top:calc(-1 * var(--swiper-navigation-size) / 2); z-index:10; cursor:pointer; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; -js-display:flex; display:flex; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; -webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center; color:var(--swiper-navigation-color, var(--swiper-theme-color))}.swiper-button-prev.swiper-button-disabled,.swiper-button-next.swiper-button-disabled{ opacity:0.35; cursor:auto; pointer-events:none}.swiper-button-prev:after,.swiper-button-next:after{ font-family:swiper-icons; font-size:var(--swiper-navigation-size); text-transform:none !important; letter-spacing:0; text-transform:none; font-variant:initial}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{ left:10px; right:auto}.swiper-button-prev:after,.swiper-container-rtl .swiper-button-next:after{ content:'prev'}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{ right:10px; left:auto}.swiper-button-next:after,.swiper-container-rtl .swiper-button-prev:after{ content:'next'}.swiper-button-prev.swiper-button-white,.swiper-button-next.swiper-button-white{ --swiper-navigation-color:#ffffff}.swiper-button-prev.swiper-button-black,.swiper-button-next.swiper-button-black{ --swiper-navigation-color:#000000}.swiper-button-lock{ display:none}.swiper-pagination{ position:absolute; text-align:center; -webkit-transition:300ms opacity; transition:300ms opacity; -webkit-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); z-index:10}.swiper-pagination.swiper-pagination-hidden{ opacity:0}.swiper-pagination-fraction,.swiper-pagination-custom,.swiper-container-horizontal>.swiper-pagination-bullets{ bottom:10px; left:0; width:100%}.swiper-pagination-bullets-dynamic{ overflow:hidden; font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{ -webkit-transform:scale(0.33); -ms-transform:scale(0.33); transform:scale(0.33); position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{ -webkit-transform:scale(1); -ms-transform:scale(1); transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{ -webkit-transform:scale(1); -ms-transform:scale(1); transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{ -webkit-transform:scale(0.66); -ms-transform:scale(0.66); transform:scale(0.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{ -webkit-transform:scale(0.33); -ms-transform:scale(0.33); transform:scale(0.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{ -webkit-transform:scale(0.66); -ms-transform:scale(0.66); transform:scale(0.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{ -webkit-transform:scale(0.33); -ms-transform:scale(0.33); transform:scale(0.33)}.swiper-pagination-bullet{ width:8px; height:8px; display:inline-block; -webkit-border-radius:100%; border-radius:100%; background:#000; opacity:0.2}button.swiper-pagination-bullet{ border:none; margin:0; padding:0; -webkit-box-shadow:none; box-shadow:none; -webkit-appearance:none; -moz-appearance:none; appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{ cursor:pointer}.swiper-pagination-bullet-active{ opacity:1; background:var(--swiper-pagination-color, var(--swiper-theme-color))}.swiper-container-vertical>.swiper-pagination-bullets{ right:10px; top:50%; -webkit-transform:translate3d(0px, -50%, 0); transform:translate3d(0px, -50%, 0)}.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{ margin:6px 0; display:block}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{ top:50%; -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%); width:8px}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{ display:inline-block; -webkit-transition:200ms transform, 200ms top; transition:200ms transform, 200ms top}.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{ margin:0 4px}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{ left:50%; -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); transform:translateX(-50%); white-space:nowrap}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{ -webkit-transition:200ms transform, 200ms left; transition:200ms transform, 200ms left}.swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{ -webkit-transition:200ms transform, 200ms right; transition:200ms transform, 200ms right}.swiper-pagination-progressbar{ background:rgba(0,0,0,0.25); position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{ background:var(--swiper-pagination-color, var(--swiper-theme-color)); position:absolute; left:0; top:0; width:100%; height:100%; -webkit-transform:scale(0); -ms-transform:scale(0); transform:scale(0); -webkit-transform-origin:left top; -ms-transform-origin:left top; transform-origin:left top}.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{ -webkit-transform-origin:right top; -ms-transform-origin:right top; transform-origin:right top}.swiper-container-horizontal>.swiper-pagination-progressbar,.swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{ width:100%; height:4px; left:0; top:0}.swiper-container-vertical>.swiper-pagination-progressbar,.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{ width:4px; height:100%; left:0; top:0}.swiper-pagination-white{ --swiper-pagination-color:#ffffff}.swiper-pagination-black{ --swiper-pagination-color:#000000}.swiper-pagination-lock{ display:none}.swiper-scrollbar{ -webkit-border-radius:10px; border-radius:10px; position:relative; -ms-touch-action:none; background:rgba(0,0,0,0.1)}.swiper-container-horizontal>.swiper-scrollbar{ position:absolute; left:1%; bottom:3px; z-index:50; height:5px; width:98%}.swiper-container-vertical>.swiper-scrollbar{ position:absolute; right:3px; top:1%; z-index:50; width:5px; height:98%}.swiper-scrollbar-drag{ height:100%; width:100%; position:relative; background:rgba(0,0,0,0.5); -webkit-border-radius:10px; border-radius:10px; left:0; top:0}.swiper-scrollbar-cursor-drag{ cursor:move}.swiper-scrollbar-lock{ display:none}.swiper-zoom-container{ width:100%; height:100%; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; -js-display:flex; display:flex; -webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; text-align:center}.swiper-zoom-container>img,.swiper-zoom-container>svg,.swiper-zoom-container>canvas{ max-width:100%; max-height:100%; object-fit:contain}.swiper-slide-zoomed{ cursor:move}.swiper-lazy-preloader{ width:42px; height:42px; position:absolute; left:50%; top:50%; margin-left:-21px; margin-top:-21px; z-index:10; -webkit-transform-origin:50%; -ms-transform-origin:50%; transform-origin:50%; -webkit-animation:swiper-preloader-spin 1s infinite linear; animation:swiper-preloader-spin 1s infinite linear; -webkit-box-sizing:border-box; box-sizing:border-box; border:4px solid var(--swiper-preloader-color, var(--swiper-theme-color)); -webkit-border-radius:50%; border-radius:50%; border-top-color:transparent}.swiper-lazy-preloader-white{ --swiper-preloader-color:#fff}.swiper-lazy-preloader-black{ --swiper-preloader-color:#000}@-webkit-keyframes swiper-preloader-spin{ 100%{ -webkit-transform:rotate(360deg); transform:rotate(360deg)}}@keyframes swiper-preloader-spin{ 100%{ -webkit-transform:rotate(360deg); transform:rotate(360deg)}}.swiper-container .swiper-notification{ position:absolute; left:0; top:0; pointer-events:none; opacity:0; z-index:-1000}.swiper-container-fade.swiper-container-free-mode .swiper-slide{ -webkit-transition-timing-function:ease-out; transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{ pointer-events:none; -webkit-transition-property:opacity; transition-property:opacity}.swiper-container-fade .swiper-slide .swiper-slide{ pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{ pointer-events:auto}.swiper-container-cube{ overflow:visible}.swiper-container-cube .swiper-slide{ pointer-events:none; -webkit-backface-visibility:hidden; backface-visibility:hidden; z-index:1; visibility:hidden; -webkit-transform-origin:0 0; -ms-transform-origin:0 0; transform-origin:0 0; width:100%; height:100%}.swiper-container-cube .swiper-slide .swiper-slide{ pointer-events:none}.swiper-container-cube.swiper-container-rtl .swiper-slide{ -webkit-transform-origin:100% 0; -ms-transform-origin:100% 0; transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-active .swiper-slide-active{ pointer-events:auto}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-prev,.swiper-container-cube .swiper-slide-next+.swiper-slide{ pointer-events:auto; visibility:visible}.swiper-container-cube .swiper-slide-shadow-top,.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right{ z-index:0; -webkit-backface-visibility:hidden; backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{ position:absolute; left:0; bottom:0px; width:100%; height:100%; background:#000; opacity:0.6; -webkit-filter:blur(50px); filter:blur(50px); z-index:0}.swiper-container-flip{ overflow:visible}.swiper-container-flip .swiper-slide{ pointer-events:none; -webkit-backface-visibility:hidden; backface-visibility:hidden; z-index:1}.swiper-container-flip .swiper-slide .swiper-slide{ pointer-events:none}.swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{ pointer-events:auto}.swiper-container-flip .swiper-slide-shadow-top,.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right{ z-index:0; -webkit-backface-visibility:hidden; backface-visibility:hidden} */
+
+/* PF HEADER BASIC */
+#container.type-visual .pf-tit-area { position:relative; }
+#container.type-visual .pf-tit-area .pf-tit { position:absolute; top:45%; right:0; bottom:0; left:0; padding: 0 5.208vw; width:1392px; line-height:1; margin:0 auto; font-weight:700; font-size:2.656vw; color:#fff; }
+#container.type-visual .pf-tit-area .slider-pf-visual .visual { height:360px; background-position: 50% 0 !important; }
+#container.type-visual .pf-tit-area .slider-pf-visual .visual.m { display:none; }
+
+/* PD common */
+.pf-container { display:flex; flex-wrap:wrap; max-width:1440px; margin:0 auto; }
+.pf-container .chk-form input[type="checkbox"]:checked + label::before { background:#2189FF url(https://www.samsung.com/sec/static/_images/common/icon-down-white.svg) center center no-repeat; background-size:14px auto; }
+.pf-container .chk-form input[type="checkbox"]:not(:disabled):checked:hover + label::before { background-color:#3BA7FF; }
+.pf-container .chk-form input[type="checkbox"]:checked:disabled + label::before { border-color:#D4E2F3; background:#D4E2F3 url(https://www.samsung.com/sec/static/_images/common/icon-down-white.svg) center center no-repeat; background-size:14px auto; }
+
+/* PF 상세검색 */
+.top-opt-detail-area { border-bottom:1px solid #D9D9D9; }
+.top-opt-detail-area .opt-detail-inner { display:flex; width:100%; max-width:1440px; min-height:60px; margin:0 auto; }
+.top-opt-detail-area .opt-detail-inner span { display:inline-block; color:#000; }
+.top-opt-detail-area .opt-detail-inner .box-result { width:18%; padding:19px 0 20px 24px; font-size:0; }
+.top-opt-detail-area .opt-detail-inner .box-result .search { line-height:1.31em; padding-left:24px; font-weight:700; font-size:16px; color:#000; letter-spacing:-0.01em; background:url('https://www.samsung.com/sec/static/_images/icon_dps/icon_search_options.svg') no-repeat 0 center; background-size:18px auto; pointer-events:none; }
+.top-opt-detail-area .opt-detail-inner .box-result .result { position:relative; line-height:1.33em; font-size:16px; margin-left:16px; padding-left:17px; letter-spacing:-0.01em; background:url('https://www.samsung.com/sec/static/_images/bg/wavelet_1x16.jpg') no-repeat 0 center; }
+.top-opt-detail-area .opt-detail-inner .box-result .result:after { content:""; position:absolute; top:50%; left:0; width:1px; height:16px; transform:translateY(-50%); background:#C8C8C8; }
+.top-opt-detail-area .opt-detail-inner .box-result .result em { display:inline-block; margin-left:12px; line-height:1.33em; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; font-weight:700; font-size:16px; letter-spacing:-0.01em; color:#2189FF; }
+.top-opt-detail-area .opt-detail-inner .box-option { display:flex; width:54%; padding-left:46px; }
+.top-opt-detail-area .opt-detail-inner .box-option .btn { position:relative; top:14px; width:80px; line-height:32px; margin:0 24px 0 0; padding:0 19px; }
+.top-opt-detail-area .opt-detail-inner .box-option .opt-area { width:calc(100% - 114px); padding:14px 0; font-size:0; }
+.top-opt-detail-area .opt-detail-inner .box-option .opt-area .txt { position:relative; line-height:32px; margin-right:24px; padding-right:24px; font-size:14px; }
+.top-opt-detail-area .opt-detail-inner .box-option .opt-area .txt:last-child { margin-left:0; }
+.top-opt-detail-area .opt-detail-inner .box-option .opt-area .txt button { position:absolute; top:50%; right:0; width:16px; height:16px; margin-left:8px; font-size:1px; color:transparent; transform:translateY(-50%); background:url('https://www.samsung.com/sec/static/_images/icon_dps/icon-16-midium-close.jpg') no-repeat; background-size:16px auto; }
+.top-opt-detail-area .opt-detail-inner .box-droplist { width:28%; padding-right:24px; text-align:right; }
+.top-opt-detail-area .opt-detail-inner .box-droplist .sort-droplist { position:relative; top:15px; display:inline-block; width:150px; }
+.top-opt-detail-area .opt-detail-inner .box-droplist .sort-droplist .droplist-button { padding-right:22px; font-weight:bold; font-size:16px; color:#000; border:0; text-align:right; }
+.top-opt-detail-area .opt-detail-inner .box-droplist .sort-droplist .droplist-button:before { right:0; }
+.top-opt-detail-area .opt-detail-inner .box-droplist .sort-droplist .droplist li { white-space:nowrap; }
+
+/* PF 품목 필터영역 – 상세항목 적용 */
+.pf-container .pf-prd-filter-area { width: 18%; padding: 36px 0 0 24px; }
+.pf-container .pf-prd-filter-area .filter-header,
+.pf-container .pf-prd-filter-area .filter-footer { display:none; }
+.pf-container .pf-prd-filter-area .list-filter > li { padding:30px 0; border-bottom:1px solid #D9D9D9; }
+.pf-container .pf-prd-filter-area .list-filter > li:first-child { padding-top:0; }
+.pf-container .pf-prd-filter-area .list-filter > li .btn-filter { position:relative; display:block; line-height:1.3em; font-size:18px; color:#000; font-weight:bold; letter-spacing:-0.01em; }
+.pf-container .pf-prd-filter-area .list-filter > li .btn-filter > span { line-height:1.3em; font-size:18px; color:#000; font-weight:bold; letter-spacing:-0.01em; vertical-align: baseline; }
+.pf-container .pf-prd-filter-area .list-filter > li .btn-filter:after { content:''; display:block; position:absolute; top:50%; right:6px; transform:translateY(-50%); width:16px; height:16px; background:url(https://www.samsung.com/sec/static/_images/common/icon-plus-filter.svg) no-repeat center; background-size:16px auto; }
+.pf-container .pf-prd-filter-area .list-filter > li.active .btn-filter:after { background-image:url(https://www.samsung.com/sec/static/_images/common/icon-minus-filter.svg); }
+.pf-container .pf-prd-filter-area .list-filter .list-box { display:none; }
+.pf-container .pf-prd-filter-area .list-filter .list-box > ul > li { padding:30px 0 0; }
+.pf-container .pf-prd-filter-area .list-filter > li.open .itm-color-object { display:inline-block; }
+.pf-container .pf-prd-filter-area .list-filter .list-box .filter-more { display:inline-block; margin:30px 0 0; background-color:transparent; font-size:14px; line-height:1.29em; color:#2189FF; font-weight:bold; text-align:left; letter-spacing:-0.01em; }
+.pf-container .pf-prd-filter-area .list-filter .range-box { position:relative; padding:30px 0 15px; vertical-align:middle; text-align:center; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .range-price { padding-top:15px; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .range-price:after { content:''; display:block; clear:both; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .range-price span { font-size:14px; line-height:18px; color:#000; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .range-price span:nth-child(1) { float:left; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .range-price span:nth-child(2) { float:right; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .slider-wrapper { position:relative; margin-top:3px; padding:0 14px; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .ui-slider { height:1px; position:relative; border-radius:1px; background:#d9d9d9; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .ui-widget.ui-widget-content { box-shadow:none; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .ui-slider-range { position:absolute; height:1px; border-radius:0; background:#000; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .ui-slider-range:after { content:''; width:100%; height:1px; background:#fff; position:absolute; top:0; left:0; opacity:0.3; }
+.pf-container .pf-prd-filter-area .list-filter .range-box .ui-state-default { top:50%; width:11px; height:11px; transform:translateY(-50%); border:1px solid #000 !important; border-radius:100%; background:#fff; }
+.pf-container .pf-prd-filter-area .list-filter .pf-color-sel .itm-color-list { display:flex; flex-wrap:wrap; margin-top: 17px; margin-bottom: -18px; }
+.pf-container .pf-prd-filter-area .list-filter .pf-color-sel .itm-color-list li { float:none; padding:16px 3px; text-align:center; width: calc(100% / 5 - 24px); }
+.pf-container .pf-prd-filter-area .list-filter .pf-color-sel .itm-color-list li ~ li { margin-left:30px; }
+.pf-container .pf-prd-filter-area .list-filter .pf-color-sel .itm-color-list li:nth-child(6n) { margin-left: 0; }
+.pf-container .pf-prd-filter-area .list-filter .pf-color-sel .itm-color-list li label { height:auto; }
+.pf-container .pf-prd-filter-area .list-filter .pf-color-sel .itm-color-list li em { display: none; }
+/* .pf-container .pf-prd-filter-area .list-filter .pf-color-sel .itm-color-list li .itm-name { display:block; padding-top:12px; line-height:1.3em; font-size:12px; letter-spacing:0; color:#000; } */
+
+/* PF 베스트 셀러 */    
+.pf-container .pf-prd-cardlist .ranking-area { position:relative; margin: 23px 0 60px; padding:65px 60px 60px; border:2px solid #EBEBEB; border-radius:20px; }
+.pf-container .pf-prd-cardlist .ranking-area .title { position:absolute; top:-23px; left:50%; padding:0 22px; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; font-weight: bold; font-size:36px; color:#000; line-height:1.33em; letter-spacing:0.1em; text-align:center; transform:translateX(-50%); background:#fff; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking { display:flex; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking li { position:relative; width:calc(33.33% - 40px); padding-top:33px; font-size:0; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking li ~ li { margin-left:60px; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .badge { position:absolute; top:0; left:0; text-align:center; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .badge .top { display:inline-block; color:#000; font-size:14px; line-height:1.33em; font-weight:bold; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .badge .rank { display:block; margin-top:-7px; color:#000; font-size:30px; line-height:1.33em; font-weight:bold; letter-spacing:0; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking li:before { content:""; position:absolute; right:0; bottom:0; left:0; z-index:-1; height:65.14%; background:#F7F7F7; border-radius:20px; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking li.top-ranking:before { background:linear-gradient(#f7f5e9 0%, #f1f4f0 58.79%, #eaf3f6 100%); }
+.pf-container .pf-prd-cardlist .ranking-area .ranking li.top-ranking .badge .top,
+.pf-container .pf-prd-cardlist .ranking-area .ranking li.top-ranking .badge .rank { color:#2189FF; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .btn-good { position:absolute; top:10px; right:0; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .img { display:block; min-height:220px; text-align:center; margin: 0 -40px; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .img img { display:inline-block; margin:0 auto; filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');}
+.pf-container .pf-prd-cardlist .ranking-area .ranking .link { display:block; margin-top:8px;  padding:0 40px 36px; text-align:center; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .link .prd-name { display:block; height:62px; font-size:22px; line-height:1.34em; color:#000; font-weight:bold; letter-spacing:0; overflow:hidden; text-overflow:ellipsis; word-break:keep-all; display:-webkit-box !important; -webkit-line-clamp:2; -webkit-box-orient:vertical; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .link .prd-num { display:block; color:#707070; font-size:12px; line-height:1.3em; font-weight:normal; padding-top:10px; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .link .prd-price { display:block; padding-top:4px;  }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .link .prd-price .name { display:inline-block; line-height:1.3em; margin-right:10px; margin-bottom:3px; font-size:16px; color:#000; letter-spacing:0; vertical-align:bottom; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .link .prd-price .unit { display:inline-block; line-height:1.3em; margin-left:4px; margin-bottom:3px; font-weight:bold; font-size:16px; color:#000; letter-spacing:0; vertical-align:bottom; }
+.pf-container .pf-prd-cardlist .ranking-area .ranking .link .prd-price em { display:inline-block; line-height:1.3em; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; font-weight:bold; font-size:20px; color:#000; letter-spacing:0; vertical-align:bottom; }
+
+/* PF Product Card */
+.pf-container .pf-prd-cardlist { width:82%; padding:35px 24px 100px 46px; }
+.pf-container .pf-prd-cardlist .list-product {}
+.pf-container .pf-prd-cardlist .list-product .list { position: relative; display:flex; flex-wrap:wrap; margin:-15px; }
+.pf-container .pf-prd-cardlist .list-product .list > li { width:33.33%; height:inherit; padding:15px; text-align:center; }
+.pf-container .pf-prd-cardlist .list-product .list .item-inner {position:relative;}
+.pf-container .pf-prd-cardlist .list-product li .link-compare { position:relative; padding-left:30px; color:#000; font-size:14px; line-height:1.3em; letter-spacing:0; font-weight:bold; }
+.pf-container .pf-prd-cardlist .list-product li .link-compare:before { content:''; position:absolute; top:50%; left:0; width:23px; height:16px; background:url(https://www.samsung.com/sec/static/_images/common/icon-compare.svg) no-repeat center; background-size:100% auto; transform:translateY(-50%); }
+.pf-container .pf-prd-cardlist .list-product li .link-compare.disabled:before {background-image:url(https://www.samsung.com/sec/static/_images/common/icon-compare-disabled.svg);}
+.pf-container .pf-prd-cardlist .list-product li.visual { width:33.33%; }
+.pf-container .pf-prd-cardlist .list-product li.visual-col2 { width:66.66%; }
+.pf-container .pf-prd-cardlist .list-product li.visual .visual-inner { overflow:hidden; position:relative; height:100%; padding-bottom:36px; border-radius:20px; background:#000; }
+.pf-container .pf-prd-cardlist .list-product li.visual .img { position:relative; width:100%; min-height:560px; }
+.pf-container .pf-prd-cardlist .list-product li.visual .img:after { content:""; position:absolute; right:0; bottom:0; left:0; height:25%; background:linear-gradient(rgba(0, 0, 0, 0) 0%, #000 100%);}
+.pf-container .pf-prd-cardlist .list-product li.visual .img img { width:100%; }
+.pf-container .pf-prd-cardlist .list-product li.visual .img img.mo { display:none; }
+.pf-container .pf-prd-cardlist .list-product li.visual .visual-detail {position: absolute; bottom: 35px; left: 0; right: 0;}
+.pf-container .pf-prd-cardlist .list-product li.visual .info p { display:block; overflow:hidden; text-overflow:ellipsis; word-wrap:break-word; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+.pf-container .pf-prd-cardlist .list-product li.visual .info .ware { padding-bottom:6px; line-height:1.45em; font-weight:bold; font-size:16px; color:#fff; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.visual .info .name { line-height:1.28em; font-weight:bold; font-size:34px; color:#fff; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.visual .info .data { padding-top:12px; line-height:1.33em; font-size:14px; color:rgba(255, 255, 255, 0.8); letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.visual .btns { padding-top:36px; }
+.pf-container .pf-prd-cardlist .list-product li.visual .btns li { font-size:0; }
+.pf-container .pf-prd-cardlist .list-product li.visual .btns li ~ li { margin-top:24px; }
+.pf-container .pf-prd-cardlist .list-product li.visual .btns .btn { width:290px; }
+.pf-container .pf-prd-cardlist .list-product li.visual .btns .link-compare.type-wht { display:inline-block; line-height:1.33em; font-weight:bold; font-size:14px; color:#fff; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.visual .btns .link-compare.type-wht:before { margin-right:6px; background-image:url(https://www.samsung.com/sec/static/_images/common/icon-compare02.svg); }
+.pf-container .pf-prd-cardlist .list-product li.type-video .img .btn-video { position:absolute; top:50%; left:50%; z-index:1; width:90px; height:90px; opacity:0.8; transition:0.5s all; transform:translate(-50%, -50%); background:url(https://www.samsung.com/sec/static/_images/common/icon-play-line-wht.svg) center center no-repeat; background-size:118px auto; }
+.pf-container .pf-prd-cardlist .list-product li.type-video .img .btn-video:hover { opacity:1; transition:0.5s all; }
+.pf-container .pf-prd-cardlist .list-product li.item .item-inner {height:100%; padding:28px 30px 18px; font-size:0; background:#F7F7F7; border-radius:20px;}
+.pf-container .pf-prd-cardlist .list-product li.item .card-flag { position:relative; padding:4px 0 0; font-size:0; text-align:left; position: absolute; left: 15px; right: 15px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-flag:after {content:"";display:block;clear:both;}
+.pf-container .pf-prd-cardlist .list-product li.item .card-flag span { position:relative; float:left; line-height:1.33em; font-weight:bold; font-size:14px; color:#2189FF; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-flag span ~ span { margin-left:9px; padding-left:11px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-flag span ~ span:after { content:""; position:absolute; top:50%; left:0; width:1px; height:12px; background:#ddd; transform:translateY(-50%); }
+.pf-container .pf-prd-cardlist .list-product li.item .card-flag span.soldout { color:#999; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-flag .btn-good { float: right; background:transparent; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-img { overflow:hidden; /*display:block;*/ height: 350px; margin: 0 -10px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-img img { width:100%; max-width: 100%; }
+.pf-container .pf-prd-cardlist .list-product li.item .pf-color-sel ~ .pf-opt-sel { margin-top:16px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option { padding-top: 16px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option .set-opt { display:flex; padding:0 16px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option .set-opt ~ .set-opt { margin-top:16px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option .set-opt .opt-tit { width:40%; line-height:1.33em; font-size:14px; color:#000; letter-spacing:0; text-align:left; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option .set-opt .wrap-droplist { width:60%; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option .set-opt .wrap-droplist .droplist { text-align: right; border-radius: 0 0 10px 10px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option .set-opt .wrap-droplist .droplist-button { min-height:18px; padding-right:26px; font-weight:bold; color:#000; text-align:right; border:none; background:transparent; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option .set-opt .wrap-droplist .droplist-button:before { right:0; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-option .set-opt .wrap-droplist .droplist { border-color: #b2b2b2; top:calc(100% + 6px);}
+
+.pf-container .pf-prd-cardlist .list-product li.item .card-detail {padding-top: 24px;}
+.pf-container .pf-prd-cardlist .list-product li.item .card-detail .prd-name { display:block; display:-webkit-box; overflow:hidden; height:62px; line-height:1.33em; font-weight:bold; font-size:22px; color:#000; letter-spacing:0; word-break:keep-all; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient: vertical; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-detail .prd-num { display:block; padding-top:2px; line-height:1.3em; font-size:12px; color:#707070; letter-spacing:0; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price.price-type2 {display: flex;align-items: flex-end;}
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail { width: 100%; padding-top:19px; font-size:0; text-align:center; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .sale { display:inline-block; margin-right:12px; margin-bottom:3px; line-height:1.33em; font-weight:normal; font-size:16px; color:#707070; vertical-align:bottom; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic { display:inline-block; position:relative; font-weight: bold;}
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic em { font-family:"Samsung Sharp Sans", 'SamsungOneKorean'; line-height:1.25em; font-weight:bold; font-size:24px; letter-spacing:0; color:#000; vertical-align:bottom; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .unit { display:inline-block; line-height:1.33em; margin-bottom:3px; margin-left:4px; font-weight:bold; font-size:16px; letter-spacing:0; color:#000; vertical-align:middle; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .only { display:inline-block; height:28px; margin-left:-3px; padding:0 15px; text-align:center; border-radius:5px; background:#2189FF; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .only span { display:inline-block; line-height:28px; padding-left:16px; font-weight:bold; font-size:16px; color:#fff; letter-spacing:0; background:url(https://www.samsung.com/sec/static/_images/common/icon-lock.svg) 0 center no-repeat; background-size:11px auto; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .btn-downtool { width:14px; height:14px; margin:0 0 3px 3px; background:transparent url(https://www.samsung.com/sec/static/_images/common/icon-tooltip-down.svg) no-repeat center; background-size:14px auto; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .btn-downtool.open {background-image: url(https://www.samsung.com/sec/static/_images/common/icon-tooltip-up.svg);}
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .set-count { margin-top:16px; padding:16px 24px; border:1px solid #EBEBEB; border-radius:10px; background:#fff; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .set-count .tit { display:block; line-height:1.33em; font-weight:normal; font-size:16px; color:#707070; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .set-count ul { padding-top:16px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .set-count ul li { display:flex; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .set-count ul li ~ li { margin-top:6px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .set-count ul li .count { width:40%; line-height:1.33em; font-size:14px; color:#000; letter-spacing:0; text-align:left; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .set-count ul li .price { width:60%; line-height:1.33em; font-weight:bold; font-size:14px; color:#000; letter-spacing:0; text-align:right; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .box-tip { display:none; position:absolute; right:-12px; top:30px; padding:16px; border:1px solid #000; border-radius:10px; background:#fff; z-index:1;}
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip { min-width:196px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li { display:flex; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li ~ li { margin-top:6px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li span,
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li del { line-height:1.29em; font-size:14px; color:#222; letter-spacing:-0.02em; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li .tit { width:30%; text-align:left; font-weight: normal; color:#707070; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li .price { width:70%; text-align:right; font-weight: normal; color:#707070; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li.total { margin-top:11px; padding-top:12px; border-top:1px solid #DDDDDD; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li.total .tit { font-weight:bold; color:#000; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail .pic .box-tip ul li.total .price { font-weight:bold; color:#000; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail.type-list .list-price { margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid #D9D9D9; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail.type-list .list-price li { display:flex; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail.type-list .list-price li ~ li { margin-top:6px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail.type-list .list-price li .tit { width:50%; line-height:21px; font-size:16px; color:#707070; letter-spacing:-0.025em; text-align:left; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail.type-list .list-price li .sale { width:50%; line-height:21px; margin:0; text-align:right; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail.type-list .list-price li.support { margin-top:12px; padding-top:12px; border-top:1px solid #EBEBEB; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail.type-list .pic { display:block; text-align:right; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .price-detail.type-list .pic .tit { float:left; line-height:21px; margin-top:6px; font-weight:bold; font-size:16px; color:#444; letter-spacing:-0.025em; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .point-detail { padding-top:6px; font-size:0; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .point-detail .btn-underline { background-color:transparent; font-size: 14px; font-weight: normal; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .point-detail .expect { display:inline-block; line-height:1.32em; font-size:14px; color:#000; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-price .point-detail .point { display:inline-block; margin-left:9px; line-height:1.32em; font-size:14px; color:#2189FF; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase {position: relative; padding:12px 0 48px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .spec ul { display:flex; justify-content:center; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .spec ul li { width:33.33%; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .spec ul li .icon { display:inline-block; width:30px; height:30px; background-repeat:no-repeat; background-size:30px auto; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .spec ul li .txt { display:block; overflow:hidden; line-height:1.25em; padding-top:4px; font-size:12px; color:#707070; letter-spacing:0; text-overflow:ellipsis; word-wrap:break-word; display:-webkit-box !important; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-break:keep-all; }
+
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .message-list {text-align: left;}
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .message-list li { 
+	position: relative;
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .message-list li:after {
+	content:"";
+	position: absolute;
+	top: 8px; left: 0;
+	width: 2px; height: 2px;
+	background: #333;
+}
+
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .compare {position: absolute; bottom: 0; right: 0; left: 0; padding-top: 16px; border-top:1px solid #D9D9D9; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .compare:after { content:""; display:block; clear:both; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .compare .link-compare { float:left; cursor: pointer; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .compare .link-review { float:right; position:relative; padding-left:22px; color:#000; font-size:14px; line-height:19px; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-purchase .compare .link-review:before { content:''; display:block; clear:both; position:absolute; left:0; width:16px; height:16px; background:url(https://www.samsung.com/sec/static/_images/common/icon-star.svg) no-repeat center; background-size:100% auto; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-btn { padding-top:18px; }
+.pf-container .pf-prd-cardlist .list-product li.item .card-btn .btn { width:100%; margin:0; }
+.pf-container .pf-prd-cardlist .list-product li.banner { width:100%; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner { position:relative; overflow:hidden; border-radius:20px; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner img.mo { display:none; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner img { width:100%; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner .banner-info { position:absolute; top:0; right:0; bottom:0; left:0; text-align:right; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner .banner-info:before { content:""; display:inline-block; width:0; height:100%; vertical-align:middle; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner .banner-info .banner-info-inner { display:inline-block; width:50%; text-align:left; vertical-align:middle; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner .banner-info .sub { line-height:1.33em; font-weight:bold; font-size:16px; color:#000; letter-spacing:0; word-break:keep-all; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner .banner-info .tit { display:block; line-height:1.33em; padding-top:6px; font-family:'Samsung Sharp Sans', 'SamsungOneKorean'; font-weight:bold; font-size:30px; color:#000; letter-spacing:0; word-break:keep-all; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner .banner-info .date { line-height:1.3em; padding-top:12px; font-size:14px; color:#707070; letter-spacing:0; }
+.pf-container .pf-prd-cardlist .list-product li.banner .banner-inner .banner-info .btn { margin:40px 0 0; }
+
+/* color common */
+.pf-color-sel { text-align:center; }
+.pf-color-sel .itm-color-list { display:inline-block; }
+.pf-color-sel .itm-color-list:after { content:''; display:block; clear:both; }
+.pf-color-sel .itm-color-list li { float:left; margin: 0; }
+.pf-color-sel .itm-color-list li a { display:block; }
+.pf-color-sel .itm-color-list li input[type="radio"]:checked + label .itm-color-object:after,
+.pf-color-sel .itm-color-list li input[type="checkbox"]:checked + label .itm-color-object:after { content:''; position:absolute; top:50%; left:50%;  width:20px; height:20px; border:1px solid #000; border-radius:50%; transform:translate(-50%, -50%); }
+.pf-color-sel .itm-color-list .itm-color-object { margin:0; }
+.pf-color-sel .itm-color-list .itm-color-object:before { top:0; left:0; width:100%; height:100%; opacity:0.15; box-sizing:border-box; }
+.pf-color-sel .itm-color-list label { height:auto; }
+.pf-color-sel .itm-color-list li ~ li { margin-left:10px; }
+
+.pf-opt-sel {position: relative; text-align: center; overflow: hidden;}
+.pf-opt-sel ~ .pf-opt-sel { margin-top: 16px;}
+.pf-opt-sel .filter-slick {display: inline-block;}
+.pf-opt-sel .filter-slick ul {display: inline-block; white-space: nowrap;}
+.pf-opt-sel .filter-slick ul.swiper-wrapper {display: flex; white-space: unset;}
+.pf-opt-sel .filter-slick li { display: inline-block; width: auto; font-size:0; }
+.pf-opt-sel.slideOn .slide-nav {display: block;}
+.pf-opt-sel.slideOn .filter-slick {display: block; margin: 0 26px; overflow: hidden;}
+.pf-opt-sel .slide-nav {display: none;}
+.pf-opt-sel .swiper-container-initialized .slide-nav {display: block;}
+.pf-opt-sel [class*="btn-"] { position:absolute; top:0; width:28px; height:28px; font-size:0; z-index: 10; outline: none;}
+.pf-opt-sel .btn-prev { left:-1px; background:url('https://www.samsung.com/sec/static/_images/common/icon-slick-prev.svg') center center no-repeat; background-size:16px auto; }
+.pf-opt-sel .btn-next { right:-1px; background:url("https://www.samsung.com/sec/static/_images/common/icon-slick-next.svg") center center no-repeat; background-size:14px auto; }
+.pf-opt-sel [class*="disabled"] {opacity: .4;}
+.pf-opt-sel input[type="radio"]{ position:absolute; width:1px; height:1px; clip:rect(1px, 1px, 1px, 1px); clip-path:inset(50%); border:0; overflow:hidden; }
+.pf-opt-sel label {display: inline-block; height:28px;}
+.pf-opt-sel li span { display: inline-block; min-width: 70px; height:28px; margin: 0 5px; padding: 6px 12px 0; text-align:center; font-weight:bold; font-size:14px; color:#000; cursor:pointer; border-radius:14px; border:1px solid #ddd; background:#fff; white-space: nowrap;}
+.pf-opt-sel input[type="radio"]:checked + label span { border:1px solid #2189FF; box-shadow:0 0 0 0 #000 inset; }
+
+/* PF-element : More Button */
+.pf-btn-box { padding-top:36px; text-align:center; }
+.pf-btn-box .btn.btn-type1.btn-d { padding: 0 16px; }
+.pf-btn-box .btn.btn-type1.btn-d:after{ content: ""; margin-left: 9px; margin-top: -2px; display: inline-block; vertical-align: middle; width: 16px; height: 16px; background: url(https://www.samsung.com/sec/static/_images/common/icon-search-arr.svg) center center no-repeat; background-size: 100% auto; -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+
+/* PF-element : Disclaimer */
+.pf-disclaimer { background:#F7F7F7; }
+.pf-disclaimer .wrap-disc { max-width:1440px; margin:0 auto; padding: 50px; letter-spacing: 0em; font-family: 'SamsungOneKorean','dotum',sans-serif; font-size: 0.85em; line-height: 1.5em; }
+.pf-disclaimer ul li { line-height:1.3em; font-size:12px; color:#707070; letter-spacing:-0.02em; }
+.pf-disclaimer ul li ~ li { margin-top:16px; }
+.pf-disclaimer a {color: #1428a0; text-decoration:underline;font-size:inherit;line-height:inherit;}
+
+/* PF-element : 비교하기 */
+.pf-compare { display:none; position:fixed; bottom:-50%; left:0; right:0; z-index:100; background:#fff; box-shadow:0px -5px 5px rgba(0, 0, 0, 0.05); }
+.pf-compare .compare-inner { position: relative; max-width:1440px; margin:0 auto; padding:24px 0; }
+.pf-compare .compare-inner .compare-content { padding: 0 234px 0 24px; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare {position: relative; height: 118px; overflow: hidden; padding: 0 34px;}
+.pf-compare .compare-inner .compare-content .slider-prd-compare .slick-arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	width: 26px; height: 26px;
+	margin-top: -13px;
+	background: url('https://www.samsung.com/sec/static/_images/common/icon-slide-nav.svg') no-repeat 50% 50%;
+	font-size: 0;
+}
+.pf-compare .compare-inner .compare-content .slider-prd-compare .slick-prev {
+	left: 0;
+	transform: rotate(180deg);
+}
+.pf-compare .compare-inner .compare-content .slider-prd-compare .slick-next {right: 0;}
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd { float: left; width:33.33%;}
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .box {display:flex; position:relative; margin: 0 12px; padding:18px; border-radius:20px; border:1px solid #ddd; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .prd-img { display:inline-block; width:80px; height:80px; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .prd-img img { width:100%; max-width:100%; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .prd-info { width:calc(100% - 80px); padding:0 30px 0 12px; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .prd-info .name { display:block; overflow:hidden; max-width:100%; line-height:21px; padding-bottom:18px; font-weight:bold; font-size:16px; color:#010101; letter-spacing:-0.01em; text-overflow:ellipsis; white-space:nowrap; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .prd-info .serial { display:block; overflow:hidden; line-height:16px; padding-bottom:6px; font-size:12px; color:#707070; text-overflow:ellipsis; white-space:nowrap; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .prd-info .price { display:inline-block; line-height:18px; font-weight:bold; font-size:14px; color:#000; letter-spacing:0; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .prd-info .price em { line-height:18px; margin-left:3px; font-weight:bold; font-size:14px; color:#000; letter-spacing:0; }
+.pf-compare .compare-inner .compare-content .slider-prd-compare .prd .prd-delete { position:absolute; top:20px; right:18px; width:16px; height:16px; background:url(https://www.samsung.com/sec/static/_images/common/icon-close-mid.svg) 50% 50% no-repeat; background-size:16px auto; }
+.pf-compare .compare-inner .compare-btns {position: absolute; top: 0; right: 24px; bottom: 0;}
+.pf-compare .compare-inner .compare-btns:before { content:""; display:inline-block; width:0; height:100%; vertical-align:middle; }
+.pf-compare .compare-inner .compare-btns ul { display:inline-block; vertical-align:middle; }
+.pf-compare .compare-inner .compare-btns ul li { text-align:center; }
+.pf-compare .compare-inner .compare-btns ul li ~ li { margin-top:18px; }
+.pf-compare .compare-inner .compare-btns ul li .btn { margin:0; }
+
+/* PF-element : 비교하기 레이어팝업 */
+.layer-pf-compare { max-width:1156px; }
+.layer-pf-compare .layer-header {margin-bottom: 18px;}
+.layer-pf-compare .layer-content { 
+	margin-top: 18px;
+	padding: 0;
+	max-height: calc(100vh - 420px);
+	overflow-x: hidden;
+}
+.layer-pf-compare .compare-item-thumb .list {
+	margin: 0 -13px;
+	font-size: 0;
+}
+.layer-pf-compare .compare-item-thumb li {
+	display: inline-block;
+	width: 16.66%;
+	text-align: center;
+}
+.layer-pf-compare .compare-item-thumb .box {
+	position: relative;
+	margin: 0 13px;
+	background: #F7F7F7;
+	border: 1px solid #EBEBEB;
+	border-radius: 10px;
+}
+.layer-pf-compare .compare-item-thumb .active {
+	background: #fff;
+	border-color: #2189FF;
+}
+.layer-pf-compare .compare-item-thumb .btn-sel {
+	width: 100%; height: 90px;
+	background: none;
+}
+.layer-pf-compare .compare-item-thumb .btn-del {
+	position: absolute;
+	top: 6px; right: 6px;
+	width: 20px; height: 20px;
+	background: url('https://www.samsung.com/sec/static/_images/common/icon-close.svg') no-repeat 50% 50%;
+	background-size: 8px;
+	font-size: 0;
+}
+.layer-pf-compare .compare-item-thumb .btn-add {
+	width: 100%; height: 90px;
+	background: none;
+	color: #707070;
+	font-size: 12px;
+}
+.layer-pf-compare .compare-item-thumb .btn-add:before {
+	content: "";
+	display: block;
+	width: 16px; height: 16px;
+	margin: 10px auto;
+	background: url('https://www.samsung.com/sec/static/_images/common/icon-add.svg') no-repeat 50% 50%;
+	background-size: cover;
+}
+.layer-pf-compare .compare-item-thumb .thumb {
+	display: block;
+	width: 45px; height: 45px;
+	margin: 0 auto;
+}
+.layer-pf-compare .compare-item-thumb .thumb img {width: 100%; height: 100%;}
+.layer-pf-compare .compare-item-thumb .name {
+	display: block;
+	margin: 6px 10px 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.layer-pf-compare .slider-compare-detail {position: static;}
+.layer-pf-compare .slider-compare-detail .row {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -12px;
+}
+.layer-pf-compare .slider-compare-detail .set {width: 33.33%; height: inherit;}
+.layer-pf-compare .slider-compare-detail .set .box {
+	position: relative;
+	height: 100%;
+	margin: 0 12px;
+}
+.layer-pf-compare .slider-compare-detail .set .prd-basic .prd-img { width:212px; height:212px; margin:0 auto; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .prd-img.empty { position:relative; text-align:center }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .prd-img.empty:after {
+	content:"";
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	background:url(https://www.samsung.com/sec/static/_images/common/bg-box-dash.svg) no-repeat;
+	background-size:100% auto;
+}
+.layer-pf-compare .slider-compare-detail .set .prd-basic .prd-img.empty:before { content:""; display:inline-block; width:0; height:100%; vertical-align:middle; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .prd-img.empty p { display:inline-block; line-height:1.36em; font-weight:bold; font-size:14px; color:#707070; letter-spacing:0; vertical-align:middle; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .prd-img img { width:100%; max-width:100%; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .prd-name { 
+	display: flex;
+	height: 54px;
+	margin-top: 14px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.3;
+}
+.layer-pf-compare .slider-compare-detail .set .prd-basic .option {height: 28px; margin-top: 15px;}
+.layer-pf-compare .slider-compare-detail .set .prd-basic .pf-color-sel { padding: 5px 0 0; font-size:0; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .pf-color-sel .itm-color-list label { height:auto; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .pf-color-sel .itm-color-list label .itm-color-object { margin:0; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .pf-color-sel .itm-color-list li ~ li { margin-left:10px; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .rate { margin-top:12px; text-align:center; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .rate .link-review { position:relative; padding-left:22px; color:#000; font-size:14px; line-height:19px; letter-spacing:0; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .rate .link-review:before { content:''; position:absolute; top:0; left:0; width:16px; height:16px; background:url(https://www.samsung.com/sec/static/_images/common/icon-star.svg) no-repeat center; background-size:100% auto; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .price { margin-top:18px; text-align:center; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .price ul li del { display:inline-block; line-height:18px; font-size:16px; color:#707070; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .price ul li strong { display:inline-block; line-height:21px; font-weight:bold; font-size:16px; color:#000; }
+.layer-pf-compare .slider-compare-detail .set .prd-basic .price ul li ~ li { margin-top:2px; }
+.layer-pf-compare .slider-compare-detail .set { position:relative; margin-top:44px; }
+.layer-pf-compare .slider-compare-detail .row ~ .row {margin-top: 48px;}
+.layer-pf-compare .slider-compare-detail .spec-tit { position:absolute; top:0; right:0; left:18px; line-height:26px; font-weight:bold; font-size:20px; color:#000; letter-spacing:0;}
+.layer-pf-compare .slider-compare-detail .spec-tit .btn-tooltop-type3 { width:18px; height:18px; margin:4px 0 0 6px; background-size:18px auto; vertical-align: 5px; }
+.layer-pf-compare .slider-compare-detail .set .box-spec-detail { height: 100%; padding:24px; border-radius:10px; background:#F7F7F7; }
+.layer-pf-compare .slider-compare-detail .set .box-spec-detail ul li { min-height:49px; }
+.layer-pf-compare .slider-compare-detail .set .box-spec-detail ul li ~ li { margin-top:24px; }
+.layer-pf-compare .slider-compare-detail .set .box-spec-detail ul li strong { display:block; line-height:25px; font-family:"Samsung Sharp Sans", 'SamsungOneKorean'; font-weight:700; font-size:20px; color:#000; letter-spacing:0; }
+.layer-pf-compare .slider-compare-detail .set .box-spec-detail ul li .tit { display:block; line-height:18px; padding-top:6px; font-size:14px; color:#000; letter-spacing:0; }
+
+.layer-pf-select .select-wrap { overflow: hidden; border-radius: 6px; border: 1px solid #ddd; }
+.layer-pf-select .select-wrap ul { max-height: 268px; overflow-y: auto; scrollbar-width:thin; scrollbar-color:rgba(0,0,0,.2); scrollbar-base-color:transparent; scrollbar-face-color:#ccc; scrollbar-highlight-color:transparent; scrollbar-track-color:transparent; scrollbar-arrow-color:#fff; scrollbar-shadow-color:#ccc; }
+.layer-pf-select .select-wrap ul:hover { scrollbar-color:rgba(0,0,0,.5); }
+.layer-pf-select .select-wrap ul::-webkit-scrollbar { width:4px; background-color:transparent; }
+.layer-pf-select .select-wrap ul::-webkit-scrollbar-button { display:none; }
+.layer-pf-select .select-wrap ul::-webkit-scrollbar-thumb { border-radius:2em; background-color:rgba(0,0,0,.2); }
+.layer-pf-select .select-wrap ul:hover::-webkit-scrollbar-thumb,
+.layer-pf-select .select-wrap ul::-webkit-scrollbar-thumb:hover { background-color:rgba(0,0,0,.5); }
+.layer-pf-select .select-wrap li { position:relative;}
+.layer-pf-select .select-wrap label {display: block;}
+.layer-pf-select .select-wrap input[type="radio"] {position: absolute; opacity: 0;}
+.layer-pf-select .select-wrap label > span {
+	display: flex;
+	align-items: center;
+	height: 57px;
+	padding: 0 23px;
+	cursor: pointer;
+}
+.layer-pf-select .select-wrap input[type="radio"]:checked + span {
+	background: #F7F7F7;
+	font-weight: bold;
+}
+.layer-pf-select .select-wrap input[type="radio"]:disabled + span {color: #DDD;}
+
+
+/* tooltip */
+.tooltip-compare { width:380px; left:0 !important; transform:none !important; }
+.tooltip-compare .tooltip-content { max-height:380px; }
+.tooltip-content .list-title ~ .list-title { margin-top:24px; }
+.tooltip-content .list-title .tit { display:block; padding-bottom:10px; line-height:18px; font-weight:bold; font-size:14px; color:#000; letter-spacing:0; }
+.tooltip-content .list-title ul li { line-height:1.38em; font-weight:normal; font-size:14px; color:#444; letter-spacing:0; }
+
+/* 20201016 비교하기 팝업 내 툴팁 */
+.layer-pf-compare .layer-content .compare-item-wrap .slider-compare-detail .row .spec-tit .tooltip-compare {
+	position: absolute;
+	top: 30px !important;
+	left: 0 !important; 
+	width: 380px !important;
+}
+.layer-pf-compare .layer-content .compare-item-wrap .slider-compare-detail .row .spec-tit .btn-tooltop-type3 {
+	vertical-align: top;
+}
+/* // 20201016 비교하기 팝업 내 툴팁 */
+
+/* 전담자몰 HEADER */
+#container.type-visual .pf-tit-area.type-desc .pf-tit { top:124px; padding:0 24px; }
+#container.type-visual .pf-tit-area.type-desc .box-desc { position:absolute; top:219px; right:0; left:0; max-width:1440px; margin:0 auto; padding:0 24px; }
+#container.type-visual .pf-tit-area.type-desc .box-desc ul li:before { content:"·"; margin-right:6px; }
+#container.type-visual .pf-tit-area.type-desc .box-desc ul li ~ li { margin-top:6px; }
+#container.type-visual .pf-tit-area.type-desc .box-desc ul li,
+#container.type-visual .pf-tit-area.type-desc .box-desc .extra { line-height:18px; margin-top:6px; font-size:14px; color:#fff; letter-spacing:0; opacity:0.7; }
+
+/* 전담자몰 Product Card */
+.excv-container { padding-bottom:100px; }
+.excv-container .pf-prd-cardlist { width:100%; padding:36px 24px 0; }
+.excv-container .pf-prd-cardlist .list-product { padding-top:0; }
+.excv-container .pf-prd-cardlist .list-product .list > li { width:25%; }
+.excv-container .pf-prd-cardlist .list-product li.item .item-inner { position:relative; padding-bottom:252px; }
+.excv-container .pf-prd-cardlist .list-product li.item .card-detail { position:absolute; bottom:146px; right:30px; left:30px; }
+.excv-container .pf-prd-cardlist .list-product li.item .card-price { position:absolute; bottom:100px; right:30px; left:30px; }
+.excv-container .pf-prd-cardlist .list-product li.item .card-btn { position:absolute; bottom:36px; right:30px; left:30px; padding-top:24px; }
+

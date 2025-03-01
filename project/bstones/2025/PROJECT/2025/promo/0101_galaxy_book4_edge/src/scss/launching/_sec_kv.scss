@@ -1,0 +1,61 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+.galaxy_book4_edge_launching {
+    .sec_kv {
+        .pt_kv {
+            position: relative;
+
+            &__title {
+                z-index: 1; position: absolute; @include vw-mo(top, 51); @include vw-mo(left, 34);
+
+                &--main {@include vw-mo(margin-bottom, 7); @include vw-mo(font-size, 30); @include vw-mo(line-height, 40); font-weight: 700; letter-spacing: 0;}
+                &--sub {@include vw-mo(margin-bottom, 0); @include vw-mo(font-size, 30); @include vw-mo(line-height, 40); font-weight: 700; letter-spacing: 0;}
+                &--eyebrow {@include vw-mo(width, 489); @include vw-mo(height, 38); @include vw-mo(margin, 0 auto 15);}
+                &--date {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.03em;}
+            }
+            &__logo {position: absolute; @include vw-mo(top, 36); @include vw-mo(left, 441); @include vw-mo(width, 222); @include vw-mo(height, 17);}
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width:769px) {
+    .galaxy_book4_edge_launching {
+        .sec_kv {
+            .pt_kv {
+                position: relative;
+    
+                &__title {
+                    z-index: 1; position: absolute; @include vw-max(top, 49); @include vw-max(left, 400);
+    
+                    &--main {@include vw-max(margin-bottom, 8); @include vw-max(font-size, 30); @include vw-max(line-height, 40); font-weight: 700; letter-spacing: 0;}
+                    &--sub {@include vw-max(margin-bottom, 0); @include vw-max(font-size, 30); @include vw-max(line-height, 40); font-weight: 700; letter-spacing: 0;}
+                    &--eyebrow {@include vw-max(width, 542); @include vw-max(height, 42); @include vw-max(margin, 0 0 15);}
+                    &--date {@include vw-max(font-size, 24); @include vw-max(line-height, 32); font-weight: 700; letter-spacing: 0;}
+                }
+                &__logo {position: absolute; @include vw-max(top, 27); @include vw-max(left, 1324); @include vw-max(width, 261); @include vw-max(height, 20);}
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

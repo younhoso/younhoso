@@ -1,0 +1,147 @@
+
+// reset prd server
+.en {vertical-align:baseline;}
+.btn-box,
+.btn-box ~ .btn-box {margin:0;}
+
+@media (max-width: 1440px) and (min-width: 1101px){
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video , dd a {font-size:inherit;}
+}
+
+@media (max-width: 1100px) and (min-width: 801px) {
+  html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
+}
+
+@media (max-width: 800px) {
+  html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
+}
+
+@media all and (max-width:414px) {
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
+}
+
+// reset prd server
+
+@font-face {
+    font-family: 'HYBatang';
+    src: url('//cdn.samsung.com/etc/designs/smg/sec/font/HYBatang.eot');
+    src: url('//cdn.samsung.com/etc/designs/smg/sec/font/HYBatang.eot?#iefix') format("embedded-opentype"),
+         url('//cdn.samsung.com/etc/designs/smg/sec/font/HYBatang.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal
+}
+
+.m_hide{display:block !important;}
+.m_show{display:none !important;}
+
+.sec_project_wrap{min-width:320px; margin:0 auto; font-family:'SamsungOneKorean',Dotum,'돋움','Apple SD Gothic Neo',arial; line-height: 1;}
+
+.sec_project_wrap {
+    :focus {outline: dashed 2px #2189ff !important;}
+}
+
+.sec_project_wrap,
+.sec_project_wrap article,
+.sec_project_wrap section,
+.sec_project_wrap nav,
+.sec_project_wrap aside,
+.sec_project_wrap header,
+.sec_project_wrap footer {display:block; position:relative}
+
+.sec_project_wrap section{max-width:1920px; margin:0 auto;}
+
+.sec_project_wrap .kr {font-family:'SamsungOneKorean',Dotum,'돋움','Apple SD Gothic Neo',arial; font-weight:400;}
+.sec_project_wrap .en {font-family:'Samsung Sharp Sans', 'SamsungSharpSans'; line-height:1; letter-spacing:0; vertical-align:baseline;  font-weight:700; font-size: inherit;}
+.sec_project_wrap .bt {font-family: 'HYBatang';}
+
+.sec_project_wrap a,
+.sec_project_wrap a:hover,
+.sec_project_wrap a:focus,
+.sec_project_wrap a:active {text-decoration:none; color:inherit;}
+
+.sec_project_wrap em,
+.sec_project_wrap i {font-style:normal;}
+
+.sec_project_wrap *{ box-sizing: border-box;}
+
+.sec_project_wrap .img_box{position:relative; width:100%; font-size:0;}
+.sec_project_wrap .img_box img{width:100%;}
+
+.sec_project_wrap .inner_1920,
+.sec_project_wrap .inner_1440,
+.sec_project_wrap .inner_1320,
+.sec_project_wrap .inner_1280,
+.sec_project_wrap .inner_1200{position:relative; width: 100%; margin: 0 auto;}
+
+.sec_project_wrap .inner_1920{max-width: 1920px;}
+.sec_project_wrap .inner_1440{max-width: 1440px;}
+.sec_project_wrap .inner_1320{max-width: 1320px;} 
+.sec_project_wrap .inner_1280{max-width: 1280px;}
+.sec_project_wrap .inner_1200{max-width: 1200px;}
+
+.sec_project_wrap .clearfix:after {display:block; content:''; clear:both;}
+
+.sec_project_wrap .hidden,
+.sec_project_wrap .blind {position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;}
+
+.sec_project_wrap .alert_msg {display: none;position: fixed;top: 0;left: 0;z-index: 1001;width: 100%;background: #8a51d3;color: #fff;text-align: center;height: 30px;line-height: 30px;}
+
+//button
+.sec_project_wrap .btn_common {position:relative; display:inline-flex; align-items:center; justify-content:center; font-weight:700; text-align:center;}
+.sec_project_wrap .btn_common.type_arrow {@include vw-pc(padding-right, 20);}
+.sec_project_wrap .btn_common.type_arrow::after {content:''; position:absolute; @include vw-pc(top, 2); @include vw-pc(right, 3); @include vw-pc(width, 6); @include vw-pc(height, 6); border-right:2px solid #000; border-bottom:2px solid #000; transform:rotate(45deg);}
+.sec_project_wrap .btn_common.type_round {border:2px solid #000; background-color:#fff; transition:border-color .3s, background-color .3s, color .3s;}
+.sec_project_wrap .btn_common.type_round:hover {background-color:#000; color:#fff; transition:border-color .3s, background-color .3s, color .3s;}
+.sec_project_wrap .btn_common.type_round.black_bg {background-color:#000; color:#fff;}
+.sec_project_wrap .btn_common.type_round.black_bg:hover {background-color:transparent; color:#000;}
+
+.sec_project_wrap .btn_common.btn_toggle {@include vw-pc(padding-bottom, 5); border-bottom:1px solid #000; @include vw-pc(padding-right, 20);}
+.sec_project_wrap .btn_common.btn_toggle::after {content:''; position:absolute; top:14%; @include vw-pc(right, 3); @include vw-pc(width, 6); @include vw-pc(height, 6); border-right:2px solid #000; border-bottom:2px solid #000; transform:rotate(45deg);}
+.sec_project_wrap .btn_common.btn_toggle.on::after {top:29%; transform:rotate(-135deg);}
+
+//tab
+.tab_contents .tab_content{display:none;}
+.tab_contents .tab_content.on{display:block;}
+
+.dimm{display:none;position:fixed; top:0; left:0; right:0; bottom:0; background-color:#000; opacity:0.7; }
+
+@media all and (min-width:769px) and (max-width:1920px) {
+
+    .sec_project_wrap .inner_1920{max-width: 100%;}
+}
+
+@media all and (min-width:769px) and (max-width:1440px) {
+
+    .sec_project_wrap .inner_1440{max-width: 100%;}
+    .sec_project_wrap .inner_1280{max-width: 88.8889vw;}
+    .sec_project_wrap .inner_1200{max-width: 83.3333vw;}
+}
+
+@media all and (max-width:768px) {
+
+    .m_hide{display:none !important;}
+    .m_show{display:block !important;}
+
+    .sec_project_wrap section{max-width:100%;}
+
+    .sec_project_wrap .inner_1920,
+    .sec_project_wrap .inner_1440,
+    .sec_project_wrap .inner_1280,
+    .sec_project_wrap .inner_1200{max-width: 100%;}
+
+    .sec_project_wrap .alert_msg {top: 0;left: 0;width: 100%;background: #8a51d3;height: 4.5625vw; font-size: 3.2vw; line-height: 4.5625vw;}
+
+    //button
+    .sec_project_wrap .btn_common.type_under {@include vw-mo(padding-bottom, 5);}
+    .sec_project_wrap .btn_common.type_arrow {@include vw-mo(padding-right, 25);}
+    .sec_project_wrap .btn_common.type_arrow::after {top:0; @include vw-mo(right, 2); @include vw-mo(width, 8); @include vw-mo(height, 8);}
+    .sec_project_wrap .btn_common.type_round {@include vw-mo(border-width, 2);}
+
+    .sec_project_wrap .btn_common.btn_toggle {@include vw-mo(padding-bottom, 5);@include vw-mo(padding-right, 28);}
+    .sec_project_wrap .btn_common.btn_toggle::after {top:22%; @include vw-mo(right, 4); @include vw-mo(width, 8); @include vw-mo(height, 8); @include vw-mo(border-width, 2);}
+    .sec_project_wrap .btn_common.btn_toggle.on::after {top:29%;}
+    
+    .sec_project_wrap {
+        :focus {outline: -webkit-focus-ring-color auto 1px !important;}
+    }
+}

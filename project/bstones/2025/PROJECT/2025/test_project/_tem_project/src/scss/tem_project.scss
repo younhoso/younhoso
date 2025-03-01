@@ -1,0 +1,17 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'notice';
+
+.tem_project {
+    .sec_kv {
+        h1 {}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tem_project {
+        .sec_kv {
+            h1 {}
+        }
+    }
+}

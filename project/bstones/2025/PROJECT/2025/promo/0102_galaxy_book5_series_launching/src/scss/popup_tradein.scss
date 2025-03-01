@@ -1,0 +1,291 @@
+@import '../../../../../../scss_global/scss-common2';
+
+.sec_project_wrap { // MO
+    // 모달 공통
+    .pt_modal {
+        position: relative;
+        .pt_modal_box {position: relative; display: flex; flex-direction: column; width: 100%; height: 100%; background: #fff; border-radius: inherit; overflow: hidden;}
+
+        .pt_section {
+            &__title {@include vw-mo(margin-bottom, 39); @include vw-mo(padding, 0 0); @include vw-mo(font-size,32); font-weight: 700; @include vw-mo(line-height, 43); letter-spacing: -0.05em;}
+            &__discs { 
+                &--pl{@include vw-mo(padding-left, 30);}
+            }
+            &__disc {
+                color: #666; @include vw-mo(font-size, 22); @include vw-mo(line-height, 32); letter-spacing: -0.025em; @include vw-mo(padding-left, 0);
+                &--indent { display: inline-block; @include vw-mo(text-indent, 19);}
+
+                &::before {display: inline-block; content: '※ '; @include vw-mo(padding-right, 5); color: #666; @include vw-mo(font-size, 22); @include vw-mo(line-height, 28); letter-spacing: -0.025em;}
+            }
+        }
+
+        .pt_modal_header { width: 100%; @include vw-mo(height,210); background: #fff;}
+        .pt_modal_header .pt_title {@include vw-mo(padding,36 0 18); @include vw-mo(font-size,38); font-weight: 700; line-height: 1.3em; letter-spacing: -0.05em; text-align: center;}
+        .pt_modal_header .pt_title02 {@include vw-mo(padding,36 0 11); @include vw-mo(font-size,38); font-weight: 700; line-height: 1.3em; letter-spacing: -0.05em; text-align: center;}
+        .pt_modal_header .pt_date {@include vw-mo(font-size, 24); @include vw-mo(line-height,32); letter-spacing: -0.05em; text-align: center;}
+        .pt_modal_header .pt_bnf_txt {@include vw-mo(font-size, 24); @include vw-mo(line-height,32); letter-spacing: -0.05em; text-align: center;}
+        .pt_tab {display: flex;}
+        .pt_tab_item {flex: 1; border-style: solid; @include vw-mo(border-top-width,4); @include vw-mo(padding-right, 0); @include vw-mo(border-bottom-width,4); border-top-color: rgba(0,0,0,0); border-bottom-color: #E2E2E2; }
+        .pt_tab_item a {display: flex; align-items: center; justify-content: center; @include vw-mo(height,98); @include vw-mo(font-size,28); @include vw-mo(line-height,30); font-weight: 700; letter-spacing: -0.055em; text-align: left; white-space: nowrap;}
+        .pt_tab_num{display: inline-block; @include vw-mo(width,28); @include vw-mo(line-height,28); @include vw-mo(margin-right,8);  border-radius: 100%; background-color: #000; color: #fff; @include vw-mo(font-size,20); font-weight:700; text-align: center;}
+        .pt_tab_item.pt_on {border-bottom-color: #000;}
+
+        // .pt_modal_body {height: 100%; background: #fff; opacity: 0; overflow-y: auto;}
+        .pt_modal_body {background: #fff;  scrollbar-width: none; -ms-overflow-style: none;}
+        .pt_modal_body::-webkit-scrollbar {display: none;}
+
+        // 백그라운드 있는는 버젼
+        // .pt_btn_close {position: absolute; z-index: 1; left: auto; bottom: auto; @include vw-mo(top, 84); @include vw-mo(right,49); @include vw-mo(width,50); @include vw-mo(height,50); transform: none; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.2); background: #fff url('../../is/images/modal/gbe_btn_modal_close.png') no-repeat center / contain;}
+        // 백그라운드 없는 버젼
+        .pt_btn_close {position: absolute; z-index: 1; left: auto; bottom: auto; @include vw-mo(top, 84); @include vw-mo(right,49); @include vw-mo(width,48); @include vw-mo(height, 48); background: url('../../is/images/modal/gbe_btn_modal_close.png') no-repeat center / contain; background-size: 100% 100%}
+     
+        .pt_modal_content {@include vw-mo(padding,24 24 120);}
+        .pt_list_line {@include vw-mo(margin-bottom,40);}
+        .pt_list_line li {@include vw-mo(padding-left,12); @include vw-mo(font-size,26);}
+
+        &__title{
+            @include vw-mo(margin-bottom,39); @include vw-mo(font-size,32); @include vw-mo(line-height,34); font-weight:700; letter-spacing: -0.05em;
+            &--center {text-align: center; @include vw-mo(font-size, 42); @include vw-mo(margin-bottom, 50);}
+            
+            // 0102 추가
+            &--box {@include vw-mo(padding-left, 24); @include vw-mo(margin-bottom, 37);}
+            &--main {@include vw-mo(margin-bottom, 36); @include vw-mo(font-size, 40); @include vw-mo(line-height, 42); font-weight: 700; }
+            &--sub {position: relative; @include vw-mo(padding-left, 23); @include vw-mo(font-size, 28); @include vw-mo(line-height, 48); }
+            &--sub::before {content: '-'; position: absolute; top: 0; left: 0;}
+        }
+        &__item{
+            @include vw-mo(margin-bottom, 36);
+            .pt_tab_num{
+                display: inline-block; @include vw-mo(width,30); @include vw-mo(line-height,30); @include vw-mo(margin-top,2); @include vw-mo(margin-right,8); border-radius: 100%; background-color: #000; color: #fff; @include vw-mo(font-size,22); font-weight:700; text-align: center; vertical-align: top;
+                &--block {display: block; @include vw-mo(margin, 0 auto 20);}
+            }
+            &.pt_table {margin-bottom: 0;}
+        }
+        &__btn{
+            @include vw-mo(font-size, 24); font-weight: 700;
+        }
+    }
+
+    //트레이드인 모달
+    .pt_modal_tradein{
+        // @include vw-mo(padding-bottom, 60);
+        h4 {display: flex; align-items: center;}
+        .pt_modal_inner {@include vw-mo(padding, 62 0 0);}
+        .pt_tab {
+            &_item {
+                a {@include vw-mo(font-size, 28); }
+            }
+        }
+        .pt_info{
+            &__list{@include vw-mo(padding,5 30); @include vw-mo(margin-bottom,18); background-color: #EEEEEE;}
+            &__list li{display: flex; @include vw-mo(padding,30 0);}
+            &__list li+ li{@include vw-mo(border-top,1 solid #DDDDDD);}
+
+            &__title{@include vw-mo(flex-basis,154); flex-shrink: 0; @include vw-mo(font-size,24); @include vw-mo(line-height,28); @include vw-mo(letter-spacing,-0.25); font-weight:700;}
+            &__desc{@include vw-mo(font-size,24); @include vw-mo(line-height,28); letter-spacing: -0.025em;}
+            &__desc--small{@include vw-mo(margin-top,7); @include vw-mo(font-size,22); @include vw-mo(line-height, 28); font-weight:400; color: #666;
+                span { display: inline-block; vertical-align: top;}
+            }
+            &__desc--blue{color: #2F8FFD; font-weight: 700;}
+        }
+        .pt_step{
+            &__list{display: flex; justify-content: space-between; @include vw-mo(margin-bottom,18); @include vw-mo(gap, 23);}            
+            &__item{position: relative; @include vw-mo(width,218); @include vw-mo(height,274); @include vw-mo(padding,48 0 0); @include vw-mo(border, 2 solid #ddd); }
+            &__num {position: absolute; @include vw-mo(top, -2); @include vw-mo(left, -2); display: flex; align-items: center; justify-content: center; @include vw-mo(width,40); @include vw-mo(height, 40); background-color: #000; color: #fff; text-align: center; @include vw-mo(font-size, 20); font-weight:700;}
+            &__icon{
+                display: flex; align-items: flex-start; justify-content: center;
+                &--step1 {@include vw-mo(width, 59); @include vw-mo(margin, 2 auto 21); }
+                &--step2 {@include vw-mo(width, 63); @include vw-mo(margin, 8 auto 24); }
+                &--step3 {@include vw-mo(width, 65); @include vw-mo(margin, 0 auto 11); }
+            }
+            &__desc{
+                @include vw-mo(font-size,22); @include vw-mo(line-height,30); letter-spacing: -0.04em; text-align: center; white-space: nowrap;
+                &--letter {letter-spacing: -.06em;}
+            }
+        }
+        
+        .pt_table {
+            &--tradein {
+                table {width: 100%; margin: 0 auto; border-collapse: collapse; }
+                th, td { @include vw-mo(padding,25 0); color: #000; @include vw-mo(font-size,24); @include vw-mo(line-height,33); text-align: center;vertical-align: middle; letter-spacing: -0.03em;}
+                th {font-weight: 700;}
+                thead {
+                    th {letter-spacing: -0.1em; @include vw-mo(line-height,24); background: #EEEEEE; @include vw-mo(border-top, 2 solid #ddd); @include vw-mo(border-right, 2 solid #ddd);}
+                    th:first-child {@include vw-mo(border-left, 2 solid #ddd);}
+                    th:last-child {@include vw-mo(border-right, 2 solid #ddd);}
+                    .pt_small {display: block; @include vw-mo(font-size,16); @include vw-mo(line-height,22); line-height: inherit; letter-spacing: -0.03em; font-weight: 400;}
+                }
+                tbody {
+                    th, td { @include vw-mo(border, 2 solid #ddd);
+                        .en {letter-spacing: -0.03em;}
+                    }
+                    .pt_small {display: block; @include vw-mo(font-size,16); @include vw-mo(line-height,23); letter-spacing: -0.03em;}
+                    
+                }
+                .pt_em {font-weight: 700;}
+                .pt_blue {color: #2189FF;}
+            }
+        }
+
+        .pt_btn_box{
+            @include vw-mo(padding, 40 0 100);
+
+            &__btn_anchor{@include vw-mo(font-size,22); @include vw-mo(line-height,26); @include vw-mo(letter-spacing,-0.25);}
+            &__btn_ATM{display: inline-flex; align-items: center; @include vw-mo(margin-right,49); @include vw-mo(font-size,22); @include vw-mo(line-height,26); @include vw-mo(letter-spacing,-0.25); font-weight:700;}
+            // &__btn_ATM::after{content: ''; @include vw-mo(margin-left,6); @include vw-mo(padding-top, 2); @include vw-mo(width,17); @include vw-mo(height,17); background: url(../../is/images/modal/tradein/gt9_btn_ATM.png) no-repeat center / contain;}
+            &__btn_more {display: flex; @include vw-mo(width, 234); @include vw-mo(height, 60); text-align: center; @include vw-mo(margin, 60 auto 0); @include vw-mo(font-size, 24);}
+            .pt_btn_detail {display: block; @include vw-mo(width, 226); @include vw-mo(height, 60); @include vw-mo(border-radius, 30); border-bottom: 0; @include vw-mo(font-size, 24); @include vw-mo(line-height, 60); margin: 0 auto; background-color: #000; color: #fff; text-align: center;}
+        }
+
+        
+    }
+    .modal_info_acco{
+        @include vw-mo(padding-top,20);
+        &__inner{ @include vw-mo(padding,40); background-color: #F4F4F4;}
+        &__text{@include vw-mo(font-size,22); @include vw-mo(line-height,34);}
+        
+    }
+        
+}
+
+@media screen and (min-width: 769px) { // PC
+    .layer_popup {top: 45% !important;}
+
+    .sec_project_wrap {
+
+
+        .pt_modal {
+            top: 45% !important;
+            .pt_section {
+                &__title {@include vw-pc(margin-bottom, 39); @include vw-pc(font-size,24); font-weight: 700; @include vw-pc(line-height,32); letter-spacing: -0.05em;}
+                &__discs {@include vw-pc(margin-top, 11); @include vw-pc(padding-left, 0);}
+                &__disc {
+                    color: #666; @include vw-pc(font-size, 14); @include vw-pc(line-height, 22); letter-spacing: -0.025em; @include vw-pc(text-indent, 0); @include vw-pc(padding-left, 0);
+                    &--indent { @include vw-pc(text-indent, 0);}
+
+                    &::before {display: inline-block; content: '※ '; @include vw-pc(padding-right, 5); color: #666; @include vw-pc(font-size, 14); @include vw-pc(line-height, 22); letter-spacing: -0.025em;}
+                }
+            }
+
+            .pt_modal_box {position: relative; width: 100%; height: 100%; background: #fff; border-radius: inherit; @include vw-pc(border-radius,20); overflow: hidden;}
+            .pt_modal_header {@include vw-pc(height, 167);}
+            .pt_modal_header .pt_title02 {@include vw-pc(padding,57 0 18); @include vw-pc(font-size,32); font-weight: 700; @include vw-pc(line-height,36); letter-spacing: -0.05em; text-align: center;}
+            .pt_modal_header .pt_date {@include vw-pc(font-size, 18); @include vw-pc(line-height,28); letter-spacing: -0.05em; text-align: center;}
+            .pt_modal_header .pt_bnf_txt {@include vw-pc(font-size, 18); @include vw-pc(line-height,28); letter-spacing: -0.05em; text-align: center;}
+            .pt_btn_close { @include vw-pc(top,34); @include vw-pc(right, 5); @include vw-pc(width,40); @include vw-pc(height,40); border-radius: 50%;}
+        
+
+            .pt_modal_inner {
+                @include vw-pc(padding,50 0 0);
+                &--full {
+                    @include vw-pc(padding, 60 24 2); background-color: #EFF8F5;
+                    padding-bottom: 60px; // 닷컴 하단 네비게이션 대응
+                    #modal_club04 .pt_table {margin-bottom: 0;}
+                    .pt_btn_box{@include vw-pc(margin-top, 20); @include vw-pc(padding-bottom, 20);}
+                }    
+            }
+
+            &__title{
+                @include vw-pc(margin-bottom,39); @include vw-pc(font-size,30); @include vw-pc(line-height,32); @include vw-pc(letter-spacing,-0.5);
+                // 0102 추가
+                &--box {@include vw-pc(padding-left, 0); @include vw-pc(margin-bottom, 35);}
+                &--main {@include vw-pc(margin-bottom, 24); @include vw-pc(font-size, 30); @include vw-pc(line-height, 32); }
+                &--sub {@include vw-pc(padding-left, 10); @include vw-pc(font-size, 20); @include vw-pc(line-height, 30); }            
+            }
+
+            &__item {
+                @include vw-pc(margin-bottom, 57);
+                .pt_tab_num {display: none;}
+
+                &.pt_table {margin-bottom: 0; @include vw-pc(margin-top,30);}
+            }
+
+            &__btn {
+                @include vw-pc(font-size, 18); font-weight: 700;
+                &::after {background: url(../../is/images/modal/gt9_ico_arrow_right.png) no-repeat center; @include vw-pc(background-size, 12 12); @include vw-pc(width, 12); @include vw-pc(height, 12); transform: rotate(0deg); border: 0;}
+            }
+        }
+
+        //트레이드인 모달
+        .pt_modal_tradein{
+            padding-bottom: 0;
+            .pt_modal_body {padding-right: 0;}
+            .pt_modal_body::-webkit-scrollbar {
+                display: none;
+            }
+            .pt_info{
+                &__list{@include vw-pc(margin-bottom,0); @include vw-pc(padding, 40); }
+                &__list li{@include vw-pc(padding, 30 0);}
+                &__list li:first-child{padding-top: 0;}
+                &__list li:last-child{padding-bottom: 0;}
+
+                &__title{@include vw-pc(flex-basis,232); @include vw-pc(font-size,18); @include vw-pc(line-height, 33);}
+                &__desc{ 
+                    @include vw-pc(font-size,18); @include vw-pc(line-height,33);
+                    .en {@include vw-pc(line-height, 33);}
+                }
+                &__desc--small{@include vw-pc(font-size, 14); @include vw-pc(line-height, 22); margin-top: 0;}
+            }
+            .pt_table {
+                &--tradein {
+                    th, td {@include vw-pc(padding,17 0); @include vw-pc(font-size,18); @include vw-pc(line-height,24); letter-spacing: -0.05em;
+                    }
+                    thead {
+                        th {@include vw-pc(font-size,18); @include vw-pc(line-height,20); @include vw-pc(border-top, 1 solid #ddd); @include vw-pc(border-right, 1 solid #ddd);}
+                        th:first-child {@include vw-pc(border-left, 1 solid #ddd);}
+                        th:last-child {@include vw-pc(border-right, 1 solid #ddd);}
+                        .pt_small {@include vw-pc(font-size,14); @include vw-pc(line-height,18);}
+                    }
+                    tbody {
+                        th, td {
+                            @include vw-pc(border, 1 solid #ddd);
+                            .en {letter-spacing: -0.05em;}
+                        }
+                        .pt_small {@include vw-pc(font-size,14); @include vw-pc(line-height,18);}
+                    }
+                }
+            }
+
+            .pt_step {
+                &__list{width: 100%; @include vw-pc(margin, 0 auto); @include vw-pc(gap, 23);}
+                &__item{@include vw-pc(width,238); @include vw-pc(height,245); @include vw-pc(margin-bottom,0); @include vw-pc(padding,30 0); @include vw-pc(border, 1 solid #ddd);}
+                &__num{position: absolute; @include vw-pc(top, -1); @include vw-pc(left, -1); @include vw-pc(width,34); @include vw-pc(height,34); @include vw-pc(line-height,34); @include vw-pc(font-size,20);}
+                &__icon{
+                    &--step1 {@include vw-pc(width, 53); @include vw-pc(margin, 6 auto 25);}
+                    &--step2 {@include vw-pc(width, 57); @include vw-pc(margin, 8 auto 33);}
+                    &--step3 {@include vw-pc(width, 57); @include vw-pc(margin, 1 auto 24);}
+                }
+                &__desc{
+                    @include vw-pc(font-size,18); @include vw-pc(line-height,24); @include vw-pc(letter-spacing,-0.25);
+                    &--letter {letter-spacing: -.025em;}
+                }
+            }
+            
+            .pt_btn_box {
+                @include vw-pc(padding, 30 0 100);
+                &__btn_anchor{@include vw-pc(font-size,22); @include vw-pc(line-height,26); @include vw-pc(letter-spacing,-0.25);}
+                &__btn_ATM{display: inline-flex; align-items: center; @include vw-pc(margin-right,49); @include vw-pc(font-size,22); @include vw-pc(line-height,26); @include vw-pc(letter-spacing,-0.25); font-weight:700;}
+                &__btn_ATM::after{content: ''; @include vw-pc(margin-left,6); @include vw-pc(padding-top,2 ); @include vw-pc(width,17); @include vw-pc(height,17); background: url(../../is/images/modal/tradein/gt9_btn_ATM.png) no-repeat center / contain;}
+                &__btn_more { @include vw-pc(margin-top, 0); @include vw-pc(width, 190); @include vw-pc(height, 58); @include vw-pc(font-size, 20); @include vw-pc(border-radius, 30); }
+                .pt_btn_detail {@include vw-pc(width, 190); @include vw-pc(height, 58); @include vw-pc(border-radius, 29); @include vw-pc(font-size, 20); @include vw-pc(line-height, 58);}
+            }
+        }
+        .modal_info_acco{
+            @include vw-pc(padding-top,20);
+            &__inner{ @include vw-pc(padding,40); background-color: #F4F4F4;}
+            &__text{@include vw-pc(font-size,22); @include vw-pc(line-height,34);}
+            
+        }
+
+        .pt_modal_tradein.pt_modal_on {@include vw-pc(width, 864);}
+
+    }
+}
+
+@media screen and (min-width: 1001px) { // PC 버전 BC 팝업 사이즈 지정
+    .sec_project_wrap {
+        .pt_modal {
+            // @include vw-pc(width,706);
+        }
+    }
+}

@@ -1,0 +1,186 @@
+.sec_benefit {
+  .pt_bnf__wrap {
+    @include vw-pc(width, 1318);
+    margin: 0 auto;
+    @include vw-pc(margin-top, 116);
+  }
+
+  .pt_bnf {
+    &__tit {
+      @include vw-pc(margin-bottom, 34);
+      @include vw-pc(font-size, 42);
+      line-height: 54px;
+      text-align: center;
+    }
+  }
+
+  .pt_bnf {
+    &__inner {
+      display: flex;
+      @include vw-pc(gap, 14);
+      justify-content: center;
+      .pt_bnf__item {
+        @include vw-pc(width, 430);
+        @include vw-pc(height, 401);
+        padding: 30px;
+        box-shadow: 0 1px 5px #00000010;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        + .pt_bnf__item {
+          @include vw-pc(margin-top, 14);
+        }
+
+        &--bg_blue {
+          background-color: #f2f8ff;
+        }
+        &_inner {
+        }
+        &--header {
+          line-height: 42px;
+          @include vw-pc(margin-bottom, 18);
+          .pt_bnf__item--tit {
+            @include vw-pc(font-size, 24);
+            line-height: 34px;
+            font-weight: 700;
+            &_blue {
+              color: #2189ff;
+            }
+          }
+        }
+        &--content {
+          .pt_bnf__item--content_inner {
+            display: flex;
+          }
+          .pt_bnf__check_icon {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-image: url(../../is/images/benefit/wac_ico_chk_pc.png);
+            background-repeat: no-repeat;
+            @include vw-pc(margin, 9 4 0 0);
+          }
+          &_desc {
+            @include vw-pc(font-size, 16);
+            line-height: 26px;
+            font-weight: 400;
+          }
+        }
+        &--footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          position: absolute;
+          @include vw-pc(bottom, 30);
+          @include vw-pc(right, 30);
+          @include vw-pc(left, 30);
+          .pt_bnf__link {
+            @include vw-pc(margin-bottom, 10);
+            border-bottom: 1px solid #000000;
+          }
+          .img_box {
+            @include vw-pc(width, 76);
+            @include vw-pc(height, 76);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec_benefit {
+    .pt_bnf__wrap {
+      @include vw-mo(width, 1318);
+      margin: 0 auto;
+      @include vw-mo(margin, 57 0 100);
+    }
+
+    .pt_bnf {
+      &__tit {
+        @include vw-mo(margin-bottom, 28);
+        @include vw-mo(font-size, 32);
+        @include vw-mo(line-height, 43px);
+        text-align: left;
+        @include vw-mo(padding-left, 24);
+      }
+    }
+
+    .pt_bnf {
+      &__inner {
+        display: flex;
+        @include vw-mo(gap, 14);
+        justify-content: center;
+        .pt_bnf__item {
+          @include vw-mo(width, 430);
+          @include vw-mo(height, 650);
+          padding: 30px;
+          box-shadow: 0 1px 5px #00000010;
+          background-color: #f9f9f9;
+          border-radius: 10px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          + .pt_bnf__item {
+            @include vw-mo(margin-top, 14);
+          }
+
+          &--bg_blue {
+            background-color: #f2f8ff;
+          }
+          &_inner {
+          }
+          &--header {
+            line-height: 42px;
+            @include vw-mo(margin-bottom, 18);
+            .pt_bnf__item--tit {
+              @include vw-mo(font-size, 34);
+              line-height: 34px;
+              font-weight: 700;
+              &_blue {
+                color: #2189ff;
+              }
+            }
+          }
+          &--content {
+            .pt_bnf__item--content_inner {
+              display: flex;
+            }
+            .pt_bnf__check_icon {
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              background-image: url(../../is/images/benefit/wac_ico_chk_pc.png);
+              background-repeat: no-repeat;
+              @include vw-mo(margin, 9 4 0 0);
+            }
+            &_desc {
+              @include vw-mo(font-size, 20);
+              line-height: 26px;
+              font-weight: 400;
+            }
+          }
+          &--footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            position: absolute;
+            @include vw-mo(bottom, 30);
+            @include vw-mo(right, 30);
+            @include vw-mo(left, 30);
+            .pt_bnf__link {
+              @include vw-mo(margin-bottom, 10);
+              border-bottom: 1px solid #000000;
+            }
+            .img_box {
+              @include vw-mo(width, 76);
+              @include vw-mo(height, 76);
+            }
+          }
+        }
+      }
+    }
+  }
+}

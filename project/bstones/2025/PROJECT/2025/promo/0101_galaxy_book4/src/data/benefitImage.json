@@ -1,0 +1,50 @@
+{
+   "src": "../../is/images/buying/benefit_v1/",
+   "product": {
+      "ultra_16_gray": {
+         "image":"gbu_ultra_16_gray_pc.png",
+         "imageMo":"gbu_ultra_16_gray_mo.png",
+         "alt":"울트라 16인치 문스톤그레이"
+      },
+      "pro360_16_gray": {
+         "image":"gbu_pro360_16_gray_pc.png",
+         "imageMo":"gbu_pro360_16_gray_mo.png",
+         "alt":"프로360 16인치 문스톤그레이"
+      },
+      "pro360_16_silver": {
+         "image":"gbu_pro360_16_silver_pc.png",
+         "imageMo":"gbu_pro360_16_silver_mo.png",
+         "alt":"프로360 16인치 플래티넘실버"
+      },
+      "pro_16_gray": {
+         "image":"gbu_pro_16_gray_pc.png",
+         "imageMo":"gbu_pro_16_gray_mo.png",
+         "alt":"프로 16인치 문스톤그레이"
+      },
+      "pro_16_silver": {
+         "image":"gbu_pro_16_silver_pc.png",
+         "imageMo":"gbu_pro_16_silver_mo.png",
+         "alt":"프로 16인치 플래티넘실버"
+      },
+      "pro_14_gray": {
+         "image":"gbu_pro_14_gray_pc.png",
+         "imageMo":"gbu_pro_14_gray_mo.png",
+         "alt":"프로 14인치 문스톤그레이"
+      },
+      "pro_14_silver": {
+         "image":"gbu_pro_14_silver_pc.png",
+         "imageMo":"gbu_pro_14_silver_mo.png",
+         "alt":"프로 14인치 플래티넘실버"
+      },
+      "book4_15_gray": {
+         "image":"gbu_book4_15_gray_pc.png",
+         "imageMo":"gbu_book4_15_gray_mo.png",
+         "alt":"북4 15인치 그레이"
+      },
+      "book4_15_silver": {
+         "image":"gbu_book4_15_silver_pc.png",
+         "imageMo":"gbu_book4_15_silver_mo.png",
+         "alt":"북4 15인치 실버"
+      }
+   }
+}

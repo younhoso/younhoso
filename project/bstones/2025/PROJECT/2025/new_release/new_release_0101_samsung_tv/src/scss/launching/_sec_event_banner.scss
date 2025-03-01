@@ -1,0 +1,58 @@
+.samsung_tv_launching {
+    .sec_event_banner {
+        background-color: #fff;
+
+        .pt_event_banner {
+            display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; 
+            @include vw-pc(gap, 14); @include vw-pc(padding, 95 0 95 0);
+
+            .pt_event_banner-item {
+                position: relative; @include vw-pc(padding, 10 0);
+
+                .pt_event_imgbox { 
+                    @include vw-pc(width, 653); @include vw-pc(height, 230);
+
+                    img { scale: 1.09;}
+                }
+
+                &__txt { 
+                    position: absolute; @include vw-pc(top, 55); @include vw-pc(left, 30);
+
+                    &--tit { @include vw-pc(font-size, 28); font-weight: 700; letter-spacing: -.025em; line-height: 1.3; @include vw-pc(margin-bottom, 8);}
+                    &--contents { @include vw-pc(font-size, 18); font-weight: 400; letter-spacing: -.025em; line-height: 1.3; @include vw-pc(margin-bottom, 19.5);}
+
+                    .pt_evtbanner__btn { @include vw-pc(font-size, 16); line-height: 1.3; letter-spacing: -.025em; @include vw-pc(border-bottom, 1 solid #000000);}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .samsung_tv_launching {
+        .sec_event_banner {
+            .pt_event_banner {
+                flex-wrap: wrap; flex-direction: column; 
+                @include vw-mo(gap, 20); @include vw-mo(padding, 120 0 120 0); overflow: hidden;
+                .pt_event_banner-item {
+                    @include vw-mo(padding, 10 0);
+    
+                    .pt_event_imgbox { 
+                        @include vw-mo(width, 672); @include vw-mo(height, 384);
+    
+                        img { scale: 1.17 1.1; @include vw-mo(margin-left, 10);}
+                    }
+    
+                    &__txt { 
+                        @include vw-mo(top, 65); @include vw-mo(left, 32);
+    
+                        &--tit { @include vw-mo(font-size, 40); line-height: 1.4; @include vw-mo(margin-bottom, 10);}
+                        &--contents { @include vw-mo(font-size, 28); line-height: 1.4; @include vw-mo(margin-bottom, 38);}
+    
+                        .pt_evtbanner__btn { @include vw-mo(font-size, 24); @include vw-mo(border-bottom, 1 solid #000000);}
+                    }
+                }
+            }
+        }
+    }
+}

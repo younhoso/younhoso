@@ -1,0 +1,98 @@
+.samsung_tv_launching {
+    .sec_tips {
+        @include vw-pc(padding, 94 0 71); background-color: #f2f2f2;
+
+        .pt_tips {
+            @include vw-pc(width, 1038); margin: 0 auto; @include vw-pc(margin-top, 96);
+
+            &__title {
+                @include vw-pc(margin-bottom, 55); text-align: center;
+
+                &--main {@include vw-pc(font-size, 42); @include vw-pc(line-height, 54); letter-spacing: -0.025em;}
+            }
+
+            &__swiper {
+                .pt_tips__item {
+                    position: relative; @include vw-pc(width, 330); @include vw-pc(height, 390); @include vw-pc(margin-right, 24);
+
+                    &:last-child {margin-right: 0;}
+
+                    &--txt {
+                        position: absolute; @include vw-pc(top, 312); left: 50%; transform: translateX(-50%); color: #555; @include vw-pc(font-size, 22); @include vw-pc(line-height, 30); font-weight: 700;
+
+                        &.txt03 {color: #fff;}
+                    }
+                }
+            }
+        }
+
+        .pt_tips_bubble {
+            position: relative; @include vw-pc(width, 1083); margin: 0 auto;
+
+            &__tit {
+                position: absolute; @include vw-pc(top, 43); @include vw-pc(left, 73); color: #000;
+
+                &-txt { @include vw-pc(font-size, 28); line-height: 1.3; font-weight: 700; letter-spacing: -0.025em;}
+                &-main { @include vw-pc(margin-top, 5); @include vw-pc(font-size, 18); line-height: 1.3; font-weight: 400; letter-spacing: -0.025em;}
+                &-detail { display: inline-block; @include vw-pc(margin-top, 21); @include vw-pc(font-size, 16); line-height: 1.2; font-weight: 400; letter-spacing: -0.025em; border-bottom: 1px solid #000;}
+
+                &-desc {
+                    display: inline-block; position: absolute; @include vw-pc(bottom, 67); @include vw-pc(right, 40);
+                    @include vw-pc(font-size, 12); line-height: 1.2; font-weight: 400; letter-spacing: -0.025em; color: #666666;
+                }
+            }
+
+            .blue { color: #1E81F8; font-weight: 700;}
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .samsung_tv_launching {
+        .sec_tips {
+            @include vw-mo(padding, 65 0 113);
+
+            .pt_tips {
+                width: 100%; margin: 0; @include vw-mo(margin-top, 74);
+
+                &__title {
+                    @include vw-mo(margin-left, 48); @include vw-mo(margin-bottom, 38); text-align: left;
+
+                    &--main {@include vw-mo(font-size, 54); @include vw-mo(line-height, 66); letter-spacing: -0.05em;}
+                }
+
+                &__swiper {
+                    @include vw-mo(padding-left, 48);
+
+                    .pt_tips__item {
+                        position: relative; @include vw-mo(width, 440); height: 72.5vw; @include vw-mo(margin-right, 32); @include vw-mo(border-radius, 20);
+
+                        &:last-child {@include vw-mo(margin-right, 48);}
+
+                        &--txt {
+                            position: absolute; @include vw-mo(top, 424); left: 50%; transform: translateX(-50%); color: #555; @include vw-mo(font-size, 28); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.05em;
+
+                            &.txt03 {color: #fff;}
+                        }
+                    }
+                }
+            }
+
+            .pt_tips_bubble {
+                width: 100%;
+                .img_box {@include vw-mo(width, 762); @include vw-mo(margin, 0 -21);}
+
+                &__tit {
+                    @include vw-mo(top, 89); @include vw-mo(left, 75);
+
+                    &-txt { @include vw-mo(font-size, 36);}
+                    &-main { @include vw-mo(margin-top, 14); @include vw-mo(font-size, 24); letter-spacing: -0.05em;}
+                    &-detail { @include vw-mo(margin-top, 22); @include vw-mo(font-size, 24);}
+
+                    &-desc {
+                        @include vw-mo(bottom, 95); @include vw-mo(right, 45); @include vw-mo(font-size, 20);
+                    }
+                }
+            }
+        }
+    }
+}

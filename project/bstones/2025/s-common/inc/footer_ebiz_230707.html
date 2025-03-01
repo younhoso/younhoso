@@ -1,0 +1,279 @@
+<!-- s : compo Script -->
+
+<!-- e : compo Script --> 
+</div><!-- s: gc 추가 : 2022-05-16 -->
+<!-- s: bnb active condition -->
+<script>
+function openAppBarLink(url, target) {
+if (url.indexOf('javascript:downloadFileCms') >= 0) {
+var sIdx = url.indexOf("(");
+var eIdx = url.indexOf(")");
+var lettNo = url.substring(sIdx + 1, eIdx);
+
+downloadFileCms(lettNo);
+} else {
+try {
+	if (stGbCd == 80) { //갤캠스 기획전
+		if (url.indexOf('community/board') >= 0){
+			if("" == "20") {
+					var alertData = {
+							title: "alert",
+							content: "교원/교직원 회원은 이용 불가능합니다."
+						};
+						commonAlert(alertData);
+						openLayer('commonAlert');
+			} else {
+				window.open(url, target);
+			}
+		} else if (url.indexOf('event/galcamsIndexExhibitionCollection') >= 0){
+			window.open(url, target);
+		} else if (url.indexOf('mypage/info/myGalcamsActivity') >= 0){
+			window.open(url, target);
+		}
+
+		else{
+			window.open(url, target);
+		}
+	} else {
+		window.open(url, target);
+	}
+} catch (e) {
+window.open(url, target);
+}
+}
+}
+
+$(document).ready(function(){
+console.log($('ul#ui-id-2').children().length);
+if($('ul#ui-id-2').children().length <= 1){
+$('ul#ui-id-2').closest('div[role="tablist"]').hide();
+}
+});
+</script>
+<!-- 이벤트 -->
+<!-- e: bnb active condition -->
+<aside class="appbar" style="display:none"">
+<div class="appbar_inner">
+<ul class="list_item">
+<li class="menu_item "><!-- menu_item 클래스에 active 클래스 추가 시, active 상태로 노출 -->
+<a href="javascript:;" class="gnb_open" onclick="openCategory();">
+	<i class="gc_icon i-appbar-menu1">메뉴아이콘</i>
+	<span>제품</span>
+</a>
+</li>
+<li class="menu_item ">
+<a href="javascript:;" class="gnb_open" onclick="bommCommunity();">
+<i class="gc_icon i-appbar-menu2">메뉴아이콘</i>
+	<span>커뮤니티</span>
+</a>
+</li>
+<li class="menu_item ">
+<a onclick='openAppBarLink("/event/galaxycampus/","_self")'>
+	<i class="gc_icon i-appbar-home">홈메뉴</i>
+	<span>홈</span>
+</a>
+</li>
+<li class="menu_item active">
+<a onclick='openAppBarLink("/event/galaxycampus/event/galcamsIndexExhibitionCollection/","_self")'>
+	<i class="gc_icon i-appbar-menu3">메뉴아이콘</i>
+	<span>이벤트</span>
+</a>
+</li>
+<li class="menu_item ">
+<a onclick='openAppBarLink("/event/galaxycampus/mypage/info/myGalcamsActivity/","_self")'>
+	<i class="gc_icon i-appbar-menu4">메뉴아이콘</i>
+	<span>나의 정보</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- s : bnb 제품카테고리 팝업 -->
+<div class="layer-pop layer-normal gc_layer layer_kv" id="openKV" tabindex="0" data-popup-layer="openCategory" data-focus="openCategory">
+<div class="layer-header">
+<h2>제품 카테고리</h2>
+</div>
+<div class="layer-content">
+<div class="gc_accordion accordion_list">
+<!-- 1 depth 제품 체크 -->
+	<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/smartphones/all-smartphones/';">스마트폰</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/watches/all-watches/';">워치</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/buds/all-buds/';">버즈</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/tablets/all-tablets/';">태블릿</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/pc/all-pc/';">PC</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/printers/all-printers/';">프린터</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/monitors/all-monitors/';">모니터</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/memory-storage/all-memory-storage/';">메모리&스토리지</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/mobile-accessories/all-mobile-accessories/';">모바일 액세서리</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/pc-accessories/all-pc-accessories/';">PC액세서리</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			<h3 class="title_item">
+					<a href="#" onclick="location.href='/event/galaxycampus/Lifestyle-home-appliances/all-Lifestyle-home-appliances/';">라이프스타일가전</a>
+				</h3>
+				<ul class="depth_list">
+					<li class="list_item" style="display:none">
+						<a href=""></a>
+					</li>
+				</ul>
+			</div>
+</div>
+<button type="button" class="pop-close" data-focus-next="openCategory">팝업닫기</button>
+</div>
+<!-- e : bnb 제품카테고리 팝업 -->
+
+<!-- s: 커뮤니티 팝업 -->
+<div class="layer-pop layer-normal gc_layer" id="bommCommunity" tabindex="0" data-popup-layer="bommCommunity" data-focus="bommCommunity">
+<div class="layer-header">
+<h2>커뮤니티</h2>
+</div>
+<div class="layer-content">
+<div class="gc_accordion accordion_list ui-accordion ui-widget ui-helper-reset" role="tablist">
+<h3 class="title_item title_bold has_depth ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="0"><a href="#">게시판</a></h3>
+<ul class="depth_list li-full ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="true" style="display: none;">
+<li class="list_item"><a onclick="openAppBarLink('/event/galaxycampus/community/infoboard','_self')">정보게시판</a></li>
+	<li class="list_item"><a onclick="openAppBarLink('/event/galaxycampus/community/board','_self')">자유게시판</a></li>
+</ul>
+</div>
+<div class="pop_banner_wrap">
+<h3 class="title"><a onclick="openAppBarLink('/event/galaxycampus/galcamsLog','_self')">뽐 갤러리</a></h3>
+<div class="banner_box">
+</div>
+</div>
+</div>
+<button type="button" class="pop-close" data-focus-next="bommCommunity">팝업닫기</button>
+</div>
+<!-- e: 커뮤니티 팝업 -->
+<!-- e: gc 추가 : 2022-05-16 -->
+<!-- 레이어 팝업 모음 -------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- s : 공통 팝업(alert)  -->
+<div class="layer-pop layer-default alert" id="commonAlert" tabindex="0" data-popup-layer="commonAlert" data-focus="commonAlert">
+<div class="layer-header blind"><h2></h2></div>
+<div class="layer-content">
+<p style="word-break:keep-all;"></p>
+<div class="btn-box">
+<a href="javascript:void(0)" onclick="" class="btn btn-d btn-type2">확인</a>
+</div>
+</div>
+</div>
+<!-- e : 공통 팝업(alert)  -->
+<!-- s : 공통 팝업(alert)  -->
+<div class="layer-pop layer-default alert" id="commonAlert2" tabindex="0" data-popup-layer="commonAlert2" data-focus="commonAlert2">
+<div class="layer-header blind"><h2></h2></div>
+<div class="layer-content">
+<p style="word-break:keep-all;"></p>
+<div class="btn-box">
+<a href="javascript:void(0)" onclick="" class="btn btn-d btn-type2">확인</a>
+</div>
+</div>
+</div>
+<!-- e : 공통 팝업(alert)  -->
+<!-- s : 공통 팝업(confirm)  -->
+<div class="layer-pop layer-default" id="commonConfirm" tabindex="0" data-popup-layer="commonConfirm" data-focus="commonConfirm">
+<div class="layer-header blind">
+<h2></h2>
+</div>
+<div class="layer-content">
+<p></p>
+<div class="btn-box double">
+<!-- 버튼 두개시 클래스 double 추가 -->
+<a href="javascript:void(0)" class="btn btn-d btn-type1 accessibility-pop-close" id="commonConfirmCancelBtn" onclick="closeLayer('commonConfirm');">취소</a>
+<a href="javascript:void(0)" class="btn btn-d btn-type2" id="commonConfirmOkBtn">확인</a>
+</div>
+</div>
+<button type="button" class="pop-close accessibility-pop-close" id="closeCommonConfirmBtn" name="closeCommonConfirmBtn" data-focus-next="commonConfirm">팝업닫기</button>
+</div>
+<!-- e : 공통 팝업(confirm)  -->
+<!-- s : 공통 팝업(confirm2)  -->
+<div class="layer-pop layer-default" id="commonConfirm2" tabindex="0" data-popup-layer="commonConfirm2" data-focus="commonConfirm2">
+<div class="layer-header blind">
+<h2></h2>
+</div>
+<div class="layer-content">
+<p></p>
+<div class="btn-box double">
+<!-- 버튼 두개시 클래스 double 추가 -->
+<a href="javascript:void(0)" class="btn btn-d btn-type1 accessibility-pop-close" id="commonConfirmCancelBtn2" onclick="closeLayer('commonConfirm2');">취소</a>
+<a href="javascript:void(0)" class="btn btn-d btn-type2" id="commonConfirmOkBtn2">확인</a>
+</div>
+</div>
+</div>
+<!-- e : 공통 팝업(confirm2)  --><!-- e : 본문 영역 -->
+<!-- 플로팅 메뉴 -->
+<!-- and so.bbsTpCd ne 801 and so.bbsTpCd ne 802 and so.bbsTpCd ne 803 and so.bbsTpCd ne 804 -->
+</div>
+<!-- s : 바닥글 영역 - b2c -->
+</div>
+<!-- b2b2c - 나의 정보 - 나의 활동 - 앱 설정 화면에서 안나오게 설정 -->
+<!-- e : 바닥글 영역 - b2c -->
+<input type="hidden" id="viewStContextPath" value="/event/galaxycampus/" />
+</body>
+</html>

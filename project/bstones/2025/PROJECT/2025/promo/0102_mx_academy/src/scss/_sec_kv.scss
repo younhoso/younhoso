@@ -1,0 +1,58 @@
+.mx_academy { // MO
+    .sec_kv {
+
+        // image lazy loading
+        &.pt_bg-image.pt_add-bg {
+            // 로고 이미지
+            // .pt_logo {
+            //     &--galaxy {background-image: url(../../is/images/kv/ma_logo_galaxy.svg);}
+            // }
+        }
+
+        .pt_kv {
+            @include vw-mo(padding-top,55); // 아이브로우 있을때 사용
+            // @include vw-mo(padding-top,87); // 아이브로우 없을때 사용
+            position: relative; @include vw-mo(height,1080); text-align: center; overflow: hidden;
+
+            &__inner {position: relative; z-index: 1;}
+            &__eyebrow {@include vw-mo(margin-bottom,18); @include vw-mo(font-size,32); font-weight: 700; @include vw-mo(line-height,43); letter-spacing: -0.025em;}
+            &__title {@include vw-mo(margin-bottom,26); @include vw-mo(font-size,62); font-weight: 700; @include vw-mo(line-height,72); letter-spacing: -0.025em;}
+            &__desc {@include vw-mo(margin-bottom,26); @include vw-mo(font-size,26); @include vw-mo(line-height,32); letter-spacing: -0.025em;}
+            &__date {@include vw-mo(font-size,26); font-weight: 700; @include vw-mo(line-height,32);}
+            .img_box {position: absolute; top: 0; left: 50%; @include vw-mo(width,720); transform: translateX(-50%);}
+
+            // 로고 이미지
+            // .pt_logo {
+            //     &--galaxy {display: inline-block; @include vw-mo(width,120); @include vw-mo(height,40); background-repeat: no-repeat; background-position: center; background-size: contain;}
+            // }
+        }
+
+    }
+}
+
+@media screen and (min-width: 769px) { // PC
+    .mx_academy {
+        .sec_kv {
+
+            // image lazy loading
+            &.pt_bg-image.pt_add-bg {}
+
+            .pt_kv {
+                padding-top: 0; @include vw-pc(height,560); text-align: left;
+
+                &__inner {display: flex; align-items: center; margin: 0 auto; @include vw-pc(width,1320); height: 100%;}
+                &__eyebrow {@include vw-pc(margin-bottom,6); @include vw-pc(font-size,24); @include vw-pc(line-height,32);}
+                &__title {@include vw-pc(margin-bottom,16); @include vw-pc(font-size,54); @include vw-pc(line-height,71);}
+                &__desc {@include vw-pc(margin-bottom,14); @include vw-pc(font-size,20); @include vw-pc(line-height,26);}
+                &__date {@include vw-pc(font-size,20); @include vw-pc(line-height,26);}
+                .img_box {@include vw-pc(width,1920);}
+
+                // 로고 이미지
+                // .pt_logo {
+                //     &--galaxy {@include vw-pc(width,120); @include vw-pc(height,40);}
+                // }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "../../../../../../scss_global/scss-common2";
+@import "bs_reset";
+@import "sec_kv_com";
+@import "sec_kv_sys";
+@import "category_nav";
+@import "sec_nav";
+@import "sec_benefit";
+
+.pt_page_hide {
+  width: 0 !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+}
+.air_conditioner .sec_category_nav :focus,
+.air_conditioner .sec_model.popup .pt_model :focus,
+.air_conditioner .sec_nav :focus,
+.air_conditioner .sec_recommend :focus {
+  outline: dashed 2px #2189ff !important;
+}

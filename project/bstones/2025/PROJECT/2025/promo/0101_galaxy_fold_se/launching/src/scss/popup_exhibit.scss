@@ -1,0 +1,91 @@
+@import '../../../../../../../scss_global/scss-common2';
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+// MO
+.sec_project_wrap.galaxy_fold_se {
+    // 팝업스토어
+    .pt_exhibit {
+        .pt_black {color: #333;}
+
+        &__tit-wrap {position: absolute; @include vw-mo(top, 48); @include vw-mo(left, 48);}
+        &__tit {display: flex; flex-direction: column; align-items: unset; @include vw-mo(gap, 5);}
+        &__logo {
+            position:relative; @include vw-mo(width, 418); font-size:0;
+            img {width:100%;}
+        }
+        &__titsub {@include vw-mo(margin-right, 5); @include vw-mo(font-size, 40); @include vw-mo(line-height, 53);}
+        &__titdesc {@include vw-mo(font-size, 20); @include vw-mo(line-height, 53); color: #777; letter-spacing: -.025rem;}
+        &__sub {@include vw-mo(margin-top, 25); @include vw-mo(font-size, 20); @include vw-mo(line-height, 26); letter-spacing: -.05rem;}
+        &__box {@include vw-mo(padding, 0 40 100);}
+        &__body {border-top: 1px solid #ddd;}  
+        &__table {
+            table-layout: fixed; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; border: 0; /*color: #999;*/
+            tbody {border-top: 1px solid #ddd;}
+            tr {
+                @include vw-mo(height,60);
+                &.pt_table__loc {@include vw-mo(height,40);}
+            }
+            th, td {
+                @include vw-mo(font-size,20); @include vw-mo(line-height,28); @include vw-mo(padding,5); vertical-align: middle; text-align: center; letter-spacing: -.04em; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;
+                // &:last-child { border-right: 0; }
+                &.pt_num { padding: 0; }
+                &.pt_exhibition__item { @include vw-mo(width,200); font-weight: initial; border-right: 1px solid #ddd;}
+                &.pt_brnone {border-right: 0;}
+                i { @include vw-mo(width,28); @include vw-mo(height,28); @include vw-mo(font-size,12); @include vw-mo(line-height,21); @include vw-mo(border-radius,8); margin: 0 auto; display: flex; justify-content: center; align-items: center; color: #fff; background-color: #ccc; letter-spacing: -.02em; }
+            }
+        }
+        &__baseline {@include vw-mo(padding, 32 5 !important); vertical-align: baseline !important;}
+    }
+}
+
+
+// PC
+@media screen and (min-width:769px) {
+    .sec_project_wrap.galaxy_fold_se {
+        // 팝업스토어
+        .pt_exhibit {
+            &__tit-wrap {position: absolute; @include vw-pc(top, 27); @include vw-pc(left, 24);}
+            &__tit {display: flex; flex-direction: unset; align-items: end; @include vw-pc(gap, 7);}
+            &__logo {
+                position:relative; @include vw-pc(width, 285); font-size:0;
+                img {width:100%;}
+            }
+            &__titsub {@include vw-pc(margin-right, 5); @include vw-pc(font-size, 24); @include vw-pc(line-height, 32); letter-spacing: -.025rem;}
+            &__titdesc {@include vw-pc(font-size, 12); @include vw-pc(line-height, 16); letter-spacing: -.04rem; color: #777;}
+            &__box {@include vw-pc(padding, 0 24 24);}
+            &__sub {@include vw-pc(margin-top, 23); @include vw-pc(font-size, 16); @include vw-pc(line-height, 21); letter-spacing: -.04rem;}
+            &__table {                            
+                width: 100%;
+                tr {
+                    @include vw-pc(height,42);
+                    &.pt_table__loc { @include vw-pc(height,35); }
+                    th, td {
+                        @include vw-pc(font-size,16); @include vw-pc(line-height,22); @include vw-pc(padding,4 20);
+                        &.pt_exhibition__item {@include vw-pc(width,200);}
+                        &.pt_num {@include vw-pc(width,64);}
+                        i {@include vw-pc(width,28); @include vw-pc(height,28); @include vw-pc(font-size,12); @include vw-pc(line-height,28); @include vw-pc(border-radius,8);}
+                    }
+                    .pt_num {@include vw-pc(width,30);}
+                }
+            }
+            &__baseline {@include vw-pc(padding, 20 !important);}
+        }        
+    }
+}
+
+
+// Fold
+@media screen and (min-width: 769px) and (max-width: 802px) {
+    .sec_project_wrap.galaxy_fold_se {
+        .pt_exhibit {
+            &__titdesc {@include vw-fold-view(font-size, 10);}
+        }
+    }
+}

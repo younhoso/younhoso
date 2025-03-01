@@ -1,0 +1,82 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'monospace';
+@import 'notice';
+
+.pt_zp_main {
+    .img_box--clear {position: relative; top: -1px;}
+    .pt_background--black{background: #000;}
+    .pt_background--gray{background: #222222;}
+
+    // app 페이지 관련
+    .sec_benefit {
+        @include vw-mo(padding, 40 0);
+        .pt_benefit {
+            &__item {
+                margin: 0 auto; @include vw-mo(margin-bottom, 20); @include vw-mo(width, 672); @include vw-mo(height, 252);
+                &:last-child {margin-bottom: 0}
+            }
+        }
+        .pt_tab{
+            &__btn-box{display: flex; justify-content: center; @include vw-mo(margin-bottom, 40);  @include vw-mo(gap, 20);}
+            &__btn{@include vw-mo(width, 326); @include vw-mo(height, 70); @include vw-mo(font-size, 30); @include vw-mo(line-height, 20); font-weight:700; @include vw-mo(letter-spacing, -0.025); vertical-align: baseline; @include vw-mo(border, 2 solid #1E81F8); @include vw-mo(border-radius, 40); color:#1E81F8;}
+            &__btn.active{color: #fff; background-color: #1E81F8}
+        }
+    }
+
+    
+    /*
+        //web 페이지 관련 - CTA
+        position: relative;
+        .zp_web_cta {
+            position: absolute; transform: translateX(-50%); z-index: 10;
+        }
+        .zp_trade__chat {
+            width: 13%; @include vw-max(height, 35); left: 48%; top: 13.87%;
+        }
+    */
+}
+
+/*
+    //web 페이지 관련 - CTA
+    @media screen and (max-width: 768px) {
+        .pt_zp_main {
+            // web 페이지 관련
+            .zp_trade__chat {
+                width: 52%; @include vw-mo(height, 40); left: 65%; top: 10.85%;
+            }
+        }
+    }
+*/
+
+
+// fold view 적용
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .pt_zp_main {
+        // app 페이지 관련
+        .sec_benefit {@include vw-fold(padding, 40 0 26);
+            .pt_benefit {
+                &__list {display: flex; justify-content: flex-start; flex-wrap: wrap; @include vw-fold(gap, 0 28); @include vw-fold(padding, 60 34);}
+                &__item {
+                    margin: 0; @include vw-fold(margin-bottom, 26); @include vw-fold(width, 752); @include vw-fold(height, 282);
+                    &:nth-last-child(2) {margin-bottom: 0}
+
+                    // 폴드뷰에서 배너 한줄에 하나 노출시
+                    // &:last-child{@include vw-fold(margin-right, 780);}
+                }
+            }
+            .pt_tab{
+                &__btn-box{display: flex; justify-content: center; @include vw-fold(margin-bottom, 0);  @include vw-fold(gap, 20);}
+                &__btn{@include vw-fold(width, 326); @include vw-fold(height, 70); @include vw-fold(font-size, 30); @include vw-fold(line-height, 20); font-weight:700; @include vw-fold(letter-spacing, -0.025); vertical-align: baseline; @include vw-fold(border, 2 solid #1E81F8); @include vw-fold(border-radius, 40); color:#1E81F8;}
+                &__btn.active{color: #fff; background-color: #1E81F8}
+            }
+        }
+
+        /*
+            //web 페이지 관련 - CTA
+            .zp_trade__chat {
+                width: 31%; @include vw-max(height, 80); left: 65%; top: 15.2%;
+            }
+        */
+    }
+}

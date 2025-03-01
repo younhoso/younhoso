@@ -1,0 +1,23 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'kv';
+@import 'howto';
+@import 'benefit';
+@import 'component_tab';
+@import 'notice';
+
+.samsung_health_app {
+   
+    
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_health_app {
+        .pt_btn-box{display: flex; justify-content: center; position: absolute; @include vw-mo(bottom,100); width: 100%;}
+        .pt_btn{@include vw-mo(width,244); @include vw-mo(height,60); @include vw-mo(border-radius,44); @include vw-mo(font-size,24); letter-spacing:-0.025em;}
+        .sec_benefit{
+            .pt_btn-box{@include vw-mo(bottom,63);}
+            .pt_btn{@include vw-mo(width,204);}
+        }
+    }
+}

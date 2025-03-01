@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.831" height="29.075" viewBox="0 0 15.831 29.075">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_58493" data-name="사각형 58493" width="15.831" height="29.075" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="icon" clip-path="url(#clip-path)">
+    <path id="사각형_58491" data-name="사각형 58491" d="M1,0H11.167A1.333,1.333,0,0,1,12.5,1.333V23.016a1.334,1.334,0,0,1-1.334,1.334H1.333A1.333,1.333,0,0,1,0,23.017V1A1,1,0,0,1,1,0Z" transform="translate(1.266 2.903)" fill="none" stroke="#468dff" stroke-width="2"/>
+    <rect id="사각형_58492" data-name="사각형 58492" width="6.707" height="1.935" rx="0.5" transform="translate(4.163 0.967)" fill="#468dff"/>
+    <line id="선_690" data-name="선 690" y2="23.379" transform="translate(4.261 3.025)" fill="none" stroke="#468dff" stroke-width="1.5"/>
+    <line id="선_691" data-name="선 691" y2="23.379" transform="translate(7.565 3.025)" fill="none" stroke="#468dff" stroke-width="1.5"/>
+    <line id="선_692" data-name="선 692" y2="23.379" transform="translate(10.87 3.025)" fill="none" stroke="#468dff" stroke-width="1.5"/>
+  </g>
+</svg>

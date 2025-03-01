@@ -1,0 +1,67 @@
+.samsung_tv_launching {
+    .sec_ai_banner {
+        background-color: #F8F8F8;
+
+       .pt_ai-inner {@include vw-pc(padding, 80 0 100); @include vw-pc(width, 1280);}
+       .pt_ai-con {position: relative; @include vw-pc(margin, 0 auto 20); @include vw-pc(padding, 6); overflow: hidden;}       
+       .pt_img-box {@include vw-pc(box-shadow, 0 3 6 rgba(0, 0, 0, 0.16)); @include vw-pc(border-radius, 15);}
+       .pt_text-box {
+            position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 118);
+
+            &__title {@include vw-pc(margin-bottom, 18); @include vw-pc(font-size, 28); @include vw-pc(line-height, 36); @include vw-pc(letter-spacing, -.7); font-weight: 700;}
+            &__link {@include vw-pc(margin-right, 15); @include vw-pc(font-size, 16); @include vw-pc(letter-spacing, -.5);}
+            &__detail {@include vw-pc(width, 110); @include vw-pc(height, 40); @include vw-pc(border-radius, 20); @include vw-pc(font-size, 16); @include vw-pc(letter-spacing, -.5);}
+        }
+        .pt_ai-noti {@include vw-pc(margin-bottom, 60); @include vw-pc(font-size, 16); @include vw-pc(line-height, 21); letter-spacing: -.025em; color: rgba(0, 0, 0, .5); text-align: center;}
+
+        //통이미지 바잉툴
+        .pt_ai-buying {
+            position: relative;
+            
+            .swiper-wrapper {@include vw-pc(gap, 20);}
+            .swiper-slide {@include vw-pc(width, 305);}
+
+            &__buy {position: absolute; @include vw-pc(bottom, 24); left: 50%; transform: translateX(-50%); @include vw-pc(width, 240); @include vw-pc(height, 40); @include vw-pc(font-size, 14); @include vw-pc(border-radius, 24);}
+       }
+       // 페이지네이션
+       .pt_ai-paging {display: none;}
+
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+        .sec_ai_banner {
+            .pt_ai-inner {@include vw-mo(padding, 120 0 120); width: 100%; }
+            .pt_ai-con {@include vw-mo(padding, 10 24); @include vw-mo(margin, 0 auto 20); overflow: hidden;}       
+            .pt_img-box {@include vw-mo(box-shadow, 0 3 10 rgba(0, 0, 0, 0.16)); @include vw-mo(border-radius, 20);}
+            .pt_text-box {
+                    position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 50);
+
+                    &__title {@include vw-mo(margin-bottom, 14); @include vw-mo(font-size, 29); @include vw-mo(line-height, 37); @include vw-mo(letter-spacing, -1.5);}
+                    &__link { @include vw-mo(margin-right, 10); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -.1);}
+                    &__detail {@include vw-mo(width, 152); @include vw-mo(height, 60); @include vw-mo(border-radius, 30); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -.5);}
+            }
+            .pt_ai-noti {@include vw-mo(margin-bottom, 60); @include vw-mo(font-size, 20); @include vw-mo(line-height, 26);}
+
+             //통이미지 바잉툴
+            .pt_ai-buying {
+                @include vw-mo(padding, 0 0 56 24);
+                
+                .swiper-wrapper {@include vw-mo(gap, 0);}
+                .swiper-slide {@include vw-mo(width, 360); @include vw-mo(margin-right, 24);}
+                // .swiper-slide:not(:last-child) {@include vw-mo(margin-right, 24);}
+
+                &__buy {@include vw-mo(bottom, 40); @include vw-mo(width, 280); @include vw-mo(height, 64); @include vw-mo(font-size, 24); @include vw-mo(border-radius, 32);}
+
+            }
+            // 페이지네이션
+            .pt_ai-paging {display: block; bottom: 0;
+                .swiper-pagination-bullet {@include vw-mo(width, 16); @include vw-mo(height, 16); @include vw-mo(margin, 0 8); @include vw-mo(border-width, 2); @include vw-mo(border, 1 solid #000); background-color: transparent; opacity: 1; vertical-align: bottom;
+                    &-active {background-color: #000;}
+                }
+            }
+
+        }
+    }
+}

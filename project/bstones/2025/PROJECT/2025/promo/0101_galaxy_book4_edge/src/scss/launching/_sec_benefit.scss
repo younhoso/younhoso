@@ -1,0 +1,547 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+.galaxy_book4_edge_launching {
+    .sec_benefit {
+        @include vw-mo(padding, 96 0 103);
+
+        .pt_benefit {
+            &__title {
+                @include vw-mo(margin-bottom, 40); text-align: center;
+
+                &--eyebrow {@include vw-mo(margin-bottom, 6); @include vw-mo(font-size, 30); @include vw-mo(line-height, 38); font-weight: 700;}
+                &--main {@include vw-mo(margin-bottom, 20); @include vw-mo(font-size, 48); @include vw-mo(line-height, 60); font-weight: 700; letter-spacing: -0.025em;}
+                &--date {@include vw-mo(font-size, 28); @include vw-mo(line-height, 35); letter-spacing: -0.025em;}
+            }
+
+            &__tab {
+                display: flex; justify-content: center; align-items: center; @include vw-mo(width, 324); @include vw-mo(height, 98); @include vw-mo(gap, 0); @include vw-mo(margin, 0 auto);
+
+                &--btn {
+                    display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid #E5E5E5; @include vw-mo(border-radius, 10);
+
+
+                    .pt_benefit__tab--txt {
+                        @include vw-mo(font-size, 24); @include vw-mo(line-height, 30); font-weight: 700; letter-spacing: -0.025em;
+
+                        &.txt01 {
+                            &::before {display: block; content: ''; @include vw-mo(width, 40); @include vw-mo(height, 40); margin: 0 auto; background: url('../../../is/images/launching/tab/gbe_icon_tab01_mo_v1.png') no-repeat; @include vw-mo(background-size, 40 40);}
+                        }
+
+                        &.txt02 {
+                            &::before {display: block; content: ''; @include vw-mo(width, 40); @include vw-mo(height, 40); margin: 0 auto; background: url('../../../is/images/launching/tab/gbe_icon_tab02_mo_v1.png') no-repeat; @include vw-mo(background-size, 40 40);}
+                        }
+                    }
+
+                    &.active {
+                        background-color: #333; border: 1px solid #333;
+
+                        .pt_benefit__tab--txt {color: #fff;}
+                    }
+                }
+            }
+
+            &__content{
+                @include vw-mo(width, 672); @include vw-mo(margin, 24 auto 0);
+                
+                .pt_benefit__box {
+                    .pt_benefit__live {
+                        position: relative; @include vw-mo(width, 672); @include vw-mo(margin, 0 auto 45);
+
+                        .pt_benefit__btn {
+                            position: absolute; position: absolute; @include vw-mo(top, 323); @include vw-mo(left, 263);
+                            &--detail {display: inline-block; @include vw-mo(margin-top, 7); border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em;}
+                        }
+                    }
+
+                    .pt_benefit__insta {
+                        position: relative; @include vw-mo(width, 672); @include vw-mo(height, 702); margin: 0 auto; @include vw-mo(padding, 47 29 25); @include vw-mo(border-radius, 10); border: 1px solid #DDD;
+
+                        &--num {position: absolute; @include vw-mo(top, -1); @include vw-mo(left, 19); display: block; @include vw-mo(min-width, 112); @include vw-mo(height, 32); @include vw-mo(margin-bottom, 13); background-color: #333; @include vw-mo(border-radius, 0 0 6 6); color: #fff; @include vw-mo(font-size, 20); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+                        &--txt {
+                            .pt_benefit__insta--title {@include vw-mo(margin-bottom, 11); @include vw-mo(font-size, 36); @include vw-mo(line-height, 48); font-weight: 700; text-align: center; letter-spacing: -0.05em;}
+                            .pt_benefit__insta--date {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32); text-align: center; letter-spacing: -0.03em;}
+                        }
+
+                        .pt_benefit__insta--img {position: absolute; @include vw-mo(top, 114); left: 50%; transform: translateX(-50%); @include vw-mo(width, 362); @include vw-mo(height, 211); margin: 0 auto;}
+
+                        .pt_benefit__mission {
+                            z-index: 1; position: absolute; @include vw-mo(top, 312); left: 50%; transform: translateX(-50%); display: flex; justify-content: space-between; @include vw-mo(width, 614); @include vw-mo(height, 226);
+
+                            &--item {
+                                position: relative; @include vw-mo(width, 298); @include vw-mo(height, 226); @include vw-mo(padding, 16 26); background-color: #fff; @include vw-mo(border-radius, 10); border: 1px solid #ddd; text-align: center;
+
+                                &.end {
+                                    &::after {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; content: ''; display: flex; align-items: center; justify-content: center; background-color: rgba($color: #000000, $alpha: 0.7); @include vw-mo(border-radius, 10);}
+                                }
+                            }
+                            &--tag {display: inline-block; @include vw-mo(width, 92); @include vw-mo(height, 38); @include vw-mo(margin-bottom, 13); border: 1px solid #333; @include vw-mo(border-radius, 19); @include vw-mo(font-size, 24); @include vw-mo(line-height, 38); font-weight: 700; letter-spacing: -0.03em; text-align: center;}
+                            &--title {@include vw-mo(margin-bottom, 8); @include vw-mo(font-size, 28); @include vw-mo(line-height, 40); font-weight: 700; letter-spacing: -0.03em;}
+                            &--end-txt {z-index: 10; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; @include vw-mo(font-size, 28); @include vw-mo(line-height, 28); font-weight: 700; text-align: center;}
+
+                            &--btn-write {display: inline-flex; justify-content: center; align-items: center; @include vw-mo(width, 206); @include vw-mo(height, 50); background-color: #1C1C1C; @include vw-mo(border-radius, 25); color: #fff; @include vw-mo(font-size, 24); font-weight: 700;}
+                            &--btn-apply {display: inline-flex; justify-content: center; align-items: center; @include vw-mo(width, 206); @include vw-mo(height, 50); background-color: #1C1C1C; @include vw-mo(border-radius, 25); color: #fff; @include vw-mo(font-size, 24); font-weight: 700;}
+                        }
+                        
+                        &--desc {
+                            z-index: 10; position: absolute; @include vw-mo(top, 615); left: 50%; transform: translateX(-50%); width: 100%; color: #666; @include vw-mo(font-size, 22); @include vw-mo(line-height, 32); text-align: center;
+
+                            &-txt {
+                                letter-spacing: -0.03em;
+
+                                &:first-child {display: block; @include vw-mo(margin-right, 0);}
+                            }
+                        }
+
+                        &::after {z-index: 2; position: absolute; @include vw-mo(top, 374); @include vw-mo(left, 316); display: block; content: ''; @include vw-mo(width, 40); @include vw-mo(height, 40); background: url('../../../is/images/launching/benefit/gbe_icon_plus_mo.png') no-repeat; @include vw-mo(background-size, 40 40);}
+
+                        .pt_benefit__btn--mission01 {z-index: 1; position: absolute; @include vw-mo(top, 556); @include vw-mo(left, 86); display: inline-block; border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em;}
+                        .pt_benefit__btn--mission02 {z-index: 1; position: absolute; @include vw-mo(top, 556); @include vw-mo(left, 402); display: inline-block; border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em;}
+                    }
+
+                    .pt_benefit__list {
+                        display: flex; flex-wrap: wrap;
+
+                        .pt_benefit__item {
+                            position: relative; display: flex; align-items: center; width: 100%; @include vw-mo(height, 210); @include vw-mo(margin-top, 24); @include vw-mo(padding-left, 24); border: 1px solid #DDD; @include vw-mo(border-radius, 10);
+
+                            &--num {
+                                position: absolute; @include vw-mo(top, 0); @include vw-mo(left, 20); display: block; @include vw-mo(border-radius, 0 0 6 6); color: #fff; @include vw-mo(font-size, 20); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em; text-align: center;
+
+                                &.black {display: block; @include vw-mo(min-width, 112); @include vw-mo(height, 32); background-color: #333;}
+                                &.youmake {display: block; @include vw-mo(min-width, 133); @include vw-mo(height, 32); background-color: #333;}
+                                &.festa {display: block; @include vw-mo(min-width, 198); @include vw-mo(height, 32); background-color: #333;}
+                                &.week {display: block; @include vw-mo(min-width, 179); @include vw-mo(height, 32); background-color: #333;}
+                                &.blue {display: block; @include vw-mo(min-width, 185); @include vw-mo(height, 32); background-color: #1F81F8;}
+                            }
+
+                            .pt_benefit__end {
+                                position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; content: ''; display: flex; align-items: center; justify-content: center; background-color: rgba($color: #000000, $alpha: 0.7); @include vw-mo(border-radius, 10);
+
+                                // &--txt {color: #fff; @include vw-mo(font-size, 30); font-weight: 700}
+                                &--txt {display:flex; justify-content:center; align-items:center; position:absolute; top:50%; left:50%; z-index:1; @include vw-mo(width,130); @include vw-mo(height,130); @include vw-mo(font-size,30); font-weight:700; @include vw-mo(line-height,38); color:#fff; white-space:pre; @include vw-mo(border,4 solid #fff); border-radius:50%; transform:translate(-50%,-50%); text-align:center;}
+                            }
+
+                            &.pt_bg-image.pt_add-bg {
+                                &.pt_benefit__item--starbucks {
+                                    @include vw-mo(padding-top, 30);
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 515); display: block; content: ''; @include vw-mo(width, 125); @include vw-mo(height, 87); background: url('../../../is/images/launching/benefit/gbe_bnf_single_starbucks_card_mo.png') no-repeat; @include vw-mo(background-size, 125 87);}
+                                }
+                                &.pt_benefit__item--sale {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 532); display: block; content: ''; @include vw-mo(width, 100); @include vw-mo(height, 100); background: url('../../../is/images/launching/benefit/gbe_bnf_single_sale_mo_v1.png') no-repeat; @include vw-mo(background-size, 100 100);}
+                                }
+                                &.pt_benefit__item--card {
+                                    @include vw-mo(padding-top, 30);
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 538); display: block; content: ''; @include vw-mo(width, 89); @include vw-mo(height, 66); background: url('../../../is/images/launching/benefit/gbe_bnf_single_card_mo.png') no-repeat; @include vw-mo(background-size, 89 66);}
+                                }
+                                &.pt_benefit__item--happy {
+                                    @include vw-mo(padding-top, 20);
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 526); display: block; content: ''; @include vw-mo(width, 127); @include vw-mo(height, 75); background: url('../../../is/images/launching/benefit/gbe_bnf_single_happy_mo_v1.png') no-repeat; @include vw-mo(background-size, 125 75);}
+                                }
+                                &.pt_benefit__item--app {
+                                    @include vw-mo(padding-top, 20);
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 544); display: block; content: ''; @include vw-mo(width, 78); @include vw-mo(height, 78); background: url('../../../is/images/launching/benefit/gbe_bnf_single_app_mo.png') no-repeat; @include vw-mo(background-size, 78 78);}
+                                }
+                                &.pt_benefit__item--npay {
+                                    @include vw-mo(padding-top, 30);
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 487); display: block; content: ''; @include vw-mo(width, 169); @include vw-mo(height, 144); background: url('../../../is/images/launching/benefit/gbe_bnf_single_npay_mo_v3.png') no-repeat; @include vw-mo(background-size, 169 144);}
+                                }
+                                &.pt_benefit__item--giftcard {
+                                    // @include vw-mo(padding-top, 10);
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 524); display: block; content: ''; @include vw-mo(width, 108); @include vw-mo(height, 68); background: url('../../../is/images/launching/benefit/gbe_bnf_single_giftcard_mo_v1.png') no-repeat; @include vw-mo(background-size, 108 68);}
+                                }
+                                &.pt_benefit__item--coupon {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 541); display: block; content: ''; @include vw-mo(width, 88); @include vw-mo(height, 65); background: url('../../../is/images/launching/benefit/gbe_bnf_single_coupon_mo.png') no-repeat; @include vw-mo(background-size, 88 65);}
+                                }
+                                &.pt_benefit__item--youmake {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 488); display: block; content: ''; @include vw-mo(width, 169); @include vw-mo(height, 144); background: url('../../../is/images/launching/benefit/gbe_bnf_single_ym_mo_v2.png') no-repeat; @include vw-mo(background-size, 169 144);}
+                                }
+                                &.pt_benefit__item--oliveyoung {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 499); display: block; content: ''; @include vw-mo(width, 125); @include vw-mo(height, 87); background: url('../../../is/images/launching/benefit/gbe_bnf_single_oliveyoung_mo.png') no-repeat; @include vw-mo(background-size, 125 87);}
+                                }
+                                &.pt_benefit__item--slbs {
+                                    @include vw-mo(padding-top, 30);
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 512); display: block; content: ''; @include vw-mo(width, 140); @include vw-mo(height, 116); background: url('../../../is/images/launching/benefit/gbe_bnf_single_slbs_mo.png') no-repeat; @include vw-mo(background-size, 140 116);}
+                                }
+    
+                                //  공통 혜택
+                                &.pt_benefit__item--notebook {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 536); display: block; content: ''; @include vw-mo(width, 103); @include vw-mo(height, 70); background: url('../../../is/images/launching/benefit/gbe_bnf_common_notebook_mo.png') no-repeat; @include vw-mo(background-size, 103 70);}
+                                }
+                                &.pt_benefit__item--tradein {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 536); display: block; content: ''; @include vw-mo(width, 103); @include vw-mo(height, 70); background: url('../../../is/images/launching/benefit/gbe_bnf_common_tradein_mo.png') no-repeat; @include vw-mo(background-size, 103 70);}
+                                }
+                                &.pt_benefit__item--neikidnis  {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 527); display: block; content: ''; @include vw-mo(width, 115); @include vw-mo(height, 144); background: url('../../../is/images/launching/benefit/gbe_bnf_common_neikidnis_mo.png') no-repeat; @include vw-mo(background-size, 115 144);}
+                                }
+                                &.pt_benefit__item--microsoft  {
+                                    @include vw-mo(padding-top, 20);
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 547); display: block; content: ''; @include vw-mo(width, 77); @include vw-mo(height, 101); background: url('../../../is/images/launching/benefit/gbe_bnf_common_microsoft_mo.png') no-repeat; @include vw-mo(background-size, 77 101);}
+                                }
+                                &.pt_benefit__item--careplus  {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 544); display: block; content: ''; @include vw-mo(width, 88); @include vw-mo(height, 70); background-image: url('../../../is/images/launching/benefit/gbe_bnf_common_careplus_mo.png'); @include vw-mo(background-size, 88 70);}
+                                }
+                                &.pt_benefit__item--edu  {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 479); display: block; content: ''; @include vw-mo(width, 157); @include vw-mo(height, 18); background-image: url('../../../is/images/launching/benefit/gbe_bnf_common_edu_mo_v1.png'); @include vw-mo(background-size, 157 18); background-repeat: no-repeat;}
+                                }
+                                &.pt_benefit__item--software  {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 539); display: block; content: ''; @include vw-mo(width, 96); @include vw-mo(height, 93); background-image: url('../../../is/images/launching/benefit/gbe_bnf_common_software_mo.png'); @include vw-mo(background-size, 96 93);}
+                                }
+                                &.pt_benefit__item--hancom  {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 530); display: block; content: ''; @include vw-mo(width, 119); @include vw-mo(height, 50); background-image: url('../../../is/images/launching/benefit/gbe_bnf_common_hancom_mo.png'); @include vw-mo(background-size, 119 50);}
+                                }
+                                &.pt_benefit__item--geekhaus  {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 534); display: block; content: ''; @include vw-mo(width, 108); @include vw-mo(height, 107); background-image: url('../../../is/images/launching/benefit/gbe_bnf_common_geekhaus_mo.png'); @include vw-mo(background-size, 108 107);}
+                                }
+                                &.pt_benefit__item--comento  {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 502); display: block; content: ''; @include vw-mo(width, 146); @include vw-mo(height, 25); background-image: url('../../../is/images/launching/benefit/gbe_bnf_common_comento_mo.png'); @include vw-mo(background-size, 146 25);}
+                                }
+                                &.pt_benefit__item--sweetch  {
+                                    &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 528); display: block; content: ''; @include vw-mo(width, 129); @include vw-mo(height, 88); background-image: url('../../../is/images/launching/benefit/gbe_bnf_common_sweetch_mo.png'); @include vw-mo(background-size, 129 88);}
+                                }
+                            }
+
+                            .pt_benefit__txt {
+                                z-index: 1;
+
+                                &--eyebrow {@include vw-mo(margin-bottom, 6); color: #2294EF; @include vw-mo(font-size, 24); @include vw-mo(line-height, 34); font-weight: 700; letter-spacing: -0.07em;}
+                                &--title {@include vw-mo(font-size, 28); @include vw-mo(line-height, 36); font-weight: 700; letter-spacing: -0.05em;}
+                                &--blue {color: #2294EF;}
+
+                                .pt_benefit__btn {
+                                    &--detail {display: inline-block; @include vw-mo(margin-top, 7); border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em;}
+                                    &--more {
+                                        display: inline-block; @include vw-mo(margin-top, 8); border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em;
+
+                                        // &::after {display: inline-block; content: ''; @include vw-mo(width, 21); @include vw-mo(height, 21); @include vw-mo(margin-left, 3); background: url('../../../is/images/launching/common/gbe_icon_more_mo.png') no-repeat; @include vw-mo(background-size, 21 21); vertical-align: middle;}
+                                    }
+                                    &--coupon {
+                                        display: inline-block; @include vw-mo(margin-top, 8); border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.05em;
+
+                                        &::after {display: inline-block; content: ''; @include vw-mo(width, 21); @include vw-mo(height, 21); @include vw-mo(margin-left, 8); background: url('../../../is/images/launching/common/gbe_icon_down_mo.png') no-repeat; @include vw-mo(background-size, 21 21); vertical-align: baseline;}
+                                    }
+                                }
+
+                                .pt_benefit__txt--desc {
+                                    &.single01 {@include vw-mo(margin-top, 15);}
+                                    &.single02 {@include vw-mo(margin-top, 24);}
+                                    &.single03 {@include vw-mo(margin-top, 15);}
+                                    &.single06 {@include vw-mo(margin-top, 9);}
+                                    &.common02 {@include vw-mo(margin-top, 7);}
+
+                                    li {
+                                        @include vw-mo(padding-left, 20); color: #666; @include vw-mo(font-size, 20); @include vw-mo(line-height, 26); letter-spacing: -0.025em;
+
+                                        &::before {display: inline-block; content: '※ '; @include vw-mo(text-indent, -20);}
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+
+                    .pt_benefit__notice {
+                        @include vw-mo(margin-top, 45); text-align: center;
+
+                        &--btn-detail {display: block; @include vw-mo(width, 244); @include vw-mo(height, 60); @include vw-mo(margin, 0 auto 29); @include vw-mo(font-size, 24); @include vw-mo(line-height, 56); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+
+                        &--btn-notice {
+                            display: inline-block; border-bottom: 1px solid #000; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; letter-spacing: -0.025em;
+
+                            &::after {display: inline-block; content: ''; @include vw-mo(width, 19); @include vw-mo(height, 12); @include vw-mo(margin-left, 10); background: url('../../../is/images/launching/common/gbe_icon_benefit_mo.png') no-repeat; @include vw-mo(background-size, 19 12); vertical-align: middle;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width:769px) {
+    .galaxy_book4_edge_launching {
+        .sec_benefit {
+            @include vw-pc(padding, 116 0 120);
+    
+            .pt_benefit {
+                &__title {
+                    @include vw-pc(margin-bottom, 39); text-align: center;
+    
+                    &--eyebrow {@include vw-pc(margin-bottom, 6); @include vw-pc(font-size, 28); @include vw-pc(line-height, 35); font-weight: 700;}
+                    &--main {@include vw-pc(margin-bottom, 12); @include vw-pc(font-size, 46); @include vw-pc(line-height, 60); font-weight: 700; letter-spacing: -0.025em;}
+                    &--date {@include vw-pc(font-size, 24); @include vw-pc(line-height, 32); letter-spacing: -0.025em;}
+                }
+
+                &__tab {
+                    display: flex; justify-content: center; align-items: center; @include vw-pc(width, 280); @include vw-pc(height, 86); @include vw-pc(gap, 0); @include vw-mo(margin, 0 auto);
+    
+                    &--btn {
+                        display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid #E2E2E2; @include vw-pc(border-radius, 10);
+    
+    
+                        .pt_benefit__tab--txt {
+                            @include vw-pc(font-size, 26); @include vw-pc(line-height, 56); font-weight: 700; letter-spacing: -0.025em;
+    
+                            &.txt01 {
+                                &::before {display: inline-block; content: ''; @include vw-pc(width, 56); @include vw-pc(height, 56); margin: 0 auto; background: url('../../../is/images/launching/tab/gbe_icon_tab01_pc_v1.png') no-repeat; @include vw-pc(background-size, 56 56); vertical-align: top;}
+                            }
+    
+                            &.txt02 {
+                                &::before {display: inline-block; content: ''; @include vw-pc(width, 56); @include vw-pc(height, 56); margin: 0 auto; background: url('../../../is/images/launching/tab/gbe_icon_tab02_pc_v1.png') no-repeat; @include vw-pc(background-size, 56 56); vertical-align: top;}
+                            }
+                        }
+    
+                        &.active {
+                            background-color: #333; border: 1px solid #333;
+    
+                            .pt_benefit__tab--txt {color: #fff;}
+                        }
+                    }
+                }
+    
+                &__content{
+                    @include vw-pc(width, 1320); @include vw-pc(margin, 14 auto 0);
+                    
+                    .pt_benefit__box {
+                        .pt_benefit__live {
+                            position: relative; @include vw-pc(width, 1320); @include vw-pc(margin, 0 auto 40);
+
+                            .pt_benefit__btn {
+                                position: absolute; @include vw-pc(top, 184); @include vw-pc(left, 163);
+
+                                &--detail {display: inline-block; @include vw-pc(margin-top, 0); border-bottom: 1px solid #000; @include vw-pc(border-width, 2); @include vw-pc(font-size, 16); @include vw-pc(line-height, 21); font-weight: 700; letter-spacing: 0;}
+                            }
+                        }
+
+                        .pt_benefit__insta {
+                            position: relative; @include vw-pc(width, 1320); @include vw-pc(height, 258); margin: 0 auto; @include vw-pc(padding, 20 0 20 43); @include vw-pc(border-radius, 10); border: 1px solid #DDD;
+
+                            &--num {position: absolute; @include vw-pc(top, 0); @include vw-pc(left, 43); display: block; @include vw-pc(min-width, 112); @include vw-pc(height, 34); @include vw-pc(margin-bottom, 0); background-color: #333; @include vw-pc(border-radius, 0 0 8 8); color: #fff; @include vw-pc(font-size, 18); @include vw-pc(line-height, 34); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+
+                            &--txt {
+                                position: absolute; @include vw-pc(top, 70); @include vw-pc(left, 43); @include vw-pc(width, 264); text-align: center;
+
+                                .pt_benefit__insta--title {@include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 24); @include vw-pc(line-height, 32); font-weight: 700; text-align: center; letter-spacing: -0.05em;}
+                                .pt_benefit__insta--date {@include vw-pc(margin-bottom, 19); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); letter-spacing: -0.03em;}
+                                .pt_benefit__insta--noti {@include vw-pc(font-size, 14); @include vw-pc(line-height, 18); letter-spacing: -0.03em;}
+                            }
+                            
+                            .pt_benefit__insta--img {position: absolute; @include vw-pc(top, 19); @include vw-pc(left, 962); transform: none; @include vw-pc(width, 306); @include vw-pc(height, 206); margin: 0 auto;}
+
+                            .pt_benefit__mission {
+                                z-index: 1; position: absolute; @include vw-pc(top, 20); @include vw-pc(left, 388); transform: none; display: flex; justify-content: space-between; @include vw-pc(width, 546); @include vw-pc(height, 151);
+
+                                &--item {
+                                    @include vw-pc(width, 268); @include vw-pc(height, 151); @include vw-pc(padding, 13 54); background-color: #fff; @include vw-pc(border-radius, 10); border: 1px solid #ddd; text-align: center;
+
+                                    &.end {
+                                        &::after {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; content: ''; display: flex; align-items: center; justify-content: center; background-color: rgba($color: #000000, $alpha: 0.7); @include vw-pc(border-radius, 10);}
+                                    }
+                                }
+                                &--tag {display: inline-block; @include vw-pc(width, 71); @include vw-pc(height, 24); @include vw-pc(margin-bottom, 9); border: 1px solid #333; @include vw-pc(border-radius, 12); @include vw-pc(font-size, 16); @include vw-pc(line-height, 24); font-weight: 700; letter-spacing: -0.03em; text-align: center;}
+                                &--title {@include vw-pc(margin-bottom, 7); @include vw-pc(font-size, 18); @include vw-pc(line-height, 26); font-weight: 700; letter-spacing: -0.03em;}
+                                &--end-txt {z-index: 10; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; @include vw-pc(font-size, 24); @include vw-pc(line-height, 38); font-weight: 700; text-align: center; letter-spacing: -0.05em;}
+
+                                &--btn-write {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(width, 120); @include vw-pc(height, 31); background-color: #1C1C1C; @include vw-pc(border-radius, 16); color: #fff; @include vw-pc(font-size, 16); font-weight: 700;}
+                                &--btn-apply {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(width, 102); @include vw-pc(height, 31); background-color: #1C1C1C; @include vw-pc(border-radius, 16); color: #fff; @include vw-pc(font-size, 16); font-weight: 700;}
+                            }
+    
+                            &--desc {
+                                z-index: 1; position: absolute; @include vw-pc(top, 220); @include vw-pc(left, 458); transform: none; width: auto; color: #666; @include vw-pc(font-size, 14); @include vw-pc(line-height, 17); text-align: left;
+
+                                &-txt {
+                                    letter-spacing: -0.03em;
+
+                                    &:first-child {display: inline-block; @include vw-pc(margin-right, 0);}
+                                }
+                            }
+
+                            &::after {z-index: 2; position: absolute; @include vw-pc(top, 74); @include vw-pc(left, 642); display: block; content: ''; @include vw-pc(width, 38); @include vw-pc(height, 38); background: url('../../../is/images/launching/benefit/gbe_icon_plus_pc.png') no-repeat; @include vw-pc(background-size, 38 38);}
+
+                            .pt_benefit__btn--mission01 {position: absolute; @include vw-pc(top, 182); @include vw-pc(left, 468); display: inline-block; border-bottom: 1px solid #000; @include vw-pc(border-width, 2); @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); font-weight: 700; letter-spacing: -0.025em;}
+                            .pt_benefit__btn--mission02 {position: absolute; @include vw-pc(top, 182); @include vw-pc(left, 746); display: inline-block; border-bottom: 1px solid #000; @include vw-pc(border-width, 2); @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); font-weight: 700; letter-spacing: -0.025em;}
+                        }
+    
+                        .pt_benefit__list {
+                            display: flex; flex-wrap: wrap; @include vw-pc(width, 1320); margin: 0 auto;
+    
+                            .pt_benefit__item {
+                                position: relative; display: flex; align-items: center; @include vw-pc(width, 648); @include vw-pc(height, 174); @include vw-pc(margin-top, 24); @include vw-pc(margin-left, 24); @include vw-pc(padding-left, 43); @include vw-pc(border-radius, 15); border: 1px solid #DDD;
+    
+                                &:nth-child(odd) {margin-left: 0;}
+                                &--num {
+                                    position: absolute; @include vw-pc(top, 0); @include vw-pc(left, 43); display: block; @include vw-pc(border-radius, 0 0 8 8); color: #fff; @include vw-pc(font-size, 18); @include vw-pc(line-height, 34); font-weight: 700; letter-spacing: -0.025em; text-align: center;
+
+                                    &.black {@include vw-pc(min-width, 111); @include vw-pc(height, 34);}
+                                    &.youmake {@include vw-pc(min-width, 129); @include vw-pc(height, 34);}
+                                    &.festa {@include vw-pc(min-width, 195); @include vw-pc(height, 34);}
+                                    &.week {@include vw-pc(min-width, 187); @include vw-pc(height, 34);}
+                                    &.blue {@include vw-pc(min-width, 177); @include vw-pc(height, 34);}
+                                }
+
+                                .pt_benefit__end {
+                                    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; content: ''; display: flex; align-items: center; justify-content: center; background-color: rgba($color: #000000, $alpha: 0.7); @include vw-pc(border-radius, 15);
+    
+                                    &--txt {@include vw-pc(width,116); @include vw-pc(height,116); @include vw-pc(font-size,24); @include vw-pc(line-height,30); @include vw-pc(border,4 solid #fff);}
+                                }
+
+                                &.pt_bg-image.pt_add-bg {
+                                    &.pt_benefit__item--starbucks {
+                                        @include vw-pc(padding-top, 30);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 493); display: block; content: ''; @include vw-pc(width, 133); @include vw-pc(height, 92); background: url('../../../is/images/launching/benefit/gbe_bnf_single_starbucks_card_pc.png') no-repeat; @include vw-pc(background-size, 133 92);}
+                                    }
+                                    &.pt_benefit__item--sale {
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 496); display: block; content: ''; @include vw-pc(width, 100); @include vw-pc(height, 100); background: url('../../../is/images/launching/benefit/gbe_bnf_single_sale_pc_v1.png') no-repeat; @include vw-pc(background-size, 100 100);}
+                                    }
+                                    &.pt_benefit__item--card {
+                                        @include vw-pc(padding-top, 30);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 484); display: block; content: ''; @include vw-pc(width, 120); @include vw-pc(height, 100); background: url('../../../is/images/launching/benefit/gbe_bnf_single_card_pc.png') no-repeat; @include vw-pc(background-size, 120 100);}
+                                    }
+                                    &.pt_benefit__item--happy {
+                                        @include vw-pc(padding-top, 30);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 479); display: block; content: ''; @include vw-pc(width, 127); @include vw-pc(height, 80); background: url('../../../is/images/launching/benefit/gbe_bnf_single_happy_pc_v1.png') no-repeat; @include vw-pc(background-size, 125 80);}
+                                    }
+                                    &.pt_benefit__item--app {
+                                        @include vw-pc(padding-top, 10);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 504); display: block; content: ''; @include vw-pc(width, 78); @include vw-pc(height, 78); background: url('../../../is/images/launching/benefit/gbe_bnf_single_app_pc.png') no-repeat; @include vw-pc(background-size, 78 78);}
+                                    }
+                                    &.pt_benefit__item--npay {
+                                        @include vw-pc(padding-top, 20);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 454); display: block; content: ''; @include vw-pc(width, 181); @include vw-pc(height, 107); background: url('../../../is/images/launching/benefit/gbe_bnf_single_npay_pc_v3.png') no-repeat; @include vw-pc(background-size, 181 107);}
+                                    }
+                                    &.pt_benefit__item--giftcard {
+                                        // @include vw-pc(padding-top, 30);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 478); display: block; content: ''; @include vw-pc(width, 115); @include vw-pc(height, 73); background: url('../../../is/images/launching/benefit/gbe_bnf_single_giftcard_pc_v1.png') no-repeat; @include vw-pc(background-size, 115 73);}
+                                    }
+                                    &.pt_benefit__item--coupon {
+                                        @include vw-pc(padding-top, 10);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 484); display: block; content: ''; @include vw-pc(width, 120); @include vw-pc(height, 100); background: url('../../../is/images/launching/benefit/gbe_bnf_single_coupon_pc.png') no-repeat; @include vw-pc(background-size, 120 100);}
+                                    }
+                                    &.pt_benefit__item--youmake {
+                                        @include vw-pc(padding-top, 30);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 454); display: block; content: ''; @include vw-pc(width, 181); @include vw-pc(height, 107); background: url('../../../is/images/launching/benefit/gbe_bnf_single_ym_pc_v2.png') no-repeat; @include vw-pc(background-size, 181 107);}
+                                    }
+                                    &.pt_benefit__item--oliveyoung {
+                                        @include vw-pc(padding-top, 30);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 485); display: block; content: ''; @include vw-pc(width, 133); @include vw-pc(height, 92); background: url('../../../is/images/launching/benefit/gbe_bnf_single_oliveyoung_pc.png') no-repeat; @include vw-pc(background-size, 133 92);}
+                                    }
+                                    &.pt_benefit__item--slbs {
+                                        @include vw-pc(padding-top, 30);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 484); display: block; content: ''; @include vw-pc(width, 120); @include vw-pc(height, 100); background: url('../../../is/images/launching/benefit/gbe_bnf_single_slbs_pc.png') no-repeat; @include vw-pc(background-size, 120 100);}
+                                    }
+        
+                                    //  공통 혜택
+                                    &.pt_benefit__item--notebook {
+                                        @include vw-pc(padding-top, 15);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 479); display: block; content: ''; @include vw-pc(width, 107); @include vw-pc(height, 72); background: url('../../../is/images/launching/benefit/gbe_bnf_common_notebook_pc.png') no-repeat; @include vw-pc(background-size, 107 72);}
+                                    }
+                                    &.pt_benefit__item--tradein {
+                                        @include vw-pc(padding-top, 15);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 479); display: block; content: ''; @include vw-pc(width, 106); @include vw-pc(height, 72); background: url('../../../is/images/launching/benefit/gbe_bnf_common_tradein_pc.png') no-repeat; @include vw-pc(background-size, 106 72);}
+                                    }
+                                    &.pt_benefit__item--neikidnis  {
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 495); display: block; content: ''; @include vw-pc(width, 106); @include vw-pc(height, 132); background: url('../../../is/images/launching/benefit/gbe_bnf_common_neikidnis_pc.png') no-repeat; @include vw-pc(background-size, 106 132);}
+                                    }
+                                    &.pt_benefit__item--microsoft  {
+                                        @include vw-pc(padding-top, 25);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 517); display: block; content: ''; @include vw-pc(width, 74); @include vw-pc(height, 96); background: url('../../../is/images/launching/benefit/gbe_bnf_common_microsoft_pc.png') no-repeat; @include vw-pc(background-size, 74 96);}
+                                    }
+                                    &.pt_benefit__item--careplus  {
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 482); display: block; content: ''; @include vw-pc(width, 122); @include vw-pc(height, 78); background: url('../../../is/images/launching/benefit/gbe_bnf_common_careplus_pc.png') no-repeat; @include vw-pc(background-size, 122 78);}
+                                    }
+                                    &.pt_benefit__item--edu  {
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 441); display: block; content: ''; @include vw-pc(width, 157); @include vw-pc(height, 18); background: url('../../../is/images/launching/benefit/gbe_bnf_common_edu_pc_v1.png') no-repeat; @include vw-pc(background-size, 157 18);}
+                                    }
+                                    &.pt_benefit__item--software  {
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 511); display: block; content: ''; @include vw-pc(width, 84); @include vw-pc(height, 84); background: url('../../../is/images/launching/benefit/gbe_bnf_common_software_pc.png') no-repeat; @include vw-pc(background-size, 84 84);}
+                                    }
+                                    &.pt_benefit__item--hancom  {
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 479); display: block; content: ''; @include vw-pc(width, 119); @include vw-pc(height, 50); background: url('../../../is/images/launching/benefit/gbe_bnf_common_hancom_pc.png') no-repeat; @include vw-pc(background-size, 119 50);}
+                                    }
+                                    &.pt_benefit__item--geekhaus  {
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 490); display: block; content: ''; @include vw-pc(width, 108); @include vw-pc(height, 107); background: url('../../../is/images/launching/benefit/gbe_bnf_common_geekhaus_pc.png') no-repeat; @include vw-pc(background-size, 108 107);}
+                                    }
+                                    &.pt_benefit__item--comento  {
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 480); display: block; content: ''; @include vw-pc(width, 118); @include vw-pc(height, 20); background: url('../../../is/images/launching/benefit/gbe_bnf_common_comento_pc.png') no-repeat; @include vw-pc(background-size, 118 20);}
+                                    }
+                                    &.pt_benefit__item--sweetch  {
+                                        @include vw-pc(padding-top, 25);
+                                        &::after {position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 507); display: block; content: ''; @include vw-pc(width, 116); @include vw-pc(height, 79); background: url('../../../is/images/launching/benefit/gbe_bnf_common_sweetch_pc_v1.png') no-repeat; @include vw-pc(background-size, 116 79);}
+                                    }
+                                }
+
+                                .pt_benefit__txt {
+                                    z-index: 1;
+    
+                                    &--eyebrow {@include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); font-weight: 700; letter-spacing: -0.07em;}
+                                    &--title {@include vw-pc(font-size, 24); @include vw-pc(line-height, 30); font-weight: 700; letter-spacing: -0.025em;}
+                                    &--blue {color: #2294EF;}
+    
+                                    .pt_benefit__btn {
+                                        &--detail {display: inline-block; @include vw-pc(margin-top, 5); border-bottom: 1px solid #000; @include vw-pc(border-width, 2); @include vw-pc(font-size, 14); @include vw-pc(line-height, 20); font-weight: 700; letter-spacing: 0;}
+                                        &--more {
+                                            display: inline-block; @include vw-pc(margin-top, 11); border-bottom: 1px solid #000; @include vw-pc(border-width, 1); @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); font-weight: 700; letter-spacing: 0;
+    
+                                            // &::after {display: inline-block; content: ''; @include vw-pc(width, 14); @include vw-pc(height, 14); @include vw-pc(margin-top, -3); @include vw-pc(margin-left, 7); background: url('../../../is/images/launching/common/gbe_icon_more_pc.png') no-repeat; @include vw-pc(background-size, 14 14); vertical-align: middle;}
+                                        }
+                                        &--coupon {
+                                            display: inline-block; @include vw-pc(margin-top, 8); border-bottom: 1px solid #000; @include vw-pc(border-width, 2); @include vw-pc(font-size, 14); @include vw-pc(line-height, 20); font-weight: 700; letter-spacing: 0;
+    
+                                            &::after {display: inline-block; content: ''; @include vw-pc(width, 13); @include vw-pc(height, 13); @include vw-pc(margin-left, 6); background: url('../../../is/images/launching/common/gbe_icon_down_pc.png') no-repeat; @include vw-pc(background-size, 13 13); vertical-align: baseline;}
+                                        }
+                                    }
+    
+                                    .pt_benefit__txt--desc {
+                                        &.single01 {@include vw-pc(margin-top, 9);}
+                                        &.single02 {@include vw-pc(margin-top, 13);}
+                                        &.single03 {@include vw-pc(margin-top, 13);}
+                                        &.single06 {@include vw-pc(margin-top, 10);}
+                                        &.common02 {@include vw-pc(margin-top, 9);}
+    
+                                        li {
+                                            @include vw-pc(margin-left, 7); @include vw-pc(padding-left, 10); color: #666; @include vw-pc(font-size, 14); @include vw-pc(line-height, 20); letter-spacing: -0.05em; @include vw-pc(text-indent, -6);
+
+                                            &::before {display: inline-block; content: '※ '; @include vw-pc(margin-right, 0); @include vw-pc(margin-left, 6); @include vw-pc(text-indent, -14);}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                        .pt_benefit__notice {
+                            @include vw-pc(margin-top, 60); text-align: center;
+    
+                            &--btn-detail {display: block; @include vw-pc(width, 146); @include vw-pc(height, 42); @include vw-pc(margin, 0 auto 30); @include vw-pc(font-size, 16); @include vw-pc(line-height, 40); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+    
+                            &--btn-notice {
+                                display: inline-block; border-bottom: 1px solid #000; @include vw-pc(border-width, 2); @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); font-weight: 700; letter-spacing: 0;
+    
+                                &::after {display: inline-block; content: ''; @include vw-pc(width, 16); @include vw-pc(height, 16); @include vw-pc(margin-left, 3); background: url('../../../is/images/launching/common/gbe_icon_benefit_pc.png') no-repeat; @include vw-pc(background-size, 16 16); vertical-align: middle;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★

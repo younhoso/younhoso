@@ -1,0 +1,92 @@
+.samdot_monitor {
+    .sec_kv {
+        @include vw-pc(max-width, 1440); @include vw-pc(height, auto); overflow: hidden;
+
+        // TV
+        &.sec_kv--tv {
+            .inner_1440 {
+                position: relative; z-index: 1; height: 100%;
+
+                .pt_title_box {
+                    position: absolute; top: 50%; @include vw-pc(left, 241); transform: translateY(-50%); z-index: 1; color: #fff;
+
+                    .pt_kv_eyebrow {@include vw-pc(margin-bottom, 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 26); letter-spacing: -0.05em; font-weight: 700;}
+                    .pt_kv_title {@include vw-pc(margin-bottom, 4); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); letter-spacing: -0.05em;}
+                    .pt_kv_txt {@include vw-pc(margin-bottom, 18); @include vw-pc(font-size, 18); @include vw-pc(line-height, 25); letter-spacing: -0.05em;}
+                    .pt_kv_date {@include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 700;}
+                    .pt_kv_date .kr { font-weight: 700; }
+                }
+            }
+        }
+
+        // Hybrid
+        &.sec_kv--hybrid {
+            .inner_1440 {
+                position: relative; z-index: 1; height: 100%;
+
+                .pt_title_box {
+                    position: absolute; @include vw-pc(top, 72); @include vw-pc(left, 241); z-index: 1;
+
+                    .pt_kv_title {@include vw-pc(margin-bottom, 4); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); letter-spacing: -0.05em;}
+                    .pt_kv_txt {@include vw-pc(margin-bottom, 18); @include vw-pc(font-size, 18); @include vw-pc(line-height, 25); letter-spacing: -0.05em;}
+                    .pt_kv_date {@include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 700;}
+                    .pt_kv_date .kr { font-weight: 700; }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .samdot_monitor {
+        .sec_kv {
+            @include vw-mo(height, 350); overflow: hidden;
+
+            // TV
+            &.sec_kv--tv {
+                .inner_1440 {
+                    position: relative; z-index: 1; height: 100%;
+
+                    .pt_kv_img {
+                        transform: translateX(-50%); position: absolute; top: 0; left: 50%; z-index: -1; height: 100%;
+
+                        img {width: auto; height: 100%;}
+                    }
+                    .pt_title_box {
+                        @include vw-mo(top, 78); @include vw-mo(left, 24); transform: translateY(0);
+
+                        .pt_kv_eyebrow {@include vw-mo(margin-bottom, 2); @include vw-mo(font-size, 24); @include vw-mo(line-height, 36);}
+                        .pt_kv_title { @include vw-mo(margin-bottom, 4); @include vw-mo(font-size, 32); @include vw-mo(line-height, 40); letter-spacing: -0.025em;}
+                        .pt_kv_txt {@include vw-mo(margin-bottom, 4); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -0.09em;
+                            &--hide {display: none;}
+                        }
+                        .pt_kv_date {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                        .pt_kv_date .kr { font-weight: 700; }
+                    }
+                }
+            }
+
+            // Hybrid
+            &.sec_kv--hybrid {
+                .inner_1440 {
+                    position: relative; z-index: 1; height: 100%;
+
+                    .pt_kv_img {
+                        transform: translateX(-50%); position: absolute; top: 0; left: 50%; z-index: -1; height: 100%;
+
+                        img {width: auto; height: 100%;}
+                    }
+                    .pt_title_box {
+                        @include vw-mo(top, 76); @include vw-mo(left, 24);
+
+                        .pt_kv_title { @include vw-mo(margin-bottom, 6); @include vw-mo(font-size, 32); @include vw-mo(line-height, 40); letter-spacing: -0.025em;}
+                        .pt_kv_txt {@include vw-mo(margin-bottom, 4); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -0.05em;
+                            &--hide {display: none;}
+                        }
+                        .pt_kv_date {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                        .pt_kv_date .kr { font-weight: 700; }
+                    }
+                }
+            }
+        }
+    }
+}

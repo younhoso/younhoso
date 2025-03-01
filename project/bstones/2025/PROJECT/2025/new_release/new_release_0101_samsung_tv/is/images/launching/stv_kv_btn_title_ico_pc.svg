@@ -1,0 +1,23 @@
+<svg id="Layer_9" data-name="Layer 9" xmlns="http://www.w3.org/2000/svg" width="15.62" height="15.588" viewBox="0 0 15.62 15.588">
+  <g id="ICON_arlam">
+    <path id="round" d="M280.637,685A1.84,1.84,0,0,1,277,685" transform="translate(-270.775 -670.971)" fill="#fff"/>
+    <g id="bell">
+      <g id="top" transform="translate(6.225)">
+        <path id="패스_48" data-name="패스 48" d="M2.078,1.039H3.118V.52A.491.491,0,0,0,2.6,0H.52A.491.491,0,0,0,0,.52V2.078H1.039V1.039Z" fill="#fff"/>
+      </g>
+      <g id="body" transform="translate(2.068 1.559)">
+        <path id="패스_49" data-name="패스 49" d="M274.2,661a5.764,5.764,0,0,0-5.2,5.2v4.676h1.039V666.3a4.684,4.684,0,0,1,4.157-4.209Z" transform="translate(-269 -661)" fill="#fff"/>
+        <rect id="사각형_43" data-name="사각형 43" width="1.039" height="2.078" transform="translate(10.392 7.794)" fill="#fff"/>
+      </g>
+      <path id="btm" d="M280.6,681.6l-1.143-2.182c-.156-.208-.312-.416-.624-.416H277.48v1.039h1.143l.52,1.039h-12.73l.468-1.039h9.041V679h-9.249c-.312,0-.416.1-.624.416l-.987,2.182c-.156.26.156.52.416.52h14.7C280.442,682.118,280.753,681.91,280.6,681.6Z" transform="translate(-265.02 -668.088)" fill="#fff"/>
+      <path id="point" d="M274.039,668.05H273a2.661,2.661,0,0,1,2.65-2.65v1.039A1.619,1.619,0,0,0,274.039,668.05Z" transform="translate(-268.853 -661.555)" fill="#fff"/>
+    </g>
+    <g id="watch" transform="translate(7.784 1.039)">
+      <g id="round-2" data-name="round" transform="translate(0)">
+        <circle id="타원_5" data-name="타원 5" cx="3.897" cy="3.897" r="3.897" fill="none"/>
+        <path id="패스_52" data-name="패스 52" d="M4.9,7.794A3.925,3.925,0,0,1,1,3.9,3.925,3.925,0,0,1,4.9,0a3.925,3.925,0,0,1,3.9,3.9A3.925,3.925,0,0,1,4.9,7.794Zm0-6.755A2.883,2.883,0,0,0,2.039,3.9,2.883,2.883,0,0,0,4.9,6.755,2.883,2.883,0,0,0,7.755,3.9,2.883,2.883,0,0,0,4.9,1.039Z" transform="translate(-1)" fill="#fff"/>
+      </g>
+      <path id="패스_53" data-name="패스 53" d="M287.791,667.706l-.935-.935a.472.472,0,0,1-.156-.364V664.9h1.039v1.3l.779.779Z" transform="translate(-283.219 -662.354)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

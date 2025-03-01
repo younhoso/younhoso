@@ -1,0 +1,735 @@
+@import '../../../../../../scss_global/scss-common2';
+
+// MO
+.sec_project_wrap {
+    .sec_benefit {
+        .pt_popup.pt_type2 {
+            z-index: 220;position: fixed;top: 0;left: 0;bottom: auto;width: 100vw;height: 100vh;background-color: #F4F4F4;padding: 0;
+
+            // 공통
+            .pt_popup__area {
+                position: relative;padding: 0;
+                .pt_popup__contents {
+                    overflow-y: hidden;@include vw-mo(padding, 96 48 48);max-height: none;
+
+                    // image lazy loading
+                    &.pt_bg-image.pt_add-bg {
+                        .pt_card__item:before {background-image: url('../../is/images/howto/gf_icon_plus_mo.png');}
+                        .pt_card__txt:before {background-image: url('../../is/images/howto/gf_icon_arrow_mo.png');}
+                    }
+
+                    .pt_em {color: #2189FF;}
+
+                    .pt_header {
+                        &__eyebrow {@include vw-mo(font-size, 24);@include vw-mo(line-height, 32);letter-spacing: -.05em;}
+                        &__title {
+                            @include vw-mo(font-size, 48);@include vw-mo(line-height, 52);@include vw-mo(margin-top, 14);letter-spacing: -.05em;
+                            em {letter-spacing: -.05em;}
+                        }
+                    }
+
+                    .pt_howto {
+                        &__subtit {font-weight: 700;@include vw-mo(font-size, 36);@include vw-mo(line-height, 46);@include vw-mo(margin-top, 50);letter-spacing: -.04em;}
+                        &__discs {
+                            @include vw-mo(margin-top, 25);@include vw-mo(font-size, 20);@include vw-mo(line-height, 28);color: #757575;
+                            li {
+                                position: relative;@include vw-mo(padding-left, 18);
+                                &:before {content: '※';position: absolute;top: 0;left: 0;}
+                            }
+                        }
+                    }
+                }
+                .pt_popup__close-btn {
+                    position: absolute;@include vw-mo(top, 60);@include vw-mo(right, 48); @include vw-mo(width, 48); @include vw-mo(height, 48);background: url('../../is/images/howto/bnf_btn_close_mo.png') no-repeat center/contain;
+                }
+            }
+
+            // 심플하게 결제
+            .pt_popup_howto--simple {
+                .pt_card {
+                    display: flex; @include vw-mo(gap,24); @include vw-mo(margin-top,20);
+    
+                    &__item {@include vw-mo(width,172);}
+                    & + .pt_howto__discs {@include vw-mo(margin-top,12);}
+                }
+
+                .pt_bill {
+                    @include vw-mo(margin-top,34); @include vw-mo(padding,44 36); background: #fff; @include vw-mo(border-radius,10);
+    
+                    &__title {@include vw-mo(margin-bottom,8); @include vw-mo(font-size,30); @include vw-mo(line-height,38);}
+                    &__item {display: flex; justify-content: space-between;}
+                    dt, dd {position: relative; @include vw-mo(font-size,24); @include vw-mo(line-height,32);}
+                    dt {
+                        .pt_bill__disc {position: absolute; @include vw-mo(top,4); @include vw-mo(left,90); margin-top: 0; white-space: nowrap;}
+                    }
+                    dd {font-weight: 700;}
+                    &__price {@include vw-mo(font-size,28); @include vw-mo(line-height,35);}
+                    &__disc {@include vw-mo(margin-top,8); color: #757575; @include vw-mo(font-size,20); @include vw-mo(line-height,26); letter-spacing: -0.025em;}
+    
+                    &__origin {@include vw-mo(padding-bottom,24);}
+                    &__bnf {
+                        @include vw-mo(padding,20 0 24); border-top: 1px solid #000; border-bottom: 1px solid #000; @include vw-mo(border-width,4);
+    
+                        .pt_bill__item {
+                            @include vw-mo(margin-top,20);
+    
+                            &:first-child {margin-top: 0;}
+                            &--final {
+                                @include vw-mo(margin-top,25); @include vw-mo(padding-top,18); border-top: 1px solid #DDD; @include vw-mo(border-width,2);
+    
+                                dt {font-weight: 700;}
+                            }
+                        }
+                    }
+                    &__sum {
+                        @include vw-mo(padding-top,19); @include vw-mo(font-size,20); @include vw-mo(line-height,26); letter-spacing: -0.025em;
+    
+                        .pt_bill__item {align-items: flex-end;}
+                        .pt_em {display: inline-block; @include vw-mo(margin-top,4); color: #000; @include vw-mo(font-size,28); font-weight: 700; @include vw-mo(line-height,38); letter-spacing: -0.05em;}
+                        dt {@include vw-mo(font-size,20); @include vw-mo(line-height,26); letter-spacing: -0.025em;}
+                        dd {color: #3895FF; @include vw-mo(font-size,28); font-weight: 700; @include vw-mo(line-height,38); letter-spacing: -0.025em;}
+                        .pt_bill__price {@include vw-mo(font-size,36); font-weight: 700; @include vw-mo(line-height,44);}
+                    }
+    
+                    &__label {
+                        &--npay {
+                            display: inline-flex; align-items: center; @include vw-mo(margin-top,30); @include vw-mo(height,48); @include vw-mo(padding,0 10); color: #fff; @include vw-mo(font-size,22); font-weight: 700; letter-spacing: -0.025em; background: linear-gradient(90deg,#2E8EFA 0,#00D070 100%); @include vw-mo(border-radius,10);
+                            
+                            .pt_img--npay {position: relative; @include vw-mo(top,-2); display: inline-block; @include vw-mo(margin,0 10); @include vw-mo(width,75); @include vw-mo(height,26); vertical-align: top; background-repeat: no-repeat; background-size: contain;}
+                        }
+                    }
+                }
+            }
+
+            // 여러 카드로 나눠서 결제
+            .pt_popup_howto--card {
+                .pt_card {
+                    background-color: #fff;@include vw-mo(margin-top, 22);@include vw-mo(border-radius, 10);@include vw-mo(padding, 44 36);
+
+                    &__titbox {display: flex;justify-content: space-between;}
+                    &__tit {@include vw-mo(font-size, 30);}
+                    &__price {
+                        @include vw-mo(font-size, 24);
+                        @include vw-mo(margin-top, 2);
+                        .en {@include vw-mo(font-size, 28);}
+                    }
+                    &__txt {
+                        position: relative;text-align: center;@include vw-mo(font-size, 20);@include vw-mo(line-height, 28);
+
+                        .pt_strong {
+                            display: block;@include vw-mo(font-size, 20);@include vw-mo(line-height, 32);@include vw-mo(margin-top, 32);
+                            .en {@include vw-mo(font-size, 24);}
+                        }
+                        &:before {z-index: 10;content: "";position: absolute;@include vw-mo(top, 60);left: 50%;transform: translateX(-50%);@include vw-mo(width, 24);@include vw-mo(height, 24);@include vw-mo(background-size, 24 24);}
+                    }
+                    &__txt-small {
+                        letter-spacing: -.05em;
+                    }
+                    &__list {
+                        position: relative;display: flex;@include vw-mo(margin-top, 29);@include vw-mo(border-top, solid 4 #000);
+
+                        li {
+                            position: relative;z-index: 1;@include vw-mo(border-right, dashed 2 #DDD);
+                            &:before {z-index: 10;content: "";position: absolute;@include vw-mo(top, 109);@include vw-mo(right, -16);@include vw-mo(width, 30);@include vw-mo(height, 30);@include vw-mo(background-size, 30 30);}
+                        }
+                        li:last-child {
+                            border-right: 0;
+                            &:before { display: none; }
+                        }
+                        .img_box {@include vw-mo(padding, 24 32 10);}
+                        .pt_label {display: block;color: #fff;@include vw-mo(font-size, 20);font-weight: 700;@include vw-mo(line-height, 24);@include vw-mo(padding, 7);@include vw-mo(margin-top, 20);}
+                        &:before {content: "";position: absolute;left: 0;bottom: 0;width: 100%;@include vw-mo(height, 62);@include vw-mo(border-radius, 10);background-color: #2189FF;}
+                    }
+                }
+
+                .pt_list {
+                    display: flex;justify-content: space-between;@include vw-mo(gap, 24);@include vw-mo(margin-top, 20);
+                    li {
+                        position: relative;background-color: #fff;@include vw-mo(border-radius, 10);@include vw-mo(width, 300);@include vw-mo(min-height, 232);
+                        .pt_title{
+                            display: block;font-weight: 700;text-align: left;@include vw-mo(font-size, 24);@include vw-mo(line-height, 32);@include vw-mo(padding-top, 68);@include vw-mo(padding-left, 24);margin-bottom: 0;letter-spacing: -.05em;
+                            em {letter-spacing: -.05em;}
+                        }
+                        .img_box {position: absolute;top: 0;left: 0;width: 100%;margin: 0;}
+                        .pt_label {text-align: center;position: absolute;@include vw-mo(top, 24);@include vw-mo(left, 24);@include vw-mo(font-size, 20);color: #fff;background-color: #2189FF;border-radius: 50%;@include vw-mo(width, 34);@include vw-mo(height, 34);@include vw-mo(padding, 6);}
+                    }
+
+                    &__btmbox {
+                        text-align: center;@include vw-mo(border, solid 2 #2189FF);@include vw-mo(line-height, 18);@include vw-mo(border-radius, 10);@include vw-mo(margin, 10 24);@include vw-mo(padding, 13 0);@include vw-mo(font-size, 12);
+                        strong {@include vw-mo(font-size, 14);font-weight: 700;}
+                    }
+                }
+            }
+
+            // 여러 사람과 나눠서 결제
+            .pt_popup_howto--user {
+
+                .pt_card {
+                    background-color: #fff;@include vw-mo(margin-top, 22);@include vw-mo(border-radius, 10);@include vw-mo(padding, 44 36);
+
+                    &__titbox {display: flex;justify-content: space-between;}
+                    &__tit {@include vw-mo(font-size, 30);}
+                    &__price {
+                        @include vw-mo(font-size, 24);
+                        @include vw-mo(margin-top, 2);
+                        .en {@include vw-mo(font-size, 28);}
+                    }
+                    &__txt {
+                        position: relative;text-align: center;@include vw-mo(font-size, 20);@include vw-mo(line-height, 28);
+
+                        .pt_strong {
+                            display: block;@include vw-mo(font-size, 20);@include vw-mo(line-height, 32);@include vw-mo(margin-top, 32);
+                            .en {@include vw-mo(font-size, 24);}
+                        }
+                        &:before {z-index: 10;content: "";position: absolute;@include vw-mo(top, 60);left: 50%;transform: translateX(-50%);@include vw-mo(width, 24);@include vw-mo(height, 24);@include vw-mo(background-size, 24 24);}
+                    }
+                    &__txt-small {
+                        letter-spacing: -.05em;
+                    }
+                    &__list {
+                        position: relative;@include vw-mo(margin-top, 29);@include vw-mo(border-top, solid 4 #000);
+                        li {
+                            position: relative;z-index: 1;@include vw-mo(border-right, dashed 2 #DDD);
+                            &:before {z-index: 10;content: "";position: absolute;@include vw-mo(top, 109);@include vw-mo(right, -16);@include vw-mo(width, 30);@include vw-mo(height, 30);@include vw-mo(background-size, 30 30);}
+                        }
+                        li:last-child {
+                            border-right: 0;
+                            &:before { display: none; }
+                        }
+                        .img_box {@include vw-mo(padding, 24 0 12);@include vw-mo(width, 452);margin: 0 auto;}
+                        .pt_label {display: block;color: #fff;@include vw-mo(font-size, 20);font-weight: 700;@include vw-mo(line-height, 24);@include vw-mo(padding, 7);@include vw-mo(margin-top, 20);}
+
+                        &.pt_card_type {display: flex;}
+                        &.pt_card_type:before {content: "";position: absolute;left: 0;bottom: 0;width: 100%;@include vw-mo(height, 62);@include vw-mo(border-radius, 10);background-color: #2189FF;}
+
+                        &-people {
+                            display: flex;justify-content: space-between;
+                            li {
+                                flex: 1;text-align: center;border-right: 0;
+                                strong {@include vw-mo(font-size, 24); .en {@include vw-mo(font-size, 28);} }
+                            }
+                            &__tit {@include vw-mo(font-size, 24); @include vw-mo(margin-bottom, 12);}
+                        }
+                        &-success {
+                            position: relative;background-color: #E8F3FF;@include vw-mo(width, 552);@include vw-mo(height, 179);@include vw-mo(padding, 36);@include vw-mo(margin-top, 35);@include vw-mo(border-radius, 10);
+                            &__tit {@include vw-mo(font-size, 30);}
+                            &__txt {
+                                position: absolute;@include vw-mo(bottom, 36);@include vw-mo(right, 35);@include vw-mo(font-size, 30);font-weight: 700;color: #2189FF;
+                                &:before {content: '';display: inline-block;background: url('../../is/images/howto/gf_howto_ico_card_mo.png') no-repeat center/contain;@include vw-mo(width, 40);@include vw-mo(height, 40);@include vw-mo(vertical-align, -9);}
+                            }
+                            &:before {content: '';position: absolute;@include vw-mo(top, 85);left: 50%;background-color: #2189FF;transform: translateX(-50%);@include vw-mo(width, 480);@include vw-mo(height, 10);@include vw-mo(border-radius, 10);}
+                        }
+                    }
+                }
+
+                .pt_list {
+                    display: flex;justify-content: space-between;@include vw-mo(gap, 24);@include vw-mo(margin-top, 20);
+                    li {
+                        position: relative;background-color: #fff;@include vw-mo(border-radius, 10);@include vw-mo(width, 300);@include vw-mo(min-height, 232);
+                        .pt_title{
+                            display: block;font-weight: 700;text-align: left;@include vw-mo(font-size, 24);@include vw-mo(line-height, 32);@include vw-mo(padding-top, 68);@include vw-mo(padding-left, 24);margin-bottom: 0;letter-spacing: -.05em;
+                            em {letter-spacing: -.05em;}
+                        }
+                        .img_box {position: absolute;top: 0;left: 0;width: 100%;margin: 0;}
+                        .pt_label {text-align: center;position: absolute;@include vw-mo(top, 24);@include vw-mo(left, 24);@include vw-mo(font-size, 20);color: #fff;background-color: #2189FF;border-radius: 50%;@include vw-mo(width, 34);@include vw-mo(height, 34);@include vw-mo(padding, 6);}
+                    }
+
+                    &__btmbox {
+                        text-align: center;@include vw-mo(border, solid 2 #2189FF);@include vw-mo(line-height, 18);@include vw-mo(border-radius, 10);@include vw-mo(margin, 10 24);@include vw-mo(padding, 13 0);@include vw-mo(font-size, 12);
+                        strong {@include vw-mo(font-size, 14);font-weight: 700;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PC
+@media screen and (min-width:769px) {
+    .sec_project_wrap {
+        .sec_benefit {
+            .pt_popup.pt_type2 {
+                position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);width: auto; height: auto;
+
+                // 공통
+                .pt_popup__area {
+                    position: relative;padding: 0;
+                    .pt_popup__contents {
+                        overflow-y: hidden;@include vw-pc(padding, 43 43 48);max-height: none;
+
+                        // image lazy loading
+                        &.pt_bg-image.pt_add-bg {
+                            //.pt_card__item:before {background-image: url('../../is/images/howto/gf_icon_plus_pc.png');}
+                            .pt_card__txt:before {background-image: url('../../is/images/howto/gf_icon_arrow_pc.png');}
+                        }
+
+                        .pt_header {
+                            &__eyebrow {display: block;text-align: center;@include vw-pc(font-size, 16);@include vw-pc(line-height, 30);}
+                            &__title {
+                                text-align: center;@include vw-pc(font-size, 28);@include vw-pc(line-height, 30);@include vw-pc(margin-top, 2);
+                            }
+                        }
+
+                        .pt_howto {
+                            &__subtit {text-align: center;@include vw-pc(font-size, 20);@include vw-pc(line-height, 30);@include vw-pc(margin-top, 25);}
+                            &__discs {
+                                @include vw-pc(margin-top, 12);@include vw-pc(font-size, 12);@include vw-pc(line-height, 18);color: #757575;
+                                li {
+                                    position: relative;@include vw-pc(padding-left, 10);
+                                    &:before {content: '※';position: absolute;top: 0;left: 0;}
+                                }
+                            }
+                        }
+                    }
+                    .pt_popup__close-btn {
+                        position: absolute;@include vw-pc(top, 24);@include vw-pc(right, 24); @include vw-pc(width, 24); @include vw-pc(height, 24);background: url('../../is/images/howto/bnf_btn_close_pc.png') no-repeat center/contain;
+                    }
+                }
+
+                // 심플하게 결제
+                .pt_popup_howto--simple {
+                    @include vw-pc(width,511);
+
+                    .pt_howto__section {text-align: center;}
+                    .pt_card {
+                        @include vw-pc(gap,12); justify-content: center; @include vw-pc(margin-top,12);
+    
+                        &__item {@include vw-pc(width,91);}
+                        & + .pt_howto__discs { display: inline-block; @include vw-pc(margin-top,12);}
+                    }
+                    .pt_bill {
+                        @include vw-pc(margin-top,22); @include vw-pc(padding,22 24); text-align: left; @include vw-pc(border-radius,10);
+    
+                        &__title {@include vw-pc(margin-bottom,3); @include vw-pc(font-size,16); @include vw-pc(line-height,20);}
+                        dt, dd {@include vw-pc(font-size,14); @include vw-pc(line-height,18);}
+                        dt {
+                            .pt_bill__disc {@include vw-pc(top,3); @include vw-pc(left,50);}
+                        }
+                        dd {@include vw-pc(font-size,12); @include vw-pc(line-height,16);}
+                        &__price {@include vw-pc(font-size,14); @include vw-pc(line-height,17);}
+                        &__disc {display: inline-block; margin-top: 0; @include vw-pc(font-size,10); @include vw-pc(line-height,13); letter-spacing: -0.05em;}
+    
+                        &__origin {@include vw-pc(padding-bottom,10);}
+                        &__bnf {
+                            @include vw-pc(padding,15 0); @include vw-pc(border-width,2);
+    
+                            .pt_bill__item {
+                                @include vw-pc(margin-top,15);
+    
+                                &--final {@include vw-pc(margin-top,16); @include vw-pc(padding-top,15); border-width: 1px;}
+                            }
+                        }
+                        &__sum {
+                            @include vw-pc(padding-top,9); @include vw-pc(font-size,12); @include vw-pc(line-height,16); letter-spacing: -0.05em;
+    
+                            .pt_em {margin-top: 0; @include vw-pc(font-size,16); @include vw-pc(line-height,21);}
+                            dt {@include vw-pc(font-size,12); @include vw-pc(line-height,16); letter-spacing: -0.05em;}
+                            dd {@include vw-pc(font-size,18); @include vw-pc(line-height,23);}
+                            .pt_bill__price {@include vw-pc(font-size,20); @include vw-pc(line-height,25);}
+                        }
+    
+                        &__label {
+                            &--npay {
+                                position: relative; display: flex; justify-content: center; @include vw-pc(margin-top,15); @include vw-pc(height,43); @include vw-pc(padding,0); @include vw-pc(font-size,14); letter-spacing: -0.025em; @include vw-pc(border-radius,10);
+                                
+                                .pt_img--npay {@include vw-pc(top,-1); @include vw-pc(margin,0 5); @include vw-pc(width,49); @include vw-pc(height,17); vertical-align: top;}
+                            }
+                        }
+                    }
+                }
+
+                // 여러 카드로 나눠서 결제
+                .pt_popup_howto--card {
+                    @include vw-pc(width, 618);
+
+                    .pt_card {
+                        @include vw-pc(margin-top, 5);@include vw-pc(border-radius, 10);@include vw-pc(padding, 27 29 18);
+
+                        &__titbox {display: flex;justify-content: space-between;}
+                        &__tit {@include vw-pc(font-size, 16);}
+                        &__price {
+                            @include vw-pc(font-size, 12);
+                            @include vw-pc(margin-top, 2);
+                            .en {@include vw-pc(font-size, 14);}
+                        }
+                        &__txt {
+                            position: relative;text-align: center;@include vw-pc(font-size, 12);@include vw-pc(line-height, 16);
+
+                            .pt_strong {
+                                display: block;@include vw-pc(font-size, 12);@include vw-pc(line-height, 32);@include vw-pc(margin, 17 0 3);
+                                .en {@include vw-pc(font-size, 16);}
+                            }
+                            &:before {z-index: 10;content: "";position: absolute;@include vw-pc(top, 38);left: 50%;transform: translateX(-50%);@include vw-pc(width, 12);@include vw-pc(height, 12);@include vw-pc(background-size, 12 12);}
+                        }
+                        &__txt-small {
+                            letter-spacing: -.05em;
+                        }
+                        &__list {
+                            position: relative;display: flex;@include vw-pc(margin-top, 14);@include vw-pc(border-top, solid 2 #000);
+
+                            li {
+                                position: relative;z-index: 1;@include vw-pc(border-right, dashed 2 #DDD);
+                                &:before {display: none;}
+                            }
+                            li:last-child {
+                                border-right: 0;
+                                &:before { display: none; }
+                            }
+                            .img_box {@include vw-pc(padding, 12 42 5);}
+                            .pt_label {@include vw-pc(font-size, 12);@include vw-pc(line-height, 16);@include vw-pc(padding, 5);@include vw-pc(margin-top, 0);}
+                            &:before {content: "";position: absolute;left: 0;bottom: 0;width: 100%;@include vw-pc(height, 42);@include vw-pc(border-radius, 10);background-color: #2189FF;}
+                        }
+                    }
+
+                    .pt_list {
+                        display: flex;justify-content: space-between;@include vw-pc(gap, 24);@include vw-pc(margin-top, 7);
+                        li {
+                            position: relative;background-color: #fff;@include vw-pc(border-radius, 10);@include vw-pc(width, 255);@include vw-pc(min-height, 185);
+                            .pt_title{
+                                display: block;font-weight: 700;text-align: left;@include vw-pc(font-size, 18);@include vw-pc(line-height, 24);@include vw-pc(padding-top, 54);@include vw-pc(padding-left, 24);margin-bottom: 0;letter-spacing: -.05em;
+                                em {letter-spacing: -.05em;}
+                            }
+                            //.img_box {@include vw-pc(width, 231);@include vw-pc(margin, 10 0 10 24);}
+                            .pt_label {text-align: center;position: absolute;@include vw-pc(top, 24);@include vw-pc(left, 24);@include vw-pc(font-size, 14);color: #fff;background-color: #2189FF;border-radius: 50%;@include vw-pc(width, 24);@include vw-pc(height, 24);@include vw-pc(padding, 6);}
+                        }
+
+                        &__btmbox {
+                            text-align: center;@include vw-pc(border, solid 2 #2189FF);@include vw-pc(line-height, 14);@include vw-pc(border-radius, 10);@include vw-pc(margin, 10 24);@include vw-pc(padding, 10 0);@include vw-pc(font-size, 12);
+                            strong {@include vw-pc(font-size, 11);font-weight: 700;}
+                            p {@include vw-pc(font-size, 9);}
+                        }
+                    }
+                }
+
+                // 여러 사람과 나눠서 결제
+                .pt_popup_howto--user {
+
+                    .pt_card {
+                        @include vw-pc(margin-top, 5);@include vw-pc(border-radius, 10);@include vw-pc(padding, 27 29 24);
+
+                        &__titbox {display: flex;justify-content: space-between;}
+                        &__tit {@include vw-pc(font-size, 16);}
+                        &__price {
+                            @include vw-pc(font-size, 12);
+                            @include vw-pc(margin-top, 2);
+                            .en {@include vw-pc(font-size, 14);}
+                        }
+                        &__txt {
+                            position: relative;text-align: center;@include vw-pc(font-size, 20);@include vw-pc(line-height, 28);
+
+                            .pt_strong {
+                                display: block;@include vw-pc(font-size, 20);@include vw-pc(line-height, 32);@include vw-pc(margin-top, 32);
+                                .en {@include vw-pc(font-size, 24);}
+                            }
+                            &:before {z-index: 10;content: "";position: absolute;@include vw-pc(top, 60);left: 50%;transform: translateX(-50%);@include vw-pc(width, 24);@include vw-pc(height, 24);@include vw-pc(background-size, 24 24);}
+                        }
+                        &__txt-small {
+                            letter-spacing: -.05em;
+                        }
+                        &__list {
+                            position: relative;@include vw-pc(margin-top, 14);@include vw-pc(border-top, solid 2 #000);
+                            li {
+                                position: relative;z-index: 1;@include vw-pc(border-right, dashed 2 #DDD);
+                                &:before {z-index: 10;content: "";position: absolute;@include vw-pc(top, 109);@include vw-pc(right, -16);@include vw-pc(width, 30);@include vw-pc(height, 30);@include vw-pc(background-size, 30 30);}
+                            }
+                            li:last-child {
+                                border-right: 0;
+                                &:before { display: none; }
+                            }
+                            .img_box {@include vw-pc(padding, 24 0 6);@include vw-pc(width, 281);margin: 0 auto;}
+                            .pt_label {display: block;color: #fff;@include vw-pc(font-size, 20);font-weight: 700;@include vw-pc(line-height, 24);@include vw-pc(padding, 7);@include vw-pc(margin-top, 20);}
+
+                            &.pt_card_type {display: flex;}
+                            &.pt_card_type:before {content: "";position: absolute;left: 0;bottom: 0;width: 100%;@include vw-pc(height, 62);@include vw-pc(border-radius, 10);background-color: #2189FF;}
+
+                            &-people {
+                                display: flex;justify-content: space-between;@include vw-pc(width, 326);margin: 0 auto;
+
+                                li {
+                                    flex: 1;text-align: center;border-right: 0;
+                                    strong {@include vw-pc(font-size, 12); .en {@include vw-pc(font-size, 14);} }
+                                }
+                                &__tit {@include vw-pc(font-size, 12); @include vw-pc(margin-bottom, 5);}
+                            }
+                            &-success {
+                                position: relative;background-color: #E8F3FF;@include vw-pc(width, 404);@include vw-pc(height, 90);@include vw-pc(padding, 17 24);@include vw-pc(border-radius, 10);@include vw-pc(margin, 13 auto 0);@include vw-pc(border-radius, 10);
+                                &__tit {@include vw-pc(font-size, 14);}
+                                &__txt {
+                                    position: absolute;@include vw-pc(bottom, 14);@include vw-pc(right, 24);@include vw-pc(font-size, 14);font-weight: 700;color: #2189FF;
+                                    &:before {content: '';display: inline-block;background: url('../../is/images/howto/gf_howto_ico_card_mo.png') no-repeat center/contain;@include vw-pc(width, 22);@include vw-pc(height, 22);@include vw-pc(vertical-align, -7);}
+                                }
+                                &:before {
+                                    content: '';position: absolute;@include vw-pc(top, 42);left: 50%;background-color: #2189FF;transform: translateX(-50%);@include vw-pc(width, 356);@include vw-pc(height, 8);@include vw-pc(border-radius, 10);
+                                }
+                            }
+                        }
+                    }
+
+                    .pt_list {
+                        display: flex;justify-content: space-between;@include vw-pc(gap, 24);@include vw-pc(margin-top, 7);
+                        li {
+                            position: relative;background-color: #fff;@include vw-pc(border-radius, 10);@include vw-pc(width, 255);@include vw-pc(min-height, 185);
+                            .pt_title{
+                                display: block;font-weight: 700;text-align: left;@include vw-pc(font-size, 18);@include vw-pc(line-height, 24);@include vw-pc(padding-top, 54);@include vw-pc(padding-left, 24);margin-bottom: 0;letter-spacing: -.05em;
+                                em {letter-spacing: -.05em;}
+                            }
+                            //.img_box {@include vw-pc(width, 231);@include vw-pc(margin, 10 0 10 24);}
+                            .pt_label {text-align: center;position: absolute;@include vw-pc(top, 24);@include vw-pc(left, 24);@include vw-pc(font-size, 14);color: #fff;background-color: #2189FF;border-radius: 50%;@include vw-pc(width, 24);@include vw-pc(height, 24);@include vw-pc(padding, 6);}
+                        }
+
+                        &__btmbox {
+                            text-align: center;@include vw-pc(border, solid 2 #2189FF);@include vw-pc(line-height, 14);@include vw-pc(border-radius, 10);@include vw-pc(margin, 10 24);@include vw-pc(padding, 10 0);@include vw-pc(font-size, 12);
+                            strong {@include vw-pc(font-size, 11);font-weight: 700;}
+                            p {@include vw-pc(font-size, 9);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// FOLD
+@media screen and (min-width: 769px) and (max-width: 802px) {
+    .sec_project_wrap {
+        .sec_benefit {
+            .pt_popup.pt_type2 {
+                position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%); width: auto; height: auto;
+
+                // 공통
+                .pt_popup__area {
+                    position: relative;padding: 0;
+                    .pt_popup__contents {
+                        overflow-y: hidden;@include vw-fold-view(padding, 43 43 48);max-height: none;
+
+                        // image lazy loading
+                        &.pt_bg-image.pt_add-bg {
+                            //.pt_card__item:before {background-image: url('../../is/images/howto/gf_icon_plus_pc.png');}
+                            .pt_card__txt:before {background-image: url('../../is/images/howto/gf_icon_arrow_pc.png');}
+                        }
+
+                        .pt_header {
+                            &__eyebrow {display: block;text-align: center;@include vw-fold-view(font-size, 16);@include vw-fold-view(line-height, 30);}
+                            &__title {
+                                text-align: center;@include vw-fold-view(font-size, 28);@include vw-fold-view(line-height, 30);@include vw-fold-view(margin-top, 2);
+                            }
+                        }
+
+                        .pt_howto {
+                            &__subtit {text-align: center;@include vw-fold-view(font-size, 20);@include vw-fold-view(line-height, 30);@include vw-fold-view(margin-top, 25);}
+                            &__discs {
+                                @include vw-fold-view(margin-top, 12);@include vw-fold-view(font-size, 12);@include vw-fold-view(line-height, 18);color: #757575;
+                                li {
+                                    position: relative;@include vw-fold-view(padding-left, 10);
+                                    &:before {content: '※';position: absolute;top: 0;left: 0;}
+                                }
+                            }
+                        }
+
+                    }
+                    .pt_popup__close-btn {
+                        position: absolute;@include vw-fold-view(top, 24);@include vw-fold-view(right, 24); @include vw-fold-view(width, 24); @include vw-fold-view(height, 24);background: url('../../is/images/howto/bnf_btn_close_pc.png') no-repeat center/contain;
+                    }
+                }
+
+                // 심플하게 결제
+                .pt_popup_howto--simple {
+                    @include vw-fold-view(width,511);
+
+                    .pt_card {
+                        @include vw-fold-view(gap,12); justify-content: center; @include vw-fold-view(margin-top,12);
+    
+                        &__item {@include vw-fold-view(width,91);}
+                        & + .pt_howto__discs {@include vw-fold-view(margin-top,12);}
+                    }
+                    .pt_bill {
+                        @include vw-fold-view(margin-top,22); @include vw-fold-view(padding,22 24); text-align: left; @include vw-fold-view(border-radius,10);
+    
+                        &__title {@include vw-fold-view(margin-bottom,3); @include vw-fold-view(font-size,16); @include vw-fold-view(line-height,20);}
+                        dt, dd {@include vw-fold-view(font-size,14); @include vw-fold-view(line-height,18);}
+                        dt {
+                            .pt_bill__disc {@include vw-fold-view(top,3); @include vw-fold-view(left,50);}
+                        }
+                        dd {@include vw-fold-view(font-size,12); @include vw-fold-view(line-height,16);}
+                        &__price {@include vw-fold-view(font-size,14); @include vw-fold-view(line-height,17);}
+                        &__disc {display: inline-block; margin-top: 0; @include vw-fold-view(font-size,10); @include vw-fold-view(line-height,13); letter-spacing: -0.05em;}
+    
+                        &__origin {@include vw-fold-view(padding-bottom,10);}
+                        &__bnf {
+                            @include vw-fold-view(padding,15 0); @include vw-fold-view(border-width,2);
+    
+                            .pt_bill__item {
+                                @include vw-fold-view(margin-top,15);
+    
+                                &--final {@include vw-fold-view(margin-top,16); @include vw-fold-view(padding-top,15); border-width: 1px;}
+                            }
+                        }
+                        &__sum {
+                            @include vw-fold-view(padding-top,9); @include vw-fold-view(font-size,12); @include vw-fold-view(line-height,16); letter-spacing: -0.05em;
+    
+                            .pt_em {margin-top: 0; @include vw-fold-view(font-size,16); @include vw-fold-view(line-height,21);}
+                            dt {@include vw-fold-view(font-size,12); @include vw-fold-view(line-height,16); letter-spacing: -0.05em;}
+                            dd {@include vw-fold-view(font-size,18); @include vw-fold-view(line-height,23);}
+                            .pt_bill__price {@include vw-fold-view(font-size,20); @include vw-fold-view(line-height,25);}
+                        }
+    
+                        &__label {
+                            &--npay {
+                                position: relative; display: flex; justify-content: center; @include vw-fold-view(margin-top,15); @include vw-fold-view(height,43); @include vw-fold-view(padding,0); @include vw-fold-view(font-size,14); letter-spacing: -0.025em; @include vw-fold-view(border-radius,10);
+                                
+                                .pt_img--npay {@include vw-fold-view(top,-1); @include vw-fold-view(margin,0 5); @include vw-fold-view(width,49); @include vw-fold-view(height,17); vertical-align: top;}
+                            }
+                        }
+                    }
+                }
+
+                // 여러 카드로 나눠서 결제
+                .pt_popup_howto--card {
+                    @include vw-fold-view(width, 618);
+
+                    .pt_card {
+                        @include vw-fold-view(margin-top, 5);@include vw-fold-view(border-radius, 10);@include vw-fold-view(padding, 27 29 18);
+
+                        &__titbox {display: flex;justify-content: space-between;}
+                        &__tit {@include vw-fold-view(font-size, 16);}
+                        &__price {
+                            @include vw-fold-view(font-size, 12);
+                            @include vw-fold-view(margin-top, 2);
+                            .en {@include vw-fold-view(font-size, 14);}
+                        }
+                        &__txt {
+                            position: relative;text-align: center;@include vw-fold-view(font-size, 12);@include vw-fold-view(line-height, 16);
+
+                            .pt_strong {
+                                display: block;@include vw-fold-view(font-size, 12);@include vw-fold-view(line-height, 32);@include vw-fold-view(margin, 17 0 3);
+                                .en {@include vw-fold-view(font-size, 16);}
+                            }
+                            &:before {z-index: 10;content: "";position: absolute;@include vw-fold-view(top, 38);left: 50%;transform: translateX(-50%);@include vw-fold-view(width, 12);@include vw-fold-view(height, 12);@include vw-fold-view(background-size, 12 12);}
+                        }
+                        &__txt-small {
+                            letter-spacing: -.05em;
+                        }
+                        &__list {
+                            position: relative;display: flex;@include vw-fold-view(margin-top, 14);@include vw-fold-view(border-top, solid 2 #000);
+
+                            li {
+                                position: relative;z-index: 1;@include vw-fold-view(border-right, dashed 2 #DDD);
+                                &:before {display: none;}
+                            }
+                            li:last-child {
+                                border-right: 0;
+                                &:before { display: none; }
+                            }
+                            .img_box {@include vw-fold-view(padding, 12 42 5);}
+                            .pt_label {@include vw-fold-view(font-size, 12);@include vw-fold-view(line-height, 16);@include vw-fold-view(padding, 5);@include vw-fold-view(margin-top, 0);}
+                            &:before {content: "";position: absolute;left: 0;bottom: 0;width: 100%;@include vw-fold-view(height, 42);@include vw-fold-view(border-radius, 10);background-color: #2189FF;}
+                        }
+                    }
+
+                    .pt_list {
+                        display: flex;justify-content: space-between;@include vw-fold-view(gap, 24);@include vw-fold-view(margin-top, 7);
+                        li {
+                            position: relative;background-color: #fff;@include vw-fold-view(border-radius, 10);@include vw-fold-view(width, 255);@include vw-fold-view(min-height, 185);
+                            .pt_title{
+                                display: block;font-weight: 700;text-align: left;@include vw-fold-view(font-size, 18);@include vw-fold-view(line-height, 24);@include vw-fold-view(padding-top, 54);@include vw-fold-view(padding-left, 24);margin-bottom: 0;letter-spacing: -.05em;
+                                em {letter-spacing: -.05em;}
+                            }
+                            //.img_box {@include vw-fold-view(width, 231);@include vw-fold-view(margin, 10 0 10 24);}
+                            .pt_label {text-align: center;position: absolute;@include vw-fold-view(top, 24);@include vw-fold-view(left, 24);@include vw-fold-view(font-size, 14);color: #fff;background-color: #2189FF;border-radius: 50%;@include vw-fold-view(width, 24);@include vw-fold-view(height, 24);@include vw-fold-view(padding, 6);}
+                        }
+
+                        &__btmbox {
+                            text-align: center;@include vw-fold-view(border, solid 2 #2189FF);@include vw-fold-view(line-height, 14);@include vw-fold-view(border-radius, 10);@include vw-fold-view(margin, 10 24);@include vw-fold-view(padding, 10 0);@include vw-fold-view(font-size, 12);
+                            strong {@include vw-fold-view(font-size, 11);font-weight: 700;}
+                            p {@include vw-fold-view(font-size, 9);}
+                        }
+                    }
+                }
+
+                // 여러 사람과 나눠서 결제
+                .pt_popup_howto--user {
+
+                    .pt_card {
+                        @include vw-fold-view(margin-top, 5);@include vw-fold-view(border-radius, 10);@include vw-fold-view(padding, 27 29 24);
+
+                        &__titbox {display: flex;justify-content: space-between;}
+                        &__tit {@include vw-fold-view(font-size, 16);}
+                        &__price {
+                            @include vw-fold-view(font-size, 12);
+                            @include vw-fold-view(margin-top, 2);
+                            .en {@include vw-fold-view(font-size, 14);}
+                        }
+                        &__txt {
+                            position: relative;text-align: center;@include vw-fold-view(font-size, 20);@include vw-fold-view(line-height, 28);
+
+                            .pt_strong {
+                                display: block;@include vw-fold-view(font-size, 20);@include vw-fold-view(line-height, 32);@include vw-fold-view(margin-top, 32);
+                                .en {@include vw-fold-view(font-size, 24);}
+                            }
+                            &:before {z-index: 10;content: "";position: absolute;@include vw-fold-view(top, 60);left: 50%;transform: translateX(-50%);@include vw-fold-view(width, 24);@include vw-fold-view(height, 24);@include vw-fold-view(background-size, 24 24);}
+                        }
+                        &__txt-small {
+                            letter-spacing: -.05em;
+                        }
+                        &__list {
+                            position: relative;@include vw-fold-view(margin-top, 14);@include vw-fold-view(border-top, solid 2 #000);
+                            li {
+                                position: relative;z-index: 1;@include vw-fold-view(border-right, dashed 2 #DDD);
+                                &:before {z-index: 10;content: "";position: absolute;@include vw-fold-view(top, 109);@include vw-fold-view(right, -16);@include vw-fold-view(width, 30);@include vw-fold-view(height, 30);@include vw-fold-view(background-size, 30 30);}
+                            }
+                            li:last-child {
+                                border-right: 0;
+                                &:before { display: none; }
+                            }
+                            .img_box {@include vw-fold-view(padding, 24 0 6);@include vw-fold-view(width, 281);margin: 0 auto;}
+                            .pt_label {display: block;color: #fff;@include vw-fold-view(font-size, 20);font-weight: 700;@include vw-fold-view(line-height, 24);@include vw-fold-view(padding, 7);@include vw-fold-view(margin-top, 20);}
+
+                            &.pt_card_type {display: flex;}
+                            &.pt_card_type:before {content: "";position: absolute;left: 0;bottom: 0;width: 100%;@include vw-fold-view(height, 62);@include vw-fold-view(border-radius, 10);background-color: #2189FF;}
+
+                            &-people {
+                                display: flex;justify-content: space-between;@include vw-fold-view(width, 326);margin: 0 auto;
+
+                                li {
+                                    flex: 1;text-align: center;border-right: 0;
+                                    strong {@include vw-fold-view(font-size, 12); .en {@include vw-fold-view(font-size, 14);} }
+                                }
+                                &__tit {@include vw-fold-view(font-size, 12); @include vw-fold-view(margin-bottom, 5);}
+                            }
+                            &-success {
+                                position: relative;background-color: #E8F3FF;@include vw-fold-view(width, 404);@include vw-fold-view(height, 90);@include vw-fold-view(padding, 17 24);@include vw-fold-view(border-radius, 10);@include vw-fold-view(margin, 13 auto 0);@include vw-fold-view(border-radius, 10);
+                                &__tit {@include vw-fold-view(font-size, 14);}
+                                &__txt {
+                                    position: absolute;@include vw-fold-view(bottom, 14);@include vw-fold-view(right, 24);@include vw-fold-view(font-size, 14);font-weight: 700;color: #2189FF;
+                                    &:before {content: '';display: inline-block;background: url('../../is/images/howto/gf_howto_ico_card_mo.png') no-repeat center/contain;@include vw-fold-view(width, 22);@include vw-fold-view(height, 22);@include vw-fold-view(vertical-align, -7);}
+                                }
+                                &:before {
+                                    content: '';position: absolute;@include vw-fold-view(top, 42);left: 50%;background-color: #2189FF;transform: translateX(-50%);@include vw-fold-view(width, 356);@include vw-fold-view(height, 8);@include vw-fold-view(border-radius, 10);
+                                }
+                            }
+                        }
+                    }
+
+                    .pt_list {
+                        display: flex;justify-content: space-between;@include vw-fold-view(gap, 24);@include vw-fold-view(margin-top, 7);
+                        li {
+                            position: relative;background-color: #fff;@include vw-fold-view(border-radius, 10);@include vw-fold-view(width, 255);@include vw-fold-view(min-height, 185);
+                            .pt_title{
+                                display: block;font-weight: 700;text-align: left;@include vw-fold-view(font-size, 18);@include vw-fold-view(line-height, 24);@include vw-fold-view(padding-top, 54);@include vw-fold-view(padding-left, 24);margin-bottom: 0;letter-spacing: -.05em;
+                                em {letter-spacing: -.05em;}
+                            }
+                            //.img_box {@include vw-fold-view(width, 231);@include vw-fold-view(margin, 10 0 10 24);}
+                            .pt_label {text-align: center;position: absolute;@include vw-fold-view(top, 24);@include vw-fold-view(left, 24);@include vw-fold-view(font-size, 14);color: #fff;background-color: #2189FF;border-radius: 50%;@include vw-fold-view(width, 24);@include vw-fold-view(height, 24);@include vw-fold-view(padding, 6);}
+                        }
+
+                        &__btmbox {
+                            text-align: center;@include vw-fold-view(border, solid 2 #2189FF);@include vw-fold-view(line-height, 14);@include vw-fold-view(border-radius, 10);@include vw-fold-view(margin, 10 24);@include vw-fold-view(padding, 10 0);@include vw-fold-view(font-size, 12);
+                            strong {@include vw-fold-view(font-size, 11);font-weight: 700;}
+                            p {@include vw-fold-view(font-size, 9);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

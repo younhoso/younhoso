@@ -1,0 +1,143 @@
+.samsung_tv_launching {
+    .sec_feature { overflow: hidden;
+        &__inner {@include vw-mo(padding,76 0 80); background-color: #f8f8f8;}
+        &.pt_bg-image.pt_add-bg {
+            .pt_feature__btn-play {background-image: url('../../is/images/launching/feature/bja_btn_pause_white.svg');}
+            .pt_feature__btn-play.pause {background-image: url('../../is/images/launching/feature/bja_btn_play_white.svg');}
+        }
+        .pt_feature {
+            @include vw-mo(width, 720); @include vw-mo(margin, 0 auto 114); @include vw-mo(padding-top,20);
+            &__title-box {@include vw-mo(margin-bottom,49); text-align: center;}
+            &__pre {@include vw-mo(margin-bottom,14); @include vw-mo(font-size,30); font-weight:700;}
+            &__title {@include vw-mo(font-size,48); line-height: 1.2em;  letter-spacing: -0.04em; font-weight:700;}
+
+            &__nav-list {position: static; display: flex; flex-wrap: wrap; justify-content: center; @include vw-mo(gap,18); @include vw-mo(min-height, 164); @include vw-mo(margin-bottom,40);}
+            &__btn-nav {position: relative; display: flex; align-items: center; flex-direction: column; @include vw-mo(width,120); @include vw-mo(height,164);  @include vw-mo(border-radius,10); @include vw-mo(border, 2 solid #E5E5E5); background: #fff no-repeat center; @include vw-mo(background-size,116 160); text-align: center; opacity: 1;
+                &--1 {background-image: url('../../../is/images/launching/feature/stv_feature_icon01_mo.png');}
+                &--2 {background-image: url('../../../is/images/launching/feature/stv_feature_icon02_mo.png');}
+                &--3 {background-image: url('../../../is/images/launching/feature/stv_feature_icon03_mo.png');}
+                // &--3.swiper-pagination-bullet-active {background-image: url('../../../is/images/launching/feature/rg_feature_icon07_on_mo.png');}
+            }
+            &__btn-nav.swiper-pagination-bullet-active {background-color: #333333; border-color: #333333; color: #fff;}
+            &__icon {@include vw-mo(width,116);}
+            &__desc {position: absolute; inset: 0; @include vw-mo(padding-top,96); @include vw-mo(font-size,22); letter-spacing: -0.09em; @include vw-mo(line-height, 28); font-weight:700;}
+
+            &__swiper { width: 100%; @include vw-mo(padding, 0 24); margin: 0 auto; overflow: visible;}
+            &__wrapper { justify-content: start; @include vw-mo(margin, 0 auto 59);}
+            &__item {
+                display: flex; flex-direction: column; position: relative; overflow: hidden; @include vw-mo(gap, 30); @include vw-mo(padding, 30 0 30 30);
+                @include vw-mo(width, 640); @include vw-mo(margin-right, 24); @include vw-mo(border, 2 solid #E5E5E5); @include vw-mo(border-radius, 20);
+
+                &:last-child {margin-right: 0;}
+
+                &_contents {
+                    display: flex; align-items: center; @include vw-mo(gap, 30);
+
+                    &--img { @include vw-mo(width, 264); background-color: #000; @include vw-mo(border-radius, 10);}
+                    &--txt { 
+                        &-title { @include vw-mo(font-size, 28); letter-spacing: -0.025em; line-height: 1.3;}
+                        .str-txt { @include vw-mo(font-size, 28); letter-spacing: -0.025em; line-height: 1.3; font-weight: 700;}
+                    }
+                }
+            }
+            &__text-box {position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-start; @include vw-mo(padding-top,62); text-align: center;}
+            &__main {@include vw-mo(margin-bottom,18); @include vw-mo(font-size,42); @include vw-mo(line-height,52); letter-spacing: -0.025em; font-weight:700;}
+            &__main .en {letter-spacing: 0;}
+            &__sub {@include vw-mo(font-size,28); @include vw-mo(line-height,39); letter-spacing: -0.025em;}
+            &__vod {width: 100%; @include vw-mo(border-radius, 18);
+                &--01 {@include vw-mo(height, 365); @include vw-mo(margin-top, 311);}
+            }
+
+            &__control-box {position: absolute; z-index: 1; left: 50%; transform: translateX(-50%);  @include vw-mo(bottom, -58); display: flex; align-items:center;}
+            &__bullet {
+                position: static;
+                .swiper-pagination-bullet {@include vw-mo(width,14); @include vw-mo(height,14); @include vw-mo(margin,0 6); @include vw-mo(border, 2 solid #000); opacity: 1; background-color: #fff;}
+                .swiper-pagination-bullet-active {background-color: #000; }
+            }
+            &__btn-play {display: none; @include vw-mo(width,18); @include vw-mo(height,20); @include vw-mo(margin,1.5 0 0 4); background: no-repeat center / contain;}
+            &__btn-prev {display: none;}
+            &__btn-next {display: none;}
+        }
+        // 24.04.30 추가
+        .pt_disc__box {
+            @include vw-mo(margin-top, 57); text-align: center; color: #838383;
+            .pt_disc {@include vw-mo(font-size, 24); @include vw-mo(line-height, 36); letter-spacing: -.025em;}
+        }
+
+        .pt_noti {text-align: center;
+            &__btn {padding-bottom: 0; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -.025em;
+                &::after {top: 25%;}
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .samsung_tv_launching { 
+        .sec_feature { 
+            &__inner {@include vw-pc(padding, 96 0 58);}
+
+            .pt_feature {
+                @include vw-pc(width,1320); @include vw-pc(margin-bottom,49); @include vw-pc(padding-top,20);
+                &__title-box {@include vw-pc(margin-bottom,50);}
+                &__pre {@include vw-pc(margin-bottom,14); @include vw-pc(font-size,26);}
+                &__title {@include vw-pc(font-size,50);  letter-spacing: -.05em;}
+    
+                &__nav-list {flex-wrap: nowrap; @include vw-pc(gap,24); @include vw-pc(min-height, 127); @include vw-pc(margin,0 auto 30);}
+                &__btn-nav {@include vw-pc(width,110); @include vw-pc(height,127); @include vw-pc(border-radius,10); @include vw-pc(border, 2 solid #E5E5E5); @include vw-pc(background-size,106 123);
+                    &--1 {background-image: url('../../../is/images/launching/feature/stv_feature_icon01_pc.png');}
+                    &--2 {background-image: url('../../../is/images/launching/feature/stv_feature_icon02_pc.png');}
+                    &--3 {background-image: url('../../../is/images/launching/feature/stv_feature_icon03_pc.png');}
+                    // &--3.swiper-pagination-bullet-active {background-image: url('../../../is/images/launching/feature/rg_feature_icon07_on_pc.png');}
+                }
+                &__icon {@include vw-pc(width,110);}
+                &__desc {@include vw-pc(padding-top,73); @include vw-pc(font-size,16); @include vw-pc(line-height, 22);}
+
+                &__pod-wrap {position: relative;}
+                &__swiper {@include vw-pc(width,966); padding: 0; margin: 0 auto; overflow: hidden; box-sizing: border-box;}
+                &__wrapper { margin: 0;}
+                &__item {
+                    flex-direction: row; justify-content: space-between; padding: 0; @include vw-pc(width, 966); @include vw-pc(height, 360); @include vw-pc(margin-right,0); border: 0 none; border-radius: 0; gap: 0;
+
+                    &_contents {
+                        position: relative; flex-direction: column; gap: 0; @include vw-pc(border, 2 solid #E5E5E5); @include vw-pc(border-radius, 20); background-color: #fff;
+    
+                        &--img { @include vw-pc(width, 310); @include vw-pc(height, 360); background: transparent; @include vw-pc(border-radius, 20);}
+                        &--txt { 
+                            position: absolute; @include vw-pc(bottom, 27); left: 50%; transform: translateX(-50%); text-align: center; width: 100%;
+
+                            &-title { @include vw-pc(font-size, 22);}
+                            .str-txt { @include vw-pc(font-size, 22);}
+                        }
+                    }
+                }
+                &__text-box {justify-content: center; @include vw-pc(padding,0 0 0 38); text-align: left;}
+                &__main {@include vw-pc(margin-bottom,15); @include vw-pc(font-size, 30); @include vw-pc(line-height,40);}
+                &__sub {@include vw-pc(font-size,22); @include vw-pc(line-height,30); letter-spacing: -.065em;}
+                &__vod {@include vw-pc(border-radius, 18);
+                    &--01 {@include vw-pc(width, 551); @include vw-pc(height, 310); margin-top: 0; @include vw-pc(margin-right, 25);}
+                }
+
+                &__control-box {display: none; transform: translateX(-50%);  @include vw-pc(bottom,10);}
+                &__bullet {
+                    .swiper-pagination-bullet {@include vw-pc(width,14); @include vw-pc(height,14); @include vw-pc(margin,0 4); @include vw-pc(border, 2 solid #fff); opacity: 1;}
+                }
+                &__btn-play {@include vw-pc(width,18); @include vw-pc(height,20); @include vw-pc(margin,0 0 2 6); background: no-repeat center / contain;}
+                &__btn-prev {z-index: 3; display: block; @include vw-pc(width,27); @include vw-pc(left,140); background: url('../../../is/images/launching/feature/rg_feature_icon_prev.png') no-repeat center / contain;}
+                &__btn-next {z-index: 3; display: block; @include vw-pc(width,27); @include vw-pc(right,140); background: url('../../../is/images/launching/feature/rg_feature_icon_next.png') no-repeat center / contain;}
+                &__btn-prev::after {display: none;}
+                &__btn-next::after {display: none;}
+            }
+            // 24.04.30 추가
+            .pt_disc__box {
+                @include vw-pc(margin-top, 49);
+                .pt_disc {@include vw-pc(font-size,16); @include vw-pc(line-height, 26); letter-spacing: -.015em;}
+            }
+            .pt_noti {
+                &__btn {@include vw-pc(font-size, 16); font-weight: 700; @include vw-pc(line-height, 21);
+                    &::after {top: 20%; @include vw-pc(width, 5); @include vw-pc(height, 5);}
+                }
+            }
+        }
+    }
+}

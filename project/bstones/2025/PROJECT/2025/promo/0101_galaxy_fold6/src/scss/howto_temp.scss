@@ -1,0 +1,196 @@
+@import '../../../../../../scss_global/scss-common2';
+
+.sec_project_wrap {
+    .sec_howto {
+        position: relative; overflow: hidden;@include vw-mo(margin, 0 0 25);
+        .fold_hide {display: none !important;}
+        .pt_title {
+            &__main {text-align: center;@include vw-mo(font-size, 40);@include vw-mo(line-height, 52);@include vw-mo(padding-bottom, 36);}
+        }
+        .pt_howto_tab {
+            z-index: 1; position: absolute; @include vw-mo(top, 209); @include vw-mo(left, 88); width: 80.4%; @include vw-mo(padding-bottom, 5); display: flex;justify-content: flex-start;@include vw-mo(gap, 10);white-space: nowrap;overflow-x: auto;-ms-overflow-style: none;scrollbar-width: none;
+            &__btn {
+                @include vw-mo(height, 62); border: solid 2px #ddd; @include vw-mo(border, solid 2 #ddd);@include vw-mo(padding, 15 24);@include vw-mo(font-size, 28);font-weight: 700;@include vw-mo(border-radius, 33); background: #fff;
+                &.active {background: #000; color: #fff; border-color: #000;}
+                &:last-child {@include vw-mo(margin-right, 30);}
+                .pt_howto_tab__tag {color: #3895FF;}
+            }
+            //&__btn.active {
+            //    .pt_howto_tab__tag {color: #E2953B;}
+            //}
+        }
+        .pt_howto_cont_wrap {
+            position: relative;@include vw-mo(margin, 0 48);
+        }
+        .pt_howto-slide { position: absolute;@include vw-mo(left, 34);width: 94%;
+            // 폴드
+            &__tab2 {top: 66.7%;}
+            &__tab3 {top: 69.7%;}
+            // 플립
+            &__tab2.pt_flip {top: 67.2%;}
+            &__tab3.pt_flip {top: 69.7%;}
+            &__inner {
+                @include vw-mo(padding-bottom, 70);
+                li.swiper-slide {
+                    @include vw-mo(width, 464);@include vw-mo(margin-right, 24);
+                    .img_box {@include vw-mo(width, 464);}
+                    &:last-child {@include vw-mo(margin-right, 28);}
+                }
+            }
+            .pt_howto_controls__page {
+                position: absolute;@include vw-mo(bottom, 0);left: 50%;transform: translateX(-50%);@include vw-mo(margin-left, -20);
+                .swiper-pagination-bullet {
+                    background: #757575;@include vw-mo(width, 16);@include vw-mo(height, 16);@include vw-mo(margin, 12);opacity: 1;
+                    &-active {background: #000000;}
+                }
+            }
+        }
+        .btn_anchor {
+            &__common {background-color: rgba(0, 0, 0, 0);position: absolute;}
+            // 폴드
+            &__btn1-1 {top: 48%; left: 4%; width: 47%; height: 2%;}
+            &__btn2-1 {top: 59.6%;left: 26%;width: 49%;height: 2%;}
+            &__btn3-1 {top: 89.5%;left: 5%;width: 80%;height: 1.4%;}
+            // 플립
+            &__btn1-1.pt_flip {top: 49%; left: 4%; width: 47%; height: 2%;}
+            &__btn2-1.pt_flip {top: 59.6%;left: 26%;width: 49%;height: 2%;}
+            &__btn3-1.pt_flip {top: 89.5%;left: 5%;width: 80%;height: 1.4%;}
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width:769px) {
+    .sec_project_wrap {
+        .sec_howto {
+            .fold_show {display: none !important;}
+            .fold_hide {display: block !important;}
+            @include vw-pc(margin, 0 auto 24);
+            .pt_title {
+                &__main {@include vw-pc(font-size, 24);@include vw-pc(line-height, 30);@include vw-pc(padding-bottom, 15);}
+            }
+            .pt_howto_tab {
+                position: absolute; @include vw-pc(top, 100); left: 50%; transform: translateX(-50%); @include vw-pc(width, 788); display: flex;justify-content: space-between;gap: initial;margin: 0 auto;margin-bottom: 0;-ms-overflow-style: none;scrollbar-width: none;
+                &__btn {
+                    @include vw-pc(height, 38);border: solid 1px #ddd;@include vw-pc(padding, 9 14);@include vw-pc(font-size, 18);font-weight: 700;@include vw-pc(border-radius, 33);
+                    &.active {background: #000; color: #fff;}
+                    &:last-child {margin-right: 0;}
+                }
+                //&__btn.active {
+                //    .pt_howto_tab__tag {color: #E2953B;}
+                //}
+            }
+            .pt_howto_cont_wrap {
+                position: relative;@include vw-pc(margin, 0 88);
+            }
+            .pt_howto-slide { position: absolute;@include vw-pc(left, 4);@include vw-pc(width, 664);
+                // 폴드
+                &__tab2 {@include vw-pc(top, 1218);}
+                &__tab3 {@include vw-pc(top, 1198);}
+                // 플립
+                &__tab2.pt_flip {@include vw-pc(top, 1218);}
+                &__tab3.pt_flip {@include vw-pc(top, 1198);}
+                &__inner {
+                    @include vw-pc(padding-bottom, 37);
+                    .swiper-slide {
+                        @include vw-pc(width, 524);@include vw-pc(margin-right, -36);
+                        .img_box {@include vw-pc(width, 524);}
+                    }
+                }
+                .pt_howto_controls__page {
+                    position: absolute;@include vw-pc(bottom, 0);left: 50%;transform: translateX(-50%);
+                    .swiper-pagination-bullet {
+                        background: #757575;@include vw-pc(width, 16);@include vw-pc(height, 16);@include vw-pc(margin, 12);opacity: 1;
+                        &-active {background: #000000;}
+                    }
+                }
+            }
+            .btn_anchor {
+                &__common {background-color: rgba(0, 0, 0, 0);position: absolute;}
+                // 폴드
+                &__btn1-1 {@include vw-pc(top, 456);@include vw-pc(left, 67);@include vw-pc(width, 180);@include vw-pc(height, 40);}
+                &__btn2-1 {@include vw-pc(top, 738);@include vw-pc(left, 237);@include vw-pc(width, 206);@include vw-pc(height, 28);}
+                &__btn3-1 {@include vw-pc(top, 815);@include vw-pc(left, 344);@include vw-pc(width, 293);@include vw-pc(height, 28);}
+                // 플립
+                &__btn1-1.pt_flip {@include vw-pc(top, 456);@include vw-pc(left, 67);@include vw-pc(width, 180);@include vw-pc(height, 40);}
+                &__btn2-1.pt_flip {@include vw-pc(top, 738);@include vw-pc(left, 237);@include vw-pc(width, 206);@include vw-pc(height, 28);}
+                &__btn3-1.pt_flip {@include vw-pc(top, 815);@include vw-pc(left, 344);@include vw-pc(width, 293);@include vw-pc(height, 28);}
+            }
+        }
+    }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+@media screen and (min-width: 769px) and (max-width: 802px) {
+    .sec_project_wrap {
+        .sec_howto {
+            @include vw-fold-view(margin, 0 0 16);
+            .fold_show {display: block !important;}
+            .fold_hide {display: none !important;}
+
+            .pt_title {
+                &__main {@include vw-fold-view(font-size, 24);@include vw-fold-view(line-height, 30);@include vw-fold-view(padding-bottom, 15);}
+            }
+            .pt_howto_tab {
+                position: absolute; @include vw-fold-view(top, 78); display: flex;justify-content: space-between;gap: initial;@include vw-fold-view(width, 625);margin: 0 auto;-ms-overflow-style: none;scrollbar-width: none;
+                &__btn {
+                    @include vw-fold-view(height, 33);border: solid 1px #ddd;@include vw-fold-view(padding, 8 13);@include vw-fold-view(font-size, 14);@include vw-fold-view(border-radius, 33);
+                    &.active {background: #000; color: #fff;}
+                }
+                //&__btn.active {
+                //    .pt_howto_tab__tag {color: #E2953B;}
+                //}
+            }
+            .pt_howto_cont_wrap {
+                position: relative;@include vw-fold-view(margin, 0 24);
+            }
+            .pt_howto-slide { position: absolute;@include vw-fold-view(left, 4);@include vw-fold-view(width, 664);
+                // 폴드
+                &__tab2 {@include vw-fold-view(top, 1218);}
+                &__tab3 {@include vw-fold-view(top, 1198);}
+                // 플립
+                &__tab2.pt_flip {@include vw-fold-view(top, 1218);}
+                &__tab3.pt_flip {@include vw-fold-view(top, 1198);}
+                &__inner {
+                    @include vw-fold-view(padding-bottom, 37);
+                    .swiper-slide {
+                        @include vw-fold-view(width, 524);@include vw-fold-view(margin-right, -36);
+                        .img_box {@include vw-fold-view(width, 524);}
+                    }
+                }
+                .pt_howto_controls__page {
+                    position: absolute;@include vw-fold-view(bottom, 0);left: 50%;transform: translateX(-50%);
+                    .swiper-pagination-bullet {
+                        background: #757575;@include vw-fold-view(width, 16);@include vw-fold-view(height, 16);@include vw-fold-view(margin, 12);opacity: 1;
+                        &-active {background: #000000;}
+                    }
+                }
+            }
+            .btn_anchor {
+                &__common {background-color: rgba(0, 0, 0, 0);position: absolute;}
+                // 폴드
+                &__btn1-1 {top: 73%;left: 2%;width: 22%;height: 5%;}
+                &__btn2-1 {top: 54.4%;left: 39%;width: 22%;height: 3%;}
+                &__btn3-1 {top: 86.7%;left: 33%;width: 33%;height: 3%;}
+                // 플립
+                &__btn1-1.pt_flip {top: 73%;left: 2%;width: 22%;height: 5%;}
+                &__btn2-1.pt_flip {top: 54.4%;left: 39%;width: 22%;height: 3%;}
+                &__btn3-1.pt_flip {top: 86.7%;left: 33%;width: 33%;height: 3%;}
+            }
+        }
+    }
+}

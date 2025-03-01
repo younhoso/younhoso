@@ -1,0 +1,11 @@
+{"result":[
+    {"purchaseAmount":"1,000,000","discountAmount":"40,000","AISaleBenefit_A":"-","naverPayPoints":"-"},
+    {"purchaseAmount":"2,000,000","discountAmount":"70,000","AISaleBenefit_A":"-","naverPayPoints":"-"},
+    {"purchaseAmount":"3,000,000","discountAmount":"140,000","AISaleBenefit_A":"-","naverPayPoints":"-"},
+    {"purchaseAmount":"4,000,000","discountAmount":"200,000","AISaleBenefit_A":"-","naverPayPoints":"-"},
+    {"purchaseAmount":"5,000,000","discountAmount":"300,000","AISaleBenefit_A":"-","naverPayPoints":"-"},
+    {"purchaseAmount":"7,000,000","discountAmount":"400,000","AISaleBenefit_A":"-","naverPayPoints":"-"},
+    {"purchaseAmount":"10,000,000","discountAmount":"500,000","AISaleBenefit_A":"-","naverPayPoints":"-"},
+    {"purchaseAmount":"15,000,000","discountAmount":"700,000","AISaleBenefit_A":"-","naverPayPoints":"-"},
+    {"purchaseAmount":"20,000,000","discountAmount":"1,000,000","AISaleBenefit_A":"-","naverPayPoints":"-"}
+]}

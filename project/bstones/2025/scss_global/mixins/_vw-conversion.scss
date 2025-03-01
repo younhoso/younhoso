@@ -1,0 +1,305 @@
+// vw conversion PC 1920 
+@mixin vw-max($property, $pc-pixel) {
+	@if type-of($pc-pixel) == number {
+		#{$property}: $pc-pixel * 1px;
+
+		@media screen and (max-width:$maxpc-max-wid*1px) {
+			#{$property}: $pc-pixel*100/$maxpc-max-wid*1vw;
+		}
+	}
+	@else if type-of($pc-pixel) == string {
+		#{$property}: auto;
+		@media screen and (max-width:$maxpc-max-wid*1px) {
+			#{$property}: auto;
+		}
+	}
+	@else if type-of($pc-pixel) == list {
+		$px: ();
+		$vw: ();
+		@each $value in $pc-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$maxpc-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+		#{$property}: $px;
+
+
+		$px: ();
+		@each $value in $pc-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+			}
+		}
+		@media screen and (max-width:$maxpc-max-wid*1px) {
+			#{$property}: $vw;
+		}
+	}
+}
+
+// vw conversion PC 1600 (fold) - 전사혜택용
+@mixin vw-fold($property, $pc-pixel) {
+	@if type-of($pc-pixel) == number {
+		#{$property}: $pc-pixel * 1px;
+		
+		@media screen and (max-width:$fold-max-wid*1px) {
+			#{$property}: $pc-pixel*100/$fold-max-wid*1vw;
+		}
+	}
+	@else if type-of($pc-pixel) == string {
+		#{$property}: auto;
+		@media screen and (max-width:$fold-max-wid*1px) {
+			#{$property}: auto;
+		}
+	}
+	@else if type-of($pc-pixel) == list {
+		$px: ();
+		$vw: ();
+		@each $value in $pc-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$fold-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+		#{$property}: $px;
+		
+		
+		$px: ();
+		@each $value in $pc-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+			}
+		}
+		@media screen and (max-width:$fold-max-wid*1px) {
+			#{$property}: $vw;
+		}
+	}
+}
+
+// vw conversion PC 1440 
+@mixinfold($property, $pc-pixel) {
+	@if type-of($pc-pixel) == number {
+		#{$property}: $pc-pixel * 1px;
+		
+		@media screen and (max-width:$pc-max-wid*1px) {
+			#{$property}: $pc-pixel*100/$pc-max-wid*1vw;
+		}
+	}
+	@else if type-of($pc-pixel) == string {
+		#{$property}: auto;
+		@media screen and (max-width:$pc-max-wid*1px) {
+			#{$property}: auto;
+		}
+	}
+	@else if type-of($pc-pixel) == list {
+		$px: ();
+		$vw: ();
+		@each $value in $pc-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$pc-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+		#{$property}: $px;
+		
+		
+		$px: ();
+		@each $value in $pc-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+			}
+		}
+		@media screen and (max-width:$pc-max-wid*1px) {
+			#{$property}: $vw;
+		}
+	}
+}
+
+
+// vw conversion PC 1920 (이전에 사용)
+@mixin vw-pc02($property, $pc-pixel) {
+	@if type-of($pc-pixel) == number {
+		#{$property}: $pc-pixel * 1px;
+
+		@media screen and (max-width:$pc-max-wid02*1px) {
+			#{$property}: $pc-pixel*100/$pc-max-wid02*1vw;
+		}
+	}
+	@else if type-of($pc-pixel) == string {
+		#{$property}: auto;
+		@media screen and (max-width:$pc-max-wid02*1px) {
+			#{$property}: auto;
+		}
+	}
+	@else if type-of($pc-pixel) == list {
+		$px: ();
+		$vw: ();
+		@each $value in $pc-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$pc-max-wid02*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+		#{$property}: $px;
+
+
+		$px: ();
+		@each $value in $pc-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+			}
+		}
+		@media screen and (max-width:$pc-max-wid02*1px) {
+			#{$property}: $vw;
+		}
+	}
+}
+
+// vw conversion tablet
+@mixin vw-t($property, $t-pixel){
+	@if type-of($t-pixel) == number {
+		#{$property}: $t-pixel * 1px;
+		#{$property}: $t-pixel*100/$t-max-wid*1vw;
+	}
+	@else if type-of($t-pixel) == string {
+		#{$property}: auto;
+	}
+	@else if type-of($t-pixel) == list {
+		$px: ();
+		$vw: ();
+		@each $value in $t-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$t-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+		#{$property}:$px;
+		#{$property}:$vw;
+		
+		$px: ();
+		$vw: ();
+		@each $value in $t-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$t-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+	}
+}
+
+
+// vw conversion Mobile 768
+@mixin vw-mo-max($property, $mo-pixel){
+	@if type-of($mo-pixel) == number {
+		#{$property}: $mo-pixel * 1px;
+		#{$property}: $mo-pixel*100/$maxmo-max-wid*1vw;
+	}
+	@else if type-of($mo-pixel) == string {
+		#{$property}: auto;
+	}
+	@else if type-of($mo-pixel) == list {
+		$px: ();
+		$vw: ();
+		@each $value in $mo-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$maxmo-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+		#{$property}:$px;
+		#{$property}:$vw;
+
+		$px: ();
+		$vw: ();
+		@each $value in $mo-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$maxmo-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+	}
+}
+
+// vw conversion Mobile
+@mixin vw-mo($property, $mo-pixel){
+	@if type-of($mo-pixel) == number {
+		#{$property}: $mo-pixel * 1px;
+		#{$property}: $mo-pixel*100/$mo-max-wid*1vw;
+	}
+	@else if type-of($mo-pixel) == string {
+		#{$property}: auto;
+	}
+	@else if type-of($mo-pixel) == list {
+		$px: ();
+		$vw: ();
+		@each $value in $mo-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$mo-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+		#{$property}:$px;
+		#{$property}:$vw;
+
+		$px: ();
+		$vw: ();
+		@each $value in $mo-pixel {
+			@if type-of($value) == number {
+				$px: append($px, $value * 1px);
+				$vw: append($vw, $value*100/$mo-max-wid*1vw);
+			}
+			@else if type-of($value) == string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+	}
+}

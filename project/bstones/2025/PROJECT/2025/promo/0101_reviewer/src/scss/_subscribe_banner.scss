@@ -1,0 +1,40 @@
+.reviewer {
+    .sec_subscribe_banner {
+        .pt_banner { position: relative; width: 100%;
+            //이미지 화질개선 코드 추가
+            &__img img {
+                image-rendering: -moz-crisp-edges;
+                image-rendering: -o-crisp-edges;
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+                transform: translateZ(0);
+                backface-visibility: hidden;
+            }
+            &__txtbox { position: absolute; left: 0; top: 50%; @include vw-max(padding-left,768); width: 100%; transform: translateY(-50%);}
+            &__tit {@include vw-max(font-size,30); @include vw-max(line-height,40); font-weight:700; letter-spacing:-0.025em; color: #009F93;}
+            &__desc {@include vw-max(margin-top,3); @include vw-max(font-size,22); @include vw-max(line-height,29); font-weight:600; letter-spacing:-0.025em;}
+            &__list {@include vw-max(margin-top,12);}
+            &__disc {position: relative; @include vw-max(padding-left,12); @include vw-max(font-size,14); @include vw-max(line-height,18); letter-spacing:-0.025em; color: #666666;
+                &::before {content: "*"; position: absolute; left: 0; @include vw-max(top,3); font-size: inherit; line-height: inherit;}
+            }
+            &__btn {position: absolute; @include vw-max(right,360); top: 50%; @include vw-max(font-size,22); @include vw-max(line-height,29); letter-spacing: -0.025em; border-bottom: 1px solid #000; transform: translateY(-50%);}
+        }
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .reviewer {
+        .sec_subscribe_banner {
+            .pt_banner {
+                // &__txtbox {@include vw-mo(top,21); transform: translateY(0);}
+                &__tit {@include vw-mo(font-size,28); @include vw-mo(line-height,37); letter-spacing:-0.05em;}
+                &__desc {@include vw-mo(margin-top,3); @include vw-mo(font-size,22); @include vw-mo(line-height,29); letter-spacing:-0.05em;}
+                &__list {@include vw-mo(margin-top,8);}
+                &__disc {@include vw-mo(padding-left,12); @include vw-mo(font-size,16); @include vw-mo(line-height,20); letter-spacing:-0.05em;
+                    &::before {@include vw-mo(top,3);}
+                }
+                &__btn {position: initial; @include vw-mo(margin-top,18); @include vw-mo(font-size,16); @include vw-mo(line-height,21); letter-spacing: -0.04em; transform: translateY(0);}
+            }
+        }
+    }
+}

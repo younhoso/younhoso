@@ -1,0 +1,81 @@
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+
+<!-- split 0101_walk_mission_1.txt -->
+<link rel="stylesheet" href="./css/walk_mission.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "samsungexperience";
+	digitalData.page.pathIndicator.depth_3 = "walkingchallenge_mission_25_01";
+	digitalData.page.pathIndicator.depth_4 = "launching";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap walk_mission" id="walk_mission">
+
+	@@include('./split-html/sec_kv.html')
+	<!-- //sec_kv -->
+	@@include('./split-html/sec_agree.html')
+	<!-- //sec_agree -->
+	@@include('./split-html/policy_popup.html')
+	<!-- //popup -->
+	@@include('./split-html/sec_continu.html')
+	<!-- //sec_continu -->
+</main>
+<div class="sec_project_wrap walk_mission">
+	<section class="sec_category sec_category_third" id="Comp01">
+		<div class="inner_1440">
+			<div class="pt_title_box">
+				<h3 class="pt_title">
+					추천 상품
+				</h3>
+				<p class="pt_des">쿠폰 사용이 가능한 상품을 만나보세요</p>
+
+			</div>
+
+			<div class="pt_component_tab" data-compo-cate="product-card" data-swiper="true" data-sticky="true">
+				<div class="pt_slider_category_sticky">
+					<div class="pt_slider_category_wrap">
+						<button type="button" class="pt_btn_popup_category blind" title="카테고리 탭 메뉴 열기"><span class="blind">카테고리 탭 메뉴 열기</span></button>
+						<div class="swiper-container">
+							<p class="pt_category_title">제품 카테고리 선택</p>
+							<ul class="swiper-wrapper pt_category_list">
+								<li class="swiper-slide on"><a href="#" title="블루스카이 일반 탭 선택" data-omni-type="microsite" data-omni="sec:event:air-cleaner:click_air-cleaner-blue-component">e식품관<span class="blind selected_option">선택됨</span></a></li>
+								<li class="swiper-slide"><a href="#" title="블루스카이 펫케어 탭 선택" data-omni-type="microsite" data-omni="sec:event:air-cleaner:click_air-cleaner-blue-pet-component">펫 케어 스토어</a></li>
+								<li class="swiper-slide"><a href="#" title="큐브 일반 탭 선택" data-omni-type="microsite" data-omni="sec:event:air-cleaner:click_air-cleaner-cube-component">홈클래스</a></li>
+								<li class="swiper-slide"><a href="#" title="큐브 펫케어 탭 선택" data-omni-type="microsite" data-omni="sec:event:air-cleaner:click_air-cleaner-cube-pet-component">에버랜드 스토어</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- split stop -->
+
+<style type="text/css">.component-contents{height:400px}</style>
+@@for (var i = 1; i <= 4; i++) {<div class="wrap-component product-card w1440px" data-cptno="${i}"><div class="component-contents">컴포넌트${i}</div></div>}
+
+<!-- split 0101_walk_mission_2.txt -->
+<div class="sec_project_wrap walk_mission">
+	@@include('./split-html/notice.html')
+	<!--// sec_notice -->
+</div>
+
+<script defer type="text/javascript" src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<script src="/sec/static/_script/event/event-attendance.js"></script>
+<script src="./js/walk_mission.min.js" inline></script>
+<script src="./js/isqa.min.js" inline></script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')

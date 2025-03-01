@@ -1,0 +1,72 @@
+//@@ 클래스 정리 @@
+
+// pt_notice : 하나의 큰 div
+// pt_notice__title :  왼쪽 제일 큰 타이틀
+// pt_notice__contents : 오른쪽 글 내용 전체 박스
+// pt_desc__area : 글 내용 중 하나의 문단
+// pt_desc : li의 내용들
+// pt_desc--title : li의 상단 타이틀
+// pt_desc--depth : li안에 ul 생성 후 li 생성 (몇 뎁스든 상관없음 계속 생성 가능)
+// pt_desc--num : depth와 같이 사용 (번호 표시 있을 경우 / ex. ① )
+
+.sec_notice {
+
+    .notice_inner {@include vw-pc(max-width, 1440); @include vw-pc(padding, 50 140 100); background-color: #171717;}
+    .pt_notice {
+        display: flex; @include vw-pc(padding-top, 50);
+
+        &:not(:last-child) {@include vw-pc(padding-bottom, 40); @include vw-pc(border-bottom, 1 solid rgba(255, 255, 255, .3));}
+        &__title {@include vw-pc(width, 204); @include vw-pc(padding-top, 3); @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -1.2); @include vw-pc(line-height, 20); color: #fff; word-break: break-all;}
+        &__contents {@include vw-pc(width, 892);}
+
+        .pt_desc__area:not(:last-child) {@include vw-pc(margin-bottom, 20);}
+
+        .pt_desc {
+            position: relative; @include vw-pc(margin-left, 13); @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -.8); @include vw-pc(line-height, 28); color: #A3A3A3;
+            
+            &::after {content: ''; position: absolute; @include vw-pc(left, -14); @include vw-pc(top, 12); @include vw-pc(width, 4); @include vw-pc(height, 4); background-color: #A3A3A3; border-radius: 50%;}
+            
+            &--title {margin-left: 0; font-weight: 700;
+                &::after {display: none;}
+            }
+            &--depth {@include vw-pc(margin-left, 2); @include vw-pc(padding-left, 7.5); @include vw-pc(text-indent, -7.5);
+                &::after {display: none;}
+            }
+            &--num {@include vw-pc(padding-left, 16); @include vw-pc(text-indent, -16);}
+            &--link {@include vw-pc(border-bottom, 1 solid #a6a6a6);}
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .sec_notice {
+        .notice_inner {width: 100%; max-width: none; @include vw-mo(padding, 25 40 75);}
+
+        .pt_notice {
+            flex-direction: column; @include vw-mo(padding-top, 50);
+
+            &:not(:last-child) {@include vw-mo(padding-bottom, 50); @include vw-mo(border-bottom, 1 solid rgba(255, 255, 255, .3));}
+            &__title {width: 100%; @include vw-mo(padding-top, 0); @include vw-mo(margin-bottom, 26); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1); @include vw-mo(line-height, 32);}
+            &__contents {width: 100%;}
+
+            .pt_desc__area:not(:last-child) {@include vw-mo(margin-bottom, 20);}
+            .pt_desc {
+                @include vw-mo(margin-left, 10); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1); @include vw-mo(line-height, 40);
+                
+                &::after {content: ''; position: absolute; @include vw-mo(left, -14); @include vw-mo(top, 18); @include vw-mo(width, 3); @include vw-mo(height, 3);}
+                
+                &--title {margin-left: 0; @include vw-mo(margin-bottom, 12);
+                    &::after {display: none;}
+                }
+                &--depth {@include vw-mo(margin-left, 4); @include vw-mo(padding-left, 13); @include vw-mo(text-indent, -13);
+                    &::after {display: none;}
+                }
+                &--num {@include vw-mo(padding-left, 28); @include vw-mo(text-indent, -28);}
+                &--link {@include vw-mo(border-bottom, 1 solid #a6a6a6);}
+            }
+        }
+    }
+}
+
+

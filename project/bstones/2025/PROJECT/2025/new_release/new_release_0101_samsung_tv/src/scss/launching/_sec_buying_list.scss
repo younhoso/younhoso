@@ -1,0 +1,794 @@
+.samsung_tv_launching {
+    .sec_buying_list {
+        
+        i, span {vertical-align: baseline;}
+        &__inner {@include vw-pc(padding, 60 0 60);  background-color: #fff;}
+        &.sec_buying_hybrid {
+            .sec_buying_list__inner {
+                @include vw-pc(padding, 0 0 66 0); background-color: #f8f8f8;
+                .pt_buying_list__cont {height: auto;}
+            }
+            
+        }
+        .pt_slide {
+            @include vw-pc(width, 1320);
+            
+            &-box {
+                position: relative; @include vw-pc(margin-bottom, 0);
+
+                .pt_arrow {
+                    position: absolute; top: 50%; @include vw-pc(width, 20); @include vw-pc(height, 42); @include vw-pc(margin-top, -21); background: url('../../../is/images/launching/buying_list/ref_buying_ico_arrow_big_pc.png') no-repeat right center; @include vw-pc(background-size, 20 41); cursor: pointer;
+                    &--prev {@include vw-pc(left, 20); transform: rotate(180deg);}
+                    &--next {@include vw-pc(right, 20);}
+                    &.swiper-button-disabled {opacity: .3;}
+                }
+
+                &--best {
+                    .pt_slide__inner {@include vw-pc(padding, 44 0);}
+                }
+                &--special {
+                    .pt_slide__inner {@include vw-pc(padding, 0 0);}
+                    .pt_buying_list {@include vw-pc(padding, 27 40 27 20); @include vw-pc(border-radius, 20 20 20 20); border: none;}
+                    .pt_buying_list__slide  {margin: 0 auto;}
+                    .pt_buying_list__prd {margin: 0 auto;}
+                }
+
+                &.pc_centered {
+                    .pt_slide__inner {justify-content: center; padding-bottom: 0;}
+                    .pt_arrow,
+                    .pt_buying_list__pagination {display: none;}
+                }
+            }
+            // &__inner {@include vw-pc(padding, 44 0);}
+
+            &:last-child{@include vw-pc(padding-bottom,40);}
+        }
+        .pt_buying_list {
+            
+            position: relative; @include vw-pc(width, 282); height: auto; @include vw-pc(min-height, 635); @include vw-pc(border-radius, 10); background-color: #fff; border: 2px solid #fff; @include vw-pc(box-shadow, 3 4 25 rgba(0,0,0,0.12));
+            
+            &__title {
+                text-align: center;
+                
+                .pt_title__pre {
+                    position: relative; @include vw-pc(font-size, 24); font-weight: 400; @include vw-pc(line-height, 28); letter-spacing: -0.025em; font-weight: 700;
+                }
+                .pt_title__main {
+                    display: inline-block; position: relative; @include vw-pc(margin-bottom, 9); @include vw-pc(font-size, 42); @include vw-pc(line-height, 55); letter-spacing: -0.025em; font-weight: 700;
+                    &::after { content: ""; position: absolute; @include vw-pc(top, -5); @include vw-pc(left, -45); @include vw-pc(width, 43); @include vw-pc(height, 61); background: url('../../is/images/launching/buying_list/stv_buying_list_title_left_pc.png') center / cover no-repeat;}
+                    &::before { content: ""; position: absolute; @include vw-pc(top, -5); @include vw-pc(right, -45); @include vw-pc(width, 43); @include vw-pc(height, 61); background: url('../../is/images/launching/buying_list/stv_buying_list_title_right_pc.png') center / cover no-repeat;}
+                }
+                .pt_title__sub {
+                    position: relative; @include vw-pc(font-size, 28); font-weight: 400; @include vw-pc(line-height, 37); letter-spacing: -0.025em; @include vw-pc(margin-bottom, 10);
+                }
+                .pt_title__add {
+                    position: relative; @include vw-pc(font-size, 16); @include vw-pc(letter-spacing, -1); @include vw-pc(line-height, 24); color: #666;
+                }
+            }
+            
+            &:not(:last-child) {@include vw-pc(margin-right, 20);}
+
+            &__bookmark-wrap{position: absolute; @include vw-pc(top, -44); @include vw-pc(left, 23); display: flex; @include vw-pc(gap,10);}
+            &__bookmark {display: flex; flex-direction: column; justify-content: center; align-items: center; @include vw-pc(width, 54); @include vw-pc(height, 44); @include vw-pc(border-radius, 5 5 0 0); @include vw-pc(font-size, 14); font-weight: 700; @include vw-pc(line-height, 18); color: #fff; letter-spacing: -.025em; text-align: center;
+                &--new{ background-color: #001F43;}
+                &--special{background-color: #1C3393;}
+                &--ai{background-color: #1C3393;}
+            }
+            &__slide {
+                @include vw-pc(width, 242); @include vw-pc(height, 242); @include vw-pc(margin, 15 auto 20); @include vw-pc(border-radius, 8); background-color: #F4F4F4; overflow: hidden;
+            
+                &.no_swiper {
+                    .swiper-wrapper {transform: translate(0,0) !important;}
+                    .pt_bullet {display: none;}
+                }
+
+                .swiper-slide {padding: 0px;}
+                .img_box { 
+                    display: flex; align-items: center; will-change: auto;
+
+                    img { will-change: auto;}
+                }
+            }
+            &__prd {@include vw-pc(width, 242); @include vw-pc(margin, 0 auto 20);}
+            &__pagination {bottom: 0;
+                .swiper-pagination-bullet {@include vw-pc(width, 10); @include vw-pc(height, 10); @include vw-pc(margin, 7); @include vw-pc(border, 1 solid #000); background-color: transparent; opacity: 1; vertical-align: bottom;
+                    &-active {background-color: #000;}
+                }
+            }
+
+            .pt_bullet {position: absolute; @include vw-pc(bottom, 6); z-index: 1; text-align: center;
+                .swiper-pagination-bullet {@include vw-pc(width, 10); @include vw-pc(height, 10); @include vw-pc(margin, 7); @include vw-pc(border, 1 solid #000); background-color: transparent; opacity: 1; vertical-align: bottom;
+                    &-active {background-color: #000;}
+                }
+            }
+
+            // &.type_0 { @include vw-pc(border, 2 solid #2189FF);}
+            .pt_tagtype { 
+                display: flex; @include vw-pc(gap, 5); flex-wrap: nowrap;
+                position: absolute; @include vw-pc(top, 10); @include vw-pc(left, 28); z-index: 2;
+
+                .pt_tagitem { 
+                    display: none; 
+                    
+                    &.active { display: block;}
+                    &-0 { 
+                        @include vw-pc(width, 54); @include vw-pc(height, 53);
+                        background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_00_pc_v3.png') no-repeat; 
+                        @include vw-pc(background-size, 54 53);
+                    }
+                    &-1 { 
+                        @include vw-pc(width, 54); @include vw-pc(height, 53);
+                        background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_01_pc_v3.png') no-repeat; 
+                        @include vw-pc(background-size, 54 53);
+                    }
+                    &-2 { 
+                        @include vw-pc(width, 54); @include vw-pc(height, 53);
+                        background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_02_pc_v3.png') no-repeat; 
+                        @include vw-pc(background-size, 54 53);
+                    }
+                    &-3 { 
+                        @include vw-pc(width, 54); @include vw-pc(height, 53);
+                        background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_03_pc_v3.png') no-repeat; 
+                        @include vw-pc(background-size, 54 53);
+                    }
+                    &-4 { 
+                        @include vw-pc(width, 74); @include vw-pc(height, 71);
+                        background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_04_pc_v2.png') no-repeat; 
+                        @include vw-pc(background-size, 74 71);
+                    }
+                }
+            }
+            .pt_tagtype--special {@include vw-pc(top, -30); @include vw-pc(left, 28);}
+
+            .pt_tag-dis {z-index: 2; position: absolute; @include vw-pc(left, 26); @include vw-pc(top, 68); display: flex; align-items: center; justify-content: center; @include vw-pc(width, 62); @include vw-pc(height, 21); @include vw-pc(border, 1 solid #2289FF); @include vw-pc(border-radius, 3); color: #2289FF; @include vw-pc(font-size, 14); font-weight: 700;}
+
+            &__cont.special {
+                @include vw-pc(width, 916); @include vw-pc(margin, 29 auto 0);
+
+                .pt_slide { width: 100%; @include vw-pc(padding, 10); overflow: inherit;}
+
+                .pt_time-count { 
+                    display: flex; justify-content: center; align-items: center; background-color: #3e3e3e; @include vw-pc(padding, 8 0); @include vw-pc(gap, 80); @include vw-pc(border-radius, 20 20 0 0);
+                    
+                    .pt_time-countTxt {
+                        &--txt {@include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 30); font-weight: 700; color: #fff;}
+                        &--desc { @include vw-pc(font-size, 20); color: #fff;}
+                    }
+
+                    &--contents {
+                        .pt_count_box {
+                            display: flex; flex-wrap: nowrap; align-items: center; @include vw-pc(padding-top, 8);
+
+                            .pt_card { 
+                                display: flex; justify-content: center; align-items: center; @include vw-pc(width, 103); @include vw-pc(height, 73); background: url('../../../is/images/launching/buying_list/stv_buying_list_time_bg_pc.png') no-repeat center/ cover;
+    
+                                .pt_count_num {display: inline-block; @include vw-pc(width, 96); @include vw-pc(height, 45); @include vw-pc(padding-left, 8); color: #000; @include vw-pc(font-size, 48); font-weight: 700; line-height: 1.0; @include vw-pc(letter-spacing,20); }
+                            }
+
+                            .pt_count_slash { @include vw-pc(font-size, 30); font-weight: 700; color: #fff; @include vw-pc(padding, 0 10);}
+                        }
+                    }
+                }
+
+                .pt_buying_list {
+                    display: flex; flex-wrap: nowrap; align-items: center; width: 100%; min-height: auto; @include vw-pc(box-shadow, 1 1 10 rgba(0,0,0,0.3));
+
+                    &__slide { 
+                        @include vw-pc(width, 400); @include vw-pc(height, 300); background-color: unset;
+                    }
+
+                    .pt_bnf__list { top: auto; left: auto; position: relative;}
+
+                    &__prd { 
+                        @include vw-pc(width, 383);
+
+                        .pt_title { text-align: left;}
+                        .pt_price__open { justify-content: flex-start;}
+                        .pt_opt { 
+                            width: 100%;
+
+                            .pt_opt__slide { padding: 0;}
+                            .pt_opt__slide.slide_lockd .pt_opt__list { justify-content: flex-start;}
+                            .pt_opt__slide:not(:last-child) { width: 100%;}
+                        }
+                    }
+                }
+            }
+        }
+
+        .pt_opt {
+            display: flex; flex-direction: column; align-items: center; @include vw-pc(width, 192); @include vw-pc(margin, 0 auto 10);
+            
+            &__slide {@include vw-pc(height, 25); @include vw-pc(padding, 0 18);
+                &:not(:last-child) { @include vw-pc(margin-bottom, 5); @include vw-pc(width, 190);}
+                &.colorOptBox {@include vw-pc(height, 30);@include vw-pc(margin-bottom, 0); @include vw-pc(padding, 5 18 0);}
+                &.slide_lockd .pt_opt__list{display: flex; justify-content: center;}
+                // &:last-child { @include vw-pc(margin-left, -10);}
+            }
+
+            &__item {display: flex; justify-content: center; align-items: center; width: max-content; @include vw-pc(height, 25);
+                &:not(:last-child) {@include vw-pc(margin-right, 5);}
+
+                input[type="radio"] {position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;}
+                input[type="radio"]:checked + label { background-color: #000; color: #fff;}
+                label {display: flex; justify-content: center; align-items: center; width: max-content; @include vw-pc(padding, 3 10); @include vw-pc(height, 25); @include vw-pc(border-radius, 12.5); pointer-events: none; @include vw-pc(font-size, 14); font-weight: 700; @include vw-pc(border, 1 solid #D0D0D0);}
+                
+                &--color {@include vw-pc(width, 24); @include vw-pc(height, 24);}
+                &--color label {padding: 0 0; @include vw-pc(width, 16); @include vw-pc(height, 16); border-radius: 100%; pointer-events: none; @include vw-pc(border, 1 solid #DDDDDD);}
+                &--color input[type="radio"]:checked + label::after {content: ''; display: block; position: absolute; top: 0; left: 0; @include vw-pc(width, 22); @include vw-pc(height, 22); @include vw-pc(border, 1 solid #000); border-radius: 50%;}
+            }
+
+            .pt_btn {
+                @include vw-pc(width, 15); @include vw-pc(height, 30); @include vw-pc(margin-top, -14); background: #fff url('../../../is/images/launching/buying_list/ref_buying_ico_arrow_small_pc.png') no-repeat right center; @include vw-pc(background-size, 9 15);
+                &::after {display: none;}
+                &--prev {left: 0; transform: rotate(180deg);}
+                &--next {right: 0;}
+            }
+        }
+        
+        .pt_opt--special {@include vw-pc(margin-bottom, 14);}
+
+        .pt_title {
+            @include vw-pc(margin-bottom, 18); text-align: center;
+            &__name {
+                position: relative; display: -webkit-box; @include vw-pc(height, 26); @include vw-pc(margin-bottom, 5); @include vw-pc(font-size, 20); font-weight: 700; @include vw-pc(line-height, 26); color: #000; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1;
+                &:hover {
+                    .pt_title__tooltip {visibility: visible;}
+                }
+            }
+            &__sku {@include vw-pc(font-size, 14); @include vw-pc(line-height, 18); color: #5B5B5B;}
+            .pt_title__tooltip {
+                visibility: visible;
+                @include vw-pc (font-size, 14);
+                background-color: #fff;
+                border: 1px solid #666;
+                color: #666;
+                text-align: center;
+                @include vw-pc (border-radius, 6);
+                @include vw-pc (padding, 1 10);
+                position: absolute;
+                z-index: 1;
+                &--bottom {
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            // 특가존
+            &--special {
+                position: relative; @include vw-pc(margin-bottom, 14);
+
+                .pt_title--star {z-index: 2; display: flex; align-items: center; align-self: flex-end; position: absolute; bottom: auto; @include vw-pc(top, 5); @include vw-pc(right, 0); @include vw-pc(font-size, 17); font-weight: 700;
+                    &::before {content: ''; display: inline-block; @include vw-pc(width, 17); @include vw-pc(height, 17); @include vw-pc(margin-right, 4); background: url('../../../is/images/launching/buying_list/stv_buying_list_ico_star_pc.png') no-repeat center center / contain;}
+                }
+
+                .pt_title__name {
+                    position: relative; display: -webkit-box; @include vw-pc(height, 26); @include vw-pc(margin-bottom, 5); @include vw-pc(font-size, 24); font-weight: 700; @include vw-pc(line-height, 26); color: #000; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1;
+                    &:hover {
+                        .pt_title__tooltip {visibility: visible;}
+                    }
+                }
+                .pt_title__sku {@include vw-pc(font-size, 14); @include vw-pc(line-height, 18); color: #5B5B5B;}
+            }
+        }
+        
+        .pt_price {
+            display: flex; align-items: flex-end; justify-content: space-between; position: relative; @include vw-pc(padding-bottom, 10); @include vw-pc(border-bottom, 1 solid #ddd);
+            &__open {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 2); @include vw-pc(font-size, 24); font-weight: 700; @include vw-pc(line-height, 32); color: #2189FF; letter-spacing: -.025em;
+                &:hover, &:focus {transition: none; color: #2189FF;}
+                &::after {content: ''; @include vw-pc(width, 17); @include vw-pc(height, 17); @include vw-pc(margin-left, 4); background: url('../../../is/images/launching/buying_list/ref_buying_ico_arrow2_pc_v1.png') no-repeat center center / contain;}
+                &.active::after {transform: rotate(180deg);}
+                &.active + .pt_price__list {display: block;}
+            }
+            &__list {display: block; position:static; width: auto; @include vw-pc(padding, 0); border:none; border-radius: 0; background-color: unset; box-shadow: none; z-index: 2; font-weight: 700;}
+            &__item {display: flex; justify-content: flex-start; align-items: center; @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); color: #8F8F8F;
+                &--blue {@include vw-pc(margin-top, 10); @include vw-pc(padding-top, 0); border: none; font-weight: 700; color: #000;}
+
+                .pt_price__name {@include vw-pc(margin-right, 6);}
+                .pt_price__cont {@include vw-pc(font-size, 14);}
+                .pt_price__cont .en{@include vw-pc(font-size, 16);}
+                .pt_price__cont--cpnum {@include vw-pc(font-size, 16);}
+                .pt_price__cont--blue {color: #2189FF; @include vw-pc(margin-right, 5);}
+
+                .pt_price__area {display: flex;}
+                
+                &--origin {
+                    .pt_price__cont {text-decoration: line-through; @include vw-pc(font-size, 14);}
+                    .pt_price__cont .en{@include vw-pc(font-size, 16);}
+                }
+            }
+
+            .pt_price__coupon { 
+                display: flex; align-items: center; @include vw-pc(width, 67);
+                
+                &-txt {display: flex; align-items: center; justify-content: center; @include vw-pc(width, 48); @include vw-pc(height, 23); @include vw-pc(border, 2 solid #278DFB); border-right: 0; @include vw-pc(border-radius, 6 0 0 6); @include vw-pc(font-size, 10); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+                &-ico {display: flex; align-items: center; justify-content: center; @include vw-pc(width, 19); @include vw-pc(height, 23); background-color: #278DFB; @include vw-pc(border-radius, 0 6 6 0);}
+                &-ico img{ @include vw-pc(width, 9);}
+            }
+
+            &--special {
+                display: flex; align-items: flex-end; justify-content: space-between; position: relative; @include vw-pc(padding-bottom, 14); @include vw-pc(border-bottom, 1 solid #ddd);
+    
+                .pt_price__list {display: block; position:static; width: auto; @include vw-pc(padding, 0); border:none; border-radius: 0; background-color: unset; box-shadow: none; z-index: 2; font-weight: 700;}
+                .pt_price__item {display: flex; justify-content: flex-start; align-items: center; @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); color: #8F8F8F;
+                    &--blue {@include vw-pc(margin-top, 10); @include vw-pc(padding-top, 0); border: none; font-weight: 700; color: #000;}
+                    .pt_price__name {@include vw-pc(margin-right, 35);}
+                    .pt_price__cont {@include vw-pc(font-size, 18);}
+                    .pt_price__cont .en{@include vw-pc(font-size, 22);}
+                    .pt_price__cont--cpnum {@include vw-pc(font-size, 22);}
+                    .pt_price__cont--blue {color: #2189FF; @include vw-pc(margin-right, 5);}
+                }
+                .pt_price__item--origin {
+                    .pt_price__cont {text-decoration: line-through; @include vw-pc(font-size, 14);}
+                    .pt_price__cont .en{@include vw-pc(font-size, 16);}
+                }
+
+                .pt_price__coupon { 
+                    display: flex; align-items: center; @include vw-pc(width, 95);
+                    
+                    &-txt {display: flex; align-items: center; justify-content: center; @include vw-pc(width, 67); @include vw-pc(height, 33); @include vw-pc(border, 2 solid #278DFB); border-right: 0; @include vw-pc(border-radius, 6 0 0 6); @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+                    &-ico {display: flex; align-items: center; justify-content: center; @include vw-pc(width, 28); @include vw-pc(height, 33); background-color: #278DFB; @include vw-pc(border-radius, 0 6 6 0);}
+                    &-ico img{ @include vw-pc(width, 13);}
+                }
+            }
+        }
+
+        //buying benefit
+        .pt_bnf {
+            display: flex; flex-direction: column; justify-content: center; align-items: normal; position: relative; z-index: 2; width: 100%; @include vw-pc(margin-top, 8);
+            &__open {
+                display: flex; justify-content: center; align-items: center; @include vw-pc(gap,10); z-index: 1; width: 100%; @include vw-pc(height, 47); @include vw-pc(border-radius, 5 5 0 0); 
+                background-color: #2189FF; @include vw-pc(font-size, 18); color: #fff; letter-spacing: -.025em;
+
+                &:hover, &:focus {transition: none; color: #fff;}
+                &::after {content: ''; @include vw-pc(width, 20); @include vw-pc(height, 20); background: url('../../../is/images/launching/buying_list/ref_buying_ico_arrow1_pc_v1.png') no-repeat center center / contain;}
+                &.active::after {transform: rotate(180deg);}
+                &.active + .pt_bnf__list {display: block;}
+
+                &--ai {background-color: #001F43;}
+            }
+            &__list {display: block; position: static; @include vw-pc(padding, 0); background-color: unset; box-shadow: none;}
+            &__item {position: relative; display: flex; justify-content: space-between; align-items: flex-start;
+                &:not(:last-child) {@include vw-pc(margin-bottom, 10);}
+            }
+            &__name {
+                @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); letter-spacing: -.025em; color: #5B5B5B;
+                // &--agust {letter-spacing: -.08em;}
+            }
+            &__cont {@include vw-pc(font-size, 14); font-weight: 700; @include vw-pc(line-height, 18); color: #5B5B5B; letter-spacing: -.025em; text-align: right;}
+            &__cont .en{@include vw-pc(font-size, 16);}
+            &__noti-btn {@include vw-pc(width, 15); @include vw-pc(margin-left, 2); vertical-align: sub;}
+            &__noti-con {position: absolute; @include vw-pc(top, -65); @include vw-pc(left, 0); display: none; align-items: center; @include vw-pc(width, 242); @include vw-pc(height, 80); @include vw-pc(padding, 0 16); @include vw-pc(border, 1 solid #000); @include vw-pc(border-radius, 12); background-color: #fff; @include vw-pc(box-shadow, 0 3 6 rgba(0,0,0,.16));}
+            &__noti-area {position: relative;}
+            &__noti-text {@include vw-pc(font-size, 14); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -1); color: #5B5B5B;}
+            &__noti-close {position: absolute; @include vw-pc(top, 12); @include vw-pc(right, 12); @include vw-pc(width, 14);}
+            
+
+            &--special {
+                display: flex; flex-direction: column; justify-content: center; align-items: normal; position: relative; z-index: 2; width: 100%; @include vw-pc(margin-top, 12);
+                .pt_bnf__list {display: block; position: static; @include vw-pc(padding, 0); background-color: unset; box-shadow: none;}
+                .pt_bnf__item {position: relative; display: flex; justify-content: space-between; align-items: flex-start; background: url('../../../is/images/launching/buying_list/stv_buying_list_benefit_ico_pc.png') no-repeat center; @include vw-pc(background-size, 17 13); @include vw-pc(background-position, left 2);
+                    &:not(:last-child) {@include vw-pc(margin-bottom, 7);}
+                }
+                .pt_bnf__name {
+                    @include vw-pc(padding-left, 22); @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); letter-spacing: -.025em; color: #5B5B5B;
+                    // &--agust {letter-spacing: -.08em;}
+                }
+                .pt_bnf__cont {@include vw-pc(font-size, 14); font-weight: 700; @include vw-pc(line-height, 18); color: #5B5B5B; letter-spacing: -.025em; text-align: right;}
+                .pt_bnf__cont .en {@include vw-pc(font-size, 16);}
+
+                .pt_bnf__noti-con {@include vw-pc(top, -90); @include vw-pc(left, 235);}
+            }
+        }
+
+        
+        .pt_btn-box {
+            display: flex; flex-direction: column; justify-content: flex-end; align-items: center; @include vw-pc(gap, 6); position: relative; @include vw-pc(min-height, auto); @include vw-pc(margin-bottom, 14); @include vw-pc(padding-bottom, 30);
+
+            .pt_btn {
+                display: inline-flex; justify-content: center; align-items: center; @include vw-pc(font-size, 14); font-weight: 700; @include vw-pc(line-height, 18);
+
+                &--disabled {opacity: 0.3; pointer-events: none !important; cursor: pointer;}
+                &--coupon {width: 100%; @include vw-pc(height, 40); @include vw-pc(border, 1 solid #000); @include vw-pc(border-radius, 20); color: #000;
+                    &::after {content: ''; @include vw-pc(width, 25); @include vw-pc(height, 25); @include vw-pc(margin-left, 2); background: url('../../../is/images/launching/buying_list/ref_buying_ico_down_pc.png') no-repeat center center / contain;}
+                    &:hover, &:focus, &:active {transition: none; color: #000;}
+                    
+                }
+                &--buy {width: 100%; @include vw-pc(height, 40); @include vw-pc(border-radius, 20); color: #fff; background-color: #000;
+                    &:hover, &:focus {transition: none; color: #fff;}
+                }
+                &--star {align-self: flex-end; @include vw-pc(margin-top, 7); position: absolute; bottom: 0;
+                    &::before {content: ''; @include vw-pc(width, 13); @include vw-pc(height, 13); @include vw-pc(margin-right, 4); background: url('../../../is/images/launching/buying_list/ref_buying_ico_star_pc.png') no-repeat center center / contain;}
+                }
+                &--soldout_more {background-color: #ffffff; color: #000 !important; @include vw-pc(border, 1 solid #000000);}
+                &--dimmed {background-color: #898989; pointer-events : none;}
+            }
+        }
+        .pt_btn-box--special {min-height: auto; margin-bottom: 0; padding-bottom: 0; @include vw-pc(margin-top, 12);}
+
+        .pt_tag {display: flex; flex-wrap: wrap; align-items: center; @include vw-pc(gap, 2);
+            &__item {
+                @include vw-pc(padding, 0 4); @include vw-pc(border, 1 solid #838383); @include vw-pc(border-radius, 4); @include vw-pc(font-size, 14); color: #838383; @include vw-pc(line-height, 19);
+                &--blue {border-color: #2189FF; color: #2189FF;}
+            }
+        }
+
+        .pt_dimmed{z-index: 10; position: absolute; @include vw-pc(top,72); @include vw-pc(left,29); display: flex; justify-content: center; align-items: center; @include vw-pc(width,220); @include vw-pc(height,220); border-radius: 50%; background-color: rgb(0, 0, 0, .55);
+            &__txt{@include vw-pc(font-size,26); @include vw-pc(line-height,34); font-weight: 700; color: #fff;}
+        }
+
+        .pt_center-box {text-align: center;}
+        .pt_center-text {@include vw-pc(font-size, 16); letter-spacing: -.025em; color: #838383;}
+        .pt_btn-noti {@include vw-pc(font-size, 16);}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .samsung_tv_launching {
+        .sec_buying_list {
+            
+            &__inner {@include vw-mo(padding, 80 0 0);}
+
+            &.sec_buying_hybrid {
+                .sec_buying_list__inner {@include vw-mo(padding, 26 0 80);}
+            }
+
+            .pt_slide {
+                width: 100%; @include vw-mo(padding-left, 20);
+                @include vw-mo(padding-bottom, 50);
+                &-box {
+                    @include vw-mo(margin-bottom, 0);
+        
+                    .pt_arrow {
+                        display: none;
+                    }
+
+                    &--best {
+                        @include vw-mo(padding-bottom, 80);
+
+                        .pt_slide__inner {flex-wrap: nowrap; @include vw-mo(gap, 54 0); @include vw-mo(padding, 54 0 0);}
+
+                        &.pc_centered .pt_slide__inner {@include vw-mo(padding, 54 0 0);}
+                        
+                    }
+                    &--special {
+        
+                        .pt_slide__inner {@include vw-mo(padding, 0 0);}
+                        .pt_buying_list {@include vw-mo(padding, 0 0 47 0); @include vw-mo(border-radius, 20 20 20 20); border: none;}
+                        .pt_buying_list__slide  {margin: 0 auto;}
+                        .pt_buying_list__prd {margin: 0 auto;}
+                    }
+
+                    &.pc_centered {
+                        .pt_slide__inner {justify-content: flex-start;}
+                        .pt_arrow,
+                        .pt_buying_list__pagination {display: block;}
+                        .pt_buying_list__pagination {@include vw-mo(top, 1130);}
+                    }
+                }
+                &__inner {
+                    flex-wrap: wrap; @include vw-mo(gap, 24);
+                }
+                &:last-child{@include vw-mo(padding-bottom,60);}
+            }
+            .pt_buying_list {
+                position: relative; @include vw-mo(width, 324); @include vw-mo(min-height, 912); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 3 3 25 rgba(0,0,0,0.12));
+                
+                &__title {
+                    .pt_title__pre {
+                        @include vw-mo(font-size, 30); @include vw-mo(line-height, 42);
+                    }
+                    .pt_title__main {
+                        @include vw-mo(margin-bottom, 15); @include vw-mo(font-size, 52); @include vw-mo(line-height, 55);
+                        &::after {@include vw-mo(top, -15); @include vw-mo(left, -55); @include vw-mo(width, 54); @include vw-mo(height, 77); background-image: url('../../is/images/launching/buying_list/stv_buying_list_title_left_mo.png');}
+                        &::before {@include vw-mo(top, -15); @include vw-mo(right, -55); @include vw-mo(width, 54); @include vw-mo(height, 77); background-image: url('../../is/images/launching/buying_list/stv_buying_list_title_right_mo.png');}
+                    }
+                    .pt_title__sub { 
+                        @include vw-mo(font-size, 32); @include vw-mo(line-height, 42); @include vw-mo(margin-bottom, 7);
+                    }
+                    .pt_title__add { 
+                        @include vw-mo(font-size, 24); @include vw-mo(line-height, 36); @include vw-mo(margin-bottom, 10);
+                    }
+                }
+
+                &__cont {
+                    @include vw-mo(height, auto);
+                    &--btn {display: inline-flex !important; @include vw-mo(width, auto); @include vw-mo(height, 60); @include vw-mo(padding, 0 30); @include vw-mo(font-size, 20);
+                        &::after {@include vw-mo(width, 7); @include vw-mo(height, 7); @include vw-mo(margin, 0 2 4 12);}
+                        &:hover {
+                            background-color: #ffffff; color: #000;
+                            &::after {border-color: #000;}
+                        }
+                    }
+                    &.open {@include vw-mo(height, auto);}
+                }
+                &__btn-box {
+                    text-align: center;
+                }
+        
+                &__bookmark-wrap{@include vw-mo(top, -54); @include vw-mo(left, 16); @include vw-mo(gap,10);}
+                &__bookmark {@include vw-mo(width, 66); @include vw-mo(height, 54); @include vw-mo(border-radius, 5 5 0 0); @include vw-mo(font-size, 22); @include vw-mo(line-height, 26);}
+                &__slide {
+                    @include vw-mo(width, 284); @include vw-mo(height, 284); @include vw-mo(margin, 20 auto 30); @include vw-mo(border-radius, 8);
+                
+                    
+                }
+                &__prd {@include vw-mo(width, 324); @include vw-mo(margin, 0 auto 40);}
+                &__pagination {
+                    display: none;
+                    .swiper-pagination-bullet {@include vw-mo(width, 16); @include vw-mo(height, 16); @include vw-mo(margin, 0 8); @include vw-mo(border-width, 2);}
+                }
+        
+                .pt_bullet {@include vw-mo(bottom, 16);
+                    .swiper-pagination-bullet {@include vw-mo(width, 16); @include vw-mo(height, 16); @include vw-mo(margin, 0 7); @include vw-mo(border-width, 2);}
+                }
+
+                // &.type_0 { @include vw-mo(border, 2 solid #2189FF);}
+                .pt_tagtype { 
+                    @include vw-mo(gap, 5); @include vw-mo(top, 10); @include vw-mo(left, 8);
+
+                    .pt_tagitem { 
+                        &-0 { 
+                            @include vw-mo(width, 83); @include vw-mo(height, 82); @include vw-mo(top, 15);
+                            background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_00_mo_v3.png') no-repeat; 
+                            @include vw-mo(background-size, 83 82);
+                        }
+                        &-1 { 
+                            @include vw-mo(width, 83); @include vw-mo(height, 82);
+                            background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_01_mo_v3.png') no-repeat; 
+                            @include vw-mo(background-size, 83 82);
+                        }
+                        &-2 { 
+                            @include vw-mo(width, 83); @include vw-mo(height, 82);
+                            background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_02_mo_v3.png') no-repeat; 
+                            @include vw-mo(background-size, 83 82);
+                        }
+                        &-3 { 
+                            @include vw-mo(width, 83); @include vw-mo(height, 82);
+                            background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_03_mo_v3.png') no-repeat; 
+                            @include vw-mo(background-size, 83 82);
+                        }
+                        &-4 { 
+                            @include vw-mo(width, 109); @include vw-mo(height, 105);
+                            background: url('../../../is/images/launching/buying_list/stv_buying_list_flag_type_04_mo_v2.png') no-repeat; 
+                            @include vw-mo(background-size, 109 105);
+                        }
+
+                    }
+                }
+                .pt_tagtype--special {@include vw-mo(left, 25); @include vw-mo(top, -45);}
+
+                .pt_tag-dis {@include vw-mo(left, 30); @include vw-mo(top, 110); @include vw-mo(width, 82); @include vw-mo(height, 30); @include vw-mo(border, 2 solid #2289FF); @include vw-mo(border-radius, 6); @include vw-mo(font-size, 20); @include vw-mo(letter-spacing, -1);}
+
+                &__cont.special {
+                    @include vw-mo(width, 692); @include vw-mo(margin, 29 auto 0); height: auto;
+    
+                    .pt_slide { width: 100%; @include vw-mo(padding, 10);}
+    
+                    .pt_time-count { 
+                        flex-direction: column; @include vw-mo(padding, 22 0); @include vw-mo(gap, 0 ); @include vw-mo(border-radius, 20 20 0 0);
+                        
+                        .pt_time-countTxt {
+                            @include vw-mo(margin-bottom, 13);
+                            &--txt {@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 32); text-align: center}
+                            &--desc { @include vw-mo(font-size, 24);}
+                        }
+    
+                        &--contents {
+                            .pt_count_box {
+                                display: flex; flex-wrap: nowrap; align-items: center; @include vw-mo(padding-top, 8);
+    
+                                .pt_card { 
+                                    display: flex; justify-content: center; align-items: center; @include vw-mo(width, 143); @include vw-mo(height, 100); background: url('../../../is/images/launching/buying_list/stv_buying_list_time_bg_mo.png') no-repeat center/ cover;
+        
+                                    .pt_count_num {display: inline-block; @include vw-mo(width, 123); @include vw-mo(height, 60); @include vw-mo(padding-left, 6); color: #000; @include vw-mo(font-size, 68); font-weight: 700; line-height: 1.0; @include vw-mo(letter-spacing, 27); }
+                                }
+    
+                                .pt_count_slash { @include vw-mo(font-size, 68); @include vw-mo(padding, 0 5);}
+                            }
+                        }
+                    }
+    
+                    .pt_buying_list {
+                        flex-direction: column; @include vw-mo(box-shadow, 1 1 10 rgba(0,0,0,0.3)); 
+    
+                        &__slide { 
+                            @include vw-mo(width, 500); @include vw-mo(height, 340); background-color: unset;
+                        }
+    
+                        .pt_bnf__list { top: auto; left: auto; position: relative;}
+    
+                        &__prd { 
+                            @include vw-mo(width, 595);
+    
+                            .pt_title { text-align: left;}
+                            .pt_price__open { justify-content: flex-start;}
+                            .pt_opt { 
+                                width: 100%;
+    
+                                .pt_opt__slide { padding: 0;}
+                                .pt_opt__slide.slide_lockd .pt_opt__list { justify-content: center;}
+                                .pt_opt__slide:not(:last-child) { width: 100%;}
+                            }
+                        }
+                    }
+                }
+                &:not(:last-child) {@include vw-mo(margin-right, 24);}
+                &:last-child{@include vw-mo(margin-right, 24);}
+            }
+            
+            .pt_opt--special {@include vw-mo(margin-bottom, 37);}
+
+            .pt_opt {
+                @include vw-mo(width, 288); @include vw-mo(margin, 0 auto 24);
+                &__slide {@include vw-mo(height, 44); @include vw-mo(padding, 0 20);
+                    &:not(:last-child) {@include vw-mo(margin-bottom, 10); @include vw-mo(width, 284);}
+                    &.colorOptBox {@include vw-mo(height, 54);@include vw-mo(margin-bottom, 0); @include vw-mo(padding, 10 20 0);}
+                }
+                &__item { @include vw-mo(height, 44); 
+                    &:not(:last-child) {@include vw-mo(margin-right, 8);}
+                    label {@include vw-mo(padding, 8 16); @include vw-mo(height, 44); @include vw-mo(border-radius, 20); @include vw-mo(font-size, 24); @include vw-mo(border, 1 solid #D0D0D0);}
+        
+                    &--color {@include vw-mo(width, 40); @include vw-mo(height, 40);}
+                    &--color label {padding: 0 0; @include vw-mo(border, 1 solid #00000040); @include vw-mo(width, 30); @include vw-mo(height, 30);}
+                    &--color input[type="radio"]:checked + label::after {@include vw-mo(width, 37); @include vw-mo(height, 37); @include vw-mo(border-width, 1);}
+                }
+                .pt_btn {
+                    @include vw-mo(width, 16); @include vw-mo(height, 40); @include vw-mo(margin-top, -20); background-image: url('../../../is/images/launching/buying_list/ref_buying_ico_arrow_small_mo.png'); @include vw-mo(background-size, 16 16);
+                }
+            }
+        
+            .pt_price {
+                @include vw-mo(margin, 0 20 0 20); flex-direction: column; @include vw-mo(padding-bottom, 14);
+                &__open {justify-content: flex-start; @include vw-mo(gap, 2); @include vw-mo(font-size, 26); @include vw-mo(line-height, 42);
+                    .en {@include vw-mo(font-size, 34);}
+                    &::after {@include vw-mo(width, 34); @include vw-mo(height, 34); @include vw-mo(margin-left, 8); background-image: url('../../../is/images/launching/buying_list/ref_buying_ico_arrow2_mo.png');}
+                }
+                &__list {width: 100%;}
+                &__item {@include vw-mo(font-size, 24); @include vw-mo(line-height, 31); justify-content: space-between; align-items: flex-start;
+                    &--blue {@include vw-mo(margin-top, 5); @include vw-mo(padding-top, 0);}
+                    .pt_price__name {margin-right: 0}
+                    .pt_price__cont {@include vw-mo(font-size, 24);}
+                    .pt_price__cont--cpnum {display: flex; align-items: center; @include vw-mo(font-size, 24);}
+                    .pt_price__cont .en {@include vw-mo(font-size, 28);}
+                    .pt_price__cont--cpnum .en{@include vw-mo(font-size, 24);}
+                    .pt_price__cont--blue {@include vw-mo(margin-right, 0);}
+
+                    .pt_price__area{display: flex; flex-direction: column; align-items: flex-end; @include vw-mo(gap, 7);}
+                }
+                &__item--origin {
+                    .pt_price__cont .en{@include vw-mo(font-size, 28);}
+                }
+                &__name,
+                &__cont {letter-spacing: -.09em;}
+
+                .pt_price__coupon { 
+                    z-index: 10; position: absolute; left: 0; @include vw-mo(top, 70); display: flex; align-items: center; @include vw-mo(width, 106);
+                    
+                    &-txt {@include vw-mo(width, 71); @include vw-mo(height, 35); @include vw-mo(border, 2 solid #278DFB); border-right: 0; @include vw-mo(border-radius, 8 0 0 8); @include vw-mo(font-size, 15); @include vw-mo(letter-spacing, -1);}
+                    &-ico {@include vw-mo(width, 35); @include vw-mo(height, 35); background-color: #278DFB; @include vw-mo(border-radius, 0 8 8 0);}
+                    &-ico img{ @include vw-mo(width, 20);}
+                }
+                
+                // 특가존
+                &--special {
+                    @include vw-mo(margin, 0 0 26 0); @include vw-mo(padding-bottom, 22); @include vw-mo(border-bottom, 1 solid #ddd); flex-direction: row;
+        
+                    .pt_price__list {width: 100%;}
+                    .pt_price__item {@include vw-mo(font-size, 24); @include vw-mo(line-height, 31); justify-content: flex-start;
+                        &--blue {@include vw-mo(margin-top, 15); @include vw-mo(padding-top, 0);}
+                        .pt_price__name {@include vw-mo(margin-right, 32);}
+                        .pt_price__cont {@include vw-mo(font-size, 24);}
+                        .pt_price__cont--cpnum {@include vw-mo(font-size, 36);}
+                        .pt_price__cont .en {@include vw-mo(font-size, 36);}
+                        .pt_price__cont--blue {@include vw-mo(margin-right, 11);}
+                    }
+                    .pt_price__item--origin {
+                        .pt_price__cont .en{@include vw-mo(font-size, 28);}
+                    }
+    
+                    .pt_price__coupon { 
+                        position: static; @include vw-mo(width, 180);
+                        
+                        &-txt {@include vw-mo(width, 124); @include vw-mo(height, 56); @include vw-mo(border, 2 solid #278DFB); @include vw-mo(border-radius, 10 0 0 10); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1);}
+                        &-ico {@include vw-mo(width, 56); @include vw-mo(height, 56); @include vw-mo(border-radius, 0 10 10 0);}
+                        &-ico img{ @include vw-mo(width, 33);}
+                    }
+                }
+            }
+        
+            //buying benefit
+            .pt_bnf {
+                &__open {@include vw-mo(gap,13); @include vw-mo(height, 68); @include vw-mo(border-radius, 15 15 0 0); @include vw-mo(font-size, 28);
+                    &::after {@include vw-mo(width, 28); @include vw-mo(height, 28); background-image: url('../../../is/images/launching/buying_list/ref_buying_ico_arrow1_mo_v1.png');}
+                }
+                &__list {@include vw-mo(padding, 11 20 21); box-shadow: none;}
+                &__item {align-items: flex-start;
+                    &:not(:last-child) {@include vw-mo(margin-bottom, 12);}
+                }
+                &__name {
+                    @include vw-mo(font-size, 24); @include vw-mo(line-height, 29); @include vw-mo(letter-spacing, -3);
+                    // &--agust {letter-spacing: -.06em;}
+                }
+                &__cont {position: absolute; right: 0; top: 0; @include vw-mo(font-size, 24); @include vw-mo(line-height, 29); text-align: right; white-space: nowrap;}
+                &__cont .en {@include vw-mo(font-size, 24);}
+                &__noti-btn {@include vw-mo(width, 28); @include vw-mo(margin-left, 4); vertical-align: bottom;}
+                &__noti-con {@include vw-mo(top, -93); @include vw-mo(left, 0); @include vw-mo(width, 284); @include vw-mo(height, 148); @include vw-mo(padding, 0 26); @include vw-mo(border, 1 solid #000); @include vw-mo(border-radius, 10); @include vw-mo(box-shadow, 0 3 6 rgba(0,0,0,.16));}
+                &__noti-text {@include vw-mo(font-size, 24); @include vw-mo(line-height, 35); @include vw-mo(letter-spacing, -1);}
+                &__noti-close {@include vw-mo(top, 15); @include vw-mo(right, 15); @include vw-mo(width, 20);}
+
+                &--special {
+                    .pt_bnf__list {}
+                    .pt_bnf__item {background: url('../../../is/images/launching/buying_list/stv_buying_list_benefit_ico_mo.png') no-repeat center; @include vw-mo(background-size, 30 23); @include vw-mo(background-position, left 4);
+                        &:not(:last-child) {@include vw-mo(margin-bottom, 12);}
+                    }
+                    .pt_bnf__name {
+                        @include vw-mo(padding-left, 40); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); @include vw-mo(letter-spacing, -2.5);
+                        // &--agust {letter-spacing: -.08em;}
+                    }
+                    .pt_bnf__cont {@include vw-mo(font-size, 28); @include vw-mo(line-height, 32); letter-spacing: -.025em;}
+                    .pt_bnf__cont .en {@include vw-mo(font-size, 28);}
+
+                    .pt_bnf__noti-con {@include vw-mo(top, -148); @include vw-mo(left, 0); @include vw-mo(width, 397); @include vw-mo(height, 137);}
+                }
+            }
+        
+            .pt_btn-box {
+                @include vw-mo(gap, 10); @include vw-mo(width, 284); @include vw-mo(min-height, auto); @include vw-mo(margin, 0 auto 30); @include vw-mo(padding-bottom, 58);
+        
+                .pt_btn {
+                    display: inline-flex; justify-content: center; align-items: center; @include vw-mo(font-size, 28); font-weight: 700; @include vw-mo(line-height, 40);
+                    &--coupon {@include vw-mo(height, 64); @include vw-mo(border-width, 2); @include vw-mo(border-radius, 32);
+                        &::after {@include vw-mo(width, 40); @include vw-mo(height, 40); @include vw-mo(margin-left, 5); background-image: url('../../../is/images/launching/buying_list/ref_buying_ico_down_mo.png');}
+                        &:active {color: #000;}
+                    }
+                    &--buy {@include vw-mo(height, 64); @include vw-mo(border-radius, 32);}
+                    &--star {@include vw-mo(margin-top, 18); @include vw-mo(line-height, 31);
+                        &::before {@include vw-mo(width, 26); @include vw-mo(height, 26); @include vw-mo(margin-right, 8); background-image: url('../../../is/images/launching/buying_list/ref_buying_ico_star_mo.png');}
+                    }
+                    &--soldout_more {@include vw-mo(border, 1 solid #000000);}
+                    &--dimmed {@include vw-mo(font-size, 24);}
+                }
+            }
+            .pt_btn-box--special {@include vw-mo(width, 595); gap: 0; min-height: auto; margin-bottom: 0; padding-bottom: 0; @include vw-mo(margin-top, 39);}
+            .pt_btn-box--special .pt_btn--buy {@include vw-mo(height, 83); @include vw-mo(border-radius, 48);}
+
+
+            .pt_title {
+                @include vw-mo(margin, 0 20 13 20); text-align: left;
+                &__name {@include vw-mo(height, 44); @include vw-mo(font-size, 32); @include vw-mo(line-height, 44);}
+                &__sku {@include vw-mo(font-size, 24); @include vw-mo(line-height, 30); color: #666666;}
+
+                // 특가존
+                &--special {
+                    @include vw-mo(margin, 30 auto 23); text-align: center !important;
+
+                    .pt_title--star {z-index: 2; display: flex; align-items: center; align-self: flex-end; position: absolute; bottom: auto; @include vw-mo(top, 5); @include vw-mo(right, 0); @include vw-mo(font-size, 27); font-weight: 700;
+                        &::before {content: ''; display: inline-block; @include vw-mo(width, 26); @include vw-mo(height, 25); @include vw-mo(margin-right, 4); background: url('../../../is/images/launching/buying_list/stv_buying_list_ico_star_mo.png') no-repeat center center / contain;}
+                    }
+
+                    .pt_title__name {
+                        @include vw-mo(height, 55); @include vw-mo(margin-bottom, 0); @include vw-mo(font-size, 40); @include vw-mo(line-height, 44);
+                        &:hover {
+                            .pt_title__tooltip {visibility: visible;}
+                        }
+                    }
+                    .pt_title__sku {@include vw-mo(font-size, 20); @include vw-mo(line-height, 18);}
+                }
+            }
+
+            .pt_tag {@include vw-mo(gap, 5); @include vw-mo(margin, 0 20);
+                &__item {
+                    @include vw-mo(padding, 0 9); @include vw-mo(border-width, 2); @include vw-mo(border-radius, 8); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32);
+                }
+            }
+
+            .pt_dimmed{@include vw-mo(top,96); @include vw-mo(left,28); @include vw-mo(width,268); @include vw-mo(height,268);
+                &__txt{@include vw-mo(font-size,32); @include vw-mo(line-height,42);}
+            }
+
+            .pt_center-text {@include vw-mo(font-size, 24); @include vw-mo(line-height, 30);}
+            .pt_btn-noti {@include vw-mo(font-size, 24);}
+        }
+    }
+}

@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import CourseDetails from "../../constants/CourseDetails";
 import KakaoLoginButton from "@/components/KakaoLoginButton";
 import UserProfile from "@/components/UserProfile";
-import { signIn } from "next-auth/react";
 
 export default function Home() {
   return (
@@ -18,7 +17,7 @@ export default function Home() {
       <HeroSection />
       {/* Kakao Login Button */}
       <div className="mt-4">
-        <KakaoLoginButton onClick={signIn} />
+        <KakaoLoginButton />
       </div>
 
       {/* 상세 내용 섹션 */}

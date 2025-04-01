@@ -1,15 +1,11 @@
 "use client";
-
+import { handleKakaoLogin } from "@/utils/supabase/supabaseClient";
 import React from "react";
 
-interface KakaoLoginButtonProps {
-  onClick: () => void;
-}
-
-const KakaoLoginButton = ({ onClick }: KakaoLoginButtonProps) => {
+const KakaoLoginButton = () => {
   return (
     <button
-      onClick={onClick}
+      onClick={handleKakaoLogin}
       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded"
     >
       카카오톡으로 로그인

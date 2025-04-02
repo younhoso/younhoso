@@ -34,15 +34,15 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   if (
-    !user &&
-    !request.nextUrl.pathname.startsWith("/login") &&
-    !request.nextUrl.pathname.startsWith("/auth") &&
-    !request.nextUrl.pathname.startsWith("/") // 현재 페이지가 홈이 아닐 경우
+    !user && // 로그인이 안 되어 있고
+    !request.nextUrl.pathname.startsWith("/login") && // 현재 URL이 /login이 아니고
+    !request.nextUrl.pathname.startsWith("/auth") && //auth도 아니고
+    !request.nextUrl.pathname.startsWith("/") // 홈("/") 페이지도 아닐 때
   ) {
     // 사용자가 없으면 사용자를 로그인 페이지로 리디렉션
     const url = request.nextUrl.clone();
     url.pathname = "/";
-    return NextResponse.redirect(url);
+    return NextResponse.redirect(url); // 로그인 페이지 대신 홈("/")으로 리디렉션
   }
 
   return supabaseResponse;

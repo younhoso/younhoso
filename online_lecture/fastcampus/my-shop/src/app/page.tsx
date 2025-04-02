@@ -4,6 +4,8 @@ import HeroSection from "@/components/HeroSection";
 import CourseDetails from "../../constants/CourseDetails";
 import KakaoLoginButton from "@/components/KakaoLoginButton";
 import UserProfile from "@/components/UserProfile";
+import PurchaseButton from "@/components/PurchaseButton";
+import { COURSE_PRICE } from "../../constants/Pricing";
 
 export default function Home() {
   return (
@@ -21,9 +23,10 @@ export default function Home() {
       </div>
 
       {/* 상세 내용 섹션 */}
-      <div className="w-full lg:max-w-3xl mx-auto mt-8">
+      <div className="w-full px-6 pb-36">
         <CourseDetails />
       </div>
+      <PurchaseButton price={COURSE_PRICE.discounted} />
     </main>
   );
 }

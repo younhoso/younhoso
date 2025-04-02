@@ -3,6 +3,7 @@ import { Card, CardDescription, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { COURSE_PRICE } from "../../constants/Pricing";
 
 const HeroSection = () => {
   return (
@@ -21,9 +22,14 @@ const HeroSection = () => {
         </CardDescription>
         <div className="flex items-center gap-2">
           <Badge variant="destructive" className="text-lg">
-            34% OFF
+            {COURSE_PRICE.discountPercentage}% OFF
           </Badge>
-          <span className="line-through text-gray-400">150,000</span>
+          <span className="line-through text-gray-400">
+            {COURSE_PRICE.original.toLocaleString()}원
+          </span>
+          <div className="text-3xl font-bold">
+            {COURSE_PRICE.discounted.toLocaleString()}원
+          </div>
         </div>
         <Button
           variant="destructive"

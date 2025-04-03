@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
@@ -12,11 +11,8 @@ type PurchaseButtonProps = {
 
 export default function PurchaseButton({ price }: PurchaseButtonProps) {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const handlePurchase = async () => {
-    setError(null);
-
     try {
       setLoading(true);
 
@@ -56,23 +52,26 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
           created_at: new Date().toISOString(),
         },
       ]);
+      console.log("❌ insertError:", insertError);
 
-      if (insertError) {
-        console.error("❌ Supabase 저장 오류:", insertError);
-        throw new Error("결제 정보를 저장하는 데 실패했습니다.");
+      if (response?.pgCode === "FAILURE_TYPE_PG") {
+        alert("결제가 실패했습니다.");
+        // 결제 실패 후 처리 로직
       }
 
-      alert("구매가 완료되었습니다.!");
+      // 팝업 창이 닫혔을 때 상태 업데이트
+      if (response?.pgCode === "PAY_PROCESS_CANCELED") {
+        // 상태에 따라 UI 업데이트
+        alert("결제가 취소되었습니다.");
+        return;
+      }
+
+      if (!response?.pgCode) {
+        alert("구매가 완료되었습니다.!");
+        return;
+      }
     } catch (e) {
       console.error("❌ 오류 발생:", e);
-      if (e instanceof Error) {
-        setError(e.message);
-        alert(`결제 실패: ${e.message}`);
-      }
-    }
-
-    if (error) {
-      setError("구매에 실패했습니다. 다시 시도해주세요.");
     }
 
     setLoading(false);

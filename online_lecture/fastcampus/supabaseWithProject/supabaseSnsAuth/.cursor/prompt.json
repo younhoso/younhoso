@@ -1,0 +1,70 @@
+{
+  "prompts": [
+    {
+      "name": "Next.js Best Practices",
+      "description": "Next.js 15 App Router 기반의 Best Practices 적용",
+      "prompt": "Next.js 15 App Router를 사용하는 코드를 Best Practices에 맞게 개선해줘.\n\n코드:\n{{code}}",
+      "variables": ["code"]
+    },
+    {
+      "name": "React Component Optimization",
+      "description": "React 컴포넌트의 성능을 최적화",
+      "prompt": "아래 React 컴포넌트의 성능을 최적화하고 불필요한 렌더링을 줄여줘.\n\n컴포넌트:\n{{component}}",
+      "variables": ["component"]
+    },
+    {
+      "name": "TypeScript Strict Mode Fix",
+      "description": "TypeScript strict mode에서 발생하는 오류 해결",
+      "prompt": "TypeScript strict mode에서 발생하는 오류를 수정해줘.\n\n오류 코드:\n{{errorCode}}",
+      "variables": ["errorCode"]
+    },
+    {
+      "name": "Next.js API Handler",
+      "description": "Next.js API Route를 best practice에 맞춰 작성",
+      "prompt": "Next.js App Router 기반으로 API 핸들러를 작성해줘.\n\n요청 사항:\n{{requirements}}",
+      "variables": ["requirements"]
+    },
+    {
+      "name": "React Server Component Conversion",
+      "description": "React 클라이언트 컴포넌트를 서버 컴포넌트로 변환",
+      "prompt": "아래 React 클라이언트 컴포넌트를 서버 컴포넌트(RSC)로 변환해줘.\n\n코드:\n{{code}}",
+      "variables": ["code"]
+    },
+    {
+      "name": "NextAuth.js Integration",
+      "description": "Next.js에서 NextAuth.js 설정",
+      "prompt": "NextAuth.js를 Next.js 프로젝트에 설정하는 코드를 작성해줘.\n\n요구 사항:\n{{requirements}}",
+      "variables": ["requirements"]
+    },
+    {
+      "name": "Zod Schema Generation",
+      "description": "Zod를 활용한 타입 검증 스키마 생성",
+      "prompt": "아래 인터페이스를 기반으로 Zod 스키마를 생성해줘.\n\n인터페이스:\n{{interface}}",
+      "variables": ["interface"]
+    },
+    {
+      "name": "Styled Components Conversion",
+      "description": "기존 CSS 또는 SCSS 스타일을 Styled Components로 변환",
+      "prompt": "아래 CSS 또는 SCSS 스타일을 Styled Components 기반으로 변환해줘.\n\n스타일 코드:\n{{code}}",
+      "variables": ["code"]
+    },
+    {
+      "name": "PortOne Browser-SDK Integration",
+      "description": "PortOne browser-sdk를 사용하여 결제 연동",
+      "prompt": "PortOne `browser-sdk`를 사용하여 결제 연동 코드를 작성해줘.\n\n요구 사항:\n{{requirements}}",
+      "variables": ["requirements"]
+    },
+    {
+      "name": "Supabase Auth Setup",
+      "description": "Supabase 인증 기능 설정",
+      "prompt": "Supabase를 사용하여 인증 기능을 구현하는 코드를 작성해줘.\n\n요구 사항:\n{{requirements}}",
+      "variables": ["requirements"]
+    },
+    {
+      "name": "Supabase Database Query",
+      "description": "Supabase 데이터베이스 쿼리 작성",
+      "prompt": "Supabase 데이터베이스에서 데이터를 읽고, 쓰고, 업데이트하는 코드를 작성해줘.\n\n쿼리 요구 사항:\n{{query}}",
+      "variables": ["query"]
+    }
+  ]
+}

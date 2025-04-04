@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter, redirect } from "next/navigation";
 import { supabase } from "@/utils/supabase/supabaseClient";
 import { COURSE_PRICE } from "../../constants/Pricing";
 import * as PortOne from "@portone/browser-sdk/v2";
@@ -10,6 +11,7 @@ type PurchaseButtonProps = {
 };
 
 export default function PurchaseButton({ price }: PurchaseButtonProps) {
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const handlePurchase = async () => {
@@ -44,11 +46,12 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
       // 결제 성공 시 DB에 저장
       const { error: insertError } = await supabase.from("purchases").insert([
         {
+          email: user.email,
           user_id:
             user.identities?.[0].identity_data?.full_name ?? "Unknown User",
           status: "completed",
           payment_id: `payment-${crypto.randomUUID()}`,
-          amount: COURSE_PRICE.original,
+          amount: COURSE_PRICE.discounted,
           created_at: new Date().toISOString(),
         },
       ]);
@@ -56,19 +59,20 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
 
       if (response?.pgCode === "FAILURE_TYPE_PG") {
         alert("결제가 실패했습니다.");
-        // 결제 실패 후 처리 로직
+        router.push("/");
+        return;
       }
 
       // 팝업 창이 닫혔을 때 상태 업데이트
       if (response?.pgCode === "PAY_PROCESS_CANCELED") {
         // 상태에 따라 UI 업데이트
         alert("결제가 취소되었습니다.");
-        return;
+        redirect("/");
       }
 
       if (!response?.pgCode) {
         alert("구매가 완료되었습니다.!");
-        return;
+        redirect("/");
       }
     } catch (e) {
       console.error("❌ 오류 발생:", e);

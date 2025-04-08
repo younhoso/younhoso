@@ -25,6 +25,7 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
 
       if (!user) {
         alert("로그인이 필요합니다.");
+        setLoading(false);
         return;
       }
 
@@ -80,9 +81,9 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
       }
     } catch (e) {
       console.error("❌ 오류 발생:", e);
+    } finally {
+      setLoading(false); // ✅ 어떤 상황에서도 확실히 호출됨
     }
-
-    setLoading(false);
   };
 
   return (

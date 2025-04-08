@@ -3,19 +3,24 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/utils/supabase/supabaseClient";
 import clsx from "clsx";
+import { DashboardStats } from "@/types/purchase";
+
+const getStatusLabel = (status: string) => {
+  switch (status) {
+    case "completed":
+      return "결제 완료";
+    case "cancelled":
+      return "결제 취소";
+    default:
+      return status;
+  }
+};
 
 const ManagementPage = () => {
-  const [stats, setStats] = useState({
+  const [stats, setStats] = useState<DashboardStats>({
     totalRevenue: 0,
-    totalUsers: 0,
-    recentPurchases: [] as {
-      id: string;
-      email: string;
-      amount: number;
-      created_at: Date;
-      user_id: string;
-    }[],
-    monthlyStats: [] as { month: string; revenue: number }[],
+    recentPurchases: [],
+    monthlyStats: [],
     monthlyAverage: 0,
   });
 
@@ -29,20 +34,15 @@ const ManagementPage = () => {
       0
     );
 
-    // 총 사용자 수 조회
-    const { data: usersData } = await supabase
-      .from("profiles")
-      .select("id", { count: "exact", head: true });
-    const totalUsers = usersData ? usersData.length : 0;
-
     // 최근 구매 내역 조회
     const { data: purchasesData } = await supabase
       .from("purchases")
-      .select("id, email, amount, created_at, user_id")
-      .eq("status", "completed")
+      .select("id, email, amount, created_at, status, user_id, user_name")
+      .in("status", ["completed", "cancelled"])
       .order("created_at", { ascending: false })
       .limit(5);
     const recentPurchases = purchasesData || [];
+    console.log("recentPurchases", recentPurchases);
 
     // 월별 매출 통계 조회
     const { data: monthlyRevenueData } = await supabase
@@ -83,7 +83,6 @@ const ManagementPage = () => {
 
     setStats({
       totalRevenue,
-      totalUsers,
       recentPurchases,
       monthlyStats: last6Months || [],
       monthlyAverage: monthlyAverage || 0,
@@ -117,58 +116,58 @@ const ManagementPage = () => {
     <div className={clsx("flex flex-col items-center p-4")}>
       <div className="w-full max-w-4xl">
         <div className="bg-white shadow-md rounded-lg p-4 mb-4">
-          <p className="text-lg font-semibold">
-            총 매출액: {stats.totalRevenue}원
-          </p>
-        </div>
-        <div className="bg-white shadow-md rounded-lg p-4 mb-4">
-          <p className="text-lg font-semibold">
-            총 사용자 수: {stats.totalUsers}명
-          </p>
-        </div>
-        <div className="bg-white shadow-md rounded-lg p-4 mb-4">
-          <h2 className="text-xl font-bold mb-2">월별 매출</h2>
-          <ul>
-            {stats.monthlyStats.map((monthData, index) => (
-              <li key={index} className="border-b last:border-none py-2">
-                <div className="flex justify-between">
-                  <p className="font-medium">{monthData.month}</p>
-                  <p className="text-lg font-semibold">{monthData.revenue}원</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="bg-white shadow-md rounded-lg p-4 mb-4">
           <h2 className="text-xl font-bold mb-2">최근 구매 내역</h2>
           <ul>
-            {stats.recentPurchases.map((purchase, index) => (
-              <li key={index} className="border-b last:border-none py-2">
-                <div className="flex justify-between">
-                  <div>
-                    <p className="font-medium">{purchase.user_id}</p>
-                    <p className="text-sm text-gray-600">{purchase.email}</p>
+            {stats.recentPurchases.map((purchase, index) => {
+              const isCompleted = purchase.status === "completed";
+
+              return (
+                <li key={index} className="border-b last:border-none py-2">
+                  <div className="flex justify-between">
+                    <div>
+                      <p className="font-medium">{purchase.user_name}</p>
+                      <p className="text-sm text-gray-600">{purchase.email}</p>
+                      <p
+                        className={
+                          purchase.status === "completed"
+                            ? "text-green-600"
+                            : purchase.status === "cancelled"
+                            ? "text-red-500"
+                            : "text-gray-600"
+                        }
+                      >
+                        {getStatusLabel(purchase.status)}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-lg font-semibold">
+                        {purchase.amount.toLocaleString("ko-KR")}원
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {new Date(purchase.created_at).toLocaleString("ko-KR")}
+                      </p>
+
+                      {isCompleted && (
+                        <button
+                          className="text-red-500 hover:underline"
+                          onClick={() => handleCancelPurchase(purchase.id)}
+                        >
+                          취소
+                        </button>
+                      )}
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-lg font-semibold">{purchase.amount}원</p>
-                    <button
-                      className="text-red-500 hover:underline"
-                      onClick={() => handleCancelPurchase(purchase.id)}
-                    >
-                      취소
-                    </button>
-                  </div>
-                </div>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         </div>
 
         <div className="bg-white shadow-md rounded-lg p-4 ">
-          <h2 className="text-xl font-bold">월 평균 매출</h2>
+          <h2 className="text-xl font-bold">월 평균 소비 통계</h2>
           <p className="text-sm text-gray-600 mb-2">최근 6개월 평균 매출액</p>
           <p className="text-lg font-semibold">
-            {stats.monthlyAverage.toLocaleString()}원
+            {stats.monthlyAverage.toLocaleString("ko-KR")}원
           </p>
         </div>
       </div>

@@ -49,7 +49,7 @@ const Management = ({ children }: Props) => {
 
   return (
     <div className={clsx("flex flex-col items-center p-4")}>
-      <h1 className="text-2xl font-bold mb-4">관리자 페이지</h1>
+      <h1 className="text-2xl font-bold mb-4">마이 페이지</h1>
       <div className="w-full max-w-4xl">{children}</div>
     </div>
   );

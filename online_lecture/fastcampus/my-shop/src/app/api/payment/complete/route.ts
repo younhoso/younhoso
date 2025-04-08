@@ -1,8 +1,46 @@
 import { supabase } from "@/utils/supabase/supabaseClient";
 import { NextRequest, NextResponse } from "next/server";
 
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const paymentId = searchParams.get("paymentId"); // 대소문자 정확히 확인
+
+  console.log("searchParams:", searchParams);
+  console.log("paymentId:", paymentId);
+
+  if (!paymentId) {
+    return NextResponse.json(
+      { error: "paymentId가 없습니다." },
+      { status: 400 }
+    );
+  }
+
+  // 결제 정보 조회
+  const paymentResponse = await fetch(
+    `https://api.portone.io/payments/${encodeURIComponent(paymentId)}`,
+    {
+      headers: { Authorization: `PortOne ${process.env.PORTONE_API_SECRET}` },
+    }
+  );
+
+  if (!paymentResponse.ok) {
+    return NextResponse.json(
+      { error: "결제 정보를 가져오는 데 실패했습니다." },
+      { status: 500 }
+    );
+  }
+
+  const payment = await paymentResponse.json();
+
+  return NextResponse.json({
+    message: "결제 정보를 성공적으로 조회했습니다.",
+    payment,
+  });
+}
+
 export async function POST(req: NextRequest) {
   const { searchParams } = new URL(req.url);
+  console.log("searchParams:", searchParams);
   const paymentId = searchParams.get("paymentid");
   const {
     data: { user },

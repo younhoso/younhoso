@@ -27,18 +27,21 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
         return;
       }
 
+      console.log(`${window.location.origin}/api/payment/complete`);
+      const paymentId = `payment-${crypto.randomUUID()}`;
+
       // 결제 요청
       const response = await PortOne.requestPayment({
         // Store ID 설정
         storeId: "store-3978f4d4-7706-4773-b9e9-48c503bb60e6",
         // 채널 키 설정
         channelKey: "channel-key-8ca3026a-942a-4a78-a6e4-b0efd57c147a",
-        paymentId: `payment-${crypto.randomUUID()}`,
+        paymentId: paymentId,
         orderName: "Supa 강의",
         totalAmount: price,
         currency: "CURRENCY_KRW",
         payMethod: "CARD",
-        redirectUrl: `${window.location.origin}/api/payment/complete`,
+        redirectUrl: `${window.location.origin}/payment/complete`,
       });
 
       console.log("✅ 결제 응답:", response); // 결제 응답 확인
@@ -51,7 +54,7 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
           user_name:
             user.identities?.[0].identity_data?.full_name ?? "Unknown User", // ✅ 추가
           status: "completed",
-          payment_id: `payment-${crypto.randomUUID()}`,
+          payment_id: response?.paymentId,
           amount: COURSE_PRICE.discounted,
           created_at: new Date().toISOString(),
         },

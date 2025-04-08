@@ -47,8 +47,9 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
       const { error: insertError } = await supabase.from("purchases").insert([
         {
           email: user.email,
-          user_id:
-            user.identities?.[0].identity_data?.full_name ?? "Unknown User",
+          user_id: user.id, // uuid
+          user_name:
+            user.identities?.[0].identity_data?.full_name ?? "Unknown User", // ✅ 추가
           status: "completed",
           payment_id: `payment-${crypto.randomUUID()}`,
           amount: COURSE_PRICE.discounted,

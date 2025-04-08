@@ -32,7 +32,7 @@ const ManagementPage = () => {
     // 총 사용자 수 조회
     const { data: usersData } = await supabase
       .from("profiles")
-      .select("id", { count: "exact" });
+      .select("id", { count: "exact", head: true });
     const totalUsers = usersData ? usersData.length : 0;
 
     // 최근 구매 내역 조회

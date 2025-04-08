@@ -41,7 +41,7 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
         totalAmount: price,
         currency: "CURRENCY_KRW",
         payMethod: "CARD",
-        redirectUrl: `${window.location.origin}/api/payment/complete`,
+        redirectUrl: `${window.location.origin}/api/payment/complete`, //해당 부분은 모바일 결제 프로세스에서만 적용
       });
 
       console.log("✅ 결제 응답:", response); // 결제 응답 확인

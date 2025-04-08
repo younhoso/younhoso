@@ -4,6 +4,7 @@ CREATE TABLE profiles (
     email TEXT UNIQUE,  -- 이메일은 중복 방지
     name TEXT,
     avatar_url TEXT,
+    role TEXT DEFAULT 'user';
     created_at timestamp with time zone default timezone('utc'::TEXT, now()),
     updated_at timestamp with time zone default timezone('utc'::TEXT, now())
 );
@@ -19,6 +20,7 @@ begin
     new.email,
     coalesce(new.raw_user_meta_data->>'name', NULL),  -- 기본값 설정
     coalesce(new.raw_user_meta_data->>'avatar_url', NULL)  -- 기본값 설정
+    'user'  -- ✅ 안전한 기본값
   );
   return new;
 end;
@@ -33,12 +35,32 @@ CREATE TRIGGER on_auth_user_created
   FOR EACH ROW EXECUTE procedure public.handler_new_user();
 
 -- RLS(Row Level security) 정책 설정
-ALTER TABLE profiles enable row LEVEL SECURITY;
+ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 
--- RLS 작업에 대한 정책도 별도로 설정
-CREATE POLICY "관리자는 모든 사용자 조회 가능" ON users 
-FOR SELECT 
-USING (auth.role() = 'admin');
+-- RLS 작업에 SELECT 권한 (필요에 따라 설정)
+CREATE POLICY "사용자는 자신의 프로필만 조회 가능"
+  ON profiles
+  FOR SELECT
+  USING (auth.uid() = id);
+
+-- RLS 시스템 트리거가 삽입할 수 있도록 예외 정책 추가 (필요에 따라 설정)
+CREATE POLICY "트리거는 모든 프로필 삽입 허용"
+  ON profiles
+  FOR INSERT
+  TO public -- public, 또는 authenticated, 필요에 따라
+  WITH CHECK (true);
+
+-- RLS 필요 시 INSERT 권한 (필요에 따라 설정)
+CREATE POLICY "사용자는 자신의 프로필만 삽입 가능"
+  ON profiles
+  FOR INSERT
+  WITH CHECK (auth.uid() = id);
+
+-- RLS 필요 시 UPDATE 권한 (필요에 따라 설정)
+CREATE POLICY "사용자는 자신의 프로필만 수정 가능"
+  ON profiles
+  FOR UPDATE
+  USING (auth.uid() = id);
 
 -- Supabase에서 제공하는 auth.users 테이블에서 사용자 정보를 조회
 SELECT id, email, raw_user_meta_data FROM auth.users ORDER BY created_at DESC;

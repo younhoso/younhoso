@@ -1,2 +1,1 @@
-INSERT INTO "public"."purchases" ("id", "email", "user_id", "status", "payment_id", "amount", "created_at") VALUES 
-('e9cebe08-b132-4645-8c60-e21db8a0a8a1', 'thdbsgh3443@kakao.com', '소윤호', 'completed', 'payment-557a4978-e729-42ef-afb4-2c463d10be84', '99000', '2025-04-04 05:38:26.636+00');
+INSERT INTO "public"."purchases" ("id", "email", "status", "payment_id", "amount", "created_at", "user_name", "user_id") VALUES ('d93eb7a9-8d6c-487f-b334-ae45891457f2', 'thdbsgh3443@kakao.com', 'completed', 'payment-243c3120-aef6-4930-bcb9-8c59cb9a8527', '99000', '2025-04-08 04:34:58.587+00', '소윤호', '02159e9f-b775-473b-b5dd-4cade8f2cce0')

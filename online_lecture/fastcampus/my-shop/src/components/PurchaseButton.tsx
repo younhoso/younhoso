@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter, redirect } from "next/navigation";
 import { supabase } from "@/utils/supabase/supabaseClient";
 import { COURSE_PRICE } from "../../constants/Pricing";
+import { v4 as uuidv4 } from "uuid";
 import * as PortOne from "@portone/browser-sdk/v2";
 
 type PurchaseButtonProps = {
@@ -27,8 +28,7 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
         return;
       }
 
-      console.log(`${window.location.origin}/api/payment/complete`);
-      const paymentId = `payment-${crypto.randomUUID()}`;
+      const paymentId = `payment-${uuidv4()}`;
 
       // 결제 요청
       const response = await PortOne.requestPayment({
@@ -41,7 +41,7 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
         totalAmount: price,
         currency: "CURRENCY_KRW",
         payMethod: "CARD",
-        redirectUrl: `${window.location.origin}/payment/complete`,
+        redirectUrl: `${window.location.origin}/api/payment/complete`,
       });
 
       console.log("✅ 결제 응답:", response); // 결제 응답 확인
@@ -54,7 +54,7 @@ export default function PurchaseButton({ price }: PurchaseButtonProps) {
           user_name:
             user.identities?.[0].identity_data?.full_name ?? "Unknown User", // ✅ 추가
           status: "completed",
-          payment_id: response?.paymentId,
+          payment_id: paymentId,
           amount: COURSE_PRICE.discounted,
           created_at: new Date().toISOString(),
         },

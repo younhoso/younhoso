@@ -5,9 +5,6 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const paymentId = searchParams.get("paymentId"); // 대소문자 정확히 확인
 
-  console.log("searchParams:", searchParams);
-  console.log("paymentId:", paymentId);
-
   if (!paymentId) {
     return NextResponse.json(
       { error: "paymentId가 없습니다." },
@@ -30,12 +27,9 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  const payment = await paymentResponse.json();
-
-  return NextResponse.json({
-    message: "결제 정보를 성공적으로 조회했습니다.",
-    payment,
-  });
+  return NextResponse.redirect(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/payment/success?paymentId=${paymentId}`
+  );
 }
 
 export async function POST(req: NextRequest) {

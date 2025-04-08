@@ -2,8 +2,6 @@
 
 import clsx from "clsx";
 import { useEffect, useState, ReactNode } from "react";
-import { supabase } from "@/utils/supabase/supabaseClient";
-import { redirect } from "next/navigation";
 
 interface Props {
   children: ReactNode;
@@ -12,34 +10,17 @@ interface Props {
 const Management = ({ children }: Props) => {
   const [isLoading, setIsLoading] = useState(true);
 
+  const checkAdminRole = async () => {
+    try {
+      setIsLoading(true);
+    } catch (error) {
+      console.error("권한 확인 중 오류 발생:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const checkAdminRole = async () => {
-      try {
-        const {
-          data: { user },
-        } = await supabase.auth.getUser();
-
-        if (!user) redirect("/");
-
-        const { data: profile } = await supabase
-          .from("profiles")
-          .select("role")
-          .eq("id", user.id)
-          .single();
-
-        if (profile?.role !== "admin") {
-          alert("관리자 권한이 필요합니다.");
-          redirect("/");
-        }
-        setIsLoading(true);
-      } catch (error) {
-        console.error("권한 확인 중 오류 발생:", error);
-        redirect("/");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
     checkAdminRole();
   }, []);
 

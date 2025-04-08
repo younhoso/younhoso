@@ -1,50 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { supabase } from "@/utils/supabase/supabaseClient";
 import { useRouter } from "next/navigation";
+import { supabase } from "@/utils/supabase/supabaseClient";
+import { useEffect, useState } from "react";
 
 export default function NavigationTabs() {
   const router = useRouter();
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  useEffect(() => {
-    const checkAdminRole = async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-
-      if (user) {
-        const { data: profile } = await supabase
-          .from("profiles")
-          .select("role")
-          .eq("id", user.id)
-          .single();
-
-        setIsAdmin(profile?.role === "admin");
-      }
-    };
-
-    checkAdminRole();
-  }, []);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleAdminTabClick = () => {
-    if (isAdmin) {
-      router.push("/management");
-    } else {
-      alert("관리자 권한이 필요합니다.");
-      router.push("/");
-    }
+    router.push("/management");
   };
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setIsLoggedIn(!!user);
+    });
+  }, []);
 
   return (
     <Tabs defaultValue="product" className="w-full">
       <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger value="account">상품</TabsTrigger>
-        {isAdmin && (
+
+        {isLoggedIn && (
           <TabsTrigger value="password" onClick={handleAdminTabClick}>
-            관리
+            마이페이지
           </TabsTrigger>
         )}
       </TabsList>

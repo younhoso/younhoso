@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "@/utils/supabase/supabaseClient";
+import { supabase } from "@/utils/supabase/client";
 import clsx from "clsx";
 import { DashboardStats } from "@/types/purchase";
 

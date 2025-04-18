@@ -2,7 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/utils/supabase/supabaseClient";
+import { supabase } from "@/utils/supabase/client";
 import { useEffect, useState } from "react";
 
 export default function NavigationTabs() {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, redirect } from "next/navigation";
-import { supabase } from "@/utils/supabase/supabaseClient";
+import { supabase } from "@/utils/supabase/client";
 import { COURSE_PRICE } from "../../constants/Pricing";
 import { v4 as uuidv4 } from "uuid";
 import * as PortOne from "@portone/browser-sdk/v2";

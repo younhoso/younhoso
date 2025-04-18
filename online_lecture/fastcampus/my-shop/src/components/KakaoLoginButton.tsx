@@ -1,5 +1,5 @@
 "use client";
-import { handleKakaoLogin } from "@/utils/supabase/supabaseClient";
+import { handleKakaoLogin } from "@/utils/supabase/client";
 import React from "react";
 
 const KakaoLoginButton = () => {

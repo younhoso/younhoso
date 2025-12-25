@@ -1,8 +1,9 @@
 # SYH
 - Markup : HTML5
 - Languages : JavaScript | TypeScript
-- Frameworks/library : Next.js | React
-- Style : css3 | scss | styled-components
+- Frameworks/library : React | Next.js(App Router)
+- Data Fetching : Axios | React Query
+- Style : CSS3 | styled-components
 
 # BLOG
 [TriplexLab](https://triplexlab.tistory.com/)

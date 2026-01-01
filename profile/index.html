@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>프로필 | 웹 명함</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 프로필 카드 -->
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-image">
+            <img src="./img/propil.jpeg" alt="프로필" id="profileImg" />
+          </div>
+          <div class="profile-info">
+            <h1 class="profile-name">소윤호</h1>
+            <p class="profile-role">GospelFix (가스펄픽스) 대표</p>
+          </div>
+        </div>
+        <p class="profile-bio">
+          심플함 속에 완벽함을 담습니다.<br />
+          미니멀하지만 강력한, 당신의 비즈니스를 위한 프리미엄 웹 솔루션.
+        </p>
+      </div>
+
+      <!-- 연락처 섹션 -->
+      <div class="section">
+        <h2 class="section-title">연락처</h2>
+        <div class="card">
+          <a href="mailto:hello@email.com" class="list-item">
+            <div class="item-icon email">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div class="item-content">
+              <span class="item-label">이메일</span>
+              <span class="item-value">thdbsgh3443@kakao.com</span>
+            </div>
+            <div class="item-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+          </a>
+          <a href="tel:010-1234-5678" class="list-item">
+            <div class="item-icon phone">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+            </div>
+            <div class="item-content">
+              <span class="item-label">전화번호</span>
+              <span class="item-value">010-3388-2024</span>
+            </div>
+            <div class="item-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 소셜 섹션 -->
+      <div class="section">
+        <h2 class="section-title">소셜</h2>
+        <div class="card">
+          <a
+            href="https://instagram.com/soyounho"
+            class="list-item"
+            target="_blank"
+          >
+            <div class="item-icon instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </div>
+            <div class="item-content">
+              <span class="item-label">Instagram</span>
+              <span class="item-value">@soyounho</span>
+            </div>
+            <div class="item-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+          </a>
+          <a href="https://github.com/younhoso" class="list-item">
+            <div class="item-icon github">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </div>
+            <div class="item-content">
+              <span class="item-label">GitHub</span>
+              <span class="item-value">github.com/younhoso</span>
+            </div>
+            <div class="item-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 포트폴리오 섹션 -->
+      <div class="section">
+        <h2 class="section-title">포트폴리오</h2>
+        <div class="card">
+          <a href="javascript:void(0);" class="list-item">
+            <div class="item-icon web">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+            <div class="item-content">
+              <span class="item-label">웹사이트</span>
+              <span class="item-value preparing">준비중</span>
+            </div>
+            <div class="item-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+          </a>
+          <a href="https://triplexlab.tistory.com" class="list-item">
+            <div class="item-icon blog">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+            </div>
+            <div class="item-content">
+              <span class="item-label">블로그</span>
+              <span class="item-value">기술 블로그</span>
+            </div>
+            <div class="item-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 하단 버튼 -->
+      <button class="contact-button" onclick="shareProfile()">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+        </svg>
+        프로필 공유하기
+      </button>
+
+      <!-- 푸터 -->
+      <footer class="footer">
+        <p>Last updated 2025.01</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

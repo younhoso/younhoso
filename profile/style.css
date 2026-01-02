@@ -7,8 +7,9 @@
 
 /* Base */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard', sans-serif;
-    background: #f4f5f7;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+    background: url('./img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #191f28;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -19,7 +20,7 @@ body {
     margin: 0 auto;
     padding: 0 0 40px;
     min-height: 100vh;
-    background: #f4f5f7;
+    background: rgba(244, 245, 247, 0.95);
 }
 
 /* Profile Card */
@@ -287,16 +288,15 @@ body {
 
 /* Responsive */
 @media (min-width: 481px) {
-    body {
-        background: #e5e8eb;
-    }
-
     .container {
         margin-top: 40px;
         margin-bottom: 40px;
         border-radius: 24px;
         overflow: hidden;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        background: rgba(244, 245, 247, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 }
 

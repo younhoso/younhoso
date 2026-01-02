@@ -1,25 +1,32 @@
 # CLAUDE.md
 
-이 파일은 Claude Code(claude.ai/code)가 이 저장소에서 작업할 때 참고하는 가이드입니다.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## 프로젝트 개요
 
-유명한 명언을 보여주는 모바일 우선 SPA(Single Page Application). 순수 HTML, CSS, JavaScript로 구성되어 빌드 도구나 프레임워크가 필요 없음.
+소윤호(GospelFix 대표)의 디지털 명함/프로필 페이지. 순수 HTML, CSS, JavaScript로 구성된 모바일 우선 반응형 웹 페이지.
 
 ## 개발 방법
 
-**로컬 실행:** 브라우저에서 `index.html` 파일을 직접 열면 됨. 서버나 빌드 과정 불필요.
+브라우저에서 `index.html` 파일을 직접 열어 확인. 빌드 도구, 번들러, 서버 불필요.
 
-## 아키텍처
+## 파일 구조
 
-- **단일 파일 구조:** 모든 HTML, CSS, JavaScript가 `index.html`에 포함
-- **SPA 네비게이션:** JavaScript로 페이지 섹션 표시/숨김 처리 (라우팅 라이브러리 미사용)
-- **페이지 구성:** 홈, 카테고리, 카테고리 상세, 좋아요, 마이페이지
-- **모바일 우선 디자인:** 최대 너비 480px, 터치 스와이프 제스처 지원
+- `index.html` - 메인 페이지 (SEO 메타 태그, Open Graph, Twitter Card 포함)
+- `style.css` - 스타일시트 (CSS 변수 미사용, 직접 색상값 사용)
+- `script.js` - JavaScript (Web Share API, 클립보드 복사, 토스트 알림)
+- `img/` - 프로필 이미지
 
-## 주요 컴포넌트
+## 디자인 시스템
 
-- **슬라이더:** 추천 명언용 터치/마우스 스와이프 직접 구현
-- **카테고리 시스템:** 명언에 카테고리 태그 (인생, 성공, 사랑, 지혜)
-- **좋아요 시스템:** JavaScript Set으로 좋아요 추적 (클라이언트 전용, 영속성 없음)
-- **토스트 알림:** 사용자 액션에 대한 피드백 표시
+- 모바일 우선: 기본 최대 너비 480px, 481px 이상에서 카드형 레이아웃
+- 색상: 배경 #f4f5f7, 텍스트 #191f28, 보조 텍스트 #8b95a1, 액센트 #3182f6
+- 폰트: 시스템 폰트 스택 (-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo')
+- 아이콘: 인라인 SVG 사용 (외부 아이콘 라이브러리 없음)
+
+## 주요 기능
+
+- **프로필 공유**: Web Share API 지원 시 네이티브 공유, 미지원 시 클립보드 복사
+- **토스트 알림**: DOM에 동적 생성되는 피드백 메시지
+- **이미지 폴백**: 프로필 이미지 로드 실패 시 SVG 플레이스홀더 표시
+- **섹션별 애니메이션**: fadeIn 애니메이션으로 순차 등장 효과

@@ -5,8 +5,10 @@
 - Data Fetching : Axios | React Query
 - Style : CSS3 | styled-components
 
-# BLOG
-[TriplexLab](https://triplexlab.tistory.com/)
+# INFO
+
+[PROFILE](https://younhoso.github.io/younhoso/profile/)\
+BLOG: [TriplexLab](https://triplexlab.tistory.com/)
 
 ### blogExample
 TriplexLab 블로그의 모든 Example를 한눈에 볼수 있는 리스트 입니다.👇👇

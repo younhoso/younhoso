@@ -1,7 +1,7 @@
 # SYH
 - Markup : HTML5
 - Languages : JavaScript | TypeScript
-- Frameworks/library : React | Next.js(App Router)
+- Frameworks/library : Next.js(App Router) | React
 - Data Fetching : Axios | React Query
 - Style : CSS3 | styled-components
 

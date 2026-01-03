@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요리반상회 - 메뉴판 재료 분석</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">요리반상회</h1>
+      <p class="tagline">메뉴판 사진으로 재료를 자동 분석합니다</p>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-icon">📷</div>
+        <p class="upload-text">메뉴판 사진을 드래그하거나 클릭하여 업로드</p>
+        <p class="upload-hint">JPG, PNG 형식 / 최대 10MB</p>
+        <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" hidden>
+      </div>
+
+      <!-- Preview -->
+      <div class="preview-area" id="previewArea" hidden>
+        <img id="previewImage" alt="업로드된 이미지">
+        <button class="btn btn-secondary" id="removeBtn">다른 이미지 선택</button>
+      </div>
+    </section>
+
+    <!-- Analyze Button -->
+    <div class="action-area" id="actionArea" hidden>
+      <button class="btn btn-primary" id="analyzeBtn">
+        <span class="btn-icon">🔍</span>
+        재료 분석하기
+      </button>
+    </div>
+
+    <!-- Loading -->
+    <div class="loading" id="loading" hidden>
+      <div class="spinner"></div>
+      <p>AI가 메뉴를 분석 중입니다...</p>
+    </div>
+
+    <!-- Results Section -->
+    <section class="results-section" id="resultsSection" hidden>
+      <div class="results-header">
+        <h2>분석 결과</h2>
+        <div class="export-buttons">
+          <button class="btn btn-outline" id="exportJsonBtn">JSON 저장</button>
+          <button class="btn btn-outline" id="exportPdfBtn">PDF 인쇄</button>
+        </div>
+      </div>
+
+      <div class="menu-cards" id="menuCards">
+        <!-- Menu cards will be inserted here -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>요리반상회 MVP | 에드스파크컨설팅</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

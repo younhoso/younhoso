@@ -1,0 +1,44 @@
+{
+  "menus": [
+    {
+      "menuName": "김치찌개",
+      "ingredients": [
+        { "name": "돼지고기", "icon": "🥩", "certain": true },
+        { "name": "김치", "icon": "🥬", "certain": true },
+        { "name": "두부", "icon": "🧈", "certain": true },
+        { "name": "대파", "icon": "🧅", "certain": true },
+        { "name": "고춧가루", "icon": "🌶️", "certain": true },
+        { "name": "마늘", "icon": "🧄", "certain": true },
+        { "name": "새우젓", "icon": "🦐", "certain": false }
+      ],
+      "allergens": ["돼지고기", "대두", "새우"],
+      "originRequired": ["돼지고기", "김치(배추)"]
+    },
+    {
+      "menuName": "된장찌개",
+      "ingredients": [
+        { "name": "된장", "icon": "🫘", "certain": true },
+        { "name": "두부", "icon": "🧈", "certain": true },
+        { "name": "호박", "icon": "🥒", "certain": true },
+        { "name": "양파", "icon": "🧅", "certain": true },
+        { "name": "청양고추", "icon": "🌶️", "certain": true },
+        { "name": "쇠고기", "icon": "🥩", "certain": false }
+      ],
+      "allergens": ["대두", "쇠고기"],
+      "originRequired": ["쇠고기"]
+    },
+    {
+      "menuName": "제육볶음",
+      "ingredients": [
+        { "name": "돼지고기", "icon": "🥩", "certain": true },
+        { "name": "고추장", "icon": "🌶️", "certain": true },
+        { "name": "양파", "icon": "🧅", "certain": true },
+        { "name": "대파", "icon": "🧅", "certain": true },
+        { "name": "당근", "icon": "🥕", "certain": true },
+        { "name": "참기름", "icon": "🫒", "certain": true }
+      ],
+      "allergens": ["돼지고기", "대두", "밀"],
+      "originRequired": ["돼지고기"]
+    }
+  ]
+}

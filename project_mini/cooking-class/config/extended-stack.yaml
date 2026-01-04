@@ -1,0 +1,28 @@
+# 확장 단계 기술 스택
+
+level: Extended
+
+frontend:
+  framework: Next.js 14
+  language: TypeScript
+  styling: Tailwind CSS
+  ui_library: shadcn/ui
+
+ai_service:
+  provider: Google
+  model: Gemini 1.5 Pro
+  fallback: Gemini 1.5 Flash
+
+backend:
+  runtime: Node.js
+  api: Next.js API Routes
+  database: Supabase (PostgreSQL)
+  storage: Supabase Storage
+
+deployment:
+  platform: Vercel
+  ci_cd: GitHub Actions
+
+monitoring:
+  error_tracking: Sentry
+  analytics: Vercel Analytics

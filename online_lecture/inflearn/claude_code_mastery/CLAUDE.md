@@ -15,9 +15,8 @@
 ## 규칙
 
 1. 기술 스택은 `config/mvp-stack.yaml` 참조
-2. 디자인 시스템은 `config/design-system.md` 참조
-3. 작업 지시문은 `prompt/*.md` 파일로 분리
-4. MVP 수준 유지 - 최소 기능으로 빠르게 검증
+2. 작업 지시문은 `prompt/*.md` 파일로 분리
+3. MVP 수준 유지 - 최소 기능으로 빠르게 검증
 
 ---
 

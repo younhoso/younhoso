@@ -292,6 +292,16 @@ a {
   color: var(--color-text);
 }
 
+.info-link {
+  text-decoration: underline;
+  color: var(--color-primary);
+  transition: opacity 0.2s ease;
+}
+
+.info-link:hover {
+  opacity: 0.8;
+}
+
 /* ========================================
    상세 정보 갤러리 (Swiper)
    ======================================== */

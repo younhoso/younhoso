@@ -9,7 +9,10 @@
       content="강남중앙침례교회 청년부 수련회 - 2월 6일~8일 강화 그레이스홈"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -50,7 +53,7 @@
 
       <!-- 메인 비주얼 -->
       <main class="main">
-        <img src="./imgs/post.png" alt="" />
+        <img src="assets/images/post.png" alt="" />
 
         <!-- 행사 정보 -->
         <section class="info-section">
@@ -91,7 +94,17 @@
               </span>
               <div class="info-content">
                 <span class="info-label">장소</span>
-                <span class="info-value">강화 그레이스홈</span>
+                <div>
+                  강화 그레이스홈
+                  <a
+                    href="https://naver.me/xLWnQIMb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="info-value info-link"
+                  >
+                    [네이버 지도]</a
+                  >
+                </div>
               </div>
             </div>
 
@@ -145,25 +158,53 @@
           <div class="swiper detail-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="./imgs/info1.png" alt="LOVE in ACTION 숙소 신청 안내" class="detail-img" />
+                <img
+                  src="assets/images/info1.png"
+                  alt="LOVE in ACTION 숙소 신청 안내"
+                  class="detail-img"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./imgs/info2.png" alt="숙소 유형 및 금액" class="detail-img" />
+                <img
+                  src="assets/images/info2.png"
+                  alt="숙소 유형 및 금액"
+                  class="detail-img"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./imgs/info3.png" alt="4인실 상세 정보" class="detail-img" />
+                <img
+                  src="assets/images/info3.png"
+                  alt="4인실 상세 정보"
+                  class="detail-img"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./imgs/info4.png" alt="6인실 상세 정보" class="detail-img" />
+                <img
+                  src="assets/images/info4.png"
+                  alt="6인실 상세 정보"
+                  class="detail-img"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./imgs/info5.png" alt="10인실 상세 정보" class="detail-img" />
+                <img
+                  src="assets/images/info5.png"
+                  alt="10인실 상세 정보"
+                  class="detail-img"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./imgs/info6.png" alt="수련회 일정표" class="detail-img" />
+                <img
+                  src="assets/images/info6.png"
+                  alt="수련회 일정표"
+                  class="detail-img"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./imgs/info7.png" alt="수련회 안내사항" class="detail-img" />
+                <img
+                  src="assets/images/info7.png"
+                  alt="수련회 안내사항"
+                  class="detail-img"
+                />
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -186,12 +227,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
     <script>
-      const swiper = new Swiper('.detail-swiper', {
+      const swiper = new Swiper(".detail-swiper", {
         slidesPerView: 1,
         spaceBetween: 16,
         autoHeight: true,
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
         },
       });

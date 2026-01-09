@@ -9,6 +9,7 @@
       content="강남중앙침례교회 청년부 수련회 - 2월 6일~8일 강화 그레이스홈"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <div class="container">
@@ -138,9 +139,35 @@
           </div>
         </section>
 
-        <!-- 신청 버튼 -->
-        <section class="cta-section">
-          <a href="#" class="btn-primary" id="applyBtn"> 수련회 신청하기 </a>
+        <!-- 숙소 신청 안내 상세 정보 -->
+        <section class="detail-section">
+          <h2 class="detail-title">숙소 신청 안내</h2>
+          <div class="swiper detail-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./imgs/info1.png" alt="LOVE in ACTION 숙소 신청 안내" class="detail-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./imgs/info2.png" alt="숙소 유형 및 금액" class="detail-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./imgs/info3.png" alt="4인실 상세 정보" class="detail-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./imgs/info4.png" alt="6인실 상세 정보" class="detail-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./imgs/info5.png" alt="10인실 상세 정보" class="detail-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./imgs/info6.png" alt="수련회 일정표" class="detail-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./imgs/info7.png" alt="수련회 안내사항" class="detail-img" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </section>
       </main>
 
@@ -151,6 +178,23 @@
       </footer>
     </div>
 
+    <!-- 고정 신청 버튼 -->
+    <div class="cta-fixed">
+      <a href="#" class="btn-primary" id="applyBtn"> 수련회 신청하기 </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
+    <script>
+      const swiper = new Swiper('.detail-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        autoHeight: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

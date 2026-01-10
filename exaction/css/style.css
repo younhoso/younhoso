@@ -116,6 +116,24 @@ a {
   color: var(--color-text);
 }
 
+.contact-info {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.contact-link {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--color-accent);
+}
+
 /* ========================================
    메인 콘텐츠
    ======================================== */
@@ -292,6 +310,28 @@ a {
   color: var(--color-text);
 }
 
+/* 강사 정보 스타일 */
+.speaker-list {
+  line-height: 1.8;
+}
+
+.speaker-session {
+  font-weight: 700;
+  font-size: var(--text-md);
+  color: var(--color-accent);
+}
+
+.speaker-name {
+  font-weight: 600;
+  font-size: var(--text-md);
+}
+
+.speaker-title {
+  font-weight: 400;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
 .info-link {
   text-decoration: underline;
   color: var(--color-primary);
@@ -460,6 +500,16 @@ a {
   font-size: var(--text-xs);
   color: var(--color-text-secondary);
   margin-top: var(--space-2);
+}
+
+.footer-link {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-text);
 }
 
 /* ========================================

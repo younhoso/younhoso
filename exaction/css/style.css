@@ -541,6 +541,191 @@ a {
 }
 
 /* ========================================
+   바텀 시트 컴포넌트
+   ======================================== */
+.bottom-sheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.bottom-sheet-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2a2a2a;
+  border-radius: 24px 24px 0 0;
+  padding: var(--space-6);
+  padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom));
+  z-index: 1001;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  max-width: 480px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+.bottom-sheet-overlay.active .bottom-sheet {
+  transform: translateX(-50%) translateY(0);
+}
+
+.bottom-sheet-handle {
+  width: 36px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 0 auto var(--space-5);
+}
+
+.bottom-sheet-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+/* 스토리 미리보기 카드 */
+.story-preview {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: var(--space-4);
+  width: 100%;
+  max-width: 320px;
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.story-back {
+  color: var(--color-text);
+  font-size: var(--text-xl);
+  cursor: pointer;
+  padding: var(--space-1);
+}
+
+.story-username {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.story-more {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  padding: var(--space-1);
+}
+
+.story-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  padding: 3px;
+  border-radius: 12px;
+}
+
+.story-logo {
+  width: 60px;
+  height: 60px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.story-logo-gradient {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.story-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.story-action {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--color-accent);
+  text-align: center;
+}
+
+.story-action-text {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* 바텀 시트 메시지 */
+.bottom-sheet-message {
+  text-align: center;
+  line-height: 1.7;
+}
+
+.bottom-sheet-message p {
+  font-size: var(--text-md);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.bottom-sheet-message .highlight {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* 바텀 시트 버튼 */
+.bottom-sheet-btn {
+  width: 100%;
+  min-height: var(--touch-min);
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: var(--space-4);
+}
+
+.bottom-sheet-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.bottom-sheet-btn:active {
+  transform: scale(0.98);
+}
+
+/* ========================================
    반응형 (태블릿/데스크톱)
    ======================================== */
 @media (min-width: 481px) {

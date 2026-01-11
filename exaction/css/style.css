@@ -564,22 +564,56 @@ a {
 .bottom-sheet {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 50%;
   right: 0;
   background: #2a2a2a;
   border-radius: 24px 24px 0 0;
   padding: var(--space-6);
   padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom));
   z-index: 1001;
-  transform: translateY(100%);
   transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
   width: 375px;
-  left: 50%;
   transform: translateX(-50%) translateY(100%);
 }
 
 .bottom-sheet-overlay.active .bottom-sheet {
   transform: translateX(-50%) translateY(0);
+}
+
+.bottom-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-4);
+  margin: 0 calc(-1 * var(--space-6)) var(--space-4);
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottom-sheet-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.bottom-sheet-close {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.bottom-sheet-close:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .bottom-sheet-handle {
@@ -687,7 +721,8 @@ a {
 /* 바텀 시트 메시지 */
 .bottom-sheet-message {
   text-align: center;
-  line-height: 1.7;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 .bottom-sheet-message p {
@@ -703,6 +738,7 @@ a {
 
 /* 바텀 시트 버튼 */
 .bottom-sheet-btn {
+  display: block;
   width: 100%;
   min-height: var(--touch-min);
   padding: var(--space-4) var(--space-6);
@@ -715,6 +751,8 @@ a {
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
   margin-top: var(--space-4);
+  text-decoration: none;
+  text-align: center;
 }
 
 .bottom-sheet-btn:hover {

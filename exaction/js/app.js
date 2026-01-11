@@ -159,7 +159,8 @@ const ScrollTrigger = {
     if (this.triggered) return;
 
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = scrollTop / docHeight;
 
     if (scrollPercent >= this.threshold) {

@@ -572,7 +572,8 @@ a {
   padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom));
   z-index: 1001;
   transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
-  width: 375px;
+  width: calc(100% - 32px);
+  max-width: 375px;
   transform: translateX(-50%) translateY(100%);
 }
 

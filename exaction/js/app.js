@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 바텀 시트 컴포넌트 초기화
   BottomSheet.init();
 
-  // 스크롤 시 바텀 시트 자동 열기 (30% 스크롤 시)
-  ScrollTrigger.init({ threshold: 0.3 });
+  // 스크롤 시 바텀 시트 자동 열기 (80% 스크롤 시)
+  ScrollTrigger.init({ threshold: 0.8 });
 });
 
 /**
@@ -60,6 +60,14 @@ const BottomSheet = {
     const confirmBtn = this.overlay.querySelector(".bottom-sheet-btn");
     if (confirmBtn) {
       confirmBtn.addEventListener("click", () => {
+        this.close();
+      });
+    }
+
+    // 닫기 버튼 클릭 이벤트
+    const closeBtn = this.overlay.querySelector(".bottom-sheet-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
         this.close();
       });
     }

@@ -20,6 +20,8 @@
 ├── js/
 │   ├── app.js          # 메인 로직
 │   └── api.js          # API 통신
+├── data/
+│   └── mock.json       # 목데이터
 └── assets/
     └── images/         # 이미지 리소스
 ```
@@ -60,27 +62,61 @@
 
 - ES6+ 문법 사용
 - 전역 변수 최소화
-- 모듈 패턴 또는 IIFE 사용
+- 함수형 패턴 사용 (순수 함수, 불변성)
 - async/await로 비동기 처리
 
 ```javascript
-// 모듈 패턴 예시
-const App = (() => {
-  const state = {
-    /* ... */
+// 함수형 패턴 예시
+const createApp = (initialState = {}) => {
+  const state = { ...initialState };
+
+  const getState = () => ({ ...state });
+
+  const setState = (newState) => {
+    Object.assign(state, newState);
   };
 
-  const init = () => {
-    /* ... */
-  };
   const handleUpload = async (file) => {
     /* ... */
   };
 
-  return { init };
-})();
+  return { getState, setState, handleUpload };
+};
 
-document.addEventListener("DOMContentLoaded", App.init);
+document.addEventListener("DOMContentLoaded", () => {
+  const app = createApp({ isLoading: false });
+  // app.handleUpload(file);
+});
+```
+
+---
+
+## 목데이터 규칙
+
+- 모든 데이터는 `data/*.json` 파일로 분리하여 관리
+- API 연동 전 목데이터로 UI 개발 및 테스트
+- 실제 API 응답 구조와 동일하게 작성
+
+```json
+// data/mock.json
+{
+  "users": [
+    { "id": 1, "name": "홍길동", "email": "hong@example.com" },
+    { "id": 2, "name": "김철수", "email": "kim@example.com" }
+  ],
+  "config": {
+    "maxUploadSize": 5242880,
+    "allowedTypes": ["image/jpeg", "image/png"]
+  }
+}
+```
+
+```javascript
+// 목데이터 로드 예시
+const loadMockData = async () => {
+  const response = await fetch("./data/mock.json");
+  return response.json();
+};
 ```
 
 ---

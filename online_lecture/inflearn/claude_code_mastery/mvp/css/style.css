@@ -322,6 +322,10 @@ ul {
   transition: width 1s ease;
 }
 
+.skill__bar.animated::after {
+  width: var(--skill-level, 0%);
+}
+
 /* ===========================
    Projects Section
    =========================== */

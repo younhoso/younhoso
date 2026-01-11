@@ -60,27 +60,31 @@
 
 - ES6+ 문법 사용
 - 전역 변수 최소화
-- 모듈 패턴 또는 IIFE 사용
+- 함수형 패턴 사용 (순수 함수, 불변성)
 - async/await로 비동기 처리
 
 ```javascript
-// 모듈 패턴 예시
-const App = (() => {
-  const state = {
-    /* ... */
+// 함수형 패턴 예시
+const createApp = (initialState = {}) => {
+  const state = { ...initialState };
+
+  const getState = () => ({ ...state });
+
+  const setState = (newState) => {
+    Object.assign(state, newState);
   };
 
-  const init = () => {
-    /* ... */
-  };
   const handleUpload = async (file) => {
     /* ... */
   };
 
-  return { init };
-})();
+  return { getState, setState, handleUpload };
+};
 
-document.addEventListener("DOMContentLoaded", App.init);
+document.addEventListener("DOMContentLoaded", () => {
+  const app = createApp({ isLoading: false });
+  // app.handleUpload(file);
+});
 ```
 
 ---

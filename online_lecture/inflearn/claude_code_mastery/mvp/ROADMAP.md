@@ -64,9 +64,9 @@
 
 ## 참조 문서
 
-| 파일                          | 용도           |
-| ----------------------------- | -------------- |
-| `prompt/mvp-rules.md`         | 개발 규칙      |
-| `prompt/review-checklist.md`  | 리뷰 체크리스트 |
-| `config/mvp-stack.yaml`       | 기술 스택      |
-| `config/design-system.md`     | 디자인 시스템  |
+| 파일                         | 용도            |
+| ---------------------------- | --------------- |
+| `prompt/mvp-rules.md`        | 개발 규칙       |
+| `prompt/review-checklist.md` | 리뷰 체크리스트 |
+| `config/mvp-stack.yaml`      | 기술 스택       |
+| `config/design-system.md`    | 디자인 시스템   |

@@ -1,7 +1,6 @@
 {
   "permissions": {
     "allow": [
-      // 허용 목록
       "Bash(npm:*)",
       "Bash(npx:*)",
       "Bash(git:*)",
@@ -10,11 +9,7 @@
       "Write",
       "Edit"
     ],
-    "ask": [
-      // 확인 요청 목록
-    ],
-    "deny": [
-      // 거부 목록
-    ]
+    "ask": [],
+    "deny": []
   }
 }

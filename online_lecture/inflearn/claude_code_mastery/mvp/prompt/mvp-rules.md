@@ -20,8 +20,6 @@
 ├── js/
 │   ├── app.js          # 메인 로직
 │   └── api.js          # API 통신
-├── data/
-│   └── mock.json       # 목데이터
 └── assets/
     └── images/         # 이미지 리소스
 ```
@@ -42,7 +40,7 @@
 
 ## CSS 규칙
 
-- 모바일 우선 (min-width 미디어쿼리)
+- 모바일 우선 (max-width 미디어쿼리)
 - 폰트 크기: `clamp()` 사용 (어르신 가독성)
 - 버튼/터치 영역: 최소 44px
 - CSS 변수로 색상/크기 관리
@@ -64,28 +62,54 @@
 - 전역 변수 최소화
 - 함수형 패턴 사용 (순수 함수, 불변성)
 - async/await로 비동기 처리
+- **정의 함수는 상단에, 실행 함수는 하단에 배치**
 
 ```javascript
 // 함수형 패턴 예시
 const createApp = (initialState = {}) => {
+  // ==========================================================================
+  // State (상단)
+  // ==========================================================================
   const state = { ...initialState };
 
+  // ==========================================================================
+  // Utility Functions (정의 함수 - 상단)
+  // ==========================================================================
   const getState = () => ({ ...state });
 
   const setState = (newState) => {
     Object.assign(state, newState);
   };
 
+  // ==========================================================================
+  // Feature Functions (정의 함수 - 상단)
+  // ==========================================================================
   const handleUpload = async (file) => {
     /* ... */
   };
 
-  return { getState, setState, handleUpload };
+  const handleSubmit = (data) => {
+    /* ... */
+  };
+
+  // ==========================================================================
+  // Bootstrap Functions (실행 함수 - 하단)
+  // ==========================================================================
+  const bindEvents = () => {
+    /* 이벤트 바인딩 */
+  };
+
+  const init = () => {
+    bindEvents();
+  };
+
+  return { init, getState, setState, handleUpload };
 };
 
+// Initialize app when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   const app = createApp({ isLoading: false });
-  // app.handleUpload(file);
+  app.init();
 });
 ```
 

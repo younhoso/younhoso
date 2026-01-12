@@ -89,6 +89,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ---
 
+## 목데이터 규칙
+
+- 모든 데이터는 `data/*.json` 파일로 분리하여 관리
+- API 연동 전 목데이터로 UI 개발 및 테스트
+- 실제 API 응답 구조와 동일하게 작성
+
+```json
+// data/mock.json
+{
+  "users": [
+    { "id": 1, "name": "홍길동", "email": "hong@example.com" },
+    { "id": 2, "name": "김철수", "email": "kim@example.com" }
+  ],
+  "config": {
+    "maxUploadSize": 5242880,
+    "allowedTypes": ["image/jpeg", "image/png"]
+  }
+}
+```
+
+```javascript
+// 목데이터 로드 예시
+const loadMockData = async () => {
+  const response = await fetch("./data/mock.json");
+  return response.json();
+};
+```
+
+---
+
 ## API 연동 (Gemini Flash)
 
 ```javascript

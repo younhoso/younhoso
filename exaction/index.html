@@ -95,7 +95,8 @@
         <div class="contact">
           <span class="contact-label">문의</span>
           <a
-            href="https://pf.kakao.com/_KelfK"
+            href="#"
+            data-link="kakao"
             target="_blank"
             rel="noopener noreferrer"
             class="contact-link"
@@ -126,7 +127,7 @@
               </span>
               <div class="info-content">
                 <span class="info-label">일시</span>
-                <span class="info-value">2월 6일(금) ~ 2월 8일(주일)</span>
+                <span class="info-value" data-field="date"></span>
               </div>
             </div>
 
@@ -148,9 +149,10 @@
               <div class="info-content">
                 <span class="info-label">장소</span>
                 <div>
-                  강화 그레이스힐
+                  <span data-field="location"></span>
                   <a
-                    href="https://naver.me/xLWnQIMb"
+                    href="#"
+                    data-field="map-link"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="info-value info-link"
@@ -176,7 +178,7 @@
               </span>
               <div class="info-content">
                 <span class="info-label">대상</span>
-                <span class="info-value">강청 누구나</span>
+                <span class="info-value" data-field="target"></span>
               </div>
             </div>
 
@@ -195,19 +197,7 @@
               </span>
               <div class="info-content">
                 <span class="info-label">강사</span>
-                <span class="info-value speaker-list">
-                  <span class="speaker-session">집회 1:</span>
-                  <span class="speaker-name">이수복</span
-                  ><span class="speaker-title">(담임 사모님)</span><br />
-                  <span class="speaker-session">집회 2:</span>
-                  <span class="speaker-name">진유석</span
-                  ><span class="speaker-title">(전도사님)</span><br />
-                  <span class="speaker-session">집회 3:</span>
-                  <span class="speaker-name">최병락</span
-                  ><span class="speaker-title">(담임 목사님)</span><br />
-                  <span class="speaker-session">집회 4:</span>
-                  <span class="speaker-name">오명철</span
-                  ><span class="speaker-title">(목사님)</span>
+                <span class="info-value speaker-list" data-field="speakers">
                 </span>
               </div>
             </div>
@@ -219,55 +209,7 @@
           <h2 class="detail-title">숙소 신청 안내</h2>
           <div class="swiper detail-swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/info1.png"
-                  alt="LOVE in ACTION 숙소 신청 안내"
-                  class="detail-img"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/info2.png"
-                  alt="숙소 유형 및 금액"
-                  class="detail-img"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/info3.png"
-                  alt="4인실 상세 정보"
-                  class="detail-img"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/info4.png"
-                  alt="6인실 상세 정보"
-                  class="detail-img"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/info5.png"
-                  alt="10인실 상세 정보"
-                  class="detail-img"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/info6.png"
-                  alt="수련회 일정표"
-                  class="detail-img"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/info7.png"
-                  alt="수련회 안내사항"
-                  class="detail-img"
-                />
-              </div>
+              <!-- 슬라이드는 JS에서 동적 생성 -->
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -280,7 +222,8 @@
         <p class="footer-contact">
           문의:
           <a
-            href="https://pf.kakao.com/_KelfK"
+            href="#"
+            data-link="kakao"
             target="_blank"
             rel="noopener noreferrer"
             class="footer-link"
@@ -293,7 +236,8 @@
     <!-- 고정 신청 버튼 -->
     <div class="cta-fixed">
       <a
-        href="https://forms.gle/HTqWcvB41q6STURN6"
+        href="#"
+        data-link="apply"
         class="btn-primary"
         target="_blank"
         rel="noopener noreferrer"
@@ -306,7 +250,7 @@
     <div id="bottom-sheet-overlay" class="bottom-sheet-overlay">
       <div class="bottom-sheet">
         <div class="bottom-sheet-header">
-          <h3 class="bottom-sheet-title">스토리 공유</h3>
+          <h3 class="bottom-sheet-title"></h3>
           <button class="bottom-sheet-close" aria-label="닫기">
             <svg
               width="24"
@@ -327,7 +271,7 @@
           <!-- 스토리 미리보기 -->
           <div class="story-preview">
             <div class="story-header">
-              <?xml version="1.0" encoding="UTF-8"?><svg
+              <svg
                 width="24px"
                 height="24px"
                 stroke-width="1.5"
@@ -345,16 +289,12 @@
                 ></path>
               </svg>
 
-              <span class="story-username">gangchung_gbc</span>
+              <span class="story-username"></span>
               <span class="story-more">···</span>
             </div>
             <div class="story-card">
               <div class="story-logo">
-                <img
-                  src="assets/images/logo.jpg"
-                  alt="강청 로고"
-                  class="story-logo-img"
-                />
+                <img src="" alt="" class="story-logo-img" />
               </div>
               <div class="story-action">
                 <span class="story-action-text">내 스토리 공유하기</span>
@@ -364,20 +304,17 @@
 
           <!-- 메시지 -->
           <div class="bottom-sheet-message">
-            <p>수련회 기간 동안 찍은 사진들을</p>
-            <p>개인 스토리를 통해 공유해 주세요!</p>
-            <p><span class="highlight">@gangchung_gbc</span>를 태그해주시면</p>
-            <p>무한 리그램 해드립니다!</p>
+            <!-- 메시지는 JS에서 동적 생성 -->
           </div>
 
           <!-- 확인 버튼 -->
           <a
-            href="https://www.instagram.com/gangchung_gbc"
+            href="#"
+            data-link="instagram"
             class="bottom-sheet-btn"
             target="_blank"
             rel="noopener noreferrer"
-            >인스타그램 열기</a
-          >
+          ></a>
         </div>
       </div>
     </div>

@@ -24,4 +24,5 @@ npx netlify deploy --prod
 ## 환경변수 설정
 
 배포 플랫폼에서 환경변수 설정:
+
 - `GEMINI_API_KEY` - Gemini API 키

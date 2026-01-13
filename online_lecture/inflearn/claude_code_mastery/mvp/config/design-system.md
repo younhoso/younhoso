@@ -38,7 +38,7 @@
 
 ## 레이아웃
 
-- **모바일 우선**: 기본 최대 너비 480px
+- **모바일 우선**: 기본 최대 너비 375px
 - **터치 영역**: 최소 44px
 - **다크 테마**: 어두운 배경 + 밝은 텍스트
 
@@ -392,5 +392,48 @@ font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
 .day-section__subtitle {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
+}
+```
+
+## 반응형 가이드
+
+```css
+/* 데스크톱 (기본) */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.hero__headline {
+  font-size: 48px;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .container {
+    max-width: 390px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__headline {
+    font-size: 32px;
+  }
 }
 ```

@@ -1,0 +1,8 @@
+# MVP 기술 스택 설정
+
+level: MVP
+
+frontend:
+  html: HTML5
+  css: CSS3
+  js: Vanilla JS (ES6+)

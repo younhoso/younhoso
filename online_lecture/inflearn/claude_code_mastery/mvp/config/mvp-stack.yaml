@@ -7,12 +7,13 @@ frontend:
   css: CSS3
   js: Vanilla JS (ES6+)
 
-ai_service:
-  provider: Google
-  model: Gemini 1.5 Flash
-  note: 권장
+backend:
+  provider: Supabase
+  features:
+    - Database (PostgreSQL)
+    - Authentication
+    - Row Level Security
 
 deployment:
-  options:
-    - Vercel
-    - Netlify
+  frontend: GitHub Pages
+  backend: Supabase (managed)

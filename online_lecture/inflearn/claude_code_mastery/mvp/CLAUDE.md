@@ -20,22 +20,33 @@
 
 ---
 
-## 작업 지시문 목록
+## 폴더 구조
 
-| 파일                          | 설명                 |
-| ----------------------------- | -------------------- |
-| `prompt/mvp-rules.md`         | MVP 개발 규칙        |
-| `prompt/extended-rules.md`    | 확장 단계 개발 규칙  |
-| `prompt/create-check-list.md` | 체크리스트 생성 작업 |
+```
+mvp/
+├── CLAUDE.md                   # 진입점
+├── config/
+│   ├── mvp-stack.yaml          # 기술 스택
+│   └── design-system.md        # 디자인 시스템
+└── prompt/
+    ├── mvp-rules.md            # MVP 개발 규칙
+    ├── review-checklist.md     # 리뷰 체크리스트
+    └── templates.md            # 작업 템플릿 모음
+```
+
+---
+
+## 파일 목록
+
+| 파일 | 설명 |
+| ---- | ---- |
+| `config/mvp-stack.yaml` | 기술 스택 (HTML5, CSS3, Vanilla JS, Supabase) |
+| `config/design-system.md` | 색상, 타이포그래피, 컴포넌트 |
+| `prompt/mvp-rules.md` | 파일 구조, 코딩 규칙, 필수/금지 사항 |
+| `prompt/templates.md` | 작업 지시문, 기능 요청, 버그 리포트 템플릿 |
 
 ---
 
 ## 개발 규칙
 
-> 📁 MVP 단계: `prompt/mvp-rules.md` 및 `config/mvp-stack.yaml` 참조
-
----
-
-## 확장 단계
-
-> ⚠️ MVP 완료 후 확장 시 `prompt/extended-rules.md` 및 `config/extended-stack.yaml` 참조
+> 📁 MVP 단계: `prompt/mvp-rules.md` 참조

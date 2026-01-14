@@ -1,8 +1,8 @@
 /* ==========================================================================
-   Design System Variables
+   다크 테마 (기본) - design-system.md 기반
    ========================================================================== */
-:root {
-  /* 다크 테마 기본 색상 */
+:root,
+[data-theme="dark"] {
   --color-bg: #0d0d0d;
   --color-bg-card: #1a1a1a;
   --color-bg-input: #262626;
@@ -12,31 +12,19 @@
 
   /* 악센트 색상 */
   --color-pink: #e91e63;
-  --color-red: #f44336;
-  --color-blue: #2196f3;
-  --color-yellow: #ffeb3b;
-  --color-green: #4caf50;
-  --color-orange: #ff9800;
+  --color-primary: #e91e63;
 
   /* 그라데이션 */
   --gradient-primary: linear-gradient(135deg, #e91e63 0%, #ff5722 50%, #ff9800 100%);
 
   /* 타이포그래피 */
-  --text-xs: 12px;
-  --text-sm: 14px;
   --text-md: 16px;
   --text-lg: 18px;
   --text-xl: 20px;
   --text-2xl: 24px;
   --text-3xl: 30px;
 
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
-
   /* 스페이싱 */
-  --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
@@ -45,41 +33,40 @@
   --space-8: 32px;
 
   /* 기타 */
-  --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
-  --radius-xl: 16px;
   --touch-min: 44px;
 }
 
 /* ==========================================================================
-   Reset & Base
+   라이트 테마
    ========================================================================== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
-  font-size: var(--text-md);
-  color: var(--color-text);
-  background: var(--color-bg);
-  line-height: 1.6;
-  min-height: 100vh;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-card: #f5f5f5;
+  --color-bg-input: #eeeeee;
+  --color-text: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e5e5;
 }
 
 /* ==========================================================================
-   Layout
+   기본 스타일
    ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--text-md);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -87,127 +74,100 @@ a {
 }
 
 /* ==========================================================================
-   Header
+   헤더
    ========================================================================== */
 .header {
-  padding: var(--space-4) 0;
+  position: sticky;
+  top: 0;
+  background: var(--color-bg-card);
   border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+  transition: background-color 0.3s ease;
 }
 
-.header .container {
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 }
 
-.header__title {
+.header__logo {
   font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  color: var(--color-pink);
-}
-
-.nav__link {
-  font-size: var(--text-md);
-  color: var(--color-text-secondary);
-  transition: color 0.2s ease;
-}
-
-.nav__link:hover {
-  color: var(--color-pink);
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ==========================================================================
-   Hero
+   테마 토글 버튼
+   ========================================================================== */
+.theme-toggle {
+  width: var(--touch-min);
+  height: var(--touch-min);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle__icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:active .theme-toggle__icon {
+  transform: rotate(20deg);
+}
+
+/* ==========================================================================
+   히어로 섹션
    ========================================================================== */
 .hero {
   padding: var(--space-8) 0;
   text-align: center;
 }
 
-.hero__headline {
+.hero__title {
   font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  margin-bottom: var(--space-2);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
 }
 
 .hero__subtitle {
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
 }
 
 /* ==========================================================================
-   Buttons
-   ========================================================================== */
-.btn-primary {
-  display: inline-block;
-  background: var(--gradient-primary);
-  color: #ffffff;
-  padding: var(--space-3) var(--space-5);
-  border-radius: var(--radius-lg);
-  font-weight: var(--font-semibold);
-  font-size: var(--text-md);
-  min-height: var(--touch-min);
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
-}
-
-.btn-secondary {
-  display: inline-block;
-  background: transparent;
-  color: var(--color-pink);
-  border: 1px solid var(--color-pink);
-  padding: var(--space-3) var(--space-5);
-  border-radius: var(--radius-lg);
-  font-weight: var(--font-medium);
-  min-height: var(--touch-min);
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.btn-secondary:hover {
-  background: rgba(233, 30, 99, 0.1);
-}
-
-/* ==========================================================================
-   Card
-   ========================================================================== */
-.card {
-  background: var(--color-bg-card);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
-  border: 1px solid var(--color-border);
-}
-
-/* ==========================================================================
-   Footer
+   푸터
    ========================================================================== */
 .footer {
   padding: var(--space-6) 0;
-  border-top: 1px solid var(--color-border);
   text-align: center;
+  border-top: 1px solid var(--color-border);
 }
 
 .footer__text {
-  font-size: var(--text-sm);
+  font-size: var(--text-md);
   color: var(--color-text-secondary);
 }
 
 /* ==========================================================================
-   Responsive
+   반응형
    ========================================================================== */
 @media (max-width: 768px) {
-  .container {
-    max-width: 390px;
-  }
-
-  .hero__headline {
+  .hero__title {
     font-size: var(--text-2xl);
   }
 }

@@ -39,34 +39,6 @@
 | 메인으로 이동    | `../index.html`                  |
 | 다른 서브 페이지 | `./other.html` 또는 `other.html` |
 
-### 서브 페이지 생성 규칙
-
-> 서브 페이지 생성 시 CSS, JS 파일도 함께 생성
-
-| 생성 파일 | 경로                    |
-| --------- | ----------------------- |
-| HTML      | `pages/[페이지명].html` |
-| CSS       | `css/[페이지명].css`    |
-| JS        | `js/[페이지명].js`      |
-
-**예시**: `detail` 페이지 생성 시
-
-- `pages/detail.html`
-- `css/detail.css`
-- `js/detail.js`
-
-**HTML에서 연결**:
-
-```html
-<!-- CSS -->
-<link rel="stylesheet" href="../css/style.css" />     <!-- 공통 -->
-<link rel="stylesheet" href="../css/[페이지명].css" /> <!-- 페이지별 -->
-
-<!-- JS -->
-<script src="../js/app.js"></script>          <!-- 공통 -->
-<script src="../js/[페이지명].js"></script>   <!-- 페이지별 -->
-```
-
 ---
 
 ## HTML 규칙
@@ -75,16 +47,12 @@
 - 접근성 속성 필수 (`alt`, `aria-label`)
 - 모바일 viewport 설정
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-```
-
 ---
 
 ## CSS 규칙
 
 - 모바일 우선 (max-width 미디어쿼리)
-- 폰트 크기: `clamp()` 사용 (어르신 가독성)
+- 폰트 크기: `clamp()` 사용
 - 버튼/터치 영역: 최소 44px
 - CSS 변수로 색상/크기 관리
 
@@ -108,48 +76,18 @@
 - **정의 함수는 상단에, 실행 함수는 하단에 배치**
 
 ```javascript
-// 함수형 패턴 예시
 const createApp = (initialState = {}) => {
-  // ==========================================================================
-  // State (상단)
-  // ==========================================================================
   const state = { ...initialState };
 
-  // ==========================================================================
-  // Utility Functions (정의 함수 - 상단)
-  // ==========================================================================
-  const getState = () => ({ ...state });
+  // 정의 함수 (상단)
+  const handleSubmit = (data) => { /* ... */ };
 
-  const setState = (newState) => {
-    Object.assign(state, newState);
-  };
+  // 실행 함수 (하단)
+  const init = () => { /* 이벤트 바인딩 */ };
 
-  // ==========================================================================
-  // Feature Functions (정의 함수 - 상단)
-  // ==========================================================================
-  const handleUpload = async (file) => {
-    /* ... */
-  };
-
-  const handleSubmit = (data) => {
-    /* ... */
-  };
-
-  // ==========================================================================
-  // Bootstrap Functions (실행 함수 - 하단)
-  // ==========================================================================
-  const bindEvents = () => {
-    /* 이벤트 바인딩 */
-  };
-
-  const init = () => {
-    bindEvents();
-  };
-
-  return { init, getState, setState, handleUpload };
+  return { init };
 };
 
-// Initialize app when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   const app = createApp({ isLoading: false });
   app.init();
@@ -162,56 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 - 모든 데이터는 `data/*.json` 파일로 분리하여 관리
 - API 연동 전 목데이터로 UI 개발 및 테스트
-- 실제 API 응답 구조와 동일하게 작성
-
-```json
-// data/mock.json
-{
-  "users": [
-    { "id": 1, "name": "홍길동", "email": "hong@example.com" },
-    { "id": 2, "name": "김철수", "email": "kim@example.com" }
-  ],
-  "config": {
-    "maxUploadSize": 5242880,
-    "allowedTypes": ["image/jpeg", "image/png"]
-  }
-}
-```
-
-```javascript
-// 목데이터 로드 예시
-const loadMockData = async () => {
-  const response = await fetch("./data/mock.json");
-  return response.json();
-};
-```
-
----
-
-## API 연동 (Gemini Flash)
-
-```javascript
-const analyzeMenu = async (imageBase64) => {
-  const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${API_KEY}`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [
-          {
-            parts: [
-              { text: ANALYZE_PROMPT },
-              { inline_data: { mime_type: "image/jpeg", data: imageBase64 } },
-            ],
-          },
-        ],
-      }),
-    }
-  );
-  return response.json();
-};
-```
 
 ---
 
@@ -220,7 +108,6 @@ const analyzeMenu = async (imageBase64) => {
 - [ ] API 키를 JS 파일에 하드코딩
 - [ ] document.write() 사용
 - [ ] innerHTML로 사용자 입력 삽입 (XSS 위험)
-- [ ] 동기식 XMLHttpRequest 사용
 - [ ] 이미지 용량 검증 없이 업로드
 
 ---
@@ -232,4 +119,3 @@ const analyzeMenu = async (imageBase64) => {
 - [x] 로딩 스피너 표시
 - [x] 에러 시 사용자 친화적 알림
 - [x] 폼 제출 시 버튼 비활성화 (중복 방지)
-- [x] console.log 배포 전 제거

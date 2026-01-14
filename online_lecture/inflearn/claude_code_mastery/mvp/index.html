@@ -4,34 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>개발자 웹 이력서</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 깜빡임 방지: JS 로드 전 테마 적용 -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
   <header class="header">
-    <div class="container">
-      <h1 class="header__title">개발자 웹 이력서</h1>
-      <nav class="nav">
-        <a href="./pages/about.html" class="nav__link">소개</a>
-      </nav>
+    <div class="container header__inner">
+      <h1 class="header__logo">Portfolio</h1>
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 전환">
+        <span class="theme-toggle__icon" id="themeIcon">🌙</span>
+      </button>
     </div>
   </header>
 
   <main class="main">
     <section class="hero">
       <div class="container">
-        <h2 class="hero__headline">안녕하세요</h2>
-        <p class="hero__subtitle">프론트엔드 개발자입니다</p>
-        <a href="./pages/about.html" class="btn-primary">더 알아보기</a>
+        <h2 class="hero__title">안녕하세요, 개발자입니다</h2>
+        <p class="hero__subtitle">Love in Action</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p class="footer__text">© 2025 개발자 이력서</p>
+      <p class="footer__text">© 2025 Portfolio</p>
     </div>
   </footer>
 
-  <script src="./js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

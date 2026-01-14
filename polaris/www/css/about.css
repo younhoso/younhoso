@@ -1,0 +1,514 @@
+/* ==========================================================================
+   About Page - Style Sheet
+   ========================================================================== */
+
+/* Navigation Active State */
+.nav__link--active {
+  color: var(--color-primary) !important;
+}
+
+/* ==========================================================================
+   About Hero Section
+   ========================================================================== */
+
+.about-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+  padding: 120px 20px 60px;
+  overflow: hidden;
+}
+
+.about-hero__stars {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      2px 2px at 10% 20%,
+      rgba(255, 255, 255, 0.4) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      2px 2px at 30% 40%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 50% 30%,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      2px 2px at 70% 60%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 90% 20%,
+      rgba(255, 255, 255, 0.4) 0%,
+      transparent 100%
+    );
+  pointer-events: none;
+}
+
+.about-hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 700px;
+}
+
+.about-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  margin-bottom: 32px;
+  transition: opacity 0.2s;
+}
+
+.about-hero__back:hover {
+  opacity: 0.8;
+}
+
+.about-hero__title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.about-hero__icon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark);
+}
+
+.about-hero__title {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 800;
+  color: #fff;
+}
+
+.about-hero__subtitle {
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.about-hero__desc {
+  font-size: var(--text-md);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Mission Section
+   ========================================================================== */
+
+.mission-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-section__title {
+  font-size: clamp(32px, 5vw, 42px);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.mission-section__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+}
+
+.mission-quote {
+  background: #fff8e1;
+  border: 2px solid #f4c542;
+  border-radius: var(--radius-xl);
+  padding: 48px 32px;
+}
+
+.mission-quote__text {
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   Core Values Section
+   ========================================================================== */
+
+.values-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 40px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.value-card__icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  background: rgba(244, 197, 66, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-card__title {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.value-card__desc {
+  font-size: var(--text-md);
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   CEO Section
+   ========================================================================== */
+
+.ceo-section__title {
+  font-size: clamp(28px, 5vw, 38px);
+  font-weight: 800;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 48px;
+}
+
+.ceo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Career Timeline */
+.ceo-career {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.ceo-career__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline__item {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.timeline__year {
+  flex-shrink: 0;
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--color-primary);
+  min-width: 50px;
+}
+
+.timeline__text {
+  font-size: var(--text-md);
+  color: var(--color-text-light);
+}
+
+/* Philosophy */
+.ceo-philosophy {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.ceo-philosophy__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.philosophy-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.philosophy-quote {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.philosophy-quote p {
+  font-size: var(--text-md);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Company Info Section
+   ========================================================================== */
+
+.company-section__title {
+  font-size: clamp(28px, 5vw, 38px);
+  font-weight: 800;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 48px;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto 48px;
+}
+
+/* Company Details */
+.company-details {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.company-detail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.company-detail__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(244, 197, 66, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.company-detail__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.company-detail__value {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Company History */
+.company-history {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.company-history__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.history-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.history-item__date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--color-primary);
+  min-width: 110px;
+}
+
+.history-item__text {
+  font-size: var(--text-md);
+  color: var(--color-text-light);
+}
+
+/* About CTA */
+.about-cta {
+  text-align: center;
+}
+
+.btn--large {
+  padding: 20px 48px;
+  font-size: var(--text-lg);
+}
+
+/* ==========================================================================
+   Responsive - Tablet
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .values-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .ceo-grid,
+  .company-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ==========================================================================
+   Responsive - Mobile
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .about-hero {
+    min-height: auto;
+    padding: 100px 20px 48px;
+  }
+
+  .about-hero__title-wrap {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-hero__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about-hero__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mission-quote {
+    padding: 32px 20px;
+  }
+
+  .values-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .value-card {
+    padding: 32px 20px;
+  }
+
+  .value-card__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ceo-career,
+  .ceo-philosophy,
+  .company-details,
+  .company-history {
+    padding: 24px;
+  }
+
+  .timeline__item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .btn--large {
+    padding: 18px 36px;
+    font-size: var(--text-md);
+    width: 100%;
+    max-width: 300px;
+  }
+}

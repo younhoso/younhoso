@@ -21,6 +21,7 @@
 **슬로건**: "삶의 길을 잃었을 때, 당신의 북극성이 되겠습니다"
 **포지셔닝**: 위기를 기회로 바꾸는 한국의 팔란티어(Palantir)
 **핵심 서비스**: 알라딘(Aladdin) AI 솔루션
+**타겟 사용자**: 고령층 (50대 이상) - 가독성 최우선
 
 ---
 
@@ -42,10 +43,11 @@
 
 ## 레이아웃
 
-- **모바일 우선**: 기본 최대 너비 390px
-- **터치 영역**: 최소 48px
+- **반응형 디자인**: 데스크탑 (1200px) / 태블릿 (768px~) / 모바일 (~767px)
+- **터치 영역**: 최소 48px (고령층 터치 편의성)
 - **다크 테마**: 딥 네이비 배경 + 밝은 텍스트
 - **섹션 구분**: 충분한 여백으로 시각적 분리
+- **가독성**: 고령층을 위해 폰트 크기 20~30% 확대, 행간 1.7
 
 ---
 
@@ -137,18 +139,20 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
   sans-serif;
 ```
 
-#### 폰트 크기
+#### 폰트 크기 (고령층 최적화)
 
-| 토큰         | 크기 | 용도                 |
-| ------------ | ---- | -------------------- |
-| `--text-xs`  | 12px | 캡션, 태그           |
-| `--text-sm`  | 14px | 보조 텍스트, 라벨    |
-| `--text-md`  | 16px | 본문 기본            |
-| `--text-lg`  | 18px | 카드 제목, 강조 본문 |
-| `--text-xl`  | 20px | 소제목               |
-| `--text-2xl` | 24px | 중제목               |
-| `--text-3xl` | 28px | 섹션 제목            |
-| `--text-4xl` | 32px | 히어로 헤드라인      |
+> 고령층 타겟을 위해 기본 폰트 크기를 20~30% 증가시켜 가독성 향상
+
+| 토큰         | 데스크탑 | 모바일 | 용도                 |
+| ------------ | -------- | ------ | -------------------- |
+| `--text-xs`  | 14px     | 13px   | 캡션, 태그           |
+| `--text-sm`  | 16px     | 15px   | 보조 텍스트, 라벨    |
+| `--text-md`  | 18px     | 17px   | 본문 기본            |
+| `--text-lg`  | 20px     | 19px   | 카드 제목, 강조 본문 |
+| `--text-xl`  | 24px     | 22px   | 소제목               |
+| `--text-2xl` | 28px     | 26px   | 중제목               |
+| `--text-3xl` | 34px     | 30px   | 섹션 제목            |
+| `--text-4xl` | 42px     | 36px   | 히어로 헤드라인      |
 
 #### 폰트 웨이트
 
@@ -178,7 +182,7 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
 
 ### CSS 변수 정의
 
-> 복사하여 사용
+> 복사하여 사용 (고령층 최적화 버전)
 
 ```css
 :root {
@@ -190,6 +194,8 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
   --color-text: #ffffff;
   --color-text-secondary: #8892a0;
   --color-text-dark: #1a1a2e;
+  --color-text-light: #555555; /* 가독성 향상 */
+  --color-text-muted: #777777; /* 가독성 향상 */
   --color-border: #1e3a5f;
 
   /* 브랜드 골드 */
@@ -198,10 +204,10 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
   --color-gold-dark: #d4a520;
 
   /* 서비스 구분 색상 */
-  --color-red: #e74c3c;
-  --color-yellow: #f1c40f;
-  --color-green: #2ecc71;
-  --color-blue: #3498db;
+  --color-red: #C62828;
+  --color-yellow: #F9A825;
+  --color-green: #2E7D32;
+  --color-blue: #1976D2;
 
   /* 그라데이션 */
   --gradient-hero: linear-gradient(
@@ -212,15 +218,15 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
   );
   --gradient-cta: linear-gradient(90deg, #f4c542 0%, #ffd966 50%, #f4c542 100%);
 
-  /* 타이포그래피 */
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-md: 16px;
-  --text-lg: 18px;
-  --text-xl: 20px;
-  --text-2xl: 24px;
-  --text-3xl: 28px;
-  --text-4xl: 32px;
+  /* 타이포그래피 - 고령층 최적화 (데스크탑) */
+  --text-xs: 14px;
+  --text-sm: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 28px;
+  --text-3xl: 34px;
+  --text-4xl: 42px;
 
   --font-regular: 400;
   --font-medium: 500;
@@ -240,18 +246,32 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
   --space-12: 48px;
 
   /* 기타 */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
   --radius-full: 9999px;
   --touch-min: 48px;
 
   /* 그림자 */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
   --shadow-glow: 0 0 20px rgba(244, 197, 66, 0.3);
+}
+
+/* 모바일 폰트 크기 (고령층 최적화) */
+@media (max-width: 767px) {
+  :root {
+    --text-xs: 13px;
+    --text-sm: 15px;
+    --text-md: 17px;
+    --text-lg: 19px;
+    --text-xl: 22px;
+    --text-2xl: 26px;
+    --text-3xl: 30px;
+    --text-4xl: 36px;
+  }
 }
 ```
 
@@ -575,42 +595,75 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
 ## 반응형 가이드
 
 ```css
-/* 데스크톱 (기본) */
+/* 데스크톱 (기본) - 고령층 최적화 */
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-4);
+  padding: 0 20px;
 }
 
-.hero__headline {
-  font-size: 48px;
+body {
+  font-size: var(--text-md); /* 18px */
+  line-height: 1.7; /* 가독성 향상 */
+}
+
+.hero__title {
+  font-size: clamp(32px, 7vw, 56px);
 }
 
 /* 태블릿 */
-@media (max-width: 1024px) {
-  .container {
-    max-width: 720px;
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
   }
 
   .service-cards {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* 모바일 */
-@media (max-width: 768px) {
-  .container {
-    max-width: 390px;
-  }
-
+/* 데스크톱 */
+@media (min-width: 1024px) {
   .service-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .hero__headline {
-    font-size: 32px;
+  .process-steps {
+    flex-direction: row;
+  }
+}
+
+/* 모바일 - 고령층 폰트 크기 유지 */
+@media (max-width: 767px) {
+  :root {
+    --text-xs: 13px;
+    --text-sm: 15px;
+    --text-md: 17px;
+    --text-lg: 19px;
+    --text-xl: 22px;
+    --text-2xl: 26px;
+    --text-3xl: 30px;
+    --text-4xl: 36px;
+  }
+
+  .service-cards,
+  .success-cards,
+  .concerns-buttons,
+  .stats,
+  .realestate-cards {
+    grid-template-columns: 1fr;
   }
 }
 ```
+
+### 고령층 가독성 가이드라인
+
+1. **폰트 크기**: 최소 14px 이상 유지
+2. **대비**: 텍스트와 배경 간 충분한 명도 대비
+3. **행간**: 1.6~1.7 이상으로 여유롭게
+4. **버튼 크기**: 최소 48px 터치 영역 확보
+5. **여백**: 요소 간 충분한 간격으로 시각적 구분

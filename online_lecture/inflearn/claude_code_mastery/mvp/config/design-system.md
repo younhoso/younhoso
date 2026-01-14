@@ -133,7 +133,7 @@
 #### 폰트 패밀리
 
 ```css
-font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
   sans-serif;
 ```
 

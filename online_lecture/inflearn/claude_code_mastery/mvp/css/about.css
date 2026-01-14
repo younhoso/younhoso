@@ -1,0 +1,31 @@
+/* ==========================================================================
+   About Page Styles
+   ========================================================================== */
+
+.about {
+  padding: var(--space-8) 0;
+}
+
+.about__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-4);
+  color: var(--color-pink);
+}
+
+.about__content {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.about__section {
+  margin-bottom: var(--space-6);
+}
+
+.about__section h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+}

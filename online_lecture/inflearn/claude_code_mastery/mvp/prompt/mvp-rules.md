@@ -14,14 +14,57 @@
 
 ```
 /
-├── index.html          # 메인 페이지
+├── index.html              # 메인 페이지 (루트에만 위치)
+├── pages/                  # 서브 페이지 폴더
+│   └── [새페이지].html      # 추가 페이지는 여기에 생성
 ├── css/
-│   └── style.css       # 스타일
+│   ├── style.css           # 공통 스타일
+│   └── [페이지명].css       # 페이지별 스타일 (필요시)
 ├── js/
-│   ├── app.js          # 메인 로직
-│   └── api.js          # API 통신
+│   ├── app.js              # 메인 로직
+│   └── api.js              # API 통신
+├── data/
+│   └── *.json              # 목데이터
 └── assets/
-    └── images/         # 이미지 리소스
+    └── images/             # 이미지 리소스
+```
+
+### 경로 규칙 (pages/ 내 파일 기준)
+
+| 대상             | 경로                             |
+| ---------------- | -------------------------------- |
+| CSS              | `../css/style.css`               |
+| JS               | `../js/app.js`                   |
+| 이미지           | `../assets/images/`              |
+| 메인으로 이동    | `../index.html`                  |
+| 다른 서브 페이지 | `./other.html` 또는 `other.html` |
+
+### 서브 페이지 생성 규칙
+
+> 서브 페이지 생성 시 CSS, JS 파일도 함께 생성
+
+| 생성 파일 | 경로                    |
+| --------- | ----------------------- |
+| HTML      | `pages/[페이지명].html` |
+| CSS       | `css/[페이지명].css`    |
+| JS        | `js/[페이지명].js`      |
+
+**예시**: `detail` 페이지 생성 시
+
+- `pages/detail.html`
+- `css/detail.css`
+- `js/detail.js`
+
+**HTML에서 연결**:
+
+```html
+<!-- CSS -->
+<link rel="stylesheet" href="../css/style.css" />     <!-- 공통 -->
+<link rel="stylesheet" href="../css/[페이지명].css" /> <!-- 페이지별 -->
+
+<!-- JS -->
+<script src="../js/app.js"></script>          <!-- 공통 -->
+<script src="../js/[페이지명].js"></script>   <!-- 페이지별 -->
 ```
 
 ---

@@ -207,7 +207,7 @@ input {
 
 /* Navigation */
 .nav {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 32px;
 }
@@ -234,7 +234,7 @@ input {
 }
 
 .btn--cta-header {
-  display: none;
+  display: inline-flex;
   padding: 12px 24px;
   background: var(--color-primary);
   color: var(--color-text);
@@ -253,7 +253,7 @@ input {
 
 /* Hamburger */
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   padding: 8px;
@@ -324,7 +324,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+  background: linear-gradient(rgba(10, 22, 40, 0.7), rgba(15, 40, 71, 0.7)),
+    url(../assets/images/polaris-bg.jpg) center / cover no-repeat;
   padding: 100px 20px 60px;
   overflow: hidden;
 }
@@ -417,7 +418,8 @@ input {
 
 .hero__buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 16px;
   margin-bottom: 48px;
@@ -477,7 +479,7 @@ input {
    ========================================================================== */
 
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .section--light {
@@ -655,7 +657,7 @@ input {
 
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
@@ -1409,7 +1411,7 @@ input {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 32px;
 }
 
@@ -1656,7 +1658,8 @@ input {
 
 .footer__top {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: 24px;
   padding-bottom: 24px;
@@ -1714,132 +1717,13 @@ input {
    Responsive - Tablet
    ========================================================================== */
 
-@media (min-width: 768px) {
-  .nav {
-    display: flex;
-  }
-
-  .btn--cta-header {
-    display: inline-flex;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .hero__buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .transport-info {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer__top {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-/* ==========================================================================
-   Responsive - Desktop
-   ========================================================================== */
-
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .section {
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   .service-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .realestate-cards {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .process-steps {
-    flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .process-step {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-    padding: 32px;
-  }
-
-  .process-step__number {
-    margin: 0;
-    width: 56px;
-    height: 56px;
-  }
-
-  .process-step__num-inner {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-  }
-
-  .process-step__arrow {
-    position: absolute;
-    right: 32px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 28px;
-  }
-
-  .process-step__tags {
-    justify-content: flex-start;
-  }
-
-  .process-step__cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .process-step__card {
-    flex: 0 0 auto;
-  }
-
-  .hub-diagram {
-    max-width: 650px;
-  }
-
-  .hub-diagram__center {
-    width: 100px;
-    height: 100px;
-  }
-
-  .polaris-logo--medium {
-    width: 70px;
-    height: 70px;
-  }
-
-  .hub-node__icon {
-    width: 55px;
-    height: 55px;
-  }
-
-  .hub-diagram__line--top,
-  .hub-diagram__line--bottom {
-    width: 30%;
-  }
-
-  .hub-diagram__line--top-right,
-  .hub-diagram__line--bottom-right,
-  .hub-diagram__line--bottom-left,
-  .hub-diagram__line--top-left {
-    width: 34%;
   }
 }
 
@@ -1847,7 +1731,7 @@ input {
    Responsive - Mobile
    ========================================================================== */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   :root {
     /* 모바일에서도 충분히 큰 폰트 유지 */
     --text-xs: 13px;
@@ -1858,6 +1742,30 @@ input {
     --text-2xl: 26px;
     --text-3xl: 30px;
     --text-4xl: 36px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .btn--cta-header {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__top {
+    flex-direction: column;
   }
 
   .service-cards {

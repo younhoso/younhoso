@@ -431,7 +431,7 @@
    Responsive - Tablet
    ========================================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .values-cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;

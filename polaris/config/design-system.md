@@ -204,10 +204,10 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
   --color-gold-dark: #d4a520;
 
   /* 서비스 구분 색상 */
-  --color-red: #C62828;
-  --color-yellow: #F9A825;
-  --color-green: #2E7D32;
-  --color-blue: #1976D2;
+  --color-red: #c62828;
+  --color-yellow: #f9a825;
+  --color-green: #2e7d32;
+  --color-blue: #1976d2;
 
   /* 그라데이션 */
   --gradient-hero: linear-gradient(
@@ -595,46 +595,14 @@ font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic N
 ## 반응형 가이드
 
 ```css
-/* 데스크톱 (기본) - 고령층 최적화 */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-body {
-  font-size: var(--text-md); /* 18px */
-  line-height: 1.7; /* 가독성 향상 */
-}
-
-.hero__title {
-  font-size: clamp(32px, 7vw, 56px);
-}
+/* 데스크톱 (기본) */
 
 /* 태블릿 */
-@media (min-width: 768px) {
-  .nav {
-    display: flex;
-  }
-
-  .service-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+@media (max-width: 1024px) {
 }
 
-/* 데스크톱 */
-@media (min-width: 1024px) {
-  .service-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .process-steps {
-    flex-direction: row;
-  }
+/* 모바일 */
+@media (max-width: 768px) {
 }
 
 /* 모바일 - 고령층 폰트 크기 유지 */

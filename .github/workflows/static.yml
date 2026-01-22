@@ -3,55 +3,47 @@ name: TypeScript Vite Project
 on:
   push:
     paths:
-      - "project_mini/motion-min-project/**" # 이 폴더의 변경사항이 있을 때만 작동
+      - "project_mini/motion-min-project/**"
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: project_mini/motion-min-project
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "18" # 원하는 Node.js 버전
+          node-version: "18"
+          cache: "npm"
+          cache-dependency-path: project_mini/motion-min-project/package-lock.json
 
-      - name: Cache Node.js modules # Node.js 패키지 캐시를 무효화
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('project_mini/motion-min-project/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: |
-          cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
-          npm install
-
-      - name: Update Vite base URL
-        run: |
-          cd project_mini/motion-min-project
-          echo "Updating Vite base URL in vite.config.ts..."
-          sed -i 's|base: \"/.*\"|base: \"/younhoso/project_mini/motion-min-project/dist/\"|' vite.config.ts
+      # ⚠️ Vite base는 가능하면 sed로 파일 수정하지 말고 env로 주는 게 안정적
+      # (아래처럼 VITE_BASE를 build 때 넘겨서 config에서 읽는 방식 권장)
+      - name: Install dependencies (fast, reproducible)
+        run: npm ci
 
       - name: Build project
-        run: |
-          cd project_mini/motion-min-project  # Vite 프로젝트 폴더로 이동
-          npm run build
-
-      - name: List dist folder contents
-        run: |
-          cd project_mini/motion-min-project/dist
-          ls -al  # dist 폴더 내용 출력 (배포 전에 파일이 최신인지 확인)
+        env:
+          # 레포가 younhoso/motion-min-project 같은 형태면 보통 "/<repo>/"가 맞습니다.
+          # monorepo 하위 폴더를 pages로 올리는 경우에도 최종 URL은 repo 기준이므로 우선 "/<repo>/" 추천
+          VITE_BASE: "/younhoso/"
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./project_mini/motion-min-project/dist # motion-min-projec 폴더 안의 dist를 배포
-          force_orphan: true # 강제 배포 설정
+          publish_dir: project_mini/motion-min-project/dist
+          # force_orphan은 느려질 수 있어 기본은 끄는 걸 추천
+          # 필요할 때만 true로
+          force_orphan: false

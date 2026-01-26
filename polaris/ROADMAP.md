@@ -1,5 +1,6 @@
 # ROADMAP - MVP 개발 진행 상황
 
+> https://polarisplatform.co.kr/
 > 진행 상황 추적용 (규칙은 `prompt/mvp-rules.md` 참조)
 
 ---

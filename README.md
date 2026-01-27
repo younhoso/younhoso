@@ -7,7 +7,7 @@
 
 # INFO
 
-[PROFILE](https://younhoso.github.io/younhoso/profile/)\
+[PROFILE](https://gospelfix.github.io/profile)\
 BLOG: [TriplexLab](https://triplexlab.tistory.com/)
 
 ### blogExample

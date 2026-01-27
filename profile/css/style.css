@@ -5,13 +5,16 @@
   box-sizing: border-box;
 }
 
-/* Base */
+/* Base - Dark Theme */
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Apple SD Gothic Neo",
     sans-serif;
-  background: url("../img/bg.webp") no-repeat center center fixed;
-  background-size: cover;
-  color: #191f28;
+  background: #000;
+  color: #fff;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -21,29 +24,32 @@ body {
   margin: 0 auto;
   padding: 0 0 40px;
   min-height: 100vh;
-  background: rgba(244, 245, 247, 0.95);
+  background: #000;
 }
 
 /* Profile Card */
 .profile-card {
-  background: #fff;
-  padding: 32px 24px;
-  margin-bottom: 8px;
+  background: transparent;
+  padding: 48px 24px 32px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .profile-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .profile-image {
-  width: 72px;
-  height: 72px;
-  border-radius: 24px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .profile-image img {
@@ -53,116 +59,273 @@ body {
 }
 
 .profile-info {
-  flex: 1;
+  text-align: center;
 }
 
 .profile-name {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  color: #191f28;
-  margin-bottom: 2px;
+  color: #fff;
+  margin-bottom: 4px;
 }
 
 .profile-role {
   font-size: 14px;
-  color: #8b95a1;
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 500;
 }
 
 .profile-bio {
   font-size: 15px;
-  color: #4e5968;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
 }
 
 /* Section */
 .section {
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  padding-top: 8px;
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  color: #8b95a1;
-  padding: 16px 24px 8px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 20px 24px 12px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 /* Card */
 .card {
-  background: #fff;
+  background: transparent;
 }
 
 /* List Item */
 .list-item {
   display: flex;
   align-items: center;
-  padding: 16px 24px;
+  padding: 14px 24px;
+  margin: 0 16px 8px;
   text-decoration: none;
   color: inherit;
-  transition: background 0.15s ease;
-  border-bottom: 1px solid #f2f4f6;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .list-item:last-child {
-  border-bottom: none;
+  margin-bottom: 8px;
 }
 
 .list-item:active {
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0.98);
 }
 
 /* Item Icon */
 .item-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 16px;
+  margin-right: 14px;
   flex-shrink: 0;
 }
 
 .item-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
-.item-icon.email {
-  background: #e8f4fd;
-  color: #3182f6;
-}
-
-.item-icon.phone {
-  background: #e5f6e8;
-  color: #20c997;
-}
-
-.item-icon.instagram {
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-  color: #e1306c;
-}
-
-.item-icon.github {
-  background: #f0f0f0;
-  color: #24292e;
-}
-
-.item-icon.linkedin {
-  background: #e8f4fd;
-  color: #0077b5;
-}
-
-.item-icon.web {
-  background: #e8f4fd;
-  color: #3182f6;
-}
-
+.item-icon.email,
+.item-icon.phone,
+.item-icon.instagram,
+.item-icon.github,
+.item-icon.linkedin,
+.item-icon.web,
 .item-icon.blog {
-  background: #fff3e0;
-  color: #ff9800;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Ministry Section with Swiper */
+.ministry-section {
+  overflow: hidden;
+}
+
+.ministry-swiper {
+  padding: 0 20px 40px 20px !important;
+  overflow: visible;
+}
+
+.ministry-swiper .swiper-slide {
+  width: 260px;
+  height: auto;
+}
+
+.ministry-swiper .swiper-pagination {
+  bottom: 8px;
+}
+
+.ministry-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.ministry-swiper .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* Ministry Card */
+.ministry-card-link {
+  display: block;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+.ministry-card-link:active {
+  transform: scale(0.98);
+}
+
+.ministry-card-image {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ministry-card-image svg {
+  width: 60px;
+  height: 60px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ministry-card-image.worship,
+.ministry-card-image.group {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ministry-card-image.worship svg,
+.ministry-card-image.group svg {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 이미지 타입 카드 */
+.ministry-card-image.has-image {
+  height: auto;
+  aspect-ratio: 1514 / 2142;
+  background: #000;
+}
+
+.ministry-card-image.has-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ministry-card-link:hover .ministry-card-image.has-image img {
+  transform: scale(1.05);
+}
+
+.ministry-card-bookmark {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ministry-card-bookmark:active {
+  transform: scale(1.1);
+}
+
+.ministry-card-bookmark svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ministry-card-content {
+  padding: 16px;
+}
+
+.ministry-card-subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+}
+
+.ministry-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.ministry-card-title .highlight {
+  color: #fff;
+}
+
+.ministry-card-info {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+}
+
+.ministry-card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.tag-primary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.tag-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (hover: hover) {
+  .ministry-card-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
 }
 
 /* Item Content */
@@ -173,28 +336,28 @@ body {
 
 .item-label {
   display: block;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  color: #191f28;
+  color: #fff;
   margin-bottom: 2px;
 }
 
 .item-value {
   display: block;
-  font-size: 14px;
-  color: #8b95a1;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .item-value.preparing {
-  color: #b0b8c1;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* Item Arrow */
 .item-arrow {
-  color: #d1d6db;
+  color: rgba(255, 255, 255, 0.3);
   margin-left: 8px;
 }
 
@@ -212,11 +375,11 @@ body {
   width: calc(100% - 48px);
   margin: 24px auto 0;
   padding: 16px 24px;
-  background: #3182f6;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border: none;
-  border-radius: 16px;
-  font-size: 16px;
+  border-radius: 12px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -224,20 +387,20 @@ body {
 
 .contact-button:active {
   transform: scale(0.98);
-  background: #1b64da;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .contact-button svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 /* Footer */
 .footer {
   text-align: center;
-  padding: 24px;
-  color: #b0b8c1;
-  font-size: 13px;
+  padding: 32px 24px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
 }
 
 /* Animations */
@@ -276,11 +439,11 @@ body {
   bottom: 100px;
   left: 50%;
   transform: translateX(-50%) translateY(20px);
-  background: #191f28;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
   padding: 14px 24px;
   border-radius: 12px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   opacity: 0;
   transition: all 0.3s ease;
@@ -300,20 +463,19 @@ body {
     margin-bottom: 40px;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    background: rgba(244, 245, 247, 0.92);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
 /* Hover states for desktop */
 @media (hover: hover) {
   .list-item:hover {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
   }
 
   .contact-button:hover {
-    background: #1b64da;
+    background: rgba(255, 255, 255, 0.9);
   }
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -56,6 +56,11 @@
     />
 
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -83,7 +88,11 @@
           <a
             href="mailto:thdbsgh3443@kakao.com"
             class="list-item"
-            onclick="return confirm('thdbsgh3443@kakao.com으로 이메일을 보내시겠습니까?')"
+            onclick="
+              return confirm(
+                'thdbsgh3443@kakao.com으로 이메일을 보내시겠습니까?',
+              );
+            "
           >
             <div class="item-icon email">
               <svg
@@ -267,6 +276,18 @@
         </div>
       </div>
 
+      <!-- 교회 사역도 섹션 -->
+      <div class="section ministry-section">
+        <h2 class="section-title">교회 사역</h2>
+        <div class="swiper ministry-swiper">
+          <div class="swiper-wrapper" id="ministryCards">
+            <!-- JSON 데이터로 동적 생성 -->
+          </div>
+          <!-- 페이지네이션 -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
       <!-- 하단 버튼 -->
       <button class="contact-button">
         <svg
@@ -291,5 +312,97 @@
     </div>
 
     <script src="./js/app.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // Ministry Cards 동적 렌더링
+      async function loadMinistryCards() {
+        try {
+          const response = await fetch("./data/ministry-cards.json");
+          const cards = await response.json();
+          const container = document.getElementById("ministryCards");
+
+          cards.forEach((card) => {
+            const slide = document.createElement("div");
+            slide.className = "swiper-slide";
+
+            // 이미지 영역 생성 (이미지 타입 vs 아이콘 타입)
+            let imageHtml = "";
+            if (card.imageType === "image" && card.imageUrl) {
+              imageHtml = `
+                <div class="ministry-card-image has-image">
+                  <img src="${card.imageUrl}" alt="${card.title}" />
+                </div>
+              `;
+            } else if (card.icon) {
+              let pathsHtml = "";
+              if (card.icon.paths) {
+                pathsHtml += card.icon.paths
+                  .map((d) => `<path d="${d}" />`)
+                  .join("");
+              }
+              if (card.icon.circles) {
+                pathsHtml += card.icon.circles
+                  .map((c) => `<circle cx="${c.cx}" cy="${c.cy}" r="${c.r}" />`)
+                  .join("");
+              }
+              imageHtml = `
+                <div class="ministry-card-image">
+                  <svg viewBox="${card.icon.viewBox}" fill="none" stroke="currentColor" stroke-width="1.5">
+                    ${pathsHtml}
+                  </svg>
+                </div>
+              `;
+            }
+
+            // 태그 생성
+            const tagsHtml = card.tags
+              .map(
+                (tag, i) =>
+                  `<span class="tag ${i === 0 ? "tag-primary" : "tag-outline"}">${tag}</span>`,
+              )
+              .join("");
+
+            // 타이틀 생성
+            const titleHtml = card.titleSuffix
+              ? `<span class="highlight">${card.title}</span>${card.titleSuffix}`
+              : `<span class="highlight">${card.title}</span>`;
+
+            // 외부 링크 여부
+            const isExternal = card.link.startsWith("http");
+
+            slide.innerHTML = `
+              <a href="${card.link}" class="ministry-card-link" ${isExternal ? 'target="_blank"' : ""}>
+                ${imageHtml}
+                <div class="ministry-card-content">
+                  <p class="ministry-card-subtitle">${card.subtitle}</p>
+                  <h3 class="ministry-card-title">${titleHtml}</h3>
+                  <p class="ministry-card-info">${card.info}</p>
+                  <div class="ministry-card-tags">${tagsHtml}</div>
+                </div>
+              </a>
+            `;
+
+            container.appendChild(slide);
+          });
+
+          // Swiper 초기화
+          new Swiper(".ministry-swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 16,
+            centeredSlides: false,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+        } catch (error) {
+          console.error("Failed to load ministry cards:", error);
+        }
+      }
+
+      // DOM 로드 후 실행
+      document.addEventListener("DOMContentLoaded", loadMinistryCards);
+    </script>
   </body>
 </html>

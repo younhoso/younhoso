@@ -371,12 +371,18 @@
             // 외부 링크 여부
             const isExternal = card.link.startsWith("http");
 
+            // 날짜 생성
+            const dateHtml = card.date
+              ? `<p class="ministry-card-date">${card.date}</p>`
+              : "";
+
             slide.innerHTML = `
               <a href="${card.link}" class="ministry-card-link" ${isExternal ? 'target="_blank"' : ""}>
                 ${imageHtml}
                 <div class="ministry-card-content">
                   <p class="ministry-card-subtitle">${card.subtitle}</p>
                   <h3 class="ministry-card-title">${titleHtml}</h3>
+                  ${dateHtml}
                   <p class="ministry-card-info">${card.info}</p>
                   <div class="ministry-card-tags">${tagsHtml}</div>
                 </div>

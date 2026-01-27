@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Base - Dark Theme */
+/* Base - Pastel Gradient Theme */
 body {
   font-family:
     "Inter",
@@ -13,10 +13,48 @@ body {
     BlinkMacSystemFont,
     "Apple SD Gothic Neo",
     sans-serif;
-  background: #000;
+  background: #111;
   color: #fff;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Floating Blur Object */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    ellipse at 30% 30%,
+    #00d4ff 0%,
+    #6366f1 30%,
+    #8b5cf6 50%,
+    #a78bfa 70%,
+    transparent 100%
+  );
+  filter: blur(60px);
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0px) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-60px) scale(1.1);
+  }
 }
 
 .container {
@@ -25,6 +63,8 @@ body {
   padding: 0 0 40px;
   min-height: 100vh;
   background: #000;
+  position: relative;
+  z-index: 1;
 }
 
 /* Profile Card */
@@ -505,15 +545,22 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-/* Responsive */
+/* Responsive - Tablet (가운데 정렬) */
 @media (min-width: 481px) {
   .container {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 40px auto;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Responsive - PC (오른쪽 1/4 위치) */
+@media (min-width: 1025px) {
+  .container {
+    margin-left: auto;
+    margin-right: calc(25% - 240px);
   }
 }
 

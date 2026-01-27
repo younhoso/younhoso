@@ -79,12 +79,24 @@ body {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.7;
+  letter-spacing: -0.025em;
 }
 
 /* Section */
 .section {
   margin-bottom: 0;
   padding-top: 8px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 12px;
+}
+
+.section-header .section-title {
+  padding: 0;
 }
 
 .section-title {
@@ -94,6 +106,36 @@ body {
   padding: 20px 24px 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.section-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.section-link:active {
+  transform: scale(0.96);
+}
+
+.section-link svg {
+  width: 14px;
+  height: 14px;
 }
 
 /* Card */

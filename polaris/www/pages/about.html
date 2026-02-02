@@ -1,381 +1,531 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="폴라리스 플랫폼 회사소개 - 당신의 북극성이 되겠습니다">
-  <title>회사소개 - Polaris 폴라리스 플랫폼</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/about.css">
-</head>
-<body>
-  <!-- Header -->
-  <header class="header">
-    <div class="header__inner">
-      <a href="../index.html" class="logo">
-        <div class="logo__icon">
-          <div class="logo__quarter logo__quarter--red"></div>
-          <div class="logo__quarter logo__quarter--blue"></div>
-          <div class="logo__quarter logo__quarter--green"></div>
-          <div class="logo__quarter logo__quarter--yellow"></div>
-          <div class="logo__star">
-            <svg viewBox="0 0 24 24" fill="white">
-              <path d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="폴라리스 플랫폼 회사소개 - 당신의 북극성이 되겠습니다"
+    />
+    <title>회사소개 - Polaris 폴라리스 플랫폼</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="../index.html" class="logo">
+          <div class="logo__icon">
+            <img src="../assets/images/logo.png" alt="Polaris 로고" />
+          </div>
+          <div class="logo__text-wrap">
+            <span class="logo__text">Polaris</span>
+            <span class="logo__subtext">폴라리스 플랫폼</span>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="about.html" class="nav__link nav__link--active">회사소개</a>
+          <a href="../index.html#aladdin" class="nav__link">알라딘 솔루션</a>
+          <a href="../index.html#realestate" class="nav__link">부동산 솔루션</a>
+          <a href="../index.html#business" class="nav__link">기업 솔루션</a>
+          <a href="../index.html#contact" class="nav__link">오시는 길</a>
+        </nav>
+
+        <a href="../index.html#apply" class="btn btn--cta-header">
+          <svg
+            class="btn__icon"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="16"
+            height="16"
+          >
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+            />
+          </svg>
+          무료 상담 신청
+        </a>
+
+        <button class="hamburger" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav">
+      <a href="about.html" class="mobile-nav__link">회사소개</a>
+      <a href="../index.html#aladdin" class="mobile-nav__link">알라딘 솔루션</a>
+      <a href="../index.html#realestate" class="mobile-nav__link"
+        >부동산 솔루션</a
+      >
+      <a href="../index.html#business" class="mobile-nav__link">기업 솔루션</a>
+      <a href="../index.html#contact" class="mobile-nav__link">오시는 길</a>
+      <a href="../index.html#apply" class="btn btn--cta-mobile"
+        >무료 상담 신청</a
+      >
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <div class="about-hero__stars"></div>
+      <div class="about-hero__content">
+        <a href="../index.html" class="about-hero__back">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            width="16"
+            height="16"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          홈으로 돌아가기
+        </a>
+
+        <div class="about-hero__title-wrap">
+          <div class="about-hero__icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path
+                d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z"
+              />
             </svg>
           </div>
+          <h1 class="about-hero__title">폴라리스 플랫폼</h1>
         </div>
-        <div class="logo__text-wrap">
-          <span class="logo__text">Polaris</span>
-          <span class="logo__subtext">폴라리스 플랫폼</span>
-        </div>
-      </a>
-
-      <nav class="nav">
-        <a href="about.html" class="nav__link nav__link--active">회사소개</a>
-        <a href="../index.html#aladdin" class="nav__link">알라딘 솔루션</a>
-        <a href="../index.html#realestate" class="nav__link">부동산 솔루션</a>
-        <a href="../index.html#business" class="nav__link">기업 솔루션</a>
-        <a href="../index.html#contact" class="nav__link">오시는 길</a>
-      </nav>
-
-      <a href="../index.html#apply" class="btn btn--cta-header">
-        <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-        </svg>
-        무료 상담 신청
-      </a>
-
-      <button class="hamburger" aria-label="메뉴 열기">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Nav -->
-  <nav class="mobile-nav">
-    <a href="about.html" class="mobile-nav__link">회사소개</a>
-    <a href="../index.html#aladdin" class="mobile-nav__link">알라딘 솔루션</a>
-    <a href="../index.html#realestate" class="mobile-nav__link">부동산 솔루션</a>
-    <a href="../index.html#business" class="mobile-nav__link">기업 솔루션</a>
-    <a href="../index.html#contact" class="mobile-nav__link">오시는 길</a>
-    <a href="../index.html#apply" class="btn btn--cta-mobile">무료 상담 신청</a>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="about-hero">
-    <div class="about-hero__stars"></div>
-    <div class="about-hero__content">
-      <a href="../index.html" class="about-hero__back">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
-        홈으로 돌아가기
-      </a>
-
-      <div class="about-hero__title-wrap">
-        <div class="about-hero__icon">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-            <path d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z"/>
-          </svg>
-        </div>
-        <h1 class="about-hero__title">폴라리스 플랫폼</h1>
+        <p class="about-hero__subtitle">당신의 북극성이 되겠습니다</p>
+        <p class="about-hero__desc">
+          위기를 기회로 바꾸고, AI 기술로 개인과 기업의 문제를 해결하는
+          <span class="text-gold">한국의 팔란티어(Palantir)</span>
+        </p>
       </div>
-      <p class="about-hero__subtitle">당신의 북극성이 되겠습니다</p>
-      <p class="about-hero__desc">
-        위기를 기회로 바꾸고, AI 기술로 개인과 기업의 문제를 해결하는 <span class="text-gold">한국의 팔란티어(Palantir)</span>
-      </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Mission Section -->
-  <section class="section section--light">
-    <div class="container">
-      <div class="mission-section">
-        <h2 class="mission-section__title">우리의 사명</h2>
-        <p class="mission-section__subtitle">80억 인구의 문제를 해결하는 것이 우리의 목표입니다</p>
+    <!-- Mission Section -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="mission-section">
+          <h2 class="mission-section__title">우리의 사명</h2>
+          <p class="mission-section__subtitle">
+            80억 인구의 문제를 해결하는 것이 우리의 목표입니다
+          </p>
 
-        <div class="mission-quote">
-          <p class="mission-quote__text">
-            "삶의 길을 잃고 방황하는 사람들에게<br>
-            <span class="text-gold">북극성처럼 방향을 제시</span>하고,<br>
-            AI 기술로 최적의 솔루션을 제공합니다"
+          <div class="mission-quote">
+            <p class="mission-quote__text">
+              "삶의 길을 잃고 방황하는 사람들에게<br />
+              <span class="text-gold">북극성처럼 방향을 제시</span>하고,<br />
+              AI 기술로 최적의 솔루션을 제공합니다"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="values-cards">
+          <div class="value-card">
+            <div class="value-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="8"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="14"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="20"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <h3 class="value-card__title">도전</h3>
+            <p class="value-card__desc">
+              불가능을 가능으로 바꾸는 끊임없는 도전 정신
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+                <circle
+                  cx="18"
+                  cy="20"
+                  r="6"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="30"
+                  cy="20"
+                  r="6"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 32c0-4 4-8 12-8s12 4 12 8"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <h3 class="value-card__title">상생</h3>
+            <p class="value-card__desc">
+              함께 성장하고 함께 나누는 상생의 가치
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+                <path
+                  d="M24 12L28 20L36 21L30 27L32 35L24 31L16 35L18 27L12 21L20 20L24 12Z"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M16 38L24 42L32 38"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <h3 class="value-card__title">희망</h3>
+            <p class="value-card__desc">어두운 밤에도 북극성처럼 빛나는 희망</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO Introduction Section -->
+    <section class="section section--light">
+      <div class="container">
+        <h2 class="ceo-section__title">대표이사 소개</h2>
+
+        <div class="ceo-grid">
+          <!-- Career Timeline -->
+          <div class="ceo-career">
+            <h3 class="ceo-career__title">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#F4C542"
+                stroke-width="2"
+                width="20"
+                height="20"
+              >
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+              </svg>
+              주요 경력
+            </h3>
+            <div class="timeline">
+              <div class="timeline__item">
+                <span class="timeline__year">1962</span>
+                <span class="timeline__text">제주도 출생</span>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__year">1984</span>
+                <span class="timeline__text">한양대 건축공학과 졸업</span>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__year">1985</span>
+                <span class="timeline__text">학사 육군 장교 임관</span>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__year">1988</span>
+                <span class="timeline__text">현대 공채 입사</span>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__year">1989</span>
+                <span class="timeline__text">삼성 29기 공채 입사</span>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__year">1995</span>
+                <span class="timeline__text">건축기술사 합격</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Philosophy -->
+          <div class="ceo-philosophy">
+            <h3 class="ceo-philosophy__title">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#F4C542"
+                stroke-width="2"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z"
+                />
+              </svg>
+              경영 철학
+            </h3>
+            <div class="philosophy-quotes">
+              <div class="philosophy-quote">
+                <p>
+                  "40년간의 다양한 경험을 바탕으로,
+                  <span class="text-gold">위기를 기회로 바꾸는 지혜</span>를
+                  나누고자 합니다."
+                </p>
+              </div>
+              <div class="philosophy-quote">
+                <p>
+                  "건축기술사부터 네트워크 마케팅까지,
+                  <span class="text-gold">모든 경험이 폴라리스의 자산</span
+                  >입니다."
+                </p>
+              </div>
+              <div class="philosophy-quote">
+                <p>
+                  "함께 성장하고 함께 나누는
+                  <span class="text-gold">상생의 플랫폼</span>을 만들겠습니다."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section class="section section--light">
+      <div class="container">
+        <h2 class="company-section__title">회사 정보</h2>
+
+        <div class="company-grid">
+          <!-- Company Details -->
+          <div class="company-details">
+            <div class="company-detail">
+              <div class="company-detail__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M12 12h4M12 16h4M8 12h.01M8 16h.01" />
+                </svg>
+              </div>
+              <div class="company-detail__content">
+                <span class="company-detail__label">회사명</span>
+                <span class="company-detail__value"
+                  >폴라리스플랫폼 주식회사</span
+                >
+              </div>
+            </div>
+
+            <div class="company-detail">
+              <div class="company-detail__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                >
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                </svg>
+              </div>
+              <div class="company-detail__content">
+                <span class="company-detail__label">대표이사</span>
+                <span class="company-detail__value">문호성</span>
+              </div>
+            </div>
+
+            <div class="company-detail">
+              <div class="company-detail__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#F4C542"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18" />
+                </svg>
+              </div>
+              <div class="company-detail__content">
+                <span class="company-detail__label">설립일</span>
+                <span class="company-detail__value">2025년 7월 1일</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company History -->
+          <div class="company-history">
+            <h3 class="company-history__title">회사 연혁</h3>
+            <div class="history-timeline">
+              <div class="history-item">
+                <span class="history-item__date">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2E7D32"
+                    stroke-width="2"
+                    width="16"
+                    height="16"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  2025.07
+                </span>
+                <span class="history-item__text"
+                  >폴라리스플랫폼 주식회사 설립</span
+                >
+              </div>
+              <div class="history-item">
+                <span class="history-item__date">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2E7D32"
+                    stroke-width="2"
+                    width="16"
+                    height="16"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  2025.08
+                </span>
+                <span class="history-item__text"
+                  >AI 기반 알라딘 솔루션 런칭</span
+                >
+              </div>
+              <div class="history-item">
+                <span class="history-item__date">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2E7D32"
+                    stroke-width="2"
+                    width="16"
+                    height="16"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  2025.10
+                </span>
+                <span class="history-item__text"
+                  >부동산/경매 컨설팅 서비스 시작</span
+                >
+              </div>
+              <div class="history-item">
+                <span class="history-item__date">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2E7D32"
+                    stroke-width="2"
+                    width="16"
+                    height="16"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  2026.01
+                </span>
+                <span class="history-item__text">통합 플랫폼 서비스 오픈</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="about-cta">
+          <a href="../index.html#apply" class="btn btn--primary btn--large"
+            >무료 상담 신청하기</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Info Bar -->
+    <section class="company-bar">
+      <div class="container">
+        <h3 class="company-bar__title">폴라리스플랫폼 주식회사</h3>
+        <div class="company-bar__info">
+          <div class="company-bar__item">
+            <span class="company-bar__label">대표이사</span>
+            <span class="company-bar__value">문호성</span>
+          </div>
+          <div class="company-bar__item">
+            <span class="company-bar__label">사업자등록번호</span>
+            <span class="company-bar__value">173-88-03337</span>
+          </div>
+          <div class="company-bar__item">
+            <span class="company-bar__label">설립일</span>
+            <span class="company-bar__value">2025년 7월 1일</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="../index.html" class="logo">
+              <div class="logo__icon">
+                <img src="../assets/images/logo.png" alt="Polaris 로고" />
+              </div>
+              <div class="logo__text-wrap">
+                <span class="logo__text">Polaris</span>
+                <span class="logo__subtext">폴라리스 플랫폼</span>
+              </div>
+            </a>
+          </div>
+          <nav class="footer__nav">
+            <a href="about.html" class="footer__link">회사소개</a>
+            <a href="../index.html#aladdin" class="footer__link"
+              >알라딘 솔루션</a
+            >
+            <a href="../index.html#realestate" class="footer__link"
+              >부동산 솔루션</a
+            >
+            <a href="../index.html#contact" class="footer__link">오시는 길</a>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal">
+            <a href="#" class="footer__legal-link">이용약관</a>
+            <a href="#" class="footer__legal-link">개인정보처리방침</a>
+          </div>
+          <p class="footer__copyright">
+            &copy; 2025 폴라리스플랫폼 주식회사. All rights reserved.
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Core Values Section -->
-  <section class="section section--light">
-    <div class="container">
-      <div class="values-cards">
-        <div class="value-card">
-          <div class="value-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
-              <circle cx="24" cy="24" r="8" stroke="#F4C542" stroke-width="2"/>
-              <circle cx="24" cy="24" r="14" stroke="#F4C542" stroke-width="2"/>
-              <circle cx="24" cy="24" r="20" stroke="#F4C542" stroke-width="2"/>
-            </svg>
-          </div>
-          <h3 class="value-card__title">도전</h3>
-          <p class="value-card__desc">불가능을 가능으로 바꾸는 끊임없는 도전 정신</p>
-        </div>
-
-        <div class="value-card">
-          <div class="value-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
-              <circle cx="18" cy="20" r="6" stroke="#F4C542" stroke-width="2"/>
-              <circle cx="30" cy="20" r="6" stroke="#F4C542" stroke-width="2"/>
-              <path d="M12 32c0-4 4-8 12-8s12 4 12 8" stroke="#F4C542" stroke-width="2"/>
-            </svg>
-          </div>
-          <h3 class="value-card__title">상생</h3>
-          <p class="value-card__desc">함께 성장하고 함께 나누는 상생의 가치</p>
-        </div>
-
-        <div class="value-card">
-          <div class="value-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
-              <path d="M24 12L28 20L36 21L30 27L32 35L24 31L16 35L18 27L12 21L20 20L24 12Z" stroke="#F4C542" stroke-width="2" fill="none"/>
-              <path d="M16 38L24 42L32 38" stroke="#F4C542" stroke-width="2"/>
-            </svg>
-          </div>
-          <h3 class="value-card__title">희망</h3>
-          <p class="value-card__desc">어두운 밤에도 북극성처럼 빛나는 희망</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CEO Introduction Section -->
-  <section class="section section--light">
-    <div class="container">
-      <h2 class="ceo-section__title">대표이사 소개</h2>
-
-      <div class="ceo-grid">
-        <!-- Career Timeline -->
-        <div class="ceo-career">
-          <h3 class="ceo-career__title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#F4C542" stroke-width="2" width="20" height="20">
-              <rect x="2" y="7" width="20" height="14" rx="2"/>
-              <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
-            </svg>
-            주요 경력
-          </h3>
-          <div class="timeline">
-            <div class="timeline__item">
-              <span class="timeline__year">1962</span>
-              <span class="timeline__text">제주도 출생</span>
-            </div>
-            <div class="timeline__item">
-              <span class="timeline__year">1984</span>
-              <span class="timeline__text">한양대 건축공학과 졸업</span>
-            </div>
-            <div class="timeline__item">
-              <span class="timeline__year">1985</span>
-              <span class="timeline__text">학사 육군 장교 임관</span>
-            </div>
-            <div class="timeline__item">
-              <span class="timeline__year">1988</span>
-              <span class="timeline__text">현대 공채 입사</span>
-            </div>
-            <div class="timeline__item">
-              <span class="timeline__year">1989</span>
-              <span class="timeline__text">삼성 29기 공채 입사</span>
-            </div>
-            <div class="timeline__item">
-              <span class="timeline__year">1995</span>
-              <span class="timeline__text">건축기술사 합격</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Philosophy -->
-        <div class="ceo-philosophy">
-          <h3 class="ceo-philosophy__title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#F4C542" stroke-width="2" width="20" height="20">
-              <path d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z"/>
-            </svg>
-            경영 철학
-          </h3>
-          <div class="philosophy-quotes">
-            <div class="philosophy-quote">
-              <p>"40년간의 다양한 경험을 바탕으로, <span class="text-gold">위기를 기회로 바꾸는 지혜</span>를 나누고자 합니다."</p>
-            </div>
-            <div class="philosophy-quote">
-              <p>"건축기술사부터 네트워크 마케팅까지, <span class="text-gold">모든 경험이 폴라리스의 자산</span>입니다."</p>
-            </div>
-            <div class="philosophy-quote">
-              <p>"함께 성장하고 함께 나누는 <span class="text-gold">상생의 플랫폼</span>을 만들겠습니다."</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Company Info Section -->
-  <section class="section section--light">
-    <div class="container">
-      <h2 class="company-section__title">회사 정보</h2>
-
-      <div class="company-grid">
-        <!-- Company Details -->
-        <div class="company-details">
-          <div class="company-detail">
-            <div class="company-detail__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#F4C542" stroke-width="2" width="24" height="24">
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                <path d="M12 12h4M12 16h4M8 12h.01M8 16h.01"/>
-              </svg>
-            </div>
-            <div class="company-detail__content">
-              <span class="company-detail__label">회사명</span>
-              <span class="company-detail__value">폴라리스플랫폼 주식회사</span>
-            </div>
-          </div>
-
-          <div class="company-detail">
-            <div class="company-detail__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#F4C542" stroke-width="2" width="24" height="24">
-                <circle cx="12" cy="8" r="4"/>
-                <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
-              </svg>
-            </div>
-            <div class="company-detail__content">
-              <span class="company-detail__label">대표이사</span>
-              <span class="company-detail__value">문호성</span>
-            </div>
-          </div>
-
-          <div class="company-detail">
-            <div class="company-detail__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#F4C542" stroke-width="2" width="24" height="24">
-                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                <path d="M16 2v4M8 2v4M3 10h18"/>
-              </svg>
-            </div>
-            <div class="company-detail__content">
-              <span class="company-detail__label">설립일</span>
-              <span class="company-detail__value">2025년 7월 1일</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Company History -->
-        <div class="company-history">
-          <h3 class="company-history__title">회사 연혁</h3>
-          <div class="history-timeline">
-            <div class="history-item">
-              <span class="history-item__date">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" width="16" height="16">
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-                2025.07
-              </span>
-              <span class="history-item__text">폴라리스플랫폼 주식회사 설립</span>
-            </div>
-            <div class="history-item">
-              <span class="history-item__date">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" width="16" height="16">
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-                2025.08
-              </span>
-              <span class="history-item__text">AI 기반 알라딘 솔루션 런칭</span>
-            </div>
-            <div class="history-item">
-              <span class="history-item__date">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" width="16" height="16">
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-                2025.10
-              </span>
-              <span class="history-item__text">부동산/경매 컨설팅 서비스 시작</span>
-            </div>
-            <div class="history-item">
-              <span class="history-item__date">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" width="16" height="16">
-                  <path d="M20 6L9 17l-5-5"/>
-                </svg>
-                2026.01
-              </span>
-              <span class="history-item__text">통합 플랫폼 서비스 오픈</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA Button -->
-      <div class="about-cta">
-        <a href="../index.html#apply" class="btn btn--primary btn--large">무료 상담 신청하기</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Company Info Bar -->
-  <section class="company-bar">
-    <div class="container">
-      <h3 class="company-bar__title">폴라리스플랫폼 주식회사</h3>
-      <div class="company-bar__info">
-        <div class="company-bar__item">
-          <span class="company-bar__label">대표이사</span>
-          <span class="company-bar__value">문호성</span>
-        </div>
-        <div class="company-bar__item">
-          <span class="company-bar__label">사업자등록번호</span>
-          <span class="company-bar__value">173-88-03337</span>
-        </div>
-        <div class="company-bar__item">
-          <span class="company-bar__label">설립일</span>
-          <span class="company-bar__value">2025년 7월 1일</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <a href="../index.html" class="logo">
-            <div class="logo__icon">
-              <div class="logo__quarter logo__quarter--red"></div>
-              <div class="logo__quarter logo__quarter--blue"></div>
-              <div class="logo__quarter logo__quarter--green"></div>
-              <div class="logo__quarter logo__quarter--yellow"></div>
-              <div class="logo__star">
-                <svg viewBox="0 0 24 24" fill="white">
-                  <path d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z"/>
-                </svg>
-              </div>
-            </div>
-            <div class="logo__text-wrap">
-              <span class="logo__text">Polaris</span>
-              <span class="logo__subtext">폴라리스 플랫폼</span>
-            </div>
-          </a>
-        </div>
-        <nav class="footer__nav">
-          <a href="about.html" class="footer__link">회사소개</a>
-          <a href="../index.html#aladdin" class="footer__link">알라딘 솔루션</a>
-          <a href="../index.html#realestate" class="footer__link">부동산 솔루션</a>
-          <a href="../index.html#contact" class="footer__link">오시는 길</a>
-        </nav>
-      </div>
-      <div class="footer__bottom">
-        <div class="footer__legal">
-          <a href="#" class="footer__legal-link">이용약관</a>
-          <a href="#" class="footer__legal-link">개인정보처리방침</a>
-        </div>
-        <p class="footer__copyright">&copy; 2025 폴라리스플랫폼 주식회사. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/app.js"></script>
-</body>
+    <script src="../js/app.js"></script>
+  </body>
 </html>

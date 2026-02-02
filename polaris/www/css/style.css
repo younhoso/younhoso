@@ -24,8 +24,12 @@ html {
 }
 
 body {
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont,
-    "Apple SD Gothic Neo", sans-serif;
+  font-family:
+    "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Apple SD Gothic Neo",
+    sans-serif;
   font-size: var(--text-md);
   line-height: 1.7;
   color: #1a1a2e;
@@ -324,7 +328,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(10, 22, 40, 0.7), rgba(15, 40, 71, 0.7)),
+  background:
+    linear-gradient(rgba(10, 22, 40, 0.7), rgba(15, 40, 71, 0.7)),
     url(../assets/images/polaris-bg.jpg) center / cover no-repeat;
   padding: 100px 20px 60px;
   overflow: hidden;
@@ -333,7 +338,8 @@ input {
 .hero__stars {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       2px 2px at 10% 20%,
       rgba(255, 255, 255, 0.4) 0%,
       transparent 100%
@@ -496,8 +502,8 @@ input {
 }
 
 .section-header__icon {
-  width: 64px;
-  height: 64px;
+  width: 184px;
+  height: 130px;
   margin: 0 auto 20px;
   display: flex;
   align-items: center;
@@ -632,8 +638,8 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   background: #fff;
   border-radius: 50%;
   display: flex;
@@ -1416,6 +1422,7 @@ input {
 }
 
 .contact-info {
+  width: 550px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1493,6 +1500,23 @@ input {
   border-radius: var(--radius-lg);
   padding: 16px;
   border: 1px solid var(--color-border);
+}
+
+.map-placeholder__iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66.67%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.map-placeholder__iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .map-placeholder__header {
@@ -1720,6 +1744,10 @@ input {
 @media (max-width: 1024px) {
   .section {
     padding: 80px 0;
+  }
+
+  .section .contact-info {
+    width: 100%;
   }
 
   .service-cards {

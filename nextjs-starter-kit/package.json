@@ -2,33 +2,38 @@
   "name": "nextjs-starter-kit",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "description": "A modern, production-ready starter template with Next.js 15, TypeScript, Tailwind CSS v4, and shadcn/ui",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "autoprefixer": "^10.4.24",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.563.0",
     "next": "^16.1.6",
-    "postcss": "^8.5.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "tailwind-merge": "^3.4.0",
+    "typescript": "^5.9.3",
     "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3"
+    "postcss": "^8.5.6",
+    "lucide-react": "^0.563.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
-    "@types/node": "25.2.0",
-    "@types/react": "19.2.10"
-  }
+    "@types/node": "^25.2.0",
+    "@types/react": "^19.2.10"
+  },
+  "keywords": [
+    "next.js",
+    "react",
+    "typescript",
+    "tailwind-css",
+    "shadcn-ui",
+    "starter-kit"
+  ],
+  "author": "",
+  "license": "MIT"
 }

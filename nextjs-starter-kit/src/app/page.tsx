@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { ArrowRight, Code2, Zap, Package } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="container mx-auto py-12 md:py-24">
+      {/* Theme Toggle */}
+      <div className="flex justify-end mb-8">
+        <ModeToggle />
+      </div>
+
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">

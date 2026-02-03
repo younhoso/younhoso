@@ -3,11 +3,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
 import { Heart, Star, Check, X } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 
 export default function ComponentsPage() {
   return (
     <div className="container mx-auto py-12 md:py-24">
+      {/* Theme Toggle */}
+      <div className="flex justify-end mb-8">
+        <ModeToggle />
+      </div>
+
       {/* Header */}
       <div className="mb-12">
         <Link href="/" className="text-primary hover:underline mb-4 inline-block">

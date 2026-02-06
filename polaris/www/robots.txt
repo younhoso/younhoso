@@ -1,0 +1,11 @@
+# 모든 검색 봇 허용
+User-agent: *
+Allow: /
+
+# 불필요한 경로 제외
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap 위치 지정
+Sitemap: https://polarisplatform.co.kr/sitemap.xml

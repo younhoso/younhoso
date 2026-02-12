@@ -3,7 +3,10 @@
 - Languages : JavaScript | TypeScript
 - Frameworks/library : Next.js(App Router) | React
 - Data Fetching : Axios | React Query
+- AI(LLM) API : Claude API | OpenAI API
 - Style : CSS3 | styled-components
+
+- ⚒️ My skills: HTML/CSS/JS, React, Next.js, TypeScript, Make(Integromat), OpenAI API, Claude API, Apify, Airtable
 
 # INFO
 

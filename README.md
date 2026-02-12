@@ -6,8 +6,6 @@
 - AI(LLM) API : Claude API | OpenAI API
 - Style : CSS3 | styled-components
 
-- ⚒️ My skills: HTML/CSS/JS, React, Next.js, TypeScript, Make(Integromat), OpenAI API, Claude API, Apify, Airtable
-
 # INFO
 
 [PROFILE](https://gospelfix.github.io/profile)\

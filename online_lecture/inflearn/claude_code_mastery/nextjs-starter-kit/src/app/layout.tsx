@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,9 +24,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           <main className="min-h-screen bg-gradient-to-b from-background to-muted">
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/Sonner";
+import { QueryProvider } from "@/providers/QueryProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,18 +20,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <main className="min-h-screen bg-gradient-to-b from-background to-muted">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <main className="min-h-screen bg-gradient-to-b from-background to-muted">
+              {children}
+            </main>
+            <Footer />
+            <Toaster />
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );

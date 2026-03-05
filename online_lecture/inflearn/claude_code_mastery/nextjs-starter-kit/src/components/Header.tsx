@@ -29,6 +29,12 @@ export function Header() {
             컴포넌트
           </Link>
           <Link
+            href="/examples/form"
+            className="text-sm font-medium transition-colors hover:text-foreground text-muted-foreground"
+          >
+            예시
+          </Link>
+          <Link
             href="https://nextjs.org/docs"
             target="_blank"
             rel="noopener noreferrer"

@@ -3,7 +3,7 @@
 - Languages : JavaScript | TypeScript
 - Frameworks/library : Next.js(App Router) | React
 - Data Fetching : Axios | React Query
-- AI(LLM) API : Claude API | OpenAI API
+- AI(LLM) API : Claude | OpenAI
 - Style : CSS3 | styled-components
 
 # INFO

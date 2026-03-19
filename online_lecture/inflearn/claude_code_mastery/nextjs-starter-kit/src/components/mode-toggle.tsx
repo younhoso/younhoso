@@ -14,7 +14,11 @@ export function ModeToggle() {
   }, [])
 
   if (!mounted) {
-    return null
+    return (
+      <Button variant="outline" size="icon" disabled aria-label="테마 전환">
+        <Sun className="h-[1.2rem] w-[1.2rem]" />
+      </Button>
+    )
   }
 
   return (

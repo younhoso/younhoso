@@ -1,14 +1,7 @@
 ---
 description: "새 shadcn/ui 스타일의 React 컴포넌트를 생성합니다"
 argument-hint: "<컴포넌트명> (예: /add-component Card)"
-allowed-tools:
-  [
-    "Read",
-    "Write",
-    "Edit",
-    "Glob",
-    "Grep",
-  ]
+allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep"]
 ---
 
 # 스킬: add-component
@@ -32,7 +25,7 @@ allowed-tools:
 - TypeScript + React 함수형 컴포넌트
 - `cva`(class-variance-authority)로 variant 정의
 - `cn()` 헬퍼 (`@/lib/utils`)로 클래스 병합
-- `React.forwardRef` + `displayName` 설정
+- **React 19+**: `forwardRef` 대신 `ref`를 일반 prop으로 직접 받기
 - Tailwind CSS 스타일링
 - `default`, `outline`, `ghost` variant 기본 제공
 - `sm`, `md`, `lg` size 기본 제공
@@ -41,7 +34,6 @@ allowed-tools:
 ## 템플릿
 
 ```tsx
-import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
@@ -66,20 +58,20 @@ const [name]Variants = cva("기본-스타일", {
 
 export interface [Name]Props
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof [name]Variants> {}
+    VariantProps<typeof [name]Variants> {
+  ref?: React.Ref<HTMLDivElement>
+}
 
-const [Name] = React.forwardRef<HTMLDivElement, [Name]Props>(
-  ({ className, variant, size, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn([name]Variants({ variant, size, className }))}
-        {...props}
-      />
-    )
-  }
-)
-[Name].displayName = "[Name]"
+// React 19+: ref를 일반 prop으로 직접 전달 (forwardRef 불필요)
+export function [Name]({ className, variant, size, ref, ...props }: [Name]Props) {
+  return (
+    <div
+      ref={ref}
+      className={cn([name]Variants({ variant, size, className }))}
+      {...props}
+    />
+  )
+}
 
-export { [Name], [name]Variants }
+export { [name]Variants }
 ```

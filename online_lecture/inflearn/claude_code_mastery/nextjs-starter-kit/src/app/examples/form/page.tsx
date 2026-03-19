@@ -79,7 +79,6 @@ function RegisterForm() {
   const onSubmit = async (data: RegisterFormData) => {
     // 실제 API 호출 시뮬레이션
     await new Promise((resolve) => setTimeout(resolve, 800));
-    console.log("폼 데이터:", data);
     toast.success("회원가입 성공!", {
       description: `${data.name}님 환영합니다.`,
     });

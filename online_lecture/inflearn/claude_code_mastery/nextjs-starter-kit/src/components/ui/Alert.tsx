@@ -24,44 +24,52 @@ const alertVariants = cva(
 
 export interface AlertProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof alertVariants> {}
+    VariantProps<typeof alertVariants> {
+  ref?: React.Ref<HTMLDivElement>;
+}
 
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
-  ({ className, variant, ...props }, ref) => (
+function Alert({ className, variant, ref, ...props }: AlertProps) {
+  return (
     <div
       ref={ref}
       role="alert"
       className={cn(alertVariants({ variant, className }))}
       {...props}
     />
-  )
-);
+  );
+}
 Alert.displayName = "Alert";
 
 // 알림 제목
-const AlertTitle = React.forwardRef<
-  HTMLHeadingElement,
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-  <h5
-    ref={ref}
-    className={cn("font-medium leading-none tracking-tight", className)}
-    {...props}
-  />
-));
+function AlertTitle({
+  className,
+  ref,
+  ...props
+}: React.HTMLAttributes<HTMLHeadingElement> & { ref?: React.Ref<HTMLHeadingElement> }) {
+  return (
+    <h5
+      ref={ref}
+      className={cn("font-medium leading-none tracking-tight", className)}
+      {...props}
+    />
+  );
+}
 AlertTitle.displayName = "AlertTitle";
 
 // 알림 설명
-const AlertDescription = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p
-    ref={ref}
-    className={cn("text-sm opacity-90 mt-1", className)}
-    {...props}
-  />
-));
+function AlertDescription({
+  className,
+  ref,
+  ...props
+}: React.HTMLAttributes<HTMLParagraphElement> & { ref?: React.Ref<HTMLParagraphElement> }) {
+  return (
+    <p
+      ref={ref}
+      className={cn("text-sm opacity-90 mt-1", className)}
+      {...props}
+    />
+  );
+}
 AlertDescription.displayName = "AlertDescription";
 
 export { Alert, AlertTitle, AlertDescription };

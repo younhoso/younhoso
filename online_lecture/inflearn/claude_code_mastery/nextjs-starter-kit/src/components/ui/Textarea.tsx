@@ -2,11 +2,12 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 // 텍스트 영역 입력 컴포넌트 (Input과 유사한 패턴)
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  ref?: React.Ref<HTMLTextAreaElement>;
+}
 
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, ...props }, ref) => (
+function Textarea({ className, ref, ...props }: TextareaProps) {
+  return (
     <textarea
       ref={ref}
       className={cn(
@@ -15,8 +16,8 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       )}
       {...props}
     />
-  )
-);
+  );
+}
 Textarea.displayName = "Textarea";
 
 export { Textarea };

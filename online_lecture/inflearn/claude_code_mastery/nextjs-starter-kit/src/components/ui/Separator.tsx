@@ -18,10 +18,11 @@ export interface SeparatorProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof separatorVariants> {
   orientation?: "horizontal" | "vertical";
+  ref?: React.Ref<HTMLDivElement>;
 }
 
-const Separator = React.forwardRef<HTMLDivElement, SeparatorProps>(
-  ({ className, orientation = "horizontal", ...props }, ref) => (
+function Separator({ className, orientation = "horizontal", ref, ...props }: SeparatorProps) {
+  return (
     <div
       ref={ref}
       role="separator"
@@ -29,8 +30,8 @@ const Separator = React.forwardRef<HTMLDivElement, SeparatorProps>(
       className={cn(separatorVariants({ orientation, className }))}
       {...props}
     />
-  )
-);
+  );
+}
 Separator.displayName = "Separator";
 
 export { Separator };

@@ -75,3 +75,13 @@ import { cn } from "@/lib/utils"; // src/lib/utils.ts
 - `/components` → `src/app/components/page.tsx`
 
 새 페이지는 `src/app/[경로]/page.tsx` 형태로 추가합니다.
+
+## 샌드박스 제약사항
+
+`.claude/claude-sandbox.conf`에 정의된 실행 환경 제약입니다.
+
+- **파일 쓰기**: 프로젝트 디렉토리(`invoice-web/`) 내부에만 허용, 외부 경로 쓰기 금지
+- **파일 삭제**: `rm` 명령어 실행 금지 (`/bin/rm` 차단)
+- **네트워크**: 외부 네트워크 아웃바운드 연결 금지
+
+> 파일 삭제가 필요한 경우 `rm` 대신 다른 방법을 사용하거나 사용자에게 안내할 것.

@@ -7,9 +7,9 @@ import { QueryProvider } from "@/providers/QueryProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Kit",
+  title: "견적서 공유 서비스",
   description:
-    "A modern Next.js starter kit with TypeScript, Tailwind CSS, and shadcn/ui",
+    "노션 데이터베이스에 입력한 견적서를 고유 URL로 공유하고 PDF로 저장하는 서비스",
 };
 
 export default function RootLayout({

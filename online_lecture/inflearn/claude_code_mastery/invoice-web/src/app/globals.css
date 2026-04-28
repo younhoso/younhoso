@@ -60,3 +60,25 @@
     color: hsl(var(--foreground));
   }
 }
+
+/* ── 인쇄(PDF) 최적화 ── */
+@media print {
+  /* 헤더, 푸터, 버튼 등 UI 요소 숨김 */
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* 불필요한 여백 제거 */
+  body {
+    background: white;
+    color: black;
+  }
+
+  /* 견적서 본문 전체 너비로 출력 */
+  #invoice-content {
+    width: 100%;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "model": "sonnet",
+  "plansDirectory": ".claude/plans/",
+  "outputStyle": "Explanatory",
+  "env": {
+    "MAX_THINKING_TOKENS": "10000",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "50"
+  },
+  "teammateMode": "tmux",
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash"
+    ],
+    "deny": [],
+    "defaultMode": "plan",
+    "additionalDirectories": [
+      "/"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "playwright"
+  ],
+  "enableAllProjectMcpServers": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '📋 프로젝트 규칙 로딩...' && cat .claude/rules.md && echo '\n📁 현재 구조:' && tree -L 2 -I 'node_modules|.git' 2>/dev/null || ls -la"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -qE '\\.env|\\.env\\.|config/.*\\.(yaml|yml|json)'; then echo '🚫 [BLOCKED] 보호된 파일입니다. 수정이 필요하면 먼저 확인해주세요.' && exit 1; fi"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -qE '\\.(js|ts|jsx|tsx|css|html|json|md)$'; then npx prettier --write \"$(echo $CLAUDE_TOOL_INPUT | grep -oE '[^\"]+\\.(js|ts|jsx|tsx|css|html|json|md)')\" 2>/dev/null || true; fi"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '⚡ 컨텍스트 압축 전 핵심 규칙:' && head -50 .claude/rules.md"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '✅ 세션 종료. 변경된 파일:' && git status --short 2>/dev/null || echo '(git 없음)'"
+          }
+        ]
+      }
+    ]
+  }
+}

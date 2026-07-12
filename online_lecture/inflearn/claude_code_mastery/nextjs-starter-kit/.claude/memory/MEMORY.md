@@ -9,12 +9,14 @@
 ## 핵심 구조
 ```
 src/
-├── app/          # 페이지 라우팅 (App Router)
-├── components/   # 공통 컴포넌트 (ui/, Header, Footer)
-├── providers/    # QueryProvider (TanStack Query)
-├── stores/       # Zustand 상태관리
-├── lib/          # utils.ts, validations.ts
-└── types/        # TypeScript 타입 정의
+├── app/              # 페이지 라우팅 (App Router)
+├── components/
+│   ├── layout/       # Header, Footer, mode-toggle
+│   ├── providers/    # ThemeProvider, QueryProvider
+│   └── ui/           # shadcn/ui 재사용 컴포넌트
+├── stores/           # Zustand 상태관리
+├── lib/              # utils.ts, validations.ts
+└── types/            # TypeScript 타입 정의
 ```
 
 ## 주요 패턴

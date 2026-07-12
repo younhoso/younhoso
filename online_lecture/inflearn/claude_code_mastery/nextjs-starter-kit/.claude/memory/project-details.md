@@ -2,10 +2,12 @@
 
 ## 레이아웃 렌더링 순서
 ```
-ThemeProvider → Header → <main>{children}</main> → Footer
+QueryProvider → ThemeProvider → Header → <main>{children}</main> → Footer → Toaster
 ```
 - `src/app/layout.tsx`가 전체 앱 감싸기
 - `Header`는 `"use client"` (ModeToggle 포함)
+- `src/components/layout/` — Header, Footer, mode-toggle
+- `src/components/providers/` — ThemeProvider, QueryProvider
 
 ## 페이지 목록
 | 경로 | 파일 |
@@ -33,8 +35,8 @@ export interface Props extends React.HTMLAttributes<HTMLElement>, VariantProps<t
 - `src/lib/validations.ts`: zod 스키마 정의
 
 ## 상태 관리
-- **Zustand**: `src/stores/counter.ts` (전역 상태)
-- **TanStack Query**: `src/providers/QueryProvider.tsx` (서버 상태)
+- **Zustand**: `src/stores/counter.ts` (전역 상태, devtools 미들웨어 포함)
+- **TanStack Query**: `src/components/providers/QueryProvider.tsx` (서버 상태)
 
 ## 개발 도구
 - ESLint + Prettier (prettier-plugin-tailwindcss)

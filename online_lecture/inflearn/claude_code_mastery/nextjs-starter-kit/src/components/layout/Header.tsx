@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/layout/mode-toggle";
 import { Button } from "@/components/ui/Button";
 
 export function Header() {

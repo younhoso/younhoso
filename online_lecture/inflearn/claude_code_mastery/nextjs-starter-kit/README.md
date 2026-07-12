@@ -116,13 +116,13 @@ nextjs-starter-kit/
 
 ```bash
 # 개발 서버 실행
-npm run dev
+yarn dev
 
 # 프로덕션 빌드
-npm run build
+yarn build
 
 # 프로덕션 서버 시작
-npm start
+yarn start
 ```
 
 ---

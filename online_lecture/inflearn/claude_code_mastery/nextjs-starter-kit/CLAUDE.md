@@ -6,13 +6,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 프로젝트 컨텍스트와 패턴은 [`memory/MEMORY.md`](./.claude/memory/MEMORY.md)를 참조할 것.
 
-## 명령어
+## 패키지 매니저
+
+**yarn을 사용한다. npm은 절대 사용하지 않는다.**
 
 ```bash
-npm run dev      # 개발 서버 실행 (http://localhost:3000)
-npm run build    # 프로덕션 빌드
-npm run start    # 프로덕션 서버 실행
-npm run lint     # Next.js ESLint 검사
+yarn dev      # 개발 서버 실행 (http://localhost:3000)
+yarn build    # 프로덕션 빌드
+yarn start    # 프로덕션 서버 실행
+yarn lint     # Next.js ESLint 검사
+yarn add <패키지>       # 패키지 설치
+yarn add -D <패키지>    # dev 의존성 설치
 ```
 
 테스트 프레임워크는 현재 구성되어 있지 않습니다.

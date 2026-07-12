@@ -8,7 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 .claude/
 ├── agent-memory/   # 서브 에이전트 전용 영구 메모리
 ├── agents/         # 커스텀 에이전트 정의
+├── hooks/          # 이벤트 훅 스크립트 (PreToolUse, PostToolUse 등)
 ├── memory/         # Claude Code(메인 대화)가 대화 간 지속되는 프로젝트 컨텍스트 메모리
+├── rules/          # 코딩 컨벤션 및 아키텍처 규칙 문서
 ├── skills/         # 재사용 가능한 슬래시 커맨드 스킬
 └── settings.json   # Claude Code 프로젝트 설정
 ```

@@ -10,7 +10,8 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "Bash"
+      "Bash",
+      "mcp__playwright"
     ],
     "deny": [],
     "defaultMode": "plan",

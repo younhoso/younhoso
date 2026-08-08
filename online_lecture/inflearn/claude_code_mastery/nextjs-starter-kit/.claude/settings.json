@@ -24,6 +24,32 @@
   ],
   "enableAllProjectMcpServers": true,
   "hooks": {
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/notification-hook.sh"
+          }
+        ]
+      }
+    ],
+     "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '✅ 세션 종료. 변경된 파일:' && git status --short 2>/dev/null || echo '(git 없음)'"
+          },
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop-hook.sh"
+          }
+        ]
+      }
+    ],
     "SessionStart": [
       {
         "matcher": "",
@@ -64,17 +90,6 @@
           {
             "type": "command",
             "command": "echo '⚡ 컨텍스트 압축 전 핵심 규칙:' && head -50 .claude/rules.md"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo '✅ 세션 종료. 변경된 파일:' && git status --short 2>/dev/null || echo '(git 없음)'"
           }
         ]
       }
